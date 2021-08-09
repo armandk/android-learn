@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UTF8Exception - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">UTF8Exception</a><br/>
+<br/>
+<h1>UTF8Exception</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UTF8Exception</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../exceptionbase/index.html"><span class="identifier">ExceptionBase</span></a></code>
+<p>Exception thrown for failures in UTF-8 conversion (decoding and encoding).</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UTF8Exception</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UTF8Exception$<init>(kotlin.String, kotlin.Throwable)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UTF8Exception$<init>(kotlin.String, kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">?</span><span class="symbol">)</span></code><code><span class="identifier">UTF8Exception</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Default constructor.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../exceptionbase/cause.html">cause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">cause</span><span class="symbol">: </span><span class="identifier">RuntimeException</span><span class="symbol">?</span></code>
+<p>Return (nullable) Root cause of this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../exceptionbase/message.html">message</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">message</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Message text for this exception.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="cannotdecode.html">cannotDecode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cannotDecode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UTF8Exception</span></a></code>
+<p>Return exception to be thrown when binary content cannot be decoded from UTF-8 format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cannotencode.html">cannotEncode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cannotEncode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UTF8Exception</span></a></code>
+<p>Return exception to be thrown when string content cannot be encoded in UTF-8 format.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../exceptionbase/setcause.html">setCause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCause</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ExceptionBase$setCause(java.lang.RuntimeException)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set root cause of this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../exceptionbase/setmessage.html">setMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ExceptionBase$setMessage(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set message text for this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../exceptionbase/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

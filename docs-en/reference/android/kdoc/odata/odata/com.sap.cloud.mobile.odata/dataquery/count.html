@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.count - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./count.html">count</a><br/>
+<br/>
+<h1>count</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$count()"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">count</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getcountonly.html">DataQuery.countOnly</a></code> to <code>true</code> to request only the number of matching query results.</p>
+ See Also: 
+<p><code><a href="inlinecount.html">DataQuery.inlineCount</a></code>, <a href="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752292">Requesting the Number of Items in a Collection</a>.</p>
+  Example using proxy classes:<pre><code>
+      public void navigationCountExample() {
+          NorthwindService service = this.getService();
+          Customer customer = service.getCustomer(new DataQuery()
+              .expand(Customer.orders).top(1));
+          List&lt;Order&gt; orders = customer.getOrders();
+          DataQuery query = new DataQuery().load(customer, Customer.orders).count();
+          long count = service.executeQuery(query).getCount();
+          assert count == ((long)orders.size());
+      }
+      </code></pre> Example using proxy classes:<pre><code>
+      public void collectionCountExample() {
+          NorthwindService service = this.getService();
+          List&lt;Customer&gt; customers = service.getCustomers();
+          DataQuery query = new DataQuery()
+              .from(NorthwindServiceMetadata.EntitySets.customers).count();
+          long count = service.executeQuery(query).getCount();
+          assert count == ((long)customers.size());
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void collectionCountExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          EntityValueList customers = service.executeQuery(new DataQuery()
+              .from(customersEntitySet))
+              .getEntityList();
+          DataQuery query = new DataQuery().from(customersEntitySet).count();
+          long count = service.executeQuery(query).getCount();
+          assert count == ((long)customers.length());
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void navigationCountExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          EntityType customerEntityType = customersEntitySet.getEntityType();
+          Property ordersProperty = customerEntityType.getProperty("Orders");
+          EntityValue customer = service.executeQuery(new DataQuery()
+              .from(customersEntitySet).expand(ordersProperty).top(1))
+              .getEntityList().first();
+          EntityValueList orders = ordersProperty.getEntityList(customer);
+          DataQuery query = new DataQuery().load(customer, ordersProperty).count();
+          long count = service.executeQuery(query).getCount();
+          assert count == ((long)orders.length());
+      }
+      </code></pre>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

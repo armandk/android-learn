@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecureDatabaseResultSet - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.securestore</a>&nbsp;/&nbsp;<a href="./index.html">SecureDatabaseResultSet</a><br/>
+<br/>
+<h1>SecureDatabaseResultSet</h1>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseResultSet"></a>
+<code><span class="keyword">class </span><span class="identifier">SecureDatabaseResultSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Closeable</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseResultSet"></a>
+<code><span class="keyword">class </span><span class="identifier">SecureDatabaseResultSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Closeable</span></code>
+<p>Executing a SQL query returns a <code>SecureDatabaseResultSet</code> object. You typically use a <code>while()</code> loop to iterate over the results of the query when you expect the result to contain multiple rows until <code><a href="next.html">#next()</a></code> returns <code>false</code>: <pre><code>// Queries the database and iterates through the rows in the result set.
+    final String queryAllUsers = "SELECT * FROM users";
+    try (SecureDatabaseResultSet rs = store.executeQuery(queryAllUsers)) {
+        while (rs.next()) {
+            // Has a valid row, retrieves the column values with appropriate getter method.
+            int age = rs.getInt("age");
+            String name = rs.getString("name");
+            String email = rs.getString("email");
+            logger.debug("Retrieved user: age = {}, name = {}, email = {}", age, name, email);
+        }
+    } catch (BackingStoreException ex) {
+        logger.error("Failed to execute query.", ex);
+    }
+ </code></pre> </p>
+<p>You must always invoke <code>next()</code> before attempting to access the values returned in a query, even if you are only expecting one row in the result set: </p>
+<pre><code>int userCount = -1;
+    try (SecureDatabaseResultSet rs =  store.executeQuery("SELECT COUNT(*) AS count FROM users")) {
+        if (rs.next()) {
+            userCount = rs.getInt(0);
+            logger.debug("Number of users: {}", userCount);
+        }
+    } catch (BackingStoreException ex) {
+        logger.error("Failed to get user count.", ex);
+    }
+ </code></pre> 
+<p>A SecureDatabaseResultSet contains many methods for retrieving different data types in an appropriate format. </p>
+<p>Each data retrieval method has two variants to retrieve the data based on the position of the column in the results, as opposed to the column’s name: </p>
+<ul> <li>getInt</li>
+ <li>getInt16</li>
+ <li>getInt64</li>
+ <li>getDouble</li>
+ <li>getFloat</li>
+ <li>getBoolean</li>
+ <li>getBlob</li>
+ <li>getString</li>
+ </ul>
+ 
+<p>SecureDatabaseResultSet needs to be closed. It will be closed automatically if you use a <em>try-with</em> block. Otherwise, you need to call <code><a href="close.html">SecureDatabaseResultSet#close()</a></code> method explicitly.</p>
+<p><strong>See Also</strong><br/>
+<a href="../securedatabasestore/index.html">SecureDatabaseStore</a></p>
+</BODY>
+</HTML>

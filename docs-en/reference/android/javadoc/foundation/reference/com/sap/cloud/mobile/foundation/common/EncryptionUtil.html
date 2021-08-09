@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Javadoc API documentation for SAP Foundation Library for Android." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
+<title>
+
+  EncryptionUtil
+
+
+| SAP Foundation Library for Android
+
+</title>
+<link href="../../../../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../../../", "../../../../../../../assets/");
+</script>
+<script src="../../../../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">SAP Foundation Library for Android</span>
+    
+    </div>
+    <div id="headerRight">
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../../../../../../packages.html"  >Package Index</a> | 
+                <a href="../../../../../../classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/authentication/package-summary.html">com.sap.cloud.mobile.foundation.authentication</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/cache/package-summary.html">com.sap.cloud.mobile.foundation.cache</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/clientresources/package-summary.html">com.sap.cloud.mobile.foundation.clientresources</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/common/package-summary.html">com.sap.cloud.mobile.foundation.common</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/configurationprovider/package-summary.html">com.sap.cloud.mobile.foundation.configurationprovider</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/logging/package-summary.html">com.sap.cloud.mobile.foundation.logging</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/mobileservices/package-summary.html">com.sap.cloud.mobile.foundation.mobileservices</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/networking/package-summary.html">com.sap.cloud.mobile.foundation.networking</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/remotenotification/package-summary.html">com.sap.cloud.mobile.foundation.remotenotification</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/securestore/package-summary.html">com.sap.cloud.mobile.foundation.securestore</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/settings/package-summary.html">com.sap.cloud.mobile.foundation.settings</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/usage/package-summary.html">com.sap.cloud.mobile.foundation.usage</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/foundation/user/package-summary.html">com.sap.cloud.mobile.foundation.user</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/About.html">About</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/ClientProvider.html">ClientProvider</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/CpmsParameters.html">CpmsParameters</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/DiscoveryServiceProvider.html">DiscoveryServiceProvider</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionInputStream.html">EncryptionInputStream</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionOutputStream.html">EncryptionOutputStream</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html">EncryptionUtil</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/RawEncryption.html">RawEncryption</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/SDKApplicationState.html">SDKApplicationState</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/SettingsParameters.html">SettingsParameters</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/SettingsProvider.html">SettingsProvider</a></li>
+      </ul>
+    </li>
+              
+              
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionState.html">EncryptionState</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/SDKApplicationState.SDKEventType.html">SDKApplicationState.SDKEventType</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/SettingsParameters.PushService.html">SettingsParameters.PushService</a></li>
+      </ul>
+    </li>
+              
+    <li><h2>Exceptions</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></li>
+      </ul>
+    </li>
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../../../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../../../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+
+Summary:
+
+
+
+
+
+
+
+
+
+
+
+  <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    
+    class
+<h1>EncryptionUtil</h1>
+
+
+
+  
+    extends Object<br/>
+  
+  
+  
+
+  
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+         	
+        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="1" class="jd-inheritance-class-cell">com.sap.cloud.mobile.foundation.common.EncryptionUtil</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p>Provides a protected storage for the users to generate and access their encryption key associated
+ with an alias. The encryption key can then be used with Secure Store and any other place where
+ encryption key is needed.
+
+ <p><b>Initialization</b>
+
+ <p>Before accessing encryption keys with <code>EncryptionUtil</code>, it is required for the app
+ to initialize it with Android application context.
+
+ <p>For example,
+<pre>
+<code>EncryptionUtil.initialize(context);
+</code></pre>
+
+ <p><b>Encryption Key Generation Mechanisms</b>
+
+ <p>1. <b>Passcode</b>
+
+ <p>The application would give the passcode to <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[])">getEncryptionKey(String, char[])</a></code>, which
+ would return an encryption key by first using <a href="https://en.wikipedia.org/wiki/PBKDF2">
+ PBKDF2</a> (Password-Based Key Derivation Function 2) to generate a <code>Secret Key</code>
+ from the passcode and then generating a secondary key randomly. This secondary encryption key is
+ then encrypted using the PBKDF2 secret key and securely persisted. The secondary encryption key
+ is returned to the caller.
+
+ <p>This is the most secure option because the secret key generated from the passcode is not
+ stored on the device.
+
+ <p>To retrieve the encryption key,
+<pre>
+<code>try {
+        // Do state transition if necessary; see 'Encryption State Transitions'
+        // below for details.
+
+        byte[] key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode);
+    } catch (EncryptionError ex) {
+        logger.error("Failed to retrieve encryption key", ex);
+    }
+</code></pre>
+
+ <p>2. <b>Passcode with Biometric</b>
+
+ <p>The application would:
+ <ol type="a">
+ <li>Get the initial cipher via <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getCipher(java.lang.String)">getCipher(String)</a></code>.</li>
+ <li>Pass the cipher to Android <code>FingerprintManager</code> for user authentication.</li>
+ <li>The same cipher (user-authenticated) is passed back to <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[], javax.crypto.Cipher)">getEncryptionKey(String, char[], Cipher)</a></code>.</li>
+ </ol>
+
+ <p>The <code>getEncryptionKey(alias, passcode, cipher)</code> method will generate a random
+ secondary encryption key similar to <code>Passcode</code> mechanism, but will encrypt it with the
+ PBKDF2 secret key and separately with the cipher also. The two encrypted versions of the
+ secondary encryption key are securely persisted. The secondary encryption key is returned to the
+ caller. The secondary encryption key can later be retrieved using either
+ <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[])">getEncryptionKey(String, char[])</a></code> or <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, javax.crypto.Cipher)">getEncryptionKey(String, Cipher)</a></code>.
+
+ <p>To retrieve the encryption key,
+<pre>
+<code>try {
+        byte[] key;
+
+        // Gets a cipher first for FingerprintManager to authenticate the user.
+        Cipher cipher = EncryptionUtil.getCipher(myAlias);
+
+        // ...
+        // The cipher is used by FingerprintManager to create a CryptoObject during
+        // user authentication, then passed back.
+        // ...
+
+        // Do state transition if necessary; see 'Encryption State Transitions' below
+        // for details.
+
+        key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode, cipher); // For new alias
+
+        // Once in PASSCODE_BIOMETRIC state-- can retrieve the encryption key with either
+        // passcode or cipher.
+        key = EncryptionUtil.getEncryptionKey(myAlias, cipher);
+
+        // -- Or --
+
+        key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode);
+    } catch (EncryptionError ex) {
+        logger.error("Failed to retrieve encryption key", ex);
+    }
+</code>
+</pre>
+
+ <p>3. <b>No Passcode</b>
+
+ <p>The application would use <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String)">getEncryptionKey(String)</a></code> to generate an encryption key
+ without the passcode.
+
+ <p>Since this is the no passcode case, the EncryptionUtil generates a secondary encryption key
+ randomly. This secondary encryption key is encrypted using the <code>Secret Key</code> generated
+ from Android Key Store and securely persisted. The secondary encryption key is returned to the
+ caller.
+
+ <p>To retrieve the encryption key,
+<pre>
+<code>try {
+
+        // Do state transition if necessary; see 'Encryption State Transitions' below
+        // for details.
+
+        byte[] key = EncryptionUtil.getEncryptionKey(myAlias);
+    } catch (EncryptionError ex) {
+        logger.error("Failed to retrieve encryption key", ex);
+    }
+</code></pre>
+
+
+ <b>Encryption State Transitions</b>
+
+ <p>There are scenarios that the application would switch the encryption key generation mechanism
+ depending on the necessary application protection requirement.
+ For example, from no passcode to passcode, or from passcode to passcode with biometric, etc.
+
+ <p>1.<b> To Passcode Only State</b>
+<pre>
+<code>try {
+        byte[] key;
+        EncryptionState state = EncryptionUtil.getState(myAlias);
+
+        switch (state) {
+            case INIT:
+                // Enables PASSCODE_ONLY state for new alias
+                key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode);
+                break;
+            case NO_PASSCODE:
+                EncryptionUtil.enablePasscode(myAlias, myPasscode);
+                break;
+            case PASSCODE_BIOMETRIC:
+                EncryptionUtil.disableBiometric(myAlias, myPasscode);
+                break;
+            default:
+                // Already in PASSCODE_ONLY state
+                break;
+        }
+
+        // ...Retrieves the encryption key (for existing alias) with
+        //    EncryptionUti.getEncryptionKey(alias, passcode).
+
+    } catch (EncryptionError ex) {
+        logger.error("Failed to transit to PASSCODE_ONLY state", ex);
+    }
+</code> </pre>
+
+ <p>2. <b>To Passcode with Biometric State</b>
+<pre>
+<code>try {
+        // Gets a cipher first for FingerprintManager to authenticate the user.
+        Cipher cipher = EncryptionUtil.getCipher(myAlias);
+
+        // ...
+        // The cipher is used by FingerprintManager to create a CryptoObject during
+        // user authentication, then passed back.
+        // ...
+
+        EncryptionState state = EncryptionUtil.getState(myAlias);
+        byte[] key;
+
+        switch (state) {
+            case INIT:
+                // Enables PASSCODE_BIOMETRIC state for new alias
+                key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode, cipher);
+                break;
+            case NO_PASSCODE: // Falls through
+            case PASSCODE_ONLY:
+                EncryptionUtil.enableBiometric(myAlias, myPasscode, cipher);
+                break;
+            default: // Already in PASSCODE_BIOMETRIC state
+                break;
+        }
+
+        // ...Retrieves the encryption key (for existing alias) with
+        //      EncryptionUti.getEncryptionKey(alias, passcode) or
+        //      EncryptionUti.getEncryptionKey(alias, cipher).
+        // Remember to precede those method calls with getCipher(alias)!
+    } catch (EncryptionError ex) {
+        logger.error("Failed to transit to PASSCODE_BIOMETRIC state", ex);
+    }
+</code></pre>
+
+ <p>3. <b>To No Passcode State</b>
+<pre>
+<code>try {
+        byte[] key;
+        EncryptionState state = EncryptionUtil.getState(myAlias);
+
+        switch (state) {
+            case INIT:
+                // Enables NO_PASSCODE state for new alias
+                key = EncryptionUtil.getEncryptionKey(myAlias);
+                break;
+            case PASSCODE_ONLY: // Falls through
+            case PASSCODE_BIOMETRIC:
+                EncryptionUtil.disablePasscode(myAlias, myPasscode);
+                break;
+            default: // Already in NO_PASSCODE state
+                break;
+        }
+
+        // ...Retrieves the encryption key with EncryptionUti.getEncryptionKey(alias) from this
+        //    point on.
+    } catch (EncryptionError ex) {
+        logger.error("Failed to transit to NO_PASSCODE state", ex);
+    }
+</code> </pre>
+
+ <b>To Change Passcode</b>
+
+ <p>The application can change the passcode using <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#changePasscode(java.lang.String, char[], char[])">changePasscode(String, char[], char[])</a></code>
+ when in Passcode Only or Passcode with Biometric state. Once the old passcode is verified, the
+ new passcode is used to encrypt the original encryption key.
+<pre>
+<code>try {
+        EncryptionUtil.changePasscode(myAlias, myPasscode, myNewPasscode);
+    } catch (EncryptionError ex) {
+        // The old passcode is not correct; get it again from the end user then retry
+        // changePasscode...
+    }
+</code></pre>
+
+ <p><b>Backup Considerations</b>
+
+ <p>For security reason, the <b>foundation</b> module has android:allowBackup="false" in
+ its manifest file.
+
+ <p>Also, the encryption keys obtained in <b>No Passcode State</b> or <b>Passcode with Biometric
+ State</b> rely on Android KeyStore and cannot be backed up/restored. Any Secure Store--
+ SecureDatabaseStore, SecureKeyValueStore, SecureStoreCache, SecurePreferenceDataStore,
+ or AppUsage store, that uses such encryption key cannot not be backed up/restored.
+
+ <p>In case you want to enable backup for the application, the application must exclude the shared
+ preferences files and Secure Store databases associated with those encryption keys by
+ defining custom XML rules.
+
+ <p>1. <b>Enable Backup</b>-- Because <b>foundation</b> module has android:allowBackup="false" in
+ its manifest file, you need to use Android merge rule marker to override the attribute.
+ <pre>
+ a. Add <b>xmlns:tools="http://schemas.android.com/tools"</b> to <b>&lt;manifest&gt;</b>
+    element
+
+ b. Enable the backup by adding the two attributes in &lt;application&gt; element:
+      android:allowBackup="true"
+      tools:replace="android:allowBackup"
+ </pre>
+
+ <p>2. <b>Create Backup Rules File</b>-- In AndroidManifest.xml, add
+       <b>android:fullBackupContent</b> attribute in <b>&lt;application&gt;</b> element.
+       This attribute points to an XML file under res/xml folder that contains backup rules.
+
+ <p>For example,
+ <pre>
+<code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.sap.android.assistant"&gt;
+
+        &lt;application ...
+            android:allowBackup="true"
+            ...
+            android:fullBackupContent="@xml/backup_descriptor"
+            tools:replace="android:allowBackup"&gt;
+
+            &lt;activity ...
+        &lt;/application&gt;
+    &lt;/manifest&gt;
+    ...
+</code></pre>
+
+ <p>3. <b>Add Backup Rules</b>--Create an XML file in the res/xml folder specified by
+ <b>android:fullBackupContent</b> attribute. Inside the backup rule file, add
+ <b>&lt;exclude&gt;</b> elements to exclude files for the <b>sharedpref</b> and
+ <b>database</b> domains:
+ <pre>
+    &lt;exclude domain="sharedpref"
+          path="&lt;<b>encryption key alias</b>&gt;<b>_sharedPreference##.xml</b>" /&gt;
+
+    &lt;exclude domain="database" path="&lt;<b>secure store name</b>&gt;" /&gt;
+ </pre>
+
+ <p>For example,
+ <pre>
+<code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;full-backup-content&gt;
+        &lt;!--
+        1. Exclude shared preferences in the pattern of "encryptionKeyAlias" followed by
+            "_sharedPreference##.xml" for all encryption keys in No Passcode State or Passcode with
+            Biometric State.
+
+        2. Exclude secure stores using those encryption keys--
+            Secure store "APP_SECURE_STORE" is using encryption key with alias "app_pc_alias".
+            Secure store "RLM_SECURE_STORE" is using encryption key with alias "rlm_pc_alias".
+        --&gt;
+
+        &lt;exclude domain="sharedpref" path="app_pc_alias_sharedPreference##.xml" /&gt;
+        &lt;exclude domain="sharedpref" path="rlm_pc_alias_sharedPreference##.xml" /&gt;
+        &lt;exclude domain="database" path="APP_SECURE_STORE" /&gt;
+        &lt;exclude domain="database" path="RLM_SECURE_STORE" /&gt;
+    &lt;/full-backup-content&gt;
+</code></pre></p>
+
+
+
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionState.html">EncryptionState</a></code></li>
+      </ul>
+  </div>
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#changeIterationCount(java.lang.String, char[], int)">changeIterationCount</a></span>(String alias, char[] passcode, int iterationCount)
+        
+        <div class="jd-descrdiv">An encryption key that requires passcode (in <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionState.html#PASSCODE_ONLY">PASSCODE_ONLY</a></code> or
+ <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionState.html#PASSCODE_BIOMETRIC">PASSCODE_BIOMETRIC</a></code> state) uses <code>PBKDF2</code> to generate a
+ <code>Secret Key</code> from the passcode and then generating a secondary key randomly.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#changePasscode(java.lang.String, char[], char[])">changePasscode</a></span>(String alias, char[] oldPasscode, char[] newPasscode)
+        
+        <div class="jd-descrdiv">Changes the passcode so that the user's key is re-encrypted with the new passcode when in
+ PASSCODE_ONLY or PASSCODE_BIOMETRIC state.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#delete(java.lang.String)">delete</a></span>(String alias)
+        
+        <div class="jd-descrdiv">Removes the encryption key.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#disableBiometric(java.lang.String, char[])">disableBiometric</a></span>(String alias, char[] existingPasscode)
+        
+        <div class="jd-descrdiv">Disables the biometric authentication and the encryption key can only be retrieved via
+ <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[])">getEncryptionKey(String, char[])</a></code> only after this method returns successfully.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#disablePasscode(java.lang.String, javax.crypto.Cipher)">disablePasscode</a></span>(String alias, Cipher cipher)
+        
+        <div class="jd-descrdiv">Re-encrypts user's key without the passcode and cipher for biometric authentication.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#disablePasscode(java.lang.String, char[])">disablePasscode</a></span>(String alias, char[] existingPasscode)
+        
+        <div class="jd-descrdiv">Disables the passcode and biometric authentication when in PASSCODE_ONLY or
+ PASSCODE_BIOMETRIC.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enableBiometric(java.lang.String, char[], javax.crypto.Cipher)">enableBiometric</a></span>(String alias, char[] passcode, Cipher cipher)
+        
+        <div class="jd-descrdiv">When in NO_PASSCODE or PASSCODE_ONLY state, re-encrypted the encryption key with the
+ passcode and biometric authentication.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enablePasscode(java.lang.String, char[])">enablePasscode</a></span>(String alias, char[] passcode)
+        
+        <div class="jd-descrdiv">When in NO_PASSCODE state, enables passcode so that the user's key is re-encrypted with the
+ provided passcode.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            Cipher
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getCipher(java.lang.String)">getCipher</a></span>(String alias)
+        
+        <div class="jd-descrdiv">Obtains a cipher object for Android <code>FingerprintManager</code> to derive a crypto object
+ for authentication, then passes back to one of the methods--
+ <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enableBiometric(java.lang.String, char[], javax.crypto.Cipher)">enableBiometric(String, char[], Cipher)</a></code>, <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, javax.crypto.Cipher)">getEncryptionKey(String, Cipher)</a></code>,
+ or <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[], javax.crypto.Cipher)">getEncryptionKey(String, char[], Cipher)</a></code>.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            byte[]
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, javax.crypto.Cipher)">getEncryptionKey</a></span>(String alias, Cipher cipher)
+        
+        <div class="jd-descrdiv">Returns the existing encryption key when in PASSCODE_BIOMETRIC state.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            byte[]
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[])">getEncryptionKey</a></span>(String alias, char[] passcode)
+        
+        <div class="jd-descrdiv">Returns the encryption key when in PASSCODE_ONLY or PASSCODE_BIOMETRIC state for an
+ existing alias.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            byte[]
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String)">getEncryptionKey</a></span>(String alias)
+        
+        <div class="jd-descrdiv">Generates an encryption key for the new alias, or returns the existing encryption key when
+ in NO_PASSCODE state.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            byte[]
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[], javax.crypto.Cipher)">getEncryptionKey</a></span>(String alias, char[] passcode, Cipher cipher)
+        
+        <div class="jd-descrdiv">This method typically is used to generate a new encryption key for a new alias and enters
+ PASSCODE_BIOMETRIC state.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            <a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionState.html">EncryptionState</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getState(java.lang.String)">getState</a></span>(String alias)
+        
+        <div class="jd-descrdiv">Returns the current encryption state.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            synchronized
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#initialize(android.content.Context)">initialize</a></span>(Context context)
+        
+        <div class="jd-descrdiv">Initializes with Android application context.</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  java.lang.Object
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            Object
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">clone</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">equals</span>(Object arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">finalize</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            Class&lt;?&gt;
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getClass</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hashCode</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notify</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notifyAll</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">toString</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>()
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<a id="changeIterationCount(java.lang.String, char[], int)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">changeIterationCount</span>
+      <span class="normal">(String alias, char[] passcode, int iterationCount)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>An encryption key that requires passcode (in <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionState.html#PASSCODE_ONLY">PASSCODE_ONLY</a></code> or
+ <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionState.html#PASSCODE_BIOMETRIC">PASSCODE_BIOMETRIC</a></code> state) uses <code>PBKDF2</code> to generate a
+ <code>Secret Key</code> from the passcode and then generating a secondary key randomly.
+ This secondary encryption key is then encrypted using the PBKDF2 secret key and securely
+ persisted, this secondary encryption key is returned to the caller of
+ <code>getEncryptionKey</code> methods.
+
+ <p>By default, the iteration count used by the <code>PBKDF2 Secret Key</code> mechanism
+ is 1000. Call this method to increase the iteration count for an existing encryption key
+ associated with a passcode. The improvement in security is gained by slowing performance.
+ The higher the iteration count the longer it takes to compute the key from the passcode.
+ An offline attacker trying to guess the passcode has to do that computation for each
+ passcode they guess.
+
+ <p>Once this method is called, the subsequent calls to
+ <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[])">getEncryptionKey(String, char[])</a></code> or <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#changePasscode(java.lang.String, char[], char[])">changePasscode(String, char[], char[])</a></code>
+ will use the same iteration count.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>passcode</th>
+          <td>the authentication passcode</td>
+        </tr>
+        <tr>
+          <th>iterationCount</th>
+          <td>at least {@value EncryptionHelper#MIN_ITERATION_COUNT} (the default).</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalArgumentException</td>
+            <td>If the iteration count is not within the valid range.</td>
+        </tr>  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>The current encryption key is not in <code>PASSCODE_ONLY</code>
+      or <code>PASSCODE_BIOMETRIC</code> state.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If the passcode is incorrect or encryption/decryption error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="changePasscode(java.lang.String, char[], char[])"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">changePasscode</span>
+      <span class="normal">(String alias, char[] oldPasscode, char[] newPasscode)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Changes the passcode so that the user's key is re-encrypted with the new passcode when in
+ PASSCODE_ONLY or PASSCODE_BIOMETRIC state.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>oldPasscode</th>
+          <td>the old passcode</td>
+        </tr>
+        <tr>
+          <th>newPasscode</th>
+          <td>the new passcode</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>If the current encryption state is not PASSCODE_ONLY or
+      PASSCODE_BIOMETRIC.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If the old passcode is incorrect or encryption/decryption error
+      occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="delete(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">delete</span>
+      <span class="normal">(String alias)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Removes the encryption key. Any data encrypted with the original encryption key will no
+ longer be decryptable. This method is typically called when the user forgot the passcode.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>if the keystore has not been initialized, or if the entry cannot
+      be removed.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="disableBiometric(java.lang.String, char[])"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">disableBiometric</span>
+      <span class="normal">(String alias, char[] existingPasscode)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Disables the biometric authentication and the encryption key can only be retrieved via
+ <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[])">getEncryptionKey(String, char[])</a></code> only after this method returns successfully.
+
+ <p>Note that if the user calls <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[], javax.crypto.Cipher)">getEncryptionKey(String, char[], Cipher)</a></code>, the user's
+ encryption key will be protected by biometric authentication again.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>existingPasscode</th>
+          <td>the existing passcode</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>If the current state is not PASSCODE_BIOMETRIC.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If the passcode is incorrect or encryption/decryption error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="disablePasscode(java.lang.String, javax.crypto.Cipher)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">disablePasscode</span>
+      <span class="normal">(String alias, Cipher cipher)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Re-encrypts user's key without the passcode and cipher for biometric authentication. The
+ user's key can be retrieved via <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String)">getEncryptionKey(String)</a></code> after this method
+ returns successfully. <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, javax.crypto.Cipher)">getEncryptionKey(String, Cipher)</a></code> will fail, because biometric
+ authentication must co-exist with passcode.
+
+ <p>Note that if the user calls <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[], javax.crypto.Cipher)">getEncryptionKey(String, char[], Cipher)</a></code> after this
+ method returns, the user's key will be protected by the passcode and biometric authentication
+ again.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>cipher</th>
+          <td>the cipher returned from <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getCipher(java.lang.String)">getCipher(String)</a></code></td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>if the cipher is incorrect or encryption/decryption error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="disablePasscode(java.lang.String, char[])"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">disablePasscode</span>
+      <span class="normal">(String alias, char[] existingPasscode)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Disables the passcode and biometric authentication when in PASSCODE_ONLY or
+ PASSCODE_BIOMETRIC. The user's key can only be retrieved via <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String)">getEncryptionKey(String)</a></code> after this method returns successfully.
+
+ <p>The app must call <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enablePasscode(java.lang.String, char[])">enablePasscode(String, char[])</a></code> to move to PASSCODE_ONLY
+ state, or <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enableBiometric(java.lang.String, char[], javax.crypto.Cipher)">enableBiometric(String, char[], Cipher)</a></code> to move to PASSCODE_BIOMETRIC
+ state.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>existingPasscode</th>
+          <td>the original passcode</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>If the current state is not in PASSCODE_ONLY or
+      PASSCODE_BIOMETRIC state.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If the passcode is incorrect or encryption/decryption error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="enableBiometric(java.lang.String, char[], javax.crypto.Cipher)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">enableBiometric</span>
+      <span class="normal">(String alias, char[] passcode, Cipher cipher)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>When in NO_PASSCODE or PASSCODE_ONLY state, re-encrypted the encryption key with the
+ passcode and biometric authentication.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>passcode</th>
+          <td>the existing passcode when in PASSCODE_ONLY state or a new passcode when in
+      NO_PASSCODE state</td>
+        </tr>
+        <tr>
+          <th>cipher</th>
+          <td>the cipher returned from <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getCipher(java.lang.String)">getCipher(String)</a></code></td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>If the current encryption state is PASSCODE_BIOMETRIC already.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If the passcode is incorrect when the current state is PASSCODE_ONLY
+      or if encryption/decryption error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="enablePasscode(java.lang.String, char[])"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">enablePasscode</span>
+      <span class="normal">(String alias, char[] passcode)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>When in NO_PASSCODE state, enables passcode so that the user's key is re-encrypted with the
+ provided passcode. Now the encryption key is in PASSCODE_ONLY state and can be retrieved via
+ <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[])">getEncryptionKey(String, char[])</a></code>.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>passcode</th>
+          <td>the passcode</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>If the current encryption state is PASSCODE_ONLY already.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If encryption/decryption error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getCipher(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        Cipher
+      </span>
+      <span class="sympad">getCipher</span>
+      <span class="normal">(String alias)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Obtains a cipher object for Android <code>FingerprintManager</code> to derive a crypto object
+ for authentication, then passes back to one of the methods--
+ <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enableBiometric(java.lang.String, char[], javax.crypto.Cipher)">enableBiometric(String, char[], Cipher)</a></code>, <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, javax.crypto.Cipher)">getEncryptionKey(String, Cipher)</a></code>,
+ or <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[], javax.crypto.Cipher)">getEncryptionKey(String, char[], Cipher)</a></code>. Those methods will fail if the input
+ cipher is not obtained via this method.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>A cipher object for Android <code>FingerprintManager</code> to derive a crypto object
+      during biometric authentication.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If Android Key Store or system error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getEncryptionKey(java.lang.String, javax.crypto.Cipher)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        byte[]
+      </span>
+      <span class="sympad">getEncryptionKey</span>
+      <span class="normal">(String alias, Cipher cipher)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the existing encryption key when in PASSCODE_BIOMETRIC state.
+
+ <p>For a new alias, the app must call <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enableBiometric(java.lang.String, char[], javax.crypto.Cipher)">enableBiometric(String, char[], Cipher)</a></code> first
+ to move to PASSCODE_BIOMETRIC state before calling this method.
+
+ <p><b>Note</b>:
+
+ <p>An encryption key in PASSCODE_BIOMETRIC state cannot be backed up/restored, the associated
+ shared preference file (&lt;your encryption key alias&gt;_<b>_sharedPreference##.xml</b>)
+ and Secure Store database must be excluded from the application's
+ &lt;full-backup-content&gt; element in the res/xml file specified by the &lt;application&gt;
+ attribute <b>android:fullBackupContent</b> in AndroidManifest.xml.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>cipher</th>
+          <td>the cipher returned from <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getCipher(java.lang.String)">getCipher(String)</a></code></td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The encryption key.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>If the current encryption state is not PASSCODE_BIOMETRIC.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If the cipher is incorrect, or encryption/decryption
+      error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getEncryptionKey(java.lang.String, char[])"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        byte[]
+      </span>
+      <span class="sympad">getEncryptionKey</span>
+      <span class="normal">(String alias, char[] passcode)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the encryption key when in PASSCODE_ONLY or PASSCODE_BIOMETRIC state for an
+ existing alias.
+
+ <p>For a new alias, this method will create an encryption key in PASSCODE_ONLY state.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>passcode</th>
+          <td>the authentication passcode</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The encryption key.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>If the current encryption state is NO_PASSCODE.
+            <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enablePasscode(java.lang.String, char[])">enablePasscode(String, char[])</a></code> needs to be called before calling this method.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If passcode is incorrect or encryption/decryption error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getEncryptionKey(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        byte[]
+      </span>
+      <span class="sympad">getEncryptionKey</span>
+      <span class="normal">(String alias)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Generates an encryption key for the new alias, or returns the existing encryption key when
+ in NO_PASSCODE state.
+
+ <p><b>Note</b>:
+
+ <p>An encryption key in NO_PASSCODE state cannot be backed up/restored, the associated
+ shared preference file (&lt;your encryption key alias&gt;_<b>_sharedPreference##.xml</b>)
+ and Secure Store database must be excluded from the application's
+ &lt;full-backup-content&gt; element in the res/xml file specified by the &lt;application&gt;
+ attribute <b>android:fullBackupContent</b> in AndroidManifest.xml.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The encryption key.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>If the current encryption state is PASSCODE_ONLY or
+      PASSCODE_BIOMETRIC. App needs to call <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#disablePasscode(java.lang.String, javax.crypto.Cipher)">disablePasscode(String, Cipher)</a></code> or
+      <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#disablePasscode(java.lang.String, char[])">disablePasscode(String, char[])</a></code> to go back to NO_PASSCODE state.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If encryption/decryption error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getEncryptionKey(java.lang.String, char[], javax.crypto.Cipher)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        byte[]
+      </span>
+      <span class="sympad">getEncryptionKey</span>
+      <span class="normal">(String alias, char[] passcode, Cipher cipher)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>This method typically is used to generate a new encryption key for a new alias and enters
+ PASSCODE_BIOMETRIC state.
+
+ <p>When getting an existing key, calling getEncryptionKey with either a passcode
+ (<code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String, char[])">getEncryptionKey(String, char[])</a></code>) or a cipher (<code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getEncryptionKey(java.lang.String)">(String, Cipher)</a></code>) will suffice.
+
+ <p><b>Note</b>:
+
+ <p>An encryption key in PASSCODE_BIOMETRIC state cannot be backed up/restored, the associated
+ shared preference file (&lt;your encryption key alias&gt;_<b>_sharedPreference##.xml</b>)
+ and Secure Store database must be excluded from the application's
+ &lt;full-backup-content&gt; element in the res/xml file specified by the &lt;application&gt;
+ attribute <b>android:fullBackupContent</b> in AndroidManifest.xml.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+        <tr>
+          <th>passcode</th>
+          <td>the authentication passcode</td>
+        </tr>
+        <tr>
+          <th>cipher</th>
+          <td>the cipher returned from <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#getCipher(java.lang.String)">getCipher(String)</a></code></td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The encryption key.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalStateException</td>
+            <td>If the current state is PASSCODE_ONLY. Before calling this
+      method, <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enableBiometric(java.lang.String, char[], javax.crypto.Cipher)">enableBiometric(String, char[], Cipher)</a></code> needs to be called if the
+      current state is NO_PASSCODE, or <code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionUtil.html#enableBiometric(java.lang.String, char[], javax.crypto.Cipher)">enableBiometric(String, char[], Cipher)</a></code> needs
+      to be called if the current state is in NO_PASSCODE state.</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionError.html">EncryptionError</a></td>
+            <td>If passcode and/or the cipher is incorrect, or encryption/decryption
+      error occurs.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getState(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        <a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionState.html">EncryptionState</a>
+      </span>
+      <span class="sympad">getState</span>
+      <span class="normal">(String alias)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the current encryption state.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>alias</th>
+          <td>the alias of the encryption key</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The current encryption state.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalArgumentException</td>
+            <td>If the alias is an empty string.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><code><a href="../../../../../../com/sap/cloud/mobile/foundation/common/EncryptionState.html">EncryptionState</a></code></li>
+      </ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="initialize(android.content.Context)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">initialize</span>
+      <span class="normal">(Context context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Initializes with Android application context. This is the first method to call before
+ using other EncryptionUtil methods.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</th>
+          <td>Android application context
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<a id="navbar_top"></a>
+
+<div id="footer">
+Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize doclava-developer-docs.js */
+</script>
+
+</body>
+</html>

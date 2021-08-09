@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ReentrantMutex - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">ReentrantMutex</a><br/>
+<br/>
+<h1>ReentrantMutex</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ReentrantMutex</span></code>
+<p>A <a href="https://en.wikipedia.org/wiki/Reentrant_mutex">reentrant mutex</a>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ReentrantMutex</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="lock.html">lock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lock</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Lock the mutex, blocking until it can be locked.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trylock.html">tryLock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">tryLock</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> (and lock the mutex) if the mutex can be locked without blocking, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unlock.html">unlock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">unlock</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Unlock the mutex, which must have previously been locked by the current thread using <code><a href="lock.html">ReentrantMutex.lock</a></code> or <code><a href="trylock.html">ReentrantMutex.tryLock</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withlock.html">withLock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withLock</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ReentrantMutex$withLock(com.sap.cloud.mobile.odata.core.Action0)/action">action</span><span class="symbol">:</span>&nbsp;<a href="../action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Execute <code>action</code> while holding a lock on this mutex. The lock will be released even if the action throws an exception.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

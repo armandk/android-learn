@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompositeCache.get - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="index.html">CompositeCache</a>&nbsp;/&nbsp;<a href="./get.html">get</a><br/>
+<br/>
+<h1>get</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.CompositeCache$get(com.sap.cloud.mobile.foundation.cache.CompositeCache.K)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.CompositeCache$get(com.sap.cloud.mobile.foundation.cache.CompositeCache.K)/key">key</span><span class="symbol">:</span>&nbsp;<a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span></code>
+<p>Retrieves the value associated with a cache entry identified by the specified key. </p>
+<p><strong>Side Effects</strong>: </p>
+<p>1. When <strong>Read-Miss</strong> occurs at one cache level, it continues querying through deeper levels of caches until the entry is found. </p>
+<p>2. The cache entry found will be propagated up through cache levels.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">:</span> the key of the cache entry</p>
+<p><strong>Return</strong><br/>
+<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span><span class="symbol">:</span> The value associated with the cache entry's key or <code>null</code> if it does not exist in all levels of caches.</p>
+<a name="com.sap.cloud.mobile.foundation.cache.CompositeCache$get(com.sap.cloud.mobile.foundation.cache.CompositeCache.K)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.CompositeCache$get(com.sap.cloud.mobile.foundation.cache.CompositeCache.K)/key">key</span><span class="symbol">:</span>&nbsp;<a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span></code>
+<p>Overrides <a href="../cachebase/get.html">CacheBase.get</a></p>
+<p>Retrieves the value associated with a cache entry identified by the specified key. </p>
+<p><strong>Side Effects</strong>: </p>
+<p>1. When <strong>Read-Miss</strong> occurs at one cache level, it continues querying through deeper levels of caches until the entry is found. </p>
+<p>2. The cache entry found will be propagated up through cache levels.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">:</span> the key of the cache entry</p>
+<p><strong>Return</strong><br/>
+<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span><span class="symbol">:</span> The value associated with the cache entry's key or <code>null</code> if it does not exist in all levels of caches.</p>
+</BODY>
+</HTML>

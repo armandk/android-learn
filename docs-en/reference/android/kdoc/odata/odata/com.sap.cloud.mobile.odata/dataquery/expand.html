@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.expand - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./expand.html">expand</a><br/>
+<br/>
+<h1>expand</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$expand(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expand</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$expand(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))/items">items</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add properties (to <code><a href="getexpanditems.html">DataQuery.expandItems</a></code>) for expanding from the target entity. </p>
+Example using proxy classes:<pre><code>
+      public void expandExample() {
+          NorthwindService service = this.getService();
+          DataQuery query = new DataQuery()
+              .select(Customer.customerID, Customer.companyName, Customer.contactName)
+              .filter(Customer.customerID.equal("ALFKI").or(Customer.customerID.equal("ANATR")))
+              .expand(Customer.orders).orderBy(Customer.companyName);
+          List&lt;Customer&gt; customers = service.getCustomers(query);
+          int countOrders = 0;
+          for (Customer customer : customers) {
+              this.showCustomer(customer);
+              List&lt;Order&gt; orders = customer.getOrders();
+              for (Order order : orders) {
+                  int orderID = order.getOrderID();
+                  Example.show("  Order ", Example.formatInt(orderID));
+                  countOrders++;
+              }
+          }
+          assert countOrders &gt; 0;
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void expandExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          EntityType customerEntityType = customersEntitySet.getEntityType();
+          Property customerIDProperty = customerEntityType.getProperty("CustomerID");
+          Property companyNameProperty = customerEntityType.getProperty("CompanyName");
+          Property contactNameProperty = customerEntityType.getProperty("ContactName");
+          Property ordersProperty = customerEntityType.getProperty("Orders");
+          Property orderIDProperty = ordersProperty.getItemEntityType()
+              .getProperty("OrderID");
+          DataQuery query = new DataQuery()
+              .select(customerIDProperty, companyNameProperty, contactNameProperty)
+              .from(customersEntitySet).expand(ordersProperty)
+              .filter(customerIDProperty.equal("ALFKI").or(customerIDProperty.equal("ANATR")))
+              .orderBy(companyNameProperty);
+          EntityValueList customers = service.executeQuery(query).getEntityList();
+          int countOrders = 0;
+          for (EntityValue customer : customers) {
+              this.showCustomer(customer);
+              EntityValueList orders = ordersProperty.getEntityList(customer);
+              for (EntityValue order : orders) {
+                  int orderID = orderIDProperty.getInt(order);
+                  Example.show("  Order ", Example.formatInt(orderID));
+                  countOrders++;
+              }
+          }
+          assert countOrders &gt; 0;
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="items"></a>
+<code>items</code> - <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">:</span> The items to be expanded.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

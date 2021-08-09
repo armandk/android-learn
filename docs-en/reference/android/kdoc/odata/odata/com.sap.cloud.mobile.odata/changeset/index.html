@@ -1,0 +1,360 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChangeSet - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ChangeSet</a><br/>
+<br/>
+<h1>ChangeSet</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChangeSet</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> change set. A change set is used to group a set of entity or link changes into a single unit of work, like an atomic database transaction.</p>
+ See Also: 
+<p><code><a href="../dataservice/index.html">com.sap.cloud.mobile.odata.DataService</a></code>, <code><a href="../requestbatch/index.html">com.sap.cloud.mobile.odata.RequestBatch</a></code>.</p>
+  Example using proxy classes:<pre><code>
+  public void applyChangesExample() {
+      NorthwindService service = this.getService();
+      List&lt;Supplier&gt; suppliers = service.getSuppliers(new DataQuery().top(2));
+      List&lt;Product&gt; products = service.getProducts(new DataQuery().top(3));
+      Product product1 = products.get(0).copy();
+      Product product2 = products.get(1).copy();
+      Product product3 = products.get(2).copy();
+      product1.setProductName("Blueberry Muffins");
+      product2.setProductName("Strawberry Yoghurt");
+      product3.setProductName("Raspberry Pie");
+      ChangeSet entityCreates = new ChangeSet();
+      entityCreates.createEntity(product1);
+      entityCreates.createEntity(product2);
+      entityCreates.createEntity(product3);
+      service.applyChanges(entityCreates);
+      ChangeSet entityChanges = new ChangeSet();
+      product2.setProductName("Blackberry Yoghurt");
+      entityChanges.updateEntity(product2);
+      entityChanges.deleteEntity(product3);
+      service.applyChanges(entityChanges);
+      ChangeSet linkChanges = new ChangeSet();
+      Supplier supplier1 = suppliers.get(0);
+      Supplier supplier2 = suppliers.get(1);
+      linkChanges.createLink(product1, Product.supplier, supplier1);
+      linkChanges.updateLink(product1, Product.supplier, supplier2);
+      linkChanges.deleteLink(product1, Product.supplier);
+      service.applyChanges(linkChanges);
+  }
+  </code></pre> Example using dynamic API:<pre><code>
+  public void applyChangesExample() {
+      DataService service = this.getService();
+      EntitySet suppliersEntitySet = service.getEntitySet("Suppliers");
+      EntitySet productsEntitySet = service.getEntitySet("Products");
+      EntityType productEntityType = productsEntitySet.getEntityType();
+      Property productNameProperty = productEntityType.getProperty("ProductName");
+      Property supplierProperty = productEntityType.getProperty("Supplier");
+      EntityValueList suppliers = service.executeQuery(new DataQuery()
+          .from(suppliersEntitySet).top(2))
+          .getEntityList();
+      EntityValueList products = service.executeQuery(new DataQuery()
+          .from(productsEntitySet).top(3))
+          .getEntityList();
+      EntityValue product1 = products.get(0).copyEntity();
+      EntityValue product2 = products.get(1).copyEntity();
+      EntityValue product3 = products.get(1).copyEntity();
+      productNameProperty.setString(product1, "Blueberry Yoghurt");
+      productNameProperty.setString(product2, "Strawberry Yoghurt");
+      productNameProperty.setString(product3, "Raspberry Pie");
+      ChangeSet entityCreates = new ChangeSet();
+      entityCreates.createEntity(product1);
+      entityCreates.createEntity(product2);
+      entityCreates.createEntity(product3);
+      service.applyChanges(entityCreates);
+      ChangeSet entityChanges = new ChangeSet();
+      productNameProperty.setString(product2, "Blackberry Yoghurt");
+      entityChanges.updateEntity(product2);
+      entityChanges.deleteEntity(product3);
+      service.applyChanges(entityChanges);
+      ChangeSet linkChanges = new ChangeSet();
+      EntityValue supplier1 = suppliers.get(0);
+      EntityValue supplier2 = suppliers.get(1);
+      linkChanges.createLink(product1, supplierProperty, supplier1);
+      linkChanges.updateLink(product1, supplierProperty, supplier2);
+      linkChanges.deleteLink(product1, supplierProperty);
+      service.applyChanges(linkChanges);
+  }
+  </code></pre>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ChangeSet</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> change set. A change set is used to group a set of entity or link changes into a single unit of work, like an atomic database transaction.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="addaction.html">addAction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$addAction(com.sap.cloud.mobile.odata.DataQuery)/action">action</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$addAction(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders)/action">action</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$addAction(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See addAction(DataQuery, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$addAction(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/action">action</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$addAction(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$addAction(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add an action invocation to the change set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addactionresult.html">addActionResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addActionResult</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$addActionResult(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.QueryResult)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$addActionResult(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.QueryResult)/result">result</span><span class="symbol">:</span>&nbsp;<a href="../queryresult/index.html"><span class="identifier">QueryResult</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a query result for action to this change set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createentity.html">createEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createEntity(com.sap.cloud.mobile.odata.EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See createEntity(EntityValue, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a pending created entity to the change set. The entity will be created when this change set is submitted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createlink.html">createLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See createLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a pending created link to the change set. The link will be created when this change set is submitted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createrelatedentity.html">createRelatedEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createRelatedEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createRelatedEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.http.HttpHeaders)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.http.HttpHeaders)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.http.HttpHeaders)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See createRelatedEntity(EntityValue, EntityValue, Property, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createRelatedEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$createRelatedEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a pending created entity to the change set, related to a parent entity via a parent navigation property. The entity will be created when this change set is submitted. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deleteentity.html">deleteEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteEntity(com.sap.cloud.mobile.odata.EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See deleteEntity(EntityValue, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a pending deleted entity to the change set. The entity will be deleted when this change set is submitted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletelink.html">deleteLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See deleteLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a pending deleted link to the change set. The link will be deleted when this change set is submitted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getaction.html">getAction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$getAction(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Return the DataQuery for the action, if <code>isAction(index)</code> is <code>true</code>, otherwise throws <code>undefined</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getactionresult.html">getActionResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getActionResult</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$getActionResult(com.sap.cloud.mobile.odata.DataQuery)/actionQuery">actionQuery</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryresult/index.html"><span class="identifier">QueryResult</span></a></code>
+<p>Return the QueryResult for the action. Throws <code>UsageException</code> if the result cannot be found for the query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentity.html">getEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$getEntity(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return the changed entity, if <code>isEntity(index)</code> is <code>true</code>, otherwise throws <code>undefined</code>. The <code><a href="../entityvalue/iscreated.html">EntityValue.isCreated</a></code>, <code><a href="../entityvalue/isupdated.html">EntityValue.isUpdated</a></code> and <code><a href="../entityvalue/isdeleted.html">EntityValue.isDeleted</a></code> properties can be accessed on the resulting entity value to determine the type of change. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geterror.html">getError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getError</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataserviceexception/index.html"><span class="identifier">DataServiceException</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Error if <code>status</code> does not represent a successful response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getheaders.html">getHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHeaders</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$getHeaders(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return the HTTP headers for the change at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlink.html">getLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$getLink(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../changedlink/index.html"><span class="identifier">ChangedLink</span></a></code>
+<p>Return the changed link, if <code>isLink(index)</code> is <code>true</code>, otherwise throws <code>undefined</code>. The <code><a href="../changedlink/iscreated.html">ChangedLink.isCreated</a></code>, <code><a href="../changedlink/isupdated.html">ChangedLink.isUpdated</a></code> and <code><a href="../changedlink/isdeleted.html">ChangedLink.isDeleted</a></code> properties can be accessed on the resulting changed link to determine the type of change. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoptions.html">getOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$getOptions(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a></code>
+<p>Return the request options for the change at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstatus.html">getStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStatus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return response status (e.g. HTTP status code 200 = OK).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="invokeaction.html">invokeAction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invokeAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invokeAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invokeAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>See invokeAction(DataMethod, ParameterList, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invokeAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$invokeAction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add an action invocation to the change set. If the method is not an action throws a 'UsageException'.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isaction.html">isAction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$isAction(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>index</code> is a valid change index, and the change is for an action</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isentity.html">isEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$isEntity(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>index</code> is a valid change index, and the change is for a created, updated or deleted entity; otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islink.html">isLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$isLink(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>index</code> is a valid change index, and the change is for a created, updated or deleted link; otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="saveentity.html">saveEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">saveEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$saveEntity(com.sap.cloud.mobile.odata.EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">saveEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$saveEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$saveEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See saveEntity(EntityValue, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">saveEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$saveEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$saveEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$saveEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Call <code><a href="createentity.html">ChangeSet.createEntity</a></code>, if <code>entity.isNew == true</code>, otherwise call <code><a href="updateentity.html">ChangeSet.updateEntity</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="seterror.html">setError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setError</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$setError(com.sap.cloud.mobile.odata.DataServiceException)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../dataserviceexception/index.html"><span class="identifier">DataServiceException</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set error if <code>status</code> does not represent a successful response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstatus.html">setStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStatus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$setStatus(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set response status (e.g. HTTP status code 200 = OK).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="size.html">size</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of changes in this change set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updateentity.html">updateEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateEntity(com.sap.cloud.mobile.odata.EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See updateEntity(EntityValue, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add an updated entity to the change set. The entity will be updated when this change set is submitted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updatelink.html">updateLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See updateLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangeSet$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a pending updated link to the change set. The link will be updated when this change set is submitted.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

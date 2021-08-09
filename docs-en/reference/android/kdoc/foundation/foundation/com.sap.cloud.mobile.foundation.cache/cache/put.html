@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Cache.put - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="index.html">Cache</a>&nbsp;/&nbsp;<a href="./put.html">put</a><br/>
+<br/>
+<h1>put</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V, kotlin.Double)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V, kotlin.Double)/key">key</span><span class="symbol">:</span>&nbsp;<a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V, kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V, kotlin.Double)/cost">cost</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span></code>
+<p>Adds the value and the associated cost to the cache for the key. The behavior when the aggregate of costs exceeds the maximum cost during the execution of this method is implementation dependent.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">:</span> a <code>non-null</code> key of a cache entry</p>
+<p><a name="value"></a>
+<code>value</code> - <a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">:</span> a <code>non-null</code> value to add</p>
+<p><a name="cost"></a>
+<code>cost</code> - <span class="identifier">Double</span><span class="symbol">:</span> the cost associated with this entry. If the accumulated cost exceeds maximum cache cost, cache entry eviction may be triggered to free up memory space.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span><span class="symbol">:</span> The previous value associated with the existed <code>key</code>, <code>null</code> if the entry did exist.</p>
+<a name="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V)/key">key</span><span class="symbol">:</span>&nbsp;<a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V)/value">value</span><span class="symbol">:</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span></code>
+<p>Adds or updates a value associated with a key.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">:</span> a <code>non-null</code> key of a cache entry</p>
+<p><a name="value"></a>
+<code>value</code> - <a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">:</span> a <code>non-null</code> value to add</p>
+<p><strong>Return</strong><br/>
+<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span><span class="symbol">:</span> The original value of an existing cache entry, or <code>null</code> if this is a new entry.</p>
+<a name="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V, kotlin.Double)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V, kotlin.Double)/key">key</span><span class="symbol">:</span>&nbsp;<a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V, kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V, kotlin.Double)/cost">cost</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span></code>
+<p>Adds the value and the associated cost to the cache for the key. The behavior when the aggregate of costs exceeds the maximum cost during the execution of this method is implementation dependent.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">:</span> a <code>non-null</code> key of a cache entry</p>
+<p><a name="value"></a>
+<code>value</code> - <a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">:</span> a <code>non-null</code> value to add</p>
+<p><a name="cost"></a>
+<code>cost</code> - <span class="identifier">Double</span><span class="symbol">:</span> the cost associated with this entry. If the accumulated cost exceeds maximum cache cost, cache entry eviction may be triggered to free up memory space.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span><span class="symbol">:</span> The previous value associated with the existed <code>key</code>, <code>null</code> if the entry did exist.</p>
+<a name="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V)"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">put</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V)/key">key</span><span class="symbol">:</span>&nbsp;<a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.Cache$put(com.sap.cloud.mobile.foundation.cache.Cache.K, com.sap.cloud.mobile.foundation.cache.Cache.V)/value">value</span><span class="symbol">:</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span></code>
+<p>Adds or updates a value associated with a key.</p>
+<h3>Parameters</h3>
+<p><a name="key"></a>
+<code>key</code> - <a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">:</span> a <code>non-null</code> key of a cache entry</p>
+<p><a name="value"></a>
+<code>value</code> - <a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">:</span> a <code>non-null</code> value to add</p>
+<p><strong>Return</strong><br/>
+<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">?</span><span class="symbol">:</span> The original value of an existing cache entry, or <code>null</code> if this is a new entry.</p>
+</BODY>
+</HTML>

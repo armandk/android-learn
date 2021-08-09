@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HttpHandler - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.http</a>&nbsp;/&nbsp;<a href="./index.html">HttpHandler</a><br/>
+<br/>
+<h1>HttpHandler</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpHandler</span></code>
+<p>Abstract base class for HTTP handlers, which can override the functions of <code><a href="../httprequest/index.html">com.sap.cloud.mobile.odata.http.HttpRequest</a></code> that perform network activity.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">HttpHandler</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Abstract base class for HTTP handlers, which can override the functions of <code><a href="../httprequest/index.html">com.sap.cloud.mobile.odata.http.HttpRequest</a></code> that perform network activity.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHandler$close(com.sap.cloud.mobile.odata.http.HttpRequest)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../httprequest/index.html"><span class="identifier">HttpRequest</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Override the <code><a href="../httprequest/close.html">HttpRequest.close</a></code> function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return type of handler (external or internal).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hascookiehandling.html">hasCookieHandling</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasCookieHandling</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return indicates whether the handler takes care of cookie handling or not. Returns <code>false</code> by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="send.html">send</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">send</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHandler$send(com.sap.cloud.mobile.odata.http.HttpRequest)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../httprequest/index.html"><span class="identifier">HttpRequest</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Override the <code><a href="../httprequest/send.html">HttpRequest.send</a></code> function.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../okhttphandler/index.html">OKHttpHandler</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OKHttpHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpHandler</span></a></code>
+<p>HTTP Handler that uses the OKHttp library for network activity. </p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

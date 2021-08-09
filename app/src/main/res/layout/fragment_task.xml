@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/app_bar_height"
+    tools:context=".TaskFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:stateListAnimator="@drawable/appbar_always_elevated"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <LinearLayout
+                android:id="@+id/profileHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="150dp"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/app_bar_height"
+                app:layout_anchor="@+id/appBarLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/task_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        app:layout_header_group="TAG"
+                        tools:text="999" />
+
+                    <TextView
+                        android:id="@+id/myTaskCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        app:layout_header_group="TAG"
+                        tools:text="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/total_tasks"
+                        android:textSize="18sp"
+                        app:layout_header_group="TAG" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/my_tasks"
+                        android:textSize="18sp"
+                        app:layout_header_group="TAG" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:text="@string/task"
+                        android:textSize="18sp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/filter_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/timeline_node_offset_5dp"
+                        android:text="(0)"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/filter_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/filter_count"
+                        app:drawableLeftCompat="@drawable/ic_outline_filter_alt_24" />
+
+                    <ImageView
+                        android:id="@+id/taskFragmentAddTask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/timeline_node_offset_5dp"
+                        android:layout_toStartOf="@+id/filter_btn"
+                        android:contentDescription="@string/add_task_button"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_baseline_add_24" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.sap.cloud.mobile.fiori.formcell.FilterFormCell
+        android:id="@+id/filterFormCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/tabValuesArray"
+        android:paddingVertical="1dp"
+        app:keyEnabled="false"
+        app:singleLine="true" />
+
+    <View
+        android:layout_marginTop="-6dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        style="@style/Divider"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

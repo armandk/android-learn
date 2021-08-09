@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CustomSettingsEntity.<init> - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings.policies</a>&nbsp;/&nbsp;<a href="index.html">CustomSettingsEntity</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.foundation.settings.policies.CustomSettingsEntity$&lt;init&gt;(kotlin.String)"></a>
+<code><span class="identifier">CustomSettingsEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.CustomSettingsEntity$<init>(kotlin.String)/configurationName">configurationName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span></code>
+<p>Represents the parent class for custom settings entity. For each custom setting entity, it could
+be treated like a property in a JSON object, for example:</p>
+<p>{
+    "customSettingOffline": {
+        "key1": "value1",
+        "key2": "value2"
+    }
+}</p>
+<p>'customSettingOffline' is one custom setting entity, the <a href="#">configurationName</a> is 'customSettingOffline',
+<a href="../abstractsettingsentity/tojsonstring.html">toJsonString</a> should return the string format of the value: "{"key1": "value1","key2": "value2"}.</p>
+</BODY>
+</HTML>

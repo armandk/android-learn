@@ -1,0 +1,199 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SharedDeviceService - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings</a>&nbsp;/&nbsp;<a href="./index.html">SharedDeviceService</a><br/>
+<br/>
+<h1>SharedDeviceService</h1>
+<code><span class="keyword">class </span><span class="identifier">SharedDeviceService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the service to retrieve shared device settings, encryption key for offline database
+initialization, etc.</p>
+<p>This service is for offline mobile application in multiple user mode, one device will be shared
+to different users.</p>
+<p>When initializing offline database, an encryption key can be provided to enhance the security. To
+maximum the security, <a href="#">applicationKeyParameter</a> is strongly recommended to be provided in the client
+code before initializing this service with <a href="../../com.sap.cloud.mobile.foundation.mobileservices/sdkinitializer/index.html">SDKInitializer</a>. Please note that once the application
+is deployed, <a href="#">applicationKeyParameter</a> should not be changed, otherwise, the existing user will not
+be able to open the offline database.</p>
+<p>The service has an internal algorithm to generate the encryption, to leverage this, <a href="encryptionkeyreadylistener.html">encryptionKeyReadyListener</a>
+should be also be provided, the generated encryption will be notified via this listener. Client code
+can also call the APIs in this service to retrieve encryption from server side, then generate key
+with customized algorithm.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SharedDeviceService</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.SharedDeviceService$<init>(kotlin.String, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)))/applicationKeyParameter">applicationKeyParameter</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.SharedDeviceService$<init>(kotlin.String, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)))/encryptionKeyReadyListener">encryptionKeyReadyListener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Represents the service to retrieve shared device settings, encryption key for offline database
+initialization, etc.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="encryptionkeyreadylistener.html">encryptionKeyReadyListener</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">encryptionKeyReadyListener</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/apikey.html">apiKey</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">apiKey</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>The api key that can connect to mobile server</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">application</span><span class="symbol">: </span><span class="identifier">Application</span></code>
+<p>The application instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcombinedencryptionkey.html">getCombinedEncryptionKey</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getCombinedEncryptionKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span></code>
+<p>Generates a secure encryption key to initialize offline database.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="onstatechange.html">onStateChange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onStateChange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.SharedDeviceService$onStateChange(com.sap.cloud.mobile.foundation.mobileservices.ApplicationState)/state">state</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/applicationstate/index.html"><span class="identifier">ApplicationState</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Notified when application state changes. This function will be called on Main thread.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="retrieveencryptionkey.html">retrieveEncryptionKey</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">retrieveEncryptionKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.SharedDeviceService$retrieveEncryptionKey(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.SharedDeviceSettings)))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><a href="../shareddevicesettings/index.html"><span class="identifier">SharedDeviceSettings</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Retrieves the encryption key from the main thread, <a href="retrieveencryptionkey.html#com.sap.cloud.mobile.foundation.settings.SharedDeviceService$retrieveEncryptionKey(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.SharedDeviceSettings)))/listener">listener</a> will have the result or the
+error message.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveEncryptionKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><a href="../shareddevicesettings/index.html"><span class="identifier">SharedDeviceSettings</span></a><span class="symbol">&gt;</span></code>
+<p>Retrieves the encrption key from the 'IO' thread.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="retrieveshareddevicesettings.html">retrieveSharedDeviceSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">retrieveSharedDeviceSettings</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.SharedDeviceService$retrieveSharedDeviceSettings(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.SharedDeviceSettings)))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><a href="../shareddevicesettings/index.html"><span class="identifier">SharedDeviceSettings</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Retrieves the shared device setting from the main thread, <a href="retrieveshareddevicesettings.html#com.sap.cloud.mobile.foundation.settings.SharedDeviceService$retrieveSharedDeviceSettings(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.SharedDeviceSettings)))/listener">listener</a> will contain either
+the result or the error message</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveSharedDeviceSettings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><a href="../shareddevicesettings/index.html"><span class="identifier">SharedDeviceSettings</span></a><span class="symbol">&gt;</span></code>
+<p>Retrieves the shared device setting from the 'IO' thread.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/enablenetworkpolicy.html">enableNetworkPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enableNetworkPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$enableNetworkPolicy(com.sap.cloud.mobile.foundation.settings.policies.NetworkPolicy)/policy">policy</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/networkpolicy/index.html"><span class="identifier">NetworkPolicy</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Enable and set network policy for mobile service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/getnetworktype.html">getNetworkType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getNetworkType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$getNetworkType(kotlin.String)/componentName">componentName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">NetworkType</span></code>
+<p>Help mobile services using worker convert NetworkPolicy<a href="#">effectiveNetworkPolicy</a> to NetworkType</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/init.html">init</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$init(android.app.Application, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<span class="identifier">Application</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$init(android.app.Application, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Initializes the mobile service</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><s><span class="identifier">init</span></s><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$init(android.app.Application, com.sap.cloud.mobile.foundation.common.SettingsParameters)/application">application</span><span class="symbol">:</span>&nbsp;<span class="identifier">Application</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$init(android.app.Application, com.sap.cloud.mobile.foundation.common.SettingsParameters)/settingsParameters">settingsParameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/isapplicationinitialized.html">isApplicationInitialized</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isApplicationInitialized</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Check whether application instance is initialized.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html">observeWorker</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">observeWorker</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/request">request</span><span class="symbol">:</span>&nbsp;<span class="identifier">WorkRequest</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/tag">tag</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/getServiceResult">getServiceResult</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">WorkInfo</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Observers a worker request from the main thread, and report the result to the given <a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/listener">listener</a>.
+<a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/getServiceResult">getServiceResult</a> takes the observed <a href="#">WorkInfo</a> as input to return the <a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html">ServiceResult</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/onevent.html">onEvent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><s><span class="identifier">onEvent</span></s><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$onEvent(com.sap.cloud.mobile.foundation.common.SDKApplicationState.SDKEventType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/sdkapplicationstate/sdkeventtype/index.html"><span class="identifier">SDKApplicationState.SDKEventType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/prerequisiteready.html">prerequisiteReady</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">prerequisiteReady</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Most service can only be used when <a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html">SettingsParameters</a> and 'httpClient' are ready</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/reset.html">reset</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Resets the mobile service to the state that just initialized.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonEntityProvider.executeMethod - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">JsonEntityProvider</a>&nbsp;/&nbsp;<a href="./executemethod.html">executeMethod</a><br/>
+<br/>
+<h1>executeMethod</h1>
+<a name="com.sap.cloud.mobile.odata.JsonEntityProvider$executeMethod(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)"></a>
+<code><span class="identifier">@Nullable</span> <span class="identifier">@Nullable</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">executeMethod</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.JsonEntityProvider$executeMethod(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/method">method</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.JsonEntityProvider$executeMethod(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.JsonEntityProvider$executeMethod(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.JsonEntityProvider$executeMethod(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@Nullable</span> <a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Overrides <a href="../dataserviceprovider/executemethod.html">DataServiceProvider.executeMethod</a></p>
+<p>Execute a data method (action or function) in the target system. Actions may have backend side-effects. Functions should not have backend side-effects.</p>
+ Throws: 
+<p><code><a href="../dataserviceexception/index.html">com.sap.cloud.mobile.odata.DataServiceException</a></code> or <code><a href="../datanetworkexception/index.html">com.sap.cloud.mobile.odata.DataNetworkException</a></code> if an error occurs during action invocation.</p>
+ 
+<h3>Parameters</h3>
+<p><a name="method"></a>
+<code>method</code> - <a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">:</span> Data method.</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">:</span> Method parameters.</p>
+<p><a name="headers"></a>
+<code>headers</code> - <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">:</span> Request-specific headers.</p>
+<p><a name="options"></a>
+<code>options</code> - <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">:</span> Request-specific options.</p>
+<p><strong>Return</strong><br/>
+<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">:</span> (nullable) The method result, or `null` if the method has no result.</p>
+</BODY>
+</HTML>

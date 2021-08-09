@@ -1,0 +1,164 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DeviceUserManager - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.user</a>&nbsp;/&nbsp;<a href="./index.html">DeviceUserManager</a><br/>
+<br/>
+<h1>DeviceUserManager</h1>
+<code><span class="keyword">class </span><span class="identifier">DeviceUserManager</span></code>
+<p>Represents the device user manager to manage the user information saved on the device.</p>
+<p>Most of the operations in this service will automatically open the store before the operation
+and close the store afterwards.</p>
+<p>For <a href="getonboardedusers.html">getOnBoardedUsers</a>, it will not close after the operation since it might be used in the paginated
+list and will be called multiple times.</p>
+<p>To save system resources, closing the store after being used is recommended, and the right time to
+close the store might be, for example, after onboarding or restore flow.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DeviceUserManager</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$<init>(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span></code>
+<p>Represents the device user manager to manage the user information saved on the device.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="closestore.html">closeStore</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">closeStore</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Closes the database.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createuser.html">createUser</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">createUser</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$createUser(com.sap.cloud.mobile.foundation.user.User)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../user/index.html"><span class="identifier">User</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a></code>
+<p>Creates a new user into the database, and return the user information</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deleteuserbyid.html">deleteUserById</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">deleteUserById</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$deleteUserById(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Deletes a user identified the given <a href="deleteuserbyid.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$deleteUserById(kotlin.String)/id">id</a>. This is mostly for single user mode when resetting
+a client.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="finduserbyid.html">findUserById</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">findUserById</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$findUserById(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">?</span></code>
+<p>Finds a user by the given <a href="finduserbyid.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$findUserById(kotlin.String)/id">id</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getallusers.html">getAllUsers</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAllUsers</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$getAllUsers(kotlin.Int, kotlin.Int, kotlin.String)/pageSize">pageSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;20<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$getAllUsers(kotlin.Int, kotlin.Int, kotlin.String)/pageNo">pageNo</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$getAllUsers(kotlin.Int, kotlin.Int, kotlin.String)/search">search</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">&gt;</span></code>
+<p>Retrieves all local user list. By default only 20 users will be returned if no <a href="getallusers.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$getAllUsers(kotlin.Int, kotlin.Int, kotlin.String)/pageSize">pageSize</a> provided.
+<a href="getallusers.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$getAllUsers(kotlin.Int, kotlin.Int, kotlin.String)/pageNo">pageNo</a> starts from '0'. The returned list is sorted by the latest active user with descending
+order.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcurrentuser.html">getCurrentUser</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getCurrentUser</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">?</span></code>
+<p>Retrieves the current user. It might return 'null' to indicate there is no user signed in this
+device before.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonboardedusers.html">getOnBoardedUsers</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getOnBoardedUsers</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$getOnBoardedUsers(kotlin.Int, kotlin.Int, kotlin.String)/pageSize">pageSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;20<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$getOnBoardedUsers(kotlin.Int, kotlin.Int, kotlin.String)/pageNo">pageNo</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$getOnBoardedUsers(kotlin.Int, kotlin.Int, kotlin.String)/search">search</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">&gt;</span></code>
+<p>Retrieves onBoarded local user list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="haveotheronboardedusers.html">haveOtherOnBoardedUsers</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">haveOtherOnBoardedUsers</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$haveOtherOnBoardedUsers(com.sap.cloud.mobile.foundation.user.DeviceUser)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Checks whether there are other users already 'onBoarded'. This is usually been used when the
+current <a href="haveotheronboardedusers.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$haveOtherOnBoardedUsers(com.sap.cloud.mobile.foundation.user.DeviceUser)/user">user</a> forgets the passcode and restarting the app, then the app needs to decide which
+flow to use. If no users already onBoarded, it will go directly to the onboarding flow, otherwise,
+it should go into 'Sign In' step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isstoreopen.html">isStoreOpen</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isStoreOpen</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Checkes whether the store is opened or not.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="makecurrent.html">makeCurrent</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">makeCurrent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/user">user</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/onBoarded">onBoarded</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/userSwitchCallback">userSwitchCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">newUser</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">oldUser</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Makes the given <a href="makecurrent.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/user">user</a> as the current active user. if <a href="makecurrent.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/userSwitchCallback">userSwitchCallback</a> is provided,
+both the current and previous active user will be notified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="openstore.html">openStore</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">openStore</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Opens the store if not opened yet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reset.html">reset</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Deletes the database.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonboarded.html">setOnBoarded</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">setOnBoarded</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$setOnBoarded(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$setOnBoarded(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean)/onBoarded">onBoarded</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sets the onBoarded status for the given <a href="setonboarded.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$setOnBoarded(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean)/user">user</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

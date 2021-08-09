@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataParameters.isEnableRepeatableRequests - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataParameters</a>&nbsp;/&nbsp;<a href="./isenablerepeatablerequests.html">isEnableRepeatableRequests</a><br/>
+<br/>
+<h1>isEnableRepeatableRequests</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataParameters$isEnableRepeatableRequests()"></a>
+<code><span class="keyword">fun </span><span class="identifier">isEnableRepeatableRequests</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Returns true if the OData backend or mobile services supports repeatable requests. </p>
+<p> Repeatable requests (or idempotent requests) is a feature of some OData backend that ensures OData modification requests are applied exactly once even if the request is received multiple times. This is useful in cases where OData responses may be lost due to intermittent network connectivity and is required by the "OfflineODataProvider" in order to guarantee that requests are applied exactly once to the OData backend. </p>
+<p> If repeatable requests are supported by either the OData backend or mobile services, this parameter should be set to "true", so that Offline OData will generate the repeatable request headers (RequestID and RepeatabilityCreation) for each modification request. The RequestID and RepeatabilityCreation headers are required for the server's repeatable request implementation so that it can determine whether or not the request has already been applied. </p>
+<p> If both the OData backend and mobiles services do not support repeatable requests, set this parameter to "false" so that the repeatable request headers are not generated or sent. </p>
+<p> By default, enableRepeatableRequests value is true. </p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if the OData backend or mobile services supports repeatable requests.</p>
+</BODY>
+</HTML>

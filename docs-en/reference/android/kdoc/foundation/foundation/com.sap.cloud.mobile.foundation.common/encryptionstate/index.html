@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EncryptionState - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="./index.html">EncryptionState</a><br/>
+<br/>
+<h1>EncryptionState</h1>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionState"></a>
+<code><span class="keyword">class </span><span class="identifier">EncryptionState</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionState"></a>
+<code><span class="keyword">class </span><span class="identifier">EncryptionState</span></code>
+<p>Describes different encryption states associated with the encryption key generation mechanisms. <pre><code>
+
+1. <a href="./index.html">#INIT</a>-- When the alias is new, and no encryption key has been created.
+2. <a href="./index.html">#NO_PASSCODE</a>-- A secondary encryption key is generated randomly. This secondary
+   encryption key is encrypted using the Secret Key generated from Android Key Store
+   and securely persisted.
+3. <a href="./index.html">#PASSCODE_ONLY</a>-- A Secret Key is generated using
+   <a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> (Password-Based Key Derivation
+   Function 2)] from the passcode, and then a secondary key is generated randomly. This secondary
+   encryption key is then encrypted using the PBKDF2 secret key and securely persisted.
+
+   This is the most secure option because the secret key generated from the passcode is not stored
+   on the device.
+
+4. <a href="./index.html">#PASSCODE_BIOMETRIC</a>-- The application,
+   a. Gets the initial cipher from EncryptionUtil.
+   b. Passes the cipher to Android FingerprintManager for user authentication.
+   c. The same cipher (user-authenticated) is passed back.
+
+   Then a random secondary encryption key is generated similar to PASSCODE_ONLY, but
+   will encrypt it with the PBKDF2 secret key and separately with the cipher also.
+  </code></pre></p>
+</BODY>
+</HTML>

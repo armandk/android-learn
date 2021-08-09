@@ -1,0 +1,197 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataFailedRequest - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataFailedRequest</a><br/>
+<br/>
+<h1>OfflineODataFailedRequest</h1>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataFailedRequest</span></code>
+<p>The class represents the information of a failed request occurred at OData back end during an uploading.</p>
+<p><strong>See Also</strong><br/>
+<a href="../offlineodatadelegate/updatefailedrequest.html">OfflineODataDelegate#updateFailedRequest(OfflineODataProvider, OfflineODataFailedRequest)</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OfflineODataFailedRequest</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>The class represents the information of a failed request occurred at OData back end during an uploading.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcustomtag.html">getCustomTag</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCustomTag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns the customized string that was used to tag the request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geterrorcode.html">getErrorCode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getErrorCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns the error code in the response when error occurred at the OData back end.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geterrormessage.html">getErrorMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getErrorMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns the error message in the response when error occurred at the OData back end.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethttpstatuscode.html">getHttpStatusCode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getHttpStatusCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Returns the HTTP status code returned from the OData back end.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinnererror.html">getInnerError</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getInnerError</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns the inner error in the response when error occurred at the OData back end.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestbody.html">getRequestBody</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRequestBody</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns the JSON body sent to the OData back end.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequesthttpmethod.html">getRequestHTTPMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRequestHTTPMethod</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns the HTTP method of the request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestid.html">getRequestID</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRequestID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Returns the request identifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequesturl.html">getRequestURL</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRequestURL</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns the URL used to execute the request against the OData back end.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcustomtag.html">setCustomTag</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setCustomTag</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest$setCustomTag(kotlin.String)/customTag">customTag</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the customized string tagged with the request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="seterrorcode.html">setErrorCode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setErrorCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest$setErrorCode(kotlin.String)/errorCode">errorCode</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the error code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="seterrormessage.html">setErrorMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setErrorMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest$setErrorMessage(kotlin.String)/errorMessage">errorMessage</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the error message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sethttpstatuscode.html">setHttpStatusCode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setHttpStatusCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest$setHttpStatusCode(kotlin.Int)/httpStatusCode">httpStatusCode</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines HTTP status code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinnererror.html">setInnerError</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setInnerError</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest$setInnerError(kotlin.String)/innerError">innerError</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the inner error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestbody.html">setRequestBody</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setRequestBody</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest$setRequestBody(kotlin.String)/requestBody">requestBody</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the request body.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequesthttpmethod.html">setRequestHTTPMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setRequestHTTPMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest$setRequestHTTPMethod(kotlin.String)/requestHTTPMethod">requestHTTPMethod</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the HTTP method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestid.html">setRequestID</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setRequestID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest$setRequestID(kotlin.Long)/requestID">requestID</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the request identifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequesturl.html">setRequestURL</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setRequestURL</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest$setRequestURL(kotlin.String)/requestURL">requestURL</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the request URL.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

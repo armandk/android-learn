@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UserStoreManager - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.user</a>&nbsp;/&nbsp;<a href="./index.html">UserStoreManager</a><br/>
+<br/>
+<h1>UserStoreManager</h1>
+<code><span class="keyword">class </span><span class="identifier">UserStoreManager</span></code>
+<p>Represents the local secure store which stores user related information and will be protected by
+user's passcode.</p>
+<p>When using this manager, the most common use case would be:
+1, initStore(user, forceReset) to pass the user context, if 'forceReset' is true, the existing store will be deleted
+and create a new one, this is usually for the 'forget passcode' case;
+2, After initializing the user context, open the secure store with 'openStore' functions, either with/without passcode,
+or with the cipher if fingerprint is enabled on the secure store;
+3, After opening, in most cases, the store should keep open until, for example, quit the app, or the app is put into
+background then re-open it will need the passcode;
+4, Internally, 'initStore' with forceReset as true will call 'resetStore'. Be careful when calling 'resetStore' in client
+code.
+5, 'getData' and 'saveData' are used for retrieving data from or saving data into the secure store. For supported data types,
+please see <a href="../../com.sap.cloud.mobile.foundation.securestore/securekeyvaluestore/index.html">SecureKeyValueStore</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UserStoreManager</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$<init>(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span></code>
+<p>Represents the local secure store which stores user related information and will be protected by
+user's passcode.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="storealias.html">storeAlias</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">storeAlias</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="userstore.html">userStore</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">userStore</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.securestore/securekeyvaluestore/index.html"><span class="identifier">SecureKeyValueStore</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="cleardata.html">clearData</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">clearData</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$clearData(kotlin.Array((kotlin.String)))/keys">keys</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Clears the user secure store for the given keys.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="closestore.html">closeStore</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">closeStore</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Closes the secure store for the given user.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="disablebiometric.html">disableBiometric</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">disableBiometric</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$disableBiometric(kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Disables the biometric on the secure store.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enablebiometric.html">enableBiometric</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">enableBiometric</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$enableBiometric(kotlin.CharArray, javax.crypto.Cipher)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$enableBiometric(kotlin.CharArray, javax.crypto.Cipher)/cipher">cipher</span><span class="symbol">:</span>&nbsp;<span class="identifier">Cipher</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Enables the biometric on the secure store.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enablepasscode.html">enablePasscode</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">enablePasscode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$enablePasscode(kotlin.CharArray, kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$enablePasscode(kotlin.CharArray, kotlin.CharArray)/oldCode">oldCode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span></code>
+<p>Enables passcode on the user's secure store, or change passcode if <a href="enablepasscode.html#com.sap.cloud.mobile.foundation.user.UserStoreManager$enablePasscode(kotlin.CharArray, kotlin.CharArray)/oldCode">oldCode</a> provided</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcipher.html">getCipher</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCipher</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Cipher</span></code>
+<p>See 'getCipher' of <a href="../../com.sap.cloud.mobile.foundation.common/encryptionutil/index.html">EncryptionUtil</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdata.html">getData</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">getData</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$getData(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="getdata.html#T"><span class="identifier">T</span></a><span class="symbol">?</span></code>
+<p>Retrieves data from user secure store.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstorestate.html">getStoreState</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getStoreState</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.common/encryptionstate/index.html"><span class="identifier">EncryptionState</span></a></code>
+<p>Retrieves the secure store state.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="initstore.html">initStore</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">initStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$initStore(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$initStore(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean)/forceReset">forceReset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Initialize the secure store for a given <a href="initstore.html#com.sap.cloud.mobile.foundation.user.UserStoreManager$initStore(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean)/user">user</a> without trying to open it. When <a href="initstore.html#com.sap.cloud.mobile.foundation.user.UserStoreManager$initStore(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean)/forceReset">forceReset</a> is
+'true', the original store will be deleted first, it will used in case of user forgets the passcode.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isstoreopen.html">isStoreOpen</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isStoreOpen</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Is the user store opened or not.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="openstore.html">openStore</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">openStore</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Opens the user secure store when no passcode or biometric was enabled on the store.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">openStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$openStore(kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Opens the user secure store with pass code.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">openStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$openStore(javax.crypto.Cipher)/cipher">cipher</span><span class="symbol">:</span>&nbsp;<span class="identifier">Cipher</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Opens the user secure store with biometric cipher</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resetstore.html">resetStore</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">resetStore</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Deletes the secure store</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="savedata.html">saveData</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">saveData</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$saveData(kotlin.String, com.sap.cloud.mobile.foundation.user.UserStoreManager.saveData.T)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$saveData(kotlin.String, com.sap.cloud.mobile.foundation.user.UserStoreManager.saveData.T)/value">value</span><span class="symbol">:</span>&nbsp;<a href="savedata.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Saves data into user secure store.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="verifypasscode.html">verifyPasscode</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">verifyPasscode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$verifyPasscode(kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Verifies the code, if the code is correct, user store will be opened, otherwise closed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

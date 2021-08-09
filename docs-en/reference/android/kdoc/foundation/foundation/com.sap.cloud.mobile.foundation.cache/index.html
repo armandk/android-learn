@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.foundation.cache - foundation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">foundation</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.foundation.cache</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.foundation.cache</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="cache/index.html">Cache</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Cache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">interface </span><span class="identifier">Cache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>In general, a cache is a key/value store that has a maximum storage capacity and exposes methods to support <strong>CRUD</strong> operations to provide temporary storage which maintains a single copy of items that are expensive to create or load, for example via remote network calls. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cachebase/index.html">CacheBase</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CacheBase</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="cache/index.html"><span class="identifier">Cache</span></a><span class="symbol">&lt;</span><a href="cachebase/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="cachebase/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CacheBase</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="cache/index.html"><span class="identifier">Cache</span></a><span class="symbol">&lt;</span><a href="cachebase/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="cachebase/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>Abstract class for <code><a href="cache/index.html">Cache</a></code> implementations. <pre><code>
+Provides default implementation of <a href="cache/index.html">Cache</a>:
+1. Embeds and handles the Android Context and cache capacity (maximum number of entries) via
+   <a href="cachebase/init.html">#init(Context, int)</a> or <a href="cachebase/init.html">#init(Context)</a>.
+2. Forces concrete <a href="cache/index.html">Cache</a> implementation to enforce operation state via
+   <a href="cachebase/checkconfiguration.html">#checkConfiguration()</a> in cache read-write access methods.
+3. Provides <strong>no-op</strong>(<strong>not supported</strong>) cache methods.
+  </code></pre></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cachecostfactor/index.html">CacheCostFactor</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">CacheCostFactor</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">interface </span><span class="identifier">CacheCostFactor</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>In parallel to the <strong>Cache Replacement Policy</strong>, the optional <strong>Cost Factor</strong> feature described here provides the <strong>eviction mechanism</strong> for a <code>Cache</code> implementation to remove one or more existing cache entries so that a new item can be added (via <code><a href="cache/put.html">Cache#put(Object, Object, double)</a></code>) when the aggregated cost exceeds the maximum total cost: </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cacheentry/index.html">CacheEntry</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CacheEntry</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">CacheEntry</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A read-only helper class used as the return value of <code><a href="cache/getentry.html">Cache#getEntry(Object)</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="compositecache/index.html">CompositeCache</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CompositeCache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><a href="compositecache/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="compositecache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">CacheBuilder</span><span class="symbol">&lt;</span><a href="compositecache/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="compositecache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">CompositeCache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><a href="compositecache/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="compositecache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">CacheBuilder</span><span class="symbol">&lt;</span><a href="compositecache/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="compositecache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>CompositeCache is a multi-level cache container that implements the <strong>Cache</strong> interface. The lowest level is usually configured with a persistent store. <ol> <li>The cache at each level is appended to a chain, from highest level to lowest level. Order matters, and the user should add the backing store last.</li>
+ <li>All levels of caches share the same <em>Key</em> and <em>Value</em> types.</li>
+ <li>The sizes of cache levels should be from the smallest to the largest.</li>
+ <li><strong>Write Policy</strong>-- uses <em>Write-through Policy</em>, that is, a <strong>put</strong> operation will add the entry to all levels of cache.</li>
+ <li> <strong>Read-miss</strong> Policy: <ul> <li>Only when a cache entry is not found at one level, the next lower level will be queried.</li>
+ <li>The item found at a lower level will be propagated to all the cache levels above.</li>
+ </ul>
+ </li>
+ <li> When a cache entry is cleared from a cache to free up space based on the Replacement Policy implemented, the removed value will not be added to the lower level caches. </li>
+ </ol>
+ Creating and Configuring CompositeCache <ul> <li>Calls the constructor-- <code><a href="compositecache/-init-.html">#CompositeCache(Context)</a></code>.</li>
+ <li>Adds levels of caches-- <code><a href="compositecache/add.html">#add(Cache)</a></code></li>
+ <li>Completes the configuration of the composite cache-- <code><a href="compositecache/build.html">#build()</a></code>. Now the composite cache instance is ready for other operations. </li>
+ </ul>
+ Example <pre><code>MemoryCache&lt;String, ValueType&gt; cache1 = new MemoryCache&lt;&gt;(androidContext, 16);
+
+    // cache2 is a persistent cache that implements the Cache interface.
+    CompositeCache&lt;String, ValueType&gt; compositeCache = new CompositeCache&lt;String,
+        ValueType&gt;(androidContext)
+        .add(cache1)   // The first level cache-- MemoryCache.
+        .add(cache2)   // The second level cache-- a backing store.
+        .build();
+
+ </code></pre></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="memorycache/index.html">MemoryCache</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">MemoryCache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><a href="memorycache/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="memorycache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">CacheBuilder</span><span class="symbol">&lt;</span><a href="memorycache/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="memorycache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">MemoryCache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><a href="memorycache/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="memorycache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">CacheBuilder</span><span class="symbol">&lt;</span><a href="memorycache/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="memorycache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>MemoryCache is a fixed size in-memory cache that uses <strong>weak reference keys</strong> to store a set of values with the following features and options: <ol> <li><strong>LRU</strong> (Least Recently Used) <strong>Cache Replacement Policy</strong>: Each time a value is accessed, it is moved to the end of a queue in descending LRU order. When an entry is added to a full cache, the entry at the head of that queue, that is, the <em>Least Recently Used</em> entry is evicted to make room for the new entry. </li>
+ <li><strong>Clear on Memory Error</strong> Option: When this option is turned on, low memory situation detected by the application will cause the entire cache to be cleared. </li>
+ <li> 
+<p><strong>Cost Factor</strong> Option: The cache can be configured with a <strong>maximum cost</strong>, and a <strong>cost</strong> provided by the user is associated with each cache entry during the <strong>put</strong> operation. </p>
+<p>In addition to the LRU Replacement Policy, when the aggregated cost exceeds the maximum cost, one or more cache entries based on system or user-defined <strong>eviction criteria</strong> will be removed to make space for the current entry, then adds the current entry to the cache: </p>
+<ul> <li><strong><em>System Eviction Criteria</em></strong>-- the current entry with the highest cost will be removed.</li>
+ <li><strong><em>Customized Eviction Criteria</em></strong>-- a list of existing entries sorted in ascending cost order will be presented to the user via a callback interface <strong>CacheCostFactor</strong>, the user-defined callback method <strong><code>List&lt;K&gt; onExceedMaxCost(final List&lt;K&gt; existingKeys)</code></strong> can select and return a list of one or more entries from the input list to evict. </li>
+ </ul>
+ </li>
+ </ol>
+ </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="securestorecache/index.html">SecureStoreCache</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SecureStoreCache</span><span class="symbol">&lt;</span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Serializable</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="securestorecache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">SecureStoreCache</span><span class="symbol">&lt;</span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Serializable</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="securestorecache/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>A SecureStoreCache is a fixed size <strong>LRU</strong> (Least Recently Used) cache that contains key-value pairs persisted in an encrypted database. <ol> <li><strong>Key Type</strong>-- <code>String</code></li>
+ <li><strong>Value Types</strong>-- supports <code>Boolean</code>, <code>Byte</code>, <code>Double</code>, <code>Float</code>, <code>Integer</code>, <code>Long</code>, <code>Short</code>, <code>String</code>, <code>byte[]</code>, and any object that implements <code>Serializable</code> interface.</li>
+ </ol>
+ Creating and Opening To instantiate a SecureStoreCache, you need to specify the Android application context, the size of the cache, database file name, an optional database table name, and the database encryption key. </p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

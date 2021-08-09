@@ -1,0 +1,234 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HttpHeaders - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.http</a>&nbsp;/&nbsp;<a href="./index.html">HttpHeaders</a><br/>
+<br/>
+<h1>HttpHeaders</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpHeaders</span></code>
+<p>Encapsulates a map of HTTP headers, allowing case-insensitive lookup.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">HttpHeaders</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates a map of HTTP headers, allowing case-insensitive lookup.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="addall.html">addAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$addAll(com.sap.cloud.mobile.odata.http.HttpHeaders)/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add all of the headers from another headers object into this headers object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Clear all the headers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="concurrent.html">concurrent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">concurrent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return a thread-safe headers object that delegates to <code>this</code> headers object. An HttpHeaders object is not thread-safe for concurrent read/write access. This function will return a thread-safe wrapper.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return a copy of these headers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$delete(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Delete the value of a header, if present.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="emptyifnull.html">emptyIfNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">emptyIfNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$emptyIfNull(com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Construct an empty HttpHeaders if the <code>headers</code> parameter is <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entries.html">entries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">entries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/stringmap/entrylist/index.html"><span class="identifier">StringMap.EntryList</span></a></code>
+<p>Return the header entries (name/value pairs).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$get(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The value of a header, or <code>null</code> if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="has.html">has</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">has</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$has(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if a specified header exists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="keys.html">keys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">keys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/stringlist/index.html"><span class="identifier">StringList</span></a></code>
+<p>Return the header names.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$parse(kotlin.String, com.sap.cloud.mobile.odata.http.HttpRequest)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$parse(kotlin.String, com.sap.cloud.mobile.odata.http.HttpRequest)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../httprequest/index.html"><span class="identifier">HttpRequest</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$set(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$set(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of a header.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="size.html">size</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of headers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortedentries.html">sortedEntries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortedEntries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/stringmap/entrylist/index.html"><span class="identifier">StringMap.EntryList</span></a></code>
+<p>Return the header entries (name/value pairs) sorted by name (case insensitive).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return headers as a JSON string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="with.html">with</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$with(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$with(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Set the value of a header.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withclientcredentials.html">withClientCredentials</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withClientCredentials</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$withClientCredentials(com.sap.cloud.mobile.odata.StructureBase)/credentials">credentials</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Equivalent to <code>withData("X-Client-Credentials", value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withcreateparameters.html">withCreateParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withCreateParameters</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$withCreateParameters(com.sap.cloud.mobile.odata.StructureBase)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Equivalent to <code>withData("X-Create-Parameters", value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withdata.html">withData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withData</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$withData(kotlin.String, kotlin.Any)/header">header</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$withData(kotlin.String, kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Convert <code>value</code> to OData 4.0 JSON format, then set a header with the JSON-encoded value as a <a href="https://en.wikipedia.org/wiki/Data_URI_scheme">data URI</a> with media type "application/json" and base64-encoded data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withdeleteparameters.html">withDeleteParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withDeleteParameters</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$withDeleteParameters(com.sap.cloud.mobile.odata.StructureBase)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Equivalent to <code>withData("X-Delete-Parameters", parameters)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withupdateparameters.html">withUpdateParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withUpdateParameters</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpHeaders$withUpdateParameters(com.sap.cloud.mobile.odata.StructureBase)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Equivalent to <code>withData("X-Update-Parameters", value)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

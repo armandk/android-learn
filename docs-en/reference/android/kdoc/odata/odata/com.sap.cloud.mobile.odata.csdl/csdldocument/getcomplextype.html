@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsdlDocument.getComplexType - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.csdl</a>&nbsp;/&nbsp;<a href="index.html">CsdlDocument</a>&nbsp;/&nbsp;<a href="./getcomplextype.html">getComplexType</a><br/>
+<br/>
+<h1>getComplexType</h1>
+<a name="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getComplexType(kotlin.String)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComplexType</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getComplexType(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata/complextype/index.html"><span class="identifier">ComplexType</span></a></code>
+<p>Lookup a complex type by qualified name. If the complex type does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up simplet types before calling this method like in the following code snippet: </p>
+Example checking if a complex type exists:<pre><code>
+      public void checkComplexTypeExistsExample() {
+          com.sap.cloud.mobile.odata.csdl.CsdlDocument csdlDocument = this.getService()
+              .getMetadata();
+          if (csdlDocument.getComplexTypes()
+              .has("Microsoft.OData.Service.Sample.TrippinInMemory.Models.EventLocation")) {
+              Ignore.valueOf_any(csdlDocument.getComplexType("Microsoft.OData.Service.Sample.TrippinInMemory.Models.EventLocation"));
+          } else {
+          }
+      }
+      </code></pre> See Also: 
+<p><code><a href="getcomplextypes.html">CsdlDocument.complexTypes</a></code>, for looking up types that might not exist.</p>
+ 
+<h3>Parameters</h3>
+<p><a name="name"></a>
+<code>name</code> - <span class="identifier">String</span><span class="symbol">:</span> Name of the complex type to be returned.</p>
+<p><strong>Return</strong><br/>
+<a href="../../com.sap.cloud.mobile.odata/complextype/index.html"><span class="identifier">ComplexType</span></a><span class="symbol">:</span> The complex type, which must exist.</p>
+</BODY>
+</HTML>

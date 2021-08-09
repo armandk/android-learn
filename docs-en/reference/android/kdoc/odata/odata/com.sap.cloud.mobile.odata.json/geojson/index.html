@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GeoJson - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">GeoJson</a><br/>
+<br/>
+<h1>GeoJson</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">GeoJson</span></code>
+<p>Functions for parsing and formatting of <a href="http://geojson.org">GeoJSON</a> values.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">GeoJson</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Functions for parsing and formatting of <a href="http://geojson.org">GeoJSON</a> values.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="format.html">format</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">format</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.GeoJson$format(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a geography/geometry value in GeoJson representation (as a text string).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatobject.html">formatObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatObject</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.GeoJson$formatObject(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonobject/index.html"><span class="identifier">JsonObject</span></a></code>
+<p>Return a geography/geometry value in GeoJson representation (as a JSON object).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.GeoJson$parse(kotlin.String, com.sap.cloud.mobile.odata.DataType)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.GeoJson$parse(kotlin.String, com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A geography/geometry value parsed from GeoJson representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseobject.html">parseObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseObject</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.GeoJson$parseObject(com.sap.cloud.mobile.odata.json.JsonObject, com.sap.cloud.mobile.odata.DataType)/geo">geo</span><span class="symbol">:</span>&nbsp;<a href="../jsonobject/index.html"><span class="identifier">JsonObject</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.GeoJson$parseObject(com.sap.cloud.mobile.odata.json.JsonObject, com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Return a geography/geometry value parsed from GeoJson representation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

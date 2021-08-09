@@ -1,0 +1,188 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryFilter - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">QueryFilter</a><br/>
+<br/>
+<h1>QueryFilter</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFilter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates the boolean value of an <a href="http://odata.org">OData</a> logical operator. Used to wrap the results of logical <code><a href="../queryoperator/index.html">com.sap.cloud.mobile.odata.QueryOperator</a></code> in a type-safe manner.</p>
+ See Also: 
+<p><code><a href="../dataquery/getqueryfilter.html">DataQuery.queryFilter</a></code>, <code><a href="../dataquery/filter.html">DataQuery.filter</a></code>.</p>
+  Example using proxy classes:<pre><code>
+  public void queryWithFilterExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .select(Customer.customerID, Customer.companyName, Customer.contactName)
+          .filter(Customer.country.equal("Germany")
+              .and(Customer.contactName.greaterEqual("N")));
+      List&lt;Customer&gt; customers = service.getCustomers(query);
+      this.showCustomers(customers);
+  }
+  </code></pre> Example using dynamic API:<pre><code>
+  public void queryWithFilterExample() {
+      DataService service = this.getService();
+      EntitySet customersEntitySet = service.getEntitySet("Customers");
+      EntityType customerEntityType = customersEntitySet.getEntityType();
+      Property customerIDProperty = customerEntityType.getProperty("CustomerID");
+      Property companyNameProperty = customerEntityType.getProperty("CompanyName");
+      Property contactNameProperty = customerEntityType.getProperty("ContactName");
+      Property countryProperty = customerEntityType.getProperty("Country");
+      DataQuery query = new DataQuery()
+          .select(customerIDProperty, companyNameProperty, contactNameProperty)
+          .from(customersEntitySet)
+          .filter(countryProperty.equal("Germany")
+              .and(contactNameProperty.greaterEqual("N")));
+      EntityValueList customers = service.executeQuery(query).getEntityList();
+      this.showCustomers(customers);
+  }
+  </code></pre>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">QueryFilter</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates the boolean value of an <a href="http://odata.org">OData</a> logical operator. Used to wrap the results of logical <code><a href="../queryoperator/index.html">com.sap.cloud.mobile.odata.QueryOperator</a></code> in a type-safe manner.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/undefined.html">undefined</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">undefined</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="and.html">and</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">and</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFilter$and(com.sap.cloud.mobile.odata.DataValue)/filter">filter</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return an application of the OData 'and' logical operator to <code>this</code> and <code>filter</code>. This is a convenience wrapper for <code><a href="../queryoperator/and.html">QueryOperator.and</a></code> which allows method chaining.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="from.html">from</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">from</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFilter$from(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Construct a query filter by wrapping a boolean value, so it can be used by <code><a href="../dataquery/getqueryfilter.html">DataQuery.queryFilter</a></code> or <code><a href="../dataquery/where.html">DataQuery.where</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type with a <code><a href="../datatype/getcode.html">DataType.code</a></code> of DataType.QUERY_FILTER.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Return the wrapped value which is expected to resolve to a boolean value during query execution.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="not.html">not</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">not</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return an application of the OData 'not' logical operator to <code>this</code>. This is a convenience wrapper for <code><a href="../queryoperator/not.html">QueryOperator.not</a></code> which allows method chaining.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="or.html">or</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">or</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFilter$or(com.sap.cloud.mobile.odata.DataValue)/filter">filter</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return an application of the OData 'or' logical operator to <code>this</code> and <code>filter</code>. This is a convenience wrapper for <code><a href="../queryoperator/or.html">QueryOperator.or</a></code> which allows method chaining.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setvalue.html">setValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFilter$setValue(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the wrapped value which is expected to resolve to a boolean value during query execution.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="getdatatype.html">QueryFilter.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/clonemutable.html">cloneMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cloneMutable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$cloneMutable(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A clone of <code>value</code> if it is mutable, or <code>value</code> if it is immutable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/equals.html">equals</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this object is equal to <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/gettypecode.html">getTypeCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTypeCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data type code of the wrapped value, equivalent to <code>dataType.code</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/hashcode.html">hashCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Hash this data value to a number.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

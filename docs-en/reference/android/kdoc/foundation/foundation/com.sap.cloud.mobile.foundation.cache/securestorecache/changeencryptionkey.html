@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecureStoreCache.changeEncryptionKey - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="index.html">SecureStoreCache</a>&nbsp;/&nbsp;<a href="./changeencryptionkey.html">changeEncryptionKey</a><br/>
+<br/>
+<h1>changeEncryptionKey</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.SecureStoreCache$changeEncryptionKey(kotlin.ByteArray)"></a>
+<code><span class="keyword">fun </span><span class="identifier">changeEncryptionKey</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.SecureStoreCache$changeEncryptionKey(kotlin.ByteArray)/newEncryptionKey">newEncryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Changes the encryption key of the persistence store while the cache is in <code>open</code> state.</p>
+<h3>Parameters</h3>
+<p><a name="newEncryptionKey"></a>
+<code>newEncryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> new encryption key. It is recommended to use <code>EncryptionUtil</code> to obtain the new encryption key. If <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens.</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if failed to generate the encryption key transparently when <code> newEncryptionKey</code> is <code>null</code> or zero length.</p>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - if the store is not in open state.</p>
+<a name="com.sap.cloud.mobile.foundation.cache.SecureStoreCache$changeEncryptionKey(kotlin.ByteArray)"></a>
+<code><span class="keyword">fun </span><span class="identifier">changeEncryptionKey</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.SecureStoreCache$changeEncryptionKey(kotlin.ByteArray)/newEncryptionKey">newEncryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Changes the encryption key of the persistence store while the cache is in <code>open</code> state.</p>
+<h3>Parameters</h3>
+<p><a name="newEncryptionKey"></a>
+<code>newEncryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> new encryption key. It is recommended to use <code>EncryptionUtil</code> to obtain the new encryption key. If <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens.</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if failed to generate the encryption key transparently when <code> newEncryptionKey</code> is <code>null</code> or zero length.</p>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - if the store is not in open state.</p>
+</BODY>
+</HTML>

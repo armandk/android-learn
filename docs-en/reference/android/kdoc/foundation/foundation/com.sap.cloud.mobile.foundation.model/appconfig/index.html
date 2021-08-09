@@ -1,0 +1,161 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AppConfig - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.model</a>&nbsp;/&nbsp;<a href="./index.html">AppConfig</a><br/>
+<br/>
+<h1>AppConfig</h1>
+<code><span class="keyword">class </span><span class="identifier">AppConfig</span></code>
+<p>Represents the application configuration</p>
+<p>This class provides a builder method for client code to easily build an instance of application configuration,
+which will be used to construct settings parameter and http client.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="builder/index.html">Builder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Builder</span></code>
+<p>AppConfig builder</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="contentformat/index.html">ContentFormat</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">ContentFormat</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="appid.html">appID</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">appID</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The application id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="applicationversion.html">applicationVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">applicationVersion</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The application version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="auth.html">auth</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">auth</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../auth/index.html"><span class="identifier">Auth</span></a><span class="symbol">&gt;</span></code>
+<p>The authentication method list</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="customizedproperties.html">customizedProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">customizedProperties</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../appconfigcustomizedproperty/index.html"><span class="identifier">AppConfigCustomizedProperty</span></a><span class="symbol">&gt;</span></code>
+<p>Customized properties defined when publishing application to discovery service</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="host.html">host</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">host</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The host of the mobile application</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="port.html">port</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">port</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>The port</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="primaryauthenticationconfig.html">primaryAuthenticationConfig</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">primaryAuthenticationConfig</span><span class="symbol">: </span><a href="../auth/index.html"><span class="identifier">Auth</span></a><span class="symbol">?</span></code>
+<p>The primary authentication method, which is used for onboarding</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="protocol.html">protocol</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">protocol</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The protocol</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="serviceurl.html">serviceUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">serviceUrl</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The service url</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Converts the application configuration back to string format, it's the same as returned
+from discovery service.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="createappconfigfromjsonstring.html">createAppConfigFromJsonString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createAppConfigFromJsonString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.model.AppConfig.Companion$createAppConfigFromJsonString(kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AppConfig</span></a></code>
+<p>Creates AppConfig from a json string</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createappconfigfromstring.html">createAppConfigFromString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createAppConfigFromString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.model.AppConfig.Companion$createAppConfigFromString(kotlin.String, kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.model.AppConfig.Companion$createAppConfigFromString(kotlin.String, kotlin.String)/appId">appId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AppConfig</span></a></code>
+<p>Creates AppConfig from a string, handle both Json and URL format</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

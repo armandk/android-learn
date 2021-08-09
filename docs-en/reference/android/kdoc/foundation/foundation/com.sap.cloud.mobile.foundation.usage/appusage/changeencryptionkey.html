@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AppUsage.changeEncryptionKey - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.usage</a>&nbsp;/&nbsp;<a href="index.html">AppUsage</a>&nbsp;/&nbsp;<a href="./changeencryptionkey.html">changeEncryptionKey</a><br/>
+<br/>
+<h1>changeEncryptionKey</h1>
+<a name="com.sap.cloud.mobile.foundation.usage.AppUsage$changeEncryptionKey(kotlin.ByteArray)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">changeEncryptionKey</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.AppUsage$changeEncryptionKey(kotlin.ByteArray)/newEncryptionKey">newEncryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Changes the encryption key of the store while the store is open.</p>
+<h3>Parameters</h3>
+<p><a name="newEncryptionKey"></a>
+<code>newEncryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> new encryption key. It is recommended to use <code>EncryptionUtil</code> to obtain the new encryption key. If <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens.</p>
+<h3>Exceptions</h3>
+<p><a name="FileClosedException"></a>
+<code>FileClosedException</code> - if the persistence store has been closed.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if failed to generate the encryption key (when <code> newEncryptionKey</code> is <code>null</code>).</p>
+<a name="com.sap.cloud.mobile.foundation.usage.AppUsage$changeEncryptionKey(kotlin.ByteArray)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">changeEncryptionKey</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.AppUsage$changeEncryptionKey(kotlin.ByteArray)/newEncryptionKey">newEncryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Changes the encryption key of the store while the store is open.</p>
+<h3>Parameters</h3>
+<p><a name="newEncryptionKey"></a>
+<code>newEncryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> new encryption key. It is recommended to use <code>EncryptionUtil</code> to obtain the new encryption key. If <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens.</p>
+<h3>Exceptions</h3>
+<p><a name="FileClosedException"></a>
+<code>FileClosedException</code> - if the persistence store has been closed.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if failed to generate the encryption key (when <code> newEncryptionKey</code> is <code>null</code>).</p>
+</BODY>
+</HTML>

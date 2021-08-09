@@ -1,0 +1,636 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataMetric - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DataMetric</a><br/>
+<br/>
+<h1>DataMetric</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMetric</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DataMetric</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$add(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add an observed value for an occurrence of the measured events for this metric.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="byteinstance.html">byteInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">byteInstance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$byteInstance(kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$byteInstance(kotlin.String, kotlin.String)/metric">metric</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return a metric with unit "BYTE".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copyandresetall.html">copyAndResetAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">copyAndResetAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametriclist/index.html"><span class="identifier">DataMetricList</span></a></code>
+<p>Reset all metrics as if no measured events have occurred (after copying the previous values).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="count.html">count</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">count</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return the number of occurrences of the measured event.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createdatabasetime.html">createDatabaseTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createDatabaseTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$createDatabaseTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'createDatabaseTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createentitytime.html">createEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$createEntityTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'createEntityTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createindextime.html">createIndexTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createIndexTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$createIndexTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'createIndexTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createlinktime.html">createLinkTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createLinkTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$createLinkTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'createLinkTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createmediatime.html">createMediaTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createMediaTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$createMediaTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'createMediaTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createtabletime.html">createTableTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createTableTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$createTableTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'createTableTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletedatabasetime.html">deleteDatabaseTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">deleteDatabaseTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$deleteDatabaseTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'deleteDatabaseTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deleteentitytime.html">deleteEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">deleteEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$deleteEntityTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'deleteEntityTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletelinktime.html">deleteLinkTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">deleteLinkTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$deleteLinkTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'deleteLinkTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletestreamtime.html">deleteStreamTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">deleteStreamTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$deleteStreamTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'deleteStreamTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deltadownloadbytes.html">deltaDownloadBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">deltaDownloadBytes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$deltaDownloadBytes(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'deltaDownloadBytes' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deltadownloadbytes_gzip.html">deltaDownloadBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">deltaDownloadBytes_gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$deltaDownloadBytes_gzip(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'deltaDownloadBytes_gzip' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deltadownloadrows.html">deltaDownloadRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">deltaDownloadRows</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$deltaDownloadRows(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'deltaDownloadRows' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deltadownloadtime.html">deltaDownloadTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">deltaDownloadTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$deltaDownloadTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'executeQueryTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="downloadmediatime.html">downloadMediaTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">downloadMediaTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$downloadMediaTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'downloadMediaTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="downloadphasetime.html">downloadPhaseTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">downloadPhaseTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$downloadPhaseTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'downloadPhaseTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="downloadstreamtime.html">downloadStreamTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">downloadStreamTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$downloadStreamTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'downloadStreamTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entityinstance.html">entityInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">entityInstance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$entityInstance(kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$entityInstance(kotlin.String, kotlin.String)/metric">metric</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return a metric with unit "ENTITY".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="errorinstance.html">errorInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">errorInstance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$errorInstance(kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$errorInstance(kotlin.String, kotlin.String)/metric">metric</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return a metric with unit "ERROR".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="errormetricname.html">errorMetricName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">errorMetricName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$errorMetricName(kotlin.String, java.lang.RuntimeException)/method">method</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$errorMetricName(kotlin.String, java.lang.RuntimeException)/error">error</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a suitable name for an error metric.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="executemethodtime.html">executeMethodTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">executeMethodTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$executeMethodTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'executeMethodTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="executequerytime.html">executeQueryTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">executeQueryTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$executeQueryTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'executeQueryTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fetchmetadatasize.html">fetchMetadataSize</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fetchMetadataSize</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$fetchMetadataSize(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'fetchMetadataSize' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fetchmetadatasize_gzip.html">fetchMetadataSize_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fetchMetadataSize_gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$fetchMetadataSize_gzip(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'fetchMetadataSize_gzip' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fetchmetadatatime.html">fetchMetadataTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fetchMetadataTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$fetchMetadataTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'fetchMetadataTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="followednextlink.html">followedNextLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">followedNextLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$followedNextLink(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'followedNextLink' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcomponent.html">getComponent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComponent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the component which owns this metric.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getid.html">getId</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return a process-uniquie ID for this metric.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinstance.html">getInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getInstance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$getInstance(kotlin.String, kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$getInstance(kotlin.String, kotlin.String, kotlin.String)/metric">metric</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$getInstance(kotlin.String, kotlin.String, kotlin.String)/unit">unit</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Construct a new metric or locate an existing metric.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmaximum.html">getMaximum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMaximum</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return the maximum observed value for occurrences of the measured event.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmetric.html">getMetric</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMetric</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this metric (should be unique for all metrics in the same <code><a href="getcomponent.html">DataMetric.component</a></code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getminimum.html">getMinimum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMinimum</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return the minimum observed value for occurrences of the measured event.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsum.html">getSum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSum</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return the sum of observed values for occurrences of the measured event.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getunit.html">getUnit</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUnit</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the measurement unit for this metric.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="initialdownloadbytes.html">initialDownloadBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">initialDownloadBytes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$initialDownloadBytes(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'initialDownloadBytes' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="initialdownloadbytes_gzip.html">initialDownloadBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">initialDownloadBytes_gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$initialDownloadBytes_gzip(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'initialDownloadBytes_gzip' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="initialdownloadrows.html">initialDownloadRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">initialDownloadRows</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$initialDownloadRows(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'initialDownloadRows' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="initialdownloadtime.html">initialDownloadTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">initialDownloadTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$initialDownloadTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'initialDownloadTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="linkinstance.html">linkInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">linkInstance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$linkInstance(kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$linkInstance(kotlin.String, kotlin.String)/metric">metric</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return a metric with unit "LINK".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="loadmetadatatime.html">loadMetadataTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">loadMetadataTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$loadMetadataTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'loadMetadataTime' metric for the specified component, which includes fetch time and parse time.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="logall.html">logAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">logAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Log all metrics in CSV format to the <code><a href="../../com.sap.cloud.mobile.odata.core/debugconsole/index.html">com.sap.cloud.mobile.odata.core.DebugConsole</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="methodresultbytes.html">methodResultBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">methodResultBytes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$methodResultBytes(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'methodResultBytes' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="methodresultbytes_gzip.html">methodResultBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">methodResultBytes_gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$methodResultBytes_gzip(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'methodResultBytes_gzip' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsemetadatatime.html">parseMetadataTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseMetadataTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$parseMetadataTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'parseMetadataTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pingservertime.html">pingServerTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">pingServerTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$pingServerTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'pingServerTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryresultbytes.html">queryResultBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">queryResultBytes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$queryResultBytes(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'queryResultBytes' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryresultbytes_gzip.html">queryResultBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">queryResultBytes_gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$queryResultBytes_gzip(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'queryResultBytes_gzip' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryresultrows.html">queryResultRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">queryResultRows</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$queryResultRows(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'queryResultRows' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="requestinstance.html">requestInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">requestInstance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$requestInstance(kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$requestInstance(kotlin.String, kotlin.String)/metric">metric</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return a metric with unit "REQUEST".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reset.html">reset</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reset this metric as if no measured events have occurred.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resetall.html">resetAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">resetAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reset all metrics as if no measured events have occurred.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="rowinstance.html">rowInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">rowInstance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$rowInstance(kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$rowInstance(kotlin.String, kotlin.String)/metric">metric</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return a metric with unit "ROW".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="selectentitytime.html">selectEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">selectEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$selectEntityTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'selectEntityTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="timeinstance.html">timeInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">timeInstance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$timeInstance(kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$timeInstance(kotlin.String, kotlin.String)/metric">metric</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return a metric with unit "MICROSECOND".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updateentitytime.html">updateEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">updateEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$updateEntityTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'updateEntityTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updatelinktime.html">updateLinkTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">updateLinkTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$updateLinkTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'updateLinkTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploadmediatime.html">uploadMediaTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">uploadMediaTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$uploadMediaTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'uploadMediaTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploadstreamtime.html">uploadStreamTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">uploadStreamTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$uploadStreamTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'uploadStreamTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploadtime.html">uploadTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">uploadTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$uploadTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'uploadTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="upsertentitytime.html">upsertEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upsertEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$upsertEntityTime(kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return the 'upsertEntityTime' metric for the specified component.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="warninginstance.html">warningInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">warningInstance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$warningInstance(kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$warningInstance(kotlin.String, kotlin.String)/metric">metric</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return a metric with unit "WARNING".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="write.html">write</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$write(com.sap.cloud.mobile.odata.core.CharBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/charbuffer/index.html"><span class="identifier">CharBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write this metric in CSV format to the specified <code>buffer</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writeall.html">writeAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">writeAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMetric$writeAll(com.sap.cloud.mobile.odata.core.CharBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/charbuffer/index.html"><span class="identifier">CharBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Print all metrics in CSV format to the specified <code>buffer</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

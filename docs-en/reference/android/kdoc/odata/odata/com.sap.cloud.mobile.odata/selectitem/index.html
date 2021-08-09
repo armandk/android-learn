@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SelectItem - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">SelectItem</a><br/>
+<br/>
+<h1>SelectItem</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SelectItem</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> select item. A select item indicates a property (or expression) that is used in the $select system query option.</p>
+ See Also: 
+<p><code><a href="../dataquery/getselectitems.html">DataQuery.selectItems</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SelectItem</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> select item. A select item indicates a property (or expression) that is used in the $select system query option.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getpath.html">getPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datapath/index.html"><span class="identifier">DataPath</span></a></code>
+<p>Return a path to be expanded in the query results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ishidden.html">isHidden</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isHidden</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return was this select item added for internal use (e.g. needed for server-side query processing, but not requested by client).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="of.html">of</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.SelectItem$of(com.sap.cloud.mobile.odata.PropertyPath)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">SelectItem</span></a></code>
+<p>Return a new select item for the specified property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sethidden.html">setHidden</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHidden</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.SelectItem$setHidden(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set was this select item added for internal use (e.g. needed for server-side query processing, but not requested by client).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpath.html">setPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.SelectItem$setPath(com.sap.cloud.mobile.odata.DataPath)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a path to be expanded in the query results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toproperty.html">toProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">?</span></code>
+<p>If this select item references a simple property path, then return the property. Otherwise return <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="torequiredproperty.html">toRequiredProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toRequiredProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a></code>
+<p>If this select item references a simple property path, then return the property. Otherwise throw an exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string representation of this select item.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

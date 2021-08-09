@@ -1,0 +1,220 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NumberParser - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">NumberParser</a><br/>
+<br/>
+<h1>NumberParser</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">NumberParser</span></code>
+<p>Parser for numeric values.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">NumberParser</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Parser for numeric values.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="max_byte.html">MAX_BYTE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MAX_BYTE</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>String representation of byte.MAX_VALUE.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="max_int.html">MAX_INT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MAX_INT</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>String representation of int.MAX_VALUE.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="max_long.html">MAX_LONG</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MAX_LONG</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>String representation of long.MAX_VALUE.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="max_short.html">MAX_SHORT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MAX_SHORT</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>String representation of short.MAX_VALUE.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="min_byte.html">MIN_BYTE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MIN_BYTE</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>String representation of byte.MIN_VALUE.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="min_int.html">MIN_INT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MIN_INT</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>String representation of int.MIN_VALUE.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="min_long.html">MIN_LONG</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MIN_LONG</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>String representation of long.MIN_VALUE.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="min_short.html">MIN_SHORT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MIN_SHORT</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>String representation of short.MIN_VALUE.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="isbyte.html">isByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$isByte(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a valid value of type <code>byte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isdecimal.html">isDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$isDecimal(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a valid value of type <code>decimal</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ishex.html">isHex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isHex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$isHex(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a valid value of type <code>int</code>, in hexadecimnal format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isint.html">isInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$isInt(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a valid value of type <code>int</code>, in decimal or hexadecimal format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isinteger.html">isInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$isInteger(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a valid value of type <code>integer</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islong.html">isLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$isLong(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a valid value of type <code>long</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isshort.html">isShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$isShort(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a valid value of type <code>short</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsebyte.html">parseByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$parseByte(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed as a signed <code>byte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsehex.html">parseHex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseHex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$parseHex(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed as an <code>int</code> in unsigned hexadecimal format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseint.html">parseInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$parseInt(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>See parseInt(String, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$parseInt(kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$parseInt(kotlin.String, kotlin.Int)/radix">radix</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed as a signed <code>int</code> in the specified <code>radix</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parselong.html">parseLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$parseLong(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed as a signed <code>long</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseshort.html">parseShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NumberParser$parseShort(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed as a signed <code>short</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

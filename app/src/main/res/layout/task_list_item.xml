@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Movement"
+                android:textColor="@color/black_text"
+                android:textSize="@dimen/taskItem_title_textSize"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/task_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task: 12341"
+                android:textColor="@color/black_text"
+                android:textSize="@dimen/taskItem_status_textSize"
+                android:textStyle="normal"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/priority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="High"
+                android:textColor="@color/black_text"
+                android:textSize="@dimen/taskItem_status_textSize"
+                />
+
+            <TextView
+                android:id="@+id/remaining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="2 Days left"
+                android:textColor="@color/black_text"
+                android:textSize="@dimen/taskItem_status_textSize"
+                />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/complete"
+                android:textColor="@color/black_text"
+                android:textSize="@dimen/taskItem_status_textSize"
+                tools:visibility="gone"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:lines="2"
+            android:maxLines="3"
+            android:layout_marginBottom="4dp"
+            android:text="This is the product description for testing max lines This is the product description for testing max lines "
+            android:textColor="@color/black_text"
+            android:textSize="@dimen/taskItem_description_textSize"
+            />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ram"
+            android:textColor="#32363A"
+            android:textSize="@dimen/taskItem_assignee_textSize"
+            />
+    </LinearLayout>
+
+</LinearLayout>

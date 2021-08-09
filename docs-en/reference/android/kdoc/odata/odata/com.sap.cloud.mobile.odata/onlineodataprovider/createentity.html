@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OnlineODataProvider.createEntity - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">OnlineODataProvider</a>&nbsp;/&nbsp;<a href="./createentity.html">createEntity</a><br/>
+<br/>
+<h1>createEntity</h1>
+<a name="com.sap.cloud.mobile.odata.OnlineODataProvider$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createEntity</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Overrides <a href="../dataserviceprovider/createentity.html">DataServiceProvider.createEntity</a></p>
+<p>Create an entity in the target system. Automatically calls <code><a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/resolveentity.html">CsdlDocument.resolveEntity</a></code> to ensure that <code><a href="../entityvalue/getentityset.html">EntityValue.entitySet</a></code> is available.</p>
+ Throws: 
+<p><code><a href="../dataserviceexception/index.html">com.sap.cloud.mobile.odata.DataServiceException</a></code> if the entity set hasn't been explicitly provided before calling <code>createEntity</code> and there isn't a unique entity set for the entity type.</p>
+  See Also: 
+<p><code><a href="../entityvalue/oftype.html">EntityValue.ofType</a></code>, <code><a href="../entityvalue/inset.html">EntityValue.inSet</a></code>.</p>
+ 
+<h3>Parameters</h3>
+<p><a name="entity"></a>
+<code>entity</code> - <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">:</span> Entity to be created.</p>
+<p><a name="headers"></a>
+<code>headers</code> - <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">:</span> Request-specific headers.</p>
+<p><a name="options"></a>
+<code>options</code> - <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">:</span> Request-specific options.</p>
+</BODY>
+</HTML>

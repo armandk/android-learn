@@ -1,0 +1,647 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonValue - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">JsonValue</a><br/>
+<br/>
+<h1>JsonValue</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">JsonValue</span></code>
+<p>Utility functions for parsing and formatting <code><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html">com.sap.cloud.mobile.odata.DataValue</a></code> in OData <a href="http://json.org">JSON</a> representation.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">JsonValue</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Utility functions for parsing and formatting <code><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html">com.sap.cloud.mobile.odata.DataValue</a></code> in OData <a href="http://json.org">JSON</a> representation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="errorresponse.html">errorResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">errorResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$errorResponse(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataContext)/document">document</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$errorResponse(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/errorresponse/index.html"><span class="identifier">ErrorResponse</span></a></code>
+<p>Return a parsed error response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatcall.html">formatCall</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatCall</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$formatCall(com.sap.cloud.mobile.odata.DataMethodCall, com.sap.cloud.mobile.odata.DataContext)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datamethodcall/index.html"><span class="identifier">DataMethodCall</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$formatCall(com.sap.cloud.mobile.odata.DataMethodCall, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return an action invocation request body in JSON format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatdocument.html">formatDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$formatDocument(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$formatDocument(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a data value formatted in OData JSON representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatlink.html">formatLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$formatLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$formatLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return an entity reference formatted in OData JSON representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="frombasiclist.html">fromBasicList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBasicList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromBasicList(com.sap.cloud.mobile.odata.DataValueList, com.sap.cloud.mobile.odata.DataContext)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datavaluelist/index.html"><span class="identifier">DataValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromBasicList(com.sap.cloud.mobile.odata.DataValueList, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return an OData JSON representation of a value list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="frombinary.html">fromBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromBinary(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonstring/index.html">com.sap.cloud.mobile.odata.json.JsonString</a></code> representation of <code>value</code>, using URL-safe base-64 encoding.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromboolean.html">fromBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromBoolean(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonboolean/index.html">com.sap.cloud.mobile.odata.json.JsonBoolean</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="frombyte.html">fromByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromByte(kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromchar.html">fromChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromChar(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonstring/index.html">com.sap.cloud.mobile.odata.json.JsonString</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromcomplexlist.html">fromComplexList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromComplexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromComplexList(com.sap.cloud.mobile.odata.ComplexValueList, com.sap.cloud.mobile.odata.DataContext)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromComplexList(com.sap.cloud.mobile.odata.ComplexValueList, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return an OData JSON representation of a complex list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromcomplexvalue.html">fromComplexValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromComplexValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromComplexValue(com.sap.cloud.mobile.odata.ComplexValue, com.sap.cloud.mobile.odata.DataContext)/complex">complex</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromComplexValue(com.sap.cloud.mobile.odata.ComplexValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) An OData JSON representation of a complex value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromdatavalue.html">fromDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromDataValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromDataValue(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromDataValue(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) An OData JSON representation of a data value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromdecimal.html">fromDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromDecimal(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromdouble.html">fromDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromDouble(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromentitylist.html">fromEntityList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromEntityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromEntityList(com.sap.cloud.mobile.odata.EntityValueList, com.sap.cloud.mobile.odata.DataContext)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromEntityList(com.sap.cloud.mobile.odata.EntityValueList, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return an OData JSON representation of an entity list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromentityvalue.html">fromEntityValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromEntityValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromEntityValue(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromEntityValue(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) An OData JSON representation of an entity value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromfloat.html">fromFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromFloat(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromint.html">fromInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromInt(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="frominteger.html">fromInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromInteger(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromlong.html">fromLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromLong(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullablebinary.html">fromNullableBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableBinary(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonstring/index.html">com.sap.cloud.mobile.odata.json.JsonString</a></code> representation of <code>value</code>, using URL-safe base-64 encoding.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullableboolean.html">fromNullableBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableBoolean(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonboolean/index.html">com.sap.cloud.mobile.odata.json.JsonBoolean</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullablebyte.html">fromNullableByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableByte(kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullablechar.html">fromNullableChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableChar(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonstring/index.html">com.sap.cloud.mobile.odata.json.JsonString</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullabledecimal.html">fromNullableDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableDecimal(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullabledouble.html">fromNullableDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableDouble(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullablefloat.html">fromNullableFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableFloat(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullableint.html">fromNullableInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableInt(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullableinteger.html">fromNullableInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableInteger(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullablelong.html">fromNullableLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableLong(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullableshort.html">fromNullableShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableShort(kotlin.Short)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullablestring.html">fromNullableString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullableString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromNullableString(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A <code><a href="../jsonstring/index.html">com.sap.cloud.mobile.odata.json.JsonString</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromshort.html">fromShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromShort(kotlin.Short)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonnumber/index.html">com.sap.cloud.mobile.odata.json.JsonNumber</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromstring.html">fromString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$fromString(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Return a <code><a href="../jsonstring/index.html">com.sap.cloud.mobile.odata.json.JsonString</a></code> representation of <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsedocument.html">parseDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseDocument(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/document">document</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseDocument(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseDocument(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A data value (basic, basic list, complex, complex list, entity, entity list) parsed from OData JSON representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parselink.html">parseLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseLink(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/document">document</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseLink(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseLink(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return an entity reference parsed from OData JSON link representation. The reference will have <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/isreference.html">EntityValue.isReference</a></code> == <code>true</code>, <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/getreadlink.html">EntityValue.readLink</a></code> != <code>null</code>, and <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/haskey.html">EntityValue.hasKey</a></code> will be true if the URI was in canonical URL format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parselinks.html">parseLinks</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseLinks</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseLinks(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/document">document</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseLinks(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseLinks(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a></code>
+<p>Return a list of entity references parsed from OData JSON links representation. Each reference will have <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/isreference.html">EntityValue.isReference</a></code> == <code>true</code>, <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/getreadlink.html">EntityValue.readLink</a></code> != <code>null</code>, and <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/haskey.html">EntityValue.hasKey</a></code> will be true if the URI was in canonical URL format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsereference.html">parseReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext)/entityType">entityType</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>See parseReference(String, EntityType, EntitySet, DataContext, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/entityType">entityType</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/binding">binding</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return an entity reference parsed from OData JSON reference representation. The reference will have <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/isreference.html">EntityValue.isReference</a></code> == <code>true</code>, <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/getreadlink.html">EntityValue.readLink</a></code> != <code>null</code>, and <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/haskey.html">EntityValue.hasKey</a></code> will be true if the URI was in canonical URL format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tobasiclist.html">toBasicList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toBasicList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toBasicList(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toBasicList(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toBasicList(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datavaluelist/index.html"><span class="identifier">DataValueList</span></a></code>
+<p>Return a value list parsed from OData JSON representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tobinary.html">toBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toBinary(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Return binary value parsed from a JSON string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toboolean.html">toBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toBoolean(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return boolean value parsed from a JSON boolean.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tobyte.html">toByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toByte(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code>
+<p>Return number value parsed from a JSON number (or JSON string).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tochar.html">toChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toChar(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Char</span></code>
+<p>Return character value parsed from a JSON string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tocomplexlist.html">toComplexList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toComplexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toComplexList(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toComplexList(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toComplexList(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a complex list parsed from OData JSON representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tocomplexvalue.html">toComplexValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toComplexValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toComplexValue(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.ComplexType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toComplexValue(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.ComplexType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/complextype/index.html"><span class="identifier">ComplexType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toComplexValue(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.ComplexType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A complex value parsed from OData JSON representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="todatavalue.html">toDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toDataValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toDataValue(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toDataValue(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toDataValue(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A data value parsed from OData JSON representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="todecimal.html">toDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toDecimal(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span></code>
+<p>Return number value parsed from a JSON number (or JSON string).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="todouble.html">toDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toDouble(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code>
+<p>Return number value parsed from a JSON number (or JSON string).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toentitylist.html">toEntityList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toEntityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toEntityList(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toEntityList(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toEntityList(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a></code>
+<p>Return an entity list parsed from OData JSON representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toentityvalue.html">toEntityValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toEntityValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toEntityValue(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toEntityValue(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toEntityValue(com.sap.cloud.mobile.odata.json.JsonElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) An entity value parsed from OData JSON representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tofloat.html">toFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toFloat(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Float</span></code>
+<p>Return number value parsed from a JSON number (or JSON string).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toint.html">toInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toInt(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return number value parsed from a JSON number (or JSON string).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tointeger.html">toInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toInteger(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span></code>
+<p>Return number value parsed from a JSON number (or JSON string).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tolong.html">toLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toLong(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return number value parsed from a JSON number (or JSON string).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullablebinary.html">toNullableBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableBinary(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable string value parsed from a JSON string or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullableboolean.html">toNullableBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableBoolean(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable boolean value parsed from a JSON boolean or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullablebyte.html">toNullableByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableByte(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable number value parsed from a JSON number or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullablechar.html">toNullableChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableChar(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Char</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable character value parsed from a JSON string or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullabledecimal.html">toNullableDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableDecimal(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable number value parsed from a JSON number or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullabledouble.html">toNullableDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableDouble(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable number value parsed from a JSON number or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullablefloat.html">toNullableFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableFloat(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Float</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable number value parsed from a JSON number or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullableint.html">toNullableInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableInt(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable number value parsed from a JSON number or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullableinteger.html">toNullableInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableInteger(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable number value parsed from a JSON number or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullablelong.html">toNullableLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableLong(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable number value parsed from a JSON number or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullableshort.html">toNullableShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableShort(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable number value parsed from a JSON number or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullablestring.html">toNullableString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullableString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toNullableString(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Nullable string value parsed from a JSON string or JSON null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toshort.html">toShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toShort(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span></code>
+<p>Return number value parsed from a JSON number (or JSON string).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonValue$toString(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return string value parsed from a JSON string.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,180 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UsageBroker.configure - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.usage</a>&nbsp;/&nbsp;<a href="index.html">UsageBroker</a>&nbsp;/&nbsp;<a href="./configure.html">configure</a><br/>
+<br/>
+<h1>configure</h1>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID)/uuid">uuid</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="uuid"></a>
+<code>uuid</code> - <span class="identifier">UUID</span><span class="symbol">:</span> a unique identifier which identifies a given user's store</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray)/uuid">uuid</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="uuid"></a>
+<code>uuid</code> - <span class="identifier">UUID</span><span class="symbol">:</span> a unique identifier which identifies a given user's store</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> encryption key used to secure the usage store (MUST remain constant after initial creation)</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.Boolean)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.Boolean)/uuid">uuid</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.Boolean)/retainLastUnattributedSession">retainLastUnattributedSession</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="uuid"></a>
+<code>uuid</code> - <span class="identifier">UUID</span><span class="symbol">:</span> a unique identifier which identifies a given user's store</p>
+<p><a name="retainLastUnattributedSession"></a>
+<code>retainLastUnattributedSession</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> if true, temporarily save last unattributed session in memory to inject into attributed store, else leave unattributed data in place.</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, kotlin.Boolean)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, kotlin.Boolean)/retainLastUnattributedSession">retainLastUnattributedSession</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="retainLastUnattributedSession"></a>
+<code>retainLastUnattributedSession</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> if true, temporarily save last unattributed session in memory to inject into attributed store, else leave unattributed data in place.</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)/uuid">uuid</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)/retainLastUnattributedSession">retainLastUnattributedSession</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="uuid"></a>
+<code>uuid</code> - <span class="identifier">UUID</span><span class="symbol">:</span> a unique identifier which identifies a given user's store</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> encryption key used to secure the usage store (MUST remain constant after initial creation)</p>
+<p><a name="retainLastUnattributedSession"></a>
+<code>retainLastUnattributedSession</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> if true, temporarily save last unattributed session in memory to inject into attributed store, else leave unattributed data in place.</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID)/uuid">uuid</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="uuid"></a>
+<code>uuid</code> - <span class="identifier">UUID</span><span class="symbol">:</span> a unique identifier which identifies a given user's store</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray)/uuid">uuid</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="uuid"></a>
+<code>uuid</code> - <span class="identifier">UUID</span><span class="symbol">:</span> a unique identifier which identifies a given user's store</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> encryption key used to secure the usage store (MUST remain constant after initial creation)</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.Boolean)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.Boolean)/uuid">uuid</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.Boolean)/retainLastUnattributedSession">retainLastUnattributedSession</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="uuid"></a>
+<code>uuid</code> - <span class="identifier">UUID</span><span class="symbol">:</span> a unique identifier which identifies a given user's store</p>
+<p><a name="retainLastUnattributedSession"></a>
+<code>retainLastUnattributedSession</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> if true, temporarily save last unattributed session in memory to inject into attributed store, else leave unattributed data in place.</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, kotlin.Boolean)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, kotlin.Boolean)/retainLastUnattributedSession">retainLastUnattributedSession</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="retainLastUnattributedSession"></a>
+<code>retainLastUnattributedSession</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> if true, temporarily save last unattributed session in memory to inject into attributed store, else leave unattributed data in place.</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)/uuid">uuid</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageBroker$configure(android.content.Context, java.util.UUID, kotlin.ByteArray, kotlin.Boolean)/retainLastUnattributedSession">retainLastUnattributedSession</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Restarts the UsageBroker</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> An android Context providing access to resources</p>
+<p><a name="uuid"></a>
+<code>uuid</code> - <span class="identifier">UUID</span><span class="symbol">:</span> a unique identifier which identifies a given user's store</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> encryption key used to secure the usage store (MUST remain constant after initial creation)</p>
+<p><a name="retainLastUnattributedSession"></a>
+<code>retainLastUnattributedSession</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> if true, temporarily save last unattributed session in memory to inject into attributed store, else leave unattributed data in place.</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - if an encryption key was unable to be generated</p>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the default store was unable to be opened</p>
+</BODY>
+</HTML>

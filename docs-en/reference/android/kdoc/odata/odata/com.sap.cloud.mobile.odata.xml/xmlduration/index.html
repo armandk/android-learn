@@ -1,0 +1,175 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XmlDuration - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.xml</a>&nbsp;/&nbsp;<a href="./index.html">XmlDuration</a><br/>
+<br/>
+<h1>XmlDuration</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlDuration</span></code>
+<p>Represents an <a href="http://www.w3.org/TR/xmlschema11-2/#duration">XML Schema duration</a>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">XmlDuration</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents an <a href="http://www.w3.org/TR/xmlschema11-2/#duration">XML Schema duration</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$equal(com.sap.cloud.mobile.odata.xml.XmlDuration, com.sap.cloud.mobile.odata.xml.XmlDuration)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">XmlDuration</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$equal(com.sap.cloud.mobile.odata.xml.XmlDuration, com.sap.cloud.mobile.odata.xml.XmlDuration)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">XmlDuration</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare two duration values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdays.html">getDays</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDays</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return days field of duration (non-negative).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdaytime.html">getDayTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDayTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/daytimeduration/index.html"><span class="identifier">DayTimeDuration</span></a></code>
+<p>Return day and time fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethours.html">getHours</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHours</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return hours field of duration (non-negative).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getminutes.html">getMinutes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMinutes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return minutes field of duration (non-negative).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmonths.html">getMonths</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMonths</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return months field of duration (non-negative).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnanos.html">getNanos</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNanos</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return nanoseconds field of duration (non-negative).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getseconds.html">getSeconds</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSeconds</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return seconds field of duration (non-negative).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsign.html">getSign</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSign</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return sign of the duration (+1, 0 or -1).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getyearmonth.html">getYearMonth</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getYearMonth</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/yearmonthduration/index.html"><span class="identifier">YearMonthDuration</span></a></code>
+<p>Return year and month fields.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getyears.html">getYears</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getYears</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return years field of duration (non-negative).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="notequal.html">notEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$notEqual(com.sap.cloud.mobile.odata.xml.XmlDuration, com.sap.cloud.mobile.odata.xml.XmlDuration)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">XmlDuration</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$notEqual(com.sap.cloud.mobile.odata.xml.XmlDuration, com.sap.cloud.mobile.odata.xml.XmlDuration)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">XmlDuration</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare two duration values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="of.html">of</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/sign">sign</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/years">years</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/months">months</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/days">days</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/hours">hours</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/minutes">minutes</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/seconds">seconds</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/nanos">nanos</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlDuration</span></a></code>
+<p>Return a new XML duration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDuration$parse(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlDuration</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Value parsed from <a href="http://www.w3.org/TR/xmlschema11-2/#duration">XML Schema format</a>, or <code>null</code> if <code>text</code> has invalid duration format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="totime.html">toTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/localtime/index.html"><span class="identifier">LocalTime</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) This duration expressed as a local time (e.g. 00:00:00 to 23:59:59.999*; 24:00:00 for PT24H), or <code>null</code> if this duration is not expressible as a local time.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

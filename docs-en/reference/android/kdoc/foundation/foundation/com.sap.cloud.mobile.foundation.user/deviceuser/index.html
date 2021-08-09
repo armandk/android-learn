@@ -1,0 +1,151 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DeviceUser - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.user</a>&nbsp;/&nbsp;<a href="./index.html">DeviceUser</a><br/>
+<br/>
+<h1>DeviceUser</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">DeviceUser</span></code>
+<p>Represents the model of a device user.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DeviceUser</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUser$<init>(com.sap.cloud.mobile.foundation.user.User, kotlin.Boolean, kotlin.Boolean, kotlin.Long, kotlin.Long)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../user/index.html"><span class="identifier">User</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUser$<init>(com.sap.cloud.mobile.foundation.user.User, kotlin.Boolean, kotlin.Boolean, kotlin.Long, kotlin.Long)/current">current</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUser$<init>(com.sap.cloud.mobile.foundation.user.User, kotlin.Boolean, kotlin.Boolean, kotlin.Long, kotlin.Long)/onBoarded">onBoarded</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUser$<init>(com.sap.cloud.mobile.foundation.user.User, kotlin.Boolean, kotlin.Boolean, kotlin.Long, kotlin.Long)/creationTime">creationTime</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span>&nbsp;<span class="symbol">=</span>&nbsp;System.currentTimeMillis()<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUser$<init>(com.sap.cloud.mobile.foundation.user.User, kotlin.Boolean, kotlin.Boolean, kotlin.Long, kotlin.Long)/updateTime">updateTime</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span>&nbsp;<span class="symbol">=</span>&nbsp;System.currentTimeMillis()<span class="symbol">)</span></code>
+<p>Represents the model of a device user.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="creationtime.html">creationTime</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">creationTime</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>The creation time of this user.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="current.html">current</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">current</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Whether a user is the current active user or not.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="email.html">email</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">email</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The email address, it might be empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">id</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The user id, it's the same as the user model saved at server side.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>If name property returned from server, then 'name' would be 'family name, first name', otherwise 'userName'.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="onboarded.html">onBoarded</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">onBoarded</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Whether a user went through the complete onboarding process and ready to unlock
+the app with the passcode.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="securestorename.html">secureStoreName</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">secureStoreName</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The secure store name for this user, it's the same as <a href="id.html">id</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updatetime.html">updateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">updateTime</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>The latest update time.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="createdeviceuserfromjsonstring.html">createDeviceUserFromJsonString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createDeviceUserFromJsonString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUser.Companion$createDeviceUserFromJsonString(kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DeviceUser</span></a></code>
+<p>Converts the given JSON string to 'DeviceUser'</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="obfuscateemail.html">obfuscateEmail</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">obfuscateEmail</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUser.Companion$obfuscateEmail(kotlin.String)/str">str</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The default algorithm to obfuscate email, only keep the first one or two characters of
+the user name and only the first character of the domain name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="obfuscatename.html">obfuscateName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">obfuscateName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUser.Companion$obfuscateName(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The default algorithm to obfuscate user name, only keep the first one or 2 characters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

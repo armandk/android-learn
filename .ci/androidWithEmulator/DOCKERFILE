@@ -1,0 +1,21 @@
+FROM androidsdk/android-30:latest
+
+ARG ANDROID_EMULATOR_PACKAGE_ARM="system-images;android-25;google_apis;armeabi-v7a"
+ENV EMULATOR_NAME_ARM="android_arm"
+
+RUN apt-get update; apt-get --assume-yes install sudo
+RUN sudo apt-get --assume-yes install rsync
+
+RUN sdkmanager --list
+RUN sdkmanager "${ANDROID_EMULATOR_PACKAGE_ARM}"
+RUN echo "no" | avdmanager --verbose create avd --force --name "${EMULATOR_NAME_ARM}" --device "pixel" --package "${ANDROID_EMULATOR_PACKAGE_ARM}"
+RUN emulator -list-avds
+
+COPY ./ ./
+
+RUN chmod +x ./install-sap-fiori-lib && ./install-sap-fiori-lib
+
+COPY ./.ci/androidWithEmulator/run.sh /usr/local/bin/run.sh
+RUN chmod +x /usr/local/bin/run.sh
+
+ENTRYPOINT run.sh

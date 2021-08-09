@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.open - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./open.html">open</a><br/>
+<br/>
+<h1>open</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$open(Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">open</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$open(Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$open(Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Opens the provider. After this call, the internal metadata data structure will be changed so any values cached in memory will need to be re-retrieved. </p>
+<p> Example Usage: </p>
+<pre><code>// Open OfflineODataProvider asynchronously
+      offlineODataProvider.open(() -&gt; logger.info("Open completed successfully."),
+                                (error) -&gt; logger.error("Exception encountered in OfflineOData open: ", error));
+     
+      
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="successHandler"></a>
+<code>successHandler</code> - <span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">:</span> a success callback function.</p>
+<p><a name="failureHandler"></a>
+<code>failureHandler</code> - <span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">:</span> a failure callback function.</p>
+<p><strong>See Also</strong><br/>
+<a href="close.html">#close()</a><a href="upload.html">#upload(Action0, Action1)</a><a href="download.html">#download(Action0, Action1)</a><a href="download.html">#download(List, Action0, Action1)</a><a href="../offlineodatadelegate/index.html">OfflineODataDelegate</a>com.sap.cloud.mobile.odata.core.Action0com.sap.cloud.mobile.odata.core.Action1</p>
+</BODY>
+</HTML>

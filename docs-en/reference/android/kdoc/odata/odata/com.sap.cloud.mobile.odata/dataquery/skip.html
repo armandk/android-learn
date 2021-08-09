@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.skip - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./skip.html">skip</a><br/>
+<br/>
+<h1>skip</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$skip(kotlin.Int)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">skip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$skip(kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getskipcount.html">DataQuery.skipCount</a></code> to specify the number of initial results to return. </p>
+Example using proxy classes:<pre><code>
+      public void queryWithSkipExample() {
+          NorthwindService service = this.getService();
+          DataQuery query = new DataQuery().skip(20).top(10);
+          List&lt;Customer&gt; customers = service.getCustomers(query);
+          this.showCustomers(customers);
+          assert customers.size() == 10;
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void queryWithSkipExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          DataQuery query = new DataQuery().from(customersEntitySet).skip(20).top(10);
+          EntityValueList customers = service.executeQuery(query).getEntityList();
+          this.showCustomers(customers);
+          assert customers.length() == 10;
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="count"></a>
+<code>count</code> - <span class="identifier">Int</span><span class="symbol">:</span> Number of initial results for query execution to skip.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

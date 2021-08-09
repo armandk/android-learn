@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ClientResourceService - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.clientresources</a>&nbsp;/&nbsp;<a href="./index.html">ClientResourceService</a><br/>
+<br/>
+<h1>ClientResourceService</h1>
+<code><span class="keyword">class </span><span class="identifier">ClientResourceService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the service to handle client resource related cases, for example,</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ClientResourceService</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$<init>(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.ByteArray)))/autoDownloadListener">autoDownloadListener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Represents the service to handle client resource related cases, for example,</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/apikey.html">apiKey</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">apiKey</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>The api key that can connect to mobile server</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">application</span><span class="symbol">: </span><span class="identifier">Application</span></code>
+<p>The application instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="downloadclientresource.html">downloadClientResource</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">downloadClientResource</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadClientResource(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.ByteArray)), com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadClientResource(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.ByteArray)), com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle)/bundle">bundle</span><span class="symbol">:</span>&nbsp;<a href="../clientresourcebundle/index.html"><span class="identifier">ClientResourceBundle</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Download client resource content, if <a href="downloadclientresource.html#com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadClientResource(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.ByteArray)), com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle)/bundle">bundle</a> is not specified, download the default resource.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">downloadClientResource</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadClientResource(com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle)/bundle">bundle</span><span class="symbol">:</span>&nbsp;<a href="../clientresourcebundle/index.html"><span class="identifier">ClientResourceBundle</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">&gt;</span></code>
+<p>Downloads the client resource content for the given <a href="downloadclientresource.html#com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadClientResource(com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle)/bundle">bundle</a>. This fun will be executed in a
+worker thread.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="downloadresourcetofile.html">downloadResourceToFile</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">downloadResourceToFile</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadResourceToFile(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)), kotlin.String, com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle, kotlin.Boolean)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadResourceToFile(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)), kotlin.String, com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle, kotlin.Boolean)/fileName">fileName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadResourceToFile(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)), kotlin.String, com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle, kotlin.Boolean)/bundle">bundle</span><span class="symbol">:</span>&nbsp;<a href="../clientresourcebundle/index.html"><span class="identifier">ClientResourceBundle</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadResourceToFile(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)), kotlin.String, com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle, kotlin.Boolean)/overwrite">overwrite</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Downloads the client resource and save the content to a file identified by <a href="downloadresourcetofile.html#com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadResourceToFile(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)), kotlin.String, com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle, kotlin.Boolean)/fileName">fileName</a>, if
+<a href="downloadresourcetofile.html#com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$downloadResourceToFile(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)), kotlin.String, com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle, kotlin.Boolean)/bundle">bundle</a> is not specified, the default client resource will be downloaded. The saved file
+is located in the internal storage of this mobile application, the client code can then access
+the file with: val file = File(context.filesDir, filename)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="init.html">init</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$init(android.app.Application, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<span class="identifier">Application</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$init(android.app.Application, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Initializes the mobile service</p>
+<code><span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$init(android.app.Application, com.sap.cloud.mobile.foundation.common.SettingsParameters)/application">application</span><span class="symbol">:</span>&nbsp;<span class="identifier">Application</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$init(android.app.Application, com.sap.cloud.mobile.foundation.common.SettingsParameters)/settingsParameters">settingsParameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="onevent.html">onEvent</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onEvent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$onEvent(com.sap.cloud.mobile.foundation.common.SDKApplicationState.SDKEventType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/sdkapplicationstate/sdkeventtype/index.html"><span class="identifier">SDKApplicationState.SDKEventType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="onstatechange.html">onStateChange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onStateChange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$onStateChange(com.sap.cloud.mobile.foundation.mobileservices.ApplicationState)/state">state</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/applicationstate/index.html"><span class="identifier">ApplicationState</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Notified when application state changes. This function will be called on Main thread.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="retrieveresourcebundles.html">retrieveResourceBundles</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">retrieveResourceBundles</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$retrieveResourceBundles(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.collections.List((com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle)))))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../clientresourcebundle/index.html"><span class="identifier">ClientResourceBundle</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Retrieves the resource bundle list from server, and notifies the result with the given <a href="retrieveresourcebundles.html#com.sap.cloud.mobile.foundation.clientresources.ClientResourceService$retrieveResourceBundles(com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.collections.List((com.sap.cloud.mobile.foundation.clientresources.ClientResourceBundle)))))/listener">listener</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">retrieveResourceBundles</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../clientresourcebundle/index.html"><span class="identifier">ClientResourceBundle</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Retrieves the client resource bundle list from server. This function will be executed in a
+worker thread.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/enablenetworkpolicy.html">enableNetworkPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enableNetworkPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$enableNetworkPolicy(com.sap.cloud.mobile.foundation.settings.policies.NetworkPolicy)/policy">policy</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/networkpolicy/index.html"><span class="identifier">NetworkPolicy</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Enable and set network policy for mobile service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/getnetworktype.html">getNetworkType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getNetworkType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$getNetworkType(kotlin.String)/componentName">componentName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">NetworkType</span></code>
+<p>Help mobile services using worker convert NetworkPolicy<a href="#">effectiveNetworkPolicy</a> to NetworkType</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/isapplicationinitialized.html">isApplicationInitialized</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isApplicationInitialized</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Check whether application instance is initialized.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html">observeWorker</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">observeWorker</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/request">request</span><span class="symbol">:</span>&nbsp;<span class="identifier">WorkRequest</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/tag">tag</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/getServiceResult">getServiceResult</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">WorkInfo</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Observers a worker request from the main thread, and report the result to the given <a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/listener">listener</a>.
+<a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/getServiceResult">getServiceResult</a> takes the observed <a href="#">WorkInfo</a> as input to return the <a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html">ServiceResult</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/prerequisiteready.html">prerequisiteReady</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">prerequisiteReady</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Most service can only be used when <a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html">SettingsParameters</a> and 'httpClient' are ready</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/reset.html">reset</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Resets the mobile service to the state that just initialized.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="bundle.html">BUNDLE</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">BUNDLE</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="version.html">VERSION</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">VERSION</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

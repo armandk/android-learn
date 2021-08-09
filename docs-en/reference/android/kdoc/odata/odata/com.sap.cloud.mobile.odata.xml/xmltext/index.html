@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XmlText - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.xml</a>&nbsp;/&nbsp;<a href="./index.html">XmlText</a><br/>
+<br/>
+<h1>XmlText</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlText</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../xmlnode/index.html"><span class="identifier">XmlNode</span></a></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> text node.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">XmlText</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> text node.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../xmlnode/type_comment.html">TYPE_COMMENT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_COMMENT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Node type constant for comment nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmlnode/type_element.html">TYPE_ELEMENT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_ELEMENT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Node type constant for element nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmlnode/type_processing_instruction.html">TYPE_PROCESSING_INSTRUCTION</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_PROCESSING_INSTRUCTION</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Node type constant for processing instruction nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmlnode/type_text.html">TYPE_TEXT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_TEXT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Node type constant for text nodes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="gettext.html">getText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the text value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return XmlNode.TYPE_TEXT.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ispretty.html">isPretty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isPretty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this text node is an instance of <code><a href="../xmlprettytext/index.html">com.sap.cloud.mobile.odata.xml.XmlPrettyText</a></code>, otherwise return <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settext.html">setText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlText$setText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the text value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="withtext.html">withText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlText$withText(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlText</span></a></code>
+<p>Convenience function for constructing a text node with specified text.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../xmlprettytext/index.html">XmlPrettyText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlPrettyText</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">XmlText</span></a></code>
+<p>Functions for pretty-printing XML text node content.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

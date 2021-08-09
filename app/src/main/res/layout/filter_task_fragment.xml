@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/app_bar_height"
+    tools:context=".FilterTaskFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/filterTaskToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:iconTint="@color/white"
+            app:title="@string/filter_task_title"
+            app:titleTextColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="top"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/close_btn"
+                    android:gravity="center"
+                    android:paddingStart="30sp"
+                    android:text="@string/filter_task_title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/white"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/filter_apply_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:paddingTop="3sp"
+                    android:text="@string/filter_task_apply"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:id="@+id/close_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_close_button" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:id="@+id/filterTaskScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:keyText="@string/filter_by" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+                <!--TODO: Start: Remove the hardcoded chip and TableRow once all Task Types are enabled and automated -->
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.sap.cloud.mobile.fiori.formcell.FilterFormCell
+                        android:id="@+id/filterTaskType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:allowDeselect="true"
+                        app:key="@string/add_task_type"
+                        app:keyEnabled="true"
+                        app:singleLine="false" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-5sp"
+                        android:layout_marginTop="32sp"
+                        android:enabled="false"
+                        android:text="@string/product_out_of_stock"
+                        android:textColor="@color/chip_text_color"
+                        app:chipBackgroundColor="@color/chip_background_color" />
+
+                </TableRow>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="-15sp"
+                    android:enabled="false"
+                    android:text="@string/product_restock"
+                    android:textColor="@color/chip_text_color"
+                    app:chipBackgroundColor="@color/chip_background_color" />
+
+                <!--TODO: End: Remove the hardcoded chip once all Task Types are enabled and automated -->
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+                <com.sap.cloud.mobile.fiori.formcell.FilterFormCell
+                    android:id="@+id/filterTaskStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:allowDeselect="true"
+                    app:key="@string/task_status"
+                    app:keyEnabled="true"
+                    app:singleLine="true" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+                <com.sap.cloud.mobile.fiori.formcell.FilterFormCell
+                    android:id="@+id/filterTaskPriority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:allowDeselect="true"
+                    app:key="@string/task_priority"
+                    app:keyEnabled="true"
+                    app:singleLine="true" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+                <com.sap.cloud.mobile.fiori.formcell.FilterFormCell
+                    android:id="@+id/filterTaskAssignee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:allowDeselect="true"
+                    app:key="@string/add_task_assignee"
+                    app:keyEnabled="true"
+                    app:singleLine="true" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+                <com.sap.cloud.mobile.fiori.formcell.GenericListPickerFormCell
+                    android:id="@+id/filterDueDateUnselected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:key="@string/add_task_due_date" />
+
+                <TableRow
+                    android:id="@+id/filterDueDateSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <com.sap.cloud.mobile.fiori.formcell.DateTimePickerFormCell
+                        android:id="@+id/filterTaskDueDateStart"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FioriTheme.Dialog"
+                        app:dateTimePickerMode="date"
+                        app:key="@string/add_task_due_date" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="@string/due_date_range_symbol"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/blue" />
+
+                    <com.sap.cloud.mobile.fiori.formcell.DateTimePickerFormCell
+                        android:id="@+id/filterTaskDueDateEnd"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FioriTheme.Dialog"
+                        app:dateTimePickerMode="date"
+                        app:error="End date earlier than start date" />
+
+                    <TextView
+                        android:id="@+id/filterDueDateClear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/clear"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/blue" />
+
+                </TableRow>
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+                <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:keyText="@string/sort_by" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+                <com.sap.cloud.mobile.fiori.formcell.ChoiceFormCell
+                    android:id="@+id/sortTaskCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:allowDeselect="true"
+                    app:key="@string/task_category"
+                    app:keyEnabled="true"
+                    app:singleLine="true" />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</FrameLayout>

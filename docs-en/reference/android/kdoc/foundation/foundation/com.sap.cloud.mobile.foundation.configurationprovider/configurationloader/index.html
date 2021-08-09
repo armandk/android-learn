@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ConfigurationLoader - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.configurationprovider</a>&nbsp;/&nbsp;<a href="./index.html">ConfigurationLoader</a><br/>
+<br/>
+<h1>ConfigurationLoader</h1>
+<a name="com.sap.cloud.mobile.foundation.configurationprovider.ConfigurationLoader"></a>
+<code><span class="keyword">class </span><span class="identifier">ConfigurationLoader</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">HandlerThread</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.configurationprovider.ConfigurationLoader"></a>
+<code><span class="keyword">class </span><span class="identifier">ConfigurationLoader</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">HandlerThread</span></code>
+<p>The main entry point, responsible for configuration retrieval, provider processing, retries, input and error callbacks. It attempts to retrieve configuration data from the queue of providers and returns the configuration data from the first successful provider. </p>
+<p>By default, the initial queue contents are: </p>
+<ol> <li><code><a href="../managedconfigurationprovider/index.html"> MANAGED_CONFIGURATION_PROVIDER</a></code></li>
+ <li><code><a href="../fileconfigurationprovider/index.html"> FILE_CONFIGURATION_PROVIDER</a></code></li>
+ <li><code><a href="../discoveryserviceconfigurationprovider/index.html">DISCOVERY_SERVICE_CONFIGURATION_PROVIDER</a></code></li>
+ <li><code><a href="../jsonconfigurationprovider/index.html"> JSONServiceConfigurationProvider</a></code></li>
+ </ol>
+ 
+<p>During execution of <code><a href="loadconfiguration.html">loadConfiguration</a></code>, each provider is queried for configuration data. If data is successfully retrieved, it is persisted using the specified <code><a href="../configurationpersister/persistconfiguration.html">persistConfiguration</a></code> method and the <code><a href="../configurationloadercallback/oncompletion.html">onCompletion</a></code> handler is called with the provider-id and success. The first provider encountered that requires input will cause the ConfigurationLoader to build a list of all of the providers that expect input and call the <code><a href="../configurationloadercallback/oninputrequired.html">ConfigurationLoaderCallback#onInputRequired(ConfigurationLoader, UserInputs)</a></code> handler. Input is returned to the loader by calling <code><a href="processrequestedinputs.html">processRequestedInputs</a></code> and will be provided to the associated provider. The provider will then return the successful configuration data retrieved or call the <code><a href="../configurationloadercallback/onerror.html">onError</a></code> handler (allowing new input processing). If an empty or null input is provided, all providers that expect input will be skipped. Therefore, if none of the remaining non-input expected providers successfully retrieve configuration data, the ConfigurationLoader will call the <code><a href="../configurationloadercallback/oncompletion.html">onCompletion</a></code> handler with a null provider id and unsuccessful. </p>
+<p>Users can override the default queue of providers by creating a ConfigurationLoader and adding the provider(s) of interest. Custom providers provide extensibility</p>
+</BODY>
+</HTML>

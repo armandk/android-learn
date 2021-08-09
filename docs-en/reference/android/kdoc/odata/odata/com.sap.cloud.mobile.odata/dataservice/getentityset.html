@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataService.getEntitySet - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataService</a>&nbsp;/&nbsp;<a href="./getentityset.html">getEntitySet</a><br/>
+<br/>
+<h1>getEntitySet</h1>
+<a name="com.sap.cloud.mobile.odata.DataService$getEntitySet(kotlin.String)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntitySet</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$getEntitySet(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="../entityset/index.html"><span class="identifier">EntitySet</span></a></code>
+<p>Lookup an entity set (or singleton entity) by name. If the entity set does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up entity sets before calling this method like in the following code snippet: Note that OData singleton entities are represented by entity sets where <code><a href="../entityset/issingleton.html">EntitySet.isSingleton</a></code> is <code>true</code>. </p>
+Example checking if an entity set exists:<pre><code>
+      public void checkEntitySetExistsExample() {
+          DataService service = this.getService();
+          if (service.getMetadata().getEntitySets().has("Categories")) {
+              Ignore.valueOf_any(service.getEntitySet("Categories"));
+          } else {
+          }
+      }
+      </code></pre> See Also: 
+<p><code><a href="getmetadata.html">DataService.metadata</a></code>.<code>entitySets</code>, for looking up entity sets that might not exist.</p>
+ 
+<h3>Parameters</h3>
+<p><a name="name"></a>
+<code>name</code> - <span class="identifier">String</span><span class="symbol">:</span> Name of the entity set to be returned.</p>
+<p><strong>Return</strong><br/>
+<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">:</span> The entity set, which must exist.</p>
+</BODY>
+</HTML>

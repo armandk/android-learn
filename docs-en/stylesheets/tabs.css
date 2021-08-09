@@ -1,0 +1,8 @@
+/* Theme customization */
+
+@media only screen and (min-width: 76.25em) {
+    [data-md-color-primary=black] .md-tabs {
+        color: #000 !important;
+        background-color: #fff !important;
+    }
+}

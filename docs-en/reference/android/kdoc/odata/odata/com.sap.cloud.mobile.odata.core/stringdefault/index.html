@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StringDefault - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">StringDefault</a><br/>
+<br/>
+<h1>StringDefault</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">StringDefault</span></code>
+<p>Static functions to apply default values of type <code>string</code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">StringDefault</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Static functions to apply default values of type <code>string</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="emptyifnull.html">emptyIfNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">emptyIfNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringDefault$emptyIfNull(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> if it is not <code>null</code>, otherwise return empty string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ifempty.html">ifEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ifEmpty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringDefault$ifEmpty(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringDefault$ifEmpty(kotlin.String, kotlin.String)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> if it is not <code>null</code> or empty, otherwise return <code>defaultValue</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ifnull.html">ifNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ifNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringDefault$ifNull(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringDefault$ifNull(kotlin.String, kotlin.String)/defaultValue">defaultValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> if it is not <code>null</code>, otherwise return <code>defaultValue</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nullifempty.html">nullIfEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">nullIfEmpty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringDefault$nullIfEmpty(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>null</code> if <code>value</code> is <code>null</code> or empty, otherwise return <code>value</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

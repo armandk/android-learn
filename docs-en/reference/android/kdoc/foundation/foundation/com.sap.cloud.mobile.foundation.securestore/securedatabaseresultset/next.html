@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecureDatabaseResultSet.next - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.securestore</a>&nbsp;/&nbsp;<a href="index.html">SecureDatabaseResultSet</a>&nbsp;/&nbsp;<a href="./next.html">next</a><br/>
+<br/>
+<h1>next</h1>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseResultSet$next()"></a>
+<code><span class="keyword">fun </span><span class="identifier">next</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Moves to the next row in the result set. If this method returns <code>true</code> (a valid row), then you can proceed with call(s) to one of the <code>get</code> methods based on the table column type. </p>
+<p>Note that if any <code>get</code> method is still called after this method returns <code>false</code>, <code>net.sqlcipher.CursorIndexOutOfBoundsException</code> will be thrown from the <code>get</code> method.</p>
+<h3>Exceptions</h3>
+<p><a name="FileClosedException"></a>
+<code>FileClosedException</code> - if the result set has been closed.</p>
+<p><a name="BackingStoreException"></a>
+<code>BackingStoreException</code> - if error occurs when retrieving the next row.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> <code>True</code> if pointing to a valid row, <code>false</code> otherwise.</p>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseResultSet$next()"></a>
+<code><span class="keyword">fun </span><span class="identifier">next</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Moves to the next row in the result set. If this method returns <code>true</code> (a valid row), then you can proceed with call(s) to one of the <code>get</code> methods based on the table column type. </p>
+<p>Note that if any <code>get</code> method is still called after this method returns <code>false</code>, <code>net.sqlcipher.CursorIndexOutOfBoundsException</code> will be thrown from the <code>get</code> method.</p>
+<h3>Exceptions</h3>
+<p><a name="FileClosedException"></a>
+<code>FileClosedException</code> - if the result set has been closed.</p>
+<p><a name="BackingStoreException"></a>
+<code>BackingStoreException</code> - if error occurs when retrieving the next row.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> <code>True</code> if pointing to a valid row, <code>false</code> otherwise.</p>
+</BODY>
+</HTML>

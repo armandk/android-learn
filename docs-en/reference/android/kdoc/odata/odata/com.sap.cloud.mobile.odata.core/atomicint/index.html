@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AtomicInt - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">AtomicInt</a><br/>
+<br/>
+<h1>AtomicInt</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AtomicInt</span></code>
+<p>An atomic (thread-safe, mutable) <code>ValueType</code> value.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AtomicInt</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>An atomic (thread-safe, mutable) <code>ValueType</code> value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.AtomicInt$add(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Increment the value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="compareandset.html">compareAndSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">compareAndSet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.AtomicInt$compareAndSet(kotlin.Int, kotlin.Int)/expect">expect</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.AtomicInt$compareAndSet(kotlin.Int, kotlin.Int)/update">update</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Change the current value if it matches an expected value. Otherwise leave the value unchanged.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the current value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getandset.html">getAndSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAndSet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.AtomicInt$getAndSet(kotlin.Int)/newValue">newValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Get and set the current value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.AtomicInt$set(kotlin.Int)/newValue">newValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the current value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

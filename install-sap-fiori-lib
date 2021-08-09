@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+get_maven_local()
+{
+    local_repository="$HOME/.m2/repository"
+    if [ ! -d $local_repository ]; then
+        mkdir "$HOME/.m2/"
+        mkdir "$local_repository"
+    fi
+    echo $local_repository
+}
+
+get_script_path()
+{
+    echo $(cd "$(dirname "$0")"; pwd)
+}
+
+maven_local_install()
+{
+    echo "Installing SDK to Maven Local..."
+    maven_local=$(get_maven_local)
+    echo "Copying libraries into $maven_local"
+    rsync --recursive --ignore-times "$(get_script_path)/sap-fiori-m2/" $maven_local
+    echo "Copied libraries successfully"
+}
+
+# Install libraries into Maven Local
+maven_local_install

@@ -1,0 +1,341 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StreamLink - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">StreamLink</a><br/>
+<br/>
+<h1>StreamLink</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StreamLink</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents a link to the value of a media entity resource or a stream-typed property.</p>
+ See Also: 
+<p><code><a href="../entitytype/ismedia.html">EntityType.isMedia</a></code>, <code><a href="../property/isstream.html">Property.isStream</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">StreamLink</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents a link to the value of a media entity resource or a stream-typed property.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/undefined.html">undefined</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">undefined</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="copylink.html">copyLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">StreamLink</span></a></code>
+<p>Return a copy of this stream link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$equal(com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.StreamLink)/a">a</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">StreamLink</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$equal(com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.StreamLink)/b">b</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">StreamLink</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if two stream links have equal read/edit links.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return the type BasicType.STREAM_LINK.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geteditlink.html">getEditLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEditLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The edit link for this value, preferably relative to the service root URL. If a stream does not have an explicit edit link, then writers should use the <code><a href="getvaluepath.html">StreamLink.valuePath</a></code>, or if that is not set, then a canonical URL (refer to the OData specification).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentityset.html">getEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntitySet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Which entity set does this stream link belong to?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitytag.html">getEntityTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityTag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Server-generated entity tag for this entity. If non-null, it is used for conflict detection during <code>DataService.uploadMedia</code> and <code>DataService.uploadStream</code> calls.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinlinedata.html">getInlineData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInlineData</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code>
+<p>Return (nullable) Inline binary content if known, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinlinetext.html">getInlineText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInlineText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Inline string content if known, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmediatype.html">getMediaType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMediaType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Media type if known, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getowningtype.html">getOwningType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOwningType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../structuretype/index.html"><span class="identifier">StructureType</span></a></code>
+<p>Return which structure type does this stream link belong to?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getreadlink.html">getReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getReadLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The read link for this value, preferably relative to the service root URL. If a stream does not have an explicit read link, then readers should use the <code><a href="getvaluepath.html">StreamLink.valuePath</a></code>, or if that is not set, then a canonical URL (refer to the OData specification).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstreamproperty.html">getStreamProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStreamProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../streamproperty/index.html"><span class="identifier">StreamProperty</span></a></code>
+<p>Return which stream property does this stream link belong to?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettypecode.html">getTypeCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTypeCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data type code of the wrapped value, equivalent to <code>dataType.code</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvaluepath.html">getValuePath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValuePath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The canonical path of this value relative to the parent entity URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isdeleted.html">isDeleted</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isDeleted</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if the stream content has been (or is being) deleted, then <code>true</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isoffline.html">isOffline</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isOffline</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if the stream content is available offline, then <code>true</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeleted.html">setDeleted</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeleted</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setDeleted(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if the stream content has been (or is being) deleted, then <code>true</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="seteditlink.html">setEditLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEditLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setEditLink(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the edit link for this value, preferably relative to the service root URL. If a stream does not have an explicit edit link, then writers should use the <code><a href="getvaluepath.html">StreamLink.valuePath</a></code>, or if that is not set, then a canonical URL (refer to the OData specification).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentityset.html">setEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntitySet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setEntitySet(com.sap.cloud.mobile.odata.EntitySet)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set which entity set does this stream link belong to?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentitytag.html">setEntityTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntityTag</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setEntityTag(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set server-generated entity tag for this entity. If non-null, it is used for conflict detection during <code>DataService.uploadMedia</code> and <code>DataService.uploadStream</code> calls.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinlinedata.html">setInlineData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInlineData</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setInlineData(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set inline binary content if known, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinlinetext.html">setInlineText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInlineText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setInlineText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set inline string content if known, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmediatype.html">setMediaType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMediaType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setMediaType(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set media type if known, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setoffline.html">setOffline</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOffline</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setOffline(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if the stream content is available offline, then <code>true</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setowningtype.html">setOwningType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOwningType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setOwningType(com.sap.cloud.mobile.odata.StructureType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set which structure type does this stream link belong to?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setreadlink.html">setReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setReadLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setReadLink(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the read link for this value, preferably relative to the service root URL. If a stream does not have an explicit read link, then readers should use the <code><a href="getvaluepath.html">StreamLink.valuePath</a></code>, or if that is not set, then a canonical URL (refer to the OData specification).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstreamproperty.html">setStreamProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStreamProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setStreamProperty(com.sap.cloud.mobile.odata.StreamProperty)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../streamproperty/index.html"><span class="identifier">StreamProperty</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set which stream property does this stream link belong to?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setvaluepath.html">setValuePath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setValuePath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StreamLink$setValuePath(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the canonical path of this value relative to the parent entity URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="getdatatype.html">StreamLink.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/clonemutable.html">cloneMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cloneMutable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$cloneMutable(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A clone of <code>value</code> if it is mutable, or <code>value</code> if it is immutable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/equals.html">equals</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this object is equal to <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/hashcode.html">hashCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Hash this data value to a number.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

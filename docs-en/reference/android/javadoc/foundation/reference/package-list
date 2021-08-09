@@ -1,0 +1,14 @@
+com.sap.cloud.mobile.foundation.authentication
+com.sap.cloud.mobile.foundation.cache
+com.sap.cloud.mobile.foundation.clientresources
+com.sap.cloud.mobile.foundation.common
+com.sap.cloud.mobile.foundation.configurationprovider
+com.sap.cloud.mobile.foundation.logging
+com.sap.cloud.mobile.foundation.mobileservices
+com.sap.cloud.mobile.foundation.networking
+com.sap.cloud.mobile.foundation.remotenotification
+com.sap.cloud.mobile.foundation.securestore
+com.sap.cloud.mobile.foundation.settings
+com.sap.cloud.mobile.foundation.usage
+com.sap.cloud.mobile.foundation.user
+

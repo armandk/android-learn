@@ -1,0 +1,161 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Logger - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">Logger</a><br/>
+<br/>
+<h1>Logger</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">Logger</span></code>
+<p>Logger facade. API adapted from <a href="http://www.slf4j.org/api/org/slf4j/Logger.html">SLF4J Logger</a>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Logger</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Logger facade. API adapted from <a href="http://www.slf4j.org/api/org/slf4j/Logger.html">SLF4J Logger</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="debug.html">debug</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">debug</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$debug(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">debug</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$debug(kotlin.String, java.lang.RuntimeException)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$debug(kotlin.String, java.lang.RuntimeException)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See debug(String, RuntimeException, boolean).</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">debug</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$debug(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$debug(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$debug(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/dump">dump</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Log a message at DEBUG level.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="error.html">error</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">error</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$error(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">error</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$error(kotlin.String, java.lang.RuntimeException)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$error(kotlin.String, java.lang.RuntimeException)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See error(String, RuntimeException, boolean).</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">error</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$error(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$error(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$error(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/dump">dump</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Log a message at ERROR level.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return logger name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="info.html">info</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">info</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$info(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">info</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$info(kotlin.String, java.lang.RuntimeException)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$info(kotlin.String, java.lang.RuntimeException)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See info(String, RuntimeException, boolean).</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">info</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$info(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$info(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$info(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/dump">dump</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Log a message at INFO level.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isdebugenabled.html">isDebugEnabled</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isDebugEnabled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is DEBUG level logging enabled?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iserrorenabled.html">isErrorEnabled</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isErrorEnabled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is ERROR level logging enabled?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isinfoenabled.html">isInfoEnabled</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isInfoEnabled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is INFO level logging enabled?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="istraceenabled.html">isTraceEnabled</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isTraceEnabled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is TRACE level logging enabled?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iswarnenabled.html">isWarnEnabled</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isWarnEnabled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is WARN level logging enabled?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trace.html">trace</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">trace</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$trace(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">trace</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$trace(kotlin.String, java.lang.RuntimeException)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$trace(kotlin.String, java.lang.RuntimeException)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See trace(String, RuntimeException, boolean).</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">trace</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$trace(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$trace(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$trace(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/dump">dump</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Log a message at TRACE level.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="warn.html">warn</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">warn</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$warn(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">warn</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$warn(kotlin.String, java.lang.RuntimeException)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$warn(kotlin.String, java.lang.RuntimeException)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See warn(String, RuntimeException, boolean).</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">warn</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$warn(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$warn(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Logger$warn(kotlin.String, java.lang.RuntimeException, kotlin.Boolean)/dump">dump</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Log a message at WARN level.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../instancelogger/index.html">InstanceLogger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InstanceLogger</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Logger</span></a></code>
+<p>Wrap a logger to include an instance name in all log messages.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

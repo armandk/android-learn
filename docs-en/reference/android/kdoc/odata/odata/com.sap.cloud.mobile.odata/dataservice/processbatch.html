@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataService.processBatch - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataService</a>&nbsp;/&nbsp;<a href="./processbatch.html">processBatch</a><br/>
+<br/>
+<h1>processBatch</h1>
+<a name="com.sap.cloud.mobile.odata.DataService$processBatch(com.sap.cloud.mobile.odata.RequestBatch)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">processBatch</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$processBatch(com.sap.cloud.mobile.odata.RequestBatch)/batch">batch</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../requestbatch/index.html"><span class="identifier">RequestBatch</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See processBatch(RequestBatch, HttpHeaders, RequestOptions).</p>
+<h3>Parameters</h3>
+<p><a name="batch"></a>
+<code>batch</code> - <a href="../requestbatch/index.html"><span class="identifier">RequestBatch</span></a><span class="symbol">:</span> Batch parameter.</p>
+<a name="com.sap.cloud.mobile.odata.DataService$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">processBatch</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders)/batch">batch</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../requestbatch/index.html"><span class="identifier">RequestBatch</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See processBatch(RequestBatch, HttpHeaders, RequestOptions).</p>
+<h3>Parameters</h3>
+<p><a name="batch"></a>
+<code>batch</code> - <a href="../requestbatch/index.html"><span class="identifier">RequestBatch</span></a><span class="symbol">:</span> Batch parameter.</p>
+<p><a name="headers"></a>
+<code>headers</code> - <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">:</span> Headers parameter.</p>
+<a name="com.sap.cloud.mobile.odata.DataService$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">processBatch</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/batch">batch</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../requestbatch/index.html"><span class="identifier">RequestBatch</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Execute a request batch in the target system.</p>
+ See Also: 
+<p><code><a href="../requestbatch/index.html">com.sap.cloud.mobile.odata.RequestBatch</a></code>.</p>
+  Example using proxy classes:<pre><code>
+      public void processBatchExample() {
+          NorthwindService service = this.getService();
+          Supplier supplier1 = service.getSupplier(new DataQuery().top(1));
+          Supplier supplier2 = supplier1.copy();
+          Supplier supplier3 = supplier1.copy();
+          Supplier supplier4 = supplier1.copy();
+          supplier2.setCompanyName("Alpha Inc.");
+          supplier3.setCompanyName("Beta Inc.");
+          service.createEntity(supplier2);
+          service.createEntity(supplier3);
+          supplier3.setCompanyName("Gamma Inc.");
+          Product product1 = service.getProduct(new DataQuery().top(1));
+          Product product2 = product1.copy();
+          product2.setProductName("Delta Cake");
+          RequestBatch batch = new RequestBatch();
+          ChangeSet changes = new ChangeSet();
+          changes.createEntity(supplier4);
+          changes.updateEntity(supplier3);
+          changes.deleteEntity(supplier2);
+          changes.createEntity(product2);
+          changes.createLink(product2, Product.supplier, supplier4);
+          changes.updateLink(product2, Product.supplier, supplier3);
+          changes.deleteLink(product2, Product.supplier, supplier3);
+          DataQuery query = new DataQuery()
+              .from(NorthwindServiceMetadata.EntitySets.suppliers);
+          batch.addChanges(changes);
+          batch.addQuery(query);
+          service.processBatch(batch);
+          List&lt;Supplier&gt; suppliers = Supplier.list(batch.getQueryResult(query)
+              .getEntityList());
+          Example.show("There are now ", Example.formatInt(suppliers.size()),
+              " suppliers.");
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void processBatchExample() {
+          DataService service = this.getService();
+          EntitySet suppliersEntitySet = service.getEntitySet("Suppliers");
+          EntitySet productsEntitySet = service.getEntitySet("Products");
+          EntityType supplierEntityType = suppliersEntitySet.getEntityType();
+          Property companyNameProperty = supplierEntityType.getProperty("CompanyName");
+          EntityType productEntityType = productsEntitySet.getEntityType();
+          Property productNameProperty = productEntityType.getProperty("ProductName");
+          Property supplierProperty = productEntityType.getProperty("Supplier");
+          EntityValue supplier1 = service.executeQuery(new DataQuery()
+              .from(suppliersEntitySet).top(1))
+              .getRequiredEntity();
+          EntityValue supplier2 = supplier1.copyEntity();
+          EntityValue supplier3 = supplier1.copyEntity();
+          EntityValue supplier4 = supplier1.copyEntity();
+          companyNameProperty.setString(supplier2, "Alpha Inc.");
+          companyNameProperty.setString(supplier3, "Beta Inc.");
+          service.createEntity(supplier2);
+          service.createEntity(supplier3);
+          companyNameProperty.setString(supplier3, "Gamma Inc.");
+          EntityValue product1 = service.executeQuery(new DataQuery()
+              .from(productsEntitySet).top(1))
+              .getRequiredEntity();
+          EntityValue product2 = product1.copyEntity();
+          productNameProperty.setString(product2, "Delta Cake");
+          RequestBatch batch = new RequestBatch();
+          ChangeSet changes = new ChangeSet();
+          changes.createEntity(supplier4);
+          changes.updateEntity(supplier3);
+          changes.deleteEntity(supplier2);
+          changes.createEntity(product2);
+          changes.createLink(product2, supplierProperty, supplier4);
+          DataQuery query = new DataQuery().from(suppliersEntitySet);
+          batch.addChanges(changes);
+          batch.addQuery(query);
+          service.processBatch(batch);
+          EntityValueList suppliers = batch.getQueryResult(query).getEntityList();
+          Example.show("There are now ", Example.formatInt(suppliers.length()),
+              " suppliers.");
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="batch"></a>
+<code>batch</code> - <a href="../requestbatch/index.html"><span class="identifier">RequestBatch</span></a><span class="symbol">:</span> The request batch.</p>
+<p><a name="headers"></a>
+<code>headers</code> - <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">:</span> Optional request-specific headers.</p>
+<p><a name="options"></a>
+<code>options</code> - <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">:</span> Optional request-specific options.</p>
+</BODY>
+</HTML>

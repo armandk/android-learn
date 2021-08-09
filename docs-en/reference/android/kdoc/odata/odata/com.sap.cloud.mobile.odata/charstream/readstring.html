@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CharStream.readString - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">CharStream</a>&nbsp;/&nbsp;<a href="./readstring.html">readString</a><br/>
+<br/>
+<h1>readString</h1>
+<a name="com.sap.cloud.mobile.odata.CharStream$readString()"></a>
+<code><span class="identifier">@Nullable</span> <span class="identifier">@Nullable</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@Nullable</span> <span class="identifier">String</span><span class="symbol">?</span></code>
+<p>See readString(int).</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> (see linked method).</p>
+<a name="com.sap.cloud.mobile.odata.CharStream$readString(kotlin.Int)"></a>
+<code><span class="identifier">@Nullable</span> <span class="identifier">@Nullable</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$readString(kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@Nullable</span> <span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Read up to <code>length</code> characters from this stream (may read less, even if the end of stream is not reached).</p>
+<h3>Parameters</h3>
+<p><a name="length"></a>
+<code>length</code> - <span class="identifier">Int</span><span class="symbol">:</span> Maximum number of characters to read (must be greater than zero). Defaults to 20,000.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> (nullable) String value with at most <code>length</code> characters, or <code>null</code> if there is no remaining text in the stream.</p>
+</BODY>
+</HTML>

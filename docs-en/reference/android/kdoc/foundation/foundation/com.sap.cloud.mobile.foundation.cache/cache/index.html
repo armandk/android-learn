@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Cache - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="./index.html">Cache</a><br/>
+<br/>
+<h1>Cache</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.Cache"></a>
+<code><span class="keyword">interface </span><span class="identifier">Cache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.cache.Cache"></a>
+<code><span class="keyword">interface </span><span class="identifier">Cache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>In general, a cache is a key/value store that has a maximum storage capacity and exposes methods to support <strong>CRUD</strong> operations to provide temporary storage which maintains a single copy of items that are expensive to create or load, for example via remote network calls. </p>
+<p>Because the cache has limited storage capacity, any new item added to a full cache requires an item be removed first. The <em>Cache Replacement Policy</em> of the cache implementation specifies which item to remove. </p>
+<p>Each entry in the cache contains a <strong>key</strong> and its associated <strong>value</strong> using <strong><em>generics</em></strong>. In addition, a cost value may be specified. <strong>Cost</strong> is an arbitrary value (can be the size factor of the value, for example). How the cost is handled is implementation dependent. </p>
+<p>The <code>Cache</code> interface declares the basic <strong>CRUD</strong> operations an implementation must support. A typical <code>Cache implementation</code> usually follows similar usage patterns/stages: </p>
+<ol> <li><strong>Creation</strong>-- provides constructor(s) to create an instance of the cache.</li>
+ <li><strong>Configuration</strong>-- configures features/options and enables the CRUD operations.</li>
+ <li><strong>CRUD operations</strong>:</li>
+ <ul> <li><code>V put(K key, V value)</code></li>
+ <li><code>V get(K key), CacheEntry getEntry(K key), int getEntryCount(), List keys()</code> </li>
+ <li><code>void remove(K key), void removeAll()</code></li>
+ </ul>
+ </ol>
+ 
+<p>The <code>Creation</code> and <code>Configuration</code> methods are implementation dependent, the CRUD operations are common but may have additional implementation specific semantics.</p>
+</BODY>
+</HTML>

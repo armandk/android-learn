@@ -1,0 +1,590 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ComplexValueList - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ComplexValueList</a><br/>
+<br/>
+<h1>ComplexValueList</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ComplexValueList</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>See ComplexValueList(int).</p>
+<code><span class="identifier">ComplexValueList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new list with <code><a href="../listbase/length.html">ComplexValueList.length</a></code> of zero and optional initial <code>capacity</code>. A list can expand in length beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the list's maximum length.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$add(com.sap.cloud.mobile.odata.ComplexValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add <code>item</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addall.html">addAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$addAll(com.sap.cloud.mobile.odata.ComplexValueList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add all the items of <code>list</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addnullable.html">addNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$addNullable(com.sap.cloud.mobile.odata.ComplexValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Append <code>item</code> to the end of this list. It is unusual for a <code><a href="./index.html">com.sap.cloud.mobile.odata.ComplexValueList</a></code> to contain <code>null</code> items, so <code><a href="add.html">ComplexValueList.add</a></code> is usually used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addthis.html">addThis</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addThis</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$addThis(com.sap.cloud.mobile.odata.ComplexValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Add <code>item</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="applypagesize.html">applyPageSize</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">applyPageSize</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$applyPageSize(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a new list with at most <code>query.pageSize</code> initial items of this list. The result's <code><a href="#">ComplexValueList.needsNextLink</a></code> will be <code>true</code> if the original list length exceeded the page size.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="castrequired.html">castRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castRequired</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$castRequired(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a <a href="https://en.wikipedia.org/wiki/Object_copying#Shallow_copy">shallow copy</a> of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$equal(com.sap.cloud.mobile.odata.ComplexValueList, com.sap.cloud.mobile.odata.ComplexValueList)/a">a</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$equal(com.sap.cloud.mobile.odata.ComplexValueList, com.sap.cloud.mobile.odata.ComplexValueList)/b">b</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if two complex lists have equal items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filterandsort.html">filterAndSort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">filterAndSort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$filterAndSort(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a new list with the items of this list, filtered by <code>query.queryFilter</code> and sorted by <code>query.sortItems</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filterwithquery.html">filterWithQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">filterWithQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$filterWithQuery(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a new list with the items of this list, filtered by <code>query.queryFilter</code>, <code>query.derivedType</code> (whichever of those is specified, if any).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="first.html">first</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">first</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a></code>
+<p>Return the first item in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="from.html">from</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">from</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$from(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ComplexValue)))/list">list</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="fromnullable.html">fromNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$fromNullable(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ComplexValue)))/list">list</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$get(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a></code>
+<p>Return the item in this list at the specified <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return the data type for this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnextlink.html">getNextLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNextLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) An optional link that can be followed (by the caller) to fetch additional list items. If this complex list was produced via server-driven paging, then the server may have provided a next-link which can be followed to obtain more items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnullable.html">getNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$getNullable(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The item in this list at the specified <code>index</code>, which may be <code>null</code>. It is unusual for a <code><a href="./index.html">com.sap.cloud.mobile.odata.ComplexValueList</a></code> to contain <code>null</code> items, so <code><a href="get.html">ComplexValueList.get</a></code> is usually used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getreadlink.html">getReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getReadLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) An optional link that can be followed (by the caller) to re-read this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettotalcount.html">getTotalCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTotalCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code>
+<p>Return (nullable) Total number of items available in the server-side list, which may be greater than <code><a href="../listbase/length.html">ComplexValueList.length</a></code> if the client requested an inline <code><a href="../dataquery/count.html">DataQuery.count</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="includes.html">includes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">includes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$includes(com.sap.cloud.mobile.odata.ComplexValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list contains <code>item</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="indexof.html">indexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$indexOf(com.sap.cloud.mobile.odata.ComplexValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See indexOf(ComplexValue, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$indexOf(com.sap.cloud.mobile.odata.ComplexValue, kotlin.Int)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$indexOf(com.sap.cloud.mobile.odata.ComplexValue, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return first index in this list of <code>item</code>, or <code>-1</code> if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insertall.html">insertAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">insertAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$insertAll(kotlin.Int, com.sap.cloud.mobile.odata.ComplexValueList)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$insertAll(kotlin.Int, com.sap.cloud.mobile.odata.ComplexValueList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Insert all items of <code>list</code> into this list, before the item (if any) at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insertat.html">insertAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">insertAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$insertAt(kotlin.Int, com.sap.cloud.mobile.odata.ComplexValue)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$insertAt(kotlin.Int, com.sap.cloud.mobile.odata.ComplexValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Insert <code>item</code> into this list, before the item (if any) at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isreference.html">isReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isReference</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list is a referece. If <code>true</code>, the <code><a href="getreadlink.html">ComplexValueList.readLink</a></code> will be non-null, and this list will be empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iterator.html">iterator</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">iterator</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableIterator</span><span class="symbol">&lt;</span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="last.html">last</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">last</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a></code>
+<p>Return the last item in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lastindexof.html">lastIndexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$lastIndexOf(com.sap.cloud.mobile.odata.ComplexValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See lastIndexOf(ComplexValue, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$lastIndexOf(com.sap.cloud.mobile.odata.ComplexValue, kotlin.Int)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$lastIndexOf(com.sap.cloud.mobile.odata.ComplexValue, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return last index in this list of <code>item</code>, or <code>-1</code> if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$set(kotlin.Int, com.sap.cloud.mobile.odata.ComplexValue)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$set(kotlin.Int, com.sap.cloud.mobile.odata.ComplexValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the item in this list at the specified <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnextlink.html">setNextLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNextLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$setNextLink(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set an optional link that can be followed (by the caller) to fetch additional list items. If this complex list was produced via server-driven paging, then the server may have provided a next-link which can be followed to obtain more items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnullable.html">setNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$setNullable(kotlin.Int, com.sap.cloud.mobile.odata.ComplexValue)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$setNullable(kotlin.Int, com.sap.cloud.mobile.odata.ComplexValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the item in this list at the specified <code>index</code>. It is unusual for a <code><a href="./index.html">com.sap.cloud.mobile.odata.ComplexValueList</a></code> to contain <code>null</code> items, so <code><a href="set.html">ComplexValueList.set</a></code> is usually used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setreadlink.html">setReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setReadLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$setReadLink(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set an optional link that can be followed (by the caller) to re-read this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setreference.html">setReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$setReference(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this list is a referece. If <code>true</code>, the <code><a href="getreadlink.html">ComplexValueList.readLink</a></code> will be non-null, and this list will be empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settotalcount.html">setTotalCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTotalCount</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$setTotalCount(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set total number of items available in the server-side list, which may be greater than <code><a href="../listbase/length.html">ComplexValueList.length</a></code> if the client requested an inline <code><a href="../dataquery/count.html">DataQuery.count</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="share.html">share</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">share</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$share(com.sap.cloud.mobile.odata.ListBase)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a new <code><a href="./index.html">com.sap.cloud.mobile.odata.ComplexValueList</a></code> that shares the <code><a href="../listbase/getuntypedlist.html">ListBase.untypedList</a></code> as the <code>list</code> parameter. To ensure type safety, items in <code>list</code> that do not have the item type <code><a href="../complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code> will be removed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sharenullable.html">shareNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">shareNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$shareNullable(com.sap.cloud.mobile.odata.ListBase)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a new ComplexValueList that shares the <code><a href="../listbase/getuntypedlist.html">ListBase.untypedList</a></code> as the <code>list</code> parameter, including nulls. To ensure type safety, items in <code>list</code> that do not have the item type will be removed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="single.html">single</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">single</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a></code>
+<p>Return a single item from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="skipandtop.html">skipAndTop</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">skipAndTop</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$skipAndTop(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a new list with at most <code>query.topCount</code> items of this list, starting at index <code>query.skipCount</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slice.html">slice</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$slice(kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>See slice(int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$slice(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$slice(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a slice of this list from index <code>start</code> (inclusive) to index <code>end</code> (exclusive).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortwithquery.html">sortWithQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortWithQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$sortWithQuery(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort this list in-place, using <code>query.sortItems</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="togeneric.html">toGeneric</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toGeneric</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="withitemtype.html">withItemType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withItemType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$withItemType(com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Override the type of this list, and return this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withnulls.html">withNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withNulls</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvaluelistwithnulls/index.html"><span class="identifier">ComplexValueListWithNulls</span></a></code>
+<p>Return an iterator of this list which uses a nullable item type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withtype.html">withType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$withType(com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Override the type of this list, and return this list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../listbase/clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/getcomparer.html">getComparer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComparer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a></code>
+<p>Return an ordering function for the item type of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/getequality.html">getEquality</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEquality</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/equality/index.html"><span class="identifier">Equality</span></a></code>
+<p>Return an equality function for the item type of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/getuntypedlist.html">getUntypedList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUntypedList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/untypedlist/index.html"><span class="identifier">UntypedList</span></a></code>
+<p>Return the underlying untyped list. Use with care, avoiding the addition of objects with an incorrect item type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list contains no items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/length.html">length</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">length</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/removeat.html">removeAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$removeAt(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove an item from the specified index in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/removefirst.html">removeFirst</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeFirst</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove the first item (if any) from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/removelast.html">removeLast</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeLast</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove the last item (if any) from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/removerange.html">removeRange</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$removeRange(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$removeRange(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove a range of items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/reverse.html">reverse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reverse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reverse the order of the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/sharewith.html">shareWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">shareWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$shareWith(com.sap.cloud.mobile.odata.ListBase, kotlin.Boolean)/other">other</span><span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$shareWith(com.sap.cloud.mobile.odata.ListBase, kotlin.Boolean)/replace">replace</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/sort.html">sort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort the items in this list, using the <code><a href="../listbase/getcomparer.html">ListBase.comparer</a></code> property for ordering.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/sortwith.html">sortWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$sortWith(com.sap.cloud.mobile.odata.core.Comparer)/comparer">comparer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/todynamic.html">toDynamic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toDynamic</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) a dynamic representation of this list (<code><a href="../datavaluelist/index.html">com.sap.cloud.mobile.odata.DataValueList</a></code>, <code><a href="./index.html">com.sap.cloud.mobile.odata.ComplexValueList</a></code>, or <code><a href="../entityvaluelist/index.html">com.sap.cloud.mobile.odata.EntityValueList</a></code>), or <code>null</code> if there is no dynamic representation available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string representation of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$validate(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Base function for validating the item's value before adding it to the list. Validate is needed in some ListBase types, for exampe in the case of ByteList, where a value out of the ByteValue type's valid range can be added, because ByteList accepts Int instead of Byte. With a proper overwrite of this function in the given BaseList class ensures, that only a valid value Int (-128 - +127 in this case) can be added to the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

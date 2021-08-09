@@ -1,0 +1,11 @@
+com.sap.cloud.mobile.fiori.maps.edit.google
+com.sap.cloud.mobile.fiori.maps.google
+com.sap.cloud.mobile.fiori.maps.google.clustering
+com.sap.cloud.mobile.fiori.maps.google.clustering.algo
+com.sap.cloud.mobile.fiori.maps.google.clustering.geometry
+com.sap.cloud.mobile.fiori.maps.google.clustering.projection
+com.sap.cloud.mobile.fiori.maps.google.clustering.quadtree
+com.sap.cloud.mobile.fiori.maps.google.clustering.ui
+com.sap.cloud.mobile.fiori.maps.google.clustering.view
+com.sap.cloud.mobile.fiori.maps.search.google
+

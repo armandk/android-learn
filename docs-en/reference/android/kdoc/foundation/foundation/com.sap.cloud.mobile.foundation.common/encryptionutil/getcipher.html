@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EncryptionUtil.getCipher - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">EncryptionUtil</a>&nbsp;/&nbsp;<a href="./getcipher.html">getCipher</a><br/>
+<br/>
+<h1>getCipher</h1>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getCipher(kotlin.String)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getCipher</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getCipher(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Cipher</span></code>
+<p>Obtains a cipher object for Android <code>FingerprintManager</code> to derive a crypto object for authentication, then passes back to one of the methods-- <code><a href="enablebiometric.html">#enableBiometric(String, char[], Cipher)</a></code>, <code><a href="getencryptionkey.html">#getEncryptionKey(String, Cipher)</a></code>, or <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[], Cipher)</a></code>. Those methods will fail if the input cipher is not obtained via this method.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If Android Key Store or system error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Cipher</span><span class="symbol">:</span> A cipher object for Android <code>FingerprintManager</code> to derive a crypto object during biometric authentication.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getCipher(kotlin.String)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getCipher</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getCipher(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Cipher</span></code>
+<p>Obtains a cipher object for Android <code>FingerprintManager</code> to derive a crypto object for authentication, then passes back to one of the methods-- <code><a href="enablebiometric.html">#enableBiometric(String, char[], Cipher)</a></code>, <code><a href="getencryptionkey.html">#getEncryptionKey(String, Cipher)</a></code>, or <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[], Cipher)</a></code>. Those methods will fail if the input cipher is not obtained via this method.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<h3>Exceptions</h3>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If Android Key Store or system error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Cipher</span><span class="symbol">:</span> A cipher object for Android <code>FingerprintManager</code> to derive a crypto object during biometric authentication.</p>
+</BODY>
+</HTML>

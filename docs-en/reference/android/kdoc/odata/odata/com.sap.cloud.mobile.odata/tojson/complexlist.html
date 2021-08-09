@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ToJSON.complexList - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">ToJSON</a>&nbsp;/&nbsp;<a href="./complexlist.html">complexList</a><br/>
+<br/>
+<h1>complexList</h1>
+<a name="com.sap.cloud.mobile.odata.ToJSON$complexList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.complexList.C)))"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">C</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">complexList</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.complexList.C)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">@NotNull</span> <a href="complexlist.html#C"><span class="identifier">C</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier">String</span></code>
+<p>Format a generic complex list as a JSON string.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="complexlist.html#C"><span class="identifier">C</span></a><span class="symbol">&gt;</span><span class="symbol">:</span> Complex list.</p>
+<p><a name="&lt;C&gt;"></a>
+<code><C></code> - Complex value subclass (e.g. proxy class).</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">:</span> JSON string.</p>
+<a name="com.sap.cloud.mobile.odata.ToJSON$complexList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.complexList.C)), kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">C</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">complexList</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.complexList.C)), kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">@NotNull</span> <a href="complexlist.html#C"><span class="identifier">C</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.complexList.C)), kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier">String</span></code>
+<p>Format a generic complex list as a JSON string.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="complexlist.html#C"><span class="identifier">C</span></a><span class="symbol">&gt;</span><span class="symbol">:</span> Complex list.</p>
+<p><a name="options"></a>
+<code>options</code> - <span class="identifier">Int</span><span class="symbol">:</span> Additional bind options.</p>
+<p><a name="&lt;C&gt;"></a>
+<code><C></code> - Complex value subclass (e.g. proxy class).</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">:</span> JSON string.</p>
+<a name="com.sap.cloud.mobile.odata.ToJSON$complexList(com.sap.cloud.mobile.odata.ComplexValueList)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">complexList</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(com.sap.cloud.mobile.odata.ComplexValueList)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <span class="identifier">String</span></code>
+<p>See complexList(ComplexValueList, int).</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">:</span> Value parameter.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">:</span> (see linked method).</p>
+<a name="com.sap.cloud.mobile.odata.ToJSON$complexList(com.sap.cloud.mobile.odata.ComplexValueList, kotlin.Int)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">complexList</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(com.sap.cloud.mobile.odata.ComplexValueList, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(com.sap.cloud.mobile.odata.ComplexValueList, kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <span class="identifier">String</span></code>
+<p>Format a complex list as a JSON string, including structural and navigation properties.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">:</span> Complex list.</p>
+<p><a name="options"></a>
+<code>options</code> - <span class="identifier">Int</span><span class="symbol">:</span> Additional bind options. See <code><a href="../datacontext/index.html">com.sap.cloud.mobile.odata.DataContext</a></code> constants.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">:</span> JSON string.</p>
+</BODY>
+</HTML>

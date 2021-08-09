@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntityValue.takeSnapshot - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">EntityValue</a>&nbsp;/&nbsp;<a href="./takesnapshot.html">takeSnapshot</a><br/>
+<br/>
+<h1>takeSnapshot</h1>
+<a name="com.sap.cloud.mobile.odata.EntityValue$takeSnapshot()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">takeSnapshot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See takeSnapshot(boolean).</p>
+<a name="com.sap.cloud.mobile.odata.EntityValue$takeSnapshot(kotlin.Boolean)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">takeSnapshot</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$takeSnapshot(kotlin.Boolean)/canDefer">canDefer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remember a snapshot of the values of structural/dynamic properties of this entity in <code><a href="getoldentity.html">EntityValue.oldEntity</a></code>. Snapshots are used to detect which properties have changed when an update is to be issued.</p>
+ See Also: 
+<p><code><a href="../datatype/ismutable.html">DataType.isMutable</a></code>.</p>
+ 
+<h3>Parameters</h3>
+<p><a name="canDefer"></a>
+<code>canDefer</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> Can the snapshot be deferred? This can improve query performance if queried entities are not subsequently updated. Defaults to `false`. Should only be `true` if all selected properties are immutable.</p>
+</BODY>
+</HTML>

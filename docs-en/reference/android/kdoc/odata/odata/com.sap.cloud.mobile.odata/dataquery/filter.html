@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.filter - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./filter.html">filter</a><br/>
+<br/>
+<h1>filter</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$filter(com.sap.cloud.mobile.odata.QueryFilter)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">filter</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$filter(com.sap.cloud.mobile.odata.QueryFilter)/test">test</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Modify <code><a href="getqueryfilter.html">DataQuery.queryFilter</a></code> to be and'ed with <code>test</code> (or set to <code>test</code> if <code><a href="getqueryfilter.html">DataQuery.queryFilter</a></code> was <code>null</code>).</p>
+ See Also: 
+<p><code><a href="../queryfilter/index.html">com.sap.cloud.mobile.odata.QueryFilter</a></code>, <code><a href="../queryfunction/index.html">com.sap.cloud.mobile.odata.QueryFunction</a></code>, <code><a href="../queryoperator/index.html">com.sap.cloud.mobile.odata.QueryOperator</a></code>, <code><a href="../queryvalue/index.html">com.sap.cloud.mobile.odata.QueryValue</a></code>.</p>
+  Example using proxy classes:<pre><code>
+      public void queryWithFilterExample() {
+          NorthwindService service = this.getService();
+          DataQuery query = new DataQuery()
+              .select(Customer.customerID, Customer.companyName, Customer.contactName)
+              .filter(Customer.country.equal("Germany")
+                  .and(Customer.contactName.greaterEqual("N")));
+          List&lt;Customer&gt; customers = service.getCustomers(query);
+          this.showCustomers(customers);
+      }
+      </code></pre> Example using proxy classes:<pre><code>
+      public void filterByDateExample() {
+          NorthwindService service = this.getService();
+          GlobalDateTime oneWeekAgo = GlobalDateTime.now().plusDays(-7);
+          DataQuery query = new DataQuery()
+              .filter(Order.orderDate.greaterThan(oneWeekAgo));
+          List&lt;Order&gt; orders = service.getOrders(query);
+          this.showOrders(orders);
+      }
+      </code></pre> Example using proxy classes:<pre><code>
+      public void filterByEnumExample() {
+          TrippinService service = this.getService();
+          DataQuery query = new DataQuery()
+              .filter(TrippinPerson.gender.equal(TrippinServiceMetadata.EnumValues.TrippinPersonGender.female));
+          // Alternate syntax using convenience enumValue:
+          // DataQuery query = new DataQuery().filter(TrippinPerson.gender.equal(TrippinPersonGender.FEMALE.enumValue()))
+          List&lt;TrippinPerson&gt; people = service.getPeople(query);
+          this.showPeople(people);
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void queryWithFilterExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          EntityType customerEntityType = customersEntitySet.getEntityType();
+          Property customerIDProperty = customerEntityType.getProperty("CustomerID");
+          Property companyNameProperty = customerEntityType.getProperty("CompanyName");
+          Property contactNameProperty = customerEntityType.getProperty("ContactName");
+          Property countryProperty = customerEntityType.getProperty("Country");
+          DataQuery query = new DataQuery()
+              .select(customerIDProperty, companyNameProperty, contactNameProperty)
+              .from(customersEntitySet)
+              .filter(countryProperty.equal("Germany")
+                  .and(contactNameProperty.greaterEqual("N")));
+          EntityValueList customers = service.executeQuery(query).getEntityList();
+          this.showCustomers(customers);
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void filterByDateExample() {
+          DataService service = this.getService();
+          EntitySet ordersEntitySet = service.getEntitySet("Orders");
+          EntityType orderEntityType = ordersEntitySet.getEntityType();
+          Property orderDateProperty = orderEntityType.getProperty("OrderDate");
+          GlobalDateTime oneWeekAgo = GlobalDateTime.now().plusDays(-7);
+          DataQuery query = new DataQuery().from(ordersEntitySet)
+              .filter(orderDateProperty.greaterThan(oneWeekAgo));
+          EntityValueList orders = service.executeQuery(query).getEntityList();
+          this.showOrders(orders);
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void filterByEnumExample() {
+          DataService service = this.getService();
+          EntitySet peopleEntitySet = service.getEntitySet("People");
+          EntityType personEntityType = peopleEntitySet.getEntityType();
+          Property genderProperty = personEntityType.getProperty("Gender");
+          EnumType genderEnumType = service.getMetadata()
+              .getEnumType("Microsoft.OData.Service.Sample.TrippinInMemory.Models.PersonGender");
+          EnumValue female = genderEnumType.getMember("Female");
+          DataQuery query = new DataQuery().from(peopleEntitySet)
+              .filter(genderProperty.equal(female));
+          EntityValueList people = service.executeQuery(query).getEntityList();
+          this.showPeople(people);
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="test"></a>
+<code>test</code> - <a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">:</span> The query filter.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

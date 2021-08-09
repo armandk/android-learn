@@ -1,0 +1,343 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntitySet - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">EntitySet</a><br/>
+<br/>
+<h1>EntitySet</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntitySet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../bindingpath.html"><span class="identifier">BindingPath</span></a></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> entity set. Also used for OData <code><a href="issingleton.html">EntitySet.isSingleton</a></code> entities.</p>
+ See Also: 
+<p><code>DataService.createEntity</code>, <code>DataService.updateEntity</code>, <code>DataService.deleteEntity</code>, <code>DataService.getEntity</code>, <code>DataService.getEntityList</code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">EntitySet</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> entity set. Also used for OData <code><a href="issingleton.html">EntitySet.isSingleton</a></code> entities.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="undefined.html">undefined</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">undefined</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntitySet</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getannotation.html">getAnnotation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotation</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$getAnnotation(kotlin.String)/term">term</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotation/index.html"><span class="identifier">Annotation</span></a></code>
+<p>Lookup an existing annotation by term name, or throw an exception if the annotation is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationlist.html">getAnnotationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationlist/index.html"><span class="identifier">AnnotationList</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">EntitySet.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationmap.html">getAnnotationMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">EntitySet.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotations.html">getAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return map of annotations for this model element. For annotations without qualifiers, the entry key is the annotation term name. For annotations with qualifiers, the entry key is the annotation term name, then "#", then the annotation qualifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getbinding.html">getBinding</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBinding</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$getBinding(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntitySet</span></a></code>
+<p>Lookup an existing navigation property binding by name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcanberemoved.html">getCanBeRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCanBeRemoved</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return can this model element be removed by <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Set this to <code>true</code> to indicate that the application is coded to be able able to function correctly without this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdefaultselect.html">getDefaultSelect</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDefaultSelect</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../selectitemlist/index.html"><span class="identifier">SelectItemList</span></a></code>
+<p>Return list of default selection items for this entity set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitytype.html">getEntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitytype/index.html"><span class="identifier">EntityType</span></a></code>
+<p>Return entity type for entities in this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlocalname.html">getLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the local name of this set within its owning <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code>, e.g. "MyEntitySet".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmetrics.html">getMetrics</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMetrics</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitysetmetrics/index.html"><span class="identifier">EntitySetMetrics</span></a></code>
+<p>Return metrics for runtime use of this entity set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return synonym for <code><a href="getqualifiedname.html">EntitySet.qualifiedName</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpathbindings.html">getPathBindings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPathBindings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitysetmap/index.html"><span class="identifier">EntitySetMap</span></a></code>
+<p>Return map of bindings from navigation properties to entity sets.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getqualifiedname.html">getQualifiedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQualifiedName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this set qualified by its owning <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code> name, e.g. "MyContainer.MyEntitySet". The Entity container prefix is omitted for the "default" entity container in the outermost schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresourcepath.html">getResourcePath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResourcePath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this set as it should be referenced in resource paths (e.g. localName for OData V4, qualifiedName for OData V2).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsourceline.html">getSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceLine</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsystemflags.html">getSystemFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSystemFlags</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettargetpath.html">getTargetPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTargetPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this set qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> and <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code> names, e.g. "MySchema.MyContainer/MyEntitySet".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isextension.html">isExtension</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isExtension</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this set was added since metadata was originally loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isremoved.html">isRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isRemoved</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return has this model element been removed by a successful call to <code>DataService.refreshMetadata</code>? If `isRemoved == true, that implies that the old metadata (before refreshMetadata was called) did include this model element, and that the new metadata (after refreshMetadata was called) does not include this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="issingleton.html">isSingleton</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isSingleton</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does this entity set represent an OData singleton entity?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcanberemoved.html">setCanBeRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCanBeRemoved</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setCanBeRemoved(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set can this model element be removed by <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Set this to <code>true</code> to indicate that the application is coded to be able able to function correctly without this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentitytype.html">setEntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntityType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setEntityType(com.sap.cloud.mobile.odata.EntityType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set entity type for entities in this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setextension.html">setExtension</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExtension</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setExtension(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this set was added since metadata was originally loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlocalname.html">setLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLocalName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setLocalName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the local name of this set within its owning <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code>, e.g. "MyEntitySet".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setqualifiedname.html">setQualifiedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setQualifiedName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setQualifiedName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the name of this set qualified by its owning <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code> name, e.g. "MyContainer.MyEntitySet". The Entity container prefix is omitted for the "default" entity container in the outermost schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setremoved.html">setRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRemoved</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setRemoved(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set has this model element been removed by a successful call to <code>DataService.refreshMetadata</code>? If `isRemoved == true, that implies that the old metadata (before refreshMetadata was called) did include this model element, and that the new metadata (after refreshMetadata was called) does not include this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresourcepath.html">setResourcePath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResourcePath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setResourcePath(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the name of this set as it should be referenced in resource paths (e.g. localName for OData V4, qualifiedName for OData V2).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsingleton.html">setSingleton</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSingleton</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setSingleton(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does this entity set represent an OData singleton entity?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsourceline.html">setSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceLine</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setSourceLine(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsystemflags.html">setSystemFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSystemFlags</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setSystemFlags(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settargetpath.html">setTargetPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTargetPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$setTargetPath(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the name of this set qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> and <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code> names, e.g. "MySchema.MyContainer/MyEntitySet".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="undefinedifnull.html">undefinedIfNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">undefinedIfNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySet$undefinedIfNull(com.sap.cloud.mobile.odata.EntitySet)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntitySet</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntitySet</span></a></code>
+<p>Return <code><a href="undefined.html">EntitySet.undefined</a></code> if <code>entitySet</code> is <code>null</code>, otherwise return <code>entitySet</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

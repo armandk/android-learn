@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RawEncryption.decryptStream - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">RawEncryption</a>&nbsp;/&nbsp;<a href="./decryptstream.html">decryptStream</a><br/>
+<br/>
+<h1>decryptStream</h1>
+<a name="com.sap.cloud.mobile.foundation.common.RawEncryption$decryptStream(java.io.InputStream, java.io.OutputStream, kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decryptStream</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decryptStream(java.io.InputStream, java.io.OutputStream, kotlin.ByteArray)/inputStream">inputStream</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decryptStream(java.io.InputStream, java.io.OutputStream, kotlin.ByteArray)/outputStream">outputStream</span><span class="symbol">:</span>&nbsp;<span class="identifier">OutputStream</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decryptStream(java.io.InputStream, java.io.OutputStream, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Decrypts the contents of a stream and passes the decrypted contents to another stream. This mehtod can be used anywhere streams are used. For example, a file can be decrypted by passing this method a FileInputStream and a FileOutputStream. This method does not close any streams, that is the responsibility of the caller.</p>
+<h3>Parameters</h3>
+<p><a name="inputStream"></a>
+<code>inputStream</code> - <span class="identifier">InputStream</span><span class="symbol">:</span> The stream where encrypted bytes will be read from. This stream will be closed after calling this method.</p>
+<p><a name="outputStream"></a>
+<code>outputStream</code> - <span class="identifier">OutputStream</span><span class="symbol">:</span> The stream where decrypted bytes will be written to. This stream will be closed after calling this method.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The key used to decrypt the bytes. This must be the same key that was used to encrypt the bytes, or else an exception will be thrown. When the application no longer needs the encryption key it should clear the array with a call like: Arrays.fill(encryptionKey, (byte) 0x0);</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - Indicates something went wrong with IO or decryption.</p>
+<a name="com.sap.cloud.mobile.foundation.common.RawEncryption$decryptStream(java.io.InputStream, java.io.OutputStream, kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decryptStream</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decryptStream(java.io.InputStream, java.io.OutputStream, kotlin.ByteArray)/inputStream">inputStream</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decryptStream(java.io.InputStream, java.io.OutputStream, kotlin.ByteArray)/outputStream">outputStream</span><span class="symbol">:</span>&nbsp;<span class="identifier">OutputStream</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decryptStream(java.io.InputStream, java.io.OutputStream, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Decrypts the contents of a stream and passes the decrypted contents to another stream. This mehtod can be used anywhere streams are used. For example, a file can be decrypted by passing this method a FileInputStream and a FileOutputStream. This method does not close any streams, that is the responsibility of the caller.</p>
+<h3>Parameters</h3>
+<p><a name="inputStream"></a>
+<code>inputStream</code> - <span class="identifier">InputStream</span><span class="symbol">:</span> The stream where encrypted bytes will be read from. This stream will be closed after calling this method.</p>
+<p><a name="outputStream"></a>
+<code>outputStream</code> - <span class="identifier">OutputStream</span><span class="symbol">:</span> The stream where decrypted bytes will be written to. This stream will be closed after calling this method.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The key used to decrypt the bytes. This must be the same key that was used to encrypt the bytes, or else an exception will be thrown. When the application no longer needs the encryption key it should clear the array with a call like: Arrays.fill(encryptionKey, (byte) 0x0);</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - Indicates something went wrong with IO or decryption.</p>
+</BODY>
+</HTML>

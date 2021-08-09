@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataServiceProvider.createMedia - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataServiceProvider</a>&nbsp;/&nbsp;<a href="./createmedia.html">createMedia</a><br/>
+<br/>
+<h1>createMedia</h1>
+<a name="com.sap.cloud.mobile.odata.DataServiceProvider$createMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">createMedia</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceProvider$createMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceProvider$createMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/content">content</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../streambase/index.html"><span class="identifier">StreamBase</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceProvider$createMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceProvider$createMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Create a media entity with the specified content in the target system. If the <code>entity</code> has non-stream structural properties in addition to the key properties and media content, such as <code>label</code> in the examples below, then this function will send two requests to the server: a first request to upload (POST) the media stream, and a second request (PATCH/PUT) to update the non-stream properties. It is not currently supported to make these two calls <em>atomic</em>. <em>Caution</em>: Having too many threads simultaneously creating streams may result in out-of-memory conditions on memory-constrained devices.</p>
+<h3>Parameters</h3>
+<p><a name="entity"></a>
+<code>entity</code> - <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">:</span> Entity to be created.</p>
+<p><a name="content"></a>
+<code>content</code> - <a href="../streambase/index.html"><span class="identifier">StreamBase</span></a><span class="symbol">:</span> Initial content. Must be a <code><a href="../bytestream/index.html">com.sap.cloud.mobile.odata.ByteStream</a></code> or <code><a href="../charstream/index.html">com.sap.cloud.mobile.odata.CharStream</a></code>. Will be closed before this function returns.</p>
+<p><a name="headers"></a>
+<code>headers</code> - <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">:</span> Request-specific headers.</p>
+<p><a name="options"></a>
+<code>options</code> - <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">:</span> Request-specific options.</p>
+</BODY>
+</HTML>

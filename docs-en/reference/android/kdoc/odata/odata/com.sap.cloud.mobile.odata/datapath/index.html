@@ -1,0 +1,280 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataPath - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DataPath</a><br/>
+<br/>
+<h1>DataPath</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataPath</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a></code>
+<p>Used together with <code><a href="../dataquery/index.html">com.sap.cloud.mobile.odata.DataQuery</a></code> to represent a select, expand or sort item which is a single-part or multi-part path expression. For example, a path whose OData URL representation is "Address/City" might be used to access the "City" property in a complex-typed "Address" property. Also used to represent paths in OData CSDL.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="atindex.html">atIndex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">atIndex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$atIndex(kotlin.Int)/itemIndex">itemIndex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Sets the item index to address an element of a collection typed property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="castoptional.html">castOptional</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castOptional</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$castOptional(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="castrequired.html">castRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castRequired</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$castRequired(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dynamicpath.html">dynamicPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">dynamicPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$dynamicPath(kotlin.String)/child">child</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Construct a new multi-part path, with this path as the <code><a href="getparentpath.html">DataPath.parentPath</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type with a <code><a href="../datatype/getcode.html">DataType.code</a></code> of DataType.PATH, DataType.PATH_EXPRESSION, DataType.ANNOTATION_PATH, DataType.NAVIGATION_PATH, DataType.STRUCTURAL_PATH, or DataType.DYNAMIC_PATH.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdefinedproperty.html">getDefinedProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDefinedProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The defined property for a single-part path or the terminating defined property for a multi-part path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdynamicproperty.html">getDynamicProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDynamicProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The dynamic property for a single-part path or the terminating dynamic property for a multi-part path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitykey.html">getEntityKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitykey/index.html"><span class="identifier">EntityKey</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The entity key of the element in an entity collection.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getitemindex.html">getItemIndex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemIndex</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) The index of an element in a collection.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlambdavariable.html">getLambdaVariable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLambdaVariable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The lambda variable name for a lambda variable path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getparentpath.html">getParentPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getParentPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The parent path for a multi-part path; <code>null</code> for a single-part path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpathsegments.html">getPathSegments</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPathSegments</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringlist/index.html"><span class="identifier">StringList</span></a></code>
+<p>Return the '/'-separated segments in this path, as a list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpathtype.html">getPathType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPathType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data type code of DataType.PATH, DataType.PATH_EXPRESSION, DataType.ANNOTATION_PATH, DataType.NAVIGATION_PATH, DataType.STRUCTURAL_PATH, or DataType.DYNAMIC_PATH.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrootproperty.html">getRootProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRootProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The <code><a href="getdefinedproperty.html">DataPath.definedProperty</a></code> from the topmost <code><a href="getparentpath.html">DataPath.parentPath</a></code> in this path, or <code>null</code> if unknown.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsegmentcount.html">getSegmentCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSegmentCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of segments in this path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hassegments.html">hasSegments</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasSegments</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this path has segments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isnavigation.html">isNavigation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNavigation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this path has type DataType.NAVIGATION_PATH.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isproperty.html">isProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$isProperty(com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this path is simply for the specified target <code>property</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isstructural.html">isStructural</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isStructural</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this path has type DataType.STRUCTURAL_PATH.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lambda.html">lambda</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lambda</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$lambda(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Construct a lambda variable path (for use with 'any' and 'all' lambda operators).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="of.html">of</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$of(com.sap.cloud.mobile.odata.Property)/start">start</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Construct a new single-part path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ofdynamic.html">ofDynamic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ofDynamic</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$ofDynamic(kotlin.String)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Construct a new single-part path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="path.html">path</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">path</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$path(com.sap.cloud.mobile.odata.Property)/child">child</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Construct a new multi-part path, with this path as the <code><a href="getparentpath.html">DataPath.parentPath</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="todynamic.html">toDynamic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toDynamic</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$toDynamic(com.sap.cloud.mobile.odata.StringList)/segments">segments</span><span class="symbol">:</span>&nbsp;<a href="../stringlist/index.html"><span class="identifier">StringList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Return a new data path with the specified <code>type</code>, using chained <code><a href="getparentpath.html">DataPath.parentPath</a></code> and <code><a href="getdynamicproperty.html">DataPath.dynamicProperty</a></code> rather than <code><a href="getpathsegments.html">DataPath.pathSegments</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="topath.html">toPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Return this property or path, expressed as a <code>DataPath</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the OData CSDL path expression syntax for this path ('/'-separated segments).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unwrap.html">unwrap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">unwrap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Return the path, property, constant value or query function/operator call which is wrapped by this object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withkey.html">withKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$withKey(com.sap.cloud.mobile.odata.EntityKey)/entityKey">entityKey</span><span class="symbol">:</span>&nbsp;<a href="../entitykey/index.html"><span class="identifier">EntityKey</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Sets the entity key to address an element of an entity collection.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withsegments.html">withSegments</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withSegments</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$withSegments(kotlin.Int, com.sap.cloud.mobile.odata.StringList)/type">type</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataPath$withSegments(kotlin.Int, com.sap.cloud.mobile.odata.StringList)/segments">segments</span><span class="symbol">:</span>&nbsp;<a href="../stringlist/index.html"><span class="identifier">StringList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataPath</span></a></code>
+<p>Return a new data path with the specified <code>type</code> and <code>segments</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,233 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AtomValue - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.atom</a>&nbsp;/&nbsp;<a href="./index.html">AtomValue</a><br/>
+<br/>
+<h1>AtomValue</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AtomValue</span></code>
+<p>Utility functions for parsing and formatting <code><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html">com.sap.cloud.mobile.odata.DataValue</a></code> in OData ATOM representation.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AtomValue</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Utility functions for parsing and formatting <code><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html">com.sap.cloud.mobile.odata.DataValue</a></code> in OData ATOM representation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="entrydocument.html">entryDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">entryDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$entryDocument(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$entryDocument(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.xml/xmldocument/index.html"><span class="identifier">XmlDocument</span></a></code>
+<p>Return an entity value converted into an ATOM entry, wrapped as an XML document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="errorresponse.html">errorResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">errorResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$errorResponse(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$errorResponse(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/errorresponse/index.html"><span class="identifier">ErrorResponse</span></a></code>
+<p>Return a parsed error response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="feeddocument.html">feedDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">feedDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$feedDocument(com.sap.cloud.mobile.odata.EntityValueList, com.sap.cloud.mobile.odata.DataContext)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$feedDocument(com.sap.cloud.mobile.odata.EntityValueList, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.xml/xmldocument/index.html"><span class="identifier">XmlDocument</span></a></code>
+<p>Return an entity list converted into an ATOM feed, wrapped as an XML document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatcall.html">formatCall</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatCall</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$formatCall(com.sap.cloud.mobile.odata.DataMethodCall, com.sap.cloud.mobile.odata.DataContext)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datamethodcall/index.html"><span class="identifier">DataMethodCall</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$formatCall(com.sap.cloud.mobile.odata.DataMethodCall, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.xml/xmldocument/index.html"><span class="identifier">XmlDocument</span></a></code>
+<p>Return an action invocation request body in XML format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatdocument.html">formatDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$formatDocument(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$formatDocument(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.xml/xmldocument/index.html"><span class="identifier">XmlDocument</span></a></code>
+<p>Return a data value formatted in OData ATOM representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatlink.html">formatLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$formatLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$formatLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.xml/xmldocument/index.html"><span class="identifier">XmlDocument</span></a></code>
+<p>Return an entity reference formatted in OData ATOM representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="frombasiclist.html">fromBasicList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBasicList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromBasicList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataValueList, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromBasicList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataValueList, com.sap.cloud.mobile.odata.DataContext)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datavaluelist/index.html"><span class="identifier">DataValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromBasicList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataValueList, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Convert a basic list to ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromcomplexlist.html">fromComplexList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromComplexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromComplexList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.ComplexValueList, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromComplexList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.ComplexValueList, com.sap.cloud.mobile.odata.DataContext)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromComplexList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.ComplexValueList, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Convert a complex list to ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromcomplexvalue.html">fromComplexValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromComplexValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromComplexValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.ComplexValue, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromComplexValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.ComplexValue, com.sap.cloud.mobile.odata.DataContext)/complex">complex</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromComplexValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.ComplexValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Convert a complex value to ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromdatavalue.html">fromDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromDataValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromDataValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromDataValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromDataValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Convert a data value to ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromentitylist.html">fromEntityList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromEntityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromEntityList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityValueList, com.sap.cloud.mobile.odata.DataContext)/feed">feed</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromEntityList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityValueList, com.sap.cloud.mobile.odata.DataContext)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromEntityList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityValueList, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Convert an entity list to ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromentityvalue.html">fromEntityValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromEntityValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromEntityValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entry">entry</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromEntityValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$fromEntityValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Convert an entity value to ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsedocument.html">parseDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseDocument(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseDocument(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseDocument(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A data value (basic, basic list, complex list, entity, entity list) parsed from OData ATOM representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parselink.html">parseLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseLink(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseLink(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseLink(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return an entity reference parsed from OData ATOM representation. The reference will have <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/isreference.html">EntityValue.isReference</a></code> == <code>true</code> and <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/getreadlink.html">EntityValue.readLink</a></code> != <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parselinks.html">parseLinks</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseLinks</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseLinks(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseLinks(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseLinks(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a></code>
+<p>Return a list of entity references parsed from OData ATOM representation. Each reference will have <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/isreference.html">EntityValue.isReference</a></code> == <code>true</code> and <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/getreadlink.html">EntityValue.readLink</a></code> != <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsereference.html">parseReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext)/entityType">entityType</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>See parseReference(String, EntityType, EntitySet, DataContext, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/entityType">entityType</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$parseReference(kotlin.String, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/binding">binding</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return an entity reference parsed from OData ATOM reference representation. The reference will have <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/isreference.html">EntityValue.isReference</a></code> == <code>true</code>, <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/getreadlink.html">EntityValue.readLink</a></code> != <code>null</code>, and <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/haskey.html">EntityValue.hasKey</a></code> will be true if the URI was in canonical URL format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tobasiclist.html">toBasicList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toBasicList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toBasicList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toBasicList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toBasicList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datavaluelist/index.html"><span class="identifier">DataValueList</span></a></code>
+<p>Return a basic list parsed from ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tocomplexlist.html">toComplexList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toComplexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toComplexList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toComplexList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toComplexList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a complex list parsed from ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tocomplexvalue.html">toComplexValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toComplexValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toComplexValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.ComplexType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toComplexValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.ComplexType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/complextype/index.html"><span class="identifier">ComplexType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toComplexValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.ComplexType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A complex value parsed from ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="todatavalue.html">toDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toDataValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toDataValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toDataValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toDataValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A data value parsed from ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toentitylist.html">toEntityList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toEntityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toEntityList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/feed">feed</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toEntityList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toEntityList(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a></code>
+<p>Return an entity list parsed from ATOM format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toentityvalue.html">toEntityValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toEntityValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toEntityValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/entry">entry</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toEntityValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.AtomValue$toEntityValue(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) An entity value parsed from ATOM format.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

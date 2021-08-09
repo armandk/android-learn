@@ -1,0 +1,474 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OnlineODataProvider - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">OnlineODataProvider</a><br/>
+<br/>
+<h1>OnlineODataProvider</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OnlineODataProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../dataserviceprovider/index.html"><span class="identifier">DataServiceProvider</span></a></code>
+<p>A data service provider for online OData.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OnlineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$<init>(kotlin.String, kotlin.String)/serviceName">serviceName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$<init>(kotlin.String, kotlin.String)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span></code>
+<p>See OnlineODataProvider(String, String, OkHttpClient).</p>
+<code><span class="identifier">OnlineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$<init>(kotlin.String, kotlin.String, okhttp3.OkHttpClient)/serviceName">serviceName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$<init>(kotlin.String, kotlin.String, okhttp3.OkHttpClient)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$<init>(kotlin.String, kotlin.String, okhttp3.OkHttpClient)/client">client</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">OnlineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$<init>(kotlin.String, kotlin.String, com.sap.cloud.mobile.odata.http.HttpHandler)/serviceName">serviceName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$<init>(kotlin.String, kotlin.String, com.sap.cloud.mobile.odata.http.HttpHandler)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$<init>(kotlin.String, kotlin.String, com.sap.cloud.mobile.odata.http.HttpHandler)/httpHandler">httpHandler</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httphandler/index.html"><span class="identifier">HttpHandler</span></a><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>Constructs an online OData provider.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="acquiretoken.html">acquireToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">acquireToken</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>If this data service requires a security token, then acquire it now.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createentity.html">createEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Create an entity in the target system. Automatically calls <code><a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/resolveentity.html">CsdlDocument.resolveEntity</a></code> to ensure that <code><a href="../entityvalue/getentityset.html">EntityValue.entitySet</a></code> is available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createlink.html">createLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Create a link from a source entity to a target entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createmedia.html">createMedia</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createMedia</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/content">content</span><span class="symbol">:</span>&nbsp;<a href="../streambase/index.html"><span class="identifier">StreamBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$createMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Create a media entity with the specified content in the target system. If the <code>entity</code> has non-stream structural properties in addition to the key properties and media content, such as <code>label</code> in the examples below, then this function will send two requests to the server: a first request to upload (POST) the media stream, and a second request (PATCH/PUT) to update the non-stream properties. It is not currently supported to make these two calls <em>atomic</em>. <em>Caution</em>: Having too many threads simultaneously creating streams may result in out-of-memory conditions on memory-constrained devices.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletebyquery.html">deleteByQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteByQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteByQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteByQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteByQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Execute query to delete data from the target system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deleteentity.html">deleteEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Delete an entity from the target system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletelink.html">deleteLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Delete a link from a source entity to a target entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deleterepeatablerequest.html">deleteRepeatableRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteRepeatableRequest</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteRepeatableRequest(com.sap.cloud.mobile.odata.GuidValue)/requestID">requestID</span><span class="symbol">:</span>&nbsp;<a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Ask the server to forget (delete) the repeatable request with the specified <code>requestID</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deleterepeatablerequests.html">deleteRepeatableRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteRepeatableRequests</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteRepeatableRequests(com.sap.cloud.mobile.odata.GuidValue)/clientID">clientID</span><span class="symbol">:</span>&nbsp;<a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Ask the server to forget (delete) the repeatable requests with the specified <code>clientID</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletestream.html">deleteStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/link">link</span><span class="symbol">:</span>&nbsp;<a href="../streamlink/index.html"><span class="identifier">StreamLink</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deleteStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Delete the content of a stream property from the target system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deltastream.html">deltaStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deltaStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$deltaStream(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../deltastream/index.html"><span class="identifier">DeltaStream</span></a></code>
+<p>Execute a query and obtain the result as a stream of delta items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="downloadmedia.html">downloadMedia</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">downloadMedia</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$downloadMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$downloadMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$downloadMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Obtain a stream for downloading the content of a media entity from the target system. <em>Caution</em>: streams are often used for large content that may not fit (all at once) in available application memory. Having too many threads simultaneously downloading streams, or using <code><a href="../bytestream/readandclose.html">ByteStream.readAndClose</a></code>, may result in out-of-memory conditions on memory-constrained devices.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="downloadstream.html">downloadStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">downloadStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$downloadStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$downloadStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/link">link</span><span class="symbol">:</span>&nbsp;<a href="../streamlink/index.html"><span class="identifier">StreamLink</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$downloadStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$downloadStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Obtain a stream for downloading the content of a stream property from the target system. <em>Caution</em>: streams are often used for large content that may not fit (all at once) in available application memory. Having too many threads simultaneously downloading streams, or using <code><a href="../bytestream/readandclose.html">ByteStream.readAndClose</a></code>, may result in out-of-memory conditions on memory-constrained devices.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitycontext.html">entityContext</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">entityContext</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datacontext/index.html"><span class="identifier">DataContext</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">entityContext</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType)/derivedType">derivedType</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datacontext/index.html"><span class="identifier">DataContext</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">entityContext</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType, kotlin.Int)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType, kotlin.Int)/derivedType">derivedType</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType, kotlin.Int)/format">format</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datacontext/index.html"><span class="identifier">DataContext</span></a></code>
+<p>See entityContext(EntitySet, StructureType, int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">entityContext</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType, kotlin.Int, kotlin.Int)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType, kotlin.Int, kotlin.Int)/derivedType">derivedType</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType, kotlin.Int, kotlin.Int)/format">format</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityContext(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType, kotlin.Int, kotlin.Int)/version">version</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datacontext/index.html"><span class="identifier">DataContext</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitystream.html">entityStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">entityStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$entityStream(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../entitystream/index.html"><span class="identifier">EntityStream</span></a></code>
+<p>Execute a query and obtain the result as a stream of entity values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="executemethod.html">executeMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">executeMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$executeMethod(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$executeMethod(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$executeMethod(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$executeMethod(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Execute a data method (action or function) in the target system. Actions may have backend side-effects. Functions should not have backend side-effects.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="executequery.html">executeQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">executeQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$executeQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$executeQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$executeQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryresult/index.html"><span class="identifier">QueryResult</span></a></code>
+<p>Execute a data query to get data from the target system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fetchmetadata.html">fetchMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fetchMetadata</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$fetchMetadata(com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$fetchMetadata(com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a></code>
+<p>Fetch latest service metadata and return it, but don't change the <code><a href="getmetadata.html">OnlineODataProvider.metadata</a></code> property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethttpcookies.html">getHttpCookies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHttpCookies</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.http/httpcookies/index.html"><span class="identifier">HttpCookies</span></a></code>
+<p>Return obsolete. Use <code><a href="getsessioncookies.html">OnlineODataProvider.sessionCookies</a></code> or <code><a href="getsharedcookies.html">OnlineODataProvider.sharedCookies</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethttpheaders.html">getHttpHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHttpHeaders</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return obsolete. Use <code><a href="getsessionheaders.html">OnlineODataProvider.sessionHeaders</a></code> or <code><a href="getsharedheaders.html">OnlineODataProvider.sharedHeaders</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmetadata.html">getMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a></code>
+<p>Return the OData CSDL document (service metadata).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnetworkoptions.html">getNetworkOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getNetworkOptions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../networkoptions/index.html"><span class="identifier">NetworkOptions</span></a></code>
+<p>Return options for network communication, which for OData uses HTTP or HTTPS.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprettytracing.html">getPrettyTracing</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrettyTracing</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should <code><a href="gettracewithdata.html">OnlineODataProvider.traceWithData</a></code> show pretty-printed JSON/XML content? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getservicename.html">getServiceName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getServiceName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the service name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getserviceoptions.html">getServiceOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getServiceOptions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../serviceoptions/index.html"><span class="identifier">ServiceOptions</span></a></code>
+<p>Return options for this data service, both client-side and server-side.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getserviceroot.html">getServiceRoot</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getServiceRoot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the service root URL. The service root URL always terminates with a forward slash.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsessioncookies.html">getSessionCookies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSessionCookies</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.http/httpcookies/index.html"><span class="identifier">HttpCookies</span></a></code>
+<p>Return HTTP cookies which should be sent in future online requests (by the current session / thread).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsessionheaders.html">getSessionHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSessionHeaders</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return HTTP headers which should be sent in future online requests (by the current session / thread).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsharedcookies.html">getSharedCookies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSharedCookies</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.http/httpcookies/index.html"><span class="identifier">HttpCookies</span></a></code>
+<p>Return HTTP cookies which should be sent in future online requests (shared by all sessions / threads).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsharedheaders.html">getSharedHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSharedHeaders</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return HTTP headers which should be sent in future online requests (shared by all sessions / threads).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettracerequests.html">getTraceRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTraceRequests</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should all requests for this data service be traced? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettracewithdata.html">getTraceWithData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTraceWithData</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if <code><a href="gettracerequests.html">OnlineODataProvider.traceRequests</a></code> is also <code>true</code>, should all requests for this data service be traced with data? Defaults to <code>false</code>. Note that care must be taken when enabling tracing with data, as the resulting log files may contain sensitive information. On the other hand, tracing with data may sometimes be invaluable for troubleshooting purposes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasmetadata.html">hasMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the service metadata has been loaded by <code><a href="loadmetadata.html">OnlineODataProvider.loadMetadata</a></code>, or is automatically available in a generated DataService proxy class.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="loadmetadata.html">loadMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">loadMetadata</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$loadMetadata(com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$loadMetadata(com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Load service metadata (if not already loaded).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="login.html">login</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">login</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$login(kotlin.String, kotlin.String)/username">username</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$login(kotlin.String, kotlin.String)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the shared <code>Authorization</code> header to be used for HTTP/HTTPS with pre-emptive BASIC authentication. If credentials are required by the remote data service, they must be set before any function calls (such as <code><a href="loadmetadata.html">OnlineODataProvider.loadMetadata</a></code>) which may make a network request. For services which require challenge-based authentication, a request interceptor/observer should be used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pingserver.html">pingServer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pingServer</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$pingServer(com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$pingServer(com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Ping the server, by sending a non-changing request that the server can respond to quickly. The default ping behaviour is to send a HEAD request for the service document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="processbatch.html">processBatch</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">processBatch</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/batch">batch</span><span class="symbol">:</span>&nbsp;<a href="../requestbatch/index.html"><span class="identifier">RequestBatch</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$processBatch(com.sap.cloud.mobile.odata.RequestBatch, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Execute a request batch in the target system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="querycontext.html">queryContext</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">queryContext</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datacontext/index.html"><span class="identifier">DataContext</span></a></code>
+<p>See queryContext(int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">queryContext</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$queryContext(kotlin.Int)/version">version</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datacontext/index.html"><span class="identifier">DataContext</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmetadata.html">setMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMetadata</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$setMetadata(com.sap.cloud.mobile.odata.csdl.CsdlDocument)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the OData CSDL document (service metadata).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setprettytracing.html">setPrettyTracing</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPrettyTracing</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$setPrettyTracing(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should <code><a href="gettracewithdata.html">OnlineODataProvider.traceWithData</a></code> show pretty-printed JSON/XML content? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setserviceroot.html">setServiceRoot</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setServiceRoot</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$setServiceRoot(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the service root URL. The service root URL always terminates with a forward slash.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settracerequests.html">setTraceRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTraceRequests</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$setTraceRequests(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should all requests for this data service be traced? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settracewithdata.html">setTraceWithData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTraceWithData</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$setTraceWithData(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code><a href="gettracerequests.html">OnlineODataProvider.traceRequests</a></code> is also <code>true</code>, should all requests for this data service be traced with data? Defaults to <code>false</code>. Note that care must be taken when enabling tracing with data, as the resulting log files may contain sensitive information. On the other hand, tracing with data may sometimes be invaluable for troubleshooting purposes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unloadmetadata.html">unloadMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">unloadMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Unload service metadata (if previously loaded).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updateentity.html">updateEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$updateEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$updateEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$updateEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Update an entity in the target system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updatelink.html">updateLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$updateLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Update a link from a source entity to a target entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploadmedia.html">uploadMedia</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">uploadMedia</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$uploadMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$uploadMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/content">content</span><span class="symbol">:</span>&nbsp;<a href="../streambase/index.html"><span class="identifier">StreamBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$uploadMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$uploadMedia(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Upload content for a media entity to the target system <em>Caution</em>: Having too many threads simultaneously uploading streams may result in out-of-memory conditions on memory-constrained devices. Note: this function cannot be used to create a media entity. See <code><a href="../dataservice/createmedia.html">DataService.createMedia</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploadstream.html">uploadStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">uploadStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$uploadStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$uploadStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/link">link</span><span class="symbol">:</span>&nbsp;<a href="../streamlink/index.html"><span class="identifier">StreamLink</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$uploadStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/content">content</span><span class="symbol">:</span>&nbsp;<a href="../streambase/index.html"><span class="identifier">StreamBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$uploadStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.OnlineODataProvider$uploadStream(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.StreamLink, com.sap.cloud.mobile.odata.StreamBase, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Upload content for a stream property to the target system. <em>Caution</em>: Having too many threads simultaneously uploading streams may result in out-of-memory conditions on memory-constrained devices.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

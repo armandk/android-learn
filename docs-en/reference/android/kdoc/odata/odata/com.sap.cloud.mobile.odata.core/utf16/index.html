@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UTF16 - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">UTF16</a><br/>
+<br/>
+<h1>UTF16</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">UTF16</span></code>
+<p>Utility functions for UTF-16 processing.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UTF16</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Utility functions for UTF-16 processing.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="combinehighlow.html">combineHighLow</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">combineHighLow</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UTF16$combineHighLow(kotlin.Char, kotlin.Char)/high">high</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UTF16$combineHighLow(kotlin.Char, kotlin.Char)/low">low</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>CVombined high and low surrogates to character value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ishighsurrogate.html">isHighSurrogate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isHighSurrogate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UTF16$isHighSurrogate(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a UTF-16 high surrogate.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islowsurrogate.html">isLowSurrogate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLowSurrogate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UTF16$isLowSurrogate(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a UTF-16 low surrogate.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="issurrogate.html">isSurrogate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isSurrogate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UTF16$isSurrogate(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a UTF-16 surrogate (high or low).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

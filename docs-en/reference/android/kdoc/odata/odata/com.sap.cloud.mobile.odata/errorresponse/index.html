@@ -1,0 +1,159 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ErrorResponse - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ErrorResponse</a><br/>
+<br/>
+<h1>ErrorResponse</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ErrorResponse</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> error response.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ErrorResponse</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> error response.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcode.html">getCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a service-defined code for the error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcontentid.html">getContentID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getContentID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Optional "@Core.ContentID" value from the response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdetails.html">getDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../errorresponselist/index.html"><span class="identifier">ErrorResponseList</span></a></code>
+<p>Return optional additional details about the error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinnerdetails.html">getInnerDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInnerDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Optional service specific debugging information that might assist a service implementer in determining the cause of an error. This would not usually be returned by a production service. The service might need to be configured in a test or debug mode before it will return inner error information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlanguage.html">getLanguage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLanguage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Optionally indicates an <a href="http://tools.ietf.org/html/rfc5646">RFC 5646</a> language code for the error message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmessage.html">getMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a human-readable, language-dependent message describing the error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettarget.html">getTarget</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTarget</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Optionally indicates the target of the error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcode.html">setCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ErrorResponse$setCode(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a service-defined code for the error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcontentid.html">setContentID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setContentID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ErrorResponse$setContentID(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optional "@Core.ContentID" value from the response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdetails.html">setDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDetails</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ErrorResponse$setDetails(com.sap.cloud.mobile.odata.ErrorResponseList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../errorresponselist/index.html"><span class="identifier">ErrorResponseList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optional additional details about the error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinnerdetails.html">setInnerDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInnerDetails</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ErrorResponse$setInnerDetails(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optional service specific debugging information that might assist a service implementer in determining the cause of an error. This would not usually be returned by a production service. The service might need to be configured in a test or debug mode before it will return inner error information.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlanguage.html">setLanguage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLanguage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ErrorResponse$setLanguage(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optionally indicates an <a href="http://tools.ietf.org/html/rfc5646">RFC 5646</a> language code for the error message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmessage.html">setMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ErrorResponse$setMessage(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a human-readable, language-dependent message describing the error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settarget.html">setTarget</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTarget</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ErrorResponse$setTarget(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optionally indicates the target of the error.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

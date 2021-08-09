@@ -1,0 +1,1510 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NavigationProperty - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">NavigationProperty</a><br/>
+<br/>
+<h1>NavigationProperty</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NavigationProperty</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a></code>
+<p>Represents an OData navigation property.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">NavigationProperty</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents an OData navigation property.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../property/has_foreign_keys_in_source.html">HAS_FOREIGN_KEYS_IN_SOURCE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">HAS_FOREIGN_KEYS_IN_SOURCE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Foreign keys for this navigation property exist on the source side of the relationship.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/has_foreign_keys_in_target.html">HAS_FOREIGN_KEYS_IN_TARGET</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">HAS_FOREIGN_KEYS_IN_TARGET</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Foreign keys for this navigation property exist on the target side of the relationship.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/has_no_foreign_keys.html">HAS_NO_FOREIGN_KEYS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">HAS_NO_FOREIGN_KEYS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>There are no foreign keys for this navigation property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/on_delete_cascade.html">ON_DELETE_CASCADE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ON_DELETE_CASCADE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Related entities will be deleted if the source entity is deleted.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/on_delete_restrict.html">ON_DELETE_RESTRICT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ON_DELETE_RESTRICT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>A delete request on a source entity with related entities will fail.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/on_delete_set_default.html">ON_DELETE_SET_DEFAULT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ON_DELETE_SET_DEFAULT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>All properties of related entities that are tied to properties of the source entity via a referential constraint and that do not participate in other referential constraints will be set to their default value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/on_delete_set_null.html">ON_DELETE_SET_NULL</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ON_DELETE_SET_NULL</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>All properties of related entities that are tied to properties of the source entity via a referential constraint and that do not participate in other referential constraints will be set to <code>null</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcontainstarget.html">getContainsTarget</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getContainsTarget</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if this property is a navigation property, then does it contain its target?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getondeleteaction.html">getOnDeleteAction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnDeleteAction</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return if this property is a navigation property, then the action upon deletion of the source entity. Zero indicates an undefined action.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpartnerpath.html">getPartnerPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPartnerPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) If this property is a navigation property with a defined partner property, then the path of the partner.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getreferentialconstraints.html">getReferentialConstraints</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getReferentialConstraints</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringmap/index.html"><span class="identifier">StringMap</span></a></code>
+<p>Return if this property is a navigation property with referential constraints, then a map of constraints (from property name in the dependent entity to property name in the principal entity).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasforeignkeys.html">hasForeignKeys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasForeignKeys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return if this property is a navigation property, then where are foreign keys found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcontainstarget.html">setContainsTarget</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setContainsTarget</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NavigationProperty$setContainsTarget(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if this property is a navigation property, then does it contain its target?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setforeignkeys.html">setForeignKeys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setForeignKeys</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NavigationProperty$setForeignKeys(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if this property is a navigation property, then where are foreign keys found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setondeleteaction.html">setOnDeleteAction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnDeleteAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NavigationProperty$setOnDeleteAction(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if this property is a navigation property, then the action upon deletion of the source entity. Zero indicates an undefined action.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpartnerpath.html">setPartnerPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPartnerPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NavigationProperty$setPartnerPath(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if this property is a navigation property with a defined partner property, then the path of the partner.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setreferentialconstraints.html">setReferentialConstraints</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setReferentialConstraints</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NavigationProperty$setReferentialConstraints(com.sap.cloud.mobile.odata.StringMap)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../stringmap/index.html"><span class="identifier">StringMap</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if this property is a navigation property with referential constraints, then a map of constraints (from property name in the dependent entity to property name in the principal entity).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../property/getannotation.html">getAnnotation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotation</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getAnnotation(kotlin.String)/term">term</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotation/index.html"><span class="identifier">Annotation</span></a></code>
+<p>Lookup an existing annotation by term name, or throw an exception if the annotation is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getannotationlist.html">getAnnotationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationlist/index.html"><span class="identifier">AnnotationList</span></a></code>
+<p>Return obsolete. Use <code><a href="../property/getannotations.html">Property.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getannotationmap.html">getAnnotationMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return obsolete. Use <code><a href="../property/getannotations.html">Property.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getannotations.html">getAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return map of annotations for this model element. For annotations without qualifiers, the entry key is the annotation term name. For annotations with qualifiers, the entry key is the annotation term name, then "#", then the annotation qualifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getbasiclist.html">getBasicList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBasicList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getBasicList(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavaluelist/index.html"><span class="identifier">DataValueList</span></a></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getbinary.html">getBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getBinary(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getboolean.html">getBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getBoolean(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getbyte.html">getByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getByte(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getcanberemoved.html">getCanBeRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCanBeRemoved</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return can this model element be removed by <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Set this to <code>true</code> to indicate that the application is coded to be able able to function correctly without this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getcolumn.html">getColumn</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getColumn</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Database column name for this property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getcolumntype.html">getColumnType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getColumnType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Database column type for this property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getcomplex.html">getComplex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComplex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getComplex(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getcomplexlist.html">getComplexList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComplexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getComplexList(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getcomplextype.html">getComplexType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComplexType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complextype/index.html"><span class="identifier">ComplexType</span></a></code>
+<p>Return if this property has a complex type, then return it. Otherwise throw <code><a href="../../com.sap.cloud.mobile.odata.core/usageexception/index.html">com.sap.cloud.mobile.odata.core.UsageException</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getcustompath.html">getCustomPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCustomPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../custompath/index.html"><span class="identifier">CustomPath</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Path for customized property-to-element mapping.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type of the property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getdecimal.html">getDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getDecimal(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getdefaultvalue.html">getDefaultValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDefaultValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Default value for this item. May be <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getdouble.html">getDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getDouble(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getentity.html">getEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getEntity(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getentitylist.html">getEntityList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getEntityList(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getentitytype.html">getEntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitytype/index.html"><span class="identifier">EntityType</span></a></code>
+<p>Return if this property has an entity type, then return it. Otherwise throw <code><a href="../../com.sap.cloud.mobile.odata.core/usageexception/index.html">com.sap.cloud.mobile.odata.core.UsageException</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getenum.html">getEnum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEnum</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getEnum(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../enumvalue/index.html"><span class="identifier">EnumValue</span></a></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getenumtype.html">getEnumType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEnumType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../enumtype/index.html"><span class="identifier">EnumType</span></a></code>
+<p>Return if this property has an enum type, then return it. Otherwise throw <code><a href="../../com.sap.cloud.mobile.odata.core/usageexception/index.html">com.sap.cloud.mobile.odata.core.UsageException</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getfixedlength.html">getFixedLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFixedLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this item has fixed length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getfloat.html">getFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getFloat(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Float</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getguid.html">getGuid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getGuid</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getGuid(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getid.html">getId</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return zero-based index for this property within its parent type definition.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getint.html">getInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getInt(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getinteger.html">getInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getInteger(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getitemcomplextype.html">getItemComplexType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemComplexType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complextype/index.html"><span class="identifier">ComplexType</span></a></code>
+<p>Return if this property is a list with complex item type, then return it. Otherwise throw <code><a href="../../com.sap.cloud.mobile.odata.core/usageexception/index.html">com.sap.cloud.mobile.odata.core.UsageException</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getitementitytype.html">getItemEntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemEntityType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitytype/index.html"><span class="identifier">EntityType</span></a></code>
+<p>Return if this property is a list with entity item type, then return it. Otherwise throw <code><a href="../../com.sap.cloud.mobile.odata.core/usageexception/index.html">com.sap.cloud.mobile.odata.core.UsageException</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getlong.html">getLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getLong(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getmaxlength.html">getMaxLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMaxLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return maximum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getminlength.html">getMinLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMinLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return minimum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return name of the property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullablebinary.html">getNullableBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableBinary(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullableboolean.html">getNullableBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableBoolean(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullablebyte.html">getNullableByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableByte(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullablecomplex.html">getNullableComplex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableComplex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableComplex(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullabledecimal.html">getNullableDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableDecimal(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullabledouble.html">getNullableDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableDouble(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullableentity.html">getNullableEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableEntity(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullableenum.html">getNullableEnum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableEnum</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableEnum(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../enumvalue/index.html"><span class="identifier">EnumValue</span></a><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullablefloat.html">getNullableFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableFloat(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Float</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullableguid.html">getNullableGuid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableGuid</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableGuid(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullableint.html">getNullableInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableInt(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullableinteger.html">getNullableInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableInteger(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullablelong.html">getNullableLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableLong(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullableshort.html">getNullableShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableShort(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullablestring.html">getNullableString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableString(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getnullableunsignedbyte.html">getNullableUnsignedByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableUnsignedByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getNullableUnsignedByte(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getoptionalvalue.html">getOptionalValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptionalValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getOptionalValue(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getowningtype.html">getOwningType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOwningType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return name of type that owns this property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getprecision.html">getPrecision</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrecision</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return precision for <code>decimal</code> and <code>integer</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getqualifiedname.html">getQualifiedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQualifiedName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return owning type name, forward slash, then property name, e.g. "MySchema.MyEntityType/MyPropertyName".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getrequiredvalue.html">getRequiredValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getRequiredValue(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getscale.html">getScale</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getScale</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return scale for <code>decimal</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getshort.html">getShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getShort(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getsourceline.html">getSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceLine</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getsrid.html">getSrid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSrid</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return <a href="http://www.epsg.org/Geodetic.html">EPSG</a> Spatial Reference System Identifier (SRID) for the associated value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getstreamlink.html">getStreamLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStreamLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getStreamLink(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../streamlink/index.html"><span class="identifier">StreamLink</span></a></code>
+<p>Get the stream link for this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getstring.html">getString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getString(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getstructuretype.html">getStructureType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStructureType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../structuretype/index.html"><span class="identifier">StructureType</span></a></code>
+<p>Return if this property has a structure (complex/entity) type, then return it. Otherwise throw <code><a href="../../com.sap.cloud.mobile.odata.core/usageexception/index.html">com.sap.cloud.mobile.odata.core.UsageException</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getsystemflags.html">getSystemFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSystemFlags</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return synonym for <code><a href="../property/getdatatype.html">Property.dataType</a></code>. If this property has a basic type, then <code>type.isBasic</code> will be <code>true</code>. If this property has a basic list type, then <code>type.isBasicList</code> will be <code>true</code>. If this property has a complex type, then <code>type.isComplex</code> will be <code>true</code> and <code>type</code> will be an instance of <code><a href="../complextype/index.html">com.sap.cloud.mobile.odata.ComplexType</a></code>. If this property has a complex list type, then <code>type.isComplexList</code> will be <code>true</code> and <code>type.itemType</code> will be an instance of <code><a href="../complextype/index.html">com.sap.cloud.mobile.odata.ComplexType</a></code>. If this property has an entity type, then <code>type.isEntity</code> will be <code>true</code> and <code>type</code> will be an instance of <code><a href="../entitytype/index.html">com.sap.cloud.mobile.odata.EntityType</a></code>. If this property has an entity list type, then <code>type.isEntityList</code> will be <code>true</code> and <code>type.itemType</code> will be an instance of <code><a href="../entitytype/index.html">com.sap.cloud.mobile.odata.EntityType</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getunsignedbyte.html">getUnsignedByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUnsignedByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getUnsignedByte(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$getValue(com.sap.cloud.mobile.odata.StructureBase)/source">source</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Get the value of this property from a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/iscollection.html">isCollection</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isCollection</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is a collection-typed property. Equivalent to <code>type.isList</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isextension.html">isExtension</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isExtension</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this property was added since metadata was originally loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isforeignkey.html">isForeignKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isForeignKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this property is a primary key, or part of a composite foreign key.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isimmutable.html">isImmutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isImmutable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this property is immutable (non-updatable after insert).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/iskey.html">isKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this property is the primary key, or part of a composite primary key.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isnavigation.html">isNavigation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNavigation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is a navigation property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isnullable.html">isNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNullable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this item is nullable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isoptimistic.html">isOptimistic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isOptimistic</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this property is used for optimistic concurrency control (part of entity tag). For OData V3, this relates to a ConcurrencyMode of "Fixed". For OData V4, this relates to the use of Org.OData.Core.V1.OptimisticConcurrency in one or more entity sets using the entity type containing this property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/ispersistent.html">isPersistent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isPersistent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this property is persistent (stored in the local database when offline).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isremoved.html">isRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isRemoved</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return has this model element been removed by a successful call to <code>DataService.refreshMetadata</code>? If `isRemoved == true, that implies that the old metadata (before refreshMetadata was called) did include this model element, and that the new metadata (after refreshMetadata was called) does not include this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isstream.html">isStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isStream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this property has a stream type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isstructural.html">isStructural</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isStructural</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is a structural property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/isunicode.html">isUnicode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isUnicode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this item allows Unicode content. If <code>isUnicode</code> is <code>false</code>, then this item only allows ASCII content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/path.html">path</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">path</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$path(com.sap.cloud.mobile.odata.Property)/child">child</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datapath/index.html"><span class="identifier">DataPath</span></a></code>
+<p>Return a new data path from this property to a <code>child</code> property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setbasiclist.html">setBasicList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBasicList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setBasicList(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.DataValueList)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setBasicList(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.DataValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavaluelist/index.html"><span class="identifier">DataValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setbinary.html">setBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setBinary(com.sap.cloud.mobile.odata.StructureBase, kotlin.ByteArray)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setBinary(com.sap.cloud.mobile.odata.StructureBase, kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setboolean.html">setBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setBoolean(com.sap.cloud.mobile.odata.StructureBase, kotlin.Boolean)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setBoolean(com.sap.cloud.mobile.odata.StructureBase, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setbyte.html">setByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setByte(com.sap.cloud.mobile.odata.StructureBase, kotlin.Byte)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setByte(com.sap.cloud.mobile.odata.StructureBase, kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setcanberemoved.html">setCanBeRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCanBeRemoved</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setCanBeRemoved(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set can this model element be removed by <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Set this to <code>true</code> to indicate that the application is coded to be able able to function correctly without this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setcolumn.html">setColumn</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setColumn</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setColumn(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set database column name for this property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setcolumntype.html">setColumnType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setColumnType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setColumnType(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set database column type for this property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setcomplex.html">setComplex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setComplex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setComplex(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.ComplexValue)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setComplex(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.ComplexValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setcomplexlist.html">setComplexList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setComplexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setComplexList(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.ComplexValueList)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setComplexList(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.ComplexValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setcustompath.html">setCustomPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCustomPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setCustomPath(com.sap.cloud.mobile.odata.CustomPath)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../custompath/index.html"><span class="identifier">CustomPath</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set path for customized property-to-element mapping.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setdecimal.html">setDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setDecimal(com.sap.cloud.mobile.odata.StructureBase, java.math.BigDecimal)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setDecimal(com.sap.cloud.mobile.odata.StructureBase, java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setdefaultvalue.html">setDefaultValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDefaultValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setDefaultValue(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set default value for this item. May be <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setdouble.html">setDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setDouble(com.sap.cloud.mobile.odata.StructureBase, kotlin.Double)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setDouble(com.sap.cloud.mobile.odata.StructureBase, kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setentity.html">setEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setEntity(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EntityValue)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setEntity(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setentitylist.html">setEntityList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setEntityList(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EntityValueList)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setEntityList(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EntityValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setenum.html">setEnum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEnum</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setEnum(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EnumValue)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setEnum(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EnumValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../enumvalue/index.html"><span class="identifier">EnumValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setextension.html">setExtension</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExtension</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setExtension(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this property was added since metadata was originally loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setfloat.html">setFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setFloat(com.sap.cloud.mobile.odata.StructureBase, kotlin.Float)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setFloat(com.sap.cloud.mobile.odata.StructureBase, kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setforeignkey.html">setForeignKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setForeignKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setForeignKey(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this property is a primary key, or part of a composite foreign key.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setguid.html">setGuid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setGuid</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setGuid(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.GuidValue)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setGuid(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.GuidValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setid.html">setId</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setId</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setId(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set zero-based index for this property within its parent type definition.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setimmutable.html">setImmutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setImmutable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setImmutable(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this property is immutable (non-updatable after insert).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setint.html">setInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setInt(com.sap.cloud.mobile.odata.StructureBase, kotlin.Int)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setInt(com.sap.cloud.mobile.odata.StructureBase, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setinteger.html">setInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setInteger(com.sap.cloud.mobile.odata.StructureBase, java.math.BigInteger)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setInteger(com.sap.cloud.mobile.odata.StructureBase, java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setkey.html">setKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setKey(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this property is the primary key, or part of a composite primary key.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setlong.html">setLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setLong(com.sap.cloud.mobile.odata.StructureBase, kotlin.Long)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setLong(com.sap.cloud.mobile.odata.StructureBase, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setmaxlength.html">setMaxLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMaxLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setMaxLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set maximum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setminlength.html">setMinLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMinLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setMinLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set minimum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setname.html">setName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set name of the property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullable.html">setNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullable(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this item is nullable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullablebinary.html">setNullableBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableBinary(com.sap.cloud.mobile.odata.StructureBase, kotlin.ByteArray)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableBinary(com.sap.cloud.mobile.odata.StructureBase, kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullableboolean.html">setNullableBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableBoolean(com.sap.cloud.mobile.odata.StructureBase, kotlin.Boolean)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableBoolean(com.sap.cloud.mobile.odata.StructureBase, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullablebyte.html">setNullableByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableByte(com.sap.cloud.mobile.odata.StructureBase, kotlin.Byte)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableByte(com.sap.cloud.mobile.odata.StructureBase, kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullablecomplex.html">setNullableComplex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableComplex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableComplex(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.ComplexValue)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableComplex(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.ComplexValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullabledecimal.html">setNullableDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableDecimal(com.sap.cloud.mobile.odata.StructureBase, java.math.BigDecimal)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableDecimal(com.sap.cloud.mobile.odata.StructureBase, java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullabledouble.html">setNullableDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableDouble(com.sap.cloud.mobile.odata.StructureBase, kotlin.Double)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableDouble(com.sap.cloud.mobile.odata.StructureBase, kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullableentity.html">setNullableEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableEntity(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EntityValue)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableEntity(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullableenum.html">setNullableEnum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableEnum</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableEnum(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EnumValue)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableEnum(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.EnumValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../enumvalue/index.html"><span class="identifier">EnumValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullablefloat.html">setNullableFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableFloat(com.sap.cloud.mobile.odata.StructureBase, kotlin.Float)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableFloat(com.sap.cloud.mobile.odata.StructureBase, kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullableguid.html">setNullableGuid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableGuid</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableGuid(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.GuidValue)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableGuid(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.GuidValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullableint.html">setNullableInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableInt(com.sap.cloud.mobile.odata.StructureBase, kotlin.Int)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableInt(com.sap.cloud.mobile.odata.StructureBase, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullableinteger.html">setNullableInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableInteger(com.sap.cloud.mobile.odata.StructureBase, java.math.BigInteger)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableInteger(com.sap.cloud.mobile.odata.StructureBase, java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullablelong.html">setNullableLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableLong(com.sap.cloud.mobile.odata.StructureBase, kotlin.Long)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableLong(com.sap.cloud.mobile.odata.StructureBase, kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullableshort.html">setNullableShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableShort(com.sap.cloud.mobile.odata.StructureBase, kotlin.Short)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableShort(com.sap.cloud.mobile.odata.StructureBase, kotlin.Short)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullablestring.html">setNullableString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableString(com.sap.cloud.mobile.odata.StructureBase, kotlin.String)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableString(com.sap.cloud.mobile.odata.StructureBase, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setnullableunsignedbyte.html">setNullableUnsignedByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullableUnsignedByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableUnsignedByte(com.sap.cloud.mobile.odata.StructureBase, kotlin.Int)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setNullableUnsignedByte(com.sap.cloud.mobile.odata.StructureBase, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setoptimistic.html">setOptimistic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOptimistic</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setOptimistic(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this property is used for optimistic concurrency control (part of entity tag). For OData V3, this relates to a ConcurrencyMode of "Fixed". For OData V4, this relates to the use of Org.OData.Core.V1.OptimisticConcurrency in one or more entity sets using the entity type containing this property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setowningtype.html">setOwningType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOwningType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setOwningType(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set name of type that owns this property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setprecision.html">setPrecision</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPrecision</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setPrecision(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set precision for <code>decimal</code> and <code>integer</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setremoved.html">setRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRemoved</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setRemoved(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set has this model element been removed by a successful call to <code>DataService.refreshMetadata</code>? If `isRemoved == true, that implies that the old metadata (before refreshMetadata was called) did include this model element, and that the new metadata (after refreshMetadata was called) does not include this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setscale.html">setScale</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setScale</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setScale(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set scale for <code>decimal</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setshort.html">setShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setShort(com.sap.cloud.mobile.odata.StructureBase, kotlin.Short)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setShort(com.sap.cloud.mobile.odata.StructureBase, kotlin.Short)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setsourceline.html">setSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceLine</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setSourceLine(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setsrid.html">setSrid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSrid</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setSrid(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <a href="http://www.epsg.org/Geodetic.html">EPSG</a> Spatial Reference System Identifier (SRID) for the associated value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setstring.html">setString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setString(com.sap.cloud.mobile.odata.StructureBase, kotlin.String)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setString(com.sap.cloud.mobile.odata.StructureBase, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setsystemflags.html">setSystemFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSystemFlags</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setSystemFlags(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/settype.html">setType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setType(com.sap.cloud.mobile.odata.DataType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set synonym for <code><a href="../property/getdatatype.html">Property.dataType</a></code>. If this property has a basic type, then <code>type.isBasic</code> will be <code>true</code>. If this property has a basic list type, then <code>type.isBasicList</code> will be <code>true</code>. If this property has a complex type, then <code>type.isComplex</code> will be <code>true</code> and <code>type</code> will be an instance of <code><a href="../complextype/index.html">com.sap.cloud.mobile.odata.ComplexType</a></code>. If this property has a complex list type, then <code>type.isComplexList</code> will be <code>true</code> and <code>type.itemType</code> will be an instance of <code><a href="../complextype/index.html">com.sap.cloud.mobile.odata.ComplexType</a></code>. If this property has an entity type, then <code>type.isEntity</code> will be <code>true</code> and <code>type</code> will be an instance of <code><a href="../entitytype/index.html">com.sap.cloud.mobile.odata.EntityType</a></code>. If this property has an entity list type, then <code>type.isEntityList</code> will be <code>true</code> and <code>type.itemType</code> will be an instance of <code><a href="../entitytype/index.html">com.sap.cloud.mobile.odata.EntityType</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setunicode.html">setUnicode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUnicode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setUnicode(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this item allows Unicode content. If <code>isUnicode</code> is <code>false</code>, then this item only allows ASCII content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setunsignedbyte.html">setUnsignedByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUnsignedByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setUnsignedByte(com.sap.cloud.mobile.odata.StructureBase, kotlin.Int)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setUnsignedByte(com.sap.cloud.mobile.odata.StructureBase, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/setvalue.html">setValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setValue(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.DataValue)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Property$setValue(com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of this property in a structure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/topath.html">toPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datapath/index.html"><span class="identifier">DataPath</span></a></code>
+<p>Return this property or path, expressed as a <code>DataPath</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="../property/getdatatype.html">Property.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/unwrap.html">unwrap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">unwrap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Return the path, property, constant value or query function/operator call which is wrapped by this object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../property/urlstring.html">urlString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">urlString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this property, percent-encoded for use in a URL.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

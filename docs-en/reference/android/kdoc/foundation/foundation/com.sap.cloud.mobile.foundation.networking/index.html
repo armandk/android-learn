@@ -1,0 +1,236 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.foundation.networking - foundation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">foundation</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.foundation.networking</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.foundation.networking</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="appheadersinterceptor/index.html">AppHeadersInterceptor</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AppHeadersInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AppHeadersInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code>
+<p>This interceptor is responsible for setting required headers for communication with mobile services.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="blockeduserinterceptor/index.html">BlockedUserInterceptor</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BlockedUserInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BlockedUserInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code>
+<p>This Interceptor is responsible for informing the application that the user has been blocked from communicating with the server.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="businessprocessmonitoringpassportbuilder/index.html">BusinessProcessMonitoringPassportBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BusinessProcessMonitoringPassportBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="passportbuilder/index.html"><span class="identifier">PassportBuilder</span></a><span class="symbol">&lt;</span><a href="businessprocessmonitoringpassportbuilder/index.html"><span class="identifier">BusinessProcessMonitoringPassportBuilder</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="componenttype/index.html">ComponentType</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ComponentType</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">ComponentType</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="correlationinterceptor/index.html">CorrelationInterceptor</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CorrelationInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CorrelationInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code>
+<p>This interceptor adds a X-SAP-CorrelationID header to each request. The value will be a unique identifier. The correlation ID will also be present in logs related to the request/response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csrftokeninterceptor/index.html">CsrfTokenInterceptor</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsrfTokenInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsrfTokenInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code>
+<p>This interceptor is responsible for setting the X-CSRF-Token header for communication with services exposed by SAPcpms.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="e2etracingpassportbuilder/index.html">E2ETracingPassportBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">E2ETracingPassportBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="passportbuilder/index.html"><span class="identifier">PassportBuilder</span></a><span class="symbol">&lt;</span><a href="e2etracingpassportbuilder/index.html"><span class="identifier">E2ETracingPassportBuilder</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="integrationmonitoringpassportbuilder/index.html">IntegrationMonitoringPassportBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IntegrationMonitoringPassportBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="passportbuilder/index.html"><span class="identifier">PassportBuilder</span></a><span class="symbol">&lt;</span><a href="integrationmonitoringpassportbuilder/index.html"><span class="identifier">IntegrationMonitoringPassportBuilder</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="lastconnectiontimeinterceptor/index.html">LastConnectionTimeInterceptor</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LastConnectionTimeInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LastConnectionTimeInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code>
+<p>This Interceptor is responsible for informing the application that a successful connetion with the server has occurred so that the last connection time can be updated.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lockwipepolicy/index.html">LockWipePolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LockWipePolicy</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Serializable</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LockWipePolicy</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Serializable</span></code>
+<p>The class responsible for defining and applying the lock and wipe policies.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="meteringpassportbuilder/index.html">MeteringPassportBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">MeteringPassportBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="passportbuilder/index.html"><span class="identifier">PassportBuilder</span></a><span class="symbol">&lt;</span><a href="meteringpassportbuilder/index.html"><span class="identifier">MeteringPassportBuilder</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="passport/index.html">Passport</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Passport</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="passportbuilder/index.html">PassportBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PassportBuilder</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="passportinterceptor/index.html">PassportInterceptor</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PassportInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="passportmanager/index.html">PassportManager</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">PassportManager</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="progress/index.html">Progress</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Progress</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">Progress</span></code>
+<p>This class provides methods that allow the handling of progress events.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="progresslistener/index.html">ProgressListener</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ProgressListener</span></code><br/>
+<code><span class="keyword">interface </span><span class="identifier">ProgressListener</span></code>
+<p>This interface is used with <code><a href="progress/index.html">com.sap.cloud.mobile.foundation.networking.Progress</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removeapikeyheaderinterceptor/index.html">RemoveApiKeyHeaderInterceptor</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">RemoveApiKeyHeaderInterceptor</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">RemoveApiKeyHeaderInterceptor</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="sessioncreatedcheckinterceptor/index.html">SessionCreatedCheckInterceptor</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SessionCreatedCheckInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SessionCreatedCheckInterceptor</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Interceptor</span></code>
+<p>Check if onboarding is successful then send the notification to the registered <code>MobileServices</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="singletonholder/index.html">SingletonHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SingletonHolder</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">A</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="traceflag/index.html">TraceFlag</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TraceFlag</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">TraceFlag</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="usermonitoringpassportbuilder/index.html">UserMonitoringPassportBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UserMonitoringPassportBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="passportbuilder/index.html"><span class="identifier">PassportBuilder</span></a><span class="symbol">&lt;</span><a href="usermonitoringpassportbuilder/index.html"><span class="identifier">UserMonitoringPassportBuilder</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="webkitcookiejar/index.html">WebkitCookieJar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">WebkitCookieJar</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CookieJar</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">WebkitCookieJar</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">CookieJar</span></code>
+<p>This class implements <code><a href="#">okhttp3.CookieJar</a></code> by storing/getting all cookies with <code><a href="#">android.webkit.CookieManager</a></code>. If an application needs to do any custom cookie handling (eg: clearing session cookies), that must be done on the underlying <code><a href="#">android.webkit.CookieManager</a></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="httpexception/index.html">HttpException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span></code>
+<p>Exception for an HTTP response that is unexpected.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="permissionnotgrantedexception/index.html">PermissionNotGrantedException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PermissionNotGrantedException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Exception</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PermissionNotGrantedException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Exception</span></code>
+<p>This class gives information about errors the SDK can't handle.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,336 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Parameter - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">Parameter</a><br/>
+<br/>
+<h1>Parameter</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Parameter</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> parameter.</p>
+ See Also: 
+<p><code><a href="../datamethod/index.html">com.sap.cloud.mobile.odata.DataMethod</a></code>, <code><a href="../datamethodcall/index.html">com.sap.cloud.mobile.odata.DataMethodCall</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Parameter</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> parameter.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="mode_in.html">MODE_IN</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MODE_IN</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant parameter mode for 'In' mode parameters.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mode_in_out.html">MODE_IN_OUT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MODE_IN_OUT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant parameter mode for 'InOut' mode parameters.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mode_out.html">MODE_OUT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MODE_OUT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant parameter mode for 'Out' mode parameters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getannotation.html">getAnnotation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotation</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$getAnnotation(kotlin.String)/term">term</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotation/index.html"><span class="identifier">Annotation</span></a></code>
+<p>Lookup an existing annotation by term name, or throw an exception if the annotation is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationlist.html">getAnnotationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationlist/index.html"><span class="identifier">AnnotationList</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">Parameter.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationmap.html">getAnnotationMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">Parameter.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotations.html">getAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return map of annotations for this model element. For annotations without qualifiers, the entry key is the annotation term name. For annotations with qualifiers, the entry key is the annotation term name, then "#", then the annotation qualifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getfixedlength.html">getFixedLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFixedLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this item has fixed length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmaxlength.html">getMaxLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMaxLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return maximum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getminlength.html">getMinLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMinLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return minimum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmode.html">getMode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return mode of the parameter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return name of the parameter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprecision.html">getPrecision</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrecision</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return precision for <code>decimal</code> and <code>integer</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getscale.html">getScale</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getScale</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return scale for <code>decimal</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsourceline.html">getSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceLine</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsrid.html">getSrid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSrid</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return <a href="http://www.epsg.org/Geodetic.html">EPSG</a> Spatial Reference System Identifier (SRID) for the associated value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return type of the parameter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Value of the parameter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isnullable.html">isNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNullable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this item is nullable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isunicode.html">isUnicode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isUnicode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this item allows Unicode content. If <code>isUnicode</code> is <code>false</code>, then this item only allows ASCII content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmaxlength.html">setMaxLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMaxLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setMaxLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set maximum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setminlength.html">setMinLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMinLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setMinLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set minimum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmode.html">setMode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setMode(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set mode of the parameter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setname.html">setName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set name of the parameter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnullable.html">setNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setNullable(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this item is nullable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setprecision.html">setPrecision</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPrecision</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setPrecision(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set precision for <code>decimal</code> and <code>integer</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setscale.html">setScale</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setScale</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setScale(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set scale for <code>decimal</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsourceline.html">setSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceLine</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setSourceLine(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsrid.html">setSrid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSrid</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setSrid(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <a href="http://www.epsg.org/Geodetic.html">EPSG</a> Spatial Reference System Identifier (SRID) for the associated value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settype.html">setType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setType(com.sap.cloud.mobile.odata.DataType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set type of the parameter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setunicode.html">setUnicode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUnicode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setUnicode(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this item allows Unicode content. If <code>isUnicode</code> is <code>false</code>, then this item only allows ASCII content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setvalue.html">setValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Parameter$setValue(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set value of the parameter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

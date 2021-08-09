@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SetBase - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">SetBase</a><br/>
+<br/>
+<h1>SetBase</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">SetBase</span></code>
+<p>Base class for strongly-typed sets.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SetBase</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.SetBase$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new set with a <code><a href="size.html">SetBase.size</a></code> of zero and specified initial <code>capacity</code>. A set can expand in size beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the set's maximum size.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all values from this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getuntypedset.html">getUntypedSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUntypedSet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/untypedset/index.html"><span class="identifier">UntypedSet</span></a></code>
+<p>Return the underlying untyped set. Use with care, avoiding the addition of objects with an incorrect value type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this set contains no values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="size.html">size</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of values in this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../intset/index.html">IntSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SetBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../longset/index.html">LongSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LongSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SetBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../stringset/index.html">StringSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StringSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SetBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

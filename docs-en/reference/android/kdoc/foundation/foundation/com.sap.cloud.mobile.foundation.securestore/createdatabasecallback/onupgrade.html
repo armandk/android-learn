@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CreateDatabaseCallback.onUpgrade - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.securestore</a>&nbsp;/&nbsp;<a href="index.html">CreateDatabaseCallback</a>&nbsp;/&nbsp;<a href="./onupgrade.html">onUpgrade</a><br/>
+<br/>
+<h1>onUpgrade</h1>
+<a name="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback$onUpgrade(com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore, kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onUpgrade</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback$onUpgrade(com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore, kotlin.Int, kotlin.Int)/store">store</span><span class="symbol">:</span>&nbsp;<a href="../securedatabasestore/index.html"><span class="identifier">SecureDatabaseStore</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback$onUpgrade(com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore, kotlin.Int, kotlin.Int)/oldVersion">oldVersion</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback$onUpgrade(com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore, kotlin.Int, kotlin.Int)/newVersion">newVersion</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>This method is invoked when a new database version is introduced and the new version is different from the version of the existing database on device. </p>
+<p>Typically, the application can alter the table or migrate the existing table contents to the new table inside this method to ensure no data loss.</p>
+<h3>Parameters</h3>
+<p><a name="store"></a>
+<code>store</code> - <a href="../securedatabasestore/index.html"><span class="identifier">SecureDatabaseStore</span></a><span class="symbol">:</span> the <code>SecureDatabaseStore</code> instance</p>
+<p><a name="oldVersion"></a>
+<code>oldVersion</code> - <span class="identifier">Int</span><span class="symbol">:</span> the version of the existing database</p>
+<p><a name="newVersion"></a>
+<code>newVersion</code> - <span class="identifier">Int</span><span class="symbol">:</span> the version of the changed database</p>
+<a name="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback$onUpgrade(com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore, kotlin.Int, kotlin.Int)"></a>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onUpgrade</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback$onUpgrade(com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore, kotlin.Int, kotlin.Int)/store">store</span><span class="symbol">:</span>&nbsp;<a href="../securedatabasestore/index.html"><span class="identifier">SecureDatabaseStore</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback$onUpgrade(com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore, kotlin.Int, kotlin.Int)/oldVersion">oldVersion</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback$onUpgrade(com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore, kotlin.Int, kotlin.Int)/newVersion">newVersion</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>This method is invoked when a new database version is introduced and the new version is different from the version of the existing database on device. </p>
+<p>Typically, the application can alter the table or migrate the existing table contents to the new table inside this method to ensure no data loss.</p>
+<h3>Parameters</h3>
+<p><a name="store"></a>
+<code>store</code> - <a href="../securedatabasestore/index.html"><span class="identifier">SecureDatabaseStore</span></a><span class="symbol">:</span> the <code>SecureDatabaseStore</code> instance</p>
+<p><a name="oldVersion"></a>
+<code>oldVersion</code> - <span class="identifier">Int</span><span class="symbol">:</span> the version of the existing database</p>
+<p><a name="newVersion"></a>
+<code>newVersion</code> - <span class="identifier">Int</span><span class="symbol">:</span> the version of the changed database</p>
+</BODY>
+</HTML>

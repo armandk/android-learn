@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StructureBase.getRequiredValue - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">StructureBase</a>&nbsp;/&nbsp;<a href="./getrequiredvalue.html">getRequiredValue</a><br/>
+<br/>
+<h1>getRequiredValue</h1>
+<a name="com.sap.cloud.mobile.odata.StructureBase$getRequiredValue(com.sap.cloud.mobile.odata.PropertyPath)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredValue</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$getRequiredValue(com.sap.cloud.mobile.odata.PropertyPath)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Get the required value of a specified property path.</p>
+ Throws: 
+<p><code><a href="../../com.sap.cloud.mobile.odata.core/undefinedexception/index.html">com.sap.cloud.mobile.odata.core.UndefinedException</a></code> if the property value was not previously set (or is <code>null</code>), <code><a href="../../com.sap.cloud.mobile.odata.core/castexception/index.html">com.sap.cloud.mobile.odata.core.CastException</a></code> if the property value is <code>null</code>.</p>
+ 
+<h3>Parameters</h3>
+<p><a name="path"></a>
+<code>path</code> - <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">:</span> The specified property path.</p>
+<p><strong>Return</strong><br/>
+<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">:</span> The property value, using the appropriate subclass of <code><a href="../datavalue/index.html">com.sap.cloud.mobile.odata.DataValue</a></code>.</p>
+</BODY>
+</HTML>

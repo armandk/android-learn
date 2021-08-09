@@ -1,0 +1,508 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LocalDateTime - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">LocalDateTime</a><br/>
+<br/>
+<h1>LocalDateTime</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDateTime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#dateTime">dateTime</a> type without zone offset.</p>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/undefined.html">undefined</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">undefined</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="castoptional.html">castOptional</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castOptional</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$castOptional(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="castrequired.html">castRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castRequired</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$castRequired(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="compare.html">compare</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">compare</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$compare(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$compare(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Compare two dateTime values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="compareto.html">compareTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">compareTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$compareTo(com.sap.cloud.mobile.odata.LocalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Compare this dateTime with another dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$equal(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$equal(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare two dateTime values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equals.html">equals</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare this dateTime value with another dateTime value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type of the wrapped value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdate.html">getDate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../localdate/index.html"><span class="identifier">LocalDate</span></a></code>
+<p>Return local date component of dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getday.html">getDay</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDay</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return day field of date (1 to 31).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdayofweek.html">getDayOfWeek</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDayOfWeek</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return day of week (1 to 7).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdayofyear.html">getDayOfYear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDayOfYear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return day of year (1 to 366).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethour.html">getHour</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHour</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return hour field of time (0 to 23).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getminute.html">getMinute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMinute</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return minute field of time (0 to 59).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmonth.html">getMonth</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMonth</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return month field of date (1 to 12).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnano.html">getNano</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNano</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return nanosecond field of time (0 to 999999999).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsecond.html">getSecond</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSecond</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return second field of time (0 to 59).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettime.html">getTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../localtime/index.html"><span class="identifier">LocalTime</span></a></code>
+<p>Return local time component of dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getyear.html">getYear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getYear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return year field of date.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="greaterequal.html">greaterEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$greaterEqual(com.sap.cloud.mobile.odata.LocalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare this dateTime value with another dateTime value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="greaterthan.html">greaterThan</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$greaterThan(com.sap.cloud.mobile.odata.LocalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare this dateTime value with another dateTime value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hashcode.html">hashCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Hash this data value to a number.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lessequal.html">lessEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$lessEqual(com.sap.cloud.mobile.odata.LocalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare this dateTime value with another dateTime value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lessthan.html">lessThan</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$lessThan(com.sap.cloud.mobile.odata.LocalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare this dateTime value with another dateTime value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="millisbetween.html">millisBetween</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">millisBetween</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$millisBetween(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/a">a</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$millisBetween(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/b">b</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return the difference in milliseconds between two dateTime values <code>a</code> and <code>b</code>, calculated as <code>b - a</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="minus.html">minus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">minus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$minus(com.sap.cloud.mobile.odata.LocalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code>
+<p>Return the difference <code>this - value</code>, measured in days.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="notequal.html">notEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$notEqual(com.sap.cloud.mobile.odata.LocalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare this dateTime value with another dateTime value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="now.html">now</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">now</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return the current local dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="of.html">of</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/year">year</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/month">month</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/day">day</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/hour">hour</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/minute">minute</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/second">second</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>See of(int, int, int, int, int, int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/year">year</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/month">month</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/day">day</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/hour">hour</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/minute">minute</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/second">second</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$of(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)/nano">nano</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ofjulian.html">ofJulian</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ofJulian</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$ofJulian(kotlin.Double)/day">day</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Convert a <a href="https://en.wikipedia.org/wiki/Julian_day#Julian_day_numbers">Julian day number</a> to a local date/time. The local date/time will be 'local' in UTC.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ofmillis.html">ofMillis</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ofMillis</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$ofMillis(kotlin.Long)/ms">ms</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Convert a Java 'millis' time value to a LocalDateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$parse(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Value parsed from <a href="http://www.w3.org/TR/xmlschema11-2/#dateTime">XML Schema format</a>, or <code>null</code> if <code>text</code> has invalid dateTime format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plusdays.html">plusDays</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusDays</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusDays(kotlin.Int)/days">days</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of days ahead of this dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plushours.html">plusHours</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusHours</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusHours(kotlin.Long)/hours">hours</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of hours ahead of this dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plusmicros.html">plusMicros</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusMicros</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusMicros(kotlin.Long)/micros">micros</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of microseconds ahead of this dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plusmillis.html">plusMillis</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusMillis</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusMillis(kotlin.Long)/millis">millis</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of milliseconds ahead of this dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plusminutes.html">plusMinutes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusMinutes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusMinutes(kotlin.Long)/minutes">minutes</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of minutes ahead of this dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plusmonths.html">plusMonths</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusMonths</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusMonths(kotlin.Int)/months">months</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of months ahead of this dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plusnanos.html">plusNanos</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusNanos</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusNanos(kotlin.Long)/nanos">nanos</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of nanoseconds ahead of this dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plusseconds.html">plusSeconds</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusSeconds</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusSeconds(kotlin.Long)/seconds">seconds</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of seconds ahead of this dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plusweeks.html">plusWeeks</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusWeeks</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusWeeks(kotlin.Int)/weeks">weeks</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of weeks ahead of this dat/timee.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="plusyears.html">plusYears</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">plusYears</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$plusYears(kotlin.Int)/years">years</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LocalDateTime</span></a></code>
+<p>Return a new dateTime which is the specified number of years ahead of this dateTime.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="static_greaterequal.html">static_greaterEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">static_greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_greaterEqual(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_greaterEqual(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare two dateTime values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="static_greaterthan.html">static_greaterThan</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">static_greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_greaterThan(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_greaterThan(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare two dateTime values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="static_lessequal.html">static_lessEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">static_lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_lessEqual(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_lessEqual(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare two dateTime values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="static_lessthan.html">static_lessThan</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">static_lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_lessThan(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_lessThan(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare two dateTime values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="static_notequal.html">static_notEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">static_notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_notEqual(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$static_notEqual(com.sap.cloud.mobile.odata.LocalDateTime, com.sap.cloud.mobile.odata.LocalDateTime)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare two dateTime values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toglobal.html">toGlobal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toGlobal</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a></code>
+<p>See toGlobal(int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toGlobal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$toGlobal(kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a></code>
+<p>Return this value converted to a global date and time, with specified offset.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tojulian.html">toJulian</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toJulian</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$toJulian(com.sap.cloud.mobile.odata.LocalDateTime)/dt">dt</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code>
+<p>Convert a local date/time to a <a href="https://en.wikipedia.org/wiki/Julian_day#Julian_day_numbers">Julian day number</a>. The local date/time must be 'local' in UTC.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tomillis.html">toMillis</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toMillis</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.LocalDateTime$toMillis(com.sap.cloud.mobile.odata.LocalDateTime)/dt">dt</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Convert a LocalDateTime to a Java 'millis' time value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="getdatatype.html">LocalDateTime.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/clonemutable.html">cloneMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cloneMutable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$cloneMutable(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A clone of <code>value</code> if it is mutable, or <code>value</code> if it is immutable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/gettypecode.html">getTypeCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTypeCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data type code of the wrapped value, equivalent to <code>dataType.code</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

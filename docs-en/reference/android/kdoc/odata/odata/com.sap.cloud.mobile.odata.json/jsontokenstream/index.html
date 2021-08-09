@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonTokenStream - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">JsonTokenStream</a><br/>
+<br/>
+<h1>JsonTokenStream</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonTokenStream</span></code>
+<p>A stream of <a href="http://json.org">JSON</a> <code><a href="../jsontoken/index.html">com.sap.cloud.mobile.odata.json.JsonToken</a></code>.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="endarray.html">endArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">endArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the next token is the end of an array (']').</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="endobject.html">endObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">endObject</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the next token is the end of an object ('}').</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromstream.html">fromStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonTokenStream$fromStream(com.sap.cloud.mobile.odata.CharStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonTokenStream</span></a></code>
+<p>Return a new token stream taking input from <code>stream</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromstring.html">fromString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonTokenStream$fromString(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonTokenStream</span></a></code>
+<p>Return a new token stream taking input from <code>text</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nextis.html">nextIs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">nextIs</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonTokenStream$nextIs(kotlin.Int)/type">type</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the next token has the specfied type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="peek.html">peek</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">peek</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsontoken/index.html"><span class="identifier">JsonToken</span></a></code>
+<p>Return the next token, which is not consumed. Or a token with type JsonToken.END_STREAM at end of stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="read.html">read</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">read</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsontoken/index.html"><span class="identifier">JsonToken</span></a></code>
+<p>Return the next token, which is consumed. Or a token with type JsonToken.END_STREAM at end of stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="undoread.html">undoRead</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">undoRead</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonTokenStream$undoRead(com.sap.cloud.mobile.odata.json.JsonToken)/token">token</span><span class="symbol">:</span>&nbsp;<a href="../jsontoken/index.html"><span class="identifier">JsonToken</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Undo the last token read, so it can be read again. Only one token can be unread.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

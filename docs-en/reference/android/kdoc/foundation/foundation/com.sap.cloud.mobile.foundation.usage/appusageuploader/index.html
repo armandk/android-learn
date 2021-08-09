@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AppUsageUploader - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.usage</a>&nbsp;/&nbsp;<a href="./index.html">AppUsageUploader</a><br/>
+<br/>
+<h1>AppUsageUploader</h1>
+<a name="com.sap.cloud.mobile.foundation.usage.AppUsageUploader"></a>
+<code><span class="keyword">class </span><span class="identifier">AppUsageUploader</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.usage.AppUsageUploader"></a>
+<code><span class="keyword">class </span><span class="identifier">AppUsageUploader</span></code>
+<p>This class is used for uploading client usage information to mobile services. </p>
+<p><strong>Preparation</strong>-- Before using <code><a href="./index.html">AppUsageUploader</a></code> </p>
+<ol> <li>Need to enable the server to upload application-specific usage statistics and reports from mobile devices. See <a href="https://help.hana.ondemand.com/hana_cloud_platform_mobile_services/
+     frameset.htm?065046f829c54f06b379d6f68137feaf.html">Defining Usage Report Policy</a>. </li>
+ <li>A connection to mobile services has been established using <code>okHttpClient</code>. </li>
+ <li><code>AppUsage.initialize(Context, SettingsParameters, char[])</code> has been called. </li>
+ </ol>
+ 
+<p><strong>Implementing <code><a href="uploadlistener/index.html">UploadListener</a></code></strong>: Optional but recommended. For example, </p>
+<pre><code>class MyUsageUploadListener implements UploadListener {
+    public void onSuccess() {
+        sLogger.debug("Upload completed successfully");
+    }
+
+    public void onError(Throwable error) {
+        if (error instanceof HttpException) {
+            sLogger.debug("Upload with server error: {}, code = {}",
+                ((HttpException) error).message(),
+                ((HttpException) error).code());
+        } else {
+            sLogger.debug("Upload error: {}", error.getMessage());
+        }
+    }
+
+    public void onProgress(int percentUploaded) {
+        // For example, update the progress bar...
+    }
+}
+</code></pre> 
+<p><strong>Registering a UploadListener</strong>: </p>
+<pre><code>MyUsageUploadListener listener = new MyUsageUploadListener;
+
+    // Call addUsageUploadListener(listener)
+    AppUsageUploader.addUsageUploadListener(listener);
+</code></pre> 
+<p><strong>Uploading</strong>-- via <code><a href="upload.html">#upload(OkHttpClient)</a></code>. <code>AppUsageUploader</code> runs in an <code>AsyncTask</code>, it retrieves the snapshot from the usage store, converts the usage records to the format required by SAP Mobile Services, then uploads them to the server. </p>
+<p><code><a href="uploadlistener/onprogress.html">UploadListener#onProgress(int)</a></code> is invoked multiple times during usage uploading, <code><a href="uploadlistener/onsuccess.html">UploadListener#onSuccess()</a></code> is invoked after the upload is completed successfully, and <code><a href="uploadlistener/onerror.html">UploadListener#onError(Throwable)</a></code> is invoked when upload failed or cancelled. </p>
+<pre><code>// Establishes a connection to mobile services using okHttpClient.
+
+    ....
+    AppUsageUploader.upload(okHttpClient, targetID);
+</code></pre> 
+<p><strong>Viewing Usage Reports on Server</strong>-- After successful client data upload, you can find your reports on the server. </p>
+<p>See <a href="https://help.hana.ondemand.com/hana_cloud_platform_mobile_services/
+       frameset.htm?78fa9c358a4e4130bd5312d32f502009.html">Viewing Client Usage Reports</a>.</p>
+</BODY>
+</HTML>

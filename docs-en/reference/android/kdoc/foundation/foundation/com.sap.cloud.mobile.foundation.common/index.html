@@ -1,0 +1,171 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.foundation.common - foundation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">foundation</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.foundation.common</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.foundation.common</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="about/index.html">About</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">About</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">About</span></code>
+<p>A utility class to retrieve information about the SAP BTP SDK for Android, operating system, brand, model, and manufacturer. This information is helpful when reporting issues to SAP support.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clientprovider/index.html">ClientProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ClientProvider</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ClientProvider</span></code>
+<p>Facilitates keeping a global reference to a Networking Client that has been initialized with all the necessary Authentication and other interceptors. Generally the application developer will set the initialized okHttpClient once and get it from any where a okHttpClient is needed for the server communication. The set must be called at least once.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cpmsparameters/index.html">CpmsParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">CpmsParameters</span></s></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">CpmsParameters</span></s></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="discoveryserviceprovider/index.html">DiscoveryServiceProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DiscoveryServiceProvider</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DiscoveryServiceProvider</span></code>
+<p>Facilitates keeping a global reference to discovery service host. By default it points to production host https://discovery.sapmobilesecure.com. Customer can change it to devtest host like https://discovery.next.sapmobilesecure.com.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="encryptioninputstream/index.html">EncryptionInputStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EncryptionInputStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">FilterInputStream</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EncryptionInputStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">FilterInputStream</span></code>
+<p>This class provides a wrapper for an InputStream that encrypts or decrypts the bytes as they are read.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="encryptionoutputstream/index.html">EncryptionOutputStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EncryptionOutputStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">FilterOutputStream</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EncryptionOutputStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">FilterOutputStream</span></code>
+<p>This class provides a wrapper for an OutputStream that encrypts or decrypts the bytes as they are read.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="encryptionstate/index.html">EncryptionState</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">EncryptionState</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">EncryptionState</span></code>
+<p>Describes different encryption states associated with the encryption key generation mechanisms. <pre><code>
+
+1. <a href="encryptionstate/index.html">#INIT</a>-- When the alias is new, and no encryption key has been created.
+2. <a href="encryptionstate/index.html">#NO_PASSCODE</a>-- A secondary encryption key is generated randomly. This secondary
+   encryption key is encrypted using the Secret Key generated from Android Key Store
+   and securely persisted.
+3. <a href="encryptionstate/index.html">#PASSCODE_ONLY</a>-- A Secret Key is generated using
+   <a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> (Password-Based Key Derivation
+   Function 2)] from the passcode, and then a secondary key is generated randomly. This secondary
+   encryption key is then encrypted using the PBKDF2 secret key and securely persisted.
+
+   This is the most secure option because the secret key generated from the passcode is not stored
+   on the device.
+
+4. <a href="encryptionstate/index.html">#PASSCODE_BIOMETRIC</a>-- The application,
+   a. Gets the initial cipher from EncryptionUtil.
+   b. Passes the cipher to Android FingerprintManager for user authentication.
+   c. The same cipher (user-authenticated) is passed back.
+
+   Then a random secondary encryption key is generated similar to PASSCODE_ONLY, but
+   will encrypt it with the PBKDF2 secret key and separately with the cipher also.
+  </code></pre></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="encryptionutil/index.html">EncryptionUtil</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EncryptionUtil</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EncryptionUtil</span></code>
+<p>Provides a protected storage for the users to generate and access their encryption key associated with an alias. The encryption key can then be used with Secure Store and any other place where encryption key is needed. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="rawencryption/index.html">RawEncryption</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RawEncryption</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RawEncryption</span></code>
+<p>This class provides methods to encrypt and decrypt byte streams and byte arrays. The algorithm used to encrypt and decrypt is AES with GCM and no padding. The easiest way to generate and save encryption keys is by using EncryptionUtil, but it is not required to do so.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sdkapplicationstate/index.html">SDKApplicationState</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">SDKApplicationState</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Observable</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">SDKApplicationState</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Observable</span></code>
+<p>Represents the application state. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settingsparameters/index.html">SettingsParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SettingsParameters</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SettingsParameters</span></code>
+<p>This Class holds the basic settings parameters There are ApplicationId, deviceID, applicationVersion,backendURL, and version of the server</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settingsprovider/index.html">SettingsProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SettingsProvider</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SettingsProvider</span></code>
+<p>Facilitates keeping a global reference to application SettingsParameters, including ApplicationId, deviceID, applicationVersion,backendURL, and version of the server. Generally the application developer will set the initialized SettingsParameters once and get it from any where SettingsParameters is needed. The set must be called at least once.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="encryptionerror/index.html">EncryptionError</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">EncryptionError</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Exception</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">EncryptionError</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Exception</span></code>
+<p>Signals that an error occurred during encryption.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

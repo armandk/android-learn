@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProviderOperationProgress.getParameters - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProviderOperationProgress</a>&nbsp;/&nbsp;<a href="./getparameters.html">getParameters</a><br/>
+<br/>
+<h1>getParameters</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress$getParameters()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getParameters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>returns the parameters for the particular step being performed. This will vary for each step. <ul> <li>For OfflineODataOperationStep.downloadingEntityStore 
+<p>parameters[0]: received bytes </p>
+<p>parameters[1]: total bytes </p>
+</li>
+<li>For OfflineODataOperationStep.processingDefiningQueries 
+<p>parameters[0]: request name </p>
+<p>parameters[1]: request url </p>
+</li>
+<li>For OfflineODataOperationStep.processingRequests 
+<p>parameters[0]: request number </p>
+<p>parameters[1]: total number of requests </p>
+</li>
+<li>For OfflineODataOperationStep.receivingDataFromServer 
+<p>parameters[0]: received bytes </p>
+</li>
+<li>For OfflineODataOperationStep.sendingDataToServer 
+<p>parameters[0]: sent bytes </p>
+</li>
+<li>For others steps 
+<p>parameters is an empty array </p>
+</li>
+</ul>
+</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> </p>
+</BODY>
+</HTML>

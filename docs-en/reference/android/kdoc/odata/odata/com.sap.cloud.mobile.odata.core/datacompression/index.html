@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataCompression - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">DataCompression</a><br/>
+<br/>
+<h1>DataCompression</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataCompression</span></code>
+<p>Utility functions for compression and decompression.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DataCompression</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Utility functions for compression and decompression.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="minimum_length_for_gzip.html">MINIMUM_LENGTH_FOR_GZIP</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MINIMUM_LENGTH_FOR_GZIP</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Minimum recommended size for gzipping (1000).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="gunzip.html">gunzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">gunzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gunzip(kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">gunzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gunzip(kotlin.ByteArray, kotlin.Int)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gunzip(kotlin.ByteArray, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>See gunzip(byte[], int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">gunzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gunzip(kotlin.ByteArray, kotlin.Int, kotlin.Int)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gunzip(kotlin.ByteArray, kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gunzip(kotlin.ByteArray, kotlin.Int, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Return decompressed <code>data</code>, using <code>gzip</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gzip.html">gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gzip(kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gzip(kotlin.ByteArray, kotlin.Int)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gzip(kotlin.ByteArray, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>See gzip(byte[], int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gzip(kotlin.ByteArray, kotlin.Int, kotlin.Int)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gzip(kotlin.ByteArray, kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.DataCompression$gzip(kotlin.ByteArray, kotlin.Int, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Return compressed <code>data</code>, using <code>gzip</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gzipavailable.html">gzipAvailable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">gzipAvailable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if GZIP compression/decompression is available in the current environment.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

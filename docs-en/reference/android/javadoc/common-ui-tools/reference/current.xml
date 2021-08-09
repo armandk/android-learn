@@ -1,0 +1,457 @@
+<api>
+<package name="com.sap.cloud.mobile.onboarding.utility"
+>
+<class name="AbstractActionHandlerTask"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.onboarding.utility.ActionHandlerTask">
+</implements>
+<constructor name="AbstractActionHandlerTask"
+ type="com.sap.cloud.mobile.onboarding.utility.AbstractActionHandlerTask"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fragment" type="androidx.fragment.app.Fragment">
+</parameter>
+</constructor>
+<method name="getFragment"
+ return="androidx.fragment.app.Fragment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onActivityResult"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fragment" type="androidx.fragment.app.Fragment">
+</parameter>
+<parameter name="requestCode" type="int">
+</parameter>
+<parameter name="resultCode" type="int">
+</parameter>
+<parameter name="data" type="android.content.Intent">
+</parameter>
+</method>
+<method name="setActionHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="actionHandler" type="com.sap.cloud.mobile.onboarding.utility.ActionHandler">
+</parameter>
+</method>
+<method name="setCancelled"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="boolean">
+</parameter>
+</method>
+<field name="actionHandler"
+ type="com.sap.cloud.mobile.onboarding.utility.ActionHandler"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="cancelled"
+ type="boolean"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="fragment"
+ type="androidx.fragment.app.Fragment"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="waitForUI"
+ type="boolean"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="ActionHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</interface>
+<class name="ActionHandlerHelper"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="initializeActionHandler"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="metadataKey" type="java.lang.String">
+</parameter>
+<parameter name="expectedSuperClass" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="initializeActionHandler"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="expectedSuperClass" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<parameter name="implementationClassName" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<interface name="ActionHandlerTask"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="after"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="execute"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method name="getFragment"
+ return="androidx.fragment.app.Fragment"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onActivityResult"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fragment" type="androidx.fragment.app.Fragment">
+</parameter>
+<parameter name="requestCode" type="int">
+</parameter>
+<parameter name="resultCode" type="int">
+</parameter>
+<parameter name="data" type="android.content.Intent">
+</parameter>
+</method>
+<method name="setCancelled"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="boolean">
+</parameter>
+</method>
+</interface>
+<class name="ActionHandlerTaskFragment"
+ extends="androidx.fragment.app.Fragment"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ActionHandlerTaskFragment"
+ type="com.sap.cloud.mobile.onboarding.utility.ActionHandlerTaskFragment"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="interrupt"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="restartRestoredTask"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="restoreTask"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="task" type="com.sap.cloud.mobile.onboarding.utility.ActionHandlerTask">
+</parameter>
+</method>
+<method name="start"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="task" type="com.sap.cloud.mobile.onboarding.utility.ActionHandlerTask">
+</parameter>
+</method>
+</class>
+<interface name="ActivityResultActionHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onActivityResult"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fragment" type="androidx.fragment.app.Fragment">
+</parameter>
+<parameter name="requestCode" type="int">
+</parameter>
+<parameter name="resultCode" type="int">
+</parameter>
+<parameter name="data" type="android.content.Intent">
+</parameter>
+</method>
+</interface>
+<class name="R"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="R"
+ type="com.sap.cloud.mobile.onboarding.utility.R"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
+<class name="R.string"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="string"
+ type="com.sap.cloud.mobile.onboarding.utility.R.string"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="lib_name"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="Settings"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Settings"
+ type="com.sap.cloud.mobile.onboarding.utility.Settings"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+</constructor>
+<constructor name="Settings"
+ type="com.sap.cloud.mobile.onboarding.utility.Settings"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="getActionHandler"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="saveToIntent"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+</method>
+<method name="setActionHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="actionHandler" type="java.lang.String">
+</parameter>
+</method>
+<field name="KEY_ACTION_HANDLER"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;action_handler&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+</api>

@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XmlPrettyText - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.xml</a>&nbsp;/&nbsp;<a href="./index.html">XmlPrettyText</a><br/>
+<br/>
+<h1>XmlPrettyText</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlPrettyText</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../xmltext/index.html"><span class="identifier">XmlText</span></a></code>
+<p>Functions for pretty-printing XML text node content.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">XmlPrettyText</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Functions for pretty-printing XML text node content.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="ispretty.html">isPretty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isPretty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this text node is an instance of <code><a href="./index.html">com.sap.cloud.mobile.odata.xml.XmlPrettyText</a></code>, otherwise return <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shiftleft.html">shiftLeft</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">shiftLeft</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlPrettyText$shiftLeft(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>text</code>, with maximum leading spaces removed from each line, while preserving relative indentation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shiftright.html">shiftRight</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">shiftRight</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlPrettyText$shiftRight(kotlin.String, kotlin.Int)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlPrettyText$shiftRight(kotlin.String, kotlin.Int)/indent">indent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>text</code>, with minimum of <code>indent</code> leading spaces appearing on each line, while preserving relative indentation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../xmltext/gettext.html">getText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the text value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmltext/gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return XmlNode.TYPE_TEXT.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmltext/settext.html">setText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlText$setText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the text value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmltext/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmltext/withtext.html">withText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlText$withText(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmltext/index.html"><span class="identifier">XmlText</span></a></code>
+<p>Convenience function for constructing a text node with specified text.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ConfigurationLoader.loadConfiguration - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.configurationprovider</a>&nbsp;/&nbsp;<a href="index.html">ConfigurationLoader</a>&nbsp;/&nbsp;<a href="./loadconfiguration.html">loadConfiguration</a><br/>
+<br/>
+<h1>loadConfiguration</h1>
+<a name="com.sap.cloud.mobile.foundation.configurationprovider.ConfigurationLoader$loadConfiguration()"></a>
+<code><span class="keyword">fun </span><span class="identifier">loadConfiguration</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Starts a thread which will attempt to retrieve the configuration data from the queue of providers and store it using the designated persistence method. The returned configuration data will be from the first queries provider that returns data. If no provider is successful, then the thread terminates with failure. The OnCompletion callback will be invoked, indicating success or failure immediately before the thread terminates. The other callbacks, onInputRequired and onError, will be invoked when the first provider that needs input is tried and when an input required provider encounters an error, respectively.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if the thread was started and false if the thread was already running.</p>
+<a name="com.sap.cloud.mobile.foundation.configurationprovider.ConfigurationLoader$loadConfiguration()"></a>
+<code><span class="keyword">fun </span><span class="identifier">loadConfiguration</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Starts a thread which will attempt to retrieve the configuration data from the queue of providers and store it using the designated persistence method. The returned configuration data will be from the first queries provider that returns data. If no provider is successful, then the thread terminates with failure. The OnCompletion callback will be invoked, indicating success or failure immediately before the thread terminates. The other callbacks, onInputRequired and onError, will be invoked when the first provider that needs input is tried and when an input required provider encounters an error, respectively.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if the thread was started and false if the thread was already running.</p>
+</BODY>
+</HTML>

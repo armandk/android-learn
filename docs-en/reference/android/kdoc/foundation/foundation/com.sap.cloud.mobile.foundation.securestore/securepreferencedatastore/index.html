@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecurePreferenceDataStore - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.securestore</a>&nbsp;/&nbsp;<a href="./index.html">SecurePreferenceDataStore</a><br/>
+<br/>
+<h1>SecurePreferenceDataStore</h1>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore"></a>
+<code><span class="keyword">class </span><span class="identifier">SecurePreferenceDataStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">PreferenceDataStore</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore"></a>
+<code><span class="keyword">class </span><span class="identifier">SecurePreferenceDataStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">PreferenceDataStore</span></code>
+<p>A <code>PreferenceDataStore</code> implementation encrypts contents using 256-bit AES encryption, and is provided to the <code>Preference</code> framework via <code><a href="#">androidx.preference.Preference#setPreferenceDataStore(PreferenceDataStore)</a></code>. </p>
+<p>This class can be used to replace the default <code>SharedPreferences</code> and provides an extra layer of application data protection. </p>
+Creating and Opening You must create and open the store with an encryption key before you can interact with it. It is recommended to use <code>EncryptionUtil</code> to obtain the encryption key. If this is the first time store is being opened and <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens. <pre><code>final String storeName = "myPreferenceStore";
+    final byte[] encryptionKey = EncryptionUtil.getEncryptionKey("aliasForPreferenceStore",
+        myPasscode);
+    SecurePreferenceDataStore store = null;
+
+    try {
+        store = new SecurePreferenceDataStore(
+                        androidContext, // Android application context.
+                        storeName,      // Store name.
+                        encryptionKey); // Store's encryption key; auto-generated if null.
+    } catch (OpenFailureException ex) {
+        logger.error("An error occurred while opening the preference data store.", ex);
+    }
+  </code></pre> Adding and Retrieving Preferences 
+<p>The following preference value types are supported: </p>
+<ul> <li>String</li>
+ <li>Integer</li>
+ <li>Long</li>
+ <li>Float</li>
+ <li>Boolean</li>
+ <li>Any <code>Set</code> implementation that is <code>Serializable</code></li>
+ </ul>
+ 
+<p>You can use the appropriate <code>put</code> and <code>get</code> methods to add and retrieve preference values to/from the data store. </p>
+<pre><code>try {
+        // Adds preferences to the store.
+        store.putInt("integerKey1", 58);
+        store.putString("StringKey1", "A String value");
+        store.putFloat("floatKey1", 9.8F);
+        store.putLong("longKey1", 9223372036854775000L);
+        store.putBoolean("booleanKey1", true);
+
+        // Adds a set of values as a preference to the store.
+        // 'stringSet' is a HashSet&lt;String&gt; that contains values.
+        store.putStringSet(stringSetKey, stringSet);
+
+        // Retrieves existing values.
+        int intValue = store.getInt("integerKey1", 0);
+        String stringValue = store.getString("StringKey1", "default String if not found");
+        float floatValue = store.getFloat("floatKey1", 0.2F);
+        long longValue = store.getLong("longKey1", 9223372036854775023L);
+        boolean booleanValue = store.getBoolean("booleanKey1", false);
+    } catch (BackingStoreException ex) {
+        logger.error("Failed to add/retrieve preference.", ex);
+    }
+  </code></pre> Removing Preferences You can remove preferences one at a time or remove all at once. <pre><code>try {
+        // Removes preferences one at a time.
+        store.remove("booleanKey1");
+        store.remove("longKey1");
+
+        // Removes all existing preferences.
+        store.removeAll();
+    } catch (BackingStoreException ex) {
+        logger.error("Failed to remove preference.", ex);
+    }
+  </code></pre> Changing Encryption Key You can change the encryption of the underlying persistence store when the store is in open state. <pre><code>store.changeEncryptionKey(newEncryptionKey);
+
+  </code></pre> Closing When you finish CRUD operations on the store, <code><a href="close.html">#close()</a></code> the <code>SecurePreferenceDataStore</code> to relinquishes any resources it has acquired during its operations. <pre><code>store.close();
+  </code></pre> Removing the persistence store You may want to remove the persistence store in some occasions. Note that after the persistence store is removed, any further operation performed on the instance will cause <code>FileMissingException</code>. <pre><code>store.deleteStore(context); // The store instance will not be usable after this method!
+
+  </code></pre>
+<p><strong>See Also</strong><br/>
+<a href="#">androidx.preference.PreferenceDataStore</a></p>
+</BODY>
+</HTML>

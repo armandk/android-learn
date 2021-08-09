@@ -1,0 +1,40 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/AfterOnboardingFlow.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/AfterOnboardingFlow.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/AuthenticationFlow.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/AuthenticationFlow.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/BusinessDataMap.BusinessDataChangeListener///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/BusinessDataMap.BusinessDataChangeListener.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/DialogHelper.ErrorDialogFragment///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/DialogHelper.ErrorDialogFragment.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/DialogHelper.InputPasscodeDialogFragment///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/DialogHelper.InputPasscodeDialogFragment.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/Flow.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/Flow.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/FlowActivity.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/FlowActivity.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/FlowStepFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/FlowStepFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/FlowViewModel.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/FlowViewModel.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/OnboardingFlow.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/OnboardingFlow.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/RestoreFlow.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/RestoreFlow.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.core/SetPasscodeFlow.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/core/SetPasscodeFlow.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.ext/FlowActionHandler.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/ext/FlowActionHandler.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.ext/FlowStateListener.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/ext/FlowStateListener.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.model/FlowInterruptEvent.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/model/FlowInterruptEvent.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.model/FlowInterruptEvent.Error///PointingToDeclaration/com/sap/cloud/mobile/flowv2/model/FlowInterruptEvent.Error.html
+$dokka.location:com.sap.cloud.mobile.flowv2.model/FlowInterruptEvent.Info///PointingToDeclaration/com/sap/cloud/mobile/flowv2/model/FlowInterruptEvent.Info.html
+$dokka.location:com.sap.cloud.mobile.flowv2.model/FlowInterruptEvent.Warning///PointingToDeclaration/com/sap/cloud/mobile/flowv2/model/FlowInterruptEvent.Warning.html
+$dokka.location:com.sap.cloud.mobile.flowv2.securestore/UserSecureStoreDelegate.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/securestore/UserSecureStoreDelegate.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/BasicAuthenticationFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/BasicAuthenticationFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/CertsAuthFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/CertsAuthFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/DiscoveryFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/DiscoveryFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/OAuthFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/OAuthFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/QRReaderFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/QRReaderFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/SamlFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/SamlFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/SetPasscodeFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/SetPasscodeFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/SignInFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/SignInFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/UsageConsentFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/UsageConsentFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.steps/VerifyPasscodeFragment.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/steps/VerifyPasscodeFragment.Companion.html
+$dokka.location:com.sap.cloud.mobile.flowv2.util/MigrationModel.Builder///PointingToDeclaration/com/sap/cloud/mobile/flowv2/util/MigrationModel.Builder.html
+$dokka.location:com.sap.cloud.mobile.flowv2.util/MigrationUtil.Companion///PointingToDeclaration/com/sap/cloud/mobile/flowv2/util/MigrationUtil.Companion.html
+com.sap.cloud.mobile.flowv2.core
+com.sap.cloud.mobile.flowv2.ext
+com.sap.cloud.mobile.flowv2.model
+com.sap.cloud.mobile.flowv2.securestore
+com.sap.cloud.mobile.flowv2.steps
+com.sap.cloud.mobile.flowv2.util
+

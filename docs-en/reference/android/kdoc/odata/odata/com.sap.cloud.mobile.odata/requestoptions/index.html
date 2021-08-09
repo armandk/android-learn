@@ -1,0 +1,189 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RequestOptions - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">RequestOptions</a><br/>
+<br/>
+<h1>RequestOptions</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RequestOptions</span></code>
+<p>Options for processing of data requests. If request options are used for <code><a href="repeatable.html">RequestOptions.repeatable</a></code> requests, a new request options object should be used for each distinct request (or the <code><a href="repeatable.html">RequestOptions.repeatable</a></code> property should be reset before object re-use). The repeated execution of a failed request should re-use the original request options object without <code><a href="repeatable.html">RequestOptions.repeatable</a></code> being reset beforehand.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">RequestOptions</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Options for processing of data requests. If request options are used for <code><a href="repeatable.html">RequestOptions.repeatable</a></code> requests, a new request options object should be used for each distinct request (or the <code><a href="repeatable.html">RequestOptions.repeatable</a></code> property should be reset before object re-use). The repeated execution of a failed request should re-use the original request options object without <code><a href="repeatable.html">RequestOptions.repeatable</a></code> being reset beforehand.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="none.html">none</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">none</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">RequestOptions</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="cancelable.html">cancelable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">cancelable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$cancelable(com.sap.cloud.mobile.odata.CancelToken)/token">token</span><span class="symbol">:</span>&nbsp;<a href="../canceltoken/index.html"><span class="identifier">CancelToken</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">RequestOptions</span></a></code>
+<p>Set the <code><a href="getcanceltoken.html">RequestOptions.cancelToken</a></code> and return this options object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">RequestOptions</span></a></code>
+<p>Return a new (mutable) request options object that is a copy of this request options object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcanceltoken.html">getCancelToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCancelToken</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../canceltoken/index.html"><span class="identifier">CancelToken</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Set this to a cancellation token before initiating an async request if request cancellation may be needed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprefernocontent.html">getPreferNoContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPreferNoContent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should create/update requests receive no content in the response? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrepeatabilityfirstsent.html">getRepeatabilityFirstSent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRepeatabilityFirstSent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Repeatability first sent time for this request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrepeatabilityrequestid.html">getRepeatabilityRequestID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRepeatabilityRequestID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Repeatability global request ID for this request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsendemptyupdate.html">getSendEmptyUpdate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSendEmptyUpdate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should no-change update requests be sent to the server? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getupdatemode.html">getUpdateMode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUpdateMode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../updatemode/index.html"><span class="identifier">UpdateMode</span></a></code>
+<p>Return determines if updates use merge (HTTP PATCH) or replace (HTTP PUT) semantics. Defaults to merge semantics.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="noneifnull.html">noneIfNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">noneIfNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$noneIfNull(com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">RequestOptions</span></a></code>
+<p>Construct a new RequestOptions and apply default <code>none</code> value to that if the <code>options</code> parameter is <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="repeatable.html">repeatable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">repeatable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$repeatable(com.sap.cloud.mobile.odata.GuidValue, com.sap.cloud.mobile.odata.GlobalDateTime)/requestID">requestID</span><span class="symbol">:</span>&nbsp;<a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$repeatable(com.sap.cloud.mobile.odata.GuidValue, com.sap.cloud.mobile.odata.GlobalDateTime)/firstSent">firstSent</span><span class="symbol">:</span>&nbsp;<a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">RequestOptions</span></a></code>
+<p>Set the <code><a href="getrepeatabilityrequestid.html">RequestOptions.repeatabilityRequestID</a></code> and <code><a href="getrepeatabilityfirstsent.html">RequestOptions.repeatabilityFirstSent</a></code> and return this options object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcanceltoken.html">setCancelToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCancelToken</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$setCancelToken(com.sap.cloud.mobile.odata.CancelToken)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../canceltoken/index.html"><span class="identifier">CancelToken</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set set this to a cancellation token before initiating an async request if request cancellation may be needed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setprefernocontent.html">setPreferNoContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPreferNoContent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$setPreferNoContent(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should create/update requests receive no content in the response? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrepeatabilityfirstsent.html">setRepeatabilityFirstSent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRepeatabilityFirstSent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$setRepeatabilityFirstSent(com.sap.cloud.mobile.odata.GlobalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set repeatability first sent time for this request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrepeatabilityrequestid.html">setRepeatabilityRequestID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRepeatabilityRequestID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$setRepeatabilityRequestID(com.sap.cloud.mobile.odata.GuidValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set repeatability global request ID for this request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsendemptyupdate.html">setSendEmptyUpdate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSendEmptyUpdate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$setSendEmptyUpdate(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should no-change update requests be sent to the server? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setupdatemode.html">setUpdateMode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUpdateMode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestOptions$setUpdateMode(com.sap.cloud.mobile.odata.UpdateMode)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../updatemode/index.html"><span class="identifier">UpdateMode</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set determines if updates use merge (HTTP PATCH) or replace (HTTP PUT) semantics. Defaults to merge semantics.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

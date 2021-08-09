@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UsageReporter.report - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.usage</a>&nbsp;/&nbsp;<a href="index.html">UsageReporter</a>&nbsp;/&nbsp;<a href="./report.html">report</a><br/>
+<br/>
+<h1>report</h1>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageRecord((kotlin.Enum((kotlin.Enum(()))))))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">report</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageRecord((kotlin.Enum((kotlin.Enum(()))))))/record">record</span><span class="symbol">:</span>&nbsp;<a href="../usagerecord/index.html"><span class="identifier">UsageRecord</span></a><span class="symbol">&lt;</span><span class="identifier">Enum</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Persists a UsageRecord if the reporter is enabled. The record will be discarded if the reporter is disabled.</p>
+<h3>Parameters</h3>
+<p><a name="record"></a>
+<code>record</code> - <a href="../usagerecord/index.html"><span class="identifier">UsageRecord</span></a><span class="symbol">&lt;</span><span class="identifier">Enum</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">:</span> a usage record</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageReporter.report.T, java.util.Date, com.sap.cloud.mobile.foundation.usage.UsageInfo)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Enum</span><span class="symbol">&lt;</span><a href="report.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">report</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageReporter.report.T, java.util.Date, com.sap.cloud.mobile.foundation.usage.UsageInfo)/event">event</span><span class="symbol">:</span>&nbsp;<a href="report.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageReporter.report.T, java.util.Date, com.sap.cloud.mobile.foundation.usage.UsageInfo)/date">date</span><span class="symbol">:</span>&nbsp;<span class="identifier">Date</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageReporter.report.T, java.util.Date, com.sap.cloud.mobile.foundation.usage.UsageInfo)/info">info</span><span class="symbol">:</span>&nbsp;<a href="../usageinfo/index.html"><span class="identifier">UsageInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Creates a UsageRecord with the user-defined event type, date, and UsageInfo, then persists the record.</p>
+<h3>Parameters</h3>
+<p><a name="event"></a>
+<code>event</code> - <a href="report.html#T"><span class="identifier">T</span></a><span class="symbol">:</span> an instance of user defined <code><a href="#">Enum</a></code> event type</p>
+<p><a name="date"></a>
+<code>date</code> - <span class="identifier">Date</span><span class="symbol">:</span> a date</p>
+<p><a name="info"></a>
+<code>info</code> - <a href="../usageinfo/index.html"><span class="identifier">UsageInfo</span></a><span class="symbol">:</span> an instance of UsageInfo</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageRecord((kotlin.Enum((kotlin.Enum(()))))))"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">report</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageRecord((kotlin.Enum((kotlin.Enum(()))))))/record">record</span><span class="symbol">:</span>&nbsp;<a href="../usagerecord/index.html"><span class="identifier">UsageRecord</span></a><span class="symbol">&lt;</span><span class="identifier">Enum</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Persists a UsageRecord if the reporter is enabled. The record will be discarded if the reporter is disabled.</p>
+<h3>Parameters</h3>
+<p><a name="record"></a>
+<code>record</code> - <a href="../usagerecord/index.html"><span class="identifier">UsageRecord</span></a><span class="symbol">&lt;</span><span class="identifier">Enum</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">:</span> a usage record</p>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageReporter.report.T, java.util.Date, com.sap.cloud.mobile.foundation.usage.UsageInfo)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Enum</span><span class="symbol">&lt;</span><a href="report.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">report</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageReporter.report.T, java.util.Date, com.sap.cloud.mobile.foundation.usage.UsageInfo)/event">event</span><span class="symbol">:</span>&nbsp;<a href="report.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageReporter.report.T, java.util.Date, com.sap.cloud.mobile.foundation.usage.UsageInfo)/date">date</span><span class="symbol">:</span>&nbsp;<span class="identifier">Date</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageReporter$report(com.sap.cloud.mobile.foundation.usage.UsageReporter.report.T, java.util.Date, com.sap.cloud.mobile.foundation.usage.UsageInfo)/info">info</span><span class="symbol">:</span>&nbsp;<a href="../usageinfo/index.html"><span class="identifier">UsageInfo</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Creates a UsageRecord with the user-defined event type, date, and UsageInfo, then persists the record.</p>
+<h3>Parameters</h3>
+<p><a name="event"></a>
+<code>event</code> - <a href="report.html#T"><span class="identifier">T</span></a><span class="symbol">:</span> an instance of user defined <code><a href="#">Enum</a></code> event type</p>
+<p><a name="date"></a>
+<code>date</code> - <span class="identifier">Date</span><span class="symbol">:</span> a date</p>
+<p><a name="info"></a>
+<code>info</code> - <a href="../usageinfo/index.html"><span class="identifier">UsageInfo</span></a><span class="symbol">:</span> an instance of UsageInfo</p>
+</BODY>
+</HTML>

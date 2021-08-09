@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StringSet - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">StringSet</a><br/>
+<br/>
+<h1>StringSet</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StringSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../setbase/index.html"><span class="identifier">SetBase</span></a></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">StringSet</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>See StringSet(int).</p>
+<code><span class="identifier">StringSet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StringSet$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new set with <code><a href="../setbase/size.html">StringSet.size</a></code> of zero and optional initial <code>capacity</code>. A set can expand in size beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the set's maximum size.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">StringSet</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StringSet$add(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add <code>value</code> to this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addthis.html">addThis</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addThis</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StringSet$addThis(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">StringSet</span></a></code>
+<p>Add <code>value</code> to this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StringSet$delete(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Delete <code>value</code> from this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="has.html">has</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">has</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StringSet$has(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this set contains <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortedvalues.html">sortedValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortedValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringlist/index.html"><span class="identifier">StringList</span></a></code>
+<p>Return the sorted values of this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="values.html">values</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">values</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringlist/index.html"><span class="identifier">StringList</span></a></code>
+<p>Return a list of the values in this set.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../setbase/clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all values from this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../setbase/getuntypedset.html">getUntypedSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUntypedSet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/untypedset/index.html"><span class="identifier">UntypedSet</span></a></code>
+<p>Return the underlying untyped set. Use with care, avoiding the addition of objects with an incorrect value type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../setbase/isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this set contains no values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../setbase/size.html">size</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of values in this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../setbase/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

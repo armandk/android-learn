@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProviderDelegate - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataProviderDelegate</a><br/>
+<br/>
+<h1>OfflineODataProviderDelegate</h1>
+<code><span class="keyword">interface </span><span class="identifier">OfflineODataProviderDelegate</span></code>
+<p>A delegate used to get progress updates while an OfflineODataProvider is opening, downloading, uploading, and sending the store to server, and to get information about requests that fail during an upload.</p>
+<p><strong>See Also</strong><br/>
+OfflineODataProvider#OfflineODataProvider(URL, OfflineODataParameters, OkHttpClient, OfflineODataProviderDelegate)OfflineODataProvider#OfflineODataProvider(URL, OfflineODataParameters, OkHttpClient, SslClientAuth, OfflineODataProviderDelegate)</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcloudprogresspullinterval.html">getCloudProgressPullInterval</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCloudProgressPullInterval</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>The interval to pull progress status from cloud side in milliseonds. Default is 2000ms.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updatedownloadprogress.html">updateDownloadProgress</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">updateDownloadProgress</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateDownloadProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDownloadProgress)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprovider/index.html"><span class="identifier">OfflineODataProvider</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateDownloadProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDownloadProgress)/progress">progress</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataproviderdownloadprogress/index.html"><span class="identifier">OfflineODataProviderDownloadProgress</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Called every time there is an update while the provider is downloading.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updatefailedrequest.html">updateFailedRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">updateFailedRequest</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateFailedRequest(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprovider/index.html"><span class="identifier">OfflineODataProvider</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateFailedRequest(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatafailedrequest/index.html"><span class="identifier">OfflineODataFailedRequest</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Called once for each request that fails against the OData backend during an upload. Note that the upload operation will report a successful result even if some requests have failed against the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updateopenprogress.html">updateOpenProgress</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">updateOpenProgress</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateOpenProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprovider/index.html"><span class="identifier">OfflineODataProvider</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateOpenProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress)/progress">progress</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprovideroperationprogress/index.html"><span class="identifier">OfflineODataProviderOperationProgress</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Called every time there is an update while the provider is opening.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updatesendstoreprogress.html">updateSendStoreProgress</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">updateSendStoreProgress</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateSendStoreProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprovider/index.html"><span class="identifier">OfflineODataProvider</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateSendStoreProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress)/progress">progress</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprovideroperationprogress/index.html"><span class="identifier">OfflineODataProviderOperationProgress</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Called every time there is an update while the provider is sending the offline store to server.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updateuploadprogress.html">updateUploadProgress</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">updateUploadProgress</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateUploadProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprovider/index.html"><span class="identifier">OfflineODataProvider</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate$updateUploadProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress)/progress">progress</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprovideroperationprogress/index.html"><span class="identifier">OfflineODataProviderOperationProgress</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Called every time there is an update while the provider is uploading.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

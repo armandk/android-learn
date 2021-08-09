@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SparseIndexMap - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">SparseIndexMap</a><br/>
+<br/>
+<h1>SparseIndexMap</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SparseIndexMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../intarray/index.html"><span class="identifier">IntArray</span></a></code>
+<p>Array from <code>Property.id</code> to sparse index. Used to implement sparse arrays for memory-optimized <code>StrutureBase</code> property storage. For example, a sparse array may be used when a query returning many entities only populates a few properties of each entity, even though the entity type has many properties.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SparseIndexMap</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SparseIndexMap$<init>(kotlin.Int, kotlin.Int)/sparseLength">sparseLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SparseIndexMap$<init>(kotlin.Int, kotlin.Int)/targetLength">targetLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new sparse index map.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../intarray/empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="../intarray/index.html"><span class="identifier">IntArray</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getsparselength.html">getSparseLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSparseLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return number of sparse indexes. For example, if a query (for an entity with 10 properties) only selects 2 properties, the sparse length will be 2.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsparselength.html">setSparseLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSparseLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SparseIndexMap$setSparseLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set number of sparse indexes. For example, if a query (for an entity with 10 properties) only selects 2 properties, the sparse length will be 2.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../intarray/get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.IntArray$get(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the element of this array at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../intarray/length.html">length</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">length</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return length of the array.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../intarray/set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.IntArray$set(kotlin.Int, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.IntArray$set(kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the element of this buffer at <code>index</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

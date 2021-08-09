@@ -1,0 +1,188 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonToken - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">JsonToken</a><br/>
+<br/>
+<h1>JsonToken</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">JsonToken</span></code>
+<p>Abstract base class for <a href="http://json.org">JSON</a> tokens (null, boolean, number, string, and punctuation characters).</p>
+ See Also: 
+<p><code><a href="../jsonbooleantoken/index.html">com.sap.cloud.mobile.odata.json.JsonBooleanToken</a></code>, <code><a href="../jsonnumbertoken/index.html">com.sap.cloud.mobile.odata.json.JsonNumberToken</a></code>, <code><a href="../jsonstringtoken/index.html">com.sap.cloud.mobile.odata.json.JsonStringToken</a></code>, <code><a href="../jsontokenstream/index.html">com.sap.cloud.mobile.odata.json.JsonTokenStream</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">JsonToken</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Abstract base class for <a href="http://json.org">JSON</a> tokens (null, boolean, number, string, and punctuation characters).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="begin_array.html">BEGIN_ARRAY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BEGIN_ARRAY</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for '[' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="begin_object.html">BEGIN_OBJECT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BEGIN_OBJECT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for '{' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="boolean_value.html">BOOLEAN_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BOOLEAN_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for boolean token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="colon_char.html">COLON_CHAR</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLON_CHAR</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for ':' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="comma_char.html">COMMA_CHAR</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COMMA_CHAR</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for ',' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="end_array.html">END_ARRAY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">END_ARRAY</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for ']' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="end_object.html">END_OBJECT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">END_OBJECT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for '}' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="end_stream.html">END_STREAM</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">END_STREAM</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for stream end.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="null_value.html">NULL_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">NULL_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for <code>null</code> token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="number_value.html">NUMBER_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">NUMBER_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for number token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="string_value.html">STRING_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STRING_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for string token.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return type of token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../jsonbooleantoken/index.html">JsonBooleanToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonBooleanToken</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">JsonToken</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> boolean token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonnumbertoken/index.html">JsonNumberToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonNumberToken</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">JsonToken</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> number token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonstringtoken/index.html">JsonStringToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonStringToken</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">JsonToken</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> string token.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.clear - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./clear.html">clear</a><br/>
+<br/>
+<h1>clear</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$clear()"></a>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Deletes the physical store from the file system. </p>
+<p> This method will close the OfflineODataProvider before attempting to delete the physical store. </p>
+<p> Note that, this will also clear any information about the defining queries. Therefore, before opening again, any defining queries required for the initial download will need to be respecified.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs removing the store.</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$clear(kotlin.String)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$clear(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Deletes the physical store from the file system. All instances of the OfflineODataProvider must be closed before it can be deleted. </p>
+<p> This method depends on Android Context from AndroidSystem.</p>
+<h3>Parameters</h3>
+<p><a name="name"></a>
+<code>name</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> the name of the store. If null, the default store name is used.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs removing the store.</p>
+<p><strong>See Also</strong><br/>
+com.sap.cloud.mobile.odata.core.AndroidSystem</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$clear(java.net.URL, kotlin.String)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$clear(java.net.URL, kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$clear(java.net.URL, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Deletes the physical store from the file system. All instances of the OfflineODataProvider must be closed before it can be deleted. </p>
+<p> This method depends on Android Context from AndroidSystem.</p>
+<h3>Parameters</h3>
+<p><a name="path"></a>
+<code>path</code> - <span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">:</span> the path of the local data store ( file:/storage/sdcard/... ). If null, the default location is where the application is installed.</p>
+<p><a name="name"></a>
+<code>name</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> the name of the store. If null, the default store name is used.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs removing the store.</p>
+<p><strong>See Also</strong><br/>
+com.sap.cloud.mobile.odata.core.AndroidSystem</p>
+</BODY>
+</HTML>

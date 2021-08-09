@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataDelegate.updateDownloadProgress - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataDelegate</a>&nbsp;/&nbsp;<a href="./updatedownloadprogress.html">updateDownloadProgress</a><br/>
+<br/>
+<h1>updateDownloadProgress</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataDelegate$updateDownloadProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProgress)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateDownloadProgress</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataDelegate$updateDownloadProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProgress)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprovider/index.html"><span class="identifier">OfflineODataProvider</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataDelegate$updateDownloadProgress(com.sap.cloud.mobile.odata.offline.OfflineODataProvider, com.sap.cloud.mobile.odata.offline.OfflineODataProgress)/progress">progress</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataprogress/index.html"><span class="identifier">OfflineODataProgress</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Called every time there is an update while the provider is performing a download. Generally the Offline OData framework and mobile service communicate through a sequence of proprietary commands while performing a download. This is the typical communication when performing a download to retrieve the delta from the backend. This function updates the progress of that communication. During the download processing, mobile services MAY decide to send a new offline store in its entirety via a file download. See <code><a href="updatefiledownloadprogress.html">OfflineODataDelegate#updateFileDownloadProgress</a></code> for the progress on the file transfer.</p>
+<h3>Parameters</h3>
+<p><a name="provider"></a>
+<code>provider</code> - <a href="../offlineodataprovider/index.html"><span class="identifier">OfflineODataProvider</span></a><span class="symbol">!</span><span class="symbol">:</span> the OfflineODataProvider which download progress has been updated.</p>
+<p><a name="progress"></a>
+<code>progress</code> - <a href="../offlineodataprogress/index.html"><span class="identifier">OfflineODataProgress</span></a><span class="symbol">!</span><span class="symbol">:</span> the progress to be updated.</p>
+<p><strong>See Also</strong><br/>
+<a href="../offlineodataprovider/download.html">OfflineODataProvider#download(Action0, Action1)</a><a href="../offlineodataprovider/download.html">OfflineODataProvider#download(List, Action0, Action1)</a><a href="../offlineodataprovider/open.html">OfflineODataProvider#open(Action0, Action1)</a><a href="updatefiledownloadprogress.html">#updateFileDownloadProgress(OfflineODataProvider, OfflineODataFileDownloadProgress)</a></p>
+</BODY>
+</HTML>

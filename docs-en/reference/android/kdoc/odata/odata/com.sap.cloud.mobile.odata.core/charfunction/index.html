@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CharFunction - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">CharFunction</a><br/>
+<br/>
+<h1>CharFunction</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CharFunction</span></code>
+<p>Basic functions for type <code>char</code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CharFunction</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Basic functions for type <code>char</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="isdigit.html">isDigit</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isDigit</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$isDigit(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a valid decimal digit (0..9), otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ishexdigit.html">isHexDigit</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isHexDigit</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$isHexDigit(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a valid hexadecimal digit (0..9, a..f, A..F), otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islowercase.html">isLowerCase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLowerCase</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$isLowerCase(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is a lower-case character, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isunreservedinuri.html">isUnreservedInURI</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isUnreservedInURI</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$isUnreservedInURI(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is unreserved in a URI.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isuppercase.html">isUpperCase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isUpperCase</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$isUpperCase(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is an upper-case character, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iswhitespace.html">isWhitespace</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isWhitespace</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$isWhitespace(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is whitespace according to the definition of JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim">String.prototype.trim</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tolowercase.html">toLowerCase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toLowerCase</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$toLowerCase(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Char</span></code>
+<p>Return <code>value</code> converted to lower-case.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$toString(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> converted to string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="touppercase.html">toUpperCase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toUpperCase</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$toUpperCase(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Char</span></code>
+<p>Return <code>value</code> converted to upper-case.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unicodeplus.html">unicodePlus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">unicodePlus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharFunction$unicodePlus(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return character formatted as Unicode "{U+XXXX}", where "XXXX" is hexadecimal encoding.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

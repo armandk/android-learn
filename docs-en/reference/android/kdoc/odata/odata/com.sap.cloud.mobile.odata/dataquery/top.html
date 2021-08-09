@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.top - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./top.html">top</a><br/>
+<br/>
+<h1>top</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$top(kotlin.Int)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">top</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$top(kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="gettopcount.html">DataQuery.topCount</a></code> to specify the maximum number of results to return. </p>
+Example using proxy classes:<pre><code>
+      public void queryWithTopExample() {
+          NorthwindService service = this.getService();
+          DataQuery query = new DataQuery().top(10);
+          List&lt;Customer&gt; customers = service.getCustomers(query);
+          this.showCustomers(customers);
+          assert customers.size() == 10;
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void queryWithTopExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          DataQuery query = new DataQuery().from(customersEntitySet).top(10);
+          EntityValueList customers = service.executeQuery(query).getEntityList();
+          this.showCustomers(customers);
+          assert customers.length() == 10;
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="count"></a>
+<code>count</code> - <span class="identifier">Int</span><span class="symbol">:</span> Maximum number of results for query execution to return.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/FioriTheme"
+    tools:context=".ui.add_task.AddNewTaskFragment"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/addNewTaskToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:iconTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_close_button"
+                app:title="@string/add_task_title"
+                app:titleTextColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/addNewTaskEditButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:text="@string/save_text_button"
+                android:textColor="@color/FioriAppBarText"
+                android:textSize="@dimen/button_default_text_size"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/addNewTaskToolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.578"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/addNewTaskScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="14dp"
+            android:paddingBottom="60dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/add_task_type"
+                    style="@style/TextAppearance.Fiori.KeyValueCell.Key"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.sap.cloud.mobile.fiori.formcell.ChoiceFormCell
+                            android:id="@+id/addNewTaskTypeOption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/add_task_type_options"
+                            app:allowDeselect="true"
+                            app:key="@string/add_task_type"
+                            app:keyEnabled="false"
+                            app:singleLine="true"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/addNewTaskProductOutStockChip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:layout_marginTop="5dp"
+                            android:paddingVertical="3dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="@string/product_out_of_stock"
+                            android:textColor="@color/chip_text_color"
+                            app:chipBackgroundColor="@color/chip_background_color"
+                            />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/addNewTaskProductRestockChip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:layout_marginTop="5dp"
+                            android:paddingVertical="3dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="@string/product_restock"
+                            android:textColor="@color/chip_text_color"
+                            app:chipBackgroundColor="@color/chip_background_color"
+                            />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                />
+
+            <com.sap.cloud.mobile.fiori.formcell.NoteFormCell
+                android:id="@+id/addNewTaskDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                app:key="@string/add_task_description"
+                />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                />
+
+            <com.sap.cloud.mobile.fiori.formcell.ChoiceFormCell
+                android:id="@+id/addNewTaskAssignee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:key="@string/add_task_assignee"
+                app:keyEnabled="true"
+                app:singleLine="true"
+                />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                />
+
+            <com.sap.cloud.mobile.fiori.formcell.ChoiceFormCell
+                android:id="@+id/addNewTaskPriorityOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/add_task_priority_options"
+                app:allowDeselect="true"
+                app:key="@string/add_task_priority"
+                app:keyEnabled="true"
+                app:singleLine="true"
+                />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                />
+
+            <com.sap.cloud.mobile.fiori.formcell.DateTimePickerFormCell
+                android:id="@+id/addNewTaskDueDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dateTimePickerMode="date"
+                app:key="DUE DATE"
+                />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                />
+
+            <com.sap.cloud.mobile.fiori.formcell.ChoiceFormCell
+                android:id="@+id/addNewTaskDueTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/add_task_due_time_options"
+                app:key="@string/add_task_due_time"
+                app:value="0"
+                app:keyEnabled="true"
+                app:singleLine="true"
+                />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                />
+
+            <com.sap.cloud.mobile.fiori.formcell.GenericListPickerFormCell
+                android:id="@+id/addNewTaskProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:activityTitle="Select Products"
+                app:displayValue="Select Products"
+                app:key="@string/add_task_products"
+                app:value="@array/add_task_type_options"
+                />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.sap.cloud.mobile.fiori.footer.PersistentFooter
+        android:id="@+id/addNewTaskFooterButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:actionMode="opposing_actions"
+        app:dividerEnabled="true"
+        app:primaryButtonText="CREATE"
+        app:secondaryButtonText="CANCEL"
+        />
+
+</LinearLayout>

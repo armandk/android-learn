@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.foundation.settings - foundation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">foundation</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.foundation.settings</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.foundation.settings</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clientpolicyservice/index.html">ClientPolicyService</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ClientPolicyService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the service to retrieve all client policies from server, like passcode, log settings,
+usage policy, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="customsettingsservice/index.html">CustomSettingsService</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CustomSettingsService</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">R</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html"><span class="identifier">CustomSettingsEntity</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the service to deal with custom setting exchanges, loading/storing/updating/deleting
+custom settings. All operations will need an instance of <a href="../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html">CustomSettingsEntity</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settings/index.html">Settings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">Settings</span></s></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">Settings</span></s></code>
+<p>SAP cloud mobile Settings class provides an API interface to get the application connection settings from the server and also to update these settings. This class is initialized with the information about an application url for the settings information. The settings object can be considered as a key value repository. Value can be got and set. The <code><a href="settings/load.html">Settings#load</a></code> and <code><a href="#">Settings#update(SettingTarget, String, JSONObject, CallbackUpdateListener)</a></code> will get the value from the server and update the value at the server. The <code><a href="settings/delete.html">Settings#delete(String, CallbackListener)</a></code> will is used to delete existing settings values. Deprecated since 3.2, replaced with <code><a href="clientpolicyservice/index.html">ClientPolicyService</a></code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settingservice/index.html">SettingService</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">SettingService</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">SettingService</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>auto download setting from server when app from background to foreground Deprecated since 3.2, replaced with <code><a href="clientpolicyservice/index.html">ClientPolicyService</a></code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shareddeviceservice/index.html">SharedDeviceService</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SharedDeviceService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the service to retrieve shared device settings, encryption key for offline database
+initialization, etc.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shareddevicesettings/index.html">SharedDeviceSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">SharedDeviceSettings</span></code>
+<p>Represents the data model related to shared device settings.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

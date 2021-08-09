@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsrfTokenInterceptor.<init> - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.networking</a>&nbsp;/&nbsp;<a href="index.html">CsrfTokenInterceptor</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$&lt;init&gt;(kotlin.String)"></a>
+<code><span class="identifier">CsrfTokenInterceptor</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(kotlin.String)/rootUrl">rootUrl</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span></code>
+<p>Constructs a new CsrfTokenInterceptor with one root URL. Use if you have only one root URL for every CSRF token request.</p>
+<h3>Parameters</h3>
+<p><a name="rootUrl"></a>
+<code>rootUrl</code> - <span class="identifier">String</span><span class="symbol">:</span> The URL from which the CSRF token will be requested.</p>
+<a name="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$&lt;init&gt;(kotlin.String, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)"></a>
+<code><span class="identifier">CsrfTokenInterceptor</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(kotlin.String, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)/rootUrl">rootUrl</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(kotlin.String, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)/store">store</span><span class="symbol">:</span>&nbsp;<span class="identifier">CsrfTokenStore</span><span class="symbol">)</span></code>
+<p>Constructs a new CsrfTokenInterceptor with one root URL. Use if you have only one root URL for every CSRF token request.</p>
+<h3>Parameters</h3>
+<p><a name="rootUrl"></a>
+<code>rootUrl</code> - <span class="identifier">String</span><span class="symbol">:</span> The URL from which the CSRF token will be requested.</p>
+<p><a name="store"></a>
+<code>store</code> - <span class="identifier">CsrfTokenStore</span><span class="symbol">:</span> The store which the token will be persisted to.</p>
+<a name="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$&lt;init&gt;(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider)"></a>
+<code><span class="identifier">CsrfTokenInterceptor</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider)/urlProvider">urlProvider</span><span class="symbol">:</span>&nbsp;<span class="identifier">CsrfTokenUrlProvider</span><span class="symbol">)</span></code>
+<p>Constructs a new CsrfTokenInterceptor. Use if you have multiple backends and the backends accept different CSRF tokens. By default the tokens will be stored by host and port in memory.</p>
+<h3>Parameters</h3>
+<p><a name="urlProvider"></a>
+<code>urlProvider</code> - <span class="identifier">CsrfTokenUrlProvider</span><span class="symbol">:</span> The CsrfTokenUrlProvider implementation which provides the CSRF URL for every request URL which are protected with CSRF.</p>
+<a name="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$&lt;init&gt;(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)"></a>
+<code><span class="identifier">CsrfTokenInterceptor</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)/urlProvider">urlProvider</span><span class="symbol">:</span>&nbsp;<span class="identifier">CsrfTokenUrlProvider</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)/store">store</span><span class="symbol">:</span>&nbsp;<span class="identifier">CsrfTokenStore</span><span class="symbol">)</span></code>
+<p>Constructs a new CsrfTokenInterceptor. Use if you have multiple backends and the backends accept different CSRF tokens.</p>
+<h3>Parameters</h3>
+<p><a name="urlProvider"></a>
+<code>urlProvider</code> - <span class="identifier">CsrfTokenUrlProvider</span><span class="symbol">:</span> The CsrfTokenUrlProvider implementation which provides the CSRF URL for every request URL which are protected with CSRF.</p>
+<p><a name="store"></a>
+<code>store</code> - <span class="identifier">CsrfTokenStore</span><span class="symbol">:</span> The store which the token will be persisted to.</p>
+<a name="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$&lt;init&gt;(kotlin.String)"></a>
+<code><span class="identifier">CsrfTokenInterceptor</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(kotlin.String)/rootUrl">rootUrl</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span></code>
+<p>Constructs a new CsrfTokenInterceptor with one root URL. Use if you have only one root URL for every CSRF token request.</p>
+<h3>Parameters</h3>
+<p><a name="rootUrl"></a>
+<code>rootUrl</code> - <span class="identifier">String</span><span class="symbol">:</span> The URL from which the CSRF token will be requested.</p>
+<a name="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$&lt;init&gt;(kotlin.String, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)"></a>
+<code><span class="identifier">CsrfTokenInterceptor</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(kotlin.String, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)/rootUrl">rootUrl</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(kotlin.String, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)/store">store</span><span class="symbol">:</span>&nbsp;<span class="identifier">CsrfTokenStore</span><span class="symbol">)</span></code>
+<p>Constructs a new CsrfTokenInterceptor with one root URL. Use if you have only one root URL for every CSRF token request.</p>
+<h3>Parameters</h3>
+<p><a name="rootUrl"></a>
+<code>rootUrl</code> - <span class="identifier">String</span><span class="symbol">:</span> The URL from which the CSRF token will be requested.</p>
+<p><a name="store"></a>
+<code>store</code> - <span class="identifier">CsrfTokenStore</span><span class="symbol">:</span> The store which the token will be persisted to.</p>
+<a name="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$&lt;init&gt;(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider)"></a>
+<code><span class="identifier">CsrfTokenInterceptor</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider)/urlProvider">urlProvider</span><span class="symbol">:</span>&nbsp;<span class="identifier">CsrfTokenUrlProvider</span><span class="symbol">)</span></code>
+<p>Constructs a new CsrfTokenInterceptor. Use if you have multiple backends and the backends accept different CSRF tokens. By default the tokens will be stored by host and port in memory.</p>
+<h3>Parameters</h3>
+<p><a name="urlProvider"></a>
+<code>urlProvider</code> - <span class="identifier">CsrfTokenUrlProvider</span><span class="symbol">:</span> The CsrfTokenUrlProvider implementation which provides the CSRF URL for every request URL which are protected with CSRF.</p>
+<a name="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$&lt;init&gt;(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)"></a>
+<code><span class="identifier">CsrfTokenInterceptor</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)/urlProvider">urlProvider</span><span class="symbol">:</span>&nbsp;<span class="identifier">CsrfTokenUrlProvider</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.networking.CsrfTokenInterceptor$<init>(com.sap.cloud.mobile.foundation.networking.CsrfTokenUrlProvider, com.sap.cloud.mobile.foundation.networking.CsrfTokenStore)/store">store</span><span class="symbol">:</span>&nbsp;<span class="identifier">CsrfTokenStore</span><span class="symbol">)</span></code>
+<p>Constructs a new CsrfTokenInterceptor. Use if you have multiple backends and the backends accept different CSRF tokens.</p>
+<h3>Parameters</h3>
+<p><a name="urlProvider"></a>
+<code>urlProvider</code> - <span class="identifier">CsrfTokenUrlProvider</span><span class="symbol">:</span> The CsrfTokenUrlProvider implementation which provides the CSRF URL for every request URL which are protected with CSRF.</p>
+<p><a name="store"></a>
+<code>store</code> - <span class="identifier">CsrfTokenStore</span><span class="symbol">:</span> The store which the token will be persisted to.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,1299 @@
+<api>
+<package name="com.sap.cloud.mobile.fiori.maps.esri"
+>
+<class name="EsriFioriMapView"
+ extends="com.sap.cloud.mobile.fiori.maps.FioriMapView"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EsriFioriMapView"
+ type="com.sap.cloud.mobile.fiori.maps.esri.EsriFioriMapView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</constructor>
+<constructor name="EsriFioriMapView"
+ type="com.sap.cloud.mobile.fiori.maps.esri.EsriFioriMapView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="attrs" type="android.util.AttributeSet">
+</parameter>
+</constructor>
+<method name="getMap"
+ return="com.esri.arcgisruntime.mapping.ArcGISMap"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMapView"
+ return="com.esri.arcgisruntime.mapping.view.MapView"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="locationPermissionGranted"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestCode" type="int">
+</parameter>
+</method>
+<method name="onDestroy"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onPause"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onResume"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="panCameraWhenNecessary"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="restoreMarkerSelection"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="setActionProvider"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="mapActionProvider" type="com.sap.cloud.mobile.fiori.maps.esri.EsriMapActionProvider">
+</parameter>
+</method>
+<method name="setMap"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="map" type="com.esri.arcgisruntime.mapping.ArcGISMap">
+</parameter>
+</method>
+<method name="showPoint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="point" type="android.graphics.Point">
+</parameter>
+</method>
+</class>
+<class name="EsriMapActionProvider"
+ extends="com.sap.cloud.mobile.fiori.maps.MapActionProvider"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EsriMapActionProvider"
+ type="com.sap.cloud.mobile.fiori.maps.esri.EsriMapActionProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="esriFioriMapView" type="com.sap.cloud.mobile.fiori.maps.esri.EsriFioriMapView">
+</parameter>
+<parameter name="fragment" type="androidx.fragment.app.Fragment">
+</parameter>
+</constructor>
+<constructor name="EsriMapActionProvider"
+ type="com.sap.cloud.mobile.fiori.maps.esri.EsriMapActionProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="esriFioriMapView" type="com.sap.cloud.mobile.fiori.maps.esri.EsriFioriMapView">
+</parameter>
+<parameter name="fragmentActivity" type="androidx.fragment.app.FragmentActivity">
+</parameter>
+</constructor>
+<method name="addCircle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="circleOptions" type="com.sap.cloud.mobile.fiori.maps.FioriCircleOptions">
+</parameter>
+</method>
+<method name="addMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="markerOptions" type="com.sap.cloud.mobile.fiori.maps.FioriMarkerOptions">
+</parameter>
+</method>
+<method name="addPolygon"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="polygonOptions" type="com.sap.cloud.mobile.fiori.maps.FioriPolygonOptions">
+</parameter>
+</method>
+<method name="addPolyline"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="polylineOptions" type="com.sap.cloud.mobile.fiori.maps.FioriPolylineOptions">
+</parameter>
+</method>
+<method name="clear"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="cluster"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="deleteCircle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="circleOptions" type="com.sap.cloud.mobile.fiori.maps.FioriCircleOptions">
+</parameter>
+</method>
+<method name="deleteMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="markerOptions" type="com.sap.cloud.mobile.fiori.maps.FioriMarkerOptions">
+</parameter>
+</method>
+<method name="deletePolygon"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="polygonOptions" type="com.sap.cloud.mobile.fiori.maps.FioriPolygonOptions">
+</parameter>
+</method>
+<method name="deletePolyline"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="polylineOptions" type="com.sap.cloud.mobile.fiori.maps.FioriPolylineOptions">
+</parameter>
+</method>
+<method name="doExtentsAction"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="doLocationAction"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hideLayer"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="layer" type="java.lang.String">
+</parameter>
+</method>
+<method name="onRequestPermissionsResult"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestCode" type="int">
+</parameter>
+<parameter name="permissions" type="java.lang.String[]">
+</parameter>
+<parameter name="grantResults" type="int[]">
+</parameter>
+</method>
+<method name="removeAllOverlays"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="removeLocation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="returnToList"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="selectMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="markerOptions" type="com.sap.cloud.mobile.fiori.maps.FioriMarkerOptions">
+</parameter>
+</method>
+<method name="setClustering"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clusteringEnabled" type="boolean">
+</parameter>
+</method>
+<method name="showLayer"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="layer" type="java.lang.String">
+</parameter>
+</method>
+<field name="esriFioriMapView"
+ type="com.sap.cloud.mobile.fiori.maps.esri.EsriFioriMapView"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="mContextWeakReference"
+ type="java.lang.ref.WeakReference"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="markerClusterer"
+ type="com.sap.cloud.mobile.fiori.maps.esri.MarkerClusterer"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="EsriMapTouchListener"
+ extends="com.esri.arcgisruntime.mapping.view.DefaultMapViewOnTouchListener"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EsriMapTouchListener"
+ type="com.sap.cloud.mobile.fiori.maps.esri.EsriMapTouchListener"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="mapView" type="com.esri.arcgisruntime.mapping.view.MapView">
+</parameter>
+<parameter name="viewModel" type="com.sap.cloud.mobile.fiori.maps.esri.EsriMapViewModel">
+</parameter>
+<parameter name="actionProvider" type="com.sap.cloud.mobile.fiori.maps.esri.EsriMapActionProvider">
+</parameter>
+</constructor>
+</class>
+<class name="EsriMapViewModel"
+ extends="com.sap.cloud.mobile.fiori.maps.MapViewModel"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EsriMapViewModel"
+ type="com.sap.cloud.mobile.fiori.maps.esri.EsriMapViewModel"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getViewpoint"
+ return="com.esri.arcgisruntime.mapping.Viewpoint"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="MarkerClusterer"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.esri.arcgisruntime.mapping.view.MapScaleChangedListener">
+</implements>
+<method name="dispose"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="mapScaleChanged"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="mapScaleChangedEvent" type="com.esri.arcgisruntime.mapping.view.MapScaleChangedEvent">
+</parameter>
+</method>
+<method name="recluster"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setClusteringEnabled"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clusteringEnabled" type="boolean">
+</parameter>
+</method>
+<method name="setOnClusterChangedListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.esri.MarkerClusterer.OnClusterChangedListener">
+</parameter>
+</method>
+</class>
+<interface name="MarkerClusterer.OnClusterChangedListener"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClusterChanged"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="R"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="R"
+ type="com.sap.cloud.mobile.fiori.maps.esri.R"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
+<class name="R.attr"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="attr"
+ type="com.sap.cloud.mobile.fiori.maps.esri.R.attr"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="initialLatitude"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="initialLongitude"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="R.id"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="id"
+ type="com.sap.cloud.mobile.fiori.maps.esri.R.id"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="map"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="R.layout"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="layout"
+ type="com.sap.cloud.mobile.fiori.maps.esri.R.layout"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="esri_map_view"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="R.styleable"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="styleable"
+ type="com.sap.cloud.mobile.fiori.maps.esri.R.styleable"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="EsriFioriMapView"
+ type="int[]"
+ transient="false"
+ volatile="false"
+ value="null"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="EsriFioriMapView_initialLatitude"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="EsriFioriMapView_initialLongitude"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.esri.edit"
+>
+<class name="EsriAnnotationMarker"
+ extends="com.sap.cloud.mobile.fiori.maps.edit.AbstractAnnotationMarker"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</implements>
+<constructor name="EsriAnnotationMarker"
+ type="com.sap.cloud.mobile.fiori.maps.esri.edit.EsriAnnotationMarker"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="point" type="com.esri.arcgisruntime.geometry.Point">
+</parameter>
+<parameter name="isSelected" type="boolean">
+</parameter>
+<parameter name="containingOverlay" type="com.esri.arcgisruntime.mapping.view.GraphicsOverlay">
+</parameter>
+<parameter name="selectedBitmap" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="unselectedBitmap" type="android.graphics.Bitmap">
+</parameter>
+</constructor>
+<method name="branch"
+ return="com.sap.cloud.mobile.fiori.maps.esri.edit.EsriAnnotationMarker"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="drawGraphic"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getGraphic"
+ return="com.esri.arcgisruntime.mapping.view.Graphic"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPosition"
+ return="com.esri.arcgisruntime.geometry.Point"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="removeGraphic"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setPosition"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="point" type="com.esri.arcgisruntime.geometry.Point">
+</parameter>
+</method>
+<method name="setSelected"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="isSelected" type="boolean">
+</parameter>
+</method>
+<method name="toSexagesimalString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dest" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="CREATOR"
+ type="android.os.Parcelable.Creator"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="EsriMapEditor"
+ extends="com.sap.cloud.mobile.fiori.maps.edit.MapEditor"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EsriMapEditor"
+ type="com.sap.cloud.mobile.fiori.maps.esri.edit.EsriMapEditor"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fioriMapView" type="com.sap.cloud.mobile.fiori.maps.FioriMapView">
+</parameter>
+<parameter name="mapEditorViewModel" type="com.sap.cloud.mobile.fiori.maps.edit.MapEditorViewModel">
+</parameter>
+<parameter name="mapView" type="com.esri.arcgisruntime.mapping.view.MapView">
+</parameter>
+<parameter name="actionProvider" type="com.sap.cloud.mobile.fiori.maps.esri.EsriMapActionProvider">
+</parameter>
+<parameter name="editorView" type="com.sap.cloud.mobile.fiori.maps.edit.EditorView">
+</parameter>
+</constructor>
+<method name="addLocation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="fioriAddress" type="com.sap.cloud.mobile.fiori.maps.search.FioriAddress">
+</parameter>
+</method>
+<method name="addPoint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="position" type="com.esri.arcgisruntime.geometry.Point">
+</parameter>
+</method>
+<method name="changeEditType"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="newAnnotationType" type="com.sap.cloud.mobile.fiori.maps.edit.MapEditor.AnnotationType">
+</parameter>
+</method>
+<method name="clearCurrentEdit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="createAnnotationMarker"
+ return="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="position" type="com.esri.arcgisruntime.geometry.Point">
+</parameter>
+</method>
+<method name="getLineSegmentForPoint"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="points" type="java.util.List&lt;com.esri.arcgisruntime.geometry.Point&gt;">
+</parameter>
+<parameter name="point" type="com.esri.arcgisruntime.geometry.Point">
+</parameter>
+</method>
+<method name="getPoints"
+ return="java.util.List&lt;com.esri.arcgisruntime.geometry.Point&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="hideMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="annotationMarker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+</method>
+<method name="loadAddress"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="marker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+<parameter name="addressLoadedRunnable" type="java.lang.Runnable">
+</parameter>
+</method>
+<method name="locationPermissionGranted"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestCode" type="int">
+</parameter>
+</method>
+<method name="moveMarkerEdit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="startPosition" type="com.esri.arcgisruntime.geometry.Point">
+</parameter>
+<parameter name="endPosition" type="com.esri.arcgisruntime.geometry.Point">
+</parameter>
+<parameter name="marker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+</method>
+<method name="selectMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="marker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+</method>
+<method name="showExtents"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="showSelectedMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="teardownMapFromEditing"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="toFioriPoint"
+ return="com.sap.cloud.mobile.fiori.maps.FioriPoint"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="platformPointType" type="com.esri.arcgisruntime.geometry.Point">
+</parameter>
+</method>
+<method name="updateMap"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="updateMarkerIcon"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="marker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+<parameter name="selected" type="boolean">
+</parameter>
+</method>
+</class>
+<class name="EsriMapEditorViewModel"
+ extends="com.sap.cloud.mobile.fiori.maps.edit.MapEditorViewModel"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EsriMapEditorViewModel"
+ type="com.sap.cloud.mobile.fiori.maps.esri.edit.EsriMapEditorViewModel"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getAnnotationOverlay"
+ return="com.esri.arcgisruntime.mapping.view.GraphicsOverlay"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="switchOverlays"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="overlays" type="java.util.List&lt;com.esri.arcgisruntime.mapping.view.GraphicsOverlay&gt;">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.esri.search"
+>
+<class name="EsriSearchAgent"
+ extends="com.sap.cloud.mobile.fiori.maps.search.SearchAgent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EsriSearchAgent"
+ type="com.sap.cloud.mobile.fiori.maps.esri.search.EsriSearchAgent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="locatorTask" type="com.esri.arcgisruntime.tasks.geocode.LocatorTask">
+</parameter>
+</constructor>
+<method name="locationPermissionGranted"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestCode" type="int">
+</parameter>
+</method>
+<method name="lookupAddresses"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="query" type="java.lang.CharSequence">
+</parameter>
+</method>
+<method name="lookupLocation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+</api>

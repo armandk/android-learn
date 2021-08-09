@@ -1,0 +1,4284 @@
+<api>
+<package name="com.sap.cloud.mobile.odata.offline"
+>
+<class name="OfflineODataCustomHeader"
+ extends="com.sap.cloud.mobile.odata.EntityValue"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="android.os.Parcelable">
+</implements>
+<constructor name="OfflineODataCustomHeader"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="withDefaults" type="boolean">
+</parameter>
+<parameter name="withIndexMap" type="com.sap.cloud.mobile.odata.core.SparseIndexMap">
+</parameter>
+</constructor>
+<method name="copy"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHeaderID"
+ return="java.lang.Integer"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOld"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getValue"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="key"
+ return="com.sap.cloud.mobile.odata.EntityKey"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="headerID" type="java.lang.Integer">
+</parameter>
+</method>
+<method name="list"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="from" type="com.sap.cloud.mobile.odata.EntityValueList">
+</parameter>
+</method>
+<method name="setHeaderID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Integer">
+</parameter>
+</method>
+<method name="setName"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setValue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="out" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="headerID"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="name"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="value"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="OfflineODataDefiningQuery"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataDefiningQuery"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="query" type="com.sap.cloud.mobile.odata.DataQuery">
+</parameter>
+<parameter name="automaticallyRetrievesStreams" type="boolean">
+</parameter>
+</constructor>
+<constructor name="OfflineODataDefiningQuery"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="query" type="java.lang.String">
+</parameter>
+<parameter name="automaticallyRetrievesStreams" type="boolean">
+</parameter>
+</constructor>
+<method name="getIsRemoving"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQuery"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isAutomaticallyRetrievesStreams"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setIsRemoving"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OfflineODataDelegate"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataDelegate"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataDelegate"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="updateDownloadProgress"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="progress" type="com.sap.cloud.mobile.odata.offline.OfflineODataProgress">
+</parameter>
+</method>
+<method name="updateFailedRequest"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="request" type="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest">
+</parameter>
+</method>
+<method name="updateFileDownloadProgress"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="progress" type="com.sap.cloud.mobile.odata.offline.OfflineODataFileDownloadProgress">
+</parameter>
+</method>
+<method name="updateSendStoreProgress"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="progress" type="com.sap.cloud.mobile.odata.offline.OfflineODataSendStoreProgress">
+</parameter>
+</method>
+<method name="updateStoreState"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="state" type="com.sap.cloud.mobile.odata.offline.OfflineODataStoreState">
+</parameter>
+</method>
+<method name="updateUploadProgress"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="progress" type="com.sap.cloud.mobile.odata.offline.OfflineODataProgress">
+</parameter>
+</method>
+</class>
+<class name="OfflineODataErrorArchiveEntity"
+ extends="com.sap.cloud.mobile.odata.EntityValue"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="android.os.Parcelable">
+</implements>
+<constructor name="OfflineODataErrorArchiveEntity"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="withDefaults" type="boolean">
+</parameter>
+<parameter name="withIndexMap" type="com.sap.cloud.mobile.odata.core.SparseIndexMap">
+</parameter>
+</constructor>
+<method name="copy"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAffectedEntity"
+ return="com.sap.cloud.mobile.odata.EntityValue"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCode"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCustomHeaders"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCustomTag"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDependentRequests"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataRequest&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDomain"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHttpStatusCode"
+ return="java.lang.Integer"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInnerError"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOld"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestBody"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestEntity"
+ return="com.sap.cloud.mobile.odata.EntityValue"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestID"
+ return="java.lang.Long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestMethod"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestURL"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="key"
+ return="com.sap.cloud.mobile.odata.EntityKey"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestID" type="java.lang.Long">
+</parameter>
+</method>
+<method name="list"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="from" type="com.sap.cloud.mobile.odata.EntityValueList">
+</parameter>
+</method>
+<method name="setAffectedEntity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+</method>
+<method name="setCode"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setCustomHeaders"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader&gt;">
+</parameter>
+</method>
+<method name="setCustomTag"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setDependentRequests"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataRequest&gt;">
+</parameter>
+</method>
+<method name="setDomain"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setHttpStatusCode"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Integer">
+</parameter>
+</method>
+<method name="setInnerError"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setRequestBody"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setRequestEntity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+</method>
+<method name="setRequestID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Long">
+</parameter>
+</method>
+<method name="setRequestMethod"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setRequestURL"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="out" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="affectedEntity"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="code"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="customHeaders"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="customTag"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="dependentRequests"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="domain"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="httpStatusCode"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="innerError"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="message"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="requestBody"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="requestEntity"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="requestID"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="requestMethod"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="requestURL"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="OfflineODataEvent"
+ extends="com.sap.cloud.mobile.odata.EntityValue"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="android.os.Parcelable">
+</implements>
+<constructor name="OfflineODataEvent"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataEvent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="withDefaults" type="boolean">
+</parameter>
+<parameter name="withIndexMap" type="com.sap.cloud.mobile.odata.core.SparseIndexMap">
+</parameter>
+</constructor>
+<method name="copy"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDetails"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getEventType"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getId"
+ return="java.lang.Long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOld"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTime"
+ return="com.sap.cloud.mobile.odata.GlobalDateTime"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="key"
+ return="com.sap.cloud.mobile.odata.EntityKey"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.Long">
+</parameter>
+</method>
+<method name="list"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataEvent&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="from" type="com.sap.cloud.mobile.odata.EntityValueList">
+</parameter>
+</method>
+<method name="setDetails"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setEventType"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setId"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Long">
+</parameter>
+</method>
+<method name="setTime"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="com.sap.cloud.mobile.odata.GlobalDateTime">
+</parameter>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="out" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="details"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="eventType"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="id"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="time"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="OfflineODataException"
+ extends="java.lang.Exception"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataException"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataException"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="errorCode" type="int">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getErrorCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OfflineODataFailedRequest"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataFailedRequest"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getCustomTag"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getErrorCode"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getErrorMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHttpStatusCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInnerError"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestBody"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestHTTPMethod"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestID"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestURL"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setCustomTag"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="customTag" type="java.lang.String">
+</parameter>
+</method>
+<method name="setErrorCode"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="errorCode" type="java.lang.String">
+</parameter>
+</method>
+<method name="setErrorMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="errorMessage" type="java.lang.String">
+</parameter>
+</method>
+<method name="setHttpStatusCode"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="httpStatusCode" type="int">
+</parameter>
+</method>
+<method name="setInnerError"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="innerError" type="java.lang.String">
+</parameter>
+</method>
+<method name="setRequestBody"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestBody" type="java.lang.String">
+</parameter>
+</method>
+<method name="setRequestHTTPMethod"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestHTTPMethod" type="java.lang.String">
+</parameter>
+</method>
+<method name="setRequestID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestID" type="long">
+</parameter>
+</method>
+<method name="setRequestURL"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestURL" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="OfflineODataFileDownloadProgress"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataFileDownloadProgress"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataFileDownloadProgress"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bytesReceived" type="long">
+</parameter>
+<parameter name="fileSize" type="long">
+</parameter>
+</constructor>
+<method name="getBytesReceived"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getFileSize"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OfflineODataMetadata"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="OfflineODataMetadata.EntitySets"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<field name="errorArchive"
+ type="com.sap.cloud.mobile.odata.EntitySet"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="eventLog"
+ type="com.sap.cloud.mobile.odata.EntitySet"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="OfflineODataMetadata.EntityTypes"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<field name="customHeader"
+ type="com.sap.cloud.mobile.odata.EntityType"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="errorArchiveEntity"
+ type="com.sap.cloud.mobile.odata.EntityType"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="event"
+ type="com.sap.cloud.mobile.odata.EntityType"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="request"
+ type="com.sap.cloud.mobile.odata.EntityType"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="OfflineODataOperationStep"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="rawValue"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OfflineODataParameters"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataParameters"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataParameters"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getCurrentUser"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCustomCookies"
+ return="java.util.Map&lt;java.lang.String, java.lang.String&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCustomHeaders"
+ return="java.util.Map&lt;java.lang.String, java.lang.String&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getExtraStreamParameters"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPageSize"
+ return="java.lang.Integer"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStoreEncryptionKey"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStoreName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStorePath"
+ return="java.net.URL"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTimeout"
+ return="java.lang.Integer"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getURLSuffix"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isEnableIndividualErrorArchiveDeletion"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isEnableRepeatableRequests"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isEnableRequestQueueOptimization"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isEnableTransactionBuilder"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isEnableUndoLocalCreation"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isForceUploadOnUserSwitch"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setCurrentUser"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="currentUser" type="java.lang.String">
+</parameter>
+</method>
+<method name="setCustomCookies"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="customCookies" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+</method>
+<method name="setCustomHeaders"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="customHeaders" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+</method>
+<method name="setEnableIndividualErrorArchiveDeletion"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enableIndividualErrorArchiveDeletion" type="boolean">
+</parameter>
+</method>
+<method name="setEnableRepeatableRequests"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enableRepeatableRequests" type="boolean">
+</parameter>
+</method>
+<method name="setEnableRequestQueueOptimization"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enableRequestQueueOptimization" type="boolean">
+</parameter>
+</method>
+<method name="setEnableTransactionBuilder"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enableTransactionBuilder" type="boolean">
+</parameter>
+</method>
+<method name="setEnableUndoLocalCreation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enableUndoLocalCreation" type="boolean">
+</parameter>
+</method>
+<method name="setExtraStreamParameters"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="extraStreamParameters" type="java.lang.String">
+</parameter>
+</method>
+<method name="setForceUploadOnUserSwitch"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="forceUploadOnUserSwitch" type="boolean">
+</parameter>
+</method>
+<method name="setPageSize"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="pageSize" type="java.lang.Integer">
+</parameter>
+</method>
+<method name="setStoreEncryptionKey"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="storeEncryptionKey" type="java.lang.String">
+</parameter>
+</method>
+<method name="setStoreName"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="storeName" type="java.lang.String">
+</parameter>
+</method>
+<method name="setStorePath"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="storePath" type="java.net.URL">
+</parameter>
+</method>
+<method name="setTimeout"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="timeout" type="java.lang.Integer">
+</parameter>
+</method>
+<method name="setURLSuffix"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="urlSuffix" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="OfflineODataProgress"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataProgress"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataProgress"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bytesReceived" type="long">
+</parameter>
+<parameter name="bytesSent" type="long">
+</parameter>
+</constructor>
+<method name="getBytesReceived"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getBytesSent"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OfflineODataProvider"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataProvider"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<parameter name="serviceRoot" type="java.net.URL">
+</parameter>
+<parameter name="parameters" type="com.sap.cloud.mobile.odata.offline.OfflineODataParameters">
+</parameter>
+<parameter name="okHttpClient" type="okhttp3.OkHttpClient">
+</parameter>
+<parameter name="sslClientAuth" type="com.sap.cloud.mobile.foundation.authentication.SslClientAuth">
+</parameter>
+<parameter name="delegate" type="com.sap.cloud.mobile.odata.offline.OfflineODataDelegate">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</constructor>
+<constructor name="OfflineODataProvider"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="serviceRoot" type="java.net.URL">
+</parameter>
+<parameter name="parameters" type="com.sap.cloud.mobile.odata.offline.OfflineODataParameters">
+</parameter>
+<parameter name="okHttpClient" type="okhttp3.OkHttpClient">
+</parameter>
+<parameter name="sslClientAuth" type="com.sap.cloud.mobile.foundation.authentication.SslClientAuth">
+</parameter>
+<parameter name="delegate" type="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</constructor>
+<constructor name="OfflineODataProvider"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="serviceRoot" type="java.net.URL">
+</parameter>
+<parameter name="parameters" type="com.sap.cloud.mobile.odata.offline.OfflineODataParameters">
+</parameter>
+<parameter name="okHttpClient" type="okhttp3.OkHttpClient">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</constructor>
+<constructor name="OfflineODataProvider"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<parameter name="serviceRoot" type="java.net.URL">
+</parameter>
+<parameter name="parameters" type="com.sap.cloud.mobile.odata.offline.OfflineODataParameters">
+</parameter>
+<parameter name="okHttpClient" type="okhttp3.OkHttpClient">
+</parameter>
+<parameter name="delegate" type="com.sap.cloud.mobile.odata.offline.OfflineODataDelegate">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</constructor>
+<constructor name="OfflineODataProvider"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="serviceRoot" type="java.net.URL">
+</parameter>
+<parameter name="parameters" type="com.sap.cloud.mobile.odata.offline.OfflineODataParameters">
+</parameter>
+<parameter name="okHttpClient" type="okhttp3.OkHttpClient">
+</parameter>
+<parameter name="delegate" type="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</constructor>
+<constructor name="OfflineODataProvider"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="serviceRoot" type="java.net.URL">
+</parameter>
+<parameter name="parameters" type="com.sap.cloud.mobile.odata.offline.OfflineODataParameters">
+</parameter>
+<parameter name="okHttpClient" type="okhttp3.OkHttpClient">
+</parameter>
+<parameter name="sslClientAuth" type="com.sap.cloud.mobile.foundation.authentication.SslClientAuth">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</constructor>
+<method name="addDefiningQuery"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="definingQuery" type="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="cancelDownload"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="cancelUpload"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="clear"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="clear"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="path" type="java.net.URL">
+</parameter>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="clear"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="close"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="createEntity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="createLink"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="from" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="property" type="com.sap.cloud.mobile.odata.Property">
+</parameter>
+<parameter name="to" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="createMedia"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="content" type="com.sap.cloud.mobile.odata.StreamBase">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="deleteByQuery"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="query" type="com.sap.cloud.mobile.odata.DataQuery">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="deleteEntity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="deleteLink"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="from" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="property" type="com.sap.cloud.mobile.odata.Property">
+</parameter>
+<parameter name="to" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="deleteStream"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="link" type="com.sap.cloud.mobile.odata.StreamLink">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="download"
+ return="com.sap.cloud.mobile.odata.CancelToken"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="download"
+ return="com.sap.cloud.mobile.odata.CancelToken"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="subset" type="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery&gt;">
+</parameter>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="downloadMedia"
+ return="com.sap.cloud.mobile.odata.ByteStream"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="downloadStream"
+ return="com.sap.cloud.mobile.odata.ByteStream"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="link" type="com.sap.cloud.mobile.odata.StreamLink">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="executeMethod"
+ return="com.sap.cloud.mobile.odata.DataValue"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="method" type="com.sap.cloud.mobile.odata.DataMethod">
+</parameter>
+<parameter name="parameters" type="com.sap.cloud.mobile.odata.ParameterList">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="executeQuery"
+ return="com.sap.cloud.mobile.odata.QueryResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="query" type="com.sap.cloud.mobile.odata.DataQuery">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="fetchMetadata"
+ return="com.sap.cloud.mobile.odata.csdl.CsdlDocument"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="paramHttpHeaders" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="paramRequestOptions" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="forceReauthentication"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDefiningQueries"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="getErrorArchive"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="getErrorArchive"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="query" type="com.sap.cloud.mobile.odata.DataQuery">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="getEventLog"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataEvent&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="getEventLog"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataEvent&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="query" type="com.sap.cloud.mobile.odata.DataQuery">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="getMetadata"
+ return="com.sap.cloud.mobile.odata.csdl.CsdlDocument"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPreviousUser"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="getServiceName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getServiceOptions"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataServiceOptions"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStoreParameters"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataParameters"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasMetadata"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasPendingDownload"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="hasPendingUpload"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="isRequestQueueEmpty"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="libraryVersion"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="loadMetadata"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="paramHttpHeaders" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="paramRequestOptions" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="logDefiningQueries"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="logLevel" type="org.slf4j.event.Level">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="logRequestQueue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="logLevel" type="org.slf4j.event.Level">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="open"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="pingServer"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="paramHttpHeaders" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="paramRequestOptions" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="processBatch"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="batch" type="com.sap.cloud.mobile.odata.RequestBatch">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="removeDefiningQuery"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="definingQuery" type="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery">
+</parameter>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="removeDefiningQuery"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="definingQuery" type="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="sendEncryptedStore"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newEncryptionKey" type="java.lang.String">
+</parameter>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="sendEncryptedStore"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newEncryptionKey" type="java.lang.String">
+</parameter>
+<parameter name="note" type="java.lang.String">
+</parameter>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="sendStore"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="sendStore"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="note" type="java.lang.String">
+</parameter>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="setMetadata"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="com.sap.cloud.mobile.odata.csdl.CsdlDocument">
+</parameter>
+</method>
+<method name="setServiceOptions"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="serviceOptions" type="com.sap.cloud.mobile.odata.offline.OfflineODataServiceOptions">
+</parameter>
+</method>
+<method name="undoPendingChanges"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<exception name="OfflineODataException" type="com.sap.cloud.mobile.odata.offline.OfflineODataException">
+</exception>
+</method>
+<method name="unloadMetadata"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="updateEntity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="updateLink"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="from" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="property" type="com.sap.cloud.mobile.odata.Property">
+</parameter>
+<parameter name="to" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="upload"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="upload"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="categories" type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory[]">
+</parameter>
+<parameter name="successHandler" type="com.sap.cloud.mobile.odata.core.Action0">
+</parameter>
+<parameter name="failureHandler" type="com.sap.cloud.mobile.odata.core.Action1&lt;com.sap.cloud.mobile.odata.offline.OfflineODataException&gt;">
+</parameter>
+</method>
+<method name="uploadMedia"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="content" type="com.sap.cloud.mobile.odata.StreamBase">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<method name="uploadStream"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+<parameter name="link" type="com.sap.cloud.mobile.odata.StreamLink">
+</parameter>
+<parameter name="content" type="com.sap.cloud.mobile.odata.StreamBase">
+</parameter>
+<parameter name="headers" type="com.sap.cloud.mobile.odata.http.HttpHeaders">
+</parameter>
+<parameter name="options" type="com.sap.cloud.mobile.odata.RequestOptions">
+</parameter>
+</method>
+<field name="LOGGER_NAME"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;com.sap.cloud.mobile.odata.offline&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<interface name="OfflineODataProviderDelegate"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getCloudProgressPullInterval"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="updateDownloadProgress"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="progress" type="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDownloadProgress">
+</parameter>
+</method>
+<method name="updateFailedRequest"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="request" type="com.sap.cloud.mobile.odata.offline.OfflineODataFailedRequest">
+</parameter>
+</method>
+<method name="updateOpenProgress"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="progress" type="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress">
+</parameter>
+</method>
+<method name="updateSendStoreProgress"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="progress" type="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress">
+</parameter>
+</method>
+<method name="updateUploadProgress"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="provider" type="com.sap.cloud.mobile.odata.offline.OfflineODataProvider">
+</parameter>
+<parameter name="progress" type="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress">
+</parameter>
+</method>
+</interface>
+<class name="OfflineODataProviderDownloadProgress"
+ extends="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataProviderDownloadProgress"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataProviderDownloadProgress"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getSubset"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="subset"
+ type="java.util.List"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="OfflineODataProviderOperationProgress"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataProviderOperationProgress"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getCurrentStepNumber"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDefaultMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOperationId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getParameters"
+ return="java.lang.String[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStep"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTime"
+ return="com.sap.cloud.mobile.odata.GlobalDateTime"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTotalNumberOfSteps"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setValues"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="operationId" type="java.lang.String">
+</parameter>
+<parameter name="currentStepNumber" type="int">
+</parameter>
+<parameter name="totalNumberOfSteps" type="int">
+</parameter>
+<parameter name="time" type="com.sap.cloud.mobile.odata.GlobalDateTime">
+</parameter>
+<parameter name="step" type="com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep">
+</parameter>
+<parameter name="parameters" type="java.lang.String[]">
+</parameter>
+<parameter name="defaultMessage" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="OfflineODataQueryFunction"
+ extends="com.sap.cloud.mobile.odata.QueryFunction"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="entityExists"
+ return="com.sap.cloud.mobile.odata.QueryFilter"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="property" type="com.sap.cloud.mobile.odata.DataPath">
+</parameter>
+</method>
+<method name="hasPendingChanges"
+ return="com.sap.cloud.mobile.odata.QueryFilter"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="inErrorState"
+ return="com.sap.cloud.mobile.odata.QueryFilter"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isLocal"
+ return="com.sap.cloud.mobile.odata.QueryFilter"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="upsertedLastDownload"
+ return="com.sap.cloud.mobile.odata.QueryFilter"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OfflineODataRequest"
+ extends="com.sap.cloud.mobile.odata.EntityValue"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="android.os.Parcelable">
+</implements>
+<constructor name="OfflineODataRequest"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataRequest"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="withDefaults" type="boolean">
+</parameter>
+<parameter name="withIndexMap" type="com.sap.cloud.mobile.odata.core.SparseIndexMap">
+</parameter>
+</constructor>
+<method name="copy"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequest"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getBody"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMethod"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOld"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequest"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRequestID"
+ return="java.lang.Long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStatus"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUrl"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="key"
+ return="com.sap.cloud.mobile.odata.EntityKey"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestID" type="java.lang.Long">
+</parameter>
+</method>
+<method name="list"
+ return="java.util.List&lt;com.sap.cloud.mobile.odata.offline.OfflineODataRequest&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="from" type="com.sap.cloud.mobile.odata.EntityValueList">
+</parameter>
+</method>
+<method name="setBody"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setMethod"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setRequestID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Long">
+</parameter>
+</method>
+<method name="setStatus"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="setUrl"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="out" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="body"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="method"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="requestID"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="status"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="url"
+ type="com.sap.cloud.mobile.odata.Property"
+ transient="false"
+ volatile="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="OfflineODataRequestOptions"
+ extends="com.sap.cloud.mobile.odata.RequestOptions"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataRequestOptions"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getCustomHeaderFormatTemplate"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTransactionID"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionID"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUploadCategory"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isRemoveCreatedEntityAfterUpload"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isUnmodifiableRequest"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setCustomHeaderFormatTemplate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="customHeaderFormatTemplate" type="java.lang.String">
+</parameter>
+</method>
+<method name="setRemoveCreatedEntityAfterUpload"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="removeCreatedEntityAfterUpload" type="boolean">
+</parameter>
+</method>
+<method name="setTransactionID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="transactionID" type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionID">
+</parameter>
+</method>
+<method name="setUnmodifiableRequest"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="unmodifiableRequest" type="boolean">
+</parameter>
+</method>
+<method name="setUploadCategory"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uploadCategory" type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory">
+</parameter>
+</method>
+</class>
+<class name="OfflineODataRequestOptions.TransactionID"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TransactionID"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionID"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="TransactionID"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionID"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+</constructor>
+<method name="getEntityValue"
+ return="com.sap.cloud.mobile.odata.EntityValue"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStringLiteral"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTransactionIDType"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionIDType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="UseGeneratedIDForTransactionID"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionID"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="OfflineODataRequestOptions.TransactionIDType"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionIDType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionIDType[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OfflineODataRequestOptions.UploadCategory"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="UploadCategory"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="UploadCategory"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="com.sap.cloud.mobile.odata.EntityValue">
+</parameter>
+</constructor>
+<method name="getEntityValue"
+ return="com.sap.cloud.mobile.odata.EntityValue"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStringLiteral"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUploadCategoryType"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategoryType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="useGeneratedIDForUploadCategory"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="OfflineODataRequestOptions.UploadCategoryType"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategoryType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategoryType[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OfflineODataSendStoreProgress"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataSendStoreProgress"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataSendStoreProgress"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="currentFileBytesSent" type="long">
+</parameter>
+<parameter name="currentFileSize" type="long">
+</parameter>
+<parameter name="currentFileIndex" type="int">
+</parameter>
+<parameter name="currentFileName" type="java.lang.String">
+</parameter>
+<parameter name="totalNumberOfFiles" type="int">
+</parameter>
+<parameter name="totalSize" type="long">
+</parameter>
+<parameter name="totalBytesSent" type="long">
+</parameter>
+</constructor>
+<method name="getCurrentFileBytesSent"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCurrentFileIndex"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCurrentFileName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCurrentFileSize"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTotalBytesSent"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTotalNumberOfFiles"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTotalSize"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OfflineODataServiceOptions"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="OfflineODataServiceOptions"
+ type="com.sap.cloud.mobile.odata.offline.OfflineODataServiceOptions"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getCsdlOptions"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSupportsBind"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSupportsPatch"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setCsdlOptions"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="setSupportsBind"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="boolean">
+</parameter>
+</method>
+<method name="setSupportsPatch"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="boolean">
+</parameter>
+</method>
+</class>
+<class name="OfflineODataStoreState"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataStoreState"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.sap.cloud.mobile.odata.offline.OfflineODataStoreState[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+</api>

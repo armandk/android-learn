@@ -1,0 +1,1180 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ListBase - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ListBase</a><br/>
+<br/>
+<h1>ListBase</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ListBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Base class for strongly-typed lists.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ListBase</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new list with a <code><a href="length.html">ListBase.length</a></code> of zero and specified initial <code>capacity</code>. A list can expand in length beyond its initial capacity, but best performance will be obtained if the initial capacity is close to (and not less than) the list's maximum length.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/undefined.html">undefined</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">undefined</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcomparer.html">getComparer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComparer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a></code>
+<p>Return an ordering function for the item type of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return the data type for this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getequality.html">getEquality</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEquality</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/equality/index.html"><span class="identifier">Equality</span></a></code>
+<p>Return an equality function for the item type of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getuntypedlist.html">getUntypedList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUntypedList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/untypedlist/index.html"><span class="identifier">UntypedList</span></a></code>
+<p>Return the underlying untyped list. Use with care, avoiding the addition of objects with an incorrect item type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list contains no items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="length.html">length</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">length</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removeat.html">removeAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$removeAt(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove an item from the specified index in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removefirst.html">removeFirst</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeFirst</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove the first item (if any) from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removelast.html">removeLast</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeLast</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove the last item (if any) from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removerange.html">removeRange</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$removeRange(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$removeRange(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove a range of items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reverse.html">reverse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reverse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reverse the order of the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sharewith.html">shareWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">shareWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$shareWith(com.sap.cloud.mobile.odata.ListBase, kotlin.Boolean)/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$shareWith(com.sap.cloud.mobile.odata.ListBase, kotlin.Boolean)/replace">replace</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sort.html">sort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort the items in this list, using the <code><a href="getcomparer.html">ListBase.comparer</a></code> property for ordering.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortwith.html">sortWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$sortWith(com.sap.cloud.mobile.odata.core.Comparer)/comparer">comparer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="todynamic.html">toDynamic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toDynamic</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) a dynamic representation of this list (<code><a href="../datavaluelist/index.html">com.sap.cloud.mobile.odata.DataValueList</a></code>, <code><a href="../complexvaluelist/index.html">com.sap.cloud.mobile.odata.ComplexValueList</a></code>, or <code><a href="../entityvaluelist/index.html">com.sap.cloud.mobile.odata.EntityValueList</a></code>), or <code>null</code> if there is no dynamic representation available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string representation of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$validate(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Base function for validating the item's value before adding it to the list. Validate is needed in some ListBase types, for exampe in the case of ByteList, where a value out of the ByteValue type's valid range can be added, because ByteList accepts Int instead of Byte. With a proper overwrite of this function in the given BaseList class ensures, that only a valid value Int (-128 - +127 in this case) can be added to the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/clonemutable.html">cloneMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cloneMutable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$cloneMutable(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A clone of <code>value</code> if it is mutable, or <code>value</code> if it is immutable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/equals.html">equals</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this object is equal to <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/gettypecode.html">getTypeCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTypeCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data type code of the wrapped value, equivalent to <code>dataType.code</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/hashcode.html">hashCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Hash this data value to a number.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../aggregateexpressionlist/index.html">AggregateExpressionList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateExpressionList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../aggregateexpression/index.html"><span class="identifier">AggregateExpression</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../aggregateexpression/index.html">com.sap.cloud.mobile.odata.AggregateExpression</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../aggregatefromlist/index.html">AggregateFromList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateFromList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../aggregatefrom/index.html"><span class="identifier">AggregateFrom</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of "aggregate from" transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../aggregatevaluelist/index.html">AggregateValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of aggregate transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../annotationlist/index.html">AnnotationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnnotationList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../annotation/index.html"><span class="identifier">Annotation</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../annotationtermlist/index.html">AnnotationTermList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnnotationTermList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../annotationterm/index.html"><span class="identifier">AnnotationTerm</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../anylist/index.html">AnyList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnyList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../binarylist/index.html">BinaryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BinaryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../booleanlist/index.html">BooleanList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BooleanList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../bytelist/index.html">ByteList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ByteList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Byte</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../changedlinklist/index.html">ChangedLinkList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChangedLinkList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../changedlink/index.html"><span class="identifier">ChangedLink</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../charlist/index.html">CharList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CharList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Char</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datacontext/compactitemlist/index.html">CompactItemList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CompactItemList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datacontext/compactitem/index.html"><span class="identifier">DataContext.CompactItem</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../complextypelist/index.html">ComplexTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../complextype/index.html"><span class="identifier">ComplexType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../complexvaluelist/index.html">ComplexValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../complexvaluelistwithnulls/index.html">ComplexValueListWithNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexValueListWithNulls</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.csdl/csdlreferencelist/index.html">CsdlReferenceList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlReferenceList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.csdl/csdlreference/index.html"><span class="identifier">CsdlReference</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.csdl/csdlreference/index.html">com.sap.cloud.mobile.odata.csdl.CsdlReference</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../custompathlist/index.html">CustomPathList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CustomPathList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../custompath/index.html"><span class="identifier">CustomPath</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datamethodlist/index.html">DataMethodList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMethodList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datametriclist/index.html">DataMetricList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMetricList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../dataschemalist/index.html">DataSchemaList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataSchemaList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../dataschema/index.html"><span class="identifier">DataSchema</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatypelist/index.html">DataTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavaluelist/index.html">DataValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../datavalue/index.html">com.sap.cloud.mobile.odata.DataValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavaluelistwithnulls/index.html">DataValueListWithNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataValueListWithNulls</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../daytimedurationlist/index.html">DayTimeDurationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DayTimeDurationList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../daytimeduration/index.html"><span class="identifier">DayTimeDuration</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../decimallist/index.html">DecimalList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DecimalList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">BigDecimal</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../doublelist/index.html">DoubleList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DoubleList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Double</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entitycontainerlist/index.html">EntityContainerList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityContainerList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../entitycontainer/index.html"><span class="identifier">EntityContainer</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entitysetlist/index.html">EntitySetList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntitySetList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entitytypelist/index.html">EntityTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entityvaluelist/index.html">EntityValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entityvaluelistwithnulls/index.html">EntityValueListWithNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityValueListWithNulls</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../annotationmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../annotationmap/entry/index.html"><span class="identifier">AnnotationMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../annotationmap/entry/index.html">com.sap.cloud.mobile.odata.AnnotationMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../annotationtermmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../annotationtermmap/entry/index.html"><span class="identifier">AnnotationTermMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../annotationtermmap/entry/index.html">com.sap.cloud.mobile.odata.AnnotationTermMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../anymap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../anymap/entry/index.html"><span class="identifier">AnyMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../anymap/entry/index.html">com.sap.cloud.mobile.odata.AnyMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../complextypemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../complextypemap/entry/index.html"><span class="identifier">ComplexTypeMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../complextypemap/entry/index.html">com.sap.cloud.mobile.odata.ComplexTypeMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../complexvaluemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../complexvaluemap/entry/index.html"><span class="identifier">ComplexValueMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../complexvaluemap/entry/index.html">com.sap.cloud.mobile.odata.ComplexValueMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datamethodmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datamethodmap/entry/index.html"><span class="identifier">DataMethodMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../datamethodmap/entry/index.html">com.sap.cloud.mobile.odata.DataMethodMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datametricmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datametricmap/entry/index.html"><span class="identifier">DataMetricMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../datametricmap/entry/index.html">com.sap.cloud.mobile.odata.DataMetricMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../dataschemamap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../dataschemamap/entry/index.html"><span class="identifier">DataSchemaMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../dataschemamap/entry/index.html">com.sap.cloud.mobile.odata.DataSchemaMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatypemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datatypemap/entry/index.html"><span class="identifier">DataTypeMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../datatypemap/entry/index.html">com.sap.cloud.mobile.odata.DataTypeMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavaluemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../datavaluemap/entry/index.html"><span class="identifier">DataValueMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../datavaluemap/entry/index.html">com.sap.cloud.mobile.odata.DataValueMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entitycontainermap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../entitycontainermap/entry/index.html"><span class="identifier">EntityContainerMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../entitycontainermap/entry/index.html">com.sap.cloud.mobile.odata.EntityContainerMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entitysetmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../entitysetmap/entry/index.html"><span class="identifier">EntitySetMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../entitysetmap/entry/index.html">com.sap.cloud.mobile.odata.EntitySetMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entitytypemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../entitytypemap/entry/index.html"><span class="identifier">EntityTypeMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../entitytypemap/entry/index.html">com.sap.cloud.mobile.odata.EntityTypeMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entityvaluemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../entityvaluemap/entry/index.html"><span class="identifier">EntityValueMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../entityvaluemap/entry/index.html">com.sap.cloud.mobile.odata.EntityValueMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../enumtypemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../enumtypemap/entry/index.html"><span class="identifier">EnumTypeMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../enumtypemap/entry/index.html">com.sap.cloud.mobile.odata.EnumTypeMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../enumvaluemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../enumvaluemap/entry/index.html"><span class="identifier">EnumValueMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../enumvaluemap/entry/index.html">com.sap.cloud.mobile.odata.EnumValueMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../objectmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../objectmap/entry/index.html"><span class="identifier">ObjectMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../objectmap/entry/index.html">com.sap.cloud.mobile.odata.ObjectMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../pathannotationsmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../pathannotationsmap/entry/index.html"><span class="identifier">PathAnnotationsMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../pathannotationsmap/entry/index.html">com.sap.cloud.mobile.odata.PathAnnotationsMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../propertymap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../propertymap/entry/index.html"><span class="identifier">PropertyMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../propertymap/entry/index.html">com.sap.cloud.mobile.odata.PropertyMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryfunctionmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../queryfunctionmap/entry/index.html"><span class="identifier">QueryFunctionMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../queryfunctionmap/entry/index.html">com.sap.cloud.mobile.odata.QueryFunctionMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryoperatormap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../queryoperatormap/entry/index.html"><span class="identifier">QueryOperatorMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../queryoperatormap/entry/index.html">com.sap.cloud.mobile.odata.QueryOperatorMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../simpletypemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../simpletypemap/entry/index.html"><span class="identifier">SimpleTypeMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../simpletypemap/entry/index.html">com.sap.cloud.mobile.odata.SimpleTypeMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../stringmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../stringmap/entry/index.html"><span class="identifier">StringMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../stringmap/entry/index.html">com.sap.cloud.mobile.odata.StringMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structuretypemap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../structuretypemap/entry/index.html"><span class="identifier">StructureTypeMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../structuretypemap/entry/index.html">com.sap.cloud.mobile.odata.StructureTypeMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.json/jsonobject/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.json/jsonobject/entry/index.html"><span class="identifier">JsonObject.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.json/jsonobject/entry/index.html">com.sap.cloud.mobile.odata.json.JsonObject.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.xml/xmlelementmap/entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.xml/xmlelementmap/entry/index.html"><span class="identifier">XmlElementMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.xml/xmlelementmap/entry/index.html">com.sap.cloud.mobile.odata.xml.XmlElementMap.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../enumtypelist/index.html">EnumTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../enumtype/index.html"><span class="identifier">EnumType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../enumvaluelist/index.html">EnumValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../enumvalue/index.html"><span class="identifier">EnumValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../errorresponselist/index.html">ErrorResponseList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ErrorResponseList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../errorresponse/index.html"><span class="identifier">ErrorResponse</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../expanditemlist/index.html">ExpandItemList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExpandItemList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../expanditem/index.html"><span class="identifier">ExpandItem</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../floatlist/index.html">FloatList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FloatList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Float</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geographyvaluelist/index.html">GeographyValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../geographyvalue/index.html"><span class="identifier">GeographyValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../geographyvalue/index.html">com.sap.cloud.mobile.odata.GeographyValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvaluelist/index.html">GeometryValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../geometryvalue/index.html"><span class="identifier">GeometryValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../geometryvalue/index.html">com.sap.cloud.mobile.odata.GeometryValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../globaldatetimelist/index.html">GlobalDateTimeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GlobalDateTimeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../guidvaluelist/index.html">GuidValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GuidValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.csdl/csdlreference/includelist/index.html">IncludeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IncludeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.csdl/csdlreference/include/index.html"><span class="identifier">CsdlReference.Include</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.csdl/csdlreference/include/index.html">com.sap.cloud.mobile.odata.csdl.CsdlReference.Include</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../integerlist/index.html">IntegerList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntegerList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../intlist/index.html">IntList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../linestringcoordinates/index.html">LineStringCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LineStringCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../pointcoordinates/index.html"><span class="identifier">PointCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../pointcoordinates/index.html">com.sap.cloud.mobile.odata.PointCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../localdatelist/index.html">LocalDateList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDateList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../localdate/index.html"><span class="identifier">LocalDate</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../localdatetimelist/index.html">LocalDateTimeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDateTimeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../localdatetime/index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../localtimelist/index.html">LocalTimeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalTimeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../localtime/index.html"><span class="identifier">LocalTime</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../longlist/index.html">LongList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LongList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.http/mimepartlist/index.html">MimePartList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MimePartList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.http/mimepart/index.html"><span class="identifier">MimePart</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.http/mimepart/index.html">com.sap.cloud.mobile.odata.http.MimePart</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../multilinestringcoordinates/index.html">MultiLineStringCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MultiLineStringCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../linestringcoordinates/index.html"><span class="identifier">LineStringCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../linestringcoordinates/index.html">com.sap.cloud.mobile.odata.LineStringCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../multipointcoordinates/index.html">MultiPointCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MultiPointCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../pointcoordinates/index.html"><span class="identifier">PointCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../pointcoordinates/index.html">com.sap.cloud.mobile.odata.PointCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../multipolygoncoordinates/index.html">MultiPolygonCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MultiPolygonCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../polygoncoordinates/index.html"><span class="identifier">PolygonCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../polygoncoordinates/index.html">com.sap.cloud.mobile.odata.PolygonCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../objectlist/index.html">ObjectList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ObjectList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../parameterlist/index.html">ParameterList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ParameterList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../parameter/index.html"><span class="identifier">Parameter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../parameter/index.html">com.sap.cloud.mobile.odata.Parameter</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../pathannotationslist/index.html">PathAnnotationsList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PathAnnotationsList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../pathannotations/index.html"><span class="identifier">PathAnnotations</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../pointcoordinates/index.html">PointCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PointCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Double</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>Represents an N-dimensional point. Note that some coordinate reference systems will support only <code><a href="../pointcoordinates/getx.html">PointCoordinates.x</a></code> and <code><a href="../pointcoordinates/gety.html">PointCoordinates.y</a></code> dimensions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../polygoncoordinates/index.html">PolygonCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PolygonCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../linestringcoordinates/index.html"><span class="identifier">LineStringCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../linestringcoordinates/index.html">com.sap.cloud.mobile.odata.LineStringCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../propertylist/index.html">PropertyList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PropertyList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../property/index.html">com.sap.cloud.mobile.odata.Property</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../propertypathlist/index.html">PropertyPathList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PropertyPathList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../propertypath/index.html">com.sap.cloud.mobile.odata.PropertyPath</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryfunctionlist/index.html">QueryFunctionList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFunctionList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../queryfunction/index.html"><span class="identifier">QueryFunction</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryoperatorlist/index.html">QueryOperatorList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryOperatorList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../queryoperator/index.html"><span class="identifier">QueryOperator</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../selectitemlist/index.html">SelectItemList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SelectItemList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../selectitem/index.html"><span class="identifier">SelectItem</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../shortlist/index.html">ShortList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ShortList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Short</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../simpletypelist/index.html">SimpleTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SimpleTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../simpletype/index.html"><span class="identifier">SimpleType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../sortitemlist/index.html">SortItemList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SortItemList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../sortitem/index.html"><span class="identifier">SortItem</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../stringlist/index.html">StringList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StringList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structuretypelist/index.html">StructureTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StructureTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../structuretype/index.html">com.sap.cloud.mobile.odata.StructureType</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../transformvaluelist/index.html">TransformValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TransformValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../unsignedbytelist/index.html">UnsignedByteList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnsignedByteList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../unsignedshortlist/index.html">UnsignedShortList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnsignedShortList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.xml/xmlattributelist/index.html">XmlAttributeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlAttributeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.xml/xmlattribute/index.html"><span class="identifier">XmlAttribute</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.xml/xmlattribute/index.html">com.sap.cloud.mobile.odata.xml.XmlAttribute</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.xml/xmlcommentlist/index.html">XmlCommentList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlCommentList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.xml/xmlcomment/index.html"><span class="identifier">XmlComment</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.xml/xmlcomment/index.html">com.sap.cloud.mobile.odata.xml.XmlComment</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.xml/xmlelementlist/index.html">XmlElementList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlElementList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html">com.sap.cloud.mobile.odata.xml.XmlElement</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.xml/xmlnamelist/index.html">XmlNameList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlNameList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.xml/xmlname/index.html"><span class="identifier">XmlName</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.xml/xmlname/index.html">com.sap.cloud.mobile.odata.xml.XmlName</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.xml/xmlnodelist/index.html">XmlNodeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlNodeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.xml/xmlnode/index.html"><span class="identifier">XmlNode</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.xml/xmlnode/index.html">com.sap.cloud.mobile.odata.xml.XmlNode</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.xml/xmlprocessinginstructionlist/index.html">XmlProcessingInstructionList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlProcessingInstructionList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.odata.xml/xmlprocessinginstruction/index.html"><span class="identifier">XmlProcessingInstruction</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="../../com.sap.cloud.mobile.odata.xml/xmlprocessinginstruction/index.html">com.sap.cloud.mobile.odata.xml.XmlProcessingInstruction</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../yearmonthdurationlist/index.html">YearMonthDurationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">YearMonthDurationList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="../yearmonthduration/index.html"><span class="identifier">YearMonthDuration</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

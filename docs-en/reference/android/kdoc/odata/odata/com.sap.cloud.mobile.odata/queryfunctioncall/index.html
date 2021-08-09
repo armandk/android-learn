@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryFunctionCall - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">QueryFunctionCall</a><br/>
+<br/>
+<h1>QueryFunctionCall</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFunctionCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates the application of an <a href="http://odata.org">OData</a> query function to a list of arguments.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">QueryFunctionCall</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunctionCall$<init>(com.sap.cloud.mobile.odata.QueryFunction, com.sap.cloud.mobile.odata.DataValueList)/queryFunction">queryFunction</span><span class="symbol">:</span>&nbsp;<a href="../queryfunction/index.html"><span class="identifier">QueryFunction</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunctionCall$<init>(com.sap.cloud.mobile.odata.QueryFunction, com.sap.cloud.mobile.odata.DataValueList)/callArguments">callArguments</span><span class="symbol">:</span>&nbsp;<a href="../datavaluelist/index.html"><span class="identifier">DataValueList</span></a><span class="symbol">)</span></code>
+<p>Construct a new query function call with the specified function and arguments.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/undefined.html">undefined</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">undefined</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcallarguments.html">getCallArguments</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCallArguments</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavaluelist/index.html"><span class="identifier">DataValueList</span></a></code>
+<p>Return the function arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type with a <code><a href="../datatype/getcode.html">DataType.code</a></code> of DataType.QUERY_FUNCTION_CALL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getqueryfunction.html">getQueryFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getQueryFunction</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfunction/index.html"><span class="identifier">QueryFunction</span></a></code>
+<p>Return the function to be applied.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcallarguments.html">setCallArguments</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setCallArguments</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunctionCall$setCallArguments(com.sap.cloud.mobile.odata.DataValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavaluelist/index.html"><span class="identifier">DataValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the function arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setqueryfunction.html">setQueryFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setQueryFunction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunctionCall$setQueryFunction(com.sap.cloud.mobile.odata.QueryFunction)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../queryfunction/index.html"><span class="identifier">QueryFunction</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the function to be applied.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="getdatatype.html">QueryFunctionCall.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/clonemutable.html">cloneMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cloneMutable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$cloneMutable(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A clone of <code>value</code> if it is mutable, or <code>value</code> if it is immutable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/equals.html">equals</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this object is equal to <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/gettypecode.html">getTypeCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTypeCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data type code of the wrapped value, equivalent to <code>dataType.code</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datavalue/hashcode.html">hashCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Hash this data value to a number.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

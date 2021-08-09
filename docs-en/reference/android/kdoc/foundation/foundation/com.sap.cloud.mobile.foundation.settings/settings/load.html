@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Settings.load - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings</a>&nbsp;/&nbsp;<a href="index.html">Settings</a>&nbsp;/&nbsp;<a href="./load.html">load</a><br/>
+<br/>
+<h1>load</h1>
+<a name="com.sap.cloud.mobile.foundation.settings.Settings$load(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reads the settings value from the server. The default target is <code><a href="settingtarget/index.html">SettingTarget#DEVICE</a></code>. This is an asynchronous function.</p>
+<h3>Parameters</h3>
+<p><a name="keyPath"></a>
+<code>keyPath</code> - <span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> string value denoting the path to the key to load</p>
+<p><a name="callback"></a>
+<code>callback</code> - <a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">:</span> a <code><a href="callbacklistener/index.html">CallbackListener</a></code> instance to handle response <pre><code><strong>Example Usage:</strong>
+                                                                      
+     
+                                                                      final Settings settings = new Settings(getOkHttpClientForSSL(), uri, null, null);
+                                                                       settings.load(
+                                                                        new Settings.CallbackListener() {
+                                                                         @Override
+                                                                            public void onSuccess(JSONObject o) {
+                                                                            //Here goes the code for processing successful response...
+                                                                            }
+     
+                                                                             @Override
+                                                                            public void onError(Throwable result) {
+                                                                                //Handle error here...
+                                                                            }
+     
+                                                                      });
+                                                                      
+                                                                      </code></pre></p>
+<a name="com.sap.cloud.mobile.foundation.settings.Settings$load(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/target">target</span><span class="symbol">:</span>&nbsp;<a href="settingtarget/index.html"><span class="identifier">Settings.SettingTarget</span></a><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reads the settings value from the server. This is an asynchronous function.</p>
+<h3>Parameters</h3>
+<p><a name="target"></a>
+<code>target</code> - <a href="settingtarget/index.html"><span class="identifier">Settings.SettingTarget</span></a><span class="symbol">:</span> settings target value allowed targets are <code><a href="settingtarget/index.html">SettingTarget</a></code></p>
+<p><a name="keyPath"></a>
+<code>keyPath</code> - <span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> string value denoting the path to the key</p>
+<p><a name="callback"></a>
+<code>callback</code> - <a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">:</span> callback handler of type <code><a href="callbacklistener/index.html">CallbackListener</a></code> to process the response <pre><code><strong>Example Usage:</strong>
+                                                                      
+     
+                                                                      Settings settings = new Settings(getOkHttpClientForSSL(), uri, null, null);
+                                                                      settings.load(Settings.SettingsTarget.APPLICATION, null,
+                                                                         new Settings.CallbackListener() {
+                                                                         @Override
+                                                                            public void onSuccess(JSONObject o) {
+                                                                            //Here goes the code for processing successful response...
+                                                                            }
+     
+                                                                             @Override
+                                                                            public void onError(Throwable result) {
+                                                                                //Handle error here...
+                                                                            }
+     
+                                                                      });
+                                                                      </code></pre></p>
+<a name="com.sap.cloud.mobile.foundation.settings.Settings$load(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reads the settings value from the server. The default target is <code><a href="settingtarget/index.html">SettingTarget#DEVICE</a></code>. This is an asynchronous function.</p>
+<h3>Parameters</h3>
+<p><a name="keyPath"></a>
+<code>keyPath</code> - <span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> string value denoting the path to the key to load</p>
+<p><a name="callback"></a>
+<code>callback</code> - <a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">:</span> a <code><a href="callbacklistener/index.html">CallbackListener</a></code> instance to handle response <pre><code><strong>Example Usage:</strong>
+                                                                      
+     
+                                                                      final Settings settings = new Settings(getOkHttpClientForSSL(), uri, null, null);
+                                                                       settings.load(
+                                                                        new Settings.CallbackListener() {
+                                                                         @Override
+                                                                            public void onSuccess(JSONObject o) {
+                                                                            //Here goes the code for processing successful response...
+                                                                            }
+     
+                                                                             @Override
+                                                                            public void onError(Throwable result) {
+                                                                                //Handle error here...
+                                                                            }
+     
+                                                                      });
+                                                                      
+                                                                      </code></pre></p>
+<a name="com.sap.cloud.mobile.foundation.settings.Settings$load(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/target">target</span><span class="symbol">:</span>&nbsp;<a href="settingtarget/index.html"><span class="identifier">Settings.SettingTarget</span></a><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$load(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reads the settings value from the server. This is an asynchronous function.</p>
+<h3>Parameters</h3>
+<p><a name="target"></a>
+<code>target</code> - <a href="settingtarget/index.html"><span class="identifier">Settings.SettingTarget</span></a><span class="symbol">:</span> settings target value allowed targets are <code><a href="settingtarget/index.html">SettingTarget</a></code></p>
+<p><a name="keyPath"></a>
+<code>keyPath</code> - <span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> string value denoting the path to the key</p>
+<p><a name="callback"></a>
+<code>callback</code> - <a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">:</span> callback handler of type <code><a href="callbacklistener/index.html">CallbackListener</a></code> to process the response <pre><code><strong>Example Usage:</strong>
+                                                                      
+     
+                                                                      Settings settings = new Settings(getOkHttpClientForSSL(), uri, null, null);
+                                                                      settings.load(Settings.SettingsTarget.APPLICATION, null,
+                                                                         new Settings.CallbackListener() {
+                                                                         @Override
+                                                                            public void onSuccess(JSONObject o) {
+                                                                            //Here goes the code for processing successful response...
+                                                                            }
+     
+                                                                             @Override
+                                                                            public void onError(Throwable result) {
+                                                                                //Handle error here...
+                                                                            }
+     
+                                                                      });
+                                                                      </code></pre></p>
+</BODY>
+</HTML>

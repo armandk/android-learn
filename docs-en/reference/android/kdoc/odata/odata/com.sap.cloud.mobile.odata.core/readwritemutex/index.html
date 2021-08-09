@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ReadWriteMutex - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">ReadWriteMutex</a><br/>
+<br/>
+<h1>ReadWriteMutex</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ReadWriteMutex</span></code>
+<p>Allows the implementation of concurrent access for read-only operations, while write operations require exclusive access.</p>
+ See Also: 
+<p><a href="https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock">Readers-writer lock</a>.</p>
+  Note: this implementation is not reentrant. If a thread tries to acquire a lock on this mutex while already holding a lock, the thread will hang.
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ReadWriteMutex</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Allows the implementation of concurrent access for read-only operations, while write operations require exclusive access.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="beginread.html">beginRead</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">beginRead</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Acquire a shared read lock, which can be released using <code><a href="endread.html">ReadWriteMutex.endRead</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="beginwrite.html">beginWrite</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">beginWrite</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Acquire an exclusive write lock, which can be released using <code><a href="endread.html">ReadWriteMutex.endRead</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="endread.html">endRead</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">endRead</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Release a shared read lock that was acquired using <code><a href="beginread.html">ReadWriteMutex.beginRead</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="endwrite.html">endWrite</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">endWrite</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Release an exclusive write lock that was acquired using <code><a href="beginwrite.html">ReadWriteMutex.beginWrite</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="readlock.html">readLock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readLock</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ReadWriteMutex$readLock(com.sap.cloud.mobile.odata.core.Action0)/action">action</span><span class="symbol">:</span>&nbsp;<a href="../action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Execute <code>action</code> while holding s shared read lock.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writelock.html">writeLock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeLock</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ReadWriteMutex$writeLock(com.sap.cloud.mobile.odata.core.Action0)/action">action</span><span class="symbol">:</span>&nbsp;<a href="../action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Execute <code>action</code> while holding an exclusive write lock.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

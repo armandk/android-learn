@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MemoryCache - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="./index.html">MemoryCache</a><br/>
+<br/>
+<h1>MemoryCache</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.MemoryCache"></a>
+<code><span class="keyword">class </span><span class="identifier">MemoryCache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">CacheBuilder</span><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.cache.MemoryCache"></a>
+<code><span class="keyword">class </span><span class="identifier">MemoryCache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">CacheBuilder</span><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>MemoryCache is a fixed size in-memory cache that uses <strong>weak reference keys</strong> to store a set of values with the following features and options: <ol> <li><strong>LRU</strong> (Least Recently Used) <strong>Cache Replacement Policy</strong>: Each time a value is accessed, it is moved to the end of a queue in descending LRU order. When an entry is added to a full cache, the entry at the head of that queue, that is, the <em>Least Recently Used</em> entry is evicted to make room for the new entry. </li>
+ <li><strong>Clear on Memory Error</strong> Option: When this option is turned on, low memory situation detected by the application will cause the entire cache to be cleared. </li>
+ <li> 
+<p><strong>Cost Factor</strong> Option: The cache can be configured with a <strong>maximum cost</strong>, and a <strong>cost</strong> provided by the user is associated with each cache entry during the <strong>put</strong> operation. </p>
+<p>In addition to the LRU Replacement Policy, when the aggregated cost exceeds the maximum cost, one or more cache entries based on system or user-defined <strong>eviction criteria</strong> will be removed to make space for the current entry, then adds the current entry to the cache: </p>
+<ul> <li><strong><em>System Eviction Criteria</em></strong>-- the current entry with the highest cost will be removed.</li>
+ <li><strong><em>Customized Eviction Criteria</em></strong>-- a list of existing entries sorted in ascending cost order will be presented to the user via a callback interface <strong>CacheCostFactor</strong>, the user-defined callback method <strong><code>List&lt;K&gt; onExceedMaxCost(final List&lt;K&gt; existingKeys)</code></strong> can select and return a list of one or more entries from the input list to evict. </li>
+ </ul>
+ </li>
+ </ol>
+ </p>
+<p>Before interacting with the <code>MemoryCache</code>, you need to instantiate and configure the <code>MemoryCache</code>. Any operation performed before the cache is properly configured will incur an error. </p>
+Creating <pre><code>int maxSize = 32;
+
+    // Specifies the key and value type, Android application context and maximum size.
+    MemoryCache&lt;String, Employee&gt;  cache = new MemoryCache&lt;&gt;(androidContext, maxSize);
+
+</code></pre> Configuring <ul> <li>With no options</li>
+ <pre><code>// Configures a Memory Cache with no 'on low memory error' and 'cost factor' options.
+        cache.build();
+ </code></pre> <li><strong>Clear On Memory Error</strong> option-- Enables the 'Clear On Memory Error' option. The user also needs to invoke <code><a href="onlowmemory.html">#onLowMemory()</a></code> in Android <code><a href="#">ComponentCallbacks#onLowMemory()</a></code> life cycle method. </li>
+ <pre><code>cache.clearOnMemoryError().build();
+ </code></pre> <li><strong>Cost Factor option</strong> with the default <strong>system eviction criteria</strong>-- The user can enable and specify the maximum total cost, and uses system eviction criteria by not calling <code><a href="addcostfactor.html">#addCostFactor(CacheCostFactor)</a></code>. </li>
+<pre><code>cache.maxCost(5.0).build();
+ </code></pre> <li><strong>Cost Factor option</strong> with <strong>custom eviction criteria</strong>-- In addition to the maximum total cost, the user can provide custom eviction criteria via <code><a href="../cachecostfactor/index.html">CacheCostFactor</a></code> interface. </li>
+<pre><code>cache.maxCost(5.0)
+            .addCostFactor(new CacheCostFactor&lt;String&gt;() {
+                 public List&lt;String&gt; onExceedMaxCost(List&lt;String&gt; existingKeys) {
+                     // This custom Eviction policy removes the two least costly entries.
+                     ArrayList&lt;String&gt; removeList = new ArrayList&lt;&gt;();
+                     int size = existingKeys.size();
+
+                     if (size &gt; 0)
+                        // Remove the most costly entry.
+                        removeList.add(existingKeys.get(size - 1));
+                     if (size &gt;= 2)
+                        // Also remove the second most costly entry.
+                        removeList.add(existingKeys.get(size - 2));
+
+                    return removeList;
+                     }
+                 })
+            .build();
+
+         // Adds entries with cost.
+         cache.put("bitMap1", bitMap1, 0.8);
+         cache.put("bitMap2", bitMap2, 2.3); // Most costly.
+         cache.put("bitMap3", bitMap3, 1.8); // Second most costly.
+
+         // Aggregated cost so far is 4.9.
+         // By adding the entry 'bitMap4' below, the aggregated cost will become 6.2, which is
+         // greater than the max cost 5.0.
+         // Thus, based on the custom Eviction criteria, the two most costly entries will be removed
+         // first before adding the entry below.
+         cache.put("bitMap4", bitMap4, 1.3);
+ </code></pre> </ul>
+<p><strong>See Also</strong><br/>
+<a href="../cache/index.html">Cache</a></p>
+</BODY>
+</HTML>

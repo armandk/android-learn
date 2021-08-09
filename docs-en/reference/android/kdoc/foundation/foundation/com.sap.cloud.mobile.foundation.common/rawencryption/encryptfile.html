@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RawEncryption.encryptFile - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">RawEncryption</a>&nbsp;/&nbsp;<a href="./encryptfile.html">encryptFile</a><br/>
+<br/>
+<h1>encryptFile</h1>
+<a name="com.sap.cloud.mobile.foundation.common.RawEncryption$encryptFile(kotlin.String, kotlin.String, kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encryptFile</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$encryptFile(kotlin.String, kotlin.String, kotlin.ByteArray)/unencryptedFilePath">unencryptedFilePath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$encryptFile(kotlin.String, kotlin.String, kotlin.ByteArray)/encryptedFilePath">encryptedFilePath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$encryptFile(kotlin.String, kotlin.String, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Encrypts a file and saves the encrypted contents to another file.</p>
+<h3>Parameters</h3>
+<p><a name="unencryptedFilePath"></a>
+<code>unencryptedFilePath</code> - <span class="identifier">String</span><span class="symbol">:</span> The complete filepath to the original, unencrypted file.</p>
+<p><a name="encryptedFilePath"></a>
+<code>encryptedFilePath</code> - <span class="identifier">String</span><span class="symbol">:</span> The complete filepath to where the encrypted file should be written. If there is already a file at this filepath it will be overwritten.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The key used to encrypt the file, and which can be used to decrypt the file later. It is recommended to use EncryptionUtil to generate the encryption key, but this is not required. The encryption key must be 16, 24, or 32 bytes. When the application no longer needs the encryption key it should clear the array with a call like: Arrays.fill(encryptionKey, (byte) 0x0);</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - Indicates something went wrong with IO or encryption.</p>
+<a name="com.sap.cloud.mobile.foundation.common.RawEncryption$encryptFile(kotlin.String, kotlin.String, kotlin.ByteArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">encryptFile</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$encryptFile(kotlin.String, kotlin.String, kotlin.ByteArray)/unencryptedFilePath">unencryptedFilePath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$encryptFile(kotlin.String, kotlin.String, kotlin.ByteArray)/encryptedFilePath">encryptedFilePath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$encryptFile(kotlin.String, kotlin.String, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Encrypts a file and saves the encrypted contents to another file.</p>
+<h3>Parameters</h3>
+<p><a name="unencryptedFilePath"></a>
+<code>unencryptedFilePath</code> - <span class="identifier">String</span><span class="symbol">:</span> The complete filepath to the original, unencrypted file.</p>
+<p><a name="encryptedFilePath"></a>
+<code>encryptedFilePath</code> - <span class="identifier">String</span><span class="symbol">:</span> The complete filepath to where the encrypted file should be written. If there is already a file at this filepath it will be overwritten.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The key used to encrypt the file, and which can be used to decrypt the file later. It is recommended to use EncryptionUtil to generate the encryption key, but this is not required. The encryption key must be 16, 24, or 32 bytes. When the application no longer needs the encryption key it should clear the array with a call like: Arrays.fill(encryptionKey, (byte) 0x0);</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - Indicates something went wrong with IO or encryption.</p>
+</BODY>
+</HTML>

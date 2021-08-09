@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.groupBy - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./groupby.html">groupBy</a><br/>
+<br/>
+<h1>groupBy</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$groupBy(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">groupBy</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$groupBy(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))/items">items</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Adds a group transformation item to the DataQuery with the property paths given in the parameter list. Note: If this method is called then all the transformation and aggregation items added to the query will be applied to the group transformation in the query. </p>
+Example for transformations:<pre><code>
+      public void transformationExample() {
+          DataService service = this.getService();
+          EntitySet employeeEntitySet = service.getEntitySet("Employees");
+          EntityType employeeEntityType = employeeEntitySet.getEntityType();
+          Property employeeReportsToProperty = employeeEntityType.getProperty("ReportsTo");
+          Property employee1Property = employeeEntityType.getProperty("Employee1");
+          Property ordersProperty = employeeEntityType.getProperty("Orders");
+          Property ordersQuantity = ordersProperty.getEntityType()
+              .getProperty("Quantity");
+          Property countryProperty = employeeEntityType.getProperty("Country");
+          DataQuery queryGroup = new DataQuery();
+          FilterTransform filterGroupTransform = FilterTransform.of(QueryOperator.equal(countryProperty,
+              StringValue.of("Budapest")));
+          GroupTransform groupTransform = GroupTransform.groupBy(employeeReportsToProperty)
+              .aggregate(ordersProperty.path(ordersQuantity).sum("SumQuantity"));
+          queryGroup.transform(groupTransform);
+          this.testApplyQueryResult(queryGroup, "SumQuantity");
+          DataQuery groupTransformForQuery = new DataQuery()
+              .groupBy(employeeReportsToProperty)
+              .aggregate(ordersProperty.path(ordersQuantity).sum("SumQuantity"))
+              .transform(filterGroupTransform);
+          this.testApplyQueryResult(groupTransformForQuery, "SumQuantity");
+          DataQuery queryTopPercent = new DataQuery();
+          TopTransform topPercentTransform = TopTransform.percent(((double)50),
+              employeeReportsToProperty);
+          queryTopPercent.transform(topPercentTransform);
+          this.testApplyQueryResult(queryTopPercent, null);
+          DataQuery queryExpand = new DataQuery();
+          ExpandTransform expandTransform = ExpandTransform.withFilter(ordersProperty,
+              FilterTransform.of(QueryOperator.equal(employeeReportsToProperty,
+                  IntValue.of(1000))));
+          queryExpand.transform(expandTransform);
+          this.testApplyQueryResult(queryExpand, null);
+          ExpandTransform expandWithExpandTransform = ExpandTransform.withExpand(employee1Property,
+              expandTransform);
+          DataQuery queryExpand1 = new DataQuery();
+          queryExpand1.transform(expandWithExpandTransform);
+          this.testApplyQueryResult(queryExpand1, null);
+      }
+      </code></pre> Example for transformations:<pre><code>
+      public void transformationExample() {
+          DataQuery queryGroup = new DataQuery();
+          GroupTransform groupTransform = GroupTransform.groupBy(Employee.reportsTo)
+              .aggregate(Employee.orders.path(Order.orderDetails)
+                  .path(OrderDetail.quantity).sum("SumQuantity"));
+          queryGroup.transform(groupTransform);
+          this.testApplyQueryResult(queryGroup, "SumQuantity");
+          FilterTransform filterGroupTransform = FilterTransform.of(QueryOperator.equal(Employee.country,
+              StringValue.of("Budapest")));
+          DataQuery groupTransformForQuery = new DataQuery()
+              .groupBy(Employee.reportsTo)
+              .aggregate(Employee.orders.path(Order.orderDetails)
+                  .path(OrderDetail.quantity).sum("SumQuantity"))
+              .transform(filterGroupTransform);
+          this.testApplyQueryResult(groupTransformForQuery, "SumQuantity");
+          DataQuery queryTopPercent = new DataQuery();
+          TopTransform topPercentTransform = TopTransform.percent(((double)50),
+              Employee.reportsTo);
+          queryTopPercent.transform(topPercentTransform);
+          this.testApplyQueryResult(queryTopPercent, null);
+          DataQuery queryExpand = new DataQuery();
+          ExpandTransform expandTransform = ExpandTransform.withFilter(Employee.orders,
+              FilterTransform.of(QueryOperator.equal(Employee.reportsTo,
+                  IntValue.of(1000))));
+          queryExpand.transform(expandTransform);
+          this.testApplyQueryResult(queryExpand, null);
+          ExpandTransform expandWithExpandTransform = ExpandTransform.withExpand(Employee.employee1,
+              expandTransform);
+          DataQuery queryExpand1 = new DataQuery();
+          queryExpand1.transform(expandWithExpandTransform);
+          this.testApplyQueryResult(queryExpand1, null);
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="items"></a>
+<code>items</code> - <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">:</span> The property paths to be added to the group transformation.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

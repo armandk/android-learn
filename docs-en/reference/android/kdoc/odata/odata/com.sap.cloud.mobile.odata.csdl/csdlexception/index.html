@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsdlException - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.csdl</a>&nbsp;/&nbsp;<a href="./index.html">CsdlException</a><br/>
+<br/>
+<h1>CsdlException</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/dataschemaexception/index.html"><span class="identifier">DataSchemaException</span></a></code>
+<p>Exception thrown when an error occurs during the parsing of an Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>) document.</p>
+ See Also: 
+<p><code><a href="../csdlparser/index.html">com.sap.cloud.mobile.odata.csdl.CsdlParser</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CsdlException</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$<init>(kotlin.String, kotlin.Throwable)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$<init>(kotlin.String, kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">?</span><span class="symbol">)</span></code><code><span class="identifier">CsdlException</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Default constructor.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="cannotfetch.html">cannotFetch</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cannotFetch</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$cannotFetch(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CsdlException</span></a></code>
+<p>Return a CSDL exception which indicates the metadata document at a particular <code>url</code> cannot be fetched.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getelement.html">getElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getElement</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) CSDL XML element related to this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setelement.html">setElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$setElement(com.sap.cloud.mobile.odata.xml.XmlElement)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set CSDL XML element related to this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unknownschema.html">unknownSchema</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">unknownSchema</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$unknownSchema(kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CsdlException</span></a></code>
+<p>Return a CSDL exception which indicates the metadata document at a particular <code>url</code> references an unknown schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withcause.html">withCause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withCause</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$withCause(java.lang.RuntimeException)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CsdlException</span></a></code>
+<p>Return a new exception with the specified root cause.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withcauseandmessage.html">withCauseAndMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withCauseAndMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$withCauseAndMessage(java.lang.RuntimeException, kotlin.String)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$withCauseAndMessage(java.lang.RuntimeException, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CsdlException</span></a></code>
+<p>Return a new exception with the specified root cause and message text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withelement.html">withElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$withElement(com.sap.cloud.mobile.odata.xml.XmlElement, kotlin.String)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$withElement(com.sap.cloud.mobile.odata.xml.XmlElement, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CsdlException</span></a></code>
+<p>Return a CSDL exception which indicates a problem related to a particular CSDL XML element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withmessage.html">withMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlException$withMessage(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CsdlException</span></a></code>
+<p>Return a new exception with the specified message text.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

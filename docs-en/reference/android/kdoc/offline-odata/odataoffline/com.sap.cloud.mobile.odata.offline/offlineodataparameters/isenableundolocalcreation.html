@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataParameters.isEnableUndoLocalCreation - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataParameters</a>&nbsp;/&nbsp;<a href="./isenableundolocalcreation.html">isEnableUndoLocalCreation</a><br/>
+<br/>
+<h1>isEnableUndoLocalCreation</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataParameters$isEnableUndoLocalCreation()"></a>
+<code><span class="keyword">fun </span><span class="identifier">isEnableUndoLocalCreation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Returns true if an optimization that deleting an entity that was created locally but not yet uploaded undoes the creation is enabled. More specifically, if enabled, the optimization will remove requests from the request queue so the the backend never sees them. </p>
+<p> **Additional Notes:** </p>
+<p> 1. 'enableUndoLocalCreation' is 'false' by default. </p>
+<p> 2. 'enableUndoLocalCreation' is different than 'enableRequestQueueOptimization'. The algorithm that 'enableRequestQueueOptimization' controls respects transaction boundaries and unmodifiable requests (see 'OfflineODataRequestOptions.unmodifiableRequest'). If 'enableUndoLocalCreation' is set to 'true', it does not matter whether the creates, updates and deletes are in different transactions or are unmodifiable, they will all be removed. </p>
+<p> 3. The algorithm will respect cascading deletes. That is, if a parent in a parent-child relationship is deleted, and this optimization is enabled, the algorithm will also ensure that requests for children that were also created and not yet uploaded will also be removed from the request queue. However, if deleting a locally created but not yet uploaded entity will cause an entity downloaded from the backend to be deleted (for example, if a cascading delete of the local entity causes a server entity to be deleted), the requests referencing the locally deleted entity will be sent to the backend to ensure the correct entities are deleted from the backend. If the application needs to guarantee requests creating and modifying a locally created entity are not sent to the backend, the application should use 'OfflineODataProvider.undoPendingChanges()'. </p>
+<p> Consider the following examples: </p>
+<p> 1. Say you have created a new entity customer101 locally, updated it once and then deleted it. After performing these operations, you invoke upload(). Below is the operation sequence: </p>
+<ul> <li>Request #1: Create customer101 locally </li>
+<li>Request #2: Update customer101 </li>
+<li>Request #3: Delete customer101 </li>
+<li>Invoke upload() </li>
+</ul>
+ 
+<p> Note that before invoking upload(), customer101 is not available (since it has been deleted) but request #1 to #3 are kept in the request queue. </p>
+<p> If 'enableUndoLocalCreation' is 'false' (the default value), when calling upload(), request #1 to #3 will be sent to the backend. The entity customer101 will be created, updated then deleted in the backend. </p>
+<p> If 'enableUndoLocalCreation' is 'true', when calling upload, the optimization will happen by removing request #1 to #3, therefore they would not be sent to the backend. </p>
+<p> 2. Say you have created a new entity customer101 locally, and then also create a related order101 where the relationship between customers and orders is "on delete cascade". Then customer101 is deleted before any operations are uploaded. Then upload() is invoked. Below is the operation sequence: </p>
+<ul> <li>Request #1: Create customer101 locally </li>
+<li>Request #2: Create order101 related to customer101 locally </li>
+<li>Request #3: Delete customer101 </li>
+<li>Invoke upload() </li>
+</ul>
+ 
+<p> If 'enableUndoLocalCreation' is 'false' (the default value), when calling upload(), request #1 to #3 will be sent to the backend. </p>
+<p> If 'enableUndoLocalCreation' is 'true', when calling upload, the optimization will happen by removing request #1 to #3, therefore they would not be sent to the backend.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if the optimization is enabled.</p>
+<p><strong>See Also</strong><br/>
+<a href="../offlineodataprovider/undopendingchanges.html">OfflineODataProvider#undoPendingChanges( EntityValue entity )</a></p>
+</BODY>
+</HTML>

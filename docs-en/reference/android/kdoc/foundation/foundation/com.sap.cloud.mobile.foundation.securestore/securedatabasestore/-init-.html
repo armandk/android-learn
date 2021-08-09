@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecureDatabaseStore.<init> - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.securestore</a>&nbsp;/&nbsp;<a href="index.html">SecureDatabaseStore</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$&lt;init&gt;(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)"></a>
+<code><span class="identifier">SecureDatabaseStore</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$<init>(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$<init>(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)/databaseName">databaseName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$<init>(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)/databaseVersion">databaseVersion</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$<init>(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)/cb">cb</span><span class="symbol">:</span>&nbsp;<a href="../createdatabasecallback/index.html"><span class="identifier">CreateDatabaseCallback</span></a><span class="symbol">)</span></code>
+<p>Constructs a Secure Database Store and invokes the provided <code><a href="../createdatabasecallback/oncreate.html">CreateDatabaseCallback#onCreate(SecureDatabaseStore)</a></code> for creating database objects if those objects do not exist already, or invokes <code><a href="../createdatabasecallback/onupgrade.html">CreateDatabaseCallback#onUpgrade(SecureDatabaseStore, int, int)</a></code> if the database version is newer than the existing database. </p>
+<p><strong>Note</strong>: The caller must call <code><a href="open.html">#open(byte[])</a></code> after a <code>SecureDatabaseStore</code> instance is created. Otherwise, all accesses to the instance will cause <code>FileClosedException</code>.</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> Android application context</p>
+<p><a name="databaseName"></a>
+<code>databaseName</code> - <span class="identifier">String</span><span class="symbol">:</span> a non-empty name of the Database that can only contain <code>-, _, a-z, A-Z, 0-9</code> and <code>.</code>.</p>
+<p><a name="cb"></a>
+<code>cb</code> - <a href="../createdatabasecallback/index.html"><span class="identifier">CreateDatabaseCallback</span></a><span class="symbol">:</span> callback that is used to to specify table schema to create or update the database objects</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If database name is empty or invalid, of the database version &lt; 1</p>
+<p><strong>See Also</strong><br/>
+<a href="open.html">#open(byte[])</a><a href="../createdatabasecallback/index.html">CreateDatabaseCallback</a></p>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$&lt;init&gt;(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)"></a>
+<code><span class="identifier">SecureDatabaseStore</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$<init>(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$<init>(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)/databaseName">databaseName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$<init>(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)/databaseVersion">databaseVersion</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore$<init>(android.content.Context, kotlin.String, kotlin.Int, com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback)/cb">cb</span><span class="symbol">:</span>&nbsp;<a href="../createdatabasecallback/index.html"><span class="identifier">CreateDatabaseCallback</span></a><span class="symbol">)</span></code>
+<p>Constructs a Secure Database Store and invokes the provided <code><a href="../createdatabasecallback/oncreate.html">CreateDatabaseCallback#onCreate(SecureDatabaseStore)</a></code> for creating database objects if those objects do not exist already, or invokes <code><a href="../createdatabasecallback/onupgrade.html">CreateDatabaseCallback#onUpgrade(SecureDatabaseStore, int, int)</a></code> if the database version is newer than the existing database. </p>
+<p><strong>Note</strong>: The caller must call <code><a href="open.html">#open(byte[])</a></code> after a <code>SecureDatabaseStore</code> instance is created. Otherwise, all accesses to the instance will cause <code>FileClosedException</code>.</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> Android application context</p>
+<p><a name="databaseName"></a>
+<code>databaseName</code> - <span class="identifier">String</span><span class="symbol">:</span> a non-empty name of the Database that can only contain <code>-, _, a-z, A-Z, 0-9</code> and <code>.</code>.</p>
+<p><a name="cb"></a>
+<code>cb</code> - <a href="../createdatabasecallback/index.html"><span class="identifier">CreateDatabaseCallback</span></a><span class="symbol">:</span> callback that is used to to specify table schema to create or update the database objects</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If database name is empty or invalid, of the database version &lt; 1</p>
+<p><strong>See Also</strong><br/>
+<a href="open.html">#open(byte[])</a><a href="../createdatabasecallback/index.html">CreateDatabaseCallback</a></p>
+</BODY>
+</HTML>

@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.page - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./page.html">page</a><br/>
+<br/>
+<h1>page</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$page(kotlin.Int)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">page</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$page(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getpagesize.html">DataQuery.pageSize</a></code> to specify the page-size for server-driven paging of results. Note: the server is not required to respect this setting. But if this setting is used, the client should expect to have to follow next-links. </p>
+Example using proxy classes:<pre><code>
+      public void queryWithPageExample() {
+          NorthwindService service = this.getService();
+          long expected = service.executeQuery(new DataQuery()
+              .from(NorthwindServiceMetadata.EntitySets.customers).count())
+              .getCount();
+          int found = 0;
+          DataQuery query = new DataQuery()
+              .from(NorthwindServiceMetadata.EntitySets.customers).page(5);
+          do {
+              QueryResult result = service.executeQuery(query);
+              List&lt;Customer&gt; customers = Customer.list(result.getEntityList());
+              this.showCustomers(customers);
+              found = found + customers.size();
+              query = result.getNextQuery();
+          }
+          while (query.getUrl() != null);
+          assert ((long)found) == expected;
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void queryWithPageExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          DataQuery query = new DataQuery().from(customersEntitySet).page(5);
+          do {
+              QueryResult result = service.executeQuery(query);
+              EntityValueList customers = result.getEntityList();
+              this.showCustomers(customers);
+              query = result.getNextQuery();
+          }
+          while (query.getUrl() != null);
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="size"></a>
+<code>size</code> - <span class="identifier">Int</span><span class="symbol">:</span> Client-requested page size for use by server-driven paging.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

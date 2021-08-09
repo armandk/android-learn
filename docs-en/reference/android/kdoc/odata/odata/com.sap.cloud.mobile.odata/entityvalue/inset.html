@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntityValue.inSet - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">EntityValue</a>&nbsp;/&nbsp;<a href="./inset.html">inSet</a><br/>
+<br/>
+<h1>inSet</h1>
+<a name="com.sap.cloud.mobile.odata.EntityValue$inSet(com.sap.cloud.mobile.odata.EntitySet)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">inSet</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$inSet(com.sap.cloud.mobile.odata.EntitySet)/set">set</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Change the entity set for this entity. Having a non-null entity set is optional if only one entity set in the <code>DataService</code> uses the entity type, but is required (before <code>DataService.createEntity</code> is called) if multiple entity sets use the same entity type. </p>
+Example using proxy classes:<pre><code>
+      public void createEntityInSetExample() {
+          NorthwindService service = this.getService();
+          Customer customer = new Customer();
+          customer.setCompanyName("Voyager Inc.");
+          customer.setContactName("Kathryn Janeway");
+          service.createEntity(customer.inSet(NorthwindServiceMetadata.EntitySets.customers));
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void createEntityInSetExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          EntityType customerEntityType = customersEntitySet.getEntityType();
+          Property companyNameProperty = customerEntityType.getProperty("CompanyName");
+          Property contactNameProperty = customerEntityType.getProperty("ContactName");
+          EntityValue customer = EntityValue.ofType(customerEntityType);
+          companyNameProperty.setString(customer, "Voyager Inc.");
+          contactNameProperty.setString(customer, "Kathryn Janeway");
+          service.createEntity(customer.inSet(customersEntitySet));
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="set"></a>
+<code>set</code> - <a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">:</span> Entity set.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">EntityValue</span></a><span class="symbol">:</span> This entity.</p>
+</BODY>
+</HTML>

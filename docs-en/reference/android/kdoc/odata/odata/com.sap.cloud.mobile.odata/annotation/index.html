@@ -1,0 +1,214 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Annotation - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">Annotation</a><br/>
+<br/>
+<h1>Annotation</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Annotation</span></code>
+<p>Represents an <a href="http://odata.org">OData</a> annotation.</p>
+ See Also: 
+<p><code><a href="../annotationterm/index.html">com.sap.cloud.mobile.odata.AnnotationTerm</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Annotation</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents an <a href="http://odata.org">OData</a> annotation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Annotation$equal(com.sap.cloud.mobile.odata.Annotation, com.sap.cloud.mobile.odata.Annotation)/a">a</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Annotation</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.Annotation$equal(com.sap.cloud.mobile.odata.Annotation, com.sap.cloud.mobile.odata.Annotation)/b">b</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Annotation</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if two annotations have equal key-values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotation.html">getAnnotation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotation</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Annotation$getAnnotation(kotlin.String)/term">term</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Annotation</span></a></code>
+<p>Lookup an existing annotation by term name, or throw an exception if the annotation is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationlist.html">getAnnotationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationlist/index.html"><span class="identifier">AnnotationList</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">Annotation.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationmap.html">getAnnotationMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">Annotation.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotations.html">getAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return map of annotations for this model element. For annotations without qualifiers, the entry key is the annotation term name. For annotations with qualifiers, the entry key is the annotation term name, then "#", then the annotation qualifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getexplicitnull.html">getExplicitNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getExplicitNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is <code><a href="getexplicitvalue.html">Annotation.explicitValue</a></code> an explicit <code>null</code> value?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getexplicitvalue.html">getExplicitValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getExplicitValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Explicit annotation value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpropertyname.html">getPropertyName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPropertyName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Property name if this annotation was applied to a property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getqualifier.html">getQualifier</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQualifier</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Annotation qualifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsourceline.html">getSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceLine</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getterm.html">getTerm</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTerm</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationterm/index.html"><span class="identifier">AnnotationTerm</span></a></code>
+<p>Return annotation term.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Annotation value. Will return <code>term.defaultValue</code> if <code><a href="getexplicitvalue.html">Annotation.explicitValue</a></code> is <code>null</code> and <code><a href="getexplicitnull.html">Annotation.explicitNull</a></code> is <code>false</code>. Otherwise returns <code><a href="getexplicitvalue.html">Annotation.explicitValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setexplicitnull.html">setExplicitNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExplicitNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Annotation$setExplicitNull(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is <code><a href="getexplicitvalue.html">Annotation.explicitValue</a></code> an explicit <code>null</code> value?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setexplicitvalue.html">setExplicitValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExplicitValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Annotation$setExplicitValue(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set explicit annotation value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpropertyname.html">setPropertyName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPropertyName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Annotation$setPropertyName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set property name if this annotation was applied to a property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setqualifier.html">setQualifier</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setQualifier</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Annotation$setQualifier(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set annotation qualifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsourceline.html">setSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceLine</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Annotation$setSourceLine(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setterm.html">setTerm</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTerm</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.Annotation$setTerm(com.sap.cloud.mobile.odata.AnnotationTerm)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../annotationterm/index.html"><span class="identifier">AnnotationTerm</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set annotation term.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="valueistrue.html">valueIsTrue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">valueIsTrue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code><a href="getvalue.html">Annotation.value</a></code> is <code>true</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

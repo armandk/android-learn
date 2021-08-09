@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.foundation.mobileservices - foundation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">foundation</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.foundation.mobileservices</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.foundation.mobileservices</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="applicationstate/index.html">ApplicationState</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">ApplicationState</span></code>
+<p>ApplicationState is intended to be used in MobileService.onStateChange method (possibly in when clause).
+To make its usage consistent, make all the subclasses data class, even SettingsParameterReady and HTTPClientReady may not need the ready parameter.
+Sample code:
+    when (state) {
+        is ApplicationState.HTTPClientReady -&gt; httpClientReady = state.ready
+        is ApplicationState.AuthenticationChange -&gt; authenticated = state.authenticated
+        ...
+    }</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="applicationstates/index.html">ApplicationStates</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">ApplicationStates</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Observable</span></code>
+<p>Represents the state holder of the application. When the application state changes, the state
+change producer will notify this holder, then the state will be saved inside this, and notify
+the observers which are interested in the state changes. For example, if one service wants to
+do something when the application is brought to background, it can observe the <a href="applicationstate/onfrontchange/index.html">ApplicationState.OnFrontChange</a>,
+and if the operation also depends on other state, for example, http client must be ready, it can
+query this state holder for that state.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mobileservice/index.html">MobileService</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">MobileService</span></code>
+<p>Represents the base class for all mobile services, for example, <a href="#">PushService</a>, <a href="../com.sap.cloud.mobile.foundation.user/userservice/index.html">UserService</a>, etc.
+Each service represents a feature that the mobile app wants to use. To use a service, create an instance
+of that service, then feed to <a href="sdkinitializer/index.html">SDKInitializer</a> to initialize it, then later client code can get
+the instance from <a href="sdkinitializer/index.html">SDKInitializer</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mobileservices/index.html">MobileServices</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">MobileServices</span></s></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">MobileServices</span></s></code>
+<p>Represents the facade to initialize mobile services.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sdkinitializer/index.html">SDKInitializer</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">SDKInitializer</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="servicelistener/index.html">ServiceListener</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ServiceListener</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="serviceresult/index.html">ServiceResult</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">ServiceResult</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>Represents the result for services</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

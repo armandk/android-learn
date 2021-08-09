@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataQueryFunction.hasPendingChanges - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataQueryFunction</a>&nbsp;/&nbsp;<a href="./haspendingchanges.html">hasPendingChanges</a><br/>
+<br/>
+<h1>hasPendingChanges</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataQueryFunction$hasPendingChanges()"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hasPendingChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">QueryFilter</span><span class="symbol">!</span></code>
+<p>The function creates a QueryFilter to check if an entity has any pending change requests in the request queue. </p>
+<p> hasPendingChanges is different from isLocal based on whether or not the change requests have been sent to the backend. An entity that has changes in the request queue that have not been sent will be both local and pending. When the changes in the request queue have been sent to the backend but the results have not been received by a download operation, the entity will be local but NOT pending.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">QueryFilter</span><span class="symbol">!</span><span class="symbol">:</span> An application of the Offline OData "sap.hasPendingChanges" function.</p>
+</BODY>
+</HTML>

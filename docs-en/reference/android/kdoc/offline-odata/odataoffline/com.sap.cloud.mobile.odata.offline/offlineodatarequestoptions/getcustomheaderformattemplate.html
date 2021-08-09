@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataRequestOptions.getCustomHeaderFormatTemplate - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataRequestOptions</a>&nbsp;/&nbsp;<a href="./getcustomheaderformattemplate.html">getCustomHeaderFormatTemplate</a><br/>
+<br/>
+<h1>getCustomHeaderFormatTemplate</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions$getCustomHeaderFormatTemplate()"></a>
+<code><span class="keyword">fun </span><span class="identifier">getCustomHeaderFormatTemplate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns a custom header format template for a request. </p>
+<p> This feature allows the application to specify a format for a custom header to send to the backend during an upload. The format can contain placeholders for key properties of other entities that have been created locally but not yet uploaded to the backend. When the Offline OData server gets the response for the create request from the backend for the referenced entities, it replaces the placeholders in the custom header format with the real key values. It then sends the header with the replaced placeholders to the backend. </p>
+<p> The syntax of the custom header format is </p>
+<p> header_name ':' header_value_format </p>
+<p> Where header_name is the name of the header to send to the backend and header_value_format is the format for the header value. The header_value_format can contain placeholders for keys of the referenced entity. The header_value_format can have multiple placeholders to reference multiple entities and key properties. The format of a placeholder is as follows: </p>
+<p> '&lt;' referenced entity ID ':' key property name '&gt;' </p>
+<p> For example, imagine a backend has a WorkOrder entity (with a single key property, ID) and a Document media resource related to the WorkOrder. This backend does not allow a Document media resource to be created unless it is related to a WorkOrder and the backend requires the information about the related WorkOrder to be specified by the Slug header. The Slug header in this example is also used to specify the name of the new document. The application creates a WorkOrder while offline with local ID WorkOrder(lodata_sys_eid=X'C0615B04E08D4E85874F2D2AAEE220E800000000'). The application can then create a related Document offline which will be related to the newly created WorkOrder by the backend by specifying the following customHeaderFormat: </p>
+<p> "slug:DocumentName='NewDocument',WorkOrderID=" </p>
+<p> By default, customHeaderFormatTemplate value is null.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> a header format template.</p>
+</BODY>
+</HTML>

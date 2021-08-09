@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BinarySemaphore - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">BinarySemaphore</a><br/>
+<br/>
+<h1>BinarySemaphore</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BinarySemaphore</span></code>
+<p>A <a href="https://en.wikipedia.org/wiki/Semaphore_(programming)">binary semaphore</a>. A notable difference from <code><a href="../reentrantmutex/index.html">com.sap.cloud.mobile.odata.core.ReentrantMutex</a></code> is that a binary semaphore can be acquired by one thread and released by another.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BinarySemaphore</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A <a href="https://en.wikipedia.org/wiki/Semaphore_(programming)">binary semaphore</a>. A notable difference from <code><a href="../reentrantmutex/index.html">com.sap.cloud.mobile.odata.core.ReentrantMutex</a></code> is that a binary semaphore can be acquired by one thread and released by another.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="acquire.html">acquire</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">acquire</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Acquire the semaphore, blocking if needed until a permit is available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="release.html">release</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">release</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Release the semaphore which was acquired earlier using <code><a href="acquire.html">BinarySemaphore.acquire</a></code> or <code><a href="tryacquire.html">BinarySemaphore.tryAcquire</a></code>. Note: the thread that releases a semaphore need not be the same thread that acquired it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tryacquire.html">tryAcquire</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">tryAcquire</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinarySemaphore$tryAcquire(kotlin.Int)/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the semaphore was acquired without blocking for longer than <code>timeout</code> milliseconds, otherwise <code>false</code> (in which case the semaphore was not acquired).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

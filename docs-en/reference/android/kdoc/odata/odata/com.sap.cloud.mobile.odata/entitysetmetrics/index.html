@@ -1,0 +1,501 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntitySetMetrics - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">EntitySetMetrics</a><br/>
+<br/>
+<h1>EntitySetMetrics</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntitySetMetrics</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">EntitySetMetrics</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getdeltadownloadbytes.html">getDeltaDownloadBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaDownloadBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for delta download bytes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltadownloadbytes_gzip.html">getDeltaDownloadBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaDownloadBytes_gzip</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for delta download bytes (gzip size).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltadownloadrows.html">getDeltaDownloadRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaDownloadRows</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for delta download rows.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltadownloadtime.html">getDeltaDownloadTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaDownloadTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for delta download time.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinitialdownloadbytes.html">getInitialDownloadBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInitialDownloadBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for initial download bytes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinitialdownloadbytes_gzip.html">getInitialDownloadBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInitialDownloadBytes_gzip</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for initial download bytes (gzip size).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinitialdownloadrows.html">getInitialDownloadRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInitialDownloadRows</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for initial download rows.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinitialdownloadtime.html">getInitialDownloadTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInitialDownloadTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for initial download time.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getofflinecreateentitytime.html">getOfflineCreateEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOfflineCreateEntityTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent creating entities in the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getofflinedeleteentitytime.html">getOfflineDeleteEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOfflineDeleteEntityTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent deleting entities from the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getofflineexecutequerytime.html">getOfflineExecuteQueryTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOfflineExecuteQueryTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent querying entities from the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getofflinequeryresultrows.html">getOfflineQueryResultRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOfflineQueryResultRows</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for result rows querying entities from the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getofflineupdateentitytime.html">getOfflineUpdateEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOfflineUpdateEntityTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent updating entities in the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinecreateentitytime.html">getOnlineCreateEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineCreateEntityTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent creating entities in the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinecreatelinktime.html">getOnlineCreateLinkTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineCreateLinkTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent creating links in the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinedeleteentitytime.html">getOnlineDeleteEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineDeleteEntityTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent deleting entities from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinedeletelinktime.html">getOnlineDeleteLinkTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineDeleteLinkTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent deleting links in the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlineexecutequerytime.html">getOnlineExecuteQueryTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineExecuteQueryTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent executing queries against the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinefollowednextcount.html">getOnlineFollowedNextCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineFollowedNextCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for number of query next-links followed from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinehttpresponsetime.html">getOnlineHttpResponseTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineHttpResponseTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent fetching query results from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinequeryresultbytes.html">getOnlineQueryResultBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineQueryResultBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for byte count fetching query results from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinequeryresultbytes_gzip.html">getOnlineQueryResultBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineQueryResultBytes_gzip</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for byte count (before gzip decompression) fetching query results from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinequeryresultrows.html">getOnlineQueryResultRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineQueryResultRows</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for result rows executing queries against the backend system. For queries returning expanded children, only the parent entities are counted by this metric.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlinereadentitytime.html">getOnlineReadEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineReadEntityTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent loading entities (using primary key) against the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlineupdateentitytime.html">getOnlineUpdateEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineUpdateEntityTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent updating entities in the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getonlineupdatelinktime.html">getOnlineUpdateLinkTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOnlineUpdateLinkTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datametric/index.html"><span class="identifier">DataMetric</span></a></code>
+<p>Return metric for time spent updating links in the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeltadownloadbytes.html">setDeltaDownloadBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaDownloadBytes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setDeltaDownloadBytes(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for delta download bytes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeltadownloadbytes_gzip.html">setDeltaDownloadBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaDownloadBytes_gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setDeltaDownloadBytes_gzip(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for delta download bytes (gzip size).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeltadownloadrows.html">setDeltaDownloadRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaDownloadRows</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setDeltaDownloadRows(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for delta download rows.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeltadownloadtime.html">setDeltaDownloadTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaDownloadTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setDeltaDownloadTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for delta download time.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinitialdownloadbytes.html">setInitialDownloadBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInitialDownloadBytes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setInitialDownloadBytes(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for initial download bytes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinitialdownloadbytes_gzip.html">setInitialDownloadBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInitialDownloadBytes_gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setInitialDownloadBytes_gzip(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for initial download bytes (gzip size).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinitialdownloadrows.html">setInitialDownloadRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInitialDownloadRows</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setInitialDownloadRows(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for initial download rows.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinitialdownloadtime.html">setInitialDownloadTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInitialDownloadTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setInitialDownloadTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for initial download time.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setofflinecreateentitytime.html">setOfflineCreateEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOfflineCreateEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOfflineCreateEntityTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent creating entities in the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setofflinedeleteentitytime.html">setOfflineDeleteEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOfflineDeleteEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOfflineDeleteEntityTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent deleting entities from the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setofflineexecutequerytime.html">setOfflineExecuteQueryTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOfflineExecuteQueryTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOfflineExecuteQueryTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent querying entities from the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setofflinequeryresultrows.html">setOfflineQueryResultRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOfflineQueryResultRows</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOfflineQueryResultRows(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for result rows querying entities from the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setofflineupdateentitytime.html">setOfflineUpdateEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOfflineUpdateEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOfflineUpdateEntityTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent updating entities in the local database (except during download).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinecreateentitytime.html">setOnlineCreateEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineCreateEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineCreateEntityTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent creating entities in the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinecreatelinktime.html">setOnlineCreateLinkTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineCreateLinkTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineCreateLinkTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent creating links in the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinedeleteentitytime.html">setOnlineDeleteEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineDeleteEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineDeleteEntityTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent deleting entities from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinedeletelinktime.html">setOnlineDeleteLinkTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineDeleteLinkTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineDeleteLinkTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent deleting links in the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlineexecutequerytime.html">setOnlineExecuteQueryTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineExecuteQueryTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineExecuteQueryTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent executing queries against the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinefollowednextcount.html">setOnlineFollowedNextCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineFollowedNextCount</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineFollowedNextCount(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for number of query next-links followed from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinehttpresponsetime.html">setOnlineHttpResponseTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineHttpResponseTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineHttpResponseTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent fetching query results from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinequeryresultbytes.html">setOnlineQueryResultBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineQueryResultBytes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineQueryResultBytes(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for byte count fetching query results from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinequeryresultbytes_gzip.html">setOnlineQueryResultBytes_gzip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineQueryResultBytes_gzip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineQueryResultBytes_gzip(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for byte count (before gzip decompression) fetching query results from the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinequeryresultrows.html">setOnlineQueryResultRows</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineQueryResultRows</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineQueryResultRows(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for result rows executing queries against the backend system. For queries returning expanded children, only the parent entities are counted by this metric.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlinereadentitytime.html">setOnlineReadEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineReadEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineReadEntityTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent loading entities (using primary key) against the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlineupdateentitytime.html">setOnlineUpdateEntityTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineUpdateEntityTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineUpdateEntityTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent updating entities in the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setonlineupdatelinktime.html">setOnlineUpdateLinkTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOnlineUpdateLinkTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntitySetMetrics$setOnlineUpdateLinkTime(com.sap.cloud.mobile.odata.DataMetric)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set metric for time spent updating links in the backend system.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

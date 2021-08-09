@@ -1,0 +1,279 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UsageService - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.usage</a>&nbsp;/&nbsp;<a href="./index.html">UsageService</a><br/>
+<br/>
+<h1>UsageService</h1>
+<code><span class="keyword">class </span><span class="identifier">UsageService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the facade to initialize the usage feature.</p>
+<p>To use this usage service, the basic step will be:</p>
+<p>When using <code>autoSession</code>, the system will start a usage session when the application is brought to front,
+and end the session when on background, so the usage information of this session could be uploaded to server
+for analysis. If <code>autoSession</code> is false, then the client code can call <code>recordSessionStart</code> of this
+to start the usage session, then <code>recordSessionEnd</code> to end the session, then do the usage upload.</p>
+<p>Client code can also call other helper methods of this class to log different usage information.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/sdkinitializer/index.html">com.sap.cloud.mobile.foundation.mobileservices.SDKInitializer</a></p>
+</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UsageService</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/autoSession">autoSession</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/autoUpload">autoUpload</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/recordCount">recordCount</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;1000<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/uploadAfterDays">uploadAfterDays</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/storeName">storeName</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Represents the facade to initialize the usage feature.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/apikey.html">apiKey</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">apiKey</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>The api key that can connect to mobile server</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">application</span><span class="symbol">: </span><span class="identifier">Application</span></code>
+<p>The application instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="eventbehavioruserinteraction.html">eventBehaviorUserInteraction</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">eventBehaviorUserInteraction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$eventBehaviorUserInteraction(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/viewId">viewId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$eventBehaviorUserInteraction(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/elementId">elementId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$eventBehaviorUserInteraction(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$eventBehaviorUserInteraction(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/interactionValue">interactionValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Submits a UserInteraction analytics behavior event. For example, a Button-click or row select.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="eventbehaviorviewdisplayed.html">eventBehaviorViewDisplayed</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">eventBehaviorViewDisplayed</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$eventBehaviorViewDisplayed(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/viewId">viewId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$eventBehaviorViewDisplayed(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/elementId">elementId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$eventBehaviorViewDisplayed(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$eventBehaviorViewDisplayed(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/interactionValue">interactionValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Submits a ViewDisplayed analytics behavior event.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="init.html">init</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$init(android.app.Application, com.sap.cloud.mobile.foundation.common.SettingsParameters)/application">application</span><span class="symbol">:</span>&nbsp;<span class="identifier">Application</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$init(android.app.Application, com.sap.cloud.mobile.foundation.common.SettingsParameters)/settingsParameters">settingsParameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><code><span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$init(android.app.Application, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<span class="identifier">Application</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$init(android.app.Application, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Initializes the mobile service</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isusageservicestarted.html">isUsageServiceStarted</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isUsageServiceStarted</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Checks whether usage service is starting or not</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="logdeviceinfoevents.html">logDeviceInfoEvents</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">logDeviceInfoEvents</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$logDeviceInfoEvents(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Collects device information event</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="logdevicelocationevents.html">logDeviceLocationEvents</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">logDeviceLocationEvents</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$logDeviceLocationEvents(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Collects the device location event</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="onevent.html">onEvent</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onEvent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$onEvent(com.sap.cloud.mobile.foundation.common.SDKApplicationState.SDKEventType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/sdkapplicationstate/sdkeventtype/index.html"><span class="identifier">SDKApplicationState.SDKEventType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="onstatechange.html">onStateChange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onStateChange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$onStateChange(com.sap.cloud.mobile.foundation.mobileservices.ApplicationState)/state">state</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/applicationstate/index.html"><span class="identifier">ApplicationState</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Notified when application state changes. This function will be called on Main thread.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="recordsessionend.html">recordSessionEnd</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">recordSessionEnd</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$recordSessionEnd(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Ends the current usage collection session</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="recordsessionstart.html">recordSessionStart</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">recordSessionStart</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$recordSessionStart(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Starts an usage collection session</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reset.html">reset</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Resets the mobile service to the state that just initialized.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setautosession.html">setAutoSession</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setAutoSession</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$setAutoSession(kotlin.Boolean)/autoSession">autoSession</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UsageService</span></a></code>
+<p>Specifies whether auto session will be used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setautoupload.html">setAutoUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setAutoUpload</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$setAutoUpload(kotlin.Boolean)/autoUpload">autoUpload</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UsageService</span></a></code>
+<p>Specifies whether auto upload will be used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstorename.html">setStoreName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setStoreName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$setStoreName(java.util.UUID)/storeName">storeName</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UsageService</span></a></code>
+<p>Sets the usage store name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setuploadthresholdkb.html">setUploadThresholdKB</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setUploadThresholdKB</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$setUploadThresholdKB(kotlin.Int)/sizeOfKB">sizeOfKB</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UsageService</span></a></code>
+<p>Specifies the record size that will trigger usage auto upload. Default value is 100 KB.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="startusagebroker.html">startUsageBroker</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">startUsageBroker</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Starts the usage broker if it was not started yet.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stopusagebroker.html">stopUsageBroker</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stopUsageBroker</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$stopUsageBroker(kotlin.Boolean)/reset">reset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Stops the usage broker if it was started.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/enablenetworkpolicy.html">enableNetworkPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enableNetworkPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$enableNetworkPolicy(com.sap.cloud.mobile.foundation.settings.policies.NetworkPolicy)/policy">policy</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/networkpolicy/index.html"><span class="identifier">NetworkPolicy</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Enable and set network policy for mobile service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/getnetworktype.html">getNetworkType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getNetworkType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$getNetworkType(kotlin.String)/componentName">componentName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">NetworkType</span></code>
+<p>Help mobile services using worker convert NetworkPolicy<a href="#">effectiveNetworkPolicy</a> to NetworkType</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/isapplicationinitialized.html">isApplicationInitialized</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isApplicationInitialized</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Check whether application instance is initialized.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html">observeWorker</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">observeWorker</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/request">request</span><span class="symbol">:</span>&nbsp;<span class="identifier">WorkRequest</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/tag">tag</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/getServiceResult">getServiceResult</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">WorkInfo</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Observers a worker request from the main thread, and report the result to the given <a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/listener">listener</a>.
+<a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/getServiceResult">getServiceResult</a> takes the observed <a href="#">WorkInfo</a> as input to return the <a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html">ServiceResult</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/prerequisiteready.html">prerequisiteReady</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">prerequisiteReady</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Most service can only be used when <a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html">SettingsParameters</a> and 'httpClient' are ready</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getinstance.html">getInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getInstance</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UsageService</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

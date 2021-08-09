@@ -1,0 +1,371 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UnicodeClass - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">UnicodeClass</a><br/>
+<br/>
+<h1>UnicodeClass</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">UnicodeClass</span></code>
+<p>A set of functions for determining membership of Unicode code points in character classes (categories).</p>
+ See Also: 
+<p>https://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt</p>
+  See Also: 
+<p>http://unicode.org/reports/tr44/ (5.7.1 General Category Values)</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UnicodeClass</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A set of functions for determining membership of Unicode code points in character classes (categories).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="isc.html">isC</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isC</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isC(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Other (Cc | Cf | Cs | Co | Cn).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iscc.html">isCc</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isCc</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isCc(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Control (a C0 or C1 control code).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iscf.html">isCf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isCf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isCf(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Format (a format control character).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isco.html">isCo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isCo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isCo(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Private_Use (a private-use character).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iscs.html">isCs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isCs</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isCs(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Surrogate (a surrogate code point).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isl.html">isL</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isL</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isL(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Letter (Lu | Ll | Lt | Lm | Lo).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islc.html">isLC</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLC</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isLC(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Cased_Letter (Lu | Ll | Lt).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isll.html">isLl</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLl</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isLl(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Lowercase_Letter (a lowercase letter).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islm.html">isLm</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLm</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isLm(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Modifier_Letter (a modifier letter).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islo.html">isLo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isLo(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Other_Letter (other letters, including syllables and ideographs).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islt.html">isLt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isLt(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Titlecase_Letter (a digraphic character, with first part uppercase).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islu.html">isLu</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLu</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isLu(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Uppercase_Letter (an uppercase letter).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ism.html">isM</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isM</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isM(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Mark (Mn | Mc | Me).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ismc.html">isMc</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isMc</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isMc(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Spacing_Mark (a spacing combining mark (positive advance width)).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isme.html">isMe</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isMe</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isMe(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Enclosing_Mark (an enclosing combining mark).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ismn.html">isMn</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isMn</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isMn(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Nonspacing_Mark (a nonspacing combining mark (zero advance width)).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isn.html">isN</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isN</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isN(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Number (Nd | Nl | No).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isnd.html">isNd</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isNd</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isNd(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Decimal_Number (a decimal digit).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isnl.html">isNl</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isNl</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isNl(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Letter_Number (a letterlike numeric character).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isno.html">isNo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isNo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isNo(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Other_Number (a numeric character of other type).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isp.html">isP</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isP</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isP(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Punctuation (Pc | Pd | Ps | Pe | Pi | Pf | Po).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ispc.html">isPc</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isPc</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isPc(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Connector_Punctuation (a connecting punctuation mark, like a tie).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ispd.html">isPd</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isPd</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isPd(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Dash_Punctuation (a dash or hyphen punctuation mark).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ispe.html">isPe</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isPe</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isPe(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Close_Punctuation (a closing punctuation mark (of a pair)).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ispf.html">isPf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isPf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isPf(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Final_Punctuation (a final quotation mark).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ispi.html">isPi</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isPi</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isPi(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Initial_Punctuation (an initial quotation mark).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ispo.html">isPo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isPo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isPo(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Other_Punctuation (a punctuation mark of other type).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isps.html">isPs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isPs</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isPs(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Open_Punctuation (an opening punctuation mark (of a pair)).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iss.html">isS</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isS</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isS(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Symbol (Sm | Sc | Sk | So).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="issc.html">isSc</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isSc</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isSc(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Currency_Symbol (a currency sign).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="issk.html">isSk</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isSk</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isSk(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Modifier_Symbol (a non-letterlike modifier symbol).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="issm.html">isSm</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isSm</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isSm(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Math_Symbol (a symbol of mathematical use).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isso.html">isSo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isSo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isSo(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Other_Symbol (a symbol of other type).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isz.html">isZ</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isZ</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isZ(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Separator (Zs | Zl | Zp).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iszl.html">isZl</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isZl</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isZl(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Line_Separator (U+2028 LINE SEPARATOR only).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iszp.html">isZp</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isZp</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isZp(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Paragraph_Separator (U+2029 PARAGRAPH SEPARATOR only).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iszs.html">isZs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isZs</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UnicodeClass$isZs(kotlin.Int)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>c</code> has class Space_Separator (a space character (of various non-zero widths)).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

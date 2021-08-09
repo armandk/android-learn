@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.odata.http - odata</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">odata</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.odata.http</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.odata.http</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="httpaddress/index.html">HttpAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpAddress</span></code>
+<p>Encapsulates a parsed HTTP URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httpcookies/index.html">HttpCookies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpCookies</span></code>
+<p>Encapsulates a map of HTTP cookies.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httphandler/index.html">HttpHandler</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpHandler</span></code>
+<p>Abstract base class for HTTP handlers, which can override the functions of <code><a href="httprequest/index.html">com.sap.cloud.mobile.odata.http.HttpRequest</a></code> that perform network activity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httphandlertype/index.html">HttpHandlerType</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpHandlerType</span></code>
+<p>HTTP handler types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httpheaders/index.html">HttpHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpHeaders</span></code>
+<p>Encapsulates a map of HTTP headers, allowing case-insensitive lookup.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httpmethod/index.html">HttpMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpMethod</span></code>
+<p>Constants for HTTP methods.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httprequest/index.html">HttpRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpRequest</span></code>
+<p>A cross-platform HTTP API modeled after <a href="http://en.wikipedia.org/wiki/XMLHttpRequest">XMLHttpRequest</a>. Supports streaming of request and response content. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httpstatus/index.html">HttpStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpStatus</span></code>
+<p>Constants for HTTP status code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httpstatustext/index.html">HttpStatusText</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpStatusText</span></code>
+<p>Constants for HTTP status text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httpversion/index.html">HttpVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpVersion</span></code>
+<p>Constants and functions for HTTP version numbers/strings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mimepart/index.html">MimePart</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MimePart</span></code>
+<p>Encapsulates a MIME part.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mimepartlist/index.html">MimePartList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MimePartList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="mimepart/index.html"><span class="identifier">MimePart</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="mimepart/index.html">com.sap.cloud.mobile.odata.http.MimePart</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mimestreamreader/index.html">MimeStreamReader</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MimeStreamReader</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Stream for parsing MIME multipart/mixed messages.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mimestreamwriter/index.html">MimeStreamWriter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MimeStreamWriter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Stream for writing MIME multipart/mixed messages.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mimetype/index.html">MimeType</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">MimeType</span></code>
+<p>Constants and functions for representing and parsing MIME content types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="okhttphandler/index.html">OKHttpHandler</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OKHttpHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="httphandler/index.html"><span class="identifier">HttpHandler</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OKHttpHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="httphandler/index.html"><span class="identifier">HttpHandler</span></a></code>
+<p>HTTP Handler that uses the OKHttp library for network activity. </p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="httpexception/index.html">HttpException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/datanetworkexception/index.html"><span class="identifier">DataNetworkException</span></a></code>
+<p>An exception thrown if <code>HttpRequest.send</code> cannot be completed due to a network error, or when one of the HTTP functions is used in an inappropriate manner or with invalid parameters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,157 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonStringToken - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">JsonStringToken</a><br/>
+<br/>
+<h1>JsonStringToken</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonStringToken</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jsontoken/index.html"><span class="identifier">JsonToken</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> string token.</p>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../jsontoken/begin_array.html">BEGIN_ARRAY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BEGIN_ARRAY</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for '[' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/begin_object.html">BEGIN_OBJECT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BEGIN_OBJECT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for '{' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/boolean_value.html">BOOLEAN_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BOOLEAN_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for boolean token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/colon_char.html">COLON_CHAR</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLON_CHAR</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for ':' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/comma_char.html">COMMA_CHAR</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COMMA_CHAR</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for ',' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/end_array.html">END_ARRAY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">END_ARRAY</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for ']' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/end_object.html">END_OBJECT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">END_OBJECT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for '}' token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/end_stream.html">END_STREAM</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">END_STREAM</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for stream end.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/null_value.html">NULL_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">NULL_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for <code>null</code> token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/number_value.html">NUMBER_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">NUMBER_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for number token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsontoken/string_value.html">STRING_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STRING_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type for string token.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return JsonToken.STRING_VALUE.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return value of this token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="of.html">of</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonStringToken$of(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonStringToken</span></a></code>
+<p>Return a new string boolean token with the specified <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

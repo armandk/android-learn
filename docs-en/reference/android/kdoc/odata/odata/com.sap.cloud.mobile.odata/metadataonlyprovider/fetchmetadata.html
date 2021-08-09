@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MetadataOnlyProvider.fetchMetadata - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">MetadataOnlyProvider</a>&nbsp;/&nbsp;<a href="./fetchmetadata.html">fetchMetadata</a><br/>
+<br/>
+<h1>fetchMetadata</h1>
+<a name="com.sap.cloud.mobile.odata.MetadataOnlyProvider$fetchMetadata(com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fetchMetadata</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.MetadataOnlyProvider$fetchMetadata(com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.MetadataOnlyProvider$fetchMetadata(com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a></code>
+<p>Overrides <a href="../dataserviceprovider/fetchmetadata.html">DataServiceProvider.fetchMetadata</a></p>
+<p>Fetch latest service metadata and return it, but don't change the <code><a href="getmetadata.html">MetadataOnlyProvider.metadata</a></code> property.</p>
+ See Also: 
+<p><code><a href="loadmetadata.html">MetadataOnlyProvider.loadMetadata</a></code>.</p>
+ 
+<h3>Parameters</h3>
+<p><a name="headers"></a>
+<code>headers</code> - <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">:</span> Optional request-specific headers.</p>
+<p><a name="options"></a>
+<code>options</code> - <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">:</span> Optional request-specific options.</p>
+<p><strong>Return</strong><br/>
+<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">:</span> Latest service metadata.</p>
+</BODY>
+</HTML>

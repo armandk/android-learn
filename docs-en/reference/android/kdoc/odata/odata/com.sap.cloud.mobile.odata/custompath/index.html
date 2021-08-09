@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CustomPath - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">CustomPath</a><br/>
+<br/>
+<h1>CustomPath</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CustomPath</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CustomPath</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="fromtarget.html">fromTarget</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromTarget</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CustomPath$fromTarget(kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CustomPath</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Custom path from target path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getatomchild.html">getAtomChild</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAtomChild</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Name of the Atom child the property maps to, e.g. "name" where <code>atomElement</code> is "author".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getatomelement.html">getAtomElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAtomElement</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return name of the Atom element the property maps to, e.g. "title".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getkeepincontent.html">getKeepInContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getKeepInContent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the property value should be duplicated in regular content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmyproperty.html">getMyProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMyProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a></code>
+<p>Return property to which this custom path applies.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setatomchild.html">setAtomChild</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAtomChild</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CustomPath$setAtomChild(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set name of the Atom child the property maps to, e.g. "name" where <code>atomElement</code> is "author".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setatomelement.html">setAtomElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAtomElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CustomPath$setAtomElement(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set name of the Atom element the property maps to, e.g. "title".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setkeepincontent.html">setKeepInContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setKeepInContent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CustomPath$setKeepInContent(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if the property value should be duplicated in regular content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmyproperty.html">setMyProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMyProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CustomPath$setMyProperty(com.sap.cloud.mobile.odata.Property)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set property to which this custom path applies.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

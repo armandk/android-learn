@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ComplexValueList.applyPageSize - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">ComplexValueList</a>&nbsp;/&nbsp;<a href="./applypagesize.html">applyPageSize</a><br/>
+<br/>
+<h1>applyPageSize</h1>
+<a name="com.sap.cloud.mobile.odata.ComplexValueList$applyPageSize(com.sap.cloud.mobile.odata.DataQuery)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">applyPageSize</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.ComplexValueList$applyPageSize(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return a new list with at most <code>query.pageSize</code> initial items of this list. The result's <code><a href="#">ComplexValueList.needsNextLink</a></code> will be <code>true</code> if the original list length exceeded the page size.</p>
+<h3>Parameters</h3>
+<p><a name="query"></a>
+<code>query</code> - <a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> Data query whose <code><a href="../dataquery/getpagesize.html">DataQuery.pageSize</a></code> is used for filtering.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">:</span> A new list with at most <code>query.pageSize</code> initial items of this list. The result's <code><a href="#">ComplexValueList.needsNextLink</a></code> will be <code>true</code> if the original list length exceeded the page size.</p>
+</BODY>
+</HTML>

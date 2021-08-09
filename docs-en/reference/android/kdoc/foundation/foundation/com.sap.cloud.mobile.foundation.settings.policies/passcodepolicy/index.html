@@ -1,0 +1,216 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PasscodePolicy - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings.policies</a>&nbsp;/&nbsp;<a href="./index.html">PasscodePolicy</a><br/>
+<br/>
+<h1>PasscodePolicy</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">PasscodePolicy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../predefinedpolicy/index.html"><span class="identifier">PredefinedPolicy</span></a></code>
+<p>Passcode policy</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">PasscodePolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/lockTimeout">lockTimeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;300<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/minLength">minLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;10<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/lowerRequired">lowerRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/upperRequired">upperRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/digitRequired">digitRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/specialCharRequired">specialCharRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/fingerPrintEnabled">fingerPrintEnabled</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/uniqueCharNumber">uniqueCharNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/retryLimit">retryLimit</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;10<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/digitOnly">digitOnly</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/localizingDigitsToLatin">localizingDigitsToLatin</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/expireInDays">expireInDays</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Boolean)/defaultPasswordEnabled">defaultPasswordEnabled</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span></code>
+<p>Passcode policy</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="defaultpasswordenabled.html">defaultPasswordEnabled</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">defaultPasswordEnabled</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="digitonly.html">digitOnly</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">digitOnly</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="digitrequired.html">digitRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">digitRequired</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">enabled</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="expireindays.html">expireInDays</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">expireInDays</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="fingerprintenabled.html">fingerPrintEnabled</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">fingerPrintEnabled</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="localizingdigitstolatin.html">localizingDigitsToLatin</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">localizingDigitsToLatin</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="locktimeout.html">lockTimeout</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">lockTimeout</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="lowerrequired.html">lowerRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">lowerRequired</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="minlength.html">minLength</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">minLength</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="retrylimit.html">retryLimit</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">retryLimit</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="specialcharrequired.html">specialCharRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">specialCharRequired</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="uniquecharnumber.html">uniqueCharNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">uniqueCharNumber</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="upperrequired.html">upperRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">upperRequired</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="checkdigit.html">checkDigit</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">checkDigit</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$checkDigit(kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="checklower.html">checkLower</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">checkLower</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$checkLower(kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="checkspecial.html">checkSpecial</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">checkSpecial</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$checkSpecial(kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="checkuniquechars.html">checkUniqueChars</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">checkUniqueChars</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$checkUniqueChars(kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="checkupper.html">checkUpper</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">checkUpper</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$checkUpper(kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="localizedigitstolatin.html">localizeDigitsToLatin</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">localizeDigitsToLatin</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy$localizeDigitsToLatin(kotlin.CharArray)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">CharArray</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tostringwithdefaultvalues.html">toStringWithDefaultValues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toStringWithDefaultValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../predefinedpolicy/getkeypath.html">getKeyPath</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getKeyPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="createfromjsonstring.html">createFromJsonString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createFromJsonString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.PasscodePolicy.Companion$createFromJsonString(kotlin.String)/jsonString">jsonString</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">PasscodePolicy</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

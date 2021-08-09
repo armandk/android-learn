@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataSendStoreProgress - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataSendStoreProgress</a><br/>
+<br/>
+<h1>OfflineODataSendStoreProgress</h1>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataSendStoreProgress</span></code>
+<p>This class represents the progress of sending the offline store.</p>
+<p><strong>See Also</strong><br/>
+<a href="../offlineodatadelegate/updatesendstoreprogress.html">OfflineODataDelegate#updateSendStoreProgress(OfflineODataProvider, OfflineODataSendStoreProgress)</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OfflineODataSendStoreProgress</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataSendStoreProgress$<init>(kotlin.Long, kotlin.Long, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Long, kotlin.Long)/currentFileBytesSent">currentFileBytesSent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataSendStoreProgress$<init>(kotlin.Long, kotlin.Long, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Long, kotlin.Long)/currentFileSize">currentFileSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataSendStoreProgress$<init>(kotlin.Long, kotlin.Long, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Long, kotlin.Long)/currentFileIndex">currentFileIndex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataSendStoreProgress$<init>(kotlin.Long, kotlin.Long, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Long, kotlin.Long)/currentFileName">currentFileName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataSendStoreProgress$<init>(kotlin.Long, kotlin.Long, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Long, kotlin.Long)/totalNumberOfFiles">totalNumberOfFiles</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataSendStoreProgress$<init>(kotlin.Long, kotlin.Long, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Long, kotlin.Long)/totalSize">totalSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataSendStoreProgress$<init>(kotlin.Long, kotlin.Long, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Long, kotlin.Long)/totalBytesSent">totalBytesSent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span></code>
+<p>Construct OfflineODataSendStoreProgress instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcurrentfilebytessent.html">getCurrentFileBytesSent</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCurrentFileBytesSent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Returns number of bytes sent to server for the current file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcurrentfileindex.html">getCurrentFileIndex</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCurrentFileIndex</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Returns index of the current file being sent (starting from 1)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcurrentfilename.html">getCurrentFileName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCurrentFileName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns name of the current file being sent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcurrentfilesize.html">getCurrentFileSize</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCurrentFileSize</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Returns size of the current file in bytes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettotalbytessent.html">getTotalBytesSent</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTotalBytesSent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Returns total number of bytes sent to server.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettotalnumberoffiles.html">getTotalNumberOfFiles</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTotalNumberOfFiles</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Returns total number of files to send.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettotalsize.html">getTotalSize</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTotalSize</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Returns total size of files to send in bytes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

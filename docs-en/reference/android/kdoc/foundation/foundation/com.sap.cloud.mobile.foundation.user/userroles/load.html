@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UserRoles.load - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.user</a>&nbsp;/&nbsp;<a href="index.html">UserRoles</a>&nbsp;/&nbsp;<a href="./load.html">load</a><br/>
+<br/>
+<h1>load</h1>
+<a name="com.sap.cloud.mobile.foundation.user.UserRoles$load(com.sap.cloud.mobile.foundation.user.UserRoles.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserRoles$load(com.sap.cloud.mobile.foundation.user.UserRoles.CallbackListener)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">UserRoles.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Loads the user information from the HCPMS server.</p>
+<h3>Parameters</h3>
+<p><a name="callback"></a>
+<code>callback</code> - <a href="callbacklistener/index.html"><span class="identifier">UserRoles.CallbackListener</span></a><span class="symbol">:</span> an instance of <code><a href="callbacklistener/index.html">CallbackListener</a></code> to process successful response or error <pre><code><strong>Example Usage:</strong>
+      
+     
+      SettingsParameters settingsParameters = new SettingsParameters(hostUrl
+                                            , APP_ID,  "deviceId", "1.0");
+      roles = new UserRoles(okHttpClient, settingsParameters);
+      roles.load(new UserRoles.CallbackListener() {
+      //Place your success handler here ...
+           @Override
+           public void onSuccess(UserInfo userInfo) {
+                //Here goes the code for processing successful response...
+           }
+     
+      //Place your failure handling
+           @Override
+           public void onError(Throwable result) {
+                //Handle error here...
+           }
+      });
+      
+      </code></pre></p>
+<a name="com.sap.cloud.mobile.foundation.user.UserRoles$load(com.sap.cloud.mobile.foundation.user.UserRoles.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserRoles$load(com.sap.cloud.mobile.foundation.user.UserRoles.CallbackListener)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">UserRoles.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Loads the user information from the HCPMS server.</p>
+<h3>Parameters</h3>
+<p><a name="callback"></a>
+<code>callback</code> - <a href="callbacklistener/index.html"><span class="identifier">UserRoles.CallbackListener</span></a><span class="symbol">:</span> an instance of <code><a href="callbacklistener/index.html">CallbackListener</a></code> to process successful response or error <pre><code><strong>Example Usage:</strong>
+      
+     
+      SettingsParameters settingsParameters = new SettingsParameters(hostUrl
+                                            , APP_ID,  "deviceId", "1.0");
+      roles = new UserRoles(okHttpClient, settingsParameters);
+      roles.load(new UserRoles.CallbackListener() {
+      //Place your success handler here ...
+           @Override
+           public void onSuccess(UserInfo userInfo) {
+                //Here goes the code for processing successful response...
+           }
+     
+      //Place your failure handling
+           @Override
+           public void onError(Throwable result) {
+                //Handle error here...
+           }
+      });
+      
+      </code></pre></p>
+</BODY>
+</HTML>

@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.expandWithQuery - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./expandwithquery.html">expandWithQuery</a><br/>
+<br/>
+<h1>expandWithQuery</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$expandWithQuery(com.sap.cloud.mobile.odata.PropertyPath, com.sap.cloud.mobile.odata.DataQuery)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expandWithQuery</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$expandWithQuery(com.sap.cloud.mobile.odata.PropertyPath, com.sap.cloud.mobile.odata.DataQuery)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$expandWithQuery(com.sap.cloud.mobile.odata.PropertyPath, com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add a property with a nested query to <code><a href="getexpanditems.html">DataQuery.expandItems</a></code>. </p>
+Example using proxy classes:<pre><code>
+      public void expandWithQueryExample() {
+          NorthwindService service = this.getService();
+          DataQuery query = new DataQuery()
+              .select(Customer.customerID, Customer.companyName, Customer.contactName)
+              .filter(Customer.customerID.equal("ALFKI").or(Customer.customerID.equal("ANATR")))
+              .expandWithQuery(Customer.orders, new DataQuery().select(Order.orderID)
+                  .expandWithQuery(Order.orderDetails,
+                      new DataQuery().select(OrderDetail.quantity, OrderDetail.unitPrice)))
+              .orderBy(Customer.companyName);
+          List&lt;Customer&gt; customers = service.getCustomers(query);
+          int countDetails = 0;
+          for (Customer customer : customers) {
+              this.showCustomer(customer);
+              List&lt;Order&gt; orders = customer.getOrders();
+              for (Order order : orders) {
+                  int orderID = order.getOrderID();
+                  java.math.BigDecimal totalPrice = NorthwindProxyClient.DECIMAL_ZERO;
+                  for (OrderDetail orderDetail : order.getOrderDetails()) {
+                      totalPrice = DecimalOperator.add(totalPrice,
+                          DecimalOperator.multiply(DecimalFunction.fromShort(orderDetail.getQuantity()), orderDetail.getUnitPrice()));
+                      countDetails++;
+                  }
+                  Example.show("Order ", Example.formatInt(orderID), ": total price ",
+                      Example.formatDecimal(totalPrice));
+              }
+          }
+          assert countDetails &gt; 0;
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void expandWithQueryExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          EntityType customerEntityType = customersEntitySet.getEntityType();
+          Property customerIDProperty = customerEntityType.getProperty("CustomerID");
+          Property companyNameProperty = customerEntityType.getProperty("CompanyName");
+          Property contactNameProperty = customerEntityType.getProperty("ContactName");
+          Property ordersProperty = customerEntityType.getProperty("Orders");
+          Property orderIDProperty = ordersProperty.getItemEntityType()
+              .getProperty("OrderID");
+          Property orderDetailsProperty = ordersProperty.getItemEntityType()
+              .getProperty("Order_Details");
+          Property quantityProperty = orderDetailsProperty.getItemEntityType()
+              .getProperty("Quantity");
+          Property unitPriceProperty = orderDetailsProperty.getItemEntityType()
+              .getProperty("UnitPrice");
+          DataQuery query = new DataQuery()
+              .select(customerIDProperty, companyNameProperty, contactNameProperty)
+              .from(customersEntitySet)
+              .filter(customerIDProperty.equal("ALFKI").or(customerIDProperty.equal("ANATR")))
+              .expandWithQuery(ordersProperty, new DataQuery().select(orderIDProperty)
+                  .expandWithQuery(orderDetailsProperty,
+                      new DataQuery().select(quantityProperty, unitPriceProperty)))
+              .orderBy(companyNameProperty);
+          EntityValueList customers = service.executeQuery(query).getEntityList();
+          for (EntityValue customer : customers) {
+              this.showCustomer(customer);
+              EntityValueList orders = ordersProperty.getEntityList(customer);
+              for (EntityValue order : orders) {
+                  int orderID = orderIDProperty.getInt(order);
+                  java.math.BigDecimal totalPrice = NorthwindClient.DECIMAL_ZERO;
+                  for (EntityValue orderDetail : orderDetailsProperty.getEntityList(order)) {
+                      short quantity = quantityProperty.getShort(orderDetail);
+                      java.math.BigDecimal unitPrice = unitPriceProperty.getDecimal(orderDetail);
+                      totalPrice = DecimalOperator.add(totalPrice,
+                          DecimalOperator.multiply(DecimalFunction.fromShort(quantity), unitPrice));
+                  }
+                  Example.show("Order ", Example.formatInt(orderID), ": total price ",
+                      Example.formatDecimal(totalPrice));
+              }
+          }
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="item"></a>
+<code>item</code> - <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">:</span> Item to be expanded.</p>
+<p><a name="query"></a>
+<code>query</code> - <a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> Query to control expansion.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

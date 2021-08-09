@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryParser - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">QueryParser</a><br/>
+<br/>
+<h1>QueryParser</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryParser</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">QueryParser</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryParser$<init>(com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span></code>
+<p>Construct a new parser with the specified <code>context</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="inferentityset.html">inferEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">inferEntitySet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryParser$inferEntitySet(kotlin.String, com.sap.cloud.mobile.odata.DataContext)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryParser$inferEntitySet(kotlin.String, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">?</span></code>
+<p>Attempt to determine the entity set of the object referenced by <code>url</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryParser$parse(kotlin.String, kotlin.String)/requestPath">requestPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryParser$parse(kotlin.String, kotlin.String)/queryString">queryString</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Parse a query with the specified request path and query string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsecanonicalurl.html">parseCanonicalURL</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseCanonicalURL</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryParser$parseCanonicalURL(kotlin.String, com.sap.cloud.mobile.odata.DataContext)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryParser$parseCanonicalURL(kotlin.String, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>Parse a canonical URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseentityid.html">parseEntityID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseEntityID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryParser$parseEntityID(kotlin.String, com.sap.cloud.mobile.odata.DataContext)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryParser$parseEntityID(kotlin.String, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>Parse an entity ID.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

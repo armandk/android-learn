@@ -1,0 +1,152 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XmlDocument - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.xml</a>&nbsp;/&nbsp;<a href="./index.html">XmlDocument</a><br/>
+<br/>
+<h1>XmlDocument</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlDocument</span></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> document.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">XmlDocument</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> document.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="appendto.html">appendTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">appendTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$appendTo(com.sap.cloud.mobile.odata.core.CharBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/charbuffer/index.html"><span class="identifier">CharBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See appendTo(CharBuffer, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">appendTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$appendTo(com.sap.cloud.mobile.odata.core.CharBuffer, kotlin.Int)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/charbuffer/index.html"><span class="identifier">CharBuffer</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$appendTo(com.sap.cloud.mobile.odata.core.CharBuffer, kotlin.Int)/indent">indent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Append the textual representation of this document to a buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeclaration.html">getDeclaration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeclaration</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The XML declaration, or <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprocessinginstructions.html">getProcessingInstructions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getProcessingInstructions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlprocessinginstructionlist/index.html"><span class="identifier">XmlProcessingInstructionList</span></a></code>
+<p>Return the XML processing instructions (if any).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrootelement.html">getRootElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRootElement</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Return the document root element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getwasdecompressed.html">getWasDecompressed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getWasDecompressed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return was this document parsed from a compressed XML?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$parse(kotlin.String)/xml">xml</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlDocument</span></a></code>
+<p>Parse a string to a document. Equivalent to <code>parseMixed(xml, false)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsemixed.html">parseMixed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseMixed</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$parseMixed(kotlin.String, kotlin.Boolean)/xml">xml</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$parseMixed(kotlin.String, kotlin.Boolean)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlDocument</span></a></code>
+<p>Parse a string to a document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resolvenamespaces.html">resolveNamespaces</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">resolveNamespaces</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Traverse the element hierachy starting at the <code><a href="getrootelement.html">XmlDocument.rootElement</a></code>, ensuring that every node has the <code><a href="../xmlelement/getnamespaceuri.html">XmlElement.namespaceURI</a></code> set according to the "xmlns" attributes and namespace prefixes encountered in the nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeclaration.html">setDeclaration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeclaration</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$setDeclaration(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the XML declaration, or <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setprocessinginstructions.html">setProcessingInstructions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setProcessingInstructions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$setProcessingInstructions(com.sap.cloud.mobile.odata.xml.XmlProcessingInstructionList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../xmlprocessinginstructionlist/index.html"><span class="identifier">XmlProcessingInstructionList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the XML processing instructions (if any).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrootelement.html">setRootElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRootElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$setRootElement(com.sap.cloud.mobile.odata.xml.XmlElement)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the document root element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setwasdecompressed.html">setWasDecompressed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setWasDecompressed</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlDocument$setWasDecompressed(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set was this document parsed from a compressed XML?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the root element, preceeded by an XML declaration and processing instructions (if any).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

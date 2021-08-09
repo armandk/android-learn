@@ -1,0 +1,193 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.odata.json - odata</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">odata</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.odata.json</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.odata.json</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="geojson/index.html">GeoJson</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">GeoJson</span></code>
+<p>Functions for parsing and formatting of <a href="http://geojson.org">GeoJSON</a> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonarray/index.html">JsonArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonArray</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>A strongly-typed list of item type <code><a href="jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code>?, inheriting from <code><a href="jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code> rather than the usual <code><a href="../com.sap.cloud.mobile.odata/listbase/index.html">com.sap.cloud.mobile.odata.ListBase</a></code>. Uses the property and function naming conventions of the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">JavaScript Array object</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonboolean/index.html">JsonBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonBoolean</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> boolean element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonbooleantoken/index.html">JsonBooleanToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonBooleanToken</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="jsontoken/index.html"><span class="identifier">JsonToken</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> boolean token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsondeltastream/index.html">JsonDeltaStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonDeltaStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/deltastream/index.html"><span class="identifier">DeltaStream</span></a></code>
+<p>A delta stream for decoding OData delta streams with JSON format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonelement/index.html">JsonElement</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">JsonElement</span></code>
+<p>Abstract base class for <a href="http://json.org">JSON</a> elements (boolean, number, string, array, object). JSON also permits null values; where appropriate a nullable JsonElement (type JsonElement?) should be used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonelementstream/index.html">JsonElementStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonElementStream</span></code>
+<p>A stream of <a href="http://json.org">JSON</a> <code><a href="jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonnumber/index.html">JsonNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonNumber</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> number element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonnumbertoken/index.html">JsonNumberToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonNumberToken</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="jsontoken/index.html"><span class="identifier">JsonToken</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> number token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonobject/index.html">JsonObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>A strongly-typed map from key type <code>string</code> to value type <code><a href="jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code>?, inheriting from <code><a href="jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code> rather than the usual <code><a href="../com.sap.cloud.mobile.odata/mapbase/index.html">com.sap.cloud.mobile.odata.MapBase</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonorderedobject/index.html">JsonOrderedObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonOrderedObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="jsonobject/index.html"><span class="identifier">JsonObject</span></a></code>
+<p>A specialization of <code><a href="jsonobject/index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code> which retains the ordering of entries. While the JSON specification defined JSON objects as unordered, some uses of JSON may assume that processors can retain entry order. Performance Note: the time complexity of <code><a href="jsonorderedobject/delete.html">JsonOrderedObject.delete</a></code> is O(n), rather than O(log(n)) for <code><a href="jsonobject/index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonoutputstream/index.html">JsonOutputStream</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">JsonOutputStream</span></code>
+<p>Abstract base class for JSON output streams.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonpretty/index.html">JsonPretty</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">JsonPretty</span></code>
+<p>Utility functions for pretty-printing <a href="http://json.org">JSON</a> representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonstring/index.html">JsonString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> string element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonstringtoken/index.html">JsonStringToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonStringToken</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="jsontoken/index.html"><span class="identifier">JsonToken</span></a></code>
+<p>Represents a <a href="http://json.org">JSON</a> string token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsontoken/index.html">JsonToken</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">JsonToken</span></code>
+<p>Abstract base class for <a href="http://json.org">JSON</a> tokens (null, boolean, number, string, and punctuation characters).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsontokenstream/index.html">JsonTokenStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonTokenStream</span></code>
+<p>A stream of <a href="http://json.org">JSON</a> <code><a href="jsontoken/index.html">com.sap.cloud.mobile.odata.json.JsonToken</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonvalue/index.html">JsonValue</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">JsonValue</span></code>
+<p>Utility functions for parsing and formatting <code><a href="../com.sap.cloud.mobile.odata/datavalue/index.html">com.sap.cloud.mobile.odata.DataValue</a></code> in OData <a href="http://json.org">JSON</a> representation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="jsonexception/index.html">JsonException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/dataformatexception/index.html"><span class="identifier">DataFormatException</span></a></code>
+<p>Exception thrown when an error occurs during the parsing of data represented in JSON format.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

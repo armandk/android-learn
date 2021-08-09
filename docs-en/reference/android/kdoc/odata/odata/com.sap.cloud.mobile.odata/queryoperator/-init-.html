@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryOperator.<init> - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">QueryOperator</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.odata.QueryOperator$&lt;init&gt;()"></a>
+<code><span class="identifier">QueryOperator</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents a <a href="http://odata.org">OData</a> query operator. Query operators are typically used within <code><a href="../dataquery/filter.html">DataQuery.filter</a></code>. <code><a href="../queryoperatorcall/index.html">com.sap.cloud.mobile.odata.QueryOperatorCall</a></code> can be constructed using static calls on <code><a href="index.html">com.sap.cloud.mobile.odata.QueryOperator</a></code> or, more conveniently, by chained calls on <code><a href="../queryvalue/index.html">com.sap.cloud.mobile.odata.QueryValue</a></code>. </p>
+Example using proxy classes (with QueryOperator static calls):<pre><code>
+  public void queryOperatorExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .filter(QueryOperator.greaterEqual(QueryOperator.multiply(OrderDetail.quantity,
+              OrderDetail.unitPrice),
+              DecimalValue.of(DecimalFunction.fromInt(1000))));
+      List&lt;OrderDetail&gt; details = service.getOrderDetails(query);
+      this.showDetails(details);
+  }
+  </code></pre> Example using proxy classes (with QueryValue chained calls):<pre><code>
+  public void queryValueOperatorExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .filter(OrderDetail.quantity.multiply(OrderDetail.unitPrice)
+              .greaterEqual(NorthwindProxyClient.DECIMAL_POSITIVE_1000));
+      List&lt;OrderDetail&gt; details = service.getOrderDetails(query);
+      this.showDetails(details);
+  }
+  </code></pre>
+</BODY>
+</HTML>

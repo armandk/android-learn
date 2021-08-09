@@ -1,0 +1,11 @@
+version: '3'
+services:
+  claims-ui:
+    build:
+      context: .
+      dockerfile: .ci/build/app/Dockerfile
+  claims-ui-chart:
+    image: {{DOCKER_REGISTRY}}/s4/claims-ui-chart:{{GIT_COMMIT}}
+    build:
+      context: .ci/chart
+      dockerfile: ../build/chart/Dockerfile

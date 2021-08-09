@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Assert - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">Assert</a><br/>
+<br/>
+<h1>Assert</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">Assert</span></code>
+<p>Utility functions for assertion checking.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Assert</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Utility functions for assertion checking.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="error.html">error</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">error</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$error(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See error(String, RuntimeException).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">error</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$error(kotlin.String, java.lang.RuntimeException)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$error(kotlin.String, java.lang.RuntimeException)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Log and throw an <code><a href="../assertexception/index.html">com.sap.cloud.mobile.odata.core.AssertException</a></code>, with the specified <code>message</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isfalse.html">isFalse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isFalse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$isFalse(kotlin.Boolean, kotlin.String)/condition">condition</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$isFalse(kotlin.Boolean, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Log and throw an <code><a href="../assertexception/index.html">com.sap.cloud.mobile.odata.core.AssertException</a></code>, if <code>condition</code> is not <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="istrue.html">isTrue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isTrue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$isTrue(kotlin.Boolean, kotlin.String)/condition">condition</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$isTrue(kotlin.Boolean, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Log and throw an <code><a href="../assertexception/index.html">com.sap.cloud.mobile.odata.core.AssertException</a></code>, if <code>condition</code> is not <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mustthrow.html">mustThrow</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">mustThrow</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$mustThrow(com.sap.cloud.mobile.odata.core.Action0, com.sap.cloud.mobile.odata.core.Function1((java.lang.RuntimeException, kotlin.Boolean)), kotlin.String)/action">action</span><span class="symbol">:</span>&nbsp;<a href="../action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$mustThrow(com.sap.cloud.mobile.odata.core.Action0, com.sap.cloud.mobile.odata.core.Function1((java.lang.RuntimeException, kotlin.Boolean)), kotlin.String)/check">check</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">RuntimeException</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Assert$mustThrow(com.sap.cloud.mobile.odata.core.Action0, com.sap.cloud.mobile.odata.core.Function1((java.lang.RuntimeException, kotlin.Boolean)), kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Execute <code>action()</code> and throw an <code><a href="../assertexception/index.html">com.sap.cloud.mobile.odata.core.AssertException</a></code> if <code>action()</code> did not itself throw an exception, or threw an exception that does not match the <code>check</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

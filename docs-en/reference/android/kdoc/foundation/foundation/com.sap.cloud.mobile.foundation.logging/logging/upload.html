@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Logging.upload - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.logging</a>&nbsp;/&nbsp;<a href="index.html">Logging</a>&nbsp;/&nbsp;<a href="./upload.html">upload</a><br/>
+<br/>
+<h1>upload</h1>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters)/client">client</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters)/settingsParameters">settingsParameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Upload the log to mobile services. The log will be purged as part of the upload. </p>
+<p>If there is an old log that did not get uploaded from a previous upload attempt, the old log is deleted and not uploaded. The upload is executed in the background using an AsyncTask using AsyncTask.THREAD_POOL_EXECUTOR.</p>
+<h3>Parameters</h3>
+<p><a name="client"></a>
+<code>client</code> - <span class="identifier">OkHttpClient</span><span class="symbol">:</span> Client that has the mobile services session already established.</p>
+<p><a name="settingsParameters"></a>
+<code>settingsParameters</code> - <a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">:</span> The application's setting parameters.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - Thrown when logging has not been initialized or the logger context has been reset, or when an upload is already in progress.</p>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging$upload()"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging$upload()"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Upload the log to mobile services. The log will be purged as part of the upload. </p>
+<p>If there is an old log that did not get uploaded from a previous upload attempt, the old log is deleted and not uploaded. The upload is executed in the background using an AsyncTask using AsyncTask.THREAD_POOL_EXECUTOR.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - Thrown when logging has not been initialized or the logger context has been reset, or when an upload is already in progress.</p>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters, com.sap.cloud.mobile.foundation.logging.Logging.UploadType)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters, com.sap.cloud.mobile.foundation.logging.Logging.UploadType)/client">client</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters, com.sap.cloud.mobile.foundation.logging.Logging.UploadType)/settingsParameters">settingsParameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters, com.sap.cloud.mobile.foundation.logging.Logging.UploadType)/uploadType">uploadType</span><span class="symbol">:</span>&nbsp;<a href="uploadtype/index.html"><span class="identifier">Logging.UploadType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Upload the log to mobile services. The log will be purged as part of the upload. The upload is executed in the background using an AsyncTask using AsyncTask.THREAD_POOL_EXECUTOR.</p>
+<h3>Parameters</h3>
+<p><a name="client"></a>
+<code>client</code> - <span class="identifier">OkHttpClient</span><span class="symbol">:</span> Client that has the mobile services session already established.</p>
+<p><a name="settingsParameters"></a>
+<code>settingsParameters</code> - <a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">:</span> The application's setting parameters.</p>
+<p><a name="uploadType"></a>
+<code>uploadType</code> - <a href="uploadtype/index.html"><span class="identifier">Logging.UploadType</span></a><span class="symbol">:</span> The type of upload to perform. See <code><a href="uploadtype/index.html">UploadType</a></code>.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - Thrown when logging has not been initialized or the logger context has been reset, or when an upload is already in progress.</p>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging$upload(com.sap.cloud.mobile.foundation.logging.Logging.UploadType)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(com.sap.cloud.mobile.foundation.logging.Logging.UploadType)/uploadType">uploadType</span><span class="symbol">:</span>&nbsp;<a href="uploadtype/index.html"><span class="identifier">Logging.UploadType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Upload the log to mobile services. The log will be purged as part of the upload. The upload is executed in the background using an AsyncTask using AsyncTask.THREAD_POOL_EXECUTOR.</p>
+<h3>Parameters</h3>
+<p><a name="uploadType"></a>
+<code>uploadType</code> - <a href="uploadtype/index.html"><span class="identifier">Logging.UploadType</span></a><span class="symbol">:</span> The type of upload to perform. See <code><a href="uploadtype/index.html">UploadType</a></code>.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - Thrown when logging has not been initialized or the logger context has been reset, or when an upload is already in progress.</p>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters)/client">client</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters)/settingsParameters">settingsParameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Upload the log to mobile services. The log will be purged as part of the upload. </p>
+<p>If there is an old log that did not get uploaded from a previous upload attempt, the old log is deleted and not uploaded. The upload is executed in the background using an AsyncTask using AsyncTask.THREAD_POOL_EXECUTOR.</p>
+<h3>Parameters</h3>
+<p><a name="client"></a>
+<code>client</code> - <span class="identifier">OkHttpClient</span><span class="symbol">:</span> Client that has the mobile services session already established.</p>
+<p><a name="settingsParameters"></a>
+<code>settingsParameters</code> - <a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">:</span> The application's setting parameters.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - Thrown when logging has not been initialized or the logger context has been reset, or when an upload is already in progress.</p>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters, com.sap.cloud.mobile.foundation.logging.Logging.UploadType)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters, com.sap.cloud.mobile.foundation.logging.Logging.UploadType)/client">client</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters, com.sap.cloud.mobile.foundation.logging.Logging.UploadType)/settingsParameters">settingsParameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(okhttp3.OkHttpClient, com.sap.cloud.mobile.foundation.common.SettingsParameters, com.sap.cloud.mobile.foundation.logging.Logging.UploadType)/uploadType">uploadType</span><span class="symbol">:</span>&nbsp;<a href="uploadtype/index.html"><span class="identifier">Logging.UploadType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Upload the log to mobile services. The log will be purged as part of the upload. The upload is executed in the background using an AsyncTask using AsyncTask.THREAD_POOL_EXECUTOR.</p>
+<h3>Parameters</h3>
+<p><a name="client"></a>
+<code>client</code> - <span class="identifier">OkHttpClient</span><span class="symbol">:</span> Client that has the mobile services session already established.</p>
+<p><a name="settingsParameters"></a>
+<code>settingsParameters</code> - <a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">:</span> The application's setting parameters.</p>
+<p><a name="uploadType"></a>
+<code>uploadType</code> - <a href="uploadtype/index.html"><span class="identifier">Logging.UploadType</span></a><span class="symbol">:</span> The type of upload to perform. See <code><a href="uploadtype/index.html">UploadType</a></code>.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - Thrown when logging has not been initialized or the logger context has been reset, or when an upload is already in progress.</p>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging$upload(com.sap.cloud.mobile.foundation.logging.Logging.UploadType)"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.logging.Logging$upload(com.sap.cloud.mobile.foundation.logging.Logging.UploadType)/uploadType">uploadType</span><span class="symbol">:</span>&nbsp;<a href="uploadtype/index.html"><span class="identifier">Logging.UploadType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Upload the log to mobile services. The log will be purged as part of the upload. The upload is executed in the background using an AsyncTask using AsyncTask.THREAD_POOL_EXECUTOR.</p>
+<h3>Parameters</h3>
+<p><a name="uploadType"></a>
+<code>uploadType</code> - <a href="uploadtype/index.html"><span class="identifier">Logging.UploadType</span></a><span class="symbol">:</span> The type of upload to perform. See <code><a href="uploadtype/index.html">UploadType</a></code>.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - Thrown when logging has not been initialized or the logger context has been reset, or when an upload is already in progress.</p>
+</BODY>
+</HTML>

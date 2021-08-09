@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataRequestOptions - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataRequestOptions</a><br/>
+<br/>
+<h1>OfflineODataRequestOptions</h1>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataRequestOptions</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span></code>
+<p>The class provides Offline OData specific request options.</p>
+<p><strong>See Also</strong><br/>
+com.sap.cloud.mobile.odata.RequestOptions</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="transactionid/index.html">TransactionID</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TransactionID</span></code>
+<p>The class represents a TransactionID instance. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transactionidtype/index.html">TransactionIDType</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TransactionIDType</span></code>
+<p>Transaction ID types</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploadcategory/index.html">UploadCategory</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UploadCategory</span></code>
+<p>The class represents an UploadCategory instance. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploadcategorytype/index.html">UploadCategoryType</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UploadCategoryType</span></code>
+<p>UploadCategory types</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OfflineODataRequestOptions</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>The class provides Offline OData specific request options.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcustomheaderformattemplate.html">getCustomHeaderFormatTemplate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCustomHeaderFormatTemplate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns a custom header format template for a request. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettransactionid.html">getTransactionID</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTransactionID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="transactionid/index.html"><span class="identifier">OfflineODataRequestOptions.TransactionID</span></a><span class="symbol">!</span></code>
+<p>Returns the transaction ID of the request. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getuploadcategory.html">getUploadCategory</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getUploadCategory</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="uploadcategory/index.html"><span class="identifier">OfflineODataRequestOptions.UploadCategory</span></a><span class="symbol">!</span></code>
+<p>Returns the upload category of the request. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isremovecreatedentityafterupload.html">isRemoveCreatedEntityAfterUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isRemoveCreatedEntityAfterUpload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Returns true if the created entity or media resource is removed locally from the offline store after successfully uploaded. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isunmodifiablerequest.html">isUnmodifiableRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isUnmodifiableRequest</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Certain requests may need to be sent as is. For example, imagine an entity which needs to move from one explicit state to another such as NEW, IN PROCESS, SOLUTION PROVIDED, CONFIRMED. For such requests, set 'unmodifiableRequest' to 'true'. Such requests will be left as is (not combined with other requests) by either request queue optimization or when automatically combining requests to fix errors. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcustomheaderformattemplate.html">setCustomHeaderFormatTemplate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setCustomHeaderFormatTemplate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions$setCustomHeaderFormatTemplate(kotlin.String)/customHeaderFormatTemplate">customHeaderFormatTemplate</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines a custom header format template for a request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setremovecreatedentityafterupload.html">setRemoveCreatedEntityAfterUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setRemoveCreatedEntityAfterUpload</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions$setRemoveCreatedEntityAfterUpload(kotlin.Boolean)/removeCreatedEntityAfterUpload">removeCreatedEntityAfterUpload</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines true to remove the created entity or media resource locally from the offline store after successfully uploaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settransactionid.html">setTransactionID</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setTransactionID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions$setTransactionID(com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionID)/transactionID">transactionID</span><span class="symbol">:</span>&nbsp;<a href="transactionid/index.html"><span class="identifier">OfflineODataRequestOptions.TransactionID</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the transaction ID of the request when transaction builder is enabled.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setunmodifiablerequest.html">setUnmodifiableRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setUnmodifiableRequest</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions$setUnmodifiableRequest(kotlin.Boolean)/unmodifiableRequest">unmodifiableRequest</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines true if the request is a unmodifiable request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setuploadcategory.html">setUploadCategory</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setUploadCategory</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions$setUploadCategory(com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory)/uploadCategory">uploadCategory</span><span class="symbol">:</span>&nbsp;<a href="uploadcategory/index.html"><span class="identifier">OfflineODataRequestOptions.UploadCategory</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the upload category of the request.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

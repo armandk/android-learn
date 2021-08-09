@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataRequestOptions.UploadCategory - odataoffline</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="../index.html">OfflineODataRequestOptions</a>&nbsp;/&nbsp;<a href="./index.html">UploadCategory</a><br/>
+<br/>
+<h1>UploadCategory</h1>
+<code><span class="keyword">class </span><span class="identifier">UploadCategory</span></code>
+<p>The class represents an UploadCategory instance. </p>
+<p> To use UploadCategory when partial upload is needed. </p>
+<p> Here is an example of creating a Customer and a related Order and having both is true. operations use the new Customer's entity ID as the upload category so that they both get put in the same upload category: </p>
+<pre><code>EntityValue newCustomer = EntityValue.ofType( customerEntityType );
+      EntityValue newOrder = EntityValue.ofType( orderEntityType );
+     
+      // Fill in newCustomer and newOrder properties here...
+     
+      // This will create the new customer and the upload category of the request
+      // will be the generated entity ID.
+      OfflineODataRequestOptions createCustomerOptions = new OfflineODataRequestOptions()
+      createCustomerOptions.setUploadCategory( UploadCategory.UseGeneratedIDForUploadCategory );
+      service.createRelatedEntity( orderEntityType, customerEntityType, ordersNavigationProperty, HttpHeaders.empty, createCustomerOptions );
+      
+      </code></pre>
+<p><strong>See Also</strong><br/>
+<a href="../getuploadcategory.html">OfflineODataRequestOptions#getUploadCategory()</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UploadCategory</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory$<init>(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Sets a pre-defined string as the upload category.</p>
+<code><span class="identifier">UploadCategory</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory$<init>(EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Sets the entity ID of the specified EntityValue as the upload category. This is a convenient way to have a graph of entities (for example, a parent-child hierarchy) all be grouped into the same upload category by referencing the root entity as the upload category.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="usegeneratedidforuploadcategory.html">useGeneratedIDForUploadCategory</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">useGeneratedIDForUploadCategory</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">OfflineODataRequestOptions.UploadCategory</span></a><span class="symbol">!</span></code>
+<p>A constant to specify to use the generated entity ID for a created entity or media entity as the upload category for the request. Using the generated entity ID as an upload category is ideal for cases where requests for a new entity need to be grouped into an upload category but there is no other pre-defined upload category. Using the generated entity ID as an upload category is also ideal for cases where a graph of related entities (for example, a parent-child hierarchy) needs to be grouped into an upload category and the entity ID of the to be created root is the ideal choice for the upload category. Note that this can be used in a change set and subsequent requests in the change set can reference the created entity (by EntityValue) to also be grouped in the same upload category.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getentityvalue.html">getEntityValue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getEntityValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">EntityValue</span><span class="symbol">!</span></code>
+<p>Returns the entity value if upload category is EntityValue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstringliteral.html">getStringLiteral</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getStringLiteral</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns the string value if upload category is StringLiteral.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getuploadcategorytype.html">getUploadCategoryType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getUploadCategoryType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../uploadcategorytype/index.html"><span class="identifier">OfflineODataRequestOptions.UploadCategoryType</span></a><span class="symbol">!</span></code>
+<p>Returns the UploadCategoryType.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

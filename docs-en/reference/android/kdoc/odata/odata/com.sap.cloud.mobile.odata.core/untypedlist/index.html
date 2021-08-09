@@ -1,0 +1,351 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UntypedList - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">UntypedList</a><br/>
+<br/>
+<h1>UntypedList</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UntypedList</span></code>
+<p>An untyped list, intended for internal use by strongly-typed lists which inherit from the <code>ListBase</code> class.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UntypedList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">UntypedList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$<init>(kotlin.Int, kotlin.Any)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$<init>(kotlin.Int, kotlin.Any)/repeatValue">repeatValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>See UntypedList(int, Object, int).</p>
+<code><span class="identifier">UntypedList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$<init>(kotlin.Int, kotlin.Any, kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$<init>(kotlin.Int, kotlin.Any, kotlin.Int)/repeatValue">repeatValue</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$<init>(kotlin.Int, kotlin.Any, kotlin.Int)/repeatCount">repeatCount</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new list with <code><a href="length.html">UntypedList.length</a></code> of zero and specified initial <code>capacity</code>. A list can expand in length beyond its initial capacity, but best performance will be obtained if the initial capacity is close to (and not less than) the list's maximum length.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$add(kotlin.Any)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Append <code>item</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addall.html">addAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$addAll(com.sap.cloud.mobile.odata.core.UntypedList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UntypedList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add all the items of <code>list</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addrange.html">addRange</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$addRange(com.sap.cloud.mobile.odata.core.UntypedList, kotlin.Int, kotlin.Int)/list">list</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UntypedList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$addRange(com.sap.cloud.mobile.odata.core.UntypedList, kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$addRange(com.sap.cloud.mobile.odata.core.UntypedList, kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a range of items of <code>list</code> to the end of this list. Equivalent to <code>this.addAll(list.slice(start, end)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="endrange.html">endRange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">endRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$endRange(kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the starting point for a range, as indicated by <code>end</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="first.html">first</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">first</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) The first item in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$get(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) The item in this list at the specified <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getempty.html">getEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UntypedList</span></a></code>
+<p>Return immutable empty list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="indexof.html">indexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$indexOf(kotlin.Any)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See indexOf(Object, int).</p>
+<code><span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$indexOf(kotlin.Any, kotlin.Int)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$indexOf(kotlin.Any, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return first index in this list of <code>item</code>, or -1 if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insertall.html">insertAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">insertAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$insertAll(kotlin.Int, com.sap.cloud.mobile.odata.core.UntypedList)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$insertAll(kotlin.Int, com.sap.cloud.mobile.odata.core.UntypedList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UntypedList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Insert all items of <code>list</code> into this list, before the item (if any) at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insertat.html">insertAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">insertAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$insertAt(kotlin.Int, kotlin.Any)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$insertAt(kotlin.Int, kotlin.Any)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Insert <code>item</code> into this list, before the item (if any) at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list contains no items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ismutable.html">isMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isMutable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list is mutable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="last.html">last</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">last</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) The last item in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lastindexof.html">lastIndexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$lastIndexOf(kotlin.Any)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See lastIndexOf(Object, int).</p>
+<code><span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$lastIndexOf(kotlin.Any, kotlin.Int)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$lastIndexOf(kotlin.Any, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return last index in this list of <code>item</code>, or -1 if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="length.html">length</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">length</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pop.html">pop</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) The last item in this list (which is removed from the list).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="push.html">push</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">push</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$push(kotlin.Any)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Add <code>item</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removeat.html">removeAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$removeAt(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove an item from the specified index in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removefirst.html">removeFirst</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeFirst</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove the first item (if any) from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removelast.html">removeLast</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeLast</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove the last item (if any) from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removerange.html">removeRange</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$removeRange(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$removeRange(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove a range of items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reserve.html">reserve</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reserve</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$reserve(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Request that this list can hold <code>capacity</code> items without needing incremental expansion.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reverse.html">reverse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reverse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reverse the order of the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$set(kotlin.Int, kotlin.Any)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$set(kotlin.Int, kotlin.Any)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the item in this list at the specified <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shift.html">shift</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">shift</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) The first item in this list (which is removed from the list).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="single.html">single</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">single</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) The expected single item in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slice.html">slice</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$slice(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$slice(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UntypedList</span></a></code>
+<p>Return a slice of this list from index <code>start</code> (inclusive) to index <code>end</code> (exclusive).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sort.html">sort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortwith.html">sortWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$sortWith(com.sap.cloud.mobile.odata.core.Comparer)/comparer">comparer</span><span class="symbol">:</span>&nbsp;<a href="../comparer/index.html"><span class="identifier">Comparer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort the items in this list, using the <code>comparer</code> argument for ordering.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="startrange.html">startRange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">startRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$startRange(kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the starting point for a range, as indicated by <code>start</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string representation of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="use.html">use</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">use</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$use(com.sap.cloud.mobile.odata.core.Comparer, com.sap.cloud.mobile.odata.core.Equality)/comparer">comparer</span><span class="symbol">:</span>&nbsp;<a href="../comparer/index.html"><span class="identifier">Comparer</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedList$use(com.sap.cloud.mobile.odata.core.Comparer, com.sap.cloud.mobile.odata.core.Equality)/equality">equality</span><span class="symbol">:</span>&nbsp;<a href="../equality/index.html"><span class="identifier">Equality</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Register ordering and equality functions with this list, for use by functions that do sorting and searching.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../emptylist/index.html">EmptyList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EmptyList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UntypedList</span></a></code>
+<p>An immutable empty list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

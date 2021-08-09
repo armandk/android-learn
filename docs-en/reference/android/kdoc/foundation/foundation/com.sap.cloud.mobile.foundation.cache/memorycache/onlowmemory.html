@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MemoryCache.onLowMemory - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="index.html">MemoryCache</a>&nbsp;/&nbsp;<a href="./onlowmemory.html">onLowMemory</a><br/>
+<br/>
+<h1>onLowMemory</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.MemoryCache$onLowMemory()"></a>
+<code><span class="keyword">fun </span><span class="identifier">onLowMemory</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.cache.MemoryCache$onLowMemory()"></a>
+<code><span class="keyword">fun </span><span class="identifier">onLowMemory</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>When the system is running low on memory, evicts all entries in the cache if <code><a href="clearonmemoryerror.html">#clearOnMemoryError()</a></code> was called during Memory Cache initialization. </p>
+<p>This method should be called from Android component's <code><a href="#">ComponentCallbacks#onLowMemory()</a></code> or <code><a href="#">android.content.ComponentCallbacks2#onTrimMemory(int)</a></code>, and the system will perform a garbage collection after returning from that method.</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - if the cache is not yet configured.</p>
+</BODY>
+</HTML>

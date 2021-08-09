@@ -1,0 +1,529 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StringFunction - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">StringFunction</a><br/>
+<br/>
+<h1>StringFunction</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">StringFunction</span></code>
+<p>Basic functions for type <code>string</code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">StringFunction</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Basic functions for type <code>string</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="afterfirst.html">afterFirst</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">afterFirst</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$afterFirst(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$afterFirst(kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the characters of <code>value</code> after the first occurrence of <code>text</code>, or an empty string if <code>text</code> is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="afterlast.html">afterLast</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">afterLast</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$afterLast(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$afterLast(kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the characters of <code>value</code> after the last occurrence of <code>text</code>, or an empty string if <code>text</code> is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="beforefirst.html">beforeFirst</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">beforeFirst</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$beforeFirst(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$beforeFirst(kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the characters of <code>value</code> before the first occurrence of <code>text</code>, or all of <code>value</code> if <code>text</code> is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="beforelast.html">beforeLast</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">beforeLast</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$beforeLast(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$beforeLast(kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the characters of <code>value</code> before the last occurrence of <code>text</code>, or all of <code>value</code> if <code>text</code> is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="compareto.html">compareTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">compareTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$compareTo(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$compareTo(kotlin.String, kotlin.String)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Compare string <code>value</code> with <code>other</code> string value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="endswith.html">endsWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">endsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$endsWith(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$endsWith(kotlin.String, kotlin.String)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>See endsWith(String, String, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">endsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$endsWith(kotlin.String, kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$endsWith(kotlin.String, kotlin.String, kotlin.Int)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$endsWith(kotlin.String, kotlin.String, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Determine whether <code>value</code> ends with the characters of <code>text</code>, returning <code>true</code> or <code>false</code> as appropriate.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equalsignorecase.html">equalsIgnoreCase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equalsIgnoreCase</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$equalsIgnoreCase(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$equalsIgnoreCase(kotlin.String, kotlin.String)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare string <code>value</code> for equality with <code>other</code> string value, ignoring case.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hashcode.html">hashCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$hashCode(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return a hash code for <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="htmlescape.html">htmlEscape</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">htmlEscape</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$htmlEscape(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with HTML reserved characters replaced with HTML entity escapes. Other characters are unchanged.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="includes.html">includes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">includes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includes(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includes(kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>See includes(String, String, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">includes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includes(kotlin.String, kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includes(kotlin.String, kotlin.String, kotlin.Int)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includes(kotlin.String, kotlin.String, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Determine whether <code>text</code> may be found within <code>value</code>, returning <code>true</code> or <code>false</code> as appropriate.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="includesany.html">includesAny</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">includesAny</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includesAny(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includesAny(kotlin.String, kotlin.String)/chars">chars</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Determine if any of <code>chars</code> may be found within <code>value</code>, returning <code>true</code> or <code>false</code> as appropriate.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="includeschar.html">includesChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">includesChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includesChar(kotlin.String, kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includesChar(kotlin.String, kotlin.Char)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>See includesChar(String, char, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">includesChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includesChar(kotlin.String, kotlin.Char, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includesChar(kotlin.String, kotlin.Char, kotlin.Int)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$includesChar(kotlin.String, kotlin.Char, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Determine whether <code>text</code> may be found within <code>value</code>, returning <code>true</code> or <code>false</code> as appropriate.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="indexof.html">indexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOf(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOf(kotlin.String, kotlin.String)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See indexOf(String, String, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOf(kotlin.String, kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOf(kotlin.String, kotlin.String, kotlin.Int)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOf(kotlin.String, kotlin.String, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Locates <code>find</code> within <code>value</code>, searching forwards from <code>start</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="indexofany.html">indexOfAny</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">indexOfAny</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfAny(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfAny(kotlin.String, kotlin.String)/chars">chars</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See indexOfAny(String, String, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">indexOfAny</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfAny(kotlin.String, kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfAny(kotlin.String, kotlin.String, kotlin.Int)/chars">chars</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfAny(kotlin.String, kotlin.String, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the first index within <code>value</code> containing one of <code>chars</code>, or -1 if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="indexofchar.html">indexOfChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">indexOfChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfChar(kotlin.String, kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfChar(kotlin.String, kotlin.Char)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See indexOfChar(String, char, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">indexOfChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfChar(kotlin.String, kotlin.Char, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfChar(kotlin.String, kotlin.Char, kotlin.Int)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$indexOfChar(kotlin.String, kotlin.Char, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Locates <code>find</code> within <code>value</code>, searching forwards from <code>start</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insert.html">insert</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">insert</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$insert(kotlin.String, kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$insert(kotlin.String, kotlin.String, kotlin.Int)/insert">insert</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$insert(kotlin.String, kotlin.String, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the string with the inserted value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$isEmpty(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="join.html">join</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">join</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$join(kotlin.Array((kotlin.String)))/strings">strings</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="lastindexof.html">lastIndexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOf(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOf(kotlin.String, kotlin.String)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See lastIndexOf(String, String, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOf(kotlin.String, kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOf(kotlin.String, kotlin.String, kotlin.Int)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOf(kotlin.String, kotlin.String, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Locates <code>text</code> within <code>value</code>, searching backwards from <code>start</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lastindexofany.html">lastIndexOfAny</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lastIndexOfAny</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfAny(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfAny(kotlin.String, kotlin.String)/chars">chars</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See lastIndexOfAny(String, String, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lastIndexOfAny</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfAny(kotlin.String, kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfAny(kotlin.String, kotlin.String, kotlin.Int)/chars">chars</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfAny(kotlin.String, kotlin.String, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the last index within <code>value</code> containing one of <code>chars</code>, or -1 if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lastindexofchar.html">lastIndexOfChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lastIndexOfChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfChar(kotlin.String, kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfChar(kotlin.String, kotlin.Char)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See lastIndexOfChar(String, char, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lastIndexOfChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfChar(kotlin.String, kotlin.Char, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfChar(kotlin.String, kotlin.Char, kotlin.Int)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lastIndexOfChar(kotlin.String, kotlin.Char, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Locates <code>text</code> within <code>value</code>, searching backwards from <code>start</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lowerfirst.html">lowerFirst</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lowerFirst</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$lowerFirst(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with the first character (if any) converted to lower case.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="padleft.html">padLeft</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">padLeft</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padLeft(kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padLeft(kotlin.String, kotlin.Int)/maxLength">maxLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See padLeft(String, int, String).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">padLeft</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padLeft(kotlin.String, kotlin.Int, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padLeft(kotlin.String, kotlin.Int, kotlin.String)/maxLength">maxLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padLeft(kotlin.String, kotlin.Int, kotlin.String)/fillStr">fillStr</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> padded on the left with <code>fillStr</code> up to maximum length <code>maxLength</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="padright.html">padRight</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">padRight</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padRight(kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padRight(kotlin.String, kotlin.Int)/maxLength">maxLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See padRight(String, int, String).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">padRight</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padRight(kotlin.String, kotlin.Int, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padRight(kotlin.String, kotlin.Int, kotlin.String)/maxLength">maxLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$padRight(kotlin.String, kotlin.Int, kotlin.String)/fillStr">fillStr</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> padded on the right with <code>fillStr</code> up to maximum length <code>maxLength</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="percentdecode.html">percentDecode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">percentDecode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$percentDecode(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Percent-decode a URI component. See <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a> section 2.4.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="percentencode.html">percentEncode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">percentEncode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$percentEncode(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Percent-encode a URI component. See <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a> section 2.4.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="percentnormal.html">percentNormal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">percentNormal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$percentNormal(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Percent-encoding normalization of a URI component. See <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a> section 6.2.2.2.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="prettyname.html">prettyName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">prettyName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$prettyName(kotlin.String, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$prettyName(kotlin.String, kotlin.Boolean)/upperFirst">upperFirst</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the <code>value</code> converted to a pretty name (using camel-case).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removeprefix.html">removePrefix</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">removePrefix</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$removePrefix(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$removePrefix(kotlin.String, kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> which omits the specified <code>prefix</code>, if present.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removesuffix.html">removeSuffix</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">removeSuffix</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$removeSuffix(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$removeSuffix(kotlin.String, kotlin.String)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> which omits the specified <code>suffix</code>, if present.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="repeat.html">repeat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">repeat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$repeat(kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$repeat(kotlin.String, kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a new string which contains <code>count</code> copies of <code>value</code>, concatenated together.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="replaceall.html">replaceAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">replaceAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$replaceAll(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$replaceAll(kotlin.String, kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$replaceAll(kotlin.String, kotlin.String, kotlin.String)/newText">newText</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with all occurrences of <code>text</code> replaced with <code>newText</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="replacefirst.html">replaceFirst</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">replaceFirst</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$replaceFirst(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$replaceFirst(kotlin.String, kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$replaceFirst(kotlin.String, kotlin.String, kotlin.String)/newText">newText</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with the first occurrence of <code>text</code> replaced with <code>newText</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="replacelast.html">replaceLast</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">replaceLast</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$replaceLast(kotlin.String, kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$replaceLast(kotlin.String, kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$replaceLast(kotlin.String, kotlin.String, kotlin.String)/newText">newText</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with the last occurrence of <code>text</code> replaced with <code>newText</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slice.html">slice</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$slice(kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$slice(kotlin.String, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See slice(String, int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$slice(kotlin.String, kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$slice(kotlin.String, kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$slice(kotlin.String, kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a section of <code>value</code> beginning at <code>start</code>, through to <code>end</code>. Allows negative values for <code>start</code> / <code>end</code> to specify end-relative positions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="startswith.html">startsWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">startsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$startsWith(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$startsWith(kotlin.String, kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>See startsWith(String, String, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">startsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$startsWith(kotlin.String, kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$startsWith(kotlin.String, kotlin.String, kotlin.Int)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$startsWith(kotlin.String, kotlin.String, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Determine whether <code>value</code> starts with the characters of <code>text</code>, returning <code>true</code> or <code>false</code> as appropriate.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="substr.html">substr</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">substr</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substr(kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substr(kotlin.String, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See substr(String, int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">substr</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substr(kotlin.String, kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substr(kotlin.String, kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substr(kotlin.String, kotlin.Int, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a section of <code>value</code> beginning at <code>start</code>, with <code>length</code> characters.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="substring.html">substring</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">substring</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substring(kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substring(kotlin.String, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See substring(String, int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">substring</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substring(kotlin.String, kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substring(kotlin.String, kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$substring(kotlin.String, kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a section of <code>value</code> beginning at <code>start</code>, through to <code>end</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toany.html">toAny</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toAny</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$toAny(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) The string <code>value</code> converted to <code>StringValue</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tobinary.html">toBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$toBinary(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Return a binary value with simple (numeric value) mapping of source Unicode character values to target bytes. Use only when character values are limited to <a href="https://en.wikipedia.org/wiki/ISO/IEC_8859-1">ISO-8859-1</a> (the first 256 code points of Unicode).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tochar.html">toChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$toChar(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Char</span></code>
+<p>Return the first character of <code>value</code>, or a NUL character if the string is empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tojson.html">toJSON</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toJSON</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$toJSON(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the string <code>value</code> converted to <a href="http://json.org">JSON</a> representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tolowercase.html">toLowerCase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toLowerCase</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$toLowerCase(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with upper-case characters converted to lower-case.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$toString(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the string <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="touppercase.html">toUpperCase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toUpperCase</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$toUpperCase(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with lower-case characters converted to upper-case.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trim.html">trim</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">trim</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$trim(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with leading and trailing whitespace removed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trimleft.html">trimLeft</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">trimLeft</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$trimLeft(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with leading whitespace removed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trimright.html">trimRight</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">trimRight</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$trimRight(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with trailing whitespace removed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="upperfirst.html">upperFirst</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upperFirst</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$upperFirst(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with the first character (if any) converted to upper case.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withprefix.html">withPrefix</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withPrefix</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$withPrefix(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$withPrefix(kotlin.String, kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> which adds the specified <code>prefix</code>, if not already present.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withsuffix.html">withSuffix</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withSuffix</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$withSuffix(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$withSuffix(kotlin.String, kotlin.String)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> which adds the specified <code>suffix</code>, if not already present.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlescape.html">xmlEscape</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">xmlEscape</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.StringFunction$xmlEscape(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a copy of <code>value</code> with XML reserved characters replaced with XML entity escapes. Other characters are unchanged.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ManagedConfigToJsonConverter.convertManagedConfigToJson - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.configurationprovider</a>&nbsp;/&nbsp;<a href="index.html">ManagedConfigToJsonConverter</a>&nbsp;/&nbsp;<a href="./convertmanagedconfigtojson.html">convertManagedConfigToJson</a><br/>
+<br/>
+<h1>convertManagedConfigToJson</h1>
+<a name="com.sap.cloud.mobile.foundation.configurationprovider.ManagedConfigToJsonConverter$convertManagedConfigToJson(android.os.Bundle, kotlin.collections.MutableList((android.content.RestrictionEntry)))"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">convertManagedConfigToJson</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.configurationprovider.ManagedConfigToJsonConverter$convertManagedConfigToJson(android.os.Bundle, kotlin.collections.MutableList((android.content.RestrictionEntry)))/appRestrictions">appRestrictions</span><span class="symbol">:</span>&nbsp;<span class="identifier">Bundle</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.configurationprovider.ManagedConfigToJsonConverter$convertManagedConfigToJson(android.os.Bundle, kotlin.collections.MutableList((android.content.RestrictionEntry)))/manifestRestrictions">manifestRestrictions</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">RestrictionEntry</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">JSONObject</span><span class="symbol">?</span></code>
+<p>Converts managed configuration data to json.</p>
+<h3>Parameters</h3>
+<p><a name="appRestrictions"></a>
+<code>appRestrictions</code> - <span class="identifier">Bundle</span><span class="symbol">?</span><span class="symbol">:</span> a Bundle representing managed configuration data that is to be converted to JSON.</p>
+<p><a name="manifestRestrictions"></a>
+<code>manifestRestrictions</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">RestrictionEntry</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">:</span> a list of the application restriction (Managed Configuration) entries that are in the application manifest.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">JSONObject</span><span class="symbol">?</span><span class="symbol">:</span> a JSONObject representing the configuration information contained in the appRestrictions, possibly using default values found in the manifestRestrictions. If an error is encountered, null is returned and the last error is set to describe the error.</p>
+<a name="com.sap.cloud.mobile.foundation.configurationprovider.ManagedConfigToJsonConverter$convertManagedConfigToJson(android.os.Bundle, kotlin.collections.MutableList((android.content.RestrictionEntry)))"></a>
+<code><span class="identifier">@Nullable</span> <span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">convertManagedConfigToJson</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.configurationprovider.ManagedConfigToJsonConverter$convertManagedConfigToJson(android.os.Bundle, kotlin.collections.MutableList((android.content.RestrictionEntry)))/appRestrictions">appRestrictions</span><span class="symbol">:</span>&nbsp;<span class="identifier">Bundle</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.configurationprovider.ManagedConfigToJsonConverter$convertManagedConfigToJson(android.os.Bundle, kotlin.collections.MutableList((android.content.RestrictionEntry)))/manifestRestrictions">manifestRestrictions</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">RestrictionEntry</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">JSONObject</span><span class="symbol">?</span></code>
+<p>Converts managed configuration data to json.</p>
+<h3>Parameters</h3>
+<p><a name="appRestrictions"></a>
+<code>appRestrictions</code> - <span class="identifier">Bundle</span><span class="symbol">?</span><span class="symbol">:</span> a Bundle representing managed configuration data that is to be converted to JSON.</p>
+<p><a name="manifestRestrictions"></a>
+<code>manifestRestrictions</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">RestrictionEntry</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">:</span> a list of the application restriction (Managed Configuration) entries that are in the application manifest.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">JSONObject</span><span class="symbol">?</span><span class="symbol">:</span> a JSONObject representing the configuration information contained in the appRestrictions, possibly using default values found in the manifestRestrictions. If an error is encountered, null is returned and the last error is set to describe the error.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XmlName - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.xml</a>&nbsp;/&nbsp;<a href="./index.html">XmlName</a><br/>
+<br/>
+<h1>XmlName</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlName</span></code>
+<p>An XML name, with optional namespace prefix, e.g. "myns:MyElement". @throws (none)</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">XmlName</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>An XML name, with optional namespace prefix, e.g. "myns:MyElement". @throws (none)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getfullname.html">getFullName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFullName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return full name. Equal to <code><a href="getlocalname.html">XmlName.localName</a></code> if <code><a href="getprefix.html">XmlName.prefix</a></code> is <code>null</code>. Otherwise "prefix:localName".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlocalname.html">getLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return name suffix, e.g. "MyElement".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprefix.html">getPrefix</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrefix</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Optional namespace prefix, e.g. "myns" or <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlName$parse(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlName</span></a></code>
+<p>Parse an XML name string with optional namespace prefix.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setfullname.html">setFullName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setFullName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlName$setFullName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set full name. Equal to <code><a href="getlocalname.html">XmlName.localName</a></code> if <code><a href="getprefix.html">XmlName.prefix</a></code> is <code>null</code>. Otherwise "prefix:localName".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlocalname.html">setLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLocalName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlName$setLocalName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set name suffix, e.g. "MyElement".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setprefix.html">setPrefix</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPrefix</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlName$setPrefix(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optional namespace prefix, e.g. "myns" or <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

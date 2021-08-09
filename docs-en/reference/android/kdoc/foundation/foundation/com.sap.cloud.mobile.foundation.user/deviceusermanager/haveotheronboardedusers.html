@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DeviceUserManager.haveOtherOnBoardedUsers - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.user</a>&nbsp;/&nbsp;<a href="index.html">DeviceUserManager</a>&nbsp;/&nbsp;<a href="./haveotheronboardedusers.html">haveOtherOnBoardedUsers</a><br/>
+<br/>
+<h1>haveOtherOnBoardedUsers</h1>
+<a name="com.sap.cloud.mobile.foundation.user.DeviceUserManager$haveOtherOnBoardedUsers(com.sap.cloud.mobile.foundation.user.DeviceUser)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">haveOtherOnBoardedUsers</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$haveOtherOnBoardedUsers(com.sap.cloud.mobile.foundation.user.DeviceUser)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Checks whether there are other users already 'onBoarded'. This is usually been used when the
+current <a href="haveotheronboardedusers.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$haveOtherOnBoardedUsers(com.sap.cloud.mobile.foundation.user.DeviceUser)/user">user</a> forgets the passcode and restarting the app, then the app needs to decide which
+flow to use. If no users already onBoarded, it will go directly to the onboarding flow, otherwise,
+it should go into 'Sign In' step.</p>
+<h3>Parameters</h3>
+<p><a name="user"></a>
+<code>user</code> - The user to check again for 'others'.</p>
+<p><strong>Return</strong><br/>
+'true' to say there are other users onboarded before, false otherwise.</p>
+</BODY>
+</HTML>

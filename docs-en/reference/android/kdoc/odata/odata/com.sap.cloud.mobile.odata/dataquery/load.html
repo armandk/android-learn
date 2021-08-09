@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.load - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./load.html">load</a><br/>
+<br/>
+<h1>load</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$load(com.sap.cloud.mobile.odata.EntityValue)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$load(com.sap.cloud.mobile.odata.EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>See load(EntityValue, PropertyPath).</p>
+<h3>Parameters</h3>
+<p><a name="entity"></a>
+<code>entity</code> - <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">:</span> Entity parameter.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> (see linked method).</p>
+<a name="com.sap.cloud.mobile.odata.DataQuery$load(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.PropertyPath)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$load(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.PropertyPath)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$load(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.PropertyPath)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">@Nullable</span> <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getentityset.html">DataQuery.entitySet</a></code> and <code><a href="getentitykey.html">DataQuery.entityKey</a></code> to configure this query to load an existing entity. Equivalent to calling <code>from(entity.entitySet).withKey(entity.entityKey)</code>.</p>
+<h3>Parameters</h3>
+<p><a name="entity"></a>
+<code>entity</code> - <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">:</span> The entity to be loaded.</p>
+<p><a name="path"></a>
+<code>path</code> - <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">?</span><span class="symbol">:</span> (nullable) Optionally specify <code><a href="getpropertypath.html">DataQuery.propertyPath</a></code>.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.download - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./download.html">download</a><br/>
+<br/>
+<h1>download</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">download</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">CancelToken</span><span class="symbol">!</span></code>
+<p>Downloads the data for all defining queries from the OData back end to update the local data. If the defining queries are delta enabled, only the changes will be downloaded. </p>
+<p> Example Usage: </p>
+<pre><code>// Download data asynchronously
+      offlineODataProvider.download(() -&gt; logger.info("Download completed successfully."),
+                                    (error) -&gt; logger.error("Exception encountered in OfflineOData download: ", error));
+     
+      
+      </code></pre> 
+<p> Note: The downloading task may not back immediately since which is pending because of other concurrent downloadings or which is in a critical non-cancelled stage. </p>
+<h3>Parameters</h3>
+<p><a name="successHandler"></a>
+<code>successHandler</code> - <span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">:</span> a success callback function.</p>
+<p><a name="failureHandler"></a>
+<code>failureHandler</code> - <span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">:</span> a failure callback function.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">CancelToken</span><span class="symbol">!</span><span class="symbol">:</span> a token to cancel the download operation</p>
+<p><strong>See Also</strong><br/>
+<a href="canceldownload.html">#cancelDownload()</a><a href="./download.html">#download(List, Action0, Action1)</a><a href="upload.html">#upload(Action0, Action1)</a><a href="../offlineodatadelegate/index.html">OfflineODataDelegate</a>com.sap.cloud.mobile.odata.core.Action0com.sap.cloud.mobile.odata.core.Action1</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)), Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">download</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)), Action0, Action1)/subset">subset</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)), Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)), Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">CancelToken</span><span class="symbol">!</span></code>
+<p>Downloads the data for the defining queries from the OData back end to update the local data. If the defining queries are delta enabled, only the changes will be downloaded. </p>
+<p> Example Usage: </p>
+<pre><code>// Create subset of defining queries to download
+      List&lt; OfflineODataDefiningQuery &gt; subset = new ArrayList&lt;&gt;();
+      subset.add(new OfflineODataDefiningQuery("Customers", "Customers", false));
+     
+      // Download data asynchronously
+      offlineODataProvider.download(subset,
+                                    () -&gt; logger.info("Download completed successfully."),
+                                    (error) -&gt; logger.error("Exception encountered in OfflineOData download: ", error));
+     
+      
+      </code></pre> 
+<p> Note: The downloading task may not back immediately since which is pending because of other concurrent downloadings or which is in a critical non-cancelled stage. </p>
+<h3>Parameters</h3>
+<p><a name="subset"></a>
+<code>subset</code> - <span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">:</span> the subset of the defining queries to download.</p>
+<p><a name="successHandler"></a>
+<code>successHandler</code> - <span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">:</span> a success callback function.</p>
+<p><a name="failureHandler"></a>
+<code>failureHandler</code> - <span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">:</span> a failure callback function.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">CancelToken</span><span class="symbol">!</span><span class="symbol">:</span> a token to cancel the download operation</p>
+<p><strong>See Also</strong><br/>
+<a href="canceldownload.html">#cancelDownload()</a><a href="./download.html">#download(Action0, Action1)</a><a href="upload.html">#upload(Action0, Action1)</a><a href="../offlineodatadelegate/index.html">OfflineODataDelegate</a>com.sap.cloud.mobile.odata.core.Action0com.sap.cloud.mobile.odata.core.Action1</p>
+</BODY>
+</HTML>

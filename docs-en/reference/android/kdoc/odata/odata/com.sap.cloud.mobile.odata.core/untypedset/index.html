@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UntypedSet - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">UntypedSet</a><br/>
+<br/>
+<h1>UntypedSet</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UntypedSet</span></code>
+<p>An untyped set, intended for internal use by strongly-typed sets which inherit from the <code>SetBase</code> class.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UntypedSet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedSet$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new set with <code><a href="size.html">UntypedSet.size</a></code> of zero and specified initial <code>capacity</code>. A set can expand in size beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the set's maximum size.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedSet$add(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add <code>value</code> into this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all values from this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copyvaluesto.html">copyValuesTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyValuesTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedSet$copyValuesTo(com.sap.cloud.mobile.odata.core.UntypedList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../untypedlist/index.html"><span class="identifier">UntypedList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy the values in this set to the <code>list</code> argument.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedSet$delete(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Delete <code>value</code> from this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="has.html">has</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">has</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.UntypedSet$has(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this set contains <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this set contains no entries.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ismutable.html">isMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isMutable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this set is mutable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="size.html">size</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of values in this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string representation of this set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="values.html">values</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">values</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../untypedlist/index.html"><span class="identifier">UntypedList</span></a></code>
+<p>Return a list of the values in this set.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../emptyset/index.html">EmptySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EmptySet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UntypedSet</span></a></code>
+<p>An immutable empty set.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

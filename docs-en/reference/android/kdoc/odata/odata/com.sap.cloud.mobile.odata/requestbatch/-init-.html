@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RequestBatch.<init> - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">RequestBatch</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.odata.RequestBatch$&lt;init&gt;()"></a>
+<code><span class="identifier">RequestBatch</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> batch request.</p>
+ See Also: 
+<p><code><a href="../changeset/index.html">com.sap.cloud.mobile.odata.ChangeSet</a></code>, <code><a href="../dataquery/index.html">com.sap.cloud.mobile.odata.DataQuery</a></code>, <code>DataService.processBatch</code>.</p>
+  Example using dynamic API:<pre><code>
+  public void processBatchExample() {
+      DataService service = this.getService();
+      EntitySet suppliersEntitySet = service.getEntitySet("Suppliers");
+      EntitySet productsEntitySet = service.getEntitySet("Products");
+      EntityType supplierEntityType = suppliersEntitySet.getEntityType();
+      Property companyNameProperty = supplierEntityType.getProperty("CompanyName");
+      EntityType productEntityType = productsEntitySet.getEntityType();
+      Property productNameProperty = productEntityType.getProperty("ProductName");
+      Property supplierProperty = productEntityType.getProperty("Supplier");
+      EntityValue supplier1 = service.executeQuery(new DataQuery()
+          .from(suppliersEntitySet).top(1))
+          .getRequiredEntity();
+      EntityValue supplier2 = supplier1.copyEntity();
+      EntityValue supplier3 = supplier1.copyEntity();
+      EntityValue supplier4 = supplier1.copyEntity();
+      companyNameProperty.setString(supplier2, "Alpha Inc.");
+      companyNameProperty.setString(supplier3, "Beta Inc.");
+      service.createEntity(supplier2);
+      service.createEntity(supplier3);
+      companyNameProperty.setString(supplier3, "Gamma Inc.");
+      EntityValue product1 = service.executeQuery(new DataQuery()
+          .from(productsEntitySet).top(1))
+          .getRequiredEntity();
+      EntityValue product2 = product1.copyEntity();
+      productNameProperty.setString(product2, "Delta Cake");
+      RequestBatch batch = new RequestBatch();
+      ChangeSet changes = new ChangeSet();
+      changes.createEntity(supplier4);
+      changes.updateEntity(supplier3);
+      changes.deleteEntity(supplier2);
+      changes.createEntity(product2);
+      changes.createLink(product2, supplierProperty, supplier4);
+      DataQuery query = new DataQuery().from(suppliersEntitySet);
+      batch.addChanges(changes);
+      batch.addQuery(query);
+      service.processBatch(batch);
+      EntityValueList suppliers = batch.getQueryResult(query).getEntityList();
+      Example.show("There are now ", Example.formatInt(suppliers.length()),
+          " suppliers.");
+  }
+  </code></pre> Example using proxy classes:<pre><code>
+  public void processBatchExample() {
+      NorthwindService service = this.getService();
+      Supplier supplier1 = service.getSupplier(new DataQuery().top(1));
+      Supplier supplier2 = supplier1.copy();
+      Supplier supplier3 = supplier1.copy();
+      Supplier supplier4 = supplier1.copy();
+      supplier2.setCompanyName("Alpha Inc.");
+      supplier3.setCompanyName("Beta Inc.");
+      service.createEntity(supplier2);
+      service.createEntity(supplier3);
+      supplier3.setCompanyName("Gamma Inc.");
+      Product product1 = service.getProduct(new DataQuery().top(1));
+      Product product2 = product1.copy();
+      product2.setProductName("Delta Cake");
+      RequestBatch batch = new RequestBatch();
+      ChangeSet changes = new ChangeSet();
+      changes.createEntity(supplier4);
+      changes.updateEntity(supplier3);
+      changes.deleteEntity(supplier2);
+      changes.createEntity(product2);
+      changes.createLink(product2, Product.supplier, supplier4);
+      changes.updateLink(product2, Product.supplier, supplier3);
+      changes.deleteLink(product2, Product.supplier, supplier3);
+      DataQuery query = new DataQuery()
+          .from(NorthwindServiceMetadata.EntitySets.suppliers);
+      batch.addChanges(changes);
+      batch.addQuery(query);
+      service.processBatch(batch);
+      List&lt;Supplier&gt; suppliers = Supplier.list(batch.getQueryResult(query)
+          .getEntityList());
+      Example.show("There are now ", Example.formatInt(suppliers.size()),
+          " suppliers.");
+  }
+  </code></pre>
+</BODY>
+</HTML>

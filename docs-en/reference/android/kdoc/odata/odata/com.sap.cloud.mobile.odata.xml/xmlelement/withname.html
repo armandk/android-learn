@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XmlElement.withName - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.xml</a>&nbsp;/&nbsp;<a href="index.html">XmlElement</a>&nbsp;/&nbsp;<a href="./withname.html">withName</a><br/>
+<br/>
+<h1>withName</h1>
+<a name="com.sap.cloud.mobile.odata.xml.XmlElement$withName(kotlin.String)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withName</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$withName(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Convenience function for constructing an element node with specified name.</p>
+ Example <pre><code>let e = XmlAttribute.withName("e")
+          .addAttribute(XmlAttribute.withName("a").andValue("v"))
+          .addComment("c")
+          .addElement(XmlElement.withName("x"))
+          .addText("t");
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="name"></a>
+<code>name</code> - <span class="identifier">String</span><span class="symbol">:</span> The element name.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">XmlElement</span></a><span class="symbol">:</span> A new XML element node.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SearchFragment">
+
+       <com.sap.cloud.mobile.fiori.search.FioriSearchView
+           android:id="@+id/search"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:elevation="4dp"
+           app:iconifiedByDefault="false"
+           android:layout_marginBottom="8dp"
+           android:layout_marginLeft="8dp"
+           android:layout_marginRight="8dp"
+           android:layout_marginTop="8dp"
+           app:queryHint="@string/search_input_placeholder"/>
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/department_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:padding="15dp"
+            android:text="@string/by_product"
+            android:textSize="18sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/by_location_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:padding="15dp"
+            android:text="@string/by_location"
+            android:textSize="18sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_list"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

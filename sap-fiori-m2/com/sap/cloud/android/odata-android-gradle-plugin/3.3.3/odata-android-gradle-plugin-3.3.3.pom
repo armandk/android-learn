@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sap.cloud.android</groupId>
+  <artifactId>odata-android-gradle-plugin</artifactId>
+  <version>3.3.3</version>
+  <url>https://www.sap.com/products/mobile-app-development-platform.html</url>
+  <licenses>
+    <license>
+      <name>SAP DEVELOPER LICENSE AGREEMENT</name>
+      <url>https://tools.hana.ondemand.com/developer-license-3.1.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>SAP Cloud Platform</name>
+      <organization>SAP SE</organization>
+      <organizationUrl>https://www.sap.com</organizationUrl>
+    </developer>
+  </developers>
+  <dependencies>
+    <dependency>
+      <groupId>com.android.tools.build</groupId>
+      <artifactId>gradle</artifactId>
+      <version>3.5.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.atlassian.commonmark</groupId>
+      <artifactId>commonmark</artifactId>
+      <version>0.12.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sap.odata.core.framework.mobile</groupId>
+      <artifactId>xscript</artifactId>
+      <version>20.7.9</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sap.odata.core.framework.mobile</groupId>
+      <artifactId>xscript-compiler</artifactId>
+      <version>20.7.9</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sap.odata.core.framework.mobile</groupId>
+      <artifactId>xscript-proxy-compiler</artifactId>
+      <version>20.7.9</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OAuth2RedirectActivity - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.authentication</a>&nbsp;/&nbsp;<a href="./index.html">OAuth2RedirectActivity</a><br/>
+<br/>
+<h1>OAuth2RedirectActivity</h1>
+<a name="com.sap.cloud.mobile.foundation.authentication.OAuth2RedirectActivity"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OAuth2RedirectActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Activity</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.authentication.OAuth2RedirectActivity"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OAuth2RedirectActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Activity</span></code>
+<p>Used to signal the end of OAuth2 authorization. An application doesn't need to use this class directly, but this class needs to have a correct tag in AndroidManifest.xml. By default this activity is in the AndroidManifest.xml with a scheme that is the app ID. The scheme must match the scheme of the redirect URL that is part of the OAuth security settings for the application on the server. If a non-default scheme is required, add a tag like this to AndroidManifest.xml inside the application tag: <pre><code>&lt;activity
+          android:name="com.sap.cloud.mobile.foundation.authentication.OAuth2RedirectActivity"
+          tools:node="replace"&gt;
+      &lt;intent-filter&gt;
+          &lt;action android:name="android.intent.action.VIEW" /&gt;
+          &lt;category android:name="android.intent.category.DEFAULT" /&gt;
+          &lt;category android:name="android.intent.category.BROWSABLE" /&gt;
+          &lt;data android:scheme="customScheme"/&gt;
+      &lt;/intent-filter&gt;
+  &lt;/activity&gt;
+  
+  </code></pre> If an HTTPS redirect URI is required instead of a custom scheme, the same approach is used: <pre><code>&lt;activity
+          android:name="com.sap.cloud.mobile.foundation.authentication.OAuth2RedirectActivity"
+          tools:node="replace"&gt;
+      &lt;intent-filter&gt;
+          &lt;action android:name="android.intent.action.VIEW"/&gt;
+          &lt;category android:name="android.intent.category.DEFAULT"/&gt;
+          &lt;category android:name="android.intent.category.BROWSABLE"/&gt;
+          &lt;data android:scheme="https"
+                android:host="example.host.com"
+                android:path="/oauth2_redirect"/&gt;
+      &lt;/intent-filter&gt;
+  &lt;/activity&gt;
+  
+  </code></pre></p>
+</BODY>
+</HTML>

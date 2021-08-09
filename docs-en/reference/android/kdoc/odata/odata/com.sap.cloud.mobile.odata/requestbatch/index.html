@@ -1,0 +1,301 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RequestBatch - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">RequestBatch</a><br/>
+<br/>
+<h1>RequestBatch</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RequestBatch</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> batch request.</p>
+ See Also: 
+<p><code><a href="../changeset/index.html">com.sap.cloud.mobile.odata.ChangeSet</a></code>, <code><a href="../dataquery/index.html">com.sap.cloud.mobile.odata.DataQuery</a></code>, <code>DataService.processBatch</code>.</p>
+  Example using dynamic API:<pre><code>
+  public void processBatchExample() {
+      DataService service = this.getService();
+      EntitySet suppliersEntitySet = service.getEntitySet("Suppliers");
+      EntitySet productsEntitySet = service.getEntitySet("Products");
+      EntityType supplierEntityType = suppliersEntitySet.getEntityType();
+      Property companyNameProperty = supplierEntityType.getProperty("CompanyName");
+      EntityType productEntityType = productsEntitySet.getEntityType();
+      Property productNameProperty = productEntityType.getProperty("ProductName");
+      Property supplierProperty = productEntityType.getProperty("Supplier");
+      EntityValue supplier1 = service.executeQuery(new DataQuery()
+          .from(suppliersEntitySet).top(1))
+          .getRequiredEntity();
+      EntityValue supplier2 = supplier1.copyEntity();
+      EntityValue supplier3 = supplier1.copyEntity();
+      EntityValue supplier4 = supplier1.copyEntity();
+      companyNameProperty.setString(supplier2, "Alpha Inc.");
+      companyNameProperty.setString(supplier3, "Beta Inc.");
+      service.createEntity(supplier2);
+      service.createEntity(supplier3);
+      companyNameProperty.setString(supplier3, "Gamma Inc.");
+      EntityValue product1 = service.executeQuery(new DataQuery()
+          .from(productsEntitySet).top(1))
+          .getRequiredEntity();
+      EntityValue product2 = product1.copyEntity();
+      productNameProperty.setString(product2, "Delta Cake");
+      RequestBatch batch = new RequestBatch();
+      ChangeSet changes = new ChangeSet();
+      changes.createEntity(supplier4);
+      changes.updateEntity(supplier3);
+      changes.deleteEntity(supplier2);
+      changes.createEntity(product2);
+      changes.createLink(product2, supplierProperty, supplier4);
+      DataQuery query = new DataQuery().from(suppliersEntitySet);
+      batch.addChanges(changes);
+      batch.addQuery(query);
+      service.processBatch(batch);
+      EntityValueList suppliers = batch.getQueryResult(query).getEntityList();
+      Example.show("There are now ", Example.formatInt(suppliers.length()),
+          " suppliers.");
+  }
+  </code></pre> Example using proxy classes:<pre><code>
+  public void processBatchExample() {
+      NorthwindService service = this.getService();
+      Supplier supplier1 = service.getSupplier(new DataQuery().top(1));
+      Supplier supplier2 = supplier1.copy();
+      Supplier supplier3 = supplier1.copy();
+      Supplier supplier4 = supplier1.copy();
+      supplier2.setCompanyName("Alpha Inc.");
+      supplier3.setCompanyName("Beta Inc.");
+      service.createEntity(supplier2);
+      service.createEntity(supplier3);
+      supplier3.setCompanyName("Gamma Inc.");
+      Product product1 = service.getProduct(new DataQuery().top(1));
+      Product product2 = product1.copy();
+      product2.setProductName("Delta Cake");
+      RequestBatch batch = new RequestBatch();
+      ChangeSet changes = new ChangeSet();
+      changes.createEntity(supplier4);
+      changes.updateEntity(supplier3);
+      changes.deleteEntity(supplier2);
+      changes.createEntity(product2);
+      changes.createLink(product2, Product.supplier, supplier4);
+      changes.updateLink(product2, Product.supplier, supplier3);
+      changes.deleteLink(product2, Product.supplier, supplier3);
+      DataQuery query = new DataQuery()
+          .from(NorthwindServiceMetadata.EntitySets.suppliers);
+      batch.addChanges(changes);
+      batch.addQuery(query);
+      service.processBatch(batch);
+      List&lt;Supplier&gt; suppliers = Supplier.list(batch.getQueryResult(query)
+          .getEntityList());
+      Example.show("There are now ", Example.formatInt(suppliers.size()),
+          " suppliers.");
+  }
+  </code></pre>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">RequestBatch</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> batch request.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="addchanges.html">addChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addChanges</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addChanges(com.sap.cloud.mobile.odata.ChangeSet)/changes">changes</span><span class="symbol">:</span>&nbsp;<a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addChanges</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders)/changes">changes</span><span class="symbol">:</span>&nbsp;<a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See addChanges(ChangeSet, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addChanges</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/changes">changes</span><span class="symbol">:</span>&nbsp;<a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a change set to this request batch.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addquery.html">addQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addQuery(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See addQuery(DataQuery, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addQuery(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a data query to this request batch.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addqueryresult.html">addQueryResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addQueryResult</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addQueryResult(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.QueryResult)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$addQueryResult(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.QueryResult)/result">result</span><span class="symbol">:</span>&nbsp;<a href="../queryresult/index.html"><span class="identifier">QueryResult</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a query result to this request batch.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getchangeset.html">getChangeSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getChangeSet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$getChangeSet(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a></code>
+<p>Return the change set, if <code>isChangeSet(index)</code> is <code>true</code>; otherwise throws <code>undefined</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcontinueonerror.html">getContinueOnError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getContinueOnError</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should the server continue executing all requests in a batch if one or nmore of the requests returns an error status. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdataquery.html">getDataQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$getDataQuery(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Return the data query, if <code>isDataQuery(index)</code> is <code>true</code>; otherwise throws <code>undefined</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geterror.html">getError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getError</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataserviceexception/index.html"><span class="identifier">DataServiceException</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Error if <code>status</code> does not represent a successful response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getfunction.html">getFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFunction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$getFunction(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Return the DataQuery for the Function, if <code>isFunction(index)</code> is <code>true</code>; otherwise throws <code>undefined</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getheaders.html">getHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHeaders</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$getHeaders(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return the HTTP headers for the request at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoptions.html">getOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$getOptions(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a></code>
+<p>Return the request options for the request at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getqueryresult.html">getQueryResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQueryResult</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$getQueryResult(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryresult/index.html"><span class="identifier">QueryResult</span></a></code>
+<p>Return the result of a data query within this batch.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstatus.html">getStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStatus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return response status (e.g. HTTP status code 200 = OK).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="invokefunction.html">invokeFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invokeFunction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invokeFunction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invokeFunction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>See invokeFunction(DataMethod, ParameterList, HttpHeaders, RequestOptions).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invokeFunction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$invokeFunction(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add a function to the batch. If the method is not a function, throws an <code>undefined</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ischangeset.html">isChangeSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isChangeSet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$isChangeSet(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>index</code> is a valid request index, and the request at that index is a <code><a href="../changeset/index.html">com.sap.cloud.mobile.odata.ChangeSet</a></code>; otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isdataquery.html">isDataQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isDataQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$isDataQuery(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>index</code> is a valid request index, and the request at that index is a <code><a href="../dataquery/index.html">com.sap.cloud.mobile.odata.DataQuery</a></code>; otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isfunction.html">isFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isFunction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$isFunction(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>index</code> is a valid change index, and the request at that index is for a function</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcontinueonerror.html">setContinueOnError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setContinueOnError</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$setContinueOnError(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should the server continue executing all requests in a batch if one or nmore of the requests returns an error status. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="seterror.html">setError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setError</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$setError(com.sap.cloud.mobile.odata.DataServiceException)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../dataserviceexception/index.html"><span class="identifier">DataServiceException</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set error if <code>status</code> does not represent a successful response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstatus.html">setStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStatus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.RequestBatch$setStatus(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set response status (e.g. HTTP status code 200 = OK).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="size.html">size</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of requests in this request batch.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

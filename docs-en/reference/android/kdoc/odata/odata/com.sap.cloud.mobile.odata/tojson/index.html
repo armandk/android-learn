@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ToJSON - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ToJSON</a><br/>
+<br/>
+<h1>ToJSON</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ToJSON</span></code>
+<p>A utility class for formatting OData values as JSON strings.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ToJSON</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A utility class for formatting OData values as JSON strings.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="complex.html">complex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">complex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complex(com.sap.cloud.mobile.odata.ComplexValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See complex(ComplexValue, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">complex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complex(com.sap.cloud.mobile.odata.ComplexValue, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complex(com.sap.cloud.mobile.odata.ComplexValue, kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Format a complex value as a JSON string, including structural and navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="complexlist.html">complexList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">C</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">complexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.complexList.C)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="complexlist.html#C"><span class="identifier">C</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">C</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">complexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.complexList.C)), kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="complexlist.html#C"><span class="identifier">C</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.complexList.C)), kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Format a generic complex list as a JSON string.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">complexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(com.sap.cloud.mobile.odata.ComplexValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See complexList(ComplexValueList, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">complexList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(com.sap.cloud.mobile.odata.ComplexValueList, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$complexList(com.sap.cloud.mobile.odata.ComplexValueList, kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Format a complex list as a JSON string, including structural and navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datauri.html">dataURI</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">dataURI</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$dataURI(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert <code>value</code> to OData 4.0 JSON format, then convert to a <a href="https://en.wikipedia.org/wiki/Data_URI_scheme">data URI</a> with media type "application/json" and base64-encoded data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entity.html">entity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">entity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entity(com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See entity(EntityValue, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">entity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entity(com.sap.cloud.mobile.odata.EntityValue, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entity(com.sap.cloud.mobile.odata.EntityValue, kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Format an entity value as a JSON string, including structural and navigation properties. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitykey.html">entityKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">entityKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entityKey(com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See entityKey(EntityValue, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">entityKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entityKey(com.sap.cloud.mobile.odata.EntityValue, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entityKey(com.sap.cloud.mobile.odata.EntityValue, kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Format an entity value as a JSON string, including only key properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitylist.html">entityList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">entityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entityList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.entityList.E)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="entitylist.html#E"><span class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">entityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entityList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.entityList.E)), kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="entitylist.html#E"><span class="identifier">E</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entityList(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.ToJSON.entityList.E)), kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Format a generic entity list as a JSON string.</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">entityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entityList(com.sap.cloud.mobile.odata.EntityValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See entityList(EntityValueList, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">entityList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entityList(com.sap.cloud.mobile.odata.EntityValueList, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ToJSON$entityList(com.sap.cloud.mobile.odata.EntityValueList, kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Format an entity list as a JSON string, including structural and navigation properties.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

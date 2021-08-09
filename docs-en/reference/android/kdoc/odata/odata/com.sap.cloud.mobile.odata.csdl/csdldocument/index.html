@@ -1,0 +1,573 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsdlDocument - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.csdl</a>&nbsp;/&nbsp;<a href="./index.html">CsdlDocument</a><br/>
+<br/>
+<h1>CsdlDocument</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlDocument</span></code>
+<p>Encapsulates the definitions from a parsed Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>) document.</p>
+ See Also: 
+<p><code><a href="../csdlparser/index.html">com.sap.cloud.mobile.odata.csdl.CsdlParser</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CsdlDocument</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates the definitions from a parsed Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>) document.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="builtinvocabularynamespaces.html">builtinVocabularyNamespaces</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">builtinVocabularyNamespaces</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/stringmap/index.html"><span class="identifier">StringMap</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="addowner.html">addOwner</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addOwner</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$addOwner(kotlin.Any)/owner">owner</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Register <code>owner</code> as an owner of this metadata document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addvocabularyreference.html">addVocabularyReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addVocabularyReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$addVocabularyReference(kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addVocabularyReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$addVocabularyReference(kotlin.String, kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$addVocabularyReference(kotlin.String, kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See addVocabularyReference(String, String, String).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addVocabularyReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$addVocabularyReference(kotlin.String, kotlin.String, kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$addVocabularyReference(kotlin.String, kotlin.String, kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$addVocabularyReference(kotlin.String, kotlin.String, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a well-known vocabulary reference to this metadata. If this metadata already has a reference to the well-known vocabulary, then no change is made. If the reference is to one of the <code><a href="builtinvocabularynamespaces.html">CsdlDocument.builtinVocabularyNamespaces</a></code>, then all defined annotation terms/types from the vocabulary will also be added to the current metadata.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationterms.html">getAnnotationTerms</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationTerms</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/annotationtermmap/index.html"><span class="identifier">AnnotationTermMap</span></a></code>
+<p>Return map of annotation terms defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getbuiltintypes.html">getBuiltinTypes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBuiltinTypes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datatypemap/index.html"><span class="identifier">DataTypeMap</span></a></code>
+<p>Return map of predefined CSDL data types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcanchangeanything.html">getCanChangeAnything</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCanChangeAnything</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return allows any model element to be changed in the latest service metadata before calling <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Warning: enabling this option can result in application instability (depending on the changes) if the application uses proxy classes!</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcanremoveanything.html">getCanRemoveAnything</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCanRemoveAnything</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return allows any model element to be removed in the latest service metadata before calling <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Warning: enabling this option can result in application instability unless the application checks <code>isRemoved</code> flags on model elements!</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcomplextype.html">getComplexType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComplexType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getComplexType(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/complextype/index.html"><span class="identifier">ComplexType</span></a></code>
+<p>Lookup a complex type by qualified name. If the complex type does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up simplet types before calling this method like in the following code snippet: </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcomplextypes.html">getComplexTypes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComplexTypes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/complextypemap/index.html"><span class="identifier">ComplexTypeMap</span></a></code>
+<p>Return map of complex types defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatamethod.html">getDataMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getDataMethod(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datamethod/index.html"><span class="identifier">DataMethod</span></a></code>
+<p>Lookup a data method by qualified name (for function/action definitions) or by unqualified name (for function/action imports). If the data method does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up data methods before calling this method like in the following code snippet: </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatamethods.html">getDataMethods</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataMethods</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datamethodmap/index.html"><span class="identifier">DataMethodMap</span></a></code>
+<p>Return map of data methods (actions, functions) defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdataschema.html">getDataSchema</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataSchema</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getDataSchema(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/dataschema/index.html"><span class="identifier">DataSchema</span></a></code>
+<p>Lookup a data schema by name. If the data schema does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up data schemas before calling this method like in the following code snippet: </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdataschemas.html">getDataSchemas</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataSchemas</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/dataschemamap/index.html"><span class="identifier">DataSchemaMap</span></a></code>
+<p>Return map of data schemas defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdefaultcontainer.html">getDefaultContainer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDefaultContainer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entitycontainer/index.html"><span class="identifier">EntityContainer</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Default entity container defined by the CSDL (or <code>null</code> if there are no containers defined).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitycontainers.html">getEntityContainers</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityContainers</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entitycontainermap/index.html"><span class="identifier">EntityContainerMap</span></a></code>
+<p>Return map of entity containers defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentityset.html">getEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntitySet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getEntitySet(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityset/index.html"><span class="identifier">EntitySet</span></a></code>
+<p>Lookup an entity set (or singleton entity) by name. If the entity set does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up simplet types before calling this method like in the following code snippet: Note that OData singleton entities are represented by entity sets where <code><a href="../../com.sap.cloud.mobile.odata/entityset/issingleton.html">EntitySet.isSingleton</a></code> is <code>true</code>. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitysets.html">getEntitySets</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntitySets</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entitysetmap/index.html"><span class="identifier">EntitySetMap</span></a></code>
+<p>Return map of entity sets defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitytype.html">getEntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getEntityType(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entitytype/index.html"><span class="identifier">EntityType</span></a></code>
+<p>Lookup an entity type by qualified name. If the entity type does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up simplet types before calling this method like in the following code snippet: </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitytypes.html">getEntityTypes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityTypes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entitytypemap/index.html"><span class="identifier">EntityTypeMap</span></a></code>
+<p>Return map of entity types defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getenumtype.html">getEnumType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEnumType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getEnumType(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/enumtype/index.html"><span class="identifier">EnumType</span></a></code>
+<p>Lookup an enum type by qualified name. If the enum type does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up simplet types before calling this method like in the following code snippet: </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getenumtypes.html">getEnumTypes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEnumTypes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/enumtypemap/index.html"><span class="identifier">EnumTypeMap</span></a></code>
+<p>Return map of enum types defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlookupmethods.html">getLookupMethods</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLookupMethods</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datamethodmap/index.html"><span class="identifier">DataMethodMap</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlookupsets.html">getLookupSets</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLookupSets</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entitysetmap/index.html"><span class="identifier">EntitySetMap</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlookupsingletons.html">getLookupSingletons</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLookupSingletons</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entitysetmap/index.html"><span class="identifier">EntitySetMap</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmainschema.html">getMainSchema</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMainSchema</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/dataschema/index.html"><span class="identifier">DataSchema</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Main data schema defined by the CSDL (or <code>null</code> if there are no schemas defined).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoriginaltext.html">getOriginalText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOriginalText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Original CSDL (XML) text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getowners.html">getOwners</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOwners</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/objectlist/index.html"><span class="identifier">ObjectList</span></a></code>
+<p>Return all the current registered owners of this metadata document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpathannotations.html">getPathAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPathAnnotations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/pathannotationsmap/index.html"><span class="identifier">PathAnnotationsMap</span></a></code>
+<p>Return map of path annotations defined by the CSDL (where the <code>TargetPath</code> does not directly reference a model element).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getproxyversion.html">getProxyVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getProxyVersion</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) If this metadata was parsed by generated proxy classes, then the framework version that generated the proxies. Otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresolvedtext.html">getResolvedText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResolvedText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Resolved CSDL (XML) text, with inline references and expanded aliases.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsimpletype.html">getSimpleType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSimpleType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getSimpleType(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/simpletype/index.html"><span class="identifier">SimpleType</span></a></code>
+<p>Lookup a simple type by qualified name. If the simple type does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up simplet types before calling this method like in the following code snippet: </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsimpletypes.html">getSimpleTypes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSimpleTypes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/simpletypemap/index.html"><span class="identifier">SimpleTypeMap</span></a></code>
+<p>Return map of simple types defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsingleton.html">getSingleton</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSingleton</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$getSingleton(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityset/index.html"><span class="identifier">EntitySet</span></a></code>
+<p>Lookup a singleton entity by name. If the singleton entity does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up simplet types before calling this method like in the following code snippet: Note that OData singleton entities are represented by entity sets where <code><a href="../../com.sap.cloud.mobile.odata/entityset/issingleton.html">EntitySet.isSingleton</a></code> is <code>true</code>. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsingletons.html">getSingletons</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSingletons</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entitysetmap/index.html"><span class="identifier">EntitySetMap</span></a></code>
+<p>Return map of singletons defined by the CSDL. Each singleton is represented by an <code><a href="../../com.sap.cloud.mobile.odata/entityset/index.html">com.sap.cloud.mobile.odata.EntitySet</a></code> with <code>isSingleton == true</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsourcefile.html">getSourceFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceFile</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Source file name if known, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettopaliases.html">getTopAliases</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTopAliases</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/stringmap/index.html"><span class="identifier">StringMap</span></a></code>
+<p>Return top-level aliases defined by the CSDL. This is a map from schema namespace to schema alias.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettopreferences.html">getTopReferences</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTopReferences</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../csdlreferencelist/index.html"><span class="identifier">CsdlReferenceList</span></a></code>
+<p>Return top-level references defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettopschemas.html">getTopSchemas</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTopSchemas</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/dataschemalist/index.html"><span class="identifier">DataSchemaList</span></a></code>
+<p>Return top-level schemas defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getversioncode.html">getVersionCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getVersionCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return code for the OData version, e.g. 400. If the OData version is considered as a decimal number (e.g. 4.0), then multiplying by 100 will give the code (e.g. 400).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getversiontext.html">getVersionText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getVersionText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return text for the OData version, e.g. "4.0".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getxmlnamespaces.html">getXmlNamespaces</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getXmlNamespaces</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/stringmap/index.html"><span class="identifier">StringMap</span></a></code>
+<p>Return map of XML namespaces defined by the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasgeneratedproxies.html">hasGeneratedProxies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasGeneratedProxies</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this metadata is associated with generated proxy classes. Defaults to <code>false</code> (generated proxies will override to <code>true</code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasopenenumerations.html">hasOpenEnumerations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasOpenEnumerations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return allows addition of enumeration members in the latest service metadata before calling <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Warning: enabling this option can result in application instability if the application uses proxy classes without "-open:enumerations".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hastopreference.html">hasTopReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasTopReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$hasTopReference(kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this document includes a top-level reference for CSDL namespace <code>ns</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hastopschema.html">hasTopSchema</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasTopSchema</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$hasTopSchema(kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this document includes a top-level schema for CSDL namespace <code>ns</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removeowner.html">removeOwner</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeOwner</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$removeOwner(kotlin.Any)/owner">owner</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Unregister <code>owner</code> as an owner of this metadata document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resolveentity.html">resolveEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">resolveEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$resolveEntity(com.sap.cloud.mobile.odata.EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Resolve the <code>EntityValue.entitySet</code> of `entity' (if it is not already set).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcanchangeanything.html">setCanChangeAnything</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCanChangeAnything</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setCanChangeAnything(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set allows any model element to be changed in the latest service metadata before calling <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Warning: enabling this option can result in application instability (depending on the changes) if the application uses proxy classes!</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcanremoveanything.html">setCanRemoveAnything</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCanRemoveAnything</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setCanRemoveAnything(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set allows any model element to be removed in the latest service metadata before calling <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Warning: enabling this option can result in application instability unless the application checks <code>isRemoved</code> flags on model elements!</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdefaultcontainer.html">setDefaultContainer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDefaultContainer</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setDefaultContainer(com.sap.cloud.mobile.odata.EntityContainer)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/entitycontainer/index.html"><span class="identifier">EntityContainer</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set default entity container defined by the CSDL (or <code>null</code> if there are no containers defined).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setgeneratedproxies.html">setGeneratedProxies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setGeneratedProxies</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setGeneratedProxies(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this metadata is associated with generated proxy classes. Defaults to <code>false</code> (generated proxies will override to <code>true</code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmainschema.html">setMainSchema</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMainSchema</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setMainSchema(com.sap.cloud.mobile.odata.DataSchema)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/dataschema/index.html"><span class="identifier">DataSchema</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set main data schema defined by the CSDL (or <code>null</code> if there are no schemas defined).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setopenenumerations.html">setOpenEnumerations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOpenEnumerations</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setOpenEnumerations(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set allows addition of enumeration members in the latest service metadata before calling <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Warning: enabling this option can result in application instability if the application uses proxy classes without "-open:enumerations".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setoriginaltext.html">setOriginalText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOriginalText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setOriginalText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set original CSDL (XML) text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setproxyversion.html">setProxyVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setProxyVersion</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setProxyVersion(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if this metadata was parsed by generated proxy classes, then the framework version that generated the proxies. Otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresolvedtext.html">setResolvedText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResolvedText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setResolvedText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set resolved CSDL (XML) text, with inline references and expanded aliases.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsourcefile.html">setSourceFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceFile</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setSourceFile(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source file name if known, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setversioncode.html">setVersionCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setVersionCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setVersionCode(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set code for the OData version, e.g. 400. If the OData version is considered as a decimal number (e.g. 4.0), then multiplying by 100 will give the code (e.g. 400).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setversiontext.html">setVersionText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setVersionText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$setVersionText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set text for the OData version, e.g. "4.0".</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

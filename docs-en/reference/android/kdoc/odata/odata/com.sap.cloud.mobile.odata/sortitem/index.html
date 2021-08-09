@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SortItem - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">SortItem</a><br/>
+<br/>
+<h1>SortItem</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SortItem</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> sort item. A sort item indicates a property (or expression) that is used in the $orderby system query option.</p>
+ See Also: 
+<p><code><a href="../dataquery/getsortitems.html">DataQuery.sortItems</a></code>, <code><a href="../dataquery/orderby.html">DataQuery.orderBy</a></code>, <code><a href="../dataquery/thenby.html">DataQuery.thenBy</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SortItem</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> sort item. A sort item indicates a property (or expression) that is used in the $orderby system query option.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getorder.html">getOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOrder</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../sortorder/index.html"><span class="identifier">SortOrder</span></a></code>
+<p>Return sort order, which defaults to SortOrder.ascending.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpath.html">getPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Obsolete. Use <code><a href="getvalue.html">SortItem.value</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return an expression that, when evaluated, will be used for query result ordering.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="of.html">of</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.SortItem$of(com.sap.cloud.mobile.odata.QueryValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">SortItem</span></a></code>
+<p>Return a new sort item for the specified value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setorder.html">setOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOrder</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.SortItem$setOrder(com.sap.cloud.mobile.odata.SortOrder)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../sortorder/index.html"><span class="identifier">SortOrder</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set sort order, which defaults to SortOrder.ascending.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setvalue.html">setValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.SortItem$setValue(com.sap.cloud.mobile.odata.QueryValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set an expression that, when evaluated, will be used for query result ordering.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toproperty.html">toProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">?</span></code>
+<p>If this sort item directly references a property, then return the property. Otherwise return <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="torequiredproperty.html">toRequiredProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toRequiredProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a></code>
+<p>If this sort item references a simple property path, then return the property. Otherwise throw an exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string representation of this sort item.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GeoAtom - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.atom</a>&nbsp;/&nbsp;<a href="./index.html">GeoAtom</a><br/>
+<br/>
+<h1>GeoAtom</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">GeoAtom</span></code>
+<p>Functions for parsing and formatting of <a href="http://www.opengeospatial.org/standards/gml">GML</a> data values for the OData ATOM format.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">GeoAtom</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Functions for parsing and formatting of <a href="http://www.opengeospatial.org/standards/gml">GML</a> data values for the OData ATOM format.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="format.html">format</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">format</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.GeoAtom$format(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataValue)/geo">geo</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.GeoAtom$format(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Convert a geography/geometry value into GML representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.GeoAtom$parse(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType)/geo">geo</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.GeoAtom$parse(com.sap.cloud.mobile.odata.xml.XmlElement, com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Return a geography/geometry value parsed from GML representation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsetype.html">parseType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.GeoAtom$parseType(com.sap.cloud.mobile.odata.xml.XmlNode, com.sap.cloud.mobile.odata.DataType)/geoNode">geoNode</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlnode/index.html"><span class="identifier">XmlNode</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.atom.GeoAtom$parseType(com.sap.cloud.mobile.odata.xml.XmlNode, com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Tries to parse the type of the given XmlNode. (Maps it to a meaningful GeoAtom type).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

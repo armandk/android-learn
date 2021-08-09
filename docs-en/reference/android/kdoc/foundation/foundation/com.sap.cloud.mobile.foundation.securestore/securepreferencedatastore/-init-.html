@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecurePreferenceDataStore.<init> - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.securestore</a>&nbsp;/&nbsp;<a href="index.html">SecurePreferenceDataStore</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore$&lt;init&gt;(android.content.Context, kotlin.String, kotlin.ByteArray)"></a>
+<code><span class="identifier">SecurePreferenceDataStore</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore$<init>(android.content.Context, kotlin.String, kotlin.ByteArray)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore$<init>(android.content.Context, kotlin.String, kotlin.ByteArray)/storeName">storeName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore$<init>(android.content.Context, kotlin.String, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>Constructs a secure <code>PreferenceDataStore</code>.</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> Android application context</p>
+<p><a name="storeName"></a>
+<code>storeName</code> - <span class="identifier">String</span><span class="symbol">:</span> a non-empty name of the store that can only contain <code>-, _, a-z, A-Z, 0-9</code> and <code>.</code>.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> the key which is used to encrypt/decrypt the store. It is recommended to use <code>EncryptionUtil</code> to obtain the encryption key. If this is the first time store is being opened and <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens.</p>
+<h3>Exceptions</h3>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the store is not opened successfully due to incorrect encryption key or failed to generate the encryption.</p>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore$&lt;init&gt;(android.content.Context, kotlin.String, kotlin.ByteArray)"></a>
+<code><span class="identifier">SecurePreferenceDataStore</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore$<init>(android.content.Context, kotlin.String, kotlin.ByteArray)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore$<init>(android.content.Context, kotlin.String, kotlin.ByteArray)/storeName">storeName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.securestore.SecurePreferenceDataStore$<init>(android.content.Context, kotlin.String, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>Constructs a secure <code>PreferenceDataStore</code>.</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - <span class="identifier">Context</span><span class="symbol">:</span> Android application context</p>
+<p><a name="storeName"></a>
+<code>storeName</code> - <span class="identifier">String</span><span class="symbol">:</span> a non-empty name of the store that can only contain <code>-, _, a-z, A-Z, 0-9</code> and <code>.</code>.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">:</span> the key which is used to encrypt/decrypt the store. It is recommended to use <code>EncryptionUtil</code> to obtain the encryption key. If this is the first time store is being opened and <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens.</p>
+<h3>Exceptions</h3>
+<p><a name="OpenFailureException"></a>
+<code>OpenFailureException</code> - if the store is not opened successfully due to incorrect encryption key or failed to generate the encryption.</p>
+</BODY>
+</HTML>

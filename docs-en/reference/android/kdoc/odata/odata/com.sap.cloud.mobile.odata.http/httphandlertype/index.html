@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HttpHandlerType - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.http</a>&nbsp;/&nbsp;<a href="./index.html">HttpHandlerType</a><br/>
+<br/>
+<h1>HttpHandlerType</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpHandlerType</span></code>
+<p>HTTP handler types.</p>
+ See Also: 
+<p><code><a href="../httphandler/gettype.html">HttpHandler.type</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">HttpHandlerType</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>HTTP handler types.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="external_handler.html">EXTERNAL_HANDLER</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">EXTERNAL_HANDLER</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>An external handler replaces all external functionality of <code><a href="../httprequest/send.html">HttpRequest.send</a></code> and <code><a href="../httprequest/close.html">HttpRequest.close</a></code>, and is used in place of those functions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="internal_handler.html">INTERNAL_HANDLER</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">INTERNAL_HANDLER</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>An internal handler replaces the platform-specific internal functionality of <code><a href="../httprequest/send.html">HttpRequest.send</a></code> and <code><a href="../httprequest/close.html">HttpRequest.close</a></code>, and is called by those functions.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

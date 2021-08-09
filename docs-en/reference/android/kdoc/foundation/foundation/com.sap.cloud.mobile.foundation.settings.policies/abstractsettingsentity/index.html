@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AbstractSettingsEntity - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings.policies</a>&nbsp;/&nbsp;<a href="./index.html">AbstractSettingsEntity</a><br/>
+<br/>
+<h1>AbstractSettingsEntity</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractSettingsEntity</span></code>
+<p>Represents the base class for all setting entities.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AbstractSettingsEntity</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents the base class for all setting entities.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getkeypath.html">getKeyPath</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getKeyPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tojsonstring.html">toJsonString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toJsonString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../customsettingsentity/index.html">CustomSettingsEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CustomSettingsEntity</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractSettingsEntity</span></a></code>
+<p>Represents the parent class for custom settings entity. For each custom setting entity, it could
+be treated like a property in a JSON object, for example:</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../predefinedpolicy/index.html">PredefinedPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PredefinedPolicy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractSettingsEntity</span></a></code>
+<p>Represents the predefined policy entities, like usage, log, network, etc.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

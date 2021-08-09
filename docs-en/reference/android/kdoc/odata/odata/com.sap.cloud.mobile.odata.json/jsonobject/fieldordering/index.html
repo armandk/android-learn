@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonObject.FieldOrdering - odata</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">odata</a>&nbsp;/&nbsp;<a href="../../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="../index.html">JsonObject</a>&nbsp;/&nbsp;<a href="./index.html">FieldOrdering</a><br/>
+<br/>
+<h1>FieldOrdering</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">FieldOrdering</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a></code>
+<p>Comparer for JSON object field ordering.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">FieldOrdering</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Comparer for JSON object field ordering.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../../com.sap.cloud.mobile.odata.core/comparer/undefined.html">undefined</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">undefined</span><span class="symbol">: </span><a href="../../../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getpropertymap.html">getPropertyMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPropertyMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../../com.sap.cloud.mobile.odata/propertymap/index.html"><span class="identifier">PropertyMap</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Map of properties (metadata), useful if payload ordering constraints might require that knowledge. Initially an immutable map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpropertymap.html">setPropertyMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPropertyMap</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject.FieldOrdering$setPropertyMap(com.sap.cloud.mobile.odata.PropertyMap)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../../com.sap.cloud.mobile.odata/propertymap/index.html"><span class="identifier">PropertyMap</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set map of properties (metadata), useful if payload ordering constraints might require that knowledge. Initially an immutable map.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../../com.sap.cloud.mobile.odata.core/comparer/compare.html">compare</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">compare</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Comparer$compare(kotlin.Any, kotlin.Any)/left">left</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.Comparer$compare(kotlin.Any, kotlin.Any)/right">right</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Compare two values for sorting.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

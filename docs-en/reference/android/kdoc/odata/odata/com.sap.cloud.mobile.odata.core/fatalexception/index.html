@@ -1,0 +1,239 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FatalException - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">FatalException</a><br/>
+<br/>
+<h1>FatalException</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">FatalException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../exceptionbase/index.html"><span class="identifier">ExceptionBase</span></a></code>
+<p>Abstract base class for exceptions that cannot be caught (e.g. in Swift). Such exceptions are ordinarily used to indicate logic errors in code.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">FatalException</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.FatalException$<init>(kotlin.String, kotlin.Throwable)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.FatalException$<init>(kotlin.String, kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">?</span><span class="symbol">)</span></code><code><span class="identifier">FatalException</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Default constructor.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../exceptionbase/cause.html">cause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">cause</span><span class="symbol">: </span><span class="identifier">RuntimeException</span><span class="symbol">?</span></code>
+<p>Return (nullable) Root cause of this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../exceptionbase/message.html">message</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">message</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Message text for this exception.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../exceptionbase/setcause.html">setCause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCause</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ExceptionBase$setCause(java.lang.RuntimeException)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set root cause of this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../exceptionbase/setmessage.html">setMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ExceptionBase$setMessage(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set message text for this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../exceptionbase/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../assertexception/index.html">AssertException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AssertException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>An exception that is thrown when an assertion fails.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../binaryindexexception/index.html">BinaryIndexException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BinaryIndexException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when <code><a href="../binaryfunction/byteat.html">BinaryFunction.byteAt</a></code> is called with an out-of-bounds index.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../castexception/index.html">CastException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CastException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>An exception thrown when an attempt is made to type-cast an object to a type that the object is not a member of.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../emptylistexception/index.html">EmptyListException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EmptyListException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when a function requiring a non-empty list is invoked with an empty list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../formatexception/index.html">FormatException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FormatException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when a value cannot cannot be parsed because it does not match the expected format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../immutableexception/index.html">ImmutableException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ImmutableException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when a mutator function is invoked on an immutable object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../infinityexception/index.html">InfinityException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">InfinityException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when a numeric operation produces an infinite result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listindexexception/index.html">ListIndexException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ListIndexException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when a function requiring a list index encounters an index out of range.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../missingentryexception/index.html">MissingEntryException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MissingEntryException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when a required map entry is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../notimplementedexception/index.html">NotImplementedException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NotImplementedException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when the application attempts to access a function or property (getter/setter) that has not been implemented.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../notuniqueexception/index.html">NotUniqueException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NotUniqueException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when a function expecting a list of one item finds a list of zero or multiple items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../nullvalueexception/index.html">NullValueException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NullValueException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when the application attempts to access a property or function on a <code>null</code> value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../overflowexception/index.html">OverflowException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OverflowException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when a numeric operation overflows the range of the target type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../undefinedexception/index.html">UndefinedException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UndefinedException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception to be thrown when the application encounters an undefined state or undefined value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../unexpectedexception/index.html">UnexpectedException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnexpectedException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Wraps an unexpected exception as a fatal exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../usageexception/index.html">UsageException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UsageException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>Exception thrown when the application makes incorrect usage of an API.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../versionmismatchexception/index.html">VersionMismatchException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">VersionMismatchException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">FatalException</span></a></code>
+<p>An exception that is thrown when a version miamatch is detected.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

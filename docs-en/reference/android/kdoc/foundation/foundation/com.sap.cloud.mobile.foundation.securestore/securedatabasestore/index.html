@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecureDatabaseStore - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.securestore</a>&nbsp;/&nbsp;<a href="./index.html">SecureDatabaseStore</a><br/>
+<br/>
+<h1>SecureDatabaseStore</h1>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore"></a>
+<code><span class="keyword">class </span><span class="identifier">SecureDatabaseStore</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureDatabaseStore"></a>
+<code><span class="keyword">class </span><span class="identifier">SecureDatabaseStore</span></code>
+<p>Secure Database Store provides transparent 256-bit AES encryption of data stored in a <a href="https://www.sqlite.org/docs.html">SQLite</a> database. Creating To instantiate a SecureDatabaseStore, you need to specify the Android application context, database file name, database version, and provide an instance of <code><a href="../createdatabasecallback/index.html">CreateDatabaseCallback</a></code>, where the database table is created or updated. <pre><code>static final int DATABASE_VERSION = 1; // Increment this number when the table schema changes.
+     final String databaseName = "myDatabase";
+     final String schema =
+        "CREATE TABLE IF NOT EXISTS users "
+        + "(name TEXT, age INTEGER, email TEXT NOT NULL UNIQUE PRIMARY KEY)";
+
+     SecureDatabaseStore store = new SecureDatabaseStore(
+        context,
+        databaseName,
+        DATABASE_VERSION,
+        new CreateDatabaseCallback() {
+            public void onCreate(SecureDatabaseStore store) {
+                store.executeUpdate(schema); // Executes the CREATE TABLE statement
+            }
+
+            public void onUpgrade(SecureDatabaseStore store, int oldVersion, int newVersion) {
+                // Modify the existing table or migrate the original table data based on the
+                // differences across each version.
+                if (oldVersion &lt; 2) {
+                    ...
+                }
+                if (oldVersion &lt; 3) {
+                    ...
+                }
+                // Now the app will iterate over the update statements and run any that are needed.
+                // No matter what previous version was and regardless of what more recent version
+                // they upgrade to, the app will run the proper statements to take the app from the
+                // older schema to the properly upgraded one.
+            }
+        });
+  </code></pre> Opening You open the store with an encryption key before you can interact with it. It is recommended to use <code>EncryptionUtil</code> to obtain the encryption key. If this is the first time store is being opened and <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens. </p>
+<p>The store fails to open if there are insufficient resources or permissions to open and/or create the store or the encryption key provided by the caller is incorrect. </p>
+<pre><code>try {
+        byte[] myEncryptionKey = EncryptionUtil.getEncryptionKey("aliasForMyDatabase", myPasscode);
+        store.open(myEncryptionKey);
+        // Or use the auto-generated encryption key by passing null.
+        // store.open(null);
+    } catch (OpenFailureException ex) {
+        logger.error("An error occurred while opening the database.", ex);
+        // Some recovery here. For example, re-get the encryption key from the end user via UI...
+    } catch (EncryptionError ex) {
+	    logger.error("Failed to get encryption key.", ex);
+    }
+  </code></pre> Executing Updates Any SQL statement that is not a SELECT statement qualifies as an update, including CREATE, UPDATE, INSERT, ALTER, COMMIT, BEGIN, DETACH, DELETE, DROP, END, EXPLAIN, VACUUM, and REPLACE statements (and many more). Basically, if your SQL statement does not begin with SELECT, it is an update statement. 
+<p>Executing updates can throw errors if something fails: </p>
+<pre><code>// Inserts entries.
+     final String insertSQL = "INSERT INTO users (email, name, age) VALUES(?,?,?)";
+
+     try {
+        store.executeUpdate(insertSQL,     // INSERT statement with parameters '?'.
+            "john.smith@company.com",      // Email.
+            "John Smith",                  // Name.
+            39);                           // Age.
+
+        store.executeUpdate(insertSQL, "mary.clark@company.com", "Mary Clark", 21);
+     } catch (BackingStoreException ex) {
+        logger.error("Failed to insert.", ex);
+     }
+  </code></pre> Executing Queries A <code>SELECT</code> statement is a query and executes via one of the <code>executeQuery(...)</code> methods. Executing query returns a <code><a href="../securedatabaseresultset/index.html">SecureDatabaseResultSet</a></code> object if successful, and throws an error upon failure. 
+<p>You typically use a <code>while()</code> loop to iterate over the results of the query. You also need to step from one record to the next: </p>
+<pre><code>// Queries the database and iterates through the rows in the result set.
+    final String queryAllUsers = "SELECT * FROM users";
+
+    try (SecureDatabaseResultSet rs = store.executeQuery(queryAllUsers)) {
+        while (rs.next()) {
+            // Has a valid row, retrieves the column values with appropriate getter method.
+            int age = rs.getInt("age");
+            String name = rs.getString("name");
+            String email = rs.getString("email");
+            logger.debug("Retrieved user: age = {}, name = {}, email = {}", age, name, email);
+        }
+    } catch (BackingStoreException ex) {
+        logger.error("Failed to execute query.", ex);
+    }
+  </code></pre> You must always invoke <code><a href="../securedatabaseresultset/next.html">SecureDatabaseResultSet#next()</a></code> before attempting to access the values returned in a query, even if you are only expecting one row in the result set: <pre><code>int userCount = -1;
+
+     try (SecureDatabaseResultSet rs =  store.executeQuery("SELECT COUNT(*) AS count FROM users")) {
+        if (rs.next()) {
+            userCount = rs.getInt(0);
+            logger.debug("Number of users: {}", userCount);
+        }
+     } catch (BackingStoreException ex) {
+        logger.error("Failed to get user count.", ex);
+     }
+  </code></pre> SecureDatabaseResultSet A <code><a href="../securedatabaseresultset/index.html">SecureDatabaseResultSet</a></code> contains many methods for retrieving different data types in an appropriate format. 
+<p>SecureDatabaseResultSet needs to be closed. It will be closed automatically if you use a <strong>try-with</strong> block. Otherwise, you need to call <code><a href="../securedatabaseresultset/close.html">SecureDatabaseResultSet#close()</a></code> method explicitly. </p>
+Changing Encryption Key You can change the encryption of the underlying persistence store when the store is in open state. <pre><code>store.changeEncryptionKey(newEncryptionKey);
+
+  </code></pre> Closing Database When you finish executing queries and updates on the database, <code><a href="close.html">#close()</a></code> the SecureDatabaseStore to relinquishes any resources it has acquired during its operations. Multiple Statements and Batch Commands You can use <code><a href="executestatements.html">#executeStatements(String...)</a></code> to execute multiple SQL statements, those statements will be executed in a transaction internally, that is, if one or more of the SQL statements failed, the transaction will be rolled back and act like no statements are executed. <pre><code>try {
+        store.executeStatements(
+            "CREATE TABLE test1 (id INTEGER PRIMARY KEY AUTOINCREMENT, x TEXT)",
+            "CREATE TABLE test2 (id INTEGER PRIMARY KEY AUTOINCREMENT, y TEXT)",
+            "CREATE TABLE test3 (id INTEGER PRIMARY KEY AUTOINCREMENT, z TEXT)",
+            "INSERT INTO test1 (x) VALUES ('XXX')",
+            "INSERT INTO test2 (y) VALUES ('YYY')",
+            "INSERT INTO test3 (z) VALUES ('ZZZ')"
+        );
+     } catch (BackingStoreException | TransactionFailureException ex) {
+        logger.error("An error occurred while executing SQL statements on the database.", ex);
+     }
+  </code></pre> Data Sanitization When providing a SQL statement, use the standard <em>SQLite binding syntax</em>. Use placeholders '?' for values to be inserted, updated or used in WHERE clauses in SELECT statements. 
+<p><strong>Do not</strong> construct the SQL statement from variables like this: </p>
+<pre><code>String sql = "INSERT INTO myTable VALUES (" + value1 + ", " + value2 + ", " + value3 + ")";
+  </code></pre> 
+<p><strong>Instead</strong>, use the standard SQLite binding syntax like this: </p>
+<pre><code>String sql = "INSERT INTO myTable VALUES (?, ?, ?)";
+
+     try {
+        store.executeUpdate(sql, value1, value2, value3);
+     } catch (BackingStoreException ex) {
+        logger.error("An error occurred while executing a SQL statement.", ex);
+     }
+  </code></pre> 
+<p>The '?' character is recognized by SQLite as a placeholder for a value to be inserted. The execution methods all accept a representation of <em>varargs</em> (basically an array of arguments). </p>
+Removing the database You may want to remove the database in some occasions. Note that after the database is removed, any further operation performed on the instance will cause <code>FileMissingException</code>. <pre><code>store.deleteStore(context); // The database will not be usable after this method!
+ 
+  </code></pre>
+</BODY>
+</HTML>

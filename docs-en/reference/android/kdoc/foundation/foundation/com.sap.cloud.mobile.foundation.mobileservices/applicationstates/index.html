@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ApplicationStates - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.mobileservices</a>&nbsp;/&nbsp;<a href="./index.html">ApplicationStates</a><br/>
+<br/>
+<h1>ApplicationStates</h1>
+<code><span class="keyword">object </span><span class="identifier">ApplicationStates</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Observable</span></code>
+<p>Represents the state holder of the application. When the application state changes, the state
+change producer will notify this holder, then the state will be saved inside this, and notify
+the observers which are interested in the state changes. For example, if one service wants to
+do something when the application is brought to background, it can observe the <a href="../applicationstate/onfrontchange/index.html">ApplicationState.OnFrontChange</a>,
+and if the operation also depends on other state, for example, http client must be ready, it can
+query this state holder for that state.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="authenticated.html">authenticated</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">authenticated</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="httpclientready.html">httpClientReady</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">httpClientReady</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="isnetworkavailable.html">isNetworkAvailable</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">isNetworkAvailable</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="onfront.html">onFront</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">onFront</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="settingsparametersready.html">settingsParametersReady</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">settingsParametersReady</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="addstateobserver.html">addStateObserver</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addStateObserver</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.ApplicationStates$addStateObserver(java.util.Observer)/o">o</span><span class="symbol">:</span>&nbsp;<span class="identifier">Observer</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

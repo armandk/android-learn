@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Settings.delete - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings</a>&nbsp;/&nbsp;<a href="index.html">Settings</a>&nbsp;/&nbsp;<a href="./delete.html">delete</a><br/>
+<br/>
+<h1>delete</h1>
+<a name="com.sap.cloud.mobile.foundation.settings.Settings$delete(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/callbackListener">callbackListener</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Issues a request to the server to delete the key value specified by <code>settingKeyPath</code>. This function is equivalent to <code><a href="./delete.html">#delete(SettingTarget, String, CallbackListener)</a></code> is assumed to be <code><a href="settingtarget/index.html">SettingTarget#DEVICE</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="keyPath"></a>
+<code>keyPath</code> - <span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> is the slash(/) separated key values specifying the level where the value need to be set</p>
+<p><a name="callbackListener"></a>
+<code>callbackListener</code> - <a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">:</span> instance of <code><a href="callbacklistener/index.html">CallbackListener</a></code> to process result or handle error <pre><code><strong>Example Usage:</strong>
+                                                                                                      
+     
+                                                                                                      final Settings settings = new Settings(getOkHttpClientForSSL(), uri, null, null);
+                                                                                                      //You can use a specific path or use a constant provided in <a href="keypath/index.html">Settings.KeyPath</a>
+                                                                                                      settings.delete("path/to/location",
+                                                                                                          new Settings.CallbackListener()() {
+                                                                                                         @Override
+                                                                                                            public void onSuccess(JSONObject o) {
+                                                                                                            //Here goes the code for processing successful response...
+                                                                                                            }
+     
+                                                                                                             @Override
+                                                                                                            public void onError(Throwable result) {
+                                                                                                                //Handle error here...
+                                                                                                            }
+     
+                                                                                                      });
+                                                                                                      
+                                                                                                      </code></pre></p>
+<a name="com.sap.cloud.mobile.foundation.settings.Settings$delete(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/target">target</span><span class="symbol">:</span>&nbsp;<a href="settingtarget/index.html"><span class="identifier">Settings.SettingTarget</span></a><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/callbackListener">callbackListener</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Issues a delete request to the server to delete the key value specified by <code>settingKeyPath</code>.</p>
+<h3>Parameters</h3>
+<p><a name="target"></a>
+<code>target</code> - <a href="settingtarget/index.html"><span class="identifier">Settings.SettingTarget</span></a><span class="symbol">:</span> for the setting the targets values are as defined in <code><a href="settingtarget/index.html">SettingTarget</a></code></p>
+<p><a name="keyPath"></a>
+<code>keyPath</code> - <span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> is the slash(/) separated key values specifying the level where the value need to be set</p>
+<p><a name="callbackListener"></a>
+<code>callbackListener</code> - <a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">:</span> instance of <code><a href="callbacklistener/index.html">CallbackListener</a></code> to process result or handle error <pre><code><strong>Example Usage:</strong>
+                                                                                                      
+     
+                                                                                                      final Settings settings = new Settings(getOkHttpClientForSSL(), uri, null, null);
+                                                                                                      settings.delete(SettingTarget.APPLICATION, "path/to/location",
+                                                                                                        new Settings.CallbackListener()() {
+                                                                                                         @Override
+                                                                                                            public void onSuccess(JSONObject o) {
+                                                                                                            //Here goes the code for processing successful response...
+                                                                                                            }
+     
+                                                                                                             @Override
+                                                                                                            public void onError(Throwable result) {
+                                                                                                                //Handle error here...
+                                                                                                            }
+     
+                                                                                                      });
+                                                                                                      
+                                                                                                      </code></pre></p>
+<a name="com.sap.cloud.mobile.foundation.settings.Settings$delete(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/callbackListener">callbackListener</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Issues a request to the server to delete the key value specified by <code>settingKeyPath</code>. This function is equivalent to <code><a href="./delete.html">#delete(SettingTarget, String, CallbackListener)</a></code> is assumed to be <code><a href="settingtarget/index.html">SettingTarget#DEVICE</a></code>.</p>
+<h3>Parameters</h3>
+<p><a name="keyPath"></a>
+<code>keyPath</code> - <span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> is the slash(/) separated key values specifying the level where the value need to be set</p>
+<p><a name="callbackListener"></a>
+<code>callbackListener</code> - <a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">:</span> instance of <code><a href="callbacklistener/index.html">CallbackListener</a></code> to process result or handle error <pre><code><strong>Example Usage:</strong>
+                                                                                                      
+     
+                                                                                                      final Settings settings = new Settings(getOkHttpClientForSSL(), uri, null, null);
+                                                                                                      //You can use a specific path or use a constant provided in <a href="keypath/index.html">Settings.KeyPath</a>
+                                                                                                      settings.delete("path/to/location",
+                                                                                                          new Settings.CallbackListener()() {
+                                                                                                         @Override
+                                                                                                            public void onSuccess(JSONObject o) {
+                                                                                                            //Here goes the code for processing successful response...
+                                                                                                            }
+     
+                                                                                                             @Override
+                                                                                                            public void onError(Throwable result) {
+                                                                                                                //Handle error here...
+                                                                                                            }
+     
+                                                                                                      });
+                                                                                                      
+                                                                                                      </code></pre></p>
+<a name="com.sap.cloud.mobile.foundation.settings.Settings$delete(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/target">target</span><span class="symbol">:</span>&nbsp;<a href="settingtarget/index.html"><span class="identifier">Settings.SettingTarget</span></a><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.settings.Settings$delete(com.sap.cloud.mobile.foundation.settings.Settings.SettingTarget, kotlin.String, com.sap.cloud.mobile.foundation.settings.Settings.CallbackListener)/callbackListener">callbackListener</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Issues a delete request to the server to delete the key value specified by <code>settingKeyPath</code>.</p>
+<h3>Parameters</h3>
+<p><a name="target"></a>
+<code>target</code> - <a href="settingtarget/index.html"><span class="identifier">Settings.SettingTarget</span></a><span class="symbol">:</span> for the setting the targets values are as defined in <code><a href="settingtarget/index.html">SettingTarget</a></code></p>
+<p><a name="keyPath"></a>
+<code>keyPath</code> - <span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> is the slash(/) separated key values specifying the level where the value need to be set</p>
+<p><a name="callbackListener"></a>
+<code>callbackListener</code> - <a href="callbacklistener/index.html"><span class="identifier">Settings.CallbackListener</span></a><span class="symbol">:</span> instance of <code><a href="callbacklistener/index.html">CallbackListener</a></code> to process result or handle error <pre><code><strong>Example Usage:</strong>
+                                                                                                      
+     
+                                                                                                      final Settings settings = new Settings(getOkHttpClientForSSL(), uri, null, null);
+                                                                                                      settings.delete(SettingTarget.APPLICATION, "path/to/location",
+                                                                                                        new Settings.CallbackListener()() {
+                                                                                                         @Override
+                                                                                                            public void onSuccess(JSONObject o) {
+                                                                                                            //Here goes the code for processing successful response...
+                                                                                                            }
+     
+                                                                                                             @Override
+                                                                                                            public void onError(Throwable result) {
+                                                                                                                //Handle error here...
+                                                                                                            }
+     
+                                                                                                      });
+                                                                                                      
+                                                                                                      </code></pre></p>
+</BODY>
+</HTML>

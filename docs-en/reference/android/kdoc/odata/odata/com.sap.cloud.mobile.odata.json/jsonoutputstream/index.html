@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonOutputStream - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">JsonOutputStream</a><br/>
+<br/>
+<h1>JsonOutputStream</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">JsonOutputStream</span></code>
+<p>Abstract base class for JSON output streams.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">JsonOutputStream</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Abstract base class for JSON output streams.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Clear the output stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="length.html">length</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">length</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of characters written.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the output in JSON format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withbuffer.html">withBuffer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withBuffer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonOutputStream</span></a></code>
+<p>Return a new JSON output stream which writes to an in-memory buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writechar.html">writeChar</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">writeChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonOutputStream$writeChar(kotlin.Char)/c">c</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write a character to the stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writeelement.html">writeElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonOutputStream$writeElement(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write a JSON element (null, boolean, number, string, array, object) to the stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writestring.html">writeString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonOutputStream$writeString(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write the characters of a string to the stream, with surrounding quotes and escape sequences (as appropriate).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writeverbatim.html">writeVerbatim</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeVerbatim</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonOutputStream$writeVerbatim(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write the characters of a string to the stream, without surrounding quotes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

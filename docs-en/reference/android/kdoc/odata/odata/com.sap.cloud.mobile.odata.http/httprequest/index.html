@@ -1,0 +1,741 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HttpRequest - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.http</a>&nbsp;/&nbsp;<a href="./index.html">HttpRequest</a><br/>
+<br/>
+<h1>HttpRequest</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpRequest</span></code>
+<p>A cross-platform HTTP API modeled after <a href="http://en.wikipedia.org/wiki/XMLHttpRequest">XMLHttpRequest</a>. Supports streaming of request and response content. </p>
+Example:<pre><code>
+  public void classExample() {
+      com.sap.cloud.mobile.odata.http.HttpRequest request = new com.sap.cloud.mobile.odata.http.HttpRequest();
+      request.open(com.sap.cloud.mobile.odata.http.HttpMethod.GET, "http://google.com");
+      request.send();
+      String text = request.getResponseText();
+      request.close();
+      Example.show("google.com home page text: ", text);
+  }
+  </code></pre>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">HttpRequest</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Close this HTTP request, and any response stream that may have been opened by <code><a href="send.html">HttpRequest.send</a></code>. If an application calls <code><a href="send.html">HttpRequest.send</a></code>, then it must also call this function to avoid resource leaks.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enabletrace.html">enableTrace</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enableTrace</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$enableTrace(kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/serviceName">serviceName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$enableTrace(kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/traceRequest">traceRequest</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$enableTrace(kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/traceHeaders">traceHeaders</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$enableTrace(kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/traceContent">traceContent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$enableTrace(kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/prettyPrint">prettyPrint</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Enable HTTP request tracing. Call this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcompressrequest.html">getCompressRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCompressRequest</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return set to <code>true</code> before calling <code><a href="send.html">HttpRequest.send</a></code> if the caller should compress the request content (using "gzip" encoding). False by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcompressresponse.html">getCompressResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCompressResponse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return set to <code>false</code> before calling <code><a href="send.html">HttpRequest.send</a></code> if the server should compress the response content (using "gzip" encoding). True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethandler.html">getHandler</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHandler</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../httphandler/index.html"><span class="identifier">HttpHandler</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The optional internal handler for this request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmethod.html">getMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMethod</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the HTTP method for this request. Set this using the <code><a href="open.html">HttpRequest.open</a></code> function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpassword.html">getPassword</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPassword</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The password for this request. Set this using the <code><a href="login.html">HttpRequest.login</a></code> function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprettyprint.html">getPrettyPrint</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrettyPrint</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this request enabled for pretty-printed tracing?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestbytes.html">getRequestBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Request data stream. Set this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestchars.html">getRequestChars</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestChars</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Request text stream. Set this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestcookie.html">getRequestCookie</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestCookie</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$getRequestCookie(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Get a request cookie value. For use by servers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestcookies.html">getRequestCookies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestCookies</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../httpcookies/index.html"><span class="identifier">HttpCookies</span></a></code>
+<p>Return HTTP request cookies. Set request cookies before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestdata.html">getRequestData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestData</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code>
+<p>Return (nullable) Request data for a non-streamed request. Set this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestheader.html">getRequestHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestHeader</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$getRequestHeader(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Get a request header value. For use by servers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestheaders.html">getRequestHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestHeaders</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../httpheaders/index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return HTTP request headers. Set request headers before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestoptions.html">getRequestOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestOptions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/requestoptions/index.html"><span class="identifier">RequestOptions</span></a></code>
+<p>Return caller's request options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequesttext.html">getRequestText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Request text for a non-streamed request. Set this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponsebytes.html">getResponseBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Return response data stream. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponsechars.html">getResponseChars</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseChars</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code>
+<p>Return response text stream. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponsecookie.html">getResponseCookie</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseCookie</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$getResponseCookie(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Get a response cookie value. Call this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponsecookies.html">getResponseCookies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseCookies</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../httpcookies/index.html"><span class="identifier">HttpCookies</span></a></code>
+<p>Return HTTP response cookies. Access response cookies after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponsedata.html">getResponseData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseData</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Return response data for a non-streamed response. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponsedatacount.html">getResponseDataCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseDataCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return response data counter. Counts received content data length in bytes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponsegzipcount.html">getResponseGzipCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseGzipCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return response gzip counter. Counts received content gzip length in bytes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponseheader.html">getResponseHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseHeader</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$getResponseHeader(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Get a response header value. Call this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponseheaders.html">getResponseHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseHeaders</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../httpheaders/index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return HTTP response headers. Access response headers after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresponsetext.html">getResponseText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponseText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return response text for a non-streamed response. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstatus.html">getStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStatus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return HTTP response status code. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstatustext.html">getStatusText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStatusText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return HTTP response status text. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstreamrequest.html">getStreamRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStreamRequest</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return set to <code>false</code> before calling <code><a href="send.html">HttpRequest.send</a></code> if the caller does not wish to stream the request content. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstreamresponse.html">getStreamResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStreamResponse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return set to <code>false</code> before calling <code><a href="send.html">HttpRequest.send</a></code> if the caller does not wish to stream the response content. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettracecontent.html">getTraceContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTraceContent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this request enabled for tracing of request/response content?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettraceheaders.html">getTraceHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTraceHeaders</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this request enabled for tracing of request/response headers?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettracerequest.html">getTraceRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTraceRequest</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this request enabled for request/response tracing?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getunzipresponse.html">getUnzipResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUnzipResponse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does response need to be unzipped? Should be set by <code><a href="../httphandler/index.html">com.sap.cloud.mobile.odata.http.HttpHandler</a></code> subclasses.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geturl.html">getUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the URL for this request. Set this using the <code><a href="open.html">HttpRequest.open</a></code> function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getusername.html">getUsername</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUsername</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The username for this request. Set this using the <code><a href="login.html">HttpRequest.login</a></code> function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getversion.html">getVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getVersion</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the HTTP version for this request. Defaults to HTTP 1.1.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasresponsebytes.html">hasResponseBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasResponseBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does this request have a byte stream response already set?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasresponsechars.html">hasResponseChars</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasResponseChars</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does this request have a text stream response already set?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasresponsedata.html">hasResponseData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasResponseData</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does this request have a binary (data) response already set?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasresponsetext.html">hasResponseText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasResponseText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does this request have a string (text) response already set?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isactive.html">isActive</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isActive</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is a connection active (<code><a href="send.html">HttpRequest.send</a></code> was called, but <code><a href="close.html">HttpRequest.close</a></code> has not yet been called)?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="login.html">login</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">login</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$login(kotlin.String, kotlin.String)/username">username</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$login(kotlin.String, kotlin.String)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Specify the HTTP basic credentials. Call this before calling <code><a href="send.html">HttpRequest.send</a></code> if the server requires HTTP basic authentication.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="open.html">open</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">open</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$open(kotlin.String, kotlin.String)/method">method</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$open(kotlin.String, kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Specify the HTTP <code><a href="getmethod.html">HttpRequest.method</a></code> and <code><a href="geturl.html">HttpRequest.url</a></code>. Call this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="send.html">send</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">send</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Send this HTTP request to the server, and wait for a response. If <code><a href="getstreamresponse.html">HttpRequest.streamResponse</a></code> is <code>true</code>, then waiting is only until response headers come back, and response content may be streamed as it is accessed. If an application calls this function, then it must also call <code><a href="close.html">HttpRequest.close</a></code> after accessing all desired response content, to avoid resource leaks.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setactive.html">setActive</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setActive</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setActive(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is a connection active (<code><a href="send.html">HttpRequest.send</a></code> was called, but <code><a href="close.html">HttpRequest.close</a></code> has not yet been called)?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcompressrequest.html">setCompressRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCompressRequest</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setCompressRequest(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set set to <code>true</code> before calling <code><a href="send.html">HttpRequest.send</a></code> if the caller should compress the request content (using "gzip" encoding). False by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcompressresponse.html">setCompressResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCompressResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setCompressResponse(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set set to <code>false</code> before calling <code><a href="send.html">HttpRequest.send</a></code> if the server should compress the response content (using "gzip" encoding). True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sethandler.html">setHandler</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHandler</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setHandler(com.sap.cloud.mobile.odata.http.HttpHandler)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../httphandler/index.html"><span class="identifier">HttpHandler</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the optional internal handler for this request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinputstream.html">setInputStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInputStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setInputStream(java.io.InputStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="setmethod.html">setMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setMethod(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the HTTP method for this request. Set this using the <code><a href="open.html">HttpRequest.open</a></code> function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpassword.html">setPassword</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPassword</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setPassword(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the password for this request. Set this using the <code><a href="login.html">HttpRequest.login</a></code> function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestbytes.html">setRequestBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestBytes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestBytes(com.sap.cloud.mobile.odata.ByteStream)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set request data stream. Set this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestchars.html">setRequestChars</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestChars</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestChars(com.sap.cloud.mobile.odata.CharStream)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set request text stream. Set this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestcookie.html">setRequestCookie</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestCookie</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestCookie(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestCookie(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a request cookie. Call this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestcookies.html">setRequestCookies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestCookies</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestCookies(com.sap.cloud.mobile.odata.http.HttpCookies)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../httpcookies/index.html"><span class="identifier">HttpCookies</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set HTTP request cookies. Set request cookies before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestdata.html">setRequestData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestData</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestData(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set request data for a non-streamed request. Set this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestheader.html">setRequestHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestHeader</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestHeader(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestHeader(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a request header. Call this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestheaders.html">setRequestHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestHeaders</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestHeaders(com.sap.cloud.mobile.odata.http.HttpHeaders)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set HTTP request headers. Set request headers before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestoptions.html">setRequestOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestOptions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestOptions(com.sap.cloud.mobile.odata.RequestOptions)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set caller's request options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequesttext.html">setRequestText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setRequestText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set request text for a non-streamed request. Set this before calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponsebytes.html">setResponseBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponseBytes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseBytes(com.sap.cloud.mobile.odata.ByteStream)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set response data stream. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponsechars.html">setResponseChars</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponseChars</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseChars(com.sap.cloud.mobile.odata.CharStream)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set response text stream. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponsecookie.html">setResponseCookie</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponseCookie</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseCookie(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseCookie(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a response cookie. For use by servers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponsecookies.html">setResponseCookies</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponseCookies</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseCookies(com.sap.cloud.mobile.odata.http.HttpCookies)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../httpcookies/index.html"><span class="identifier">HttpCookies</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set HTTP response cookies. Access response cookies after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponsedata.html">setResponseData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponseData</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseData(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set response data for a non-streamed response. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponseheader.html">setResponseHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponseHeader</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseHeader(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseHeader(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a response header. For use by servers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponseheaders.html">setResponseHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponseHeaders</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseHeaders(com.sap.cloud.mobile.odata.http.HttpHeaders)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set HTTP response headers. Access response headers after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponsetext.html">setResponseText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponseText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setResponseText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set response text for a non-streamed response. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstatus.html">setStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStatus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setStatus(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set HTTP response status code. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstatustext.html">setStatusText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStatusText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setStatusText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set HTTP response status text. Access this after calling <code><a href="send.html">HttpRequest.send</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstreamrequest.html">setStreamRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStreamRequest</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setStreamRequest(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set set to <code>false</code> before calling <code><a href="send.html">HttpRequest.send</a></code> if the caller does not wish to stream the request content. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstreamresponse.html">setStreamResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStreamResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setStreamResponse(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set set to <code>false</code> before calling <code><a href="send.html">HttpRequest.send</a></code> if the caller does not wish to stream the response content. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setunzipresponse.html">setUnzipResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUnzipResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setUnzipResponse(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does response need to be unzipped? Should be set by <code><a href="../httphandler/index.html">com.sap.cloud.mobile.odata.http.HttpHandler</a></code> subclasses.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="seturl.html">setUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUrl</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setUrl(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the URL for this request. Set this using the <code><a href="open.html">HttpRequest.open</a></code> function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setusername.html">setUsername</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUsername</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setUsername(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the username for this request. Set this using the <code><a href="login.html">HttpRequest.login</a></code> function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setversion.html">setVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setVersion</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpRequest$setVersion(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the HTTP version for this request. Defaults to HTTP 1.1.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

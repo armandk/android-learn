@@ -1,0 +1,288 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryOperator - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">QueryOperator</a><br/>
+<br/>
+<h1>QueryOperator</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryOperator</span></code>
+<p>Represents a <a href="http://odata.org">OData</a> query operator. Query operators are typically used within <code><a href="../dataquery/filter.html">DataQuery.filter</a></code>. <code><a href="../queryoperatorcall/index.html">com.sap.cloud.mobile.odata.QueryOperatorCall</a></code> can be constructed using static calls on <code><a href="./index.html">com.sap.cloud.mobile.odata.QueryOperator</a></code> or, more conveniently, by chained calls on <code><a href="../queryvalue/index.html">com.sap.cloud.mobile.odata.QueryValue</a></code>. </p>
+Example using proxy classes (with QueryOperator static calls):<pre><code>
+  public void queryOperatorExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .filter(QueryOperator.greaterEqual(QueryOperator.multiply(OrderDetail.quantity,
+              OrderDetail.unitPrice),
+              DecimalValue.of(DecimalFunction.fromInt(1000))));
+      List&lt;OrderDetail&gt; details = service.getOrderDetails(query);
+      this.showDetails(details);
+  }
+  </code></pre> Example using proxy classes (with QueryValue chained calls):<pre><code>
+  public void queryValueOperatorExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .filter(OrderDetail.quantity.multiply(OrderDetail.unitPrice)
+              .greaterEqual(NorthwindProxyClient.DECIMAL_POSITIVE_1000));
+      List&lt;OrderDetail&gt; details = service.getOrderDetails(query);
+      this.showDetails(details);
+  }
+  </code></pre>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">QueryOperator</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents a <a href="http://odata.org">OData</a> query operator. Query operators are typically used within <code><a href="../dataquery/filter.html">DataQuery.filter</a></code>. <code><a href="../queryoperatorcall/index.html">com.sap.cloud.mobile.odata.QueryOperatorCall</a></code> can be constructed using static calls on <code><a href="./index.html">com.sap.cloud.mobile.odata.QueryOperator</a></code> or, more conveniently, by chained calls on <code><a href="../queryvalue/index.html">com.sap.cloud.mobile.odata.QueryValue</a></code>. </p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="operatormap.html">operatorMap</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">operatorMap</span><span class="symbol">: </span><a href="../queryoperatormap/index.html"><span class="identifier">QueryOperatorMap</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$add(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$add(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'add' arithmetic operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="all.html">all</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">all</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$all(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$all(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/lambda">lambda</span><span class="symbol">:</span>&nbsp;<a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$all(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/match">match</span><span class="symbol">:</span>&nbsp;<a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'all' lambda operator. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="and.html">and</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">and</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$and(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$and(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'and' logical operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="any.html">any</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">any</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$any(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$any(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/lambda">lambda</span><span class="symbol">:</span>&nbsp;<a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$any(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/match">match</span><span class="symbol">:</span>&nbsp;<a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'any' lambda operator. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="divide.html">divide</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$divide(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$divide(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'div' arithmetic operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$equal(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$equal(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'eq' logical operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="forcode.html">forCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">forCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$forCode(kotlin.Int)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">QueryOperator</span></a></code>
+<p>Lookup a query operator by code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="forname.html">forName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">forName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$forName(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">QueryOperator</span></a></code>
+<p>Lookup a query operator by code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getarity.html">getArity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getArity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return operator arity (number of arguments).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcode.html">getCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return operator code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return operator name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpriority.html">getPriority</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPriority</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return operator priority.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="greaterequal.html">greaterEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$greaterEqual(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$greaterEqual(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'ge' logical operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="greaterthan.html">greaterThan</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$greaterThan(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$greaterThan(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'gt' logical operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="has.html">has</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">has</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$has(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.EnumValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$has(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.EnumValue)/flags">flags</span><span class="symbol">:</span>&nbsp;<a href="../enumvalue/index.html"><span class="identifier">EnumValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'has' operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lessequal.html">lessEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$lessEqual(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$lessEqual(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'le' logical operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lessthan.html">lessThan</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$lessThan(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$lessThan(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'lt' logical operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="modulo.html">modulo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">modulo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$modulo(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$modulo(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'mod' arithmetic operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="multiply.html">multiply</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$multiply(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$multiply(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'mul' arithmetic operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="negate.html">negate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">negate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$negate(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData '-' arithmetic operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="not.html">not</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">not</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$not(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'not' logical operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="notequal.html">notEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$notEqual(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$notEqual(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'ne' logical operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="or.html">or</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">or</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$or(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$or(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'or' logical operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="subtract.html">subtract</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$subtract(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryOperator$subtract(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'sub' arithmetic operator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

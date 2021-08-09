@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Javadoc API documentation for SAP OData Library for Android." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
+<title>
+
+  CsdlOption
+
+
+| SAP OData Library for Android
+
+</title>
+<link href="../../../../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../../../", "../../../../../../../assets/");
+</script>
+<script src="../../../../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">SAP OData Library for Android</span>
+    
+    </div>
+    <div id="headerRight">
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../../../../../../packages.html"  >Package Index</a> | 
+                <a href="../../../../../../classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/odata/package-summary.html">com.sap.cloud.mobile.odata</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/odata/core/package-summary.html">com.sap.cloud.mobile.odata.core</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/odata/csdl/package-summary.html">com.sap.cloud.mobile.odata.csdl</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/odata/http/package-summary.html">com.sap.cloud.mobile.odata.http</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlDocument.html">CsdlDocument</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html">CsdlOption</a></li>
+      </ul>
+    </li>
+              
+              
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../../../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../../../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+
+Summary:
+
+
+
+
+
+  <a href="#constants">Constants</a>
+  
+
+
+
+
+
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
+
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    abstract
+    class
+<h1>CsdlOption</h1>
+
+
+
+  
+    extends Object<br/>
+  
+  
+  
+
+  
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+         	
+        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="1" class="jd-inheritance-class-cell">com.sap.cloud.mobile.odata.csdl.CsdlOption</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p><p>Bitmask flags for com.sap.cloud.mobile.odata.csdl.CsdlParser#getCsdlOptions CsdlParser.csdlOptions.
+</p>
+
+
+
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="constants" class="jd-sumtable"><tr><th colspan="12">Constants</th></tr>
+
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#ALLOW_CASE_CONFLICTS">ALLOW_CASE_CONFLICTS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to allow model elements with names differing only in case.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#DEFAULT_VARIABLE_SCALE">DEFAULT_VARIABLE_SCALE</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to default unspecified scale to &quot;variable&quot; rather than &quot;0&quot;.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#DEFAULT_VARIABLE_SRID">DEFAULT_VARIABLE_SRID</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to default unspecified scale to &quot;variable&quot; rather than &quot;0&quot;.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#DISABLE_FACET_WARNINGS">DISABLE_FACET_WARNINGS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to disallow warnings about questionable values for type facets, such as unspecified scale.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#DISABLE_LOGGING_OF_ERRORS">DISABLE_LOGGING_OF_ERRORS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Disable logging of parsing errors.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#DISABLE_LOGGING_OF_WARNINGS">DISABLE_LOGGING_OF_WARNINGS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Disable logging of parsing warnings.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#DISABLE_NAME_VALIDATION">DISABLE_NAME_VALIDATION</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to skip validation of element names.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#EXCLUDE_SERVER_ONLY_ELEMENTS">EXCLUDE_SERVER_ONLY_ELEMENTS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Skip server-only elements in the csdl xml to be parsed and added to CsdlDocument.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#FAIL_IF_PROVIDER_INCOMPATIBLE">FAIL_IF_PROVIDER_INCOMPATIBLE</a></td>
+        <td class="jd-descrcol" width="100%"><p>Enable errors for incompatibility with DataServiceProvider implementation (e.g.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#IGNORE_ALL_ANNOTATIONS">IGNORE_ALL_ANNOTATIONS</a></td>
+        <td class="jd-descrcol" width="100%"><p>A combination of <code>IGNORE_EDM_ANNOTATIONS</code> and <code>IGNORE_XML_ANNOTATIONS</code>.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#IGNORE_ALL_REFERENCES">IGNORE_ALL_REFERENCES</a></td>
+        <td class="jd-descrcol" width="100%"><p>A combination of <code>IGNORE_EXTERNAL_REFERENCES</code>, <code>IGNORE_INTERNAL_REFERENCES</code>, and <code>IGNORE_STANDARD_REFERENCES</code>.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#IGNORE_EDM_ANNOTATIONS">IGNORE_EDM_ANNOTATIONS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to ignore EDM annotations (OData V4+ annotations).</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#IGNORE_EXTERNAL_REFERENCES">IGNORE_EXTERNAL_REFERENCES</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to ignore Edmx Reference elements which have a non-standard Uri (e.g.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#IGNORE_INTERNAL_REFERENCES">IGNORE_INTERNAL_REFERENCES</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to ignore Edmx Reference elements which have a non-standard Uri (e.g.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#IGNORE_STANDARD_REFERENCES">IGNORE_STANDARD_REFERENCES</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to ignore Edmx Reference elements which have a standard Uri (e.g.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#IGNORE_UNDEFINED_TERMS">IGNORE_UNDEFINED_TERMS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to ignore annotations using undefined terms.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#IGNORE_XML_ANNOTATIONS">IGNORE_XML_ANNOTATIONS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to ignore XML annotations (custom XML attributes).</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#LOG_WITH_UNQUALIFIED_FILE_NAMES">LOG_WITH_UNQUALIFIED_FILE_NAMES</a></td>
+        <td class="jd-descrcol" width="100%"><p>Use unqualified file names (without directory path) in logged error/warning messages.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#PROCESS_MIXED_VERSIONS">PROCESS_MIXED_VERSIONS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to process elements from multiple OData versions.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#RESOLVE_UNDEFINED_TERMS">RESOLVE_UNDEFINED_TERMS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to resolve annotations using undefined terms.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#RETAIN_ORIGINAL_TEXT">RETAIN_ORIGINAL_TEXT</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to retain the original CSDL (XML) text in <code><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlDocument.html#getOriginalText()">CsdlDocument.originalText</a></code>.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#RETAIN_RESOLVED_TEXT">RETAIN_RESOLVED_TEXT</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to retain the resolved CSDL (XML) text in <code><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlDocument.html#getResolvedText()">CsdlDocument.resolvedText</a></code>.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#STRICT_FACET_WARNINGS">STRICT_FACET_WARNINGS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to enable the strictest possible warnings about questionable values for type facets, such as unspecified nullability.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#TRACE_PARSING_OF_ELEMENTS">TRACE_PARSING_OF_ELEMENTS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to trace elements encountered during parsing.</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#WARN_ABOUT_UNDEFINED_TERMS">WARN_ABOUT_UNDEFINED_TERMS</a></td>
+        <td class="jd-descrcol" width="100%"><p>Set this option to force the parser to ignore annotations using undefined terms, but log a warning message.</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#WARN_IF_PROVIDER_INCOMPATIBLE">WARN_IF_PROVIDER_INCOMPATIBLE</a></td>
+        <td class="jd-descrcol" width="100%"><p>Enable warnings for incompatibility with DataServiceProvider implementation (e.g.</td>
+    </tr>
+    
+    
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlOption.html#CsdlOption()">CsdlOption</a></span>()
+        
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  java.lang.Object
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            Object
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">clone</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">equals</span>(Object arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">finalize</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            Class&lt;?&gt;
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getClass</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hashCode</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notify</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notifyAll</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">toString</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>()
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- ========= ENUM CONSTANTS DETAIL ======== -->
+<h2>Constants</h2>
+
+
+
+
+<a id="ALLOW_CASE_CONFLICTS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        ALLOW_CASE_CONFLICTS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to allow model elements with names differing only in case.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                8192
+                (0x00002000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="DEFAULT_VARIABLE_SCALE"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        DEFAULT_VARIABLE_SCALE
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to default unspecified scale to &quot;variable&quot; rather than &quot;0&quot;.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                32768
+                (0x00008000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="DEFAULT_VARIABLE_SRID"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        DEFAULT_VARIABLE_SRID
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to default unspecified scale to &quot;variable&quot; rather than &quot;0&quot;.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                65536
+                (0x00010000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="DISABLE_FACET_WARNINGS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        DISABLE_FACET_WARNINGS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to disallow warnings about questionable values for type facets, such as unspecified scale.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                131072
+                (0x00020000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="DISABLE_LOGGING_OF_ERRORS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        DISABLE_LOGGING_OF_ERRORS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Disable logging of parsing errors.
+ Parsing errors will still be thrown as exceptions even if disabled for logging.</p>
+ <dl><dt><span class='strong'>See Also:</span></dt><dd>
+ <p>com.sap.cloud.mobile.odata.csdl.CsdlParser#getLogErrors CsdlParser.logErrors.</p>
+ </dd></dl>
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                524288
+                (0x00080000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="DISABLE_LOGGING_OF_WARNINGS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        DISABLE_LOGGING_OF_WARNINGS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Disable logging of parsing warnings.</p>
+ <dl><dt><span class='strong'>See Also:</span></dt><dd>
+ <p>com.sap.cloud.mobile.odata.csdl.CsdlParser#getLogWarnings CsdlParser.logWarnings.</p>
+ </dd></dl>
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                1048576
+                (0x00100000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="DISABLE_NAME_VALIDATION"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        DISABLE_NAME_VALIDATION
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to skip validation of element names.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                4096
+                (0x00001000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="EXCLUDE_SERVER_ONLY_ELEMENTS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        EXCLUDE_SERVER_ONLY_ELEMENTS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Skip server-only elements in the csdl xml to be parsed and added to CsdlDocument.
+ An element is server-only if it contains an Annotation child element with Term=&quot;com.sap.cloud.server.odata.sql.v1.ServerOnly&quot;.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                16777216
+                (0x01000000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="FAIL_IF_PROVIDER_INCOMPATIBLE"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        FAIL_IF_PROVIDER_INCOMPATIBLE
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Enable errors for incompatibility with DataServiceProvider implementation (e.g. SQLDatabaseProvider).
+ Parsing of metadata will fail if such errors are detected.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                2097152
+                (0x00200000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="IGNORE_ALL_ANNOTATIONS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        IGNORE_ALL_ANNOTATIONS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>A combination of <code>IGNORE_EDM_ANNOTATIONS</code> and <code>IGNORE_XML_ANNOTATIONS</code>.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                192
+                (0x000000c0)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="IGNORE_ALL_REFERENCES"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        IGNORE_ALL_REFERENCES
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>A combination of <code>IGNORE_EXTERNAL_REFERENCES</code>, <code>IGNORE_INTERNAL_REFERENCES</code>, and <code>IGNORE_STANDARD_REFERENCES</code>.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                56
+                (0x00000038)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="IGNORE_EDM_ANNOTATIONS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        IGNORE_EDM_ANNOTATIONS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to ignore EDM annotations (OData V4+ annotations).
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                64
+                (0x00000040)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="IGNORE_EXTERNAL_REFERENCES"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        IGNORE_EXTERNAL_REFERENCES
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to ignore Edmx Reference elements which have a non-standard Uri (e.g. not starting with &quot;http://docs.oasis-open.org/odata/&quot;) and which do not share the <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same origin</a> as the referencing document.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                8
+                (0x00000008)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="IGNORE_INTERNAL_REFERENCES"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        IGNORE_INTERNAL_REFERENCES
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to ignore Edmx Reference elements which have a non-standard Uri (e.g. not starting with &quot;http://docs.oasis-open.org/odata/&quot;) and which share the <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same origin</a> as the referencing document.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                16
+                (0x00000010)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="IGNORE_STANDARD_REFERENCES"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        IGNORE_STANDARD_REFERENCES
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to ignore Edmx Reference elements which have a standard Uri (e.g. starting with &quot;http://docs.oasis-open.org/odata/&quot;).
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                32
+                (0x00000020)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="IGNORE_UNDEFINED_TERMS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        IGNORE_UNDEFINED_TERMS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to ignore annotations using undefined terms.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                256
+                (0x00000100)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="IGNORE_XML_ANNOTATIONS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        IGNORE_XML_ANNOTATIONS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to ignore XML annotations (custom XML attributes).
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                128
+                (0x00000080)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="LOG_WITH_UNQUALIFIED_FILE_NAMES"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        LOG_WITH_UNQUALIFIED_FILE_NAMES
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Use unqualified file names (without directory path) in logged error/warning messages.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                8388608
+                (0x00800000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="PROCESS_MIXED_VERSIONS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        PROCESS_MIXED_VERSIONS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to process elements from multiple OData versions.
+ Without this option, only elements belonging to the outermost schema's OData version will be processed.
+ Other elements will be ignored.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                1
+                (0x00000001)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="RESOLVE_UNDEFINED_TERMS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        RESOLVE_UNDEFINED_TERMS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to resolve annotations using undefined terms.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                512
+                (0x00000200)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="RETAIN_ORIGINAL_TEXT"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        RETAIN_ORIGINAL_TEXT
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to retain the original CSDL (XML) text in <code><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlDocument.html#getOriginalText()">CsdlDocument.originalText</a></code>.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                2
+                (0x00000002)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="RETAIN_RESOLVED_TEXT"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        RETAIN_RESOLVED_TEXT
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to retain the resolved CSDL (XML) text in <code><a href="../../../../../../com/sap/cloud/mobile/odata/csdl/CsdlDocument.html#getResolvedText()">CsdlDocument.resolvedText</a></code>.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                4
+                (0x00000004)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="STRICT_FACET_WARNINGS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        STRICT_FACET_WARNINGS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to enable the strictest possible warnings about questionable values for type facets, such as unspecified nullability.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                262144
+                (0x00040000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="TRACE_PARSING_OF_ELEMENTS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        TRACE_PARSING_OF_ELEMENTS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to trace elements encountered during parsing.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                2048
+                (0x00000800)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="WARN_ABOUT_UNDEFINED_TERMS"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        WARN_ABOUT_UNDEFINED_TERMS
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Set this option to force the parser to ignore annotations using undefined terms, but log a warning message.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                1024
+                (0x00000400)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+<a id="WARN_IF_PROVIDER_INCOMPATIBLE"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        int
+      </span>
+        WARN_IF_PROVIDER_INCOMPATIBLE
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p><p>Enable warnings for incompatibility with DataServiceProvider implementation (e.g. SQLDatabaseProvider).
+ Parsing of metadata will succeed if such warnings are detected.
+</p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                4194304
+                (0x00400000)
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<a id="CsdlOption()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">CsdlOption</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<a id="navbar_top"></a>
+
+<div id="footer">
+Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize doclava-developer-docs.js */
+</script>
+
+</body>
+</html>

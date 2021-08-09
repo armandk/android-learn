@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsdlDocument.resolveEntity - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.csdl</a>&nbsp;/&nbsp;<a href="index.html">CsdlDocument</a>&nbsp;/&nbsp;<a href="./resolveentity.html">resolveEntity</a><br/>
+<br/>
+<h1>resolveEntity</h1>
+<a name="com.sap.cloud.mobile.odata.csdl.CsdlDocument$resolveEntity(com.sap.cloud.mobile.odata.EntityValue)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">resolveEntity</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlDocument$resolveEntity(com.sap.cloud.mobile.odata.EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Resolve the <code>EntityValue.entitySet</code> of `entity' (if it is not already set).</p>
+ Throws: 
+<p><code><a href="../../com.sap.cloud.mobile.odata/dataserviceexception/index.html">com.sap.cloud.mobile.odata.DataServiceException</a></code> if <code>entity.entitySet</code> is not set, and is not unique (i.e. multiple entity sets use the same entity type)</p>
+  or there is a circular dependency in related entities (parent entity is set as child as well) or an entity is resolved multiple times meaning that it is embedded as child more than once.
+<h3>Parameters</h3>
+<p><a name="entity"></a>
+<code>entity</code> - <a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">:</span> Entity to resolve.</p>
+</BODY>
+</HTML>

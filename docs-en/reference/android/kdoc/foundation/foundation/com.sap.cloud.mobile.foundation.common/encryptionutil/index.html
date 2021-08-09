@@ -1,0 +1,241 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EncryptionUtil - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="./index.html">EncryptionUtil</a><br/>
+<br/>
+<h1>EncryptionUtil</h1>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EncryptionUtil</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EncryptionUtil</span></code>
+<p>Provides a protected storage for the users to generate and access their encryption key associated with an alias. The encryption key can then be used with Secure Store and any other place where encryption key is needed. </p>
+<p><strong>Initialization</strong> </p>
+<p>Before accessing encryption keys with <code>EncryptionUtil</code>, it is required for the app to initialize it with Android application context. </p>
+<p>For example, </p>
+<pre><code>EncryptionUtil.initialize(context);
+</code></pre> 
+<p><strong>Encryption Key Generation Mechanisms</strong> </p>
+<p>1. <strong>Passcode</strong> </p>
+<p>The application would give the passcode to <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[])</a></code>, which would return an encryption key by first using <a href="https://en.wikipedia.org/wiki/PBKDF2"> PBKDF2</a> (Password-Based Key Derivation Function 2) to generate a <code>Secret Key</code> from the passcode and then generating a secondary key randomly. This secondary encryption key is then encrypted using the PBKDF2 secret key and securely persisted. The secondary encryption key is returned to the caller. </p>
+<p>This is the most secure option because the secret key generated from the passcode is not stored on the device. </p>
+<p>To retrieve the encryption key, </p>
+<pre><code>try {
+        // Do state transition if necessary; see 'Encryption State Transitions'
+        // below for details.
+
+        byte[] key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode);
+    } catch (EncryptionError ex) {
+        logger.error("Failed to retrieve encryption key", ex);
+    }
+</code></pre> 
+<p>2. <strong>Passcode with Biometric</strong> </p>
+<p>The application would: </p>
+<ol> <li>Get the initial cipher via <code><a href="getcipher.html">#getCipher(String)</a></code>.</li>
+ <li>Pass the cipher to Android <code>FingerprintManager</code> for user authentication.</li>
+ <li>The same cipher (user-authenticated) is passed back to <code><a href="getencryptionkey.html">#getEncryptionKey(String, * char[], Cipher)</a></code>.</li>
+ </ol>
+ 
+<p>The <code>getEncryptionKey(alias, passcode, cipher)</code> method will generate a random secondary encryption key similar to <code>Passcode</code> mechanism, but will encrypt it with the PBKDF2 secret key and separately with the cipher also. The two encrypted versions of the secondary encryption key are securely persisted. The secondary encryption key is returned to the caller. The secondary encryption key can later be retrieved using either <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[])</a></code> or <code><a href="getencryptionkey.html">#getEncryptionKey(String, Cipher)</a></code>. </p>
+<p>To retrieve the encryption key, </p>
+<pre><code>try {
+        byte[] key;
+
+        // Gets a cipher first for FingerprintManager to authenticate the user.
+        Cipher cipher = EncryptionUtil.getCipher(myAlias);
+
+        // ...
+        // The cipher is used by FingerprintManager to create a CryptoObject during
+        // user authentication, then passed back.
+        // ...
+
+        // Do state transition if necessary; see 'Encryption State Transitions' below
+        // for details.
+
+        key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode, cipher); // For new alias
+
+        // Once in PASSCODE_BIOMETRIC state-- can retrieve the encryption key with either
+        // passcode or cipher.
+        key = EncryptionUtil.getEncryptionKey(myAlias, cipher);
+
+        // -- Or --
+
+        key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode);
+    } catch (EncryptionError ex) {
+        logger.error("Failed to retrieve encryption key", ex);
+    }
+
+</code></pre> 
+<p>3. <strong>No Passcode</strong> </p>
+<p>The application would use <code><a href="getencryptionkey.html">#getEncryptionKey(String)</a></code> to generate an encryption key without the passcode. </p>
+<p>Since this is the no passcode case, the EncryptionUtil generates a secondary encryption key randomly. This secondary encryption key is encrypted using the <code>Secret Key</code> generated from Android Key Store and securely persisted. The secondary encryption key is returned to the caller. </p>
+<p>To retrieve the encryption key, </p>
+<pre><code>try {
+
+        // Do state transition if necessary; see 'Encryption State Transitions' below
+        // for details.
+
+        byte[] key = EncryptionUtil.getEncryptionKey(myAlias);
+    } catch (EncryptionError ex) {
+        logger.error("Failed to retrieve encryption key", ex);
+    }
+</code></pre> <strong>Encryption State Transitions</strong> 
+<p>There are scenarios that the application would switch the encryption key generation mechanism depending on the necessary application protection requirement. For example, from no passcode to passcode, or from passcode to passcode with biometric, etc. </p>
+<p>1.<strong> To Passcode Only State</strong> </p>
+<pre><code>try {
+        byte[] key;
+        EncryptionState state = EncryptionUtil.getState(myAlias);
+
+        switch (state) {
+            case INIT:
+                // Enables PASSCODE_ONLY state for new alias
+                key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode);
+                break;
+            case NO_PASSCODE:
+                EncryptionUtil.enablePasscode(myAlias, myPasscode);
+                break;
+            case PASSCODE_BIOMETRIC:
+                EncryptionUtil.disableBiometric(myAlias, myPasscode);
+                break;
+            default:
+                // Already in PASSCODE_ONLY state
+                break;
+        }
+
+        // ...Retrieves the encryption key (for existing alias) with
+        //    EncryptionUti.getEncryptionKey(alias, passcode).
+
+    } catch (EncryptionError ex) {
+        logger.error("Failed to transit to PASSCODE_ONLY state", ex);
+    }
+ </code></pre> 
+<p>2. <strong>To Passcode with Biometric State</strong> </p>
+<pre><code>try {
+        // Gets a cipher first for FingerprintManager to authenticate the user.
+        Cipher cipher = EncryptionUtil.getCipher(myAlias);
+
+        // ...
+        // The cipher is used by FingerprintManager to create a CryptoObject during
+        // user authentication, then passed back.
+        // ...
+
+        EncryptionState state = EncryptionUtil.getState(myAlias);
+        byte[] key;
+
+        switch (state) {
+            case INIT:
+                // Enables PASSCODE_BIOMETRIC state for new alias
+                key = EncryptionUtil.getEncryptionKey(myAlias, myPasscode, cipher);
+                break;
+            case NO_PASSCODE: // Falls through
+            case PASSCODE_ONLY:
+                EncryptionUtil.enableBiometric(myAlias, myPasscode, cipher);
+                break;
+            default: // Already in PASSCODE_BIOMETRIC state
+                break;
+        }
+
+        // ...Retrieves the encryption key (for existing alias) with
+        //      EncryptionUti.getEncryptionKey(alias, passcode) or
+        //      EncryptionUti.getEncryptionKey(alias, cipher).
+        // Remember to precede those method calls with getCipher(alias)!
+    } catch (EncryptionError ex) {
+        logger.error("Failed to transit to PASSCODE_BIOMETRIC state", ex);
+    }
+</code></pre> 
+<p>3. <strong>To No Passcode State</strong> </p>
+<pre><code>try {
+        byte[] key;
+        EncryptionState state = EncryptionUtil.getState(myAlias);
+
+        switch (state) {
+            case INIT:
+                // Enables NO_PASSCODE state for new alias
+                key = EncryptionUtil.getEncryptionKey(myAlias);
+                break;
+            case PASSCODE_ONLY: // Falls through
+            case PASSCODE_BIOMETRIC:
+                EncryptionUtil.disablePasscode(myAlias, myPasscode);
+                break;
+            default: // Already in NO_PASSCODE state
+                break;
+        }
+
+        // ...Retrieves the encryption key with EncryptionUti.getEncryptionKey(alias) from this
+        //    point on.
+    } catch (EncryptionError ex) {
+        logger.error("Failed to transit to NO_PASSCODE state", ex);
+    }
+ </code></pre> <strong>To Change Passcode</strong> 
+<p>The application can change the passcode using <code><a href="changepasscode.html">#changePasscode(String, char[], char[])</a></code> when in Passcode Only or Passcode with Biometric state. Once the old passcode is verified, the new passcode is used to encrypt the original encryption key. </p>
+<pre><code>try {
+        EncryptionUtil.changePasscode(myAlias, myPasscode, myNewPasscode);
+    } catch (EncryptionError ex) {
+        // The old passcode is not correct; get it again from the end user then retry
+        // changePasscode...
+    }
+</code></pre> 
+<p><strong>Backup Considerations</strong> </p>
+<p>For security reason, the <strong>foundation</strong> module has android:allowBackup="false" in its manifest file. </p>
+<p>Also, the encryption keys obtained in <strong>No Passcode State</strong> or <strong>Passcode with Biometric State</strong> rely on Android KeyStore and cannot be backed up/restored. Any Secure Store-- SecureDatabaseStore, SecureKeyValueStore, SecureStoreCache, SecurePreferenceDataStore, or AppUsage store, that uses such encryption key cannot not be backed up/restored. </p>
+<p>In case you want to enable backup for the application, the application must exclude the shared preferences files and Secure Store databases associated with those encryption keys by defining custom XML rules. </p>
+<p>1. <strong>Enable Backup</strong>-- Because <strong>foundation</strong> module has android:allowBackup="false" in its manifest file, you need to use Android merge rule marker to override the attribute. </p>
+<pre><code>
+  a. Add <strong>xmlns:tools="http://schemas.android.com/tools"</strong> to <strong>&lt;manifest&gt;</strong>
+     element
+ 
+  b. Enable the backup by adding the two attributes in &lt;application&gt; element:
+       android:allowBackup="true"
+       tools:replace="android:allowBackup"
+  </code></pre> 
+<p>2. <strong>Create Backup Rules File</strong>-- In AndroidManifest.xml, add <strong>android:fullBackupContent</strong> attribute in <strong>&lt;application&gt;</strong> element. This attribute points to an XML file under res/xml folder that contains backup rules. </p>
+<p>For example, </p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.sap.android.assistant"&gt;
+
+        &lt;application ...
+            android:allowBackup="true"
+            ...
+            android:fullBackupContent="@xml/backup_descriptor"
+            tools:replace="android:allowBackup"&gt;
+
+            &lt;activity ...
+        &lt;/application&gt;
+    &lt;/manifest&gt;
+    ...
+</code></pre> 
+<p>3. <strong>Add Backup Rules</strong>--Create an XML file in the res/xml folder specified by <strong>android:fullBackupContent</strong> attribute. Inside the backup rule file, add <strong>&lt;exclude&gt;</strong> elements to exclude files for the <strong>sharedpref</strong> and <strong>database</strong> domains: </p>
+<pre><code>
+     &lt;exclude domain="sharedpref"
+           path="&lt;<strong>encryption key alias</strong>&gt;<strong>_sharedPreference##.xml</strong>" /&gt;
+ 
+     &lt;exclude domain="database" path="&lt;<strong>secure store name</strong>&gt;" /&gt;
+  </code></pre> 
+<p>For example, </p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;full-backup-content&gt;
+        &lt;!--
+        1. Exclude shared preferences in the pattern of "encryptionKeyAlias" followed by
+            "_sharedPreference##.xml" for all encryption keys in No Passcode State or Passcode with
+            Biometric State.
+
+        2. Exclude secure stores using those encryption keys--
+            Secure store "APP_SECURE_STORE" is using encryption key with alias "app_pc_alias".
+            Secure store "RLM_SECURE_STORE" is using encryption key with alias "rlm_pc_alias".
+        --&gt;
+
+        &lt;exclude domain="sharedpref" path="app_pc_alias_sharedPreference##.xml" /&gt;
+        &lt;exclude domain="sharedpref" path="rlm_pc_alias_sharedPreference##.xml" /&gt;
+        &lt;exclude domain="database" path="APP_SECURE_STORE" /&gt;
+        &lt;exclude domain="database" path="RLM_SECURE_STORE" /&gt;
+    &lt;/full-backup-content&gt;
+</code></pre>
+<p><strong>See Also</strong><br/>
+<a href="../encryptionstate/index.html">EncryptionState</a></p>
+</BODY>
+</HTML>

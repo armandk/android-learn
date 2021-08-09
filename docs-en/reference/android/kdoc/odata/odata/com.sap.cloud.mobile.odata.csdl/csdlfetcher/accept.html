@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsdlFetcher.accept - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.csdl</a>&nbsp;/&nbsp;<a href="index.html">CsdlFetcher</a>&nbsp;/&nbsp;<a href="./accept.html">accept</a><br/>
+<br/>
+<h1>accept</h1>
+<a name="com.sap.cloud.mobile.odata.csdl.CsdlFetcher$accept(kotlin.String, kotlin.String)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">accept</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlFetcher$accept(kotlin.String, kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlFetcher$accept(kotlin.String, kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this fetcher accepts a location (or associated namespace), meaning that a <code><a href="fetch.html">CsdlFetcher.fetch</a></code> call would be expected to succeed. This function returns <code>false</code> by default for OData standard vocabulary namespaces (Org.OData.*), otherwise this function returns <code>true</code>. Override this function in subclasses to return <code>true</code> only for those well-known location/namespace values that the fetcher expects that it can resolve to a service metadata document.</p>
+<h3>Parameters</h3>
+<p><a name="uri"></a>
+<code>uri</code> - <span class="identifier">String</span><span class="symbol">:</span> Location of document to be read.</p>
+<p><a name="ns"></a>
+<code>ns</code> - <span class="identifier">String</span><span class="symbol">:</span> Namespace for schema to be read.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> <code>true</code> if this fetcher accepts a location (or associated namespace), meaning that a <code><a href="fetch.html">CsdlFetcher.fetch</a></code> call would be expected to succeed.</p>
+</BODY>
+</HTML>

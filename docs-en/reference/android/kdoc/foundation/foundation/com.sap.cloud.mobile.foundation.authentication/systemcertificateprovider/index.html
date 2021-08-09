@@ -1,0 +1,17 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SystemCertificateProvider - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.authentication</a>&nbsp;/&nbsp;<a href="./index.html">SystemCertificateProvider</a><br/>
+<br/>
+<h1>SystemCertificateProvider</h1>
+<a name="com.sap.cloud.mobile.foundation.authentication.SystemCertificateProvider"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SystemCertificateProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../certificateprovider/index.html"><span class="identifier">CertificateProvider</span></a></code><br/>
+<a name="com.sap.cloud.mobile.foundation.authentication.SystemCertificateProvider"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SystemCertificateProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../certificateprovider/index.html"><span class="identifier">CertificateProvider</span></a></code>
+<p>An implementation of the <code><a href="../certificateprovider/index.html">CertificateProvider</a></code> that provides certificates available in the <code><a href="#">android.security.KeyChain</a></code>. The first time a certificate is requested for a given host and port, this class will launch the Android UI necessary for the app to get permission to use the certificate the user selects. The user selection is saved in the <code><a href="aliasstore/index.html">AliasStore</a></code> (if provided) and the certificate picker UI will not be shown again unless the <code><a href="aliasstore/index.html">AliasStore</a></code> has that certificate cleared. Since different servers might require different credentials, the certificate selection is saved per host/port combination.</p>
+</BODY>
+</HTML>

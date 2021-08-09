@@ -1,0 +1,330 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SchemaFormat - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">SchemaFormat</a><br/>
+<br/>
+<h1>SchemaFormat</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">SchemaFormat</span></code>
+<p>Provides static functions for converting data values to and from the lexical representations defined in <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SchemaFormat</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Provides static functions for converting data values to and from the lexical representations defined in <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="formatboolean.html">formatBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatBoolean(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>boolean</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatbyte.html">formatByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatByte(kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>byte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatdecimal.html">formatDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatDecimal(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>decimal</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatdouble.html">formatDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatDouble(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>double</code>, or "NaN" / "Infinity" / "-Infinity".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatfloat.html">formatFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatFloat(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>float</code>, or "NaN" / "Infinity" / "-Infinity".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatint.html">formatInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatInt(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>int</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatinteger.html">formatInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatInteger(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>integer</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatlong.html">formatLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatLong(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>long</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatshort.html">formatShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatShort(kotlin.Short)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>short</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatunsignedbyte.html">formatUnsignedByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatUnsignedByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatUnsignedByte(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>unsignedByte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatunsignedshort.html">formatUnsignedShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatUnsignedShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$formatUnsignedShort(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> formatted using XML Schema lexical representation for type <code>unsignedByte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseboolean.html">parseBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseBoolean(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>boolean</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsebyte.html">parseByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseByte(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>byte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsedecimal.html">parseDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseDecimal(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>decimal</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsedouble.html">parseDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseDouble(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>double</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsefloat.html">parseFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseFloat(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Float</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>float</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseint.html">parseInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseInt(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>int</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseinteger.html">parseInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseInteger(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>integer</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parselong.html">parseLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseLong(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>long</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseshort.html">parseShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseShort(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>short</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseunsignedbyte.html">parseUnsignedByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseUnsignedByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseUnsignedByte(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>unsignedByte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseunsignedshort.html">parseUnsignedShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseUnsignedShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$parseUnsignedShort(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code> parsed from XML Schema lexical representation for type <code>unsignedSHort</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toboolean.html">toBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toBoolean(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>boolean</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tobyte.html">toByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toByte(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>byte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="todecimal.html">toDecimal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toDecimal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toDecimal(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>decimal</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="todouble.html">toDouble</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toDouble</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toDouble(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Double</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>double</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tofloat.html">toFloat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toFloat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toFloat(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Float</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>float</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toint.html">toInt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toInt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toInt(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>int</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tointeger.html">toInteger</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toInteger</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toInteger(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigInteger</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>integer</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tolong.html">toLong</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toLong</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toLong(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>long</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toshort.html">toShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toShort(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>short</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tounsignedbyte.html">toUnsignedByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toUnsignedByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toUnsignedByte(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>unsignedByte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tounsignedshort.html">toUnsignedShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toUnsignedShort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.SchemaFormat$toUnsignedShort(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return <code>value</code> parsed from XML Schema lexical representation for type <code>unsignedSHort</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

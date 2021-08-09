@@ -1,0 +1,227 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryResult - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">QueryResult</a><br/>
+<br/>
+<h1>QueryResult</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryResult</span></code>
+<p>Holds a data query and its result value. Allows conversion of the result to optional/required/list values for basic, complex and entity types.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">QueryResult</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$<init>(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataValue)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$<init>(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataValue)/result">result</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">QueryResult</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$<init>(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataValue, kotlin.Int)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$<init>(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataValue, kotlin.Int)/result">result</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$<init>(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataValue, kotlin.Int)/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>See QueryResult(DataQuery, DataValue, int, DataServiceException).</p>
+<code><span class="identifier">QueryResult</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$<init>(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataValue, kotlin.Int, com.sap.cloud.mobile.odata.DataServiceException)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$<init>(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataValue, kotlin.Int, com.sap.cloud.mobile.odata.DataServiceException)/result">result</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$<init>(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataValue, kotlin.Int, com.sap.cloud.mobile.odata.DataServiceException)/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$<init>(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataValue, kotlin.Int, com.sap.cloud.mobile.odata.DataServiceException)/error">error</span><span class="symbol">:</span>&nbsp;<a href="../dataserviceexception/index.html"><span class="identifier">DataServiceException</span></a><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>Construct a new query result.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="check.html">check</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">check</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See check(int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">check</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$check(kotlin.Int)/fixOptions">fixOptions</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Check if the <code><a href="getresult.html">QueryResult.result</a></code> is valid with respect to the <code><a href="getquery.html">QueryResult.query</a></code>. A result will be considered invalid if it is missing properties that were expected according to the use of <code><a href="../dataquery/select.html">DataQuery.select</a></code> or <code><a href="../dataquery/expand.html">DataQuery.expand</a></code> in the <code><a href="getquery.html">QueryResult.query</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getbasiclist.html">getBasicList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBasicList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavaluelist/index.html"><span class="identifier">DataValueList</span></a></code>
+<p>Return the basic list for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcomplexlist.html">getComplexList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComplexList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvaluelist/index.html"><span class="identifier">ComplexValueList</span></a></code>
+<p>Return the complex list for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcount.html">getCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return the "count" for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltalink.html">getDeltaLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The "delta link" for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltastream.html">getDeltaStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaStream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../deltastream/index.html"><span class="identifier">DeltaStream</span></a></code>
+<p>Return the delta stream for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitylist.html">getEntityList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvaluelist/index.html"><span class="identifier">EntityValueList</span></a></code>
+<p>Return the entity list for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitystream.html">getEntityStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityStream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitystream/index.html"><span class="identifier">EntityStream</span></a></code>
+<p>Return the entity stream for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geterror.html">getError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getError</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataserviceexception/index.html"><span class="identifier">DataServiceException</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Error if <code>status</code> does not represent a successful response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinlinecount.html">getInlineCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInlineCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return the inline "total count" for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnextlink.html">getNextLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNextLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The "next link" for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnextquery.html">getNextQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNextQuery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Return the "next query" for this result. The query will have a non-<code>null</code> URL if this result includes a nextLink.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoptionalbasic.html">getOptionalBasic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptionalBasic</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The optional basic value of this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoptionalcomplex.html">getOptionalComplex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptionalComplex</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The optional complex value of this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoptionalentity.html">getOptionalEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptionalEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The optional entity value of this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getquery.html">getQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQuery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Return data query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequiredbasic.html">getRequiredBasic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredBasic</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Return the required basic value of this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequiredcomplex.html">getRequiredComplex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredComplex</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complexvalue/index.html"><span class="identifier">ComplexValue</span></a></code>
+<p>Return the required complex value of this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequiredentity.html">getRequiredEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return the required entity value of this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresult.html">getResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResult</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Result value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstatus.html">getStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStatus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return result status (e.g. HTTP status code 200 = OK).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

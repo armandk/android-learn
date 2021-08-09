@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryFunction.<init> - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">QueryFunction</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.odata.QueryFunction$&lt;init&gt;()"></a>
+<code><span class="identifier">QueryFunction</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents a <a href="http://odata.org">OData</a> query function. Query functions are typically used within <code><a href="../dataquery/filter.html">DataQuery.filter</a></code>. <code><a href="../queryfunctioncall/index.html">com.sap.cloud.mobile.odata.QueryFunctionCall</a></code> can be constructed using static calls on <code><a href="index.html">com.sap.cloud.mobile.odata.QueryFunction</a></code> or, more conveniently, by chained calls on <code><a href="../queryvalue/index.html">com.sap.cloud.mobile.odata.QueryValue</a></code>. </p>
+Example using proxy classes (with QueryFunction static calls):<pre><code>
+  public void queryFunctionExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .filter(QueryFunction.contains(QueryFunction.toLower(Customer.address),
+              StringValue.of("king")));
+      List&lt;Customer&gt; customers = service.getCustomers(query);
+      this.showCustomers(customers);
+  }
+  </code></pre> Example using proxy classes (with QueryValue chained calls):<pre><code>
+  public void queryValueFunctionExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .filter(Customer.address.toLower().contains("king"));
+      List&lt;Customer&gt; customers = service.getCustomers(query);
+      this.showCustomers(customers);
+  }
+  </code></pre>
+</BODY>
+</HTML>

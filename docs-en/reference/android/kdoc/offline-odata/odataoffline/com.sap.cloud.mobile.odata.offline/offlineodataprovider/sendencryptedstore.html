@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.sendEncryptedStore - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./sendencryptedstore.html">sendEncryptedStore</a><br/>
+<br/>
+<h1>sendEncryptedStore</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">sendEncryptedStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, Action0, Action1)/newEncryptionKey">newEncryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sends the encrypted Offline OData store to sever. This feature offers a functionality to send the offline store which is encrypted to backend Server. The offline store files wiil be encrypted with temporary encryption key to avoid exposing original encryption key on the device. parameter ‘newEncryptionKey’ is always case sensitive, and they cannot contain leading or trailing spaces or semicolons. It is recommended to use ‘a-z’, ’A-Z’ and ‘0-9’ as new encryption key. </p>
+<p> Example Usage: </p>
+<pre><code>// Send store asynchronously
+      offlineODataProvider.sendEncryptedStore(newEncryptionKey, () -&gt; logger.info("Send store completed successfully."),
+                                     (error) -&gt; logger.error("Exception encountered in offlineOData send store:" + error.getMessage()));
+     
+      
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="newEncryptionKey"></a>
+<code>newEncryptionKey</code> - <span class="identifier">String</span><span class="symbol">!</span><span class="symbol">:</span> the new encryption key can not contain special character like space and semicolon</p>
+<p><a name="successHandler"></a>
+<code>successHandler</code> - <span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">:</span> a success callback function.</p>
+<p><a name="failureHandler"></a>
+<code>failureHandler</code> - <span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">:</span> a failure callback function.</p>
+<p><a name="note"></a>
+<code>note</code> - a note which is not exceeding 480 characters long.</p>
+<p><strong>See Also</strong><br/>
+<a href="../offlineodatadelegate/index.html">OfflineODataDelegate</a>com.sap.cloud.mobile.odata.core.Action0com.sap.cloud.mobile.odata.core.Action1</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, kotlin.String, Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">sendEncryptedStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, kotlin.String, Action0, Action1)/newEncryptionKey">newEncryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, kotlin.String, Action0, Action1)/note">note</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, kotlin.String, Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, kotlin.String, Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+</BODY>
+</HTML>

@@ -1,0 +1,517 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataProvider</a><br/>
+<br/>
+<h1>OfflineODataProvider</h1>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DataServiceProvider</span><span class="symbol">, </span><span class="identifier">AutoCloseable</span></code>
+<p>The class represents a DataServiceProvider for Offline OData. </p>
+<p> It implements java.lang.AutoCloseable and com.sap.cloud.mobile.odata.DataServiceProvider interfaces</p>
+<p><strong>See Also</strong><br/>
+<a href="-init-.html">#OfflineODataProvider(URL, OfflineODataParameters, OkHttpClient, SslClientAuth, OfflineODataDelegate)</a>com.sap.cloud.mobile.odata.DataServiceProvider<a href="#">java.lang.AutoCloseable</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/sslClientAuth">sslClientAuth</span><span class="symbol">:</span>&nbsp;<span class="identifier">SslClientAuth</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/delegate">delegate</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadelegate/index.html"><span class="identifier">OfflineODataDelegate</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/sslClientAuth">sslClientAuth</span><span class="symbol">:</span>&nbsp;<span class="identifier">SslClientAuth</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/delegate">delegate</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataproviderdelegate/index.html"><span class="identifier">OfflineODataProviderDelegate</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/delegate">delegate</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadelegate/index.html"><span class="identifier">OfflineODataDelegate</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/delegate">delegate</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataproviderdelegate/index.html"><span class="identifier">OfflineODataProviderDelegate</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth)/sslClientAuth">sslClientAuth</span><span class="symbol">:</span>&nbsp;<span class="identifier">SslClientAuth</span><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Constructs an OfflineODataProvider instance. </p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="logger_name.html">LOGGER_NAME</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">LOGGER_NAME</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>OfflineODataProvider logger name.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="adddefiningquery.html">addDefiningQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addDefiningQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$addDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)/definingQuery">definingQuery</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Adds a defining query to the provider. There are three types of defining queries: </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="canceldownload.html">cancelDownload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cancelDownload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Cancels all refreshes and file downloads including those that are queued. This method will also cancel an initial download and file transfer if it is called while the store is opening.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cancelupload.html">cancelUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cancelUpload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Cancels the current upload.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Deletes the physical store from the file system. </p>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$clear(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$clear(java.net.URL, kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$clear(java.net.URL, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Deletes the physical store from the file system. All instances of the OfflineODataProvider must be closed before it can be deleted. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Closes the OfflineODataProvider, freeing any resources. If a download or upload is active, it will be cancelled (it may be resumable after the provider is re-opened). </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createentity.html">createEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createEntity(EntityValue, HttpHeaders, RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createEntity(EntityValue, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createEntity(EntityValue, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#createEntity(EntityValue, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createlink.html">createLink</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<span class="identifier">Property</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#createLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createmedia.html">createMedia</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createMedia</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions)/content">content</span><span class="symbol">:</span>&nbsp;<span class="identifier">StreamBase</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$createMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#createMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions) </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletebyquery.html">deleteByQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deleteByQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteByQuery(DataQuery, HttpHeaders, RequestOptions)/query">query</span><span class="symbol">:</span>&nbsp;<span class="identifier">DataQuery</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteByQuery(DataQuery, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteByQuery(DataQuery, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#deleteByQuery(DataQuery, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deleteentity.html">deleteEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deleteEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteEntity(EntityValue, HttpHeaders, RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteEntity(EntityValue, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteEntity(EntityValue, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#deleteEntity(EntityValue, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletelink.html">deleteLink</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deleteLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<span class="identifier">Property</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#deleteLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletestream.html">deleteStream</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deleteStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)/link">link</span><span class="symbol">:</span>&nbsp;<span class="identifier">StreamLink</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$deleteStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#deleteStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="download.html">download</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">download</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">CancelToken</span><span class="symbol">!</span></code>
+<p>Downloads the data for all defining queries from the OData back end to update the local data. If the defining queries are delta enabled, only the changes will be downloaded. </p>
+<code><span class="keyword">fun </span><span class="identifier">download</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)), Action0, Action1)/subset">subset</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)), Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$download(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)), Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">CancelToken</span><span class="symbol">!</span></code>
+<p>Downloads the data for the defining queries from the OData back end to update the local data. If the defining queries are delta enabled, only the changes will be downloaded. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="downloadmedia.html">downloadMedia</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">downloadMedia</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$downloadMedia(EntityValue, HttpHeaders, RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$downloadMedia(EntityValue, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$downloadMedia(EntityValue, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteStream</span><span class="symbol">!</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#downloadMedia(EntityValue, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="downloadstream.html">downloadStream</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">downloadStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$downloadStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$downloadStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)/link">link</span><span class="symbol">:</span>&nbsp;<span class="identifier">StreamLink</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$downloadStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$downloadStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteStream</span><span class="symbol">!</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#downloadStream(EntityValue, StreamLink, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="executemethod.html">executeMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">executeMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)/method">method</span><span class="symbol">:</span>&nbsp;<span class="identifier">DataMethod</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<span class="identifier">ParameterList</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">DataValue</span><span class="symbol">!</span></code>
+<p>Execute FunctionImport </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="executequery.html">executeQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">executeQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeQuery(DataQuery, HttpHeaders, RequestOptions)/query">query</span><span class="symbol">:</span>&nbsp;<span class="identifier">DataQuery</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeQuery(DataQuery, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeQuery(DataQuery, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">QueryResult</span><span class="symbol">!</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#executeQuery(DataQuery, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fetchmetadata.html">fetchMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">fetchMetadata</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$fetchMetadata(HttpHeaders, RequestOptions)/paramHttpHeaders">paramHttpHeaders</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$fetchMetadata(HttpHeaders, RequestOptions)/paramRequestOptions">paramRequestOptions</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">CsdlDocument</span><span class="symbol">!</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#fetchMetadata()</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="forcereauthentication.html">forceReauthentication</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">forceReauthentication</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Causes the offline store to remove any stored authentication it may have, causing it to reauthenticate the next time it needs to send a request to SMP/CPms server. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdefiningqueries.html">getDefiningQueries</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDefiningQueries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Get all the defining Queries.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geterrorarchive.html">getErrorArchive</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getErrorArchive</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodataerrorarchiveentity/index.html"><span class="identifier">OfflineODataErrorArchiveEntity</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Query the entity set of OfflineOData store ErrorArchive.</p>
+<code><span class="keyword">fun </span><span class="identifier">getErrorArchive</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$getErrorArchive(DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<span class="identifier">DataQuery</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodataerrorarchiveentity/index.html"><span class="identifier">OfflineODataErrorArchiveEntity</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Query the entity set of OfflineOData store ErrorArchive with query options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geteventlog.html">getEventLog</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getEventLog</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodataevent/index.html"><span class="identifier">OfflineODataEvent</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Query the entity set of OfflineOData event Log.</p>
+<code><span class="keyword">fun </span><span class="identifier">getEventLog</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$getEventLog(DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<span class="identifier">DataQuery</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodataevent/index.html"><span class="identifier">OfflineODataEvent</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>Query the entity set of OfflineOData event Log with query options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmetadata.html">getMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">CsdlDocument</span><span class="symbol">!</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#getMetadata()</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprevioususer.html">getPreviousUser</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getPreviousUser</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Get the previous user if the store is used with isForceUploadOnUserSwitch=true. It will be empty string if the local store was not opened with isForceUploadOnUserSwitch=true. For more information of isForceUploadOnUserSwitch, please refer to OfflineODataParameters.setForceUploadOnUserSwitch This function could be called whenever local store was opened or not.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getservicename.html">getServiceName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getServiceName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#getServiceName()</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getserviceoptions.html">getServiceOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getServiceOptions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../offlineodataserviceoptions/index.html"><span class="identifier">OfflineODataServiceOptions</span></a><span class="symbol">!</span></code>
+<p>Returns OfflineODataProvider service options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstoreparameters.html">getStoreParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getStoreParameters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span></code>
+<p>This is a reference to the OfflineODataParameters given when the provider is created In the next upload/download. All the backend http request will update accordingly. Only customHeaders and customCookies can be changed after the provider is open.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasmetadata.html">hasMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hasMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#hasMetadata()</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="haspendingdownload.html">hasPendingDownload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hasPendingDownload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Checks whether or not there is a pending download ( a download that was cancelled either explicitly or because the provider was closed ). It may be possible to continue the download by triggering a new download.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="haspendingupload.html">hasPendingUpload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hasPendingUpload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Checks whether or not there is a pending upload ( a upload that was cancelled either explicitly or because the provider was closed). It may be possible to continue the upload by triggering a new upload.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isrequestqueueempty.html">isRequestQueueEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isRequestQueueEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Checks whether or not there are any pending requests stored in the request queue that have not yet been uploaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="libraryversion.html">libraryVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">libraryVersion</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns version information about this library.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="loadmetadata.html">loadMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">loadMetadata</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$loadMetadata(HttpHeaders, RequestOptions)/paramHttpHeaders">paramHttpHeaders</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$loadMetadata(HttpHeaders, RequestOptions)/paramRequestOptions">paramRequestOptions</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#loadMetadata( HttpHeaders, RequestOptions )</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="logdefiningqueries.html">logDefiningQueries</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">logDefiningQueries</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$logDefiningQueries(Level)/logLevel">logLevel</span><span class="symbol">:</span>&nbsp;<span class="identifier">Level</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Dumps defining queries (as a JSON object) that have been added to the offline store to log. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="logrequestqueue.html">logRequestQueue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">logRequestQueue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$logRequestQueue(Level)/logLevel">logLevel</span><span class="symbol">:</span>&nbsp;<span class="identifier">Level</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Dumps content (as a JSON object) of request queue of the offline store to log. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="open.html">open</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">open</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$open(Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$open(Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Opens the provider. After this call, the internal metadata data structure will be changed so any values cached in memory will need to be re-retrieved. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pingserver.html">pingServer</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">pingServer</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$pingServer(HttpHeaders, RequestOptions)/paramHttpHeaders">paramHttpHeaders</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$pingServer(HttpHeaders, RequestOptions)/paramRequestOptions">paramRequestOptions</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#pingServer( HttpHeaders, RequestOptions )</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="processbatch.html">processBatch</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">processBatch</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$processBatch(RequestBatch, HttpHeaders, RequestOptions)/batch">batch</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestBatch</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$processBatch(RequestBatch, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$processBatch(RequestBatch, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#processBatch( RequestBatch, HttpHeaders, RequestOptions )</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removedefiningquery.html">removeDefiningQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">removeDefiningQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery, Action0, Action1)/definingQuery">definingQuery</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery, Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery, Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">removeDefiningQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)/definingQuery">definingQuery</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Removes a defining query. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sendencryptedstore.html">sendEncryptedStore</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sendEncryptedStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, Action0, Action1)/newEncryptionKey">newEncryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sends the encrypted Offline OData store to sever. This feature offers a functionality to send the offline store which is encrypted to backend Server. The offline store files wiil be encrypted with temporary encryption key to avoid exposing original encryption key on the device. parameter ‘newEncryptionKey’ is always case sensitive, and they cannot contain leading or trailing spaces or semicolons. It is recommended to use ‘a-z’, ’A-Z’ and ‘0-9’ as new encryption key. </p>
+<code><span class="keyword">fun </span><span class="identifier">sendEncryptedStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, kotlin.String, Action0, Action1)/newEncryptionKey">newEncryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, kotlin.String, Action0, Action1)/note">note</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, kotlin.String, Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendEncryptedStore(kotlin.String, kotlin.String, Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="sendstore.html">sendStore</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sendStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sends the Offline OData store to sever. </p>
+<code><span class="keyword">fun </span><span class="identifier">sendStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(kotlin.String, Action0, Action1)/note">note</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(kotlin.String, Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(kotlin.String, Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="setmetadata.html">setMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setMetadata</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$setMetadata(CsdlDocument)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">CsdlDocument</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#setMetadata(CsdlDocument)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setserviceoptions.html">setServiceOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setServiceOptions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$setServiceOptions(com.sap.cloud.mobile.odata.offline.OfflineODataServiceOptions)/serviceOptions">serviceOptions</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataserviceoptions/index.html"><span class="identifier">OfflineODataServiceOptions</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines OfflineODataProvider service options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="undopendingchanges.html">undoPendingChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">undoPendingChanges</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$undoPendingChanges(EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Undo pending local changes for a given entity. While you can make changes to existing entities and new entities locally, you can also undo the changes without uploading them. An existing entity will be restored to the original status as if no any changes had been made. A new entity will be removed as if the entity had never been created. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unloadmetadata.html">unloadMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">unloadMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#unloadMetadata</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updateentity.html">updateEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$updateEntity(EntityValue, HttpHeaders, RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$updateEntity(EntityValue, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$updateEntity(EntityValue, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#updateEntity(EntityValue, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updatelink.html">updateLink</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$updateLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$updateLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/property">property</span><span class="symbol">:</span>&nbsp;<span class="identifier">Property</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$updateLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$updateLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$updateLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#updateLink(EntityValue, Property, EntityValue, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="upload.html">upload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Uploads local data to update the OData back end. </p>
+<code><span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(kotlin.Array((com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory)), Action0, Action1)/categories">categories</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../offlineodatarequestoptions/uploadcategory/index.html"><span class="identifier">OfflineODataRequestOptions.UploadCategory</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(kotlin.Array((com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory)), Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(kotlin.Array((com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory)), Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Partial upload allows Offline OData applications to upload a subset of the requests in the request queue. Requests from multiple upload categories can be uploaded together by performing a partial upload, which is accomplished by calling the upload function with a list of upload categories to upload. All requests that the selected requests depend on are included in the upload, even if those requests are not in the specified upload categories. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploadmedia.html">uploadMedia</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">uploadMedia</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$uploadMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$uploadMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions)/content">content</span><span class="symbol">:</span>&nbsp;<span class="identifier">StreamBase</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$uploadMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$uploadMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#uploadMedia(EntityValue, StreamBase, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="uploadstream.html">uploadStream</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">uploadStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$uploadStream(EntityValue, StreamLink, StreamBase, HttpHeaders, RequestOptions)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$uploadStream(EntityValue, StreamLink, StreamBase, HttpHeaders, RequestOptions)/link">link</span><span class="symbol">:</span>&nbsp;<span class="identifier">StreamLink</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$uploadStream(EntityValue, StreamLink, StreamBase, HttpHeaders, RequestOptions)/content">content</span><span class="symbol">:</span>&nbsp;<span class="identifier">StreamBase</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$uploadStream(EntityValue, StreamLink, StreamBase, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$uploadStream(EntityValue, StreamLink, StreamBase, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Please reference com.sap.cloud.mobile.odata.DataServiceProvider#uploadStream(EntityValue, StreamLink, StreamBase, HttpHeaders, RequestOptions)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

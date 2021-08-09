@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DeviceUserManager.makeCurrent - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.user</a>&nbsp;/&nbsp;<a href="index.html">DeviceUserManager</a>&nbsp;/&nbsp;<a href="./makecurrent.html">makeCurrent</a><br/>
+<br/>
+<h1>makeCurrent</h1>
+<a name="com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">makeCurrent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/user">user</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/onBoarded">onBoarded</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/userSwitchCallback">userSwitchCallback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">newUser</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">oldUser</span><span class="symbol">:</span>&nbsp;<a href="../deviceuser/index.html"><span class="identifier">DeviceUser</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Makes the given <a href="makecurrent.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/user">user</a> as the current active user. if <a href="makecurrent.html#com.sap.cloud.mobile.foundation.user.DeviceUserManager$makeCurrent(com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Boolean, kotlin.coroutines.SuspendFunction2((com.sap.cloud.mobile.foundation.user.DeviceUser, com.sap.cloud.mobile.foundation.user.DeviceUser, kotlin.Unit)))/userSwitchCallback">userSwitchCallback</a> is provided,
+both the current and previous active user will be notified.</p>
+<h3>Parameters</h3>
+<p><a name="user"></a>
+<code>user</code> - The user to be marked as the current active user</p>
+<p><a name="onBoarded"></a>
+<code>onBoarded</code> - By default, this user will also be marked as 'onboarded' if this parameter is
+not provided</p>
+<p><a name="userSwitchCallback"></a>
+<code>userSwitchCallback</code> - The callback function which needs to know both the current and the
+previous users.</p>
+</BODY>
+</HTML>

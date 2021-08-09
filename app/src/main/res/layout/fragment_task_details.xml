@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TaskDetailsFragment"
+    >
+
+
+    <!--appbar_always_elevated makes sure AppBarLayout always has 4dp elevation. By default it's 0dp.-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:stateListAnimator="@drawable/appbar_always_elevated"
+        >
+
+        <!--Setting titleEnabled and expandedTitleTextAppearance to get rid of title animation-->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+            app:titleEnabled="false"
+            >
+
+            <!--layout_marginTop must be the toolbar height. ObjectHeader and Toolbar are both
+            elevated to 4dp so there's no shadow between them.-->
+            <com.sap.cloud.mobile.fiori.object.ObjectHeader
+                android:id="@+id/objectHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:elevation="0dp"
+                app:headlineLines="4"
+                app:headlineTextAppearance="@style/QText"
+                app:layout_anchor="@+id/appBarLayout"
+                app:preserveDetailImageSpacing="true"
+                >
+
+            </com.sap.cloud.mobile.fiori.object.ObjectHeader>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:theme="@style/AppTheme.AppBarOverlay"
+                />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="6dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/task_details_no_products_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/no_products_added_label"
+                android:textSize="20sp"
+                android:visibility="visible"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/task_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/button_color"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/complete_text"
+            android:textColor="@color/white"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/task_assign_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/button_color"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/assign_task_to_me_text"
+
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DecimalValue - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DecimalValue</a><br/>
+<br/>
+<h1>DecimalValue</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DecimalValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="getvalue.html">DecimalValue.value</a></code> of type <code>decimal</code>.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="zero.html">zero</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">zero</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DecimalValue</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/undefined.html">undefined</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">undefined</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="compare.html">compare</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">compare</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DecimalValue$compare(com.sap.cloud.mobile.odata.DecimalValue, com.sap.cloud.mobile.odata.DecimalValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DecimalValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DecimalValue$compare(com.sap.cloud.mobile.odata.DecimalValue, com.sap.cloud.mobile.odata.DecimalValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DecimalValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Compare two wrapped values for ordering.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DecimalValue$equal(com.sap.cloud.mobile.odata.DecimalValue, com.sap.cloud.mobile.odata.DecimalValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DecimalValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DecimalValue$equal(com.sap.cloud.mobile.odata.DecimalValue, com.sap.cloud.mobile.odata.DecimalValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DecimalValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Compare two wrapped values for equality.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equals.html">equals</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DecimalValue$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this object is equal to <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return the type BasicType.DECIMAL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettypecode.html">getTypeCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTypeCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data type code of the wrapped value, equivalent to <code>dataType.code</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span></code>
+<p>Return the wrapped value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hashcode.html">hashCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Hash the wrapped value to a number.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="of.html">of</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DecimalValue$of(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DecimalValue</span></a></code>
+<p>Wrap a <code>decimal</code> value as an object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ofnullable.html">ofNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ofNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DecimalValue$ofNullable(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DecimalValue</span></a><span class="symbol">?</span></code>
+<p>Wrap a nullable <code>decimal</code> value as an object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tonullable.html">toNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DecimalValue$toNullable(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span><span class="symbol">?</span></code>
+<p>Convert a wrapped <code>decimal</code> value to a nullable decimal.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="getdatatype.html">DecimalValue.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unwrap.html">unwrap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">unwrap</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DecimalValue$unwrap(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span></code>
+<p>Convert a wrapped <code>decimal</code> value to a decimal.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datavalue/clonemutable.html">cloneMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cloneMutable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$cloneMutable(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A clone of <code>value</code> if it is mutable, or <code>value</code> if it is immutable.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

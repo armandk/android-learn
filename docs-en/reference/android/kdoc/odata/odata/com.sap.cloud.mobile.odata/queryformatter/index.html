@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryFormatter - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">QueryFormatter</a><br/>
+<br/>
+<h1>QueryFormatter</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">QueryFormatter</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">QueryFormatter</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="format.html">format</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">format</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$format(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataContext)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$format(com.sap.cloud.mobile.odata.DataQuery, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a formatted data query for use in an OData URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatcanonicalurl.html">formatCanonicalURL</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatCanonicalURL</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See formatCanonicalURL(EntityValue, DataContext, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatCanonicalURL</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/absolute">absolute</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the canonical URL of an entity (relative by default, absolute if specified).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatdatavalue.html">formatDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatDataValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatDataValue(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatDataValue(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a formatted data value for use in an OData URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formateditlink.html">formatEditLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatEditLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatEditLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatEditLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the exit link of an entity (if set) or the entity's canonical URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatentityid.html">formatEntityID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatEntityID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatEntityID(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatEntityID(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the formatted ID of an entity for use in a URL, i.e. <code>entity.entityID</code> (if set) or the entity's canonical URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatentitykey.html">formatEntityKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatEntityKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatEntityKey(com.sap.cloud.mobile.odata.EntityKey, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/entityKey">entityKey</span><span class="symbol">:</span>&nbsp;<a href="../entitykey/index.html"><span class="identifier">EntityKey</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatEntityKey(com.sap.cloud.mobile.odata.EntityKey, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/entityType">entityType</span><span class="symbol">:</span>&nbsp;<a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatEntityKey(com.sap.cloud.mobile.odata.EntityKey, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the formatted key of an entity for use in a URL, e.g. "(123)" or "(n=123,s='xyz')".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatreadlink.html">formatReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatReadLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatReadLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatReadLink(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the read link of an entity (if set) or the entity's canonical URL.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

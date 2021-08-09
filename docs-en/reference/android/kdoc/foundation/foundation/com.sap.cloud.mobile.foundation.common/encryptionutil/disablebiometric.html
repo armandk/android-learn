@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EncryptionUtil.disableBiometric - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">EncryptionUtil</a>&nbsp;/&nbsp;<a href="./disablebiometric.html">disableBiometric</a><br/>
+<br/>
+<h1>disableBiometric</h1>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$disableBiometric(kotlin.String, kotlin.CharArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">disableBiometric</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$disableBiometric(kotlin.String, kotlin.CharArray)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$disableBiometric(kotlin.String, kotlin.CharArray)/existingPasscode">existingPasscode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Disables the biometric authentication and the encryption key can only be retrieved via <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[])</a></code> only after this method returns successfully. </p>
+<p>Note that if the user calls <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[], Cipher)</a></code>, the user's encryption key will be protected by biometric authentication again.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="existingPasscode"></a>
+<code>existingPasscode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the existing passcode</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current state is not PASSCODE_BIOMETRIC.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the passcode is incorrect or encryption/decryption error occurs.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$disableBiometric(kotlin.String, kotlin.CharArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">disableBiometric</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$disableBiometric(kotlin.String, kotlin.CharArray)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$disableBiometric(kotlin.String, kotlin.CharArray)/existingPasscode">existingPasscode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Disables the biometric authentication and the encryption key can only be retrieved via <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[])</a></code> only after this method returns successfully. </p>
+<p>Note that if the user calls <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[], Cipher)</a></code>, the user's encryption key will be protected by biometric authentication again.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="existingPasscode"></a>
+<code>existingPasscode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the existing passcode</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current state is not PASSCODE_BIOMETRIC.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the passcode is incorrect or encryption/decryption error occurs.</p>
+</BODY>
+</HTML>

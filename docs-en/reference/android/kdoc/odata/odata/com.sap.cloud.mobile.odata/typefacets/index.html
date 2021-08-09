@@ -1,0 +1,246 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TypeFacets - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">TypeFacets</a><br/>
+<br/>
+<h1>TypeFacets</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TypeFacets</span></code>
+<p>Encapsulates the metadata of custom <a href="http://odata.org">OData</a> type facets.</p>
+ See Also: 
+<p><code><a href="../datamethod/index.html">com.sap.cloud.mobile.odata.DataMethod</a></code>, <code><a href="../parameter/index.html">com.sap.cloud.mobile.odata.Parameter</a></code>, <code><a href="../property/index.html">com.sap.cloud.mobile.odata.Property</a></code>, <code><a href="../simpletype/index.html">com.sap.cloud.mobile.odata.SimpleType</a></code>,</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TypeFacets</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates the metadata of custom <a href="http://odata.org">OData</a> type facets.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="any_length.html">ANY_LENGTH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ANY_LENGTH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Indicates an unspecified length.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="any_precision.html">ANY_PRECISION</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ANY_PRECISION</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Indicates an unspecified precision.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="floating_scale.html">FLOATING_SCALE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">FLOATING_SCALE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Indicates the scale is floating.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="variable_scale.html">VARIABLE_SCALE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">VARIABLE_SCALE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Indicates the scale is variable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="variable_srid.html">VARIABLE_SRID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">VARIABLE_SRID</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Indicates the srid is variable.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getdefaultvalue.html">getDefaultValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDefaultValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Default value for the associated definition.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmaxlength.html">getMaxLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMaxLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) Maximum length of the associated value, or <code>null</code> for unspecified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getminlength.html">getMinLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMinLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) Minimum length of the associated value, or <code>null</code> for unspecified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprecision.html">getPrecision</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrecision</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) Precision of the associated value, or <code>null</code> for unspecified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getscale.html">getScale</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getScale</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) Scale of the associated value, or <code>null</code>, then it implies the value <code>0</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsrid.html">getSrid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSrid</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) <a href="http://www.epsg.org/Geodetic.html">EPSG</a> Spatial Reference System Identifier (SRID) for the associated value, or <code>null</code> for unspecified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isnullable.html">isNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNullable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code>
+<p>Return (nullable) Is the associated value nullable? If <code>isNullable</code> is <code>null</code>, then it implies the value <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isunicode.html">isUnicode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isUnicode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code>
+<p>Return (nullable) Does the associated value permit Unicode characters? If <code>isUnicode</code> is <code>null</code>, then it implies the value <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="merge.html">merge</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">merge</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$merge(com.sap.cloud.mobile.odata.TypeFacets, com.sap.cloud.mobile.odata.TypeFacets)/from">from</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TypeFacets</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$merge(com.sap.cloud.mobile.odata.TypeFacets, com.sap.cloud.mobile.odata.TypeFacets)/to">to</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TypeFacets</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TypeFacets</span></a><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdefaultvalue.html">setDefaultValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDefaultValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$setDefaultValue(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set default value for the associated definition.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmaxlength.html">setMaxLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMaxLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$setMaxLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set maximum length of the associated value, or <code>null</code> for unspecified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setminlength.html">setMinLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMinLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$setMinLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set minimum length of the associated value, or <code>null</code> for unspecified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnullable.html">setNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$setNullable(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is the associated value nullable? If <code>isNullable</code> is <code>null</code>, then it implies the value <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setprecision.html">setPrecision</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPrecision</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$setPrecision(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set precision of the associated value, or <code>null</code> for unspecified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setscale.html">setScale</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setScale</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$setScale(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set scale of the associated value, or <code>null</code>, then it implies the value <code>0</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsrid.html">setSrid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSrid</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$setSrid(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <a href="http://www.epsg.org/Geodetic.html">EPSG</a> Spatial Reference System Identifier (SRID) for the associated value, or <code>null</code> for unspecified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setunicode.html">setUnicode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUnicode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TypeFacets$setUnicode(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the associated value permit Unicode characters? If <code>isUnicode</code> is <code>null</code>, then it implies the value <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

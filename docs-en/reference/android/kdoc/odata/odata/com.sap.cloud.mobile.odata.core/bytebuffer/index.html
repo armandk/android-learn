@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ByteBuffer - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">ByteBuffer</a><br/>
+<br/>
+<h1>ByteBuffer</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ByteBuffer</span></code>
+<p>High performance byte buffer.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ByteBuffer</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>See ByteBuffer(int).</p>
+<code><span class="identifier">ByteBuffer</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new buffer with a <code><a href="getlength.html">ByteBuffer.length</a></code> of zero and specified initial <code>capacity</code>. A buffer can expand in length beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the buffer's maximum length.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$add(kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a byte to the end of this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="append.html">append</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">append</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$append(kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Append a binary value to the end of this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code><a href="getlength.html">ByteBuffer.length</a></code> to zero.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$get(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code>
+<p>Return the byte of this buffer at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlength.html">getLength</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return length of the buffer (the number of bytes that will appear in <code>this.toBinary()</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrange.html">getRange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$getRange(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$getRange(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Return a range of bytes from this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="internalarray.html">internalArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">internalArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="reverse.html">reverse</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">reverse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>reverse the bytes of this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$set(kotlin.Int, kotlin.Byte)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$set(kotlin.Int, kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the byte of this buffer at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlength.html">setLength</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$setLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set length of the buffer (the number of bytes that will appear in <code>this.toBinary()</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrange.html">setRange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$setRange(kotlin.Int, kotlin.ByteArray)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$setRange(kotlin.Int, kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy a range of bytes from a binary value into this buffer, starting at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tobinary.html">toBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toBinary</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Return a binary value with the <code><a href="getlength.html">ByteBuffer.length</a></code> bytes of this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="witharray.html">withArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$withArray(kotlin.ByteArray)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ByteBuffer</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$withArray(kotlin.ByteArray, kotlin.Int)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ByteBuffer$withArray(kotlin.ByteArray, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ByteBuffer</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

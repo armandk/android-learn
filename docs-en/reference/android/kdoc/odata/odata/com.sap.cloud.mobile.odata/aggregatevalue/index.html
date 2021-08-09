@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AggregateValue - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">AggregateValue</a><br/>
+<br/>
+<h1>AggregateValue</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> aggregate transformation item.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="count.html">count</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">count</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateValue$count(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AggregateValue</span></a></code>
+<p>Creates a $count aggregate transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateValue$create(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateValue$create(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../aggregatemethod/index.html"><span class="identifier">AggregateMethod</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateValue$create(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AggregateValue</span></a></code>
+<p>Creates an aggregate transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createwithexpressionlist.html">createWithExpressionList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createWithExpressionList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateValue$createWithExpressionList(com.sap.cloud.mobile.odata.AggregateExpressionList)/aggregateExpressionList">aggregateExpressionList</span><span class="symbol">:</span>&nbsp;<a href="../aggregateexpressionlist/index.html"><span class="identifier">AggregateExpressionList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AggregateValue</span></a></code>
+<p>Creates an aggregate transformation item with an AggregateExpressionList</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getaggregateexpressionlist.html">getAggregateExpressionList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAggregateExpressionList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../aggregateexpressionlist/index.html"><span class="identifier">AggregateExpressionList</span></a></code>
+<p>Return the list of aggregate expressions</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../transformvalue/chain.html">chain</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">chain</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TransformValue$chain(com.sap.cloud.mobile.odata.TransformValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Adds a new transformation item to be executed after the current one. It will be separated by a '/' in the query url.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../transformvalue/getitems.html">getItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItems</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a></code>
+<p>Return child transform items to be executed after the current transform value is executed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../transformvalue/setitems.html">setItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setItems</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TransformValue$setItems(com.sap.cloud.mobile.odata.TransformValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set child transform items to be executed after the current transform value is executed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

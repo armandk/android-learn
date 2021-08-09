@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BinaryFunction - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">BinaryFunction</a><br/>
+<br/>
+<h1>BinaryFunction</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BinaryFunction</span></code>
+<p>Basic functions for type <code>binary</code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BinaryFunction</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Basic functions for type <code>binary</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="byteat.html">byteAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">byteAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$byteAt(kotlin.ByteArray, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$byteAt(kotlin.ByteArray, kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Byte</span></code>
+<p>Return the byte at <code>index</code> in <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="compareto.html">compareTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">compareTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$compareTo(kotlin.ByteArray, kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$compareTo(kotlin.ByteArray, kotlin.ByteArray)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Compare binary <code>value</code> with <code>other</code> binary value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hashcode.html">hashCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$hashCode(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return a hash code for <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="indexof.html">indexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$indexOf(kotlin.ByteArray, kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$indexOf(kotlin.ByteArray, kotlin.ByteArray)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See indexOf(byte[], byte[], int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$indexOf(kotlin.ByteArray, kotlin.ByteArray, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$indexOf(kotlin.ByteArray, kotlin.ByteArray, kotlin.Int)/find">find</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$indexOf(kotlin.ByteArray, kotlin.ByteArray, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Locates <code>find</code> within <code>value</code>, searching forwards from <code>start</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slice.html">slice</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$slice(kotlin.ByteArray, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$slice(kotlin.ByteArray, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>See slice(byte[], int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$slice(kotlin.ByteArray, kotlin.Int, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$slice(kotlin.ByteArray, kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$slice(kotlin.ByteArray, kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Return a section of <code>value</code> beginning at <code>start</code>, through to <code>end</code>. Allows negative values for <code>start</code> / <code>end</code> to specify end-relative positions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.BinaryFunction$toString(kotlin.ByteArray)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string value with simple (numeric value) mapping of source bytes to target Unicode character values. Use only when character values are limited to <a href="https://en.wikipedia.org/wiki/ISO/IEC_8859-1">ISO-8859-1</a> (the first 256 code points of Unicode).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

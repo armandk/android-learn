@@ -1,0 +1,151 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProviderDownloadProgress - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataProviderDownloadProgress</a><br/>
+<br/>
+<h1>OfflineODataProviderDownloadProgress</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">OfflineODataProviderDownloadProgress</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../offlineodataprovideroperationprogress/index.html"><span class="identifier">OfflineODataProviderOperationProgress</span></a></code>
+<p>Contains information about the progress of a download operation.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OfflineODataProviderDownloadProgress</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Contains information about the progress of a download operation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="subset.html">subset</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">subset</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getsubset.html">getSubset</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSubset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>The OfflineODataProvider will queue up download operations where a different subset of the defining queries is specified. The subset property of OfflineODataProviderDownloadProgress contains the subset of defining queries specified for the download operation. If no subset was specified, the subset property will be `null`.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../offlineodataprovideroperationprogress/getcurrentstepnumber.html">getCurrentStepNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCurrentStepNumber</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>returns the current step number</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../offlineodataprovideroperationprogress/getdefaultmessage.html">getDefaultMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDefaultMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>returns the default message for the current step.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../offlineodataprovideroperationprogress/getoperationid.html">getOperationId</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOperationId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>returns the GUID for current operation</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../offlineodataprovideroperationprogress/getparameters.html">getParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getParameters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code>
+<p>returns the parameters for the particular step being performed. This will vary for each step. <ul> <li>For OfflineODataOperationStep.downloadingEntityStore 
+<p>parameters[0]: received bytes </p>
+<p>parameters[1]: total bytes </p>
+</li>
+<li>For OfflineODataOperationStep.processingDefiningQueries 
+<p>parameters[0]: request name </p>
+<p>parameters[1]: request url </p>
+</li>
+<li>For OfflineODataOperationStep.processingRequests 
+<p>parameters[0]: request number </p>
+<p>parameters[1]: total number of requests </p>
+</li>
+<li>For OfflineODataOperationStep.receivingDataFromServer 
+<p>parameters[0]: received bytes </p>
+</li>
+<li>For OfflineODataOperationStep.sendingDataToServer 
+<p>parameters[0]: sent bytes </p>
+</li>
+<li>For others steps 
+<p>parameters is an empty array </p>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../offlineodataprovideroperationprogress/getstep.html">getStep</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStep</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../offlineodataoperationstep/index.html"><span class="identifier">OfflineODataOperationStep</span></a><span class="symbol">!</span></code>
+<p>returns the particular step being performed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../offlineodataprovideroperationprogress/gettime.html">getTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">GlobalDateTime</span><span class="symbol">!</span></code>
+<p>returns the time of the last update to the progress.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../offlineodataprovideroperationprogress/gettotalnumberofsteps.html">getTotalNumberOfSteps</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTotalNumberOfSteps</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>returns the total number of steps for the operation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../offlineodataprovideroperationprogress/setvalues.html">setValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress$setValues(kotlin.String, kotlin.Int, kotlin.Int, GlobalDateTime, com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep, kotlin.Array((kotlin.String)), kotlin.String)/operationId">operationId</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress$setValues(kotlin.String, kotlin.Int, kotlin.Int, GlobalDateTime, com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep, kotlin.Array((kotlin.String)), kotlin.String)/currentStepNumber">currentStepNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress$setValues(kotlin.String, kotlin.Int, kotlin.Int, GlobalDateTime, com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep, kotlin.Array((kotlin.String)), kotlin.String)/totalNumberOfSteps">totalNumberOfSteps</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress$setValues(kotlin.String, kotlin.Int, kotlin.Int, GlobalDateTime, com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep, kotlin.Array((kotlin.String)), kotlin.String)/time">time</span><span class="symbol">:</span>&nbsp;<span class="identifier">GlobalDateTime</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress$setValues(kotlin.String, kotlin.Int, kotlin.Int, GlobalDateTime, com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep, kotlin.Array((kotlin.String)), kotlin.String)/step">step</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataoperationstep/index.html"><span class="identifier">OfflineODataOperationStep</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress$setValues(kotlin.String, kotlin.Int, kotlin.Int, GlobalDateTime, com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep, kotlin.Array((kotlin.String)), kotlin.String)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProviderOperationProgress$setValues(kotlin.String, kotlin.Int, kotlin.Int, GlobalDateTime, com.sap.cloud.mobile.odata.offline.OfflineODataOperationStep, kotlin.Array((kotlin.String)), kotlin.String)/defaultMessage">defaultMessage</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

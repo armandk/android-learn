@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryInternal - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">QueryInternal</a><br/>
+<br/>
+<h1>QueryInternal</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">QueryInternal</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">QueryInternal</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="applyfunction.html">applyFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">applyFunction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$applyFunction(com.sap.cloud.mobile.odata.QueryFunctionCall, com.sap.cloud.mobile.odata.StructureBase)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../queryfunctioncall/index.html"><span class="identifier">QueryFunctionCall</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$applyFunction(com.sap.cloud.mobile.odata.QueryFunctionCall, com.sap.cloud.mobile.odata.StructureBase)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Evaluate a query function call in the provided context.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="applyoperator.html">applyOperator</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">applyOperator</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$applyOperator(com.sap.cloud.mobile.odata.QueryOperatorCall, com.sap.cloud.mobile.odata.StructureBase)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../queryoperatorcall/index.html"><span class="identifier">QueryOperatorCall</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$applyOperator(com.sap.cloud.mobile.odata.QueryOperatorCall, com.sap.cloud.mobile.odata.StructureBase)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Evaluate a query operator call in the provided context.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clearflagrecursively.html">clearFlagRecursively</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">clearFlagRecursively</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$clearFlagRecursively(com.sap.cloud.mobile.odata.DataQuery, kotlin.Int)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$clearFlagRecursively(com.sap.cloud.mobile.odata.DataQuery, kotlin.Int)/flag">flag</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="evaluate.html">evaluate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">evaluate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$evaluate(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.StructureBase)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$evaluate(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.StructureBase)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Evaluate a query expression <code>value</code> in the provided <code>context</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="evaluatepath.html">evaluatePath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">evaluatePath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$evaluatePath(com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.StructureBase)/path">path</span><span class="symbol">:</span>&nbsp;<a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$evaluatePath(com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.StructureBase)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Evaluate a data path in the provided <code>context</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="evaluatestring.html">evaluateString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">evaluateString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$evaluateString(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.StructureBase)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$evaluateString(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.StructureBase)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringvalue/index.html"><span class="identifier">StringValue</span></a><span class="symbol">?</span></code>
+<p>Evaluate a string-typed query expression <code>value</code> in the provided <code>context</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getreferenced.html">getReferenced</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getReferenced</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$getReferenced(com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.DataValue)/properties">properties</span><span class="symbol">:</span>&nbsp;<a href="../stringset/index.html"><span class="identifier">StringSet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$getReferenced(com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.DataValue)/functions">functions</span><span class="symbol">:</span>&nbsp;<a href="../stringset/index.html"><span class="identifier">StringSet</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$getReferenced(com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.DataValue)/operators">operators</span><span class="symbol">:</span>&nbsp;<a href="../stringset/index.html"><span class="identifier">StringSet</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$getReferenced(com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.StringSet, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Collect the names of properties, functions and operators referenced by the <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="immutablefilter.html">immutableFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">immutableFilter</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$immutableFilter(com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.QueryFilter)/entityType">entityType</span><span class="symbol">:</span>&nbsp;<a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$immutableFilter(com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.QueryFilter)/queryFilter">queryFilter</span><span class="symbol">:</span>&nbsp;<a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="matchfilter.html">matchFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">matchFilter</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$matchFilter(com.sap.cloud.mobile.odata.QueryFilter, com.sap.cloud.mobile.odata.StructureBase)/filter">filter</span><span class="symbol">:</span>&nbsp;<a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$matchFilter(com.sap.cloud.mobile.odata.QueryFilter, com.sap.cloud.mobile.odata.StructureBase)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if a query filter evaluates to <code>true</code> in the provided context.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setflagrecursively.html">setFlagRecursively</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">setFlagRecursively</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$setFlagRecursively(com.sap.cloud.mobile.odata.DataQuery, kotlin.Int)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$setFlagRecursively(com.sap.cloud.mobile.odata.DataQuery, kotlin.Int)/flag">flag</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="sparseindexmap.html">sparseIndexMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">sparseIndexMap</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryInternal$sparseIndexMap(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/sparseindexmap/index.html"><span class="identifier">SparseIndexMap</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

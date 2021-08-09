@@ -1,0 +1,3 @@
+include ':app'
+rootProject.name = "DSI-Android-UI"
+include ':BarcodeScannerLibrary'

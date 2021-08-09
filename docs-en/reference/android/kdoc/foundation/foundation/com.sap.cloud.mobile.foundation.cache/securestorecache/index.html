@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecureStoreCache - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="./index.html">SecureStoreCache</a><br/>
+<br/>
+<h1>SecureStoreCache</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.SecureStoreCache"></a>
+<code><span class="keyword">class </span><span class="identifier">SecureStoreCache</span><span class="symbol">&lt;</span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Serializable</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.cache.SecureStoreCache"></a>
+<code><span class="keyword">class </span><span class="identifier">SecureStoreCache</span><span class="symbol">&lt;</span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Serializable</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>A SecureStoreCache is a fixed size <strong>LRU</strong> (Least Recently Used) cache that contains key-value pairs persisted in an encrypted database. <ol> <li><strong>Key Type</strong>-- <code>String</code></li>
+ <li><strong>Value Types</strong>-- supports <code>Boolean</code>, <code>Byte</code>, <code>Double</code>, <code>Float</code>, <code>Integer</code>, <code>Long</code>, <code>Short</code>, <code>String</code>, <code>byte[]</code>, and any object that implements <code>Serializable</code> interface.</li>
+ </ol>
+ Creating and Opening To instantiate a SecureStoreCache, you need to specify the Android application context, the size of the cache, database file name, an optional database table name, and the database encryption key. </p>
+<p>After a SecureStoreCache is constructed, open the cache with an encryption key which is used to encrypt the underlying persistence store. It is recommended to use <code>EncryptionUtil</code> to obtain the encryption key. If this is the first time store is being opened and <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens. </p>
+<pre><code>MyObjectClass myObject = new MyObjectClass(...); // MyObjectClass must implement Serializable.
+    ....
+    byte[] myEncryptionKey = EncryptionUtil.getEncryptionKey("aliasForMySecureCache", myPasscode);
+    SecureStoreCache&lt;MyObjectClass&gt; cache = new SecureStoreCache&lt;&gt;(
+        context,            // Android application context.
+        32,                 // The size of the cache.
+        "myStoreName");     // The name of the store.
+
+    try {
+        cache.open(myEncryptionKey);
+
+        // Or pass null for the cache to generate an encryption key transparently.
+        // cache.open(null);
+    } catch (OpenFailureException ex) {
+        // Incorrect encryption key. If the encryption key was obtained from UI, try again.
+    }
+ </code></pre> CRUD Operations You can use methods specified by <code><a href="../cache/index.html">Cache</a></code> interface to perform CRUD operations: <pre><code>// Create operations.
+    cache.put("myKey", myObject);
+    ...
+    // Read operations.
+    MyObject retrievedObject = cache.get("myKey");    // Read an entry.
+
+    // Iterates through existing keys.
+    List&lt;String&gt; keyList = cache.keys();
+
+    for (String key : keyList) {
+        logger.debug("Secure Store Key: {} ", key);
+    }
+
+    int totalEntries = cache.getEntryCount();
+    ...
+    // Update operations.
+    cache.put("myKey", myNewObject);
+
+    // Delete (remove) operations.
+    cache.remove("myKey");  // Remove entries one at a time.
+    cache.removeAll();  // Or remove all entries including entries in the backing store!
+ </code></pre> Changing Encryption Key You can change the encryption of the underlying persistence store while the cache is in <code>open</code> state. <pre><code>cache.changeEncryptionKey(newEncryptionKey);
+
+  </code></pre> Closing When you finish executing cache operations, <code><a href="close.html">#close()</a></code> the SecureStoreCache so that the underlying persistence store relinquishes any resources it has acquired during its operations. <pre><code>cache.close();
+ </code></pre> Removing the persistence store You may want to remove the persistence store in some occasions. Note that after the persistence store is removed, any further operation performed on the instance will cause <code>FileMissingException</code>. <pre><code>cache.deleteStore(context); // The cache instance will not be usable after this method!
+ </code></pre>
+</BODY>
+</HTML>

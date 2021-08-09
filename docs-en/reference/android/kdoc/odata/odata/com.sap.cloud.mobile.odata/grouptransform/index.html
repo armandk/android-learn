@@ -1,0 +1,132 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GroupTransform - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">GroupTransform</a><br/>
+<br/>
+<h1>GroupTransform</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GroupTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Represents a group transform item.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="aggregate.html">aggregate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">aggregate</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.GroupTransform$aggregate(kotlin.Array((com.sap.cloud.mobile.odata.AggregateValue)))/items">items</span><span class="symbol">:</span>&nbsp;<a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GroupTransform</span></a></code>
+<p>Adds new aggregate items to the GroupTransform.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="aggregatelist.html">aggregateList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">aggregateList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GroupTransform$aggregateList(com.sap.cloud.mobile.odata.AggregateValueList)/items">items</span><span class="symbol">:</span>&nbsp;<a href="../aggregatevaluelist/index.html"><span class="identifier">AggregateValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GroupTransform</span></a></code>
+<p>Adds new aggregate itemlist to the GroupTransform.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getgroupingpaths.html">getGroupingPaths</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getGroupingPaths</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertypathlist/index.html"><span class="identifier">PropertyPathList</span></a></code>
+<p>Return the list of property paths for the group transform item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettransformvalues.html">getTransformValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTransformValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The list of transform items to be applied for the property paths.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="groupby.html">groupBy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">groupBy</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.GroupTransform$groupBy(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))/items">items</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GroupTransform</span></a></code>
+<p>Creates a GroupTransform item with the given properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="groupbylist.html">groupByList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">groupByList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GroupTransform$groupByList(com.sap.cloud.mobile.odata.PropertyPathList)/items">items</span><span class="symbol">:</span>&nbsp;<a href="../propertypathlist/index.html"><span class="identifier">PropertyPathList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GroupTransform</span></a></code>
+<p>Creates a GroupTransform item with the given propertylist.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settransformvalues.html">setTransformValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTransformValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GroupTransform$setTransformValues(com.sap.cloud.mobile.odata.TransformValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the list of transform items to be applied for the property paths.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transform.html">transform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">transform</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.GroupTransform$transform(kotlin.Array((com.sap.cloud.mobile.odata.TransformValue)))/items">items</span><span class="symbol">:</span>&nbsp;<a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GroupTransform</span></a></code>
+<p>Adds new transform items to the GroupTransform.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transformlist.html">transformList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">transformList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GroupTransform$transformList(com.sap.cloud.mobile.odata.TransformValueList)/items">items</span><span class="symbol">:</span>&nbsp;<a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GroupTransform</span></a></code>
+<p>Adds new transform itemlist to the GroupTransform.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../transformvalue/chain.html">chain</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">chain</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TransformValue$chain(com.sap.cloud.mobile.odata.TransformValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Adds a new transformation item to be executed after the current one. It will be separated by a '/' in the query url.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../transformvalue/getitems.html">getItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItems</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a></code>
+<p>Return child transform items to be executed after the current transform value is executed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../transformvalue/setitems.html">setItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setItems</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TransformValue$setItems(com.sap.cloud.mobile.odata.TransformValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set child transform items to be executed after the current transform value is executed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

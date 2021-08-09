@@ -1,0 +1,385 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ShortList - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ShortList</a><br/>
+<br/>
+<h1>ShortList</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ShortList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Short</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ShortList</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>See ShortList(int).</p>
+<code><span class="identifier">ShortList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new list with <code><a href="../listbase/length.html">ShortList.length</a></code> of zero and optional initial <code>capacity</code>. A list can expand in length beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the list's maximum length.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ShortList</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$add(kotlin.Short)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add <code>item</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addall.html">addAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$addAll(com.sap.cloud.mobile.odata.ShortList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ShortList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add all the items of <code>list</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addthis.html">addThis</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addThis</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$addThis(kotlin.Short)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ShortList</span></a></code>
+<p>Add <code>item</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ShortList</span></a></code>
+<p>Return a <a href="https://en.wikipedia.org/wiki/Object_copying#Shallow_copy">shallow copy</a> of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="first.html">first</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">first</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span></code>
+<p>Return the first item in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="from.html">from</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">from</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$from(kotlin.collections.MutableList((kotlin.Short)))/list">list</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Short</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ShortList</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$get(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span></code>
+<p>Return the item in this list at the specified <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="includes.html">includes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">includes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$includes(kotlin.Short)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list contains <code>item</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="indexof.html">indexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$indexOf(kotlin.Short)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See indexOf(short, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$indexOf(kotlin.Short, kotlin.Int)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$indexOf(kotlin.Short, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return first index in this list of <code>item</code>, or <code>-1</code> if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insertall.html">insertAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">insertAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$insertAll(kotlin.Int, com.sap.cloud.mobile.odata.ShortList)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$insertAll(kotlin.Int, com.sap.cloud.mobile.odata.ShortList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ShortList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Insert all items of <code>list</code> into this list, before the item (if any) at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insertat.html">insertAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">insertAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$insertAt(kotlin.Int, kotlin.Short)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$insertAt(kotlin.Int, kotlin.Short)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Insert <code>item</code> into this list, before the item (if any) at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iterator.html">iterator</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">iterator</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableIterator</span><span class="symbol">&lt;</span><span class="identifier">Short</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="last.html">last</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">last</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span></code>
+<p>Return the last item in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lastindexof.html">lastIndexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$lastIndexOf(kotlin.Short)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See lastIndexOf(short, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$lastIndexOf(kotlin.Short, kotlin.Int)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$lastIndexOf(kotlin.Short, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return last index in this list of <code>item</code>, or <code>-1</code> if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$set(kotlin.Int, kotlin.Short)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$set(kotlin.Int, kotlin.Short)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Short</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the item in this list at the specified <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="share.html">share</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">share</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$share(com.sap.cloud.mobile.odata.ListBase)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ShortList</span></a></code>
+<p>Return a new <code><a href="./index.html">com.sap.cloud.mobile.odata.ShortList</a></code> that shares the <code><a href="../listbase/getuntypedlist.html">ListBase.untypedList</a></code> as the <code>list</code> parameter. To ensure type safety, items in <code>list</code> that do not have the item type <code>short</code> will be removed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="single.html">single</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">single</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Short</span></code>
+<p>Return a single item from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slice.html">slice</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$slice(kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ShortList</span></a></code>
+<p>See slice(int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$slice(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ShortList$slice(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ShortList</span></a></code>
+<p>Return a slice of this list from index <code>start</code> (inclusive) to index <code>end</code> (exclusive).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="todynamic.html">toDynamic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toDynamic</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) a dynamic representation of this list (<code><a href="../datavaluelist/index.html">com.sap.cloud.mobile.odata.DataValueList</a></code>, <code><a href="../complexvaluelist/index.html">com.sap.cloud.mobile.odata.ComplexValueList</a></code>, or <code><a href="../entityvaluelist/index.html">com.sap.cloud.mobile.odata.EntityValueList</a></code>), or <code>null</code> if there is no dynamic representation available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="togeneric.html">toGeneric</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toGeneric</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><span class="identifier">Short</span><span class="symbol">!</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../listbase/clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/getcomparer.html">getComparer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComparer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a></code>
+<p>Return an ordering function for the item type of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return the data type for this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/getequality.html">getEquality</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEquality</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/equality/index.html"><span class="identifier">Equality</span></a></code>
+<p>Return an equality function for the item type of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/getuntypedlist.html">getUntypedList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUntypedList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/untypedlist/index.html"><span class="identifier">UntypedList</span></a></code>
+<p>Return the underlying untyped list. Use with care, avoiding the addition of objects with an incorrect item type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list contains no items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/length.html">length</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">length</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/removeat.html">removeAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$removeAt(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove an item from the specified index in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/removefirst.html">removeFirst</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeFirst</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove the first item (if any) from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/removelast.html">removeLast</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeLast</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove the last item (if any) from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/removerange.html">removeRange</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$removeRange(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$removeRange(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove a range of items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/reverse.html">reverse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reverse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reverse the order of the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/sharewith.html">shareWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">shareWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$shareWith(com.sap.cloud.mobile.odata.ListBase, kotlin.Boolean)/other">other</span><span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$shareWith(com.sap.cloud.mobile.odata.ListBase, kotlin.Boolean)/replace">replace</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/sort.html">sort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort the items in this list, using the <code><a href="../listbase/getcomparer.html">ListBase.comparer</a></code> property for ordering.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/sortwith.html">sortWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$sortWith(com.sap.cloud.mobile.odata.core.Comparer)/comparer">comparer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string representation of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/validate.html">validate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ListBase$validate(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Base function for validating the item's value before adding it to the list. Validate is needed in some ListBase types, for exampe in the case of ByteList, where a value out of the ByteValue type's valid range can be added, because ByteList accepts Int instead of Byte. With a proper overwrite of this function in the given BaseList class ensures, that only a valid value Int (-128 - +127 in this case) can be added to the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

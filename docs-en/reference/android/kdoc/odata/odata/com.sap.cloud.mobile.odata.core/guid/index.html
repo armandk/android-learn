@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GUID - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">GUID</a><br/>
+<br/>
+<h1>GUID</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GUID</span></code>
+<p>A <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Universally unique identifier</a>.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="frombinary.html">fromBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.GUID$fromBinary(kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GUID</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) GUID parsed from binary format (16 bytes), or <code>null</code> if the data is not a valid GUID.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromstring.html">fromString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.GUID$fromString(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GUID</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) GUID parsed from string format (32 or 36 hexadecimal digits), or <code>null</code> if the text is not a valid GUID.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="newrandom.html">newRandom</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">newRandom</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GUID</span></a></code>
+<p>Return a new type 4 (random) GUID.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tobinary.html">toBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toBinary</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Return this GUID in binary format (16 bytes).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return this GUID in string format (36 characters).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring32.html">toString32</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString32</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return this GUID in string format (32 characters).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring36.html">toString36</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString36</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return this GUID in string format (36 characters).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

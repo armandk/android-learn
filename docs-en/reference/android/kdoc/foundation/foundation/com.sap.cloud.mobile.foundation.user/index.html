@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.foundation.user - foundation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">foundation</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.foundation.user</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.foundation.user</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="deviceuser/index.html">DeviceUser</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">DeviceUser</span></code>
+<p>Represents the model of a device user.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deviceusermanager/index.html">DeviceUserManager</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DeviceUserManager</span></code>
+<p>Represents the device user manager to manage the user information saved on the device.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="user/index.html">User</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">User</span></code>
+<p>Represents the user model returned from mobile server</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="userinfo/index.html">UserInfo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">UserInfo</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Parcelable</span><span class="symbol">, </span><span class="identifier">Serializable</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">UserInfo</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Parcelable</span><span class="symbol">, </span><span class="identifier">Serializable</span></code>
+<p>This class represent Information about user. This class is a Parcelable and can be passed around on different Activities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="userinfochangelistener/index.html">UserInfoChangeListener</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><s><span class="identifier">UserInfoChangeListener</span></s></code>
+<p>Represents the interface where client code can get notified with both old and new user information</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="userroles/index.html">UserRoles</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">UserRoles</span></s></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><s><span class="identifier">UserRoles</span></s></code>
+<p>Loads information about the current user from mobile services. The information provides the name, id and roles of the current user. The id and the name of the user are always available. The `roles` parameter is available only if access control is enabled in the mobile services cockpit. Deprecated since 3.2, replaced with <code><a href="userservice/index.html">UserService</a></code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="userroleservice/index.html">UserRoleService</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><s><span class="identifier">UserRoleService</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the service to update user information automatically when users is authenticated or
+the mobile application is brought to foreground. To make the service automatically do this,
+<a href="userroleservice/userinfochangelistener.html">userInfoChangeListener</a> must be provided, and it will only notified when new user information is
+retrieved from mobile services, then both old user information and the new information will be notified
+to client code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="userservice/index.html">UserService</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UserService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the service to retrieve user information from mobile server.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="userstoremanager/index.html">UserStoreManager</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UserStoreManager</span></code>
+<p>Represents the local secure store which stores user related information and will be protected by
+user's passcode.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

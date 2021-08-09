@@ -1,0 +1,1306 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StructureType - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">StructureType</a><br/>
+<br/>
+<h1>StructureType</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">StructureType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Common base class for <code><a href="../complextype/index.html">com.sap.cloud.mobile.odata.ComplexType</a></code> and <code><a href="../entitytype/index.html">com.sap.cloud.mobile.odata.EntityType</a></code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">StructureType</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Common base class for <code><a href="../complextype/index.html">com.sap.cloud.mobile.odata.ComplexType</a></code> and <code><a href="../entitytype/index.html">com.sap.cloud.mobile.odata.EntityType</a></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datatype/annotation_path.html">ANNOTATION_PATH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ANNOTATION_PATH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for an OData CSDL <code>AnnotationPath</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/binary.html">BINARY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BINARY</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>binary</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/boolean.html">BOOLEAN</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BOOLEAN</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>boolean</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/byte.html">BYTE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BYTE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>byte</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/byte_stream.html">BYTE_STREAM</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">BYTE_STREAM</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../bytestream/index.html">com.sap.cloud.mobile.odata.ByteStream</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/char.html">CHAR</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">CHAR</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>char</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/char_stream.html">CHAR_STREAM</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">CHAR_STREAM</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../charstream/index.html">com.sap.cloud.mobile.odata.CharStream</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/code_unknown.html">CODE_UNKNOWN</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">CODE_UNKNOWN</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/complex_value.html">COMPLEX_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COMPLEX_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/complex_value_list.html">COMPLEX_VALUE_LIST</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COMPLEX_VALUE_LIST</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../complexvaluelist/index.html">com.sap.cloud.mobile.odata.ComplexValueList</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/data_value_list.html">DATA_VALUE_LIST</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DATA_VALUE_LIST</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../datavaluelist/index.html">com.sap.cloud.mobile.odata.DataValueList</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/day_time_duration.html">DAY_TIME_DURATION</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DAY_TIME_DURATION</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../daytimeduration/index.html">com.sap.cloud.mobile.odata.DayTimeDuration</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/decimal.html">DECIMAL</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DECIMAL</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>decimal</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/delta_stream.html">DELTA_STREAM</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DELTA_STREAM</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../deltastream/index.html">com.sap.cloud.mobile.odata.DeltaStream</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/double.html">DOUBLE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DOUBLE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>double</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/dynamic_path.html">DYNAMIC_PATH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DYNAMIC_PATH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for a dynamic (structural or navigation) path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/edm_primitive.html">EDM_PRIMITIVE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">EDM_PRIMITIVE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the "Edm.PrimitiveType" abstract data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/entity_value.html">ENTITY_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ENTITY_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/entity_value_list.html">ENTITY_VALUE_LIST</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ENTITY_VALUE_LIST</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../entityvaluelist/index.html">com.sap.cloud.mobile.odata.EntityValueList</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/enum_value.html">ENUM_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ENUM_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for an enum type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/float.html">FLOAT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">FLOAT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>float</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geography_collection.html">GEOGRAPHY_COLLECTION</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOGRAPHY_COLLECTION</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geographycollection/index.html">com.sap.cloud.mobile.odata.GeographyCollection</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geography_line_string.html">GEOGRAPHY_LINE_STRING</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOGRAPHY_LINE_STRING</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geographylinestring/index.html">com.sap.cloud.mobile.odata.GeographyLineString</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geography_multi_line_string.html">GEOGRAPHY_MULTI_LINE_STRING</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOGRAPHY_MULTI_LINE_STRING</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geographymultilinestring/index.html">com.sap.cloud.mobile.odata.GeographyMultiLineString</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geography_multi_point.html">GEOGRAPHY_MULTI_POINT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOGRAPHY_MULTI_POINT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geographymultipoint/index.html">com.sap.cloud.mobile.odata.GeographyMultiPoint</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geography_multi_polygon.html">GEOGRAPHY_MULTI_POLYGON</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOGRAPHY_MULTI_POLYGON</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geographymultipolygon/index.html">com.sap.cloud.mobile.odata.GeographyMultiPolygon</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geography_point.html">GEOGRAPHY_POINT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOGRAPHY_POINT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geographypoint/index.html">com.sap.cloud.mobile.odata.GeographyPoint</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geography_polygon.html">GEOGRAPHY_POLYGON</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOGRAPHY_POLYGON</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geographypolygon/index.html">com.sap.cloud.mobile.odata.GeographyPolygon</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geography_value.html">GEOGRAPHY_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOGRAPHY_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geographyvalue/index.html">com.sap.cloud.mobile.odata.GeographyValue</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geometry_collection.html">GEOMETRY_COLLECTION</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOMETRY_COLLECTION</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geometrycollection/index.html">com.sap.cloud.mobile.odata.GeometryCollection</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geometry_line_string.html">GEOMETRY_LINE_STRING</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOMETRY_LINE_STRING</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geometrylinestring/index.html">com.sap.cloud.mobile.odata.GeometryLineString</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geometry_multi_line_string.html">GEOMETRY_MULTI_LINE_STRING</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOMETRY_MULTI_LINE_STRING</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geometrymultilinestring/index.html">com.sap.cloud.mobile.odata.GeometryMultiLineString</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geometry_multi_point.html">GEOMETRY_MULTI_POINT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOMETRY_MULTI_POINT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geometrymultipoint/index.html">com.sap.cloud.mobile.odata.GeometryMultiPoint</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geometry_multi_polygon.html">GEOMETRY_MULTI_POLYGON</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOMETRY_MULTI_POLYGON</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geometrymultipolygon/index.html">com.sap.cloud.mobile.odata.GeometryMultiPolygon</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geometry_point.html">GEOMETRY_POINT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOMETRY_POINT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geometrypoint/index.html">com.sap.cloud.mobile.odata.GeometryPoint</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geometry_polygon.html">GEOMETRY_POLYGON</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOMETRY_POLYGON</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geometrypolygon/index.html">com.sap.cloud.mobile.odata.GeometryPolygon</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/geometry_value.html">GEOMETRY_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GEOMETRY_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../geometryvalue/index.html">com.sap.cloud.mobile.odata.GeometryValue</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/global_date_time.html">GLOBAL_DATE_TIME</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GLOBAL_DATE_TIME</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../globaldatetime/index.html">com.sap.cloud.mobile.odata.GlobalDateTime</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/guid_value.html">GUID_VALUE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">GUID_VALUE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../guidvalue/index.html">com.sap.cloud.mobile.odata.GuidValue</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/int.html">INT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">INT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>int</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/integer.html">INTEGER</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">INTEGER</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>integer</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/list.html">LIST</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">LIST</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../listbase/index.html">com.sap.cloud.mobile.odata.ListBase</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/local_date.html">LOCAL_DATE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">LOCAL_DATE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../localdate/index.html">com.sap.cloud.mobile.odata.LocalDate</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/local_date_time.html">LOCAL_DATE_TIME</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">LOCAL_DATE_TIME</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../localdatetime/index.html">com.sap.cloud.mobile.odata.LocalDateTime</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/local_time.html">LOCAL_TIME</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">LOCAL_TIME</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../localtime/index.html">com.sap.cloud.mobile.odata.LocalTime</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/long.html">LONG</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">LONG</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>long</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/navigation_path.html">NAVIGATION_PATH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">NAVIGATION_PATH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for an OData CSDL <code>NavigationPropertyPath</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/object.html">OBJECT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">OBJECT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>object</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/path.html">PATH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">PATH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for <code><a href="../datapath/index.html">com.sap.cloud.mobile.odata.DataPath</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/path_expression.html">PATH_EXPRESSION</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">PATH_EXPRESSION</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for an OData CSDL <code>Path</code> expression.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/property_path.html">PROPERTY_PATH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">PROPERTY_PATH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for an OData CSDL <code>AnyPropertyPath</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/query_alias.html">QUERY_ALIAS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">QUERY_ALIAS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for <code><a href="../queryalias/index.html">com.sap.cloud.mobile.odata.QueryAlias</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/query_filter.html">QUERY_FILTER</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">QUERY_FILTER</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for <code><a href="../queryfilter/index.html">com.sap.cloud.mobile.odata.QueryFilter</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/query_function_call.html">QUERY_FUNCTION_CALL</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">QUERY_FUNCTION_CALL</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for <code><a href="../queryfunctioncall/index.html">com.sap.cloud.mobile.odata.QueryFunctionCall</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/query_operator_call.html">QUERY_OPERATOR_CALL</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">QUERY_OPERATOR_CALL</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for <code><a href="../queryoperatorcall/index.html">com.sap.cloud.mobile.odata.QueryOperatorCall</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/short.html">SHORT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">SHORT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>short</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/stream_link.html">STREAM_LINK</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STREAM_LINK</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../streamlink/index.html">com.sap.cloud.mobile.odata.StreamLink</a></code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/string.html">STRING</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STRING</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>string</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/structural_path.html">STRUCTURAL_PATH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STRUCTURAL_PATH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for an OData CSDL <code>PropertyPath</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/target_path.html">TARGET_PATH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TARGET_PATH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for an OData CSDL <code>TargetPath</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/unknown.html">unknown</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">unknown</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/unsigned_byte.html">UNSIGNED_BYTE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">UNSIGNED_BYTE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>unsignedByte</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/unsigned_int.html">UNSIGNED_INT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">UNSIGNED_INT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>unsignedInt</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/unsigned_long.html">UNSIGNED_LONG</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">UNSIGNED_LONG</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>unsignedLong</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/unsigned_short.html">UNSIGNED_SHORT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">UNSIGNED_SHORT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code>unsignedShort</code> data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/year_month_duration.html">YEAR_MONTH_DURATION</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">YEAR_MONTH_DURATION</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Constant type code for the <code><a href="../yearmonthduration/index.html">com.sap.cloud.mobile.odata.YearMonthDuration</a></code> data type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getannotation.html">getAnnotation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotation</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$getAnnotation(kotlin.String)/term">term</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotation/index.html"><span class="identifier">Annotation</span></a></code>
+<p>Lookup an existing annotation by term name, or throw an exception if the annotation is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationlist.html">getAnnotationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationlist/index.html"><span class="identifier">AnnotationList</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">StructureType.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationmap.html">getAnnotationMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">StructureType.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotations.html">getAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return map of annotations for this model element. For annotations without qualifiers, the entry key is the annotation term name. For annotations with qualifiers, the entry key is the annotation term name, then "#", then the annotation qualifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcanberemoved.html">getCanBeRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCanBeRemoved</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return can this model element be removed by <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Set this to <code>true</code> to indicate that the application is coded to be able able to function correctly without this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcollectionproperties.html">getCollectionProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCollectionProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a></code>
+<p>Return list of collection-typed properties for this type (both structural and navigation properties may be included).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcomplexproperties.html">getComplexProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComplexProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a></code>
+<p>Return list of complex properties for this type (a subset of <code><a href="getstructuralproperties.html">StructureType.structuralProperties</a></code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getextensionproperties.html">getExtensionProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getExtensionProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a></code>
+<p>Return list of extension properties for this type. Includes extension structural/navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlocalname.html">getLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the local name of this type within its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code>, e.g. "MyType".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return synonym for <code><a href="getqualifiedname.html">StructureType.qualifiedName</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnavigationproperties.html">getNavigationProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNavigationProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a></code>
+<p>Return list of navigation properties for this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getobjectfactory.html">getObjectFactory</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getObjectFactory</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/objectfactory/index.html"><span class="identifier">ObjectFactory</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Factory for creating custom (subclass) objects with this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getproperty.html">getProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$getProperty(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a></code>
+<p>Lookup an existing property by name. If the property does not exist it indicates a fundamental implementation problem, therefore a non-catchable <code>FatalException</code> will be thrown, and the app intentionally crashes. The reason behind this drastic behaviour is to avoid mismatch between server and client. It is still possible to avoid the <code>FatalException</code> by looking up propery before calling this method like in the following code snippet: </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpropertylist.html">getPropertyList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPropertyList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a></code>
+<p>Return list of stream, structural and navigation properties for this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpropertymap.html">getPropertyMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPropertyMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertymap/index.html"><span class="identifier">PropertyMap</span></a></code>
+<p>Return map of stream, structural and navigation properties for this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getqualifiedname.html">getQualifiedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQualifiedName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this type qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> name, e.g. "MySchema.MyType".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsourceline.html">getSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceLine</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstreamproperties.html">getStreamProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStreamProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a></code>
+<p>Return list of stream properties for this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstructuralproperties.html">getStructuralProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStructuralProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a></code>
+<p>Return list of structural properties for this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hassubtypes.html">hasSubtypes</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">hasSubtypes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type has subtypes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hassupertype.html">hasSupertype</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">hasSupertype</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type has a supertype.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isabstract.html">isAbstract</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isAbstract</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is an abstract type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isextension.html">isExtension</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isExtension</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type was added since metadata was originally loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isinferred.html">isInferred</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isInferred</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this structure type was inferred due to a missing term definition in the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isopentype.html">isOpenType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isOpenType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is an open type. An open type can have dynamic properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isremoved.html">isRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isRemoved</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return has this model element been removed by a successful call to <code>DataService.refreshMetadata</code>? If `isRemoved == true, that implies that the old metadata (before refreshMetadata was called) did include this model element, and that the new metadata (after refreshMetadata was called) does not include this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setabstract.html">setAbstract</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAbstract</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setAbstract(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this is an abstract type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcanberemoved.html">setCanBeRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCanBeRemoved</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setCanBeRemoved(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set can this model element be removed by <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Set this to <code>true</code> to indicate that the application is coded to be able able to function correctly without this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcollectionproperties.html">setCollectionProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCollectionProperties</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setCollectionProperties(com.sap.cloud.mobile.odata.PropertyList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set list of collection-typed properties for this type (both structural and navigation properties may be included).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcomplexproperties.html">setComplexProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setComplexProperties</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setComplexProperties(com.sap.cloud.mobile.odata.PropertyList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set list of complex properties for this type (a subset of <code><a href="getstructuralproperties.html">StructureType.structuralProperties</a></code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setextension.html">setExtension</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExtension</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setExtension(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this type was added since metadata was originally loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setextensionproperties.html">setExtensionProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExtensionProperties</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setExtensionProperties(com.sap.cloud.mobile.odata.PropertyList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set list of extension properties for this type. Includes extension structural/navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinferred.html">setInferred</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInferred</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setInferred(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this structure type was inferred due to a missing term definition in the CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlocalname.html">setLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLocalName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setLocalName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the local name of this type within its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code>, e.g. "MyType".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnavigationproperties.html">setNavigationProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNavigationProperties</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setNavigationProperties(com.sap.cloud.mobile.odata.PropertyList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set list of navigation properties for this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setobjectfactory.html">setObjectFactory</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setObjectFactory</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setObjectFactory(com.sap.cloud.mobile.odata.core.ObjectFactory)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/objectfactory/index.html"><span class="identifier">ObjectFactory</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set factory for creating custom (subclass) objects with this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setopentype.html">setOpenType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOpenType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setOpenType(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this is an open type. An open type can have dynamic properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpropertylist.html">setPropertyList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPropertyList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setPropertyList(com.sap.cloud.mobile.odata.PropertyList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set list of stream, structural and navigation properties for this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpropertymap.html">setPropertyMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPropertyMap</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setPropertyMap(com.sap.cloud.mobile.odata.PropertyMap)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../propertymap/index.html"><span class="identifier">PropertyMap</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set map of stream, structural and navigation properties for this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setqualifiedname.html">setQualifiedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setQualifiedName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setQualifiedName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the name of this type qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> name, e.g. "MySchema.MyType".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setremoved.html">setRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRemoved</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setRemoved(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set has this model element been removed by a successful call to <code>DataService.refreshMetadata</code>? If `isRemoved == true, that implies that the old metadata (before refreshMetadata was called) did include this model element, and that the new metadata (after refreshMetadata was called) does not include this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsourceline.html">setSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceLine</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setSourceLine(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstreamproperties.html">setStreamProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStreamProperties</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setStreamProperties(com.sap.cloud.mobile.odata.PropertyList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set list of stream properties for this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstructuralproperties.html">setStructuralProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStructuralProperties</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureType$setStructuralProperties(com.sap.cloud.mobile.odata.PropertyList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../propertylist/index.html"><span class="identifier">PropertyList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set list of structural properties for this type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../datatype/forcode.html">forCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">forCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataType$forCode(kotlin.Int)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return the data type for a basic type code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/forname.html">forName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">forName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataType$forName(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return the data type for a basic type name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/getbasetype.html">getBaseType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBaseType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return if this type is a derived simple, complex, entity or enum type, then the base type. Otherwise throw an exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/getcode.html">getCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return a numeric code to represent this data type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/getitemtype.html">getItemType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return if this type is a list type, then the item type. Otherwise throw an exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isbasic.html">isBasic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isBasic</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a basic type (not a complex, entity, list or stream type).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isbasiclist.html">isBasicList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isBasicList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a basic list type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/iscalendar.html">isCalendar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isCalendar</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a calendar type. Calendar types are also basic types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/iscomplex.html">isComplex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isComplex</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is a complex type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/iscomplexlist.html">isComplexList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isComplexList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is a complex list type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isderived.html">isDerived</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isDerived</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a derived simple, complex, entity or enum type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isentity.html">isEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is an entity type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isentitylist.html">isEntityList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEntityList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is an entity list type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isenum.html">isEnum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEnum</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is an enum type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isenumlist.html">isEnumList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEnumList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is an enum list type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isgeography.html">isGeography</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isGeography</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a geography type. Geography types are also basic types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isgeometry.html">isGeometry</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isGeometry</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a geometry type. Geometry types are also basic types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isgeospatial.html">isGeospatial</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isGeospatial</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a geospatial (geography/geometry) type. Geospatial types are also basic types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isguid.html">isGuid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isGuid</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a GUID type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/islist.html">isList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is a list type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/ismutable.html">isMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isMutable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a mutable type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isnumber.html">isNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNumber</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a number type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/ispath.html">isPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a path type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isstream.html">isStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isStream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this is a stream type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isstring.html">isString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is a string type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/isunsigned.html">isUnsigned</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isUnsigned</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this type is an unsigned type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/listof.html">listOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">listOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataType$listOf(com.sap.cloud.mobile.odata.DataType)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return the data type for a list of the specified item type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datatype/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this data type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../complextype/index.html">ComplexType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">StructureType</span></a></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> complex type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../entitytype/index.html">EntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">StructureType</span></a></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> entity type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

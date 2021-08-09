@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MimeType - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.http</a>&nbsp;/&nbsp;<a href="./index.html">MimeType</a><br/>
+<br/>
+<h1>MimeType</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">MimeType</span></code>
+<p>Constants and functions for representing and parsing MIME content types.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MimeType</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Constants and functions for representing and parsing MIME content types.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="text_html.html">TEXT_HTML</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TEXT_HTML</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Constant for the "text/html" MIME type with "UTF-8" encoding.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="text_plain.html">TEXT_PLAIN</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TEXT_PLAIN</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Constant for the "text/plain" MIME type with "UTF-8" encoding.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getparameter.html">getParameter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getParameter</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimeType$getParameter(kotlin.String, kotlin.String)/type">type</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimeType$getParameter(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Parse MIME content type to obtain an optional parameter value. For example, parsing type="multipart/mixed;boundary=ABC" with name="boundary" would return "ABC". Parameter names are case-insensitive, values are case-sensitive.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ismultipart.html">isMultipart</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isMultipart</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimeType$isMultipart(kotlin.String)/type">type</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>type</code> indicates a multipart/mixed MIME content type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

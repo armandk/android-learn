@@ -1,0 +1,235 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EnumTypeMap - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">EnumTypeMap</a><br/>
+<br/>
+<h1>EnumTypeMap</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumTypeMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="entry/index.html">Entry</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Entry</span></code>
+<p>A key/value pair for map entries.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="entry/index.html"><span class="identifier">EnumTypeMap.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="entry/index.html">com.sap.cloud.mobile.odata.EnumTypeMap.Entry</a></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">EnumTypeMap</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>See EnumTypeMap(int).</p>
+<code><span class="identifier">EnumTypeMap</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new map with <code><a href="../mapbase/size.html">EnumTypeMap.size</a></code> of zero and optional initial <code>capacity</code>. A map can expand in size beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the map's maximum size.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EnumTypeMap</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$add(com.sap.cloud.mobile.odata.EnumType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../enumtype/index.html"><span class="identifier">EnumType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add an entry to this map using <code>value.localName</code> as the entry key and <code>value</code> as the entry value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$delete(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Delete the entry with the specified <code>key</code> (if found).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entries.html">entries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">entries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="entrylist/index.html"><span class="identifier">EnumTypeMap.EntryList</span></a></code>
+<p>Return a list of the entries (key/value pairs) in this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$get(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../enumtype/index.html"><span class="identifier">EnumType</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The value from the entry with the specified <code>key</code> (if found), otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequired.html">getRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequired</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$getRequired(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../enumtype/index.html"><span class="identifier">EnumType</span></a></code>
+<p>Return the value from the entry with the specified <code>key</code> (if found).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getuntypedmap.html">getUntypedMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUntypedMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/untypedmap/index.html"><span class="identifier">UntypedMap</span></a></code>
+<p>Return the underlying untyped map of objects. Use with care, avoiding the addition of objects with an incorrect item type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="has.html">has</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">has</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$has(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this map has an entry with the specified <code>key</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="keys.html">keys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">keys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringlist/index.html"><span class="identifier">StringList</span></a></code>
+<p>Return a list of the entry keys in this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$set(kotlin.String, com.sap.cloud.mobile.odata.EnumType)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$set(kotlin.String, com.sap.cloud.mobile.odata.EnumType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../enumtype/index.html"><span class="identifier">EnumType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add or replace an entry with the specified <code>key</code> and <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setthis.html">setThis</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setThis</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$setThis(kotlin.String, com.sap.cloud.mobile.odata.EnumType)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EnumTypeMap$setThis(kotlin.String, com.sap.cloud.mobile.odata.EnumType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../enumtype/index.html"><span class="identifier">EnumType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EnumTypeMap</span></a></code>
+<p>Add or replace an entry with the specified <code>key</code> and <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortedentries.html">sortedEntries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortedEntries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="entrylist/index.html"><span class="identifier">EnumTypeMap.EntryList</span></a></code>
+<p>Return the entries of this map sorted by key.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortedkeys.html">sortedKeys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortedKeys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringlist/index.html"><span class="identifier">StringList</span></a></code>
+<p>Return the sorted keys of this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortedvalues.html">sortedValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortedValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../enumtypelist/index.html"><span class="identifier">EnumTypeList</span></a></code>
+<p>Return the sorted values of this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="values.html">values</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">values</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../enumtypelist/index.html"><span class="identifier">EnumTypeList</span></a></code>
+<p>Return a list of the entry values in this map.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../mapbase/clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all entries from this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapbase/isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this map contains no entries.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapbase/size.html">size</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of entries in this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapbase/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

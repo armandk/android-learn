@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.addDefiningQuery - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./adddefiningquery.html">addDefiningQuery</a><br/>
+<br/>
+<h1>addDefiningQuery</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$addDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)"></a>
+<code><span class="keyword">fun </span><span class="identifier">addDefiningQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$addDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)/definingQuery">definingQuery</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Adds a defining query to the provider. There are three types of defining queries: </p>
+<p> </p>
+<ul> <li>type 1 - A defining query that identifies one or more entities where the <code><a href="../offlineodatadefiningquery/isautomaticallyretrievesstreams.html">automaticallyRetrievesStreams</a></code> property is set to false. In this case, even if the defining query identifies media entities, the media streams will not be downloaded. </li>
+<li>type 2 - A defining query that identifies one or more entities, some of which may be media entities, and where the <code><a href="../offlineodatadefiningquery/isautomaticallyretrievesstreams.html">automaticallyRetrievesStreams</a></code> property is set to true. In this case, the media streams will be downloaded as well for media entities. </li>
+<li>type 3 - A defining query that identifies a single media entity and the <code><a href="../offlineodatadefiningquery/isautomaticallyretrievesstreams.html">automaticallyRetrievesStreams</a></code> property is set to true. The URL specified in this case MUST be the read link of the media entity, not the read link of the media stream. For example, if the media entity's read link is Documents(101) and the media stream's read link is Documents(101)/$value, the expected URL of the defining query is Documents(101). </li>
+</ul>
+ 
+<p> Defining queries can be added before or after the OfflineODataProvider has been opened. </p>
+<p> The defining queries added when OfflineODataProvider is not opened, are not persisted. They will be lost after the device is power off or application is terminated. </p>
+<p> For performance reasons, it is not recommended (although it is supported) to use $expand in defining queries, unless your OData back end supports deltas with $expand in defining queries. </p>
+<p> The Offline OData server component can take advantage of referential constraints to build relationship information instead of relying on $expand. For example, if the relationship (Association) between Customers and Orders has a referential constraint in the meta data document, the defining query https://sapcpms/odata/endpoint/Customers?$expand=Orders is equivalent to the pair of defining queries https://sapcpms/odata/endpoint/Customers and https://sapcpms/odata/endpoint/Orders; in both cases, all Customers, Orders, and relationship information for Customers and Orders are downloaded.</p>
+<h3>Parameters</h3>
+<p><a name="definingQuery"></a>
+<code>definingQuery</code> - <a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">:</span> the defining query to add.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs adding the defining query.</p>
+<p><strong>See Also</strong><br/>
+<a href="removedefiningquery.html">#removeDefiningQuery(OfflineODataDefiningQuery)</a><a href="removedefiningquery.html">#removeDefiningQuery(OfflineODataDefiningQuery, Action0, Action1)</a></p>
+</BODY>
+</HTML>

@@ -1,0 +1,526 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonObject - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">JsonObject</a><br/>
+<br/>
+<h1>JsonObject</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>A strongly-typed map from key type <code>string</code> to value type <code><a href="../jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code>?, inheriting from <code><a href="../jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code> rather than the usual <code><a href="../../com.sap.cloud.mobile.odata/mapbase/index.html">com.sap.cloud.mobile.odata.MapBase</a></code>.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="entry/index.html">Entry</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Entry</span></code>
+<p>A key/value pair for map entries.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entrylist/index.html">EntryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="entry/index.html"><span class="identifier">JsonObject.Entry</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="entry/index.html">com.sap.cloud.mobile.odata.json.JsonObject.Entry</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fieldordering/index.html">FieldOrdering</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">FieldOrdering</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a></code>
+<p>Comparer for JSON object field ordering.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">JsonObject</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>See JsonObject(int).</p>
+<code><span class="identifier">JsonObject</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new map with <code><a href="size.html">JsonObject.size</a></code> of zero and optional initial <code>capacity</code>. A map can expand in size beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the map's maximum size.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonObject</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../jsonelement/type_array.html">TYPE_ARRAY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_ARRAY</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON array values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/type_boolean.html">TYPE_BOOLEAN</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_BOOLEAN</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON boolean values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/type_number.html">TYPE_NUMBER</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_NUMBER</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON number values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/type_object.html">TYPE_OBJECT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_OBJECT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON object values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/type_string.html">TYPE_STRING</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_STRING</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON string values.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all entries from this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$delete(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Delete the entry with the specified <code>key</code> (if found).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entries.html">entries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">entries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="entrylist/index.html"><span class="identifier">JsonObject.EntryList</span></a></code>
+<p>Return a list of the entries (key/value pairs) in this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromelement.html">fromElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$fromElement(com.sap.cloud.mobile.odata.json.JsonElement)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonObject</span></a></code>
+<p>Return the 'value' cast as a <code><a href="./index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$get(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The value from the entry with the specified <code>key</code> (if found), otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getarray.html">getArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getArray(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonarray/index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return a field of this object cast as a <code><a href="../jsonarray/index.html">com.sap.cloud.mobile.odata.json.JsonArray</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getboolean.html">getBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getBoolean(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return a field of this object cast as a <code>boolean</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcustomordering.html">getCustomOrdering</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCustomOrdering</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="fieldordering/index.html"><span class="identifier">JsonObject.FieldOrdering</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Ordering constraints for JSON formatting. By default, fields may appear in arbitrary order.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnullablearray.html">getNullableArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getNullableArray(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonarray/index.html"><span class="identifier">JsonArray</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A field of this object cast as a nullable <code><a href="../jsonarray/index.html">com.sap.cloud.mobile.odata.json.JsonArray</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnullableboolean.html">getNullableBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getNullableBoolean(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code>
+<p>Return (nullable) A field of this object cast as a nullable <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnullableobject.html">getNullableObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableObject</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getNullableObject(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonObject</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A field of this object cast as a nullable <code><a href="./index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnullablestring.html">getNullableString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNullableString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getNullableString(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) A field of this object cast as a nullable <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getobject.html">getObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getObject</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getObject(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonObject</span></a></code>
+<p>Return a field of this object cast as a <code><a href="./index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequired.html">getRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequired</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getRequired(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The value from the entry with the specified <code>key</code> (if found).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequiredfield.html">getRequiredField</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredField</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getRequiredField(kotlin.String)/field">field</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The value of a required field of this object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstring.html">getString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$getString(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a field of this object cast as a <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return type of JSON element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getuntypedmap.html">getUntypedMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUntypedMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/untypedmap/index.html"><span class="identifier">UntypedMap</span></a></code>
+<p>Return the underlying untyped map of objects. Use with care, avoiding the addition of objects with an incorrect item type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="has.html">has</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">has</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$has(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this map has an entry with the specified <code>key</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="keys.html">keys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">keys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/stringlist/index.html"><span class="identifier">StringList</span></a></code>
+<p>Return a list of the entry keys in this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="orderedentries.html">orderedEntries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">orderedEntries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="entrylist/index.html"><span class="identifier">JsonObject.EntryList</span></a></code>
+<p>Return the same as <code><a href="sortedentries.html">JsonObject.sortedEntries</a></code>, unless this object is an instance of <code><a href="../jsonorderedobject/index.html">com.sap.cloud.mobile.odata.json.JsonOrderedObject</a></code> in which case the entries are returned in the order they were added.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$set(kotlin.String, com.sap.cloud.mobile.odata.json.JsonElement)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$set(kotlin.String, com.sap.cloud.mobile.odata.json.JsonElement)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add or replace an entry with the specified <code>key</code> and <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setarray.html">setArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setArray(kotlin.String, com.sap.cloud.mobile.odata.json.JsonArray)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setArray(kotlin.String, com.sap.cloud.mobile.odata.json.JsonArray)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../jsonarray/index.html"><span class="identifier">JsonArray</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a field of this object to a JSON array.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setboolean.html">setBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBoolean</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setBoolean(kotlin.String, kotlin.Boolean)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setBoolean(kotlin.String, kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a field of this object to a JSON boolean.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcustomordering.html">setCustomOrdering</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCustomOrdering</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setCustomOrdering(com.sap.cloud.mobile.odata.json.JsonObject.FieldOrdering)/value">value</span><span class="symbol">:</span>&nbsp;<a href="fieldordering/index.html"><span class="identifier">JsonObject.FieldOrdering</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set ordering constraints for JSON formatting. By default, fields may appear in arbitrary order.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnumber.html">setNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNumber</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setNumber(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setNumber(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a field of this object to a JSON number.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setobject.html">setObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setObject</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setObject(kotlin.String, com.sap.cloud.mobile.odata.json.JsonObject)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setObject(kotlin.String, com.sap.cloud.mobile.odata.json.JsonObject)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">JsonObject</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a field of this object to a JSON object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstring.html">setString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setString(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setString(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a field of this object to a JSON string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setthis.html">setThis</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setThis</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setThis(kotlin.String, com.sap.cloud.mobile.odata.json.JsonElement)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$setThis(kotlin.String, com.sap.cloud.mobile.odata.json.JsonElement)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonObject</span></a></code>
+<p>Add or replace an entry with the specified <code>key</code> and <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="size.html">size</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of items in this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortedentries.html">sortedEntries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortedEntries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="entrylist/index.html"><span class="identifier">JsonObject.EntryList</span></a></code>
+<p>Return the entries of this map sorted by key.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortedkeys.html">sortedKeys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortedKeys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/stringlist/index.html"><span class="identifier">StringList</span></a></code>
+<p>Return the sorted keys of this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortedvalues.html">sortedValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortedValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonarray/index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return the sorted values of this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the object in <a href="http://json.org">JSON</a> format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="values.html">values</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">values</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonarray/index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return a list of the entry values in this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withversion.html">withVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withVersion</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonObject$withVersion(kotlin.Int)/version">version</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonObject</span></a></code>
+<p>Sets <code><a href="getcustomordering.html">JsonObject.customOrdering</a></code> according to the specified <code>version</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../jsonelement/applyversion.html">applyVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">applyVersion</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$applyVersion(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonElement)/version">version</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$applyVersion(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonElement)/toElement">toElement</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Apply <code>version</code> (recursively) to all <code><a href="./index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code> instances within <code>toElement</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/format.html">format</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">format</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$format(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return JSON element (including <code>null</code>) converted to a string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$parse(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) String converted to parsed JSON element (including <code>null</code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/parsearray.html">parseArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$parseArray(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonarray/index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return string converted to parsed JSON array.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/parseobject.html">parseObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseObject</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$parseObject(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonObject</span></a></code>
+<p>Return string converted to parsed JSON object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/parsewithorderedobjects.html">parseWithOrderedObjects</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseWithOrderedObjects</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$parseWithOrderedObjects(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) String converted to parsed JSON element (including <code>null</code>). The order of any nested object entries will be preserved.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../jsonorderedobject/index.html">JsonOrderedObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonOrderedObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">JsonObject</span></a></code>
+<p>A specialization of <code><a href="./index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code> which retains the ordering of entries. While the JSON specification defined JSON objects as unordered, some uses of JSON may assume that processors can retain entry order. Performance Note: the time complexity of <code><a href="../jsonorderedobject/delete.html">JsonOrderedObject.delete</a></code> is O(n), rather than O(log(n)) for <code><a href="./index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

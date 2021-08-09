@@ -1,0 +1,5954 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for SAP Mobile Services and Related Technology">
+      
+      
+        <link rel="canonical" href="https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en/guides/features/offline/offline-odata-troubleshooting-with-ilodata.html">
+      
+      
+      <link rel="shortcut icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.5">
+    
+    
+      
+        <title>Troubleshooting with ILOData - SAP Mobile Services Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.785f3f94.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f59e7de1.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/header.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/landing.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/footer.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/nav.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/content.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/tabs.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/overview.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting-with-ilodata" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en" title="SAP Mobile Services Documentation" class="md-header-nav__button md-logo" aria-label="SAP Mobile Services Documentation">
+      
+  
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg2"
+   xml:space="preserve"
+   width="549.84003"
+   height="272"
+   viewBox="0 0 549.84003 272"
+   sodipodi:docname="SAP_C_grad_sign.eps"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6"><linearGradient
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-2040,-2040,0,2061.9,2040)"
+       spreadMethod="pad"
+       id="linearGradient18"><stop
+         style="stop-opacity:1;stop-color:#33bdf2"
+         offset="0"
+         id="stop14" /><stop
+         style="stop-opacity:1;stop-color:#176fc0"
+         offset="1"
+         id="stop16" /></linearGradient></defs><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview4" /><g
+     id="g10"
+     inkscape:groupmode="layer"
+     inkscape:label="ink_ext_XXXXXX"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,272)"><g
+       id="g12"
+       transform="scale(0.1)"><path
+         d="M 0,0 H 2084.13 L 4123.8,2040 H 0 V 0"
+         style="fill:url(#linearGradient18);fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path20" /><path
+         d="m 2471.09,1063.78 h -89.41 v 327.11 h 89.41 c 119.27,0 214.37,-39.62 214.37,-161.39 0,-126.02 -95.1,-165.72 -214.37,-165.72 M 1509.1,830.539 c -47.37,0 -91.77,8.281 -130.06,22.75 l 128.66,405.931 h 2.43 l 126.43,-407.079 c -38.01,-13.493 -81.37,-21.602 -127.46,-21.602 z m 938.17,825.871 -405.93,0.25 V 691.48 l -354.61,965.18 H 1335.14 L 1032.37,849.5 c -32.24,203.52 -242.768,273.8 -408.405,326.49 -109.371,35.12 -225.414,86.78 -224.34,143.87 0.906,46.87 62.246,90.41 183.773,83.85 81.704,-4.32 153.727,-10.92 297.098,-80.06 l 141.024,245.57 c -130.879,66.58 -311.684,108.67 -459.844,108.84 h -0.863 c -172.778,0 -316.77,-55.99 -406.016,-148.24 C 92.5898,1465.38 59.0742,1383.55 57.6719,1293.03 55.4063,1168.49 101.078,1080.1 197.051,1009.65 278.098,950.211 381.734,911.711 473.086,883.391 585.793,848.469 677.758,818.129 676.691,753.371 675.863,729.82 666.918,707.852 649.977,690 621.902,661.031 578.738,650.141 519.133,649.02 404.16,646.59 318.867,664.609 183.031,744.871 L 57.6719,495.84 C 193.137,418.789 353.535,373.609 517.191,373.609 l 21.067,0.25 c 142.469,2.563 257.445,43.161 349.293,117.121 5.269,4.161 10.012,8.442 14.883,12.77 L 861.699,395.012 h 368.751 l 61.89,188.218 c 64.77,-22.14 138.48,-34.371 216.76,-34.371 76.18,0 147.95,11.7 211.56,32.52 l 59.65,-186.367 h 601.37 v 389.687 h 131.13 c 317.06,0 504.56,161.473 504.56,432.021 0,301.39 -182.18,439.69 -570.1,439.69"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path22" /></g></g></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SAP Mobile Services Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Troubleshooting with ILOData
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../index.html" class="md-tabs__link">
+          Overview
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../index.html" class="md-tabs__link">
+          Guides
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../sample-code/odata/OData-Intro.html" class="md-tabs__link">
+          Sample Code
+        </a>
+      
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../reference/reference.html" class="md-tabs__link">
+          API Reference
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      
+      
+      <main class="md-main" data-md-component="main">
+        
+        <div class="md-main__inner md-grid">
+        
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://help.sap.com/doc/f53c64b93e5140918d676b927a3cd65b/Cloud/en-US/docs-en" title="SAP Mobile Services Documentation" class="md-nav__button md-logo" aria-label="SAP Mobile Services Documentation">
+      
+  
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg2"
+   xml:space="preserve"
+   width="549.84003"
+   height="272"
+   viewBox="0 0 549.84003 272"
+   sodipodi:docname="SAP_C_grad_sign.eps"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6"><linearGradient
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-2040,-2040,0,2061.9,2040)"
+       spreadMethod="pad"
+       id="linearGradient18"><stop
+         style="stop-opacity:1;stop-color:#33bdf2"
+         offset="0"
+         id="stop14" /><stop
+         style="stop-opacity:1;stop-color:#176fc0"
+         offset="1"
+         id="stop16" /></linearGradient></defs><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview4" /><g
+     id="g10"
+     inkscape:groupmode="layer"
+     inkscape:label="ink_ext_XXXXXX"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,272)"><g
+       id="g12"
+       transform="scale(0.1)"><path
+         d="M 0,0 H 2084.13 L 4123.8,2040 H 0 V 0"
+         style="fill:url(#linearGradient18);fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path20" /><path
+         d="m 2471.09,1063.78 h -89.41 v 327.11 h 89.41 c 119.27,0 214.37,-39.62 214.37,-161.39 0,-126.02 -95.1,-165.72 -214.37,-165.72 M 1509.1,830.539 c -47.37,0 -91.77,8.281 -130.06,22.75 l 128.66,405.931 h 2.43 l 126.43,-407.079 c -38.01,-13.493 -81.37,-21.602 -127.46,-21.602 z m 938.17,825.871 -405.93,0.25 V 691.48 l -354.61,965.18 H 1335.14 L 1032.37,849.5 c -32.24,203.52 -242.768,273.8 -408.405,326.49 -109.371,35.12 -225.414,86.78 -224.34,143.87 0.906,46.87 62.246,90.41 183.773,83.85 81.704,-4.32 153.727,-10.92 297.098,-80.06 l 141.024,245.57 c -130.879,66.58 -311.684,108.67 -459.844,108.84 h -0.863 c -172.778,0 -316.77,-55.99 -406.016,-148.24 C 92.5898,1465.38 59.0742,1383.55 57.6719,1293.03 55.4063,1168.49 101.078,1080.1 197.051,1009.65 278.098,950.211 381.734,911.711 473.086,883.391 585.793,848.469 677.758,818.129 676.691,753.371 675.863,729.82 666.918,707.852 649.977,690 621.902,661.031 578.738,650.141 519.133,649.02 404.16,646.59 318.867,664.609 183.031,744.871 L 57.6719,495.84 C 193.137,418.789 353.535,373.609 517.191,373.609 l 21.067,0.25 c 142.469,2.563 257.445,43.161 349.293,117.121 5.269,4.161 10.012,8.442 14.883,12.77 L 861.699,395.012 h 368.751 l 61.89,188.218 c 64.77,-22.14 138.48,-34.371 216.76,-34.371 76.18,0 147.95,11.7 211.56,32.52 l 59.65,-186.367 h 601.37 v 389.687 h 131.13 c 317.06,0 504.56,161.473 504.56,432.021 0,301.39 -182.18,439.69 -570.1,439.69"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path22" /></g></g></svg>
+
+    </a>
+    SAP Mobile Services Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Overview
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Overview" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../index.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Getting Started
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/productintro/solution-architecture.html" title="Solution Architecture" class="md-nav__link">
+      Solution Architecture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/account.html" title="Enabling Mobile Services" class="md-nav__link">
+      Enabling Mobile Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-4" type="checkbox" id="nav-2-1-4">
+    
+    <label class="md-nav__link" for="nav-2-1-4">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/overview.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/setup.html" title="Installing the SAP BTP SDK for Android" class="md-nav__link">
+      Installing the SAP BTP SDK for Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/creating-an-app.html" title="Creating Apps with the Wizard" class="md-nav__link">
+      Creating Apps with the Wizard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/from-scratch.html" title="Creating Apps From Scratch" class="md-nav__link">
+      Creating Apps From Scratch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/obtain-credentials.html" title="Creating the Required Credentials of Technical Users" class="md-nav__link">
+      Creating the Required Credentials of Technical Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/gradle-overview.html" title="Generating Proxy Classes" class="md-nav__link">
+      Generating Proxy Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/configuring-wizard.html" title="Configuring the Wizard Plugin" class="md-nav__link">
+      Configuring the Wizard Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/adfs.html" title="Using Microsoft Active Directory Federation Services for SAML Authentication" class="md-nav__link">
+      Using Microsoft Active Directory Federation Services for SAML Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/configuring-buildvariants.html" title="Configure Build Variants with Different Configuration File" class="md-nav__link">
+      Configure Build Variants with Different Configuration File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/android/odata-debugging.html" title="OData Debugging" class="md-nav__link">
+      OData Debugging
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Troubleshooting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Troubleshooting" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../troubleshooting/getting-support.html" title="Getting Support" class="md-nav__link">
+      Getting Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../troubleshooting/admin.html" title="Administration Troubleshooting" class="md-nav__link">
+      Administration Troubleshooting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2-3" type="checkbox" id="nav-2-2-3">
+    
+    <label class="md-nav__link" for="nav-2-2-3">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../troubleshooting/android/troubleshooting.html" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Releases & Migration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Releases & Migration" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Releases & Migration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3-1" type="checkbox" id="nav-2-3-1">
+    
+    <label class="md-nav__link" for="nav-2-3-1">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/releases/android/whats-new.html" title="What's New in Release 3.3.3" class="md-nav__link">
+      What's New in Release 3.3.3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/releases/android/migration.html" title="Migration" class="md-nav__link">
+      Migration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/releases/android/known-issues.html" title="Known Issues" class="md-nav__link">
+      Known Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/glossary.html" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/acronyms.html" title="List of Acronyms" class="md-nav__link">
+      List of Acronyms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/license.html" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+<li class="md-nav__item md-nav__group">Build</li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-1" type="checkbox" id="nav-2-7-1">
+    
+    <label class="md-nav__link" for="nav-2-7-1">
+      Security
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Security" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../security/overview.html" title="Security Overview" class="md-nav__link">
+      Security Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../security/saml2.html" title="Authenticate Applications Using SAML 2.0" class="md-nav__link">
+      Authenticate Applications Using SAML 2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../security/data-protection.html" title="Data Protection and Privacy for SAP Mobile Cards App" class="md-nav__link">
+      Data Protection and Privacy for SAP Mobile Cards App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-1-4" type="checkbox" id="nav-2-7-1-4">
+    
+    <label class="md-nav__link" for="nav-2-7-1-4">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-1-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../security/android/authentication.html" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../security/android/secure-store.html" title="Secure Store" class="md-nav__link">
+      Secure Store
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../security/android/encryption-util.html" title="Encryption Utility" class="md-nav__link">
+      Encryption Utility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../security/android/backup-management.html" title="Android Backup" class="md-nav__link">
+      Android Backup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../security/android/recommendations.html" title="Security Recommendations" class="md-nav__link">
+      Security Recommendations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2" type="checkbox" id="nav-2-7-2">
+    
+    <label class="md-nav__link" for="nav-2-7-2">
+      Onboarding
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Onboarding" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Onboarding
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/overview.html" title="Onboarding Overview" class="md-nav__link">
+      Onboarding Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-2" type="checkbox" id="nav-2-7-2-2">
+    
+    <label class="md-nav__link" for="nav-2-7-2-2">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/configuration-provider.html" title="Configuration Provider" class="md-nav__link">
+      Configuration Provider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-2-2" type="checkbox" id="nav-2-7-2-2-2">
+    
+    <label class="md-nav__link" for="nav-2-7-2-2-2">
+      Onboarding with Flows(Version 2)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Onboarding with Flows(Version 2)" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-2-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Onboarding with Flows(Version 2)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/newflows/Overview.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/newflows/StartingFlow.html" title="Start Flow" class="md-nav__link">
+      Start Flow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/newflows/ExtensionPoints.html" title="Extension Points" class="md-nav__link">
+      Extension Points
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/newflows/ConfigurationSettings.html" title="Flow Configuration" class="md-nav__link">
+      Flow Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/newflows/WriteYourOwnFlow.html" title="Write Your Own Flow" class="md-nav__link">
+      Write Your Own Flow
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-2-3" type="checkbox" id="nav-2-7-2-2-3">
+    
+    <label class="md-nav__link" for="nav-2-7-2-2-3">
+      Onboarding Screens
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Onboarding Screens" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-2-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Onboarding Screens
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/launch-screen.html" title="Launch Screen" class="md-nav__link">
+      Launch Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/activation-screen.html" title="Activation Screen" class="md-nav__link">
+      Activation Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/qrreader-screen.html" title="QR Code Reader Screen" class="md-nav__link">
+      QR Code Reader Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/qrconfirm-screen.html" title="QR Code Confirmation Screen" class="md-nav__link">
+      QR Code Confirmation Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/basic-auth-screen.html" title="Basic Authentication Screen" class="md-nav__link">
+      Basic Authentication Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/setpasscode-screen.html" title="Set Passcode Screen" class="md-nav__link">
+      Set Passcode Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/confirm-passcode-screen.html" title="Confirm Passcode Screen" class="md-nav__link">
+      Confirm Passcode Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/enterpasscode-screen.html" title="Enter Passcode Screen" class="md-nav__link">
+      Enter Passcode Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/enable-fingerprint-screen.html" title="Enable Fingerprint Screen" class="md-nav__link">
+      Enable Fingerprint Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/unlock-with-fingerprint-screen.html" title="Fingerprint Screen" class="md-nav__link">
+      Fingerprint Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/enable-biometric-screen.html" title="Enable Biometric Screen" class="md-nav__link">
+      Enable Biometric Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/unlock-with-biometric-screen.html" title="Confirm Biometric Screen" class="md-nav__link">
+      Confirm Biometric Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/consent-screen.html" title="Consent Screen" class="md-nav__link">
+      Consent Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/fiori-screens/eula-screen.html" title="EULA Screen" class="md-nav__link">
+      EULA Screen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-2-4" type="checkbox" id="nav-2-7-2-2-4">
+    
+    <label class="md-nav__link" for="nav-2-7-2-2-4">
+      Onboarding with Flows(Version 1, Deprecated)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Onboarding with Flows(Version 1, Deprecated)" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-2-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Onboarding with Flows(Version 1, Deprecated)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/Overview.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/PasscodePolicyStoreStep.html" title="Passcode Policy Store Step" class="md-nav__link">
+      Passcode Policy Store Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/WelcomeScreenStep.html" title="Welcome Screen Step" class="md-nav__link">
+      Welcome Screen Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/OTPConfigurationStep.html" title="OTP Configuration Step" class="md-nav__link">
+      OTP Configuration Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-2-4-5" type="checkbox" id="nav-2-7-2-2-4-5">
+    
+    <label class="md-nav__link" for="nav-2-7-2-2-4-5">
+      Authentication
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Authentication" data-md-level="6">
+      <label class="md-nav__title" for="nav-2-7-2-2-4-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Authentication
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/BasicAuthStep.html" title="Basic Authentication Step" class="md-nav__link">
+      Basic Authentication Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/SAMLScreenStep.html" title="SAML Screen Step" class="md-nav__link">
+      SAML Screen Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/OAuth.html" title="OAuth Step" class="md-nav__link">
+      OAuth Step
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/OTPAuthValidationStep.html" title="OAuth Validation Step" class="md-nav__link">
+      OAuth Validation Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/SettingsDownloadStep.html" title="Settings Download Step" class="md-nav__link">
+      Settings Download Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/LoggingStep.html" title="Logging Step" class="md-nav__link">
+      Logging Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/StoreManagerStep.html" title="Store Manager Step" class="md-nav__link">
+      Store Manager Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-2-4-10" type="checkbox" id="nav-2-7-2-2-4-10">
+    
+    <label class="md-nav__link" for="nav-2-7-2-2-4-10">
+      Authentication Store
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Authentication Store" data-md-level="6">
+      <label class="md-nav__title" for="nav-2-7-2-2-4-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Authentication Store
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/BasicAuthStoreStep.html" title="Basic Authentication Store Step" class="md-nav__link">
+      Basic Authentication Store Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/OAuthStoreStep.html" title="OAuth Store Step" class="md-nav__link">
+      OAuth Store Step
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/WelcomeScreenStoreStep.html" title="Welcome Screen Store Step" class="md-nav__link">
+      Welcome Screen Store Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/SettingsStoreStep.html" title="Settings Store Step" class="md-nav__link">
+      Settings Store Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/ChangePasscodeStep.html" title="Change Passcode Step" class="md-nav__link">
+      Change Passcode Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../onboarding/android/oldflows/EulaScreenStep.html" title="EULA Screen Step" class="md-nav__link">
+      EULA Screen Step
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-2-5" type="checkbox" id="nav-2-7-2-2-5">
+    
+    <label class="md-nav__link" for="nav-2-7-2-2-5">
+      Onboarding UI Component(Deprecated)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Onboarding UI Component(Deprecated)" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-2-2-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Onboarding UI Component(Deprecated)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/introduction.html" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/fingerprint.html" title="Fingerprint and Biometric Usage" class="md-nav__link">
+      Fingerprint and Biometric Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-2-5-3" type="checkbox" id="nav-2-7-2-2-5-3">
+    
+    <label class="md-nav__link" for="nav-2-7-2-2-5-3">
+      Welcome Screen/Launch Screen
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Welcome Screen/Launch Screen" data-md-level="6">
+      <label class="md-nav__title" for="nav-2-7-2-2-5-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Welcome Screen/Launch Screen
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/launchscreenactivity-layout.html" title="Launch Screen Activity Layout" class="md-nav__link">
+      Launch Screen Activity Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/custom-onboarding.html" title="Custom Onboarding Screen" class="md-nav__link">
+      Custom Onboarding Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/discovery-service-onboarding.html" title="Onboarding With Discovery Service" class="md-nav__link">
+      Onboarding With Discovery Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/qr-code-based-onboarding.html" title="Onboarding With QR Codes" class="md-nav__link">
+      Onboarding With QR Codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/activationscreen-layout.html" title="Activation Screen Layout" class="md-nav__link">
+      Activation Screen Layout
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-2-2-5-4" type="checkbox" id="nav-2-7-2-2-5-4">
+    
+    <label class="md-nav__link" for="nav-2-7-2-2-5-4">
+      Passcode
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Passcode" data-md-level="6">
+      <label class="md-nav__title" for="nav-2-7-2-2-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Passcode
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/create-passcode.html" title="Create Passcode Screen" class="md-nav__link">
+      Create Passcode Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/enter-passcode-screen.html" title="Enter Passcode Screen" class="md-nav__link">
+      Enter Passcode Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/change-passcode.html" title="Change Passcode Screen" class="md-nav__link">
+      Change Passcode Screen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/licensing.html" title="EULA Screen" class="md-nav__link">
+      EULA Screen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/onboarding/layout-design-customizing.html" title="Customizing the Onboarding Screens" class="md-nav__link">
+      Customizing the Onboarding Screens
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-3" type="checkbox" id="nav-2-7-3">
+    
+    <label class="md-nav__link" for="nav-2-7-3">
+      Back-End Connectivity
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Back-End Connectivity" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Back-End Connectivity
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/overview.html" title="Back-End Connectivity Overview" class="md-nav__link">
+      Back-End Connectivity Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/odata-overview.html" title="The OData Component" class="md-nav__link">
+      The OData Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/dynamic-api.html" title="Dynamic API" class="md-nav__link">
+      Dynamic API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/sample.html" title="Using the Mobile Sample Service" class="md-nav__link">
+      Using the Mobile Sample Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/datavalue-hierarchy.html" title="The Data Value Hierarchy for Structural Type Value Classes" class="md-nav__link">
+      The Data Value Hierarchy for Structural Type Value Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-3-6" type="checkbox" id="nav-2-7-3-6">
+    
+    <label class="md-nav__link" for="nav-2-7-3-6">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/backend-connectivity.html" title="Back-End Connectivity" class="md-nav__link">
+      Back-End Connectivity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/odata-overview.html" title="OData Overview" class="md-nav__link">
+      OData Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/generated-service-initialization.html" title="Service Initialization" class="md-nav__link">
+      Service Initialization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/proxy-classes.html" title="Proxy Classes" class="md-nav__link">
+      Proxy Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/using-odata-api.html" title="Using the OData API" class="md-nav__link">
+      Using the OData API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/comparison.html" title="A Comparison of Proxy Classes and Dynamic API" class="md-nav__link">
+      A Comparison of Proxy Classes and Dynamic API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/appendix-c.html" title="Runtime Discovery of the Entity Data Model" class="md-nav__link">
+      Runtime Discovery of the Entity Data Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-3-6-8" type="checkbox" id="nav-2-7-3-6-8">
+    
+    <label class="md-nav__link" for="nav-2-7-3-6-8">
+      Dynamic API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dynamic API" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-3-6-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Dynamic API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/service-initialization.html" title="Service Initialization with the Dynamic API" class="md-nav__link">
+      Service Initialization with the Dynamic API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/parameters-in-dynamic-api.html" title="Parameters in Dynamic API" class="md-nav__link">
+      Parameters in Dynamic API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/parameter-construction.html" title="Parameter Construction" class="md-nav__link">
+      Parameter Construction
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/metadata-api.html" title="Metadata API" class="md-nav__link">
+      Metadata API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/async-apis.html" title="Asynchronous API" class="md-nav__link">
+      Asynchronous API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/cache.html" title="Cache" class="md-nav__link">
+      Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../backend-connectivity/android/sample-service-metadata.html" title="Sample Service Metadata" class="md-nav__link">
+      Sample Service Metadata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-4" type="checkbox" id="nav-2-7-4" checked>
+    
+    <label class="md-nav__link" for="nav-2-7-4">
+      Offline
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Offline" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Offline
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="overview.html" title="Offline Overview" class="md-nav__link">
+      Offline Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-4-2" type="checkbox" id="nav-2-7-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-2-7-4-2">
+      Developing Offline Applications
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developing Offline Applications" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developing Offline Applications
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developing-offline-applications.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="version-support-and-limitations.html" title="Version Support and Limitations" class="md-nav__link">
+      Version Support and Limitations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sample-odata-service-metadata.html" title="Sample OData Service Metadata" class="md-nav__link">
+      Sample OData Service Metadata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="setting-up-an-application.html" title="Setting Up an Application" class="md-nav__link">
+      Setting Up an Application
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-4-2-5" type="checkbox" id="nav-2-7-4-2-5">
+    
+    <label class="md-nav__link" for="nav-2-7-4-2-5">
+      Defining an Application Configuration File
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Defining an Application Configuration File" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-4-2-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Defining an Application Configuration File
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="defining-an-application-configuration-file/defining-an-application-configuration-file.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="defining-an-application-configuration-file/defining-queries.html" title="Defining Queries" class="md-nav__link">
+      Defining Queries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="defining-an-application-configuration-file/performance-improvement-with-delta-tracking-and-caching.html" title="Performance Improvement with Delta Tracking and Caching" class="md-nav__link">
+      Performance Improvement with Delta Tracking and Caching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="defining-an-application-configuration-file/application-configuration-file.html" title="Application Configuration File" class="md-nav__link">
+      Application Configuration File
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-4-2-6" type="checkbox" id="nav-2-7-4-2-6">
+    
+    <label class="md-nav__link" for="nav-2-7-4-2-6">
+      Modifying Offline Data
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Modifying Offline Data" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-4-2-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Modifying Offline Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="modifying-offline-data/modifying-offline-data.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="modifying-offline-data/creating_and_deleting_entities.html" title="Creating and Deleting Entities" class="md-nav__link">
+      Creating and Deleting Entities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="modifying-offline-data/modifying-entities.html" title="Modifying Entities" class="md-nav__link">
+      Modifying Entities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="modifying-offline-data/managing-relationships-between-entities.html" title="Managing Relationships Between Entities" class="md-nav__link">
+      Managing Relationships Between Entities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="modifying-offline-data/unmodifiable-requests.html" title="Unmodifiable Requests" class="md-nav__link">
+      Unmodifiable Requests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="modifying-offline-data/local-information.html" title="Local Information" class="md-nav__link">
+      Local Information
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-4-2-7" type="checkbox" id="nav-2-7-4-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7-4-2-7">
+      Synchronizing Data
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Synchronizing Data" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-4-2-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Synchronizing Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="synchronizing-data/synchronizing-data.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="synchronizing-data/progress-api.html" title="Progress API" class="md-nav__link">
+      Progress API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="working-with-offline-stores.html" title="Working With Offline Stores" class="md-nav__link">
+      Working With Offline Stores
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-4-2-9" type="checkbox" id="nav-2-7-4-2-9">
+    
+    <label class="md-nav__link" for="nav-2-7-4-2-9">
+      Handling Errors and Conflicts
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Handling Errors and Conflicts" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-4-2-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Handling Errors and Conflicts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="handling-errors-and-conflicts/handling-errors-and-conflicts.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="handling-errors-and-conflicts/accessing-errorarchive.html" title="Accessing the `ErrorArchive`" class="md-nav__link">
+      Accessing the `ErrorArchive`
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="handling-errors-and-conflicts/errorarchive-entity-properties.html" title="`ErrorArchive` Entity Properties" class="md-nav__link">
+      `ErrorArchive` Entity Properties
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-4-2-10" type="checkbox" id="nav-2-7-4-2-10">
+    
+    <label class="md-nav__link" for="nav-2-7-4-2-10">
+      Handling Failed Requests
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Handling Failed Requests" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-4-2-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Handling Failed Requests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="handling-failed-requests/handling-failed-requests.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="handling-failed-requests/finding-entities-in-error-state.html" title="Finding Entities in Error State" class="md-nav__link">
+      Finding Entities in Error State
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="handling-failed-requests/reverting-error-state.html" title="Reverting Error State" class="md-nav__link">
+      Reverting Error State
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="handling-failed-requests/fixing-requests-in-error-state.html" title="Fixing Requests in Error State" class="md-nav__link">
+      Fixing Requests in Error State
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="handling-failed-requests/applying-fixed-requests.html" title="Applying Fixed Requests" class="md-nav__link">
+      Applying Fixed Requests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="media-resources.html" title="Media Resources" class="md-nav__link">
+      Media Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="repeatable-requests.html" title="Repeatable Requests" class="md-nav__link">
+      Repeatable Requests
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="best-practices.html" title="Best Practices" class="md-nav__link">
+      Best Practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="additional-features.html" title="Additional Features" class="md-nav__link">
+      Additional Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Troubleshooting with ILOData
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="offline-odata-troubleshooting-with-ilodata.html" title="Troubleshooting with ILOData" class="md-nav__link md-nav__link--active">
+      Troubleshooting with ILOData
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formats-of-data-used-with-ilodata" class="md-nav__link">
+    Formats of Data Used with ILOData
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-option-values-for-sap-mobile-services-server" class="md-nav__link">
+    Getting Option Values for SAP Mobile Services Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-offline-store-using-the-sap-business-technology-platform-server" class="md-nav__link">
+    Create a New Offline Store Using the SAP Business Technology Platform Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-entity" class="md-nav__link">
+    Create a New Entity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-the-error-archive" class="md-nav__link">
+    Query the Error Archive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-operations" class="md-nav__link">
+    Batch Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-insert-and-complex-type" class="md-nav__link">
+    Deep Insert and Complex Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bind-operations" class="md-nav__link">
+    Bind Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-log-with-data-changed-flag" class="md-nav__link">
+    Event Log with Data Changed Flag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-4-2-16" type="checkbox" id="nav-2-7-4-2-16">
+    
+    <label class="md-nav__link" for="nav-2-7-4-2-16">
+      Offline Odata Handling Relationship
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Offline Odata Handling Relationship" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-4-2-16">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Offline Odata Handling Relationship
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="offline-odata-handling-relationship/offline-odata-handling-relationship.html" title="Handling Relationships in Offline OData" class="md-nav__link">
+      Handling Relationships in Offline OData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="offline-odata-handling-relationship/offline-odata-handling-relationship-sample-medatadata.html" title="Sample Service Metadata" class="md-nav__link">
+      Sample Service Metadata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-5" type="checkbox" id="nav-2-7-5">
+    
+    <label class="md-nav__link" for="nav-2-7-5">
+      User Information
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="User Information" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        User Information
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../user-information/overview.html" title="User Information Overview" class="md-nav__link">
+      User Information Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-5-2" type="checkbox" id="nav-2-7-5-2">
+    
+    <label class="md-nav__link" for="nav-2-7-5-2">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../user-information/android/user-information.html" title="User Information" class="md-nav__link">
+      User Information
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-6" type="checkbox" id="nav-2-7-6">
+    
+    <label class="md-nav__link" for="nav-2-7-6">
+      Storage
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Storage" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Storage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../storage/overview.html" title="Storage Service Overview" class="md-nav__link">
+      Storage Service Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../storage/storage-settings.html" title="Storing Settings" class="md-nav__link">
+      Storing Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-6-3" type="checkbox" id="nav-2-7-6-3">
+    
+    <label class="md-nav__link" for="nav-2-7-6-3">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-6-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../storage/android/settings.html" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-7" type="checkbox" id="nav-2-7-7">
+    
+    <label class="md-nav__link" for="nav-2-7-7">
+      Fiori for Android & iOS
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Fiori for Android & iOS" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Fiori for Android & iOS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/overview.html" title="SAP Fiori Overview" class="md-nav__link">
+      SAP Fiori Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-7-2" type="checkbox" id="nav-2-7-7-2">
+    
+    <label class="md-nav__link" for="nav-2-7-7-2">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-7-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/overview.html" title="The Fiori Component" class="md-nav__link">
+      The Fiori Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-7-2-2" type="checkbox" id="nav-2-7-7-2-2">
+    
+    <label class="md-nav__link" for="nav-2-7-7-2-2">
+      Form Cells
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Form Cells" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-7-7-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Form Cells
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/formcell.html" title="Form Cells" class="md-nav__link">
+      Form Cells
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/attachment.html" title="The Attachment Form Cell" class="md-nav__link">
+      The Attachment Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/choice.html" title="Choice Form Cell" class="md-nav__link">
+      Choice Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/date-time-formcell.html" title="Date Time Picker Form Cell" class="md-nav__link">
+      Date Time Picker Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/duration-formcell.html" title="Duration Picker Form Cell" class="md-nav__link">
+      Duration Picker Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/filter.html" title="The Filter Form Cell" class="md-nav__link">
+      The Filter Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/generic-listpicker-formcell.html" title="The Generic List Picker Form Cell" class="md-nav__link">
+      The Generic List Picker Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/listpicker-formcell.html" title="The List Picker Form Cell" class="md-nav__link">
+      The List Picker Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/note-formcell.html" title="The Note Form Cell" class="md-nav__link">
+      The Note Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/simple-property-formcell.html" title="The Simple Property Form Cell" class="md-nav__link">
+      The Simple Property Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/slider-formcell.html" title="The Slider Form Cell" class="md-nav__link">
+      The Slider Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/switch-formcell.html" title="The Switch Form Cell" class="md-nav__link">
+      The Switch Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/filter-dialog.html" title="The Filter Dialog Fragment" class="md-nav__link">
+      The Filter Dialog Fragment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/sectioned-recycler.html" title="Sectioned Recycler View Adapter" class="md-nav__link">
+      Sectioned Recycler View Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/multisort-formcell.html" title="Multi Sort Form Cell" class="md-nav__link">
+      Multi Sort Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/signature-capture-formcell.html" title="The Signature Capture Form Cell" class="md-nav__link">
+      The Signature Capture Form Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/formcells/signature-capture-inline.html" title="The Inline Signature Capture Form Cell" class="md-nav__link">
+      The Inline Signature Capture Form Cell
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/contact-cell.html" title="Contact Cell" class="md-nav__link">
+      Contact Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/grid-table-row.html" title="Grid Table Row" class="md-nav__link">
+      Grid Table Row
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/grid-object-cell.html" title="Grid Object Cell" class="md-nav__link">
+      Grid Object Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/hierarchy-view.html" title="Hierarchy View" class="md-nav__link">
+      Hierarchy View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/fiori-indicator.html" title="Fiori Indicator" class="md-nav__link">
+      Fiori Indicator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/key-value-cell.html" title="Key Value Cell" class="md-nav__link">
+      Key Value Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/object-cell.html" title="Object Cell" class="md-nav__link">
+      Object Cell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/object-header.html" title="Object Header" class="md-nav__link">
+      Object Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/profile-header.html" title="Profile Header" class="md-nav__link">
+      Profile Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/fiori-search-ui.html" title="Fiori Search User Interface" class="md-nav__link">
+      Fiori Search User Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/collection-view.html" title="Collection View" class="md-nav__link">
+      Collection View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/timeline.html" title="Timeline" class="md-nav__link">
+      Timeline
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/fiori-theming-styling.html" title="Theming and Styling" class="md-nav__link">
+      Theming and Styling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/banner.html" title="Banner Messages" class="md-nav__link">
+      Banner Messages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/chart-card.html" title="Chart Cards" class="md-nav__link">
+      Chart Cards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/columnchart.html" title="Column Chart" class="md-nav__link">
+      Column Chart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/consent.html" title="Consent Form" class="md-nav__link">
+      Consent Form
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/fast-filter-view.html" title="Fast Filter View" class="md-nav__link">
+      Fast Filter View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/horizontalbarchart.html" title="Horizontal Bar Chart" class="md-nav__link">
+      Horizontal Bar Chart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/kpiheader.html" title="KPI Headers" class="md-nav__link">
+      KPI Headers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/chart-header.html" title="Chart Header" class="md-nav__link">
+      Chart Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/linechart.html" title="Line Chart" class="md-nav__link">
+      Line Chart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/maps.html" title="Map Controls" class="md-nav__link">
+      Map Controls
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/ocr/ocr.html" title="Optical Character Recognition (OCR)" class="md-nav__link">
+      Optical Character Recognition (OCR)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/qrcode-view.html" title="`QRCode` View" class="md-nav__link">
+      `QRCode` View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fiori-ui/android/persistent-footer.html" title="Persistent Footer" class="md-nav__link">
+      Persistent Footer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-8" type="checkbox" id="nav-2-7-8">
+    
+    <label class="md-nav__link" for="nav-2-7-8">
+      App Links
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="App Links" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        App Links
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../application-links/overview.html" title="Application Links Overview" class="md-nav__link">
+      Application Links Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../application-links/android/deeplink.html" title="Deep Linking" class="md-nav__link">
+      Deep Linking
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+
+        
+          
+          
+          
+
+
+<li class="md-nav__item md-nav__group">Run</li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-1" type="checkbox" id="nav-2-8-1">
+    
+    <label class="md-nav__link" for="nav-2-8-1">
+      Push
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Push" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-8-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Push
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push/overview.html" title="Push Overview" class="md-nav__link">
+      Push Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push/native-providers.html" title="Native Provider Notification Handling" class="md-nav__link">
+      Native Provider Notification Handling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-1-3" type="checkbox" id="nav-2-8-1-3">
+    
+    <label class="md-nav__link" for="nav-2-8-1-3">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-8-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push/android/push.html" title="Push Notifications" class="md-nav__link">
+      Push Notifications
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-1-4" type="checkbox" id="nav-2-8-1-4">
+    
+    <label class="md-nav__link" for="nav-2-8-1-4">
+      W3C
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="W3C" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-8-1-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        W3C
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push/w3c/push.html" title="W3C Push Notifications" class="md-nav__link">
+      W3C Push Notifications
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-2" type="checkbox" id="nav-2-8-2">
+    
+    <label class="md-nav__link" for="nav-2-8-2">
+      Logging
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Logging" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-8-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Logging
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logging/overview.html" title="Logging Overview" class="md-nav__link">
+      Logging Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logging/hierarchies.html" title="Logger Hierarchies" class="md-nav__link">
+      Logger Hierarchies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logging/recommendations.html" title="Logging Recommendations and Guidelines" class="md-nav__link">
+      Logging Recommendations and Guidelines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-2-4" type="checkbox" id="nav-2-8-2-4">
+    
+    <label class="md-nav__link" for="nav-2-8-2-4">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-8-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logging/android/logging.html" title="Using the SAP Logging API" class="md-nav__link">
+      Using the SAP Logging API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logging/android/logupload.html" title="Uploading Logs" class="md-nav__link">
+      Uploading Logs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-3" type="checkbox" id="nav-2-8-3">
+    
+    <label class="md-nav__link" for="nav-2-8-3">
+      Tracing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Tracing" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-8-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Tracing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tracing/overview.html" title="Tracing Overview" class="md-nav__link">
+      Tracing Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-3-2" type="checkbox" id="nav-2-8-3-2">
+    
+    <label class="md-nav__link" for="nav-2-8-3-2">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-8-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tracing/android/passport.html" title="SAP Passport Support" class="md-nav__link">
+      SAP Passport Support
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-4" type="checkbox" id="nav-2-8-4">
+    
+    <label class="md-nav__link" for="nav-2-8-4">
+      Crash Reporting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Crash Reporting" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-8-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Crash Reporting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../crash-reporting/overview.html" title="Crash Reporting Overview" class="md-nav__link">
+      Crash Reporting Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-4-2" type="checkbox" id="nav-2-8-4-2">
+    
+    <label class="md-nav__link" for="nav-2-8-4-2">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-8-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../crash-reporting/android/crash.html" title="Crash Report" class="md-nav__link">
+      Crash Report
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-5" type="checkbox" id="nav-2-8-5">
+    
+    <label class="md-nav__link" for="nav-2-8-5">
+      Client Resources
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Client Resources" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-8-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Client Resources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../client-resources/overview.html" title="Client Resources Overview" class="md-nav__link">
+      Client Resources Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-5-2" type="checkbox" id="nav-2-8-5-2">
+    
+    <label class="md-nav__link" for="nav-2-8-5-2">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-8-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../client-resources/android/clientresources.html" title="Client Resources" class="md-nav__link">
+      Client Resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-6" type="checkbox" id="nav-2-8-6">
+    
+    <label class="md-nav__link" for="nav-2-8-6">
+      App Updates
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="App Updates" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-8-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        App Updates
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../app-update/overview.html" title="Application Update Overview" class="md-nav__link">
+      Application Update Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-8-7" type="checkbox" id="nav-2-8-7">
+    
+    <label class="md-nav__link" for="nav-2-8-7">
+      Feature Restrictions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Feature Restrictions" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-8-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Feature Restrictions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-restrictions/overview.html" title="Feature Restrictions Overview" class="md-nav__link">
+      Feature Restrictions Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+
+        
+          
+          
+          
+
+
+<li class="md-nav__item md-nav__group">Scale</li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-9-1" type="checkbox" id="nav-2-9-1">
+    
+    <label class="md-nav__link" for="nav-2-9-1">
+      Usage Analytics
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Usage Analytics" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-9-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Usage Analytics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../usage/overview.html" title="Usage Overview" class="md-nav__link">
+      Usage Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-9-1-2" type="checkbox" id="nav-2-9-1-2">
+    
+    <label class="md-nav__link" for="nav-2-9-1-2">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-9-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../usage/android/usage.html" title="Client Usage" class="md-nav__link">
+      Client Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-9-2" type="checkbox" id="nav-2-9-2">
+    
+    <label class="md-nav__link" for="nav-2-9-2">
+      Cloud Build
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Cloud Build" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-9-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Cloud Build
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloud-build/overview.html" title="Cloud Build Overview" class="md-nav__link">
+      Cloud Build Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-9-3" type="checkbox" id="nav-2-9-3">
+    
+    <label class="md-nav__link" for="nav-2-9-3">
+      Discovery Service
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Discovery Service" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-9-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Discovery Service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../discovery/overview.html" title="Discovery Service Overview" class="md-nav__link">
+      Discovery Service Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-9-4" type="checkbox" id="nav-2-9-4">
+    
+    <label class="md-nav__link" for="nav-2-9-4">
+      App Catalog
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="App Catalog" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-9-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        App Catalog
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../app-lab/overview.html" title="Mobile App Catalog Overview" class="md-nav__link">
+      Mobile App Catalog Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+  
+  
+  
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-9-5" type="checkbox" id="nav-2-9-5">
+    
+    <label class="md-nav__link" for="nav-2-9-5">
+      Translation Hub
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Translation Hub" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-9-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Translation Hub
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../translation-hub/overview.html" title="Translation Hub Overview" class="md-nav__link">
+      Translation Hub Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-9-5-2" type="checkbox" id="nav-2-9-5-2">
+    
+    <label class="md-nav__link" for="nav-2-9-5-2">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-9-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../translation-hub/android/trans-hub.html" title="Localizing Android Apps" class="md-nav__link">
+      Localizing Android Apps
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Sample Code
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Sample Code" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Sample Code
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1-1" type="checkbox" id="nav-3-1-1">
+    
+    <label class="md-nav__link" for="nav-3-1-1">
+      OData
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="OData" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        OData
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/odata/OData-Intro.html" title="OData API Sample Code" class="md-nav__link">
+      OData API Sample Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/odata/setup-initialization.html" title="Setup and Initialization" class="md-nav__link">
+      Setup and Initialization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/odata/Query.html" title="Querying and Modifying Data Using Proxy Classes" class="md-nav__link">
+      Querying and Modifying Data Using Proxy Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/odata/metadata-apis.html" title="Metadata APIs" class="md-nav__link">
+      Metadata APIs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/odata/async-apis.html" title="Asynchronous APIs" class="md-nav__link">
+      Asynchronous APIs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1-2" type="checkbox" id="nav-3-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-2">
+      Foundation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Foundation" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Foundation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/overview.html" title="Foundation Sample Code" class="md-nav__link">
+      Foundation Sample Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/authentication.html" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/backendconnectivity.html" title="Back End Connectivity" class="md-nav__link">
+      Back End Connectivity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/cache.html" title="Cache" class="md-nav__link">
+      Cache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/clientusage.html" title="Client Usage" class="md-nav__link">
+      Client Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/configurationprovider.html" title="Configuration Provider" class="md-nav__link">
+      Configuration Provider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/logging.html" title="Logging" class="md-nav__link">
+      Logging
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/push.html" title="Push Notifications" class="md-nav__link">
+      Push Notifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/settings.html" title="Settings" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sample-code/foundation/userinfo.html" title="User Information" class="md-nav__link">
+      User Information
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      API Reference
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reference/reference.html" title="Reference" class="md-nav__link">
+      Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Android
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Android" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reference/android/reference.html" title="Javadoc" class="md-nav__link">
+      Javadoc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reference/android/reference-kotlin.html" title="Kotlin" class="md-nav__link">
+      Kotlin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="https://help.sap.com/doc/69c2ce3e50454264acf9cafe6c6e442c/Latest/en-US/docs-en/index.html" title="Mobile Development Kit" class="md-nav__link">
+      Mobile Development Kit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formats-of-data-used-with-ilodata" class="md-nav__link">
+    Formats of Data Used with ILOData
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-option-values-for-sap-mobile-services-server" class="md-nav__link">
+    Getting Option Values for SAP Mobile Services Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-offline-store-using-the-sap-business-technology-platform-server" class="md-nav__link">
+    Create a New Offline Store Using the SAP Business Technology Platform Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-entity" class="md-nav__link">
+    Create a New Entity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-the-error-archive" class="md-nav__link">
+    Query the Error Archive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-operations" class="md-nav__link">
+    Batch Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-insert-and-complex-type" class="md-nav__link">
+    Deep Insert and Complex Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bind-operations" class="md-nav__link">
+    Bind Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-log-with-data-changed-flag" class="md-nav__link">
+    Event Log with Data Changed Flag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+          
+              
+                
+                
+                  
+                
+                
+                <h1 id="troubleshooting-with-ilodata">Troubleshooting with ILOData<a class="headerlink" href="#troubleshooting-with-ilodata" title="Permanent link">&para;</a></h1>
+<p>Interactive Local OData (ILOData) is a command line utility that lets you execute OData requests, upload and download against a local offline store.</p>
+<p>ILOData functions in the same way as an offline OData client, without the need for an application or device, enabling you to test data from the back-end service.</p>
+<p>If an offline store exists, ILOData uses it. If not, ILOData performs a download to create the offline store. To perform a download, you must set <code>defining_query</code> and <code>service_root</code>. If no defining queries are specified on the command line and no offline store exists, you are prompted to enter defining queries before ILOData opens the offline store.</p>
+<p>To use ILOData against an existing offline store, you must first retrieve the underlying offline store files from the device they were created on. Offline store files include two database files, prefixed with the store name (or the default name if no store name was specified when the offline store was created). One has a <code>.rq</code> <code>.udb</code> suffix and the other has a <code>.udb</code> suffix. These files are located in the directory provided in the <code>store_path</code> option, or in the application data directory by default if no <code>store_path</code> has been provided.</p>
+<h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">ILOData</span><span class="p">.</span><span class="n">exe</span> <span class="p">-[</span><span class="n">option</span><span class="p">=&lt;</span><span class="n">value</span><span class="p">&gt;</span> <span class="p">[</span><span class="n">option</span><span class="p">=&lt;</span><span class="n">value</span><span class="p">&gt;</span> <span class="p">...]]</span>
+</code></pre></div>
+
+<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><code>host</code> The host name of the mobile services server.</p>
+</li>
+<li>
+<p><code>port</code> The port of the mobile services server.</p>
+</li>
+<li>
+<p><code>appcid</code> The application client ID.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is required by SAP Mobile Platform server and you DO NOT need to specify it for SAP Business Technology Platform server.</p>
+</div>
+<ul>
+<li>
+<p><code>custom_cookie</code> A dictionary of custom cookies to add to all HTTP communications. Custom cookies are added to HTTP requests between the offline store and mobile services and to HTTP requests between mobile services and the back-end OData service. For example, <code>custom_cookie=name1:value1;</code>.  </p>
+</li>
+<li>
+<p><code>custom_header</code> A dictionary of custom headers to add to all HTTP communications. Custom headers are added to HTTP requests between the offline store and SAP Mobile Services and to HTTP requests between mobile services and the back-end OData service. For example, <code>custom_header=name1:value1;</code>.</p>
+</li>
+<li>
+<p><code>defining_query</code> An OData read request that targets the OData endpoint that is associated with the offline store and retrieves a subset of the data, either during initialization of the offline store or during a download. Multiple defining queries can be defined for each OData endpoint by specifying multiple <code>defining_query</code> options on the command line. Defining queries become fixed for an offline store after the first time the store is opened.</p>
+<p>If no defining queries are provided on the command line, and no database files exist, ILOData prompts you to specify them. You can specify a name for the defining query (the name that would be used for a selective download and/or in an application configuration <code>.ini</code> file on the mobile services), as well as specify whether to download media streams. When the defining queries are specified using command line options, media streams are not downloaded by default, and the defining queries's names are the index at which they are specified. For example, in the following ILOData command, the first defining query would be named “1” and the second defining request would be named “2”.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>ILOData defining_query=Events defining_query=Sessions
+</code></pre></div>
+
+<ul>
+<li>
+<p><code>enable_https</code> Whether to use HTTP or HTTPS to communicate with mobile services. The default is <code>no</code>.</p>
+</li>
+<li>
+<p><code>enable_repeatable_reqs</code> Whether the back-end OData service supports repeatable requests. Repeatable requests (or idempotent requests) are a feature of some OData services that ensure OData requests are applied only once, even if they are received multiple times. This is useful in cases where OData responses may be lost due to intermittent network connectivity and is required by the offline store to guarantee that requests are applied exactly once to the back-end OData service.</p>
+</li>
+<li>
+<p><code>extra_stream_parms</code> Additional advanced stream parameters.</p>
+</li>
+<li>
+<p><code>identity_file</code> A file containing a client authentication certificate.</p>
+</li>
+<li>
+<p><code>identity_password</code> The password to use with the client authentication certificate.</p>
+</li>
+<li>
+<p><code>log_file</code> A file in which to log output.</p>
+</li>
+<li>
+<p><code>prompt</code> Override the default ILOData prompt.</p>
+</li>
+<li>
+<p><code>retry_download</code> The number of times to retry a download or store open when a failure occurs. The default is 0 (no retry).</p>
+</li>
+<li>
+<p><code>retry_wait</code> The amount of time, in milliseconds, to wait before retrying a download. The default is 100.</p>
+</li>
+<li>
+<p><code>service_root</code> The service root of the OData service. When the server is an instance of mobile services, this value depends on the <code>Rewrite Mode</code> configuration in the server-side application. If <code>Rewrite Mode</code> is set to <code>Rewrite URL</code>, then this is the name of the application back-end connector. If <code>Rewrite Mode</code> is set to <code>Rewrite URL on Back End</code>, then this is the path of the back-end OData endpoint. For example, if the application is configured with a connector named <code>myconn</code> to an OData endpoint of <code>http://myhost:80/odata/endpoint</code>, then the <code>service_root</code> should be <code>myconn</code> for <code>Rewrite URL</code> and <code>odata/endpoint</code> for <code>Rewrite URL on Back End</code>.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The mobile service does not provide the functionality to use <code>No Rewriting</code> mode to support external back ends for offline usage.</p>
+</div>
+<ul>
+<li>
+<p><code>store_key</code> The key that encrypts the local database. By default the database is not encrypted.</p>
+</li>
+<li>
+<p><code>store_name</code> An arbitrary name that identifies the offline store. If omitted, the default name <code>lodata</code> is used.</p>
+</li>
+<li>
+<p><code>store_path</code> The file system path to store the offline store files. The default is the current directory.</p>
+</li>
+<li>
+<p><code>trusted_certificate</code> A file containing a trusted root certificate.</p>
+</li>
+<li>
+<p><code>url_suffix</code> The URL suffix path to the server. Specify the suffix to add to the URL of each HTTP request sent to the server.</p>
+</li>
+<li>
+<p><code>username</code> The user name to authenticate with the OData service.</p>
+</li>
+<li>
+<p><code>password</code> The password to authenticate with the OData service.</p>
+</li>
+<li>
+<p><code>enable_undo_local_creation</code> Specifies whether or not deleting an entity that was created locally but not yet uploaded undoes the creation. The default value is <code>no</code>.</p>
+</li>
+<li>
+<p><code>enable_transaction_builder</code> Specifies whether or not to enable the transaction builder. The default value is <code>no</code>.</p>
+</li>
+</ul>
+<h2 id="formats-of-data-used-with-ilodata">Formats of Data Used with ILOData<a class="headerlink" href="#formats-of-data-used-with-ilodata" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><code>null</code> | <code>NULL</code> (case sensitive)</p>
+</li>
+<li>
+<p><code>binary</code>: <code>0xhhhhhh</code> (<code>hh</code> is a pair of hexadecimal digits)</p>
+</li>
+<li>
+<p><code>boolean</code>: <code>true</code> | <code>false</code></p>
+</li>
+<li>
+<p><code>byte</code>, <code>sbyte</code>, <code>int16</code>, <code>int32</code>, <code>int64</code>: <code>[0-9]*</code></p>
+</li>
+<li>
+<p><code>datetime</code>: <code>yyyy-mm-dd[T]hh:mm:ss.ssssss</code> (time portion is optional)</p>
+</li>
+<li>
+<p><code>datetime_offset</code>: like <code>datetime</code> plus timezone</p>
+</li>
+<li>
+<p><code>decimal</code>, <code>double</code>, <code>single</code>: normal numeric representation for type</p>
+</li>
+<li>
+<p><code>guid</code>: <code>hhhhhhhh-hhhh-hhhh-hhhh-hhhhhhhhhhhh</code> (<code>h</code> is hex digit)</p>
+</li>
+<li>
+<p><code>time</code>: <code>PnYnMnWnDTnHnMn[.m]S</code> each component is optional</p>
+</li>
+</ul>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<p>You can run commands in ILOData, or you can specify them on the command line, to run immediately on startup.</p>
+<p>For example, <code>command=get ~/T1</code> causes ILOData to exit immediately after executing the command.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delete</code></td>
+<td><code>id_url</code></td>
+<td>Execute the given <code>DELETE</code> request.</td>
+</tr>
+<tr>
+<td><code>exit</code></td>
+<td></td>
+<td>Quit ILOData.</td>
+</tr>
+<tr>
+<td><code>upload</code></td>
+<td></td>
+<td>Upload queued requests.</td>
+</tr>
+<tr>
+<td><code>get</code></td>
+<td><code>[request]</code></td>
+<td>Execute the given <code>GET</code> request.</td>
+</tr>
+<tr>
+<td><code>help</code></td>
+<td></td>
+<td>Print usage information.</td>
+</tr>
+<tr>
+<td><code>patch</code></td>
+<td><code>id_url [prop=value]</code></td>
+<td>Execute the given <code>PATCH</code> request. <br/><br/>id_url is a URL identifying an entity.<sup>1</sup></td>
+</tr>
+<tr>
+<td><code>patch</code></td>
+<td><code>link_url</code> <code>[id_url]</code></td>
+<td>Execute the given request to modify a link.<br/><br/>link_url is a URL identifying a navigation property.<sup>1</sup><br/><br/>id_url is n URL identifying an entity.<sup>1</sup></td>
+</tr>
+<tr>
+<td><code>post</code></td>
+<td><code>set_url</code> <code>[prop=value]</code></td>
+<td>Execute the given <code>POST</code> request.<br/><br/>set_url is a URL identifying an entity set.<sup>1</sup><br/><br/><code>POST</code> requests support:<ul><li>Deep inserts and complex types. The syntax for both is the same. ILOData allows wrapping groups of properties for deep inserted entities or complex type properties in curly braces (<code>{}</code>).</li><li>Bind operations. To perform a bind, rather than setting the navigation property to an object (<code>{}</code>), you set the value to a URL.</li></ul></td>
+</tr>
+<tr>
+<td><code>put</code></td>
+<td><code>id_url</code> <code>[prop=value]</code></td>
+<td>Execute the given <code>PUT</code> request.<br/><br/>id_url is a URL identifying an entity.<sup>1</sup></td>
+</tr>
+<tr>
+<td><code>put</code></td>
+<td><code>link_url</code> <code>[id_url]</code></td>
+<td>Execute the given request to modify a link.<br/><br/>link_url is a URL identifying a navigation property.<sup>1</sup><br/><br/>id_url is a URL identifying an entity.<sup>1</sup></td>
+</tr>
+<tr>
+<td><code>download</code></td>
+<td></td>
+<td>Perform a delta download.</td>
+</tr>
+<tr>
+<td><code>register</code></td>
+<td><code>name</code> <code>id_url</code></td>
+<td>Register a media stream request.<br/><br/>id_url is a URL identifying an entity.<sup>1</sup></td>
+</tr>
+<tr>
+<td><code>requestQueueIsEmpty</code></td>
+<td></td>
+<td>Returns whether or not the request queue is empty.</td>
+</tr>
+<tr>
+<td><code>set</code></td>
+<td><code>name=value</code></td>
+<td>Set an ILOData variable.<br/><code>pagesize variable</code> The page size for server-driven paging. pagesize must be a 32-bit integer greater than 0. A special value for this variable is NO_PAGING, which means do not use server-driven paging. NO_PAGING is the default.</td>
+</tr>
+<tr>
+<td><code>unregister</code></td>
+<td><code>name</code></td>
+<td>Unregister a media stream request.</td>
+</tr>
+<tr>
+<td><strong>Batch operations</strong> The important commands for executing batch operations are:<br/><ul><li><code>start batch</code> start a batch request.</li><li><code>start change set</code> start a change set when within a batch.</li><li><code>add change set</code> add the current change set to the batch</li><li><code>execute batch</code> execute the requests in the current batch.</li><li><code>cancel batch</code> cancel the current batch when building a batch.</li><li><code>cancel change set</code> cancel the current change set when building a change set.</li></ul></td>
+<td></td>
+<td>Each request within a change set is given an request number. The request number can be used as a Content-ID reference in later requests in the same change set.</td>
+</tr>
+<tr>
+<td><code>send store</code></td>
+<td>[<code>EncryptionKey</code>]</td>
+<td>Send the offline store to SAP Mobile Services server for diagnostic purpose. If the <code>EncryptionKey</code> option is not specified, then this command will send a decrypted store to the server. If <code>Encryptionkey</code> is specified, then the send store command will send an encrypted store to the server with <code>EncryptionKey</code>. For example <code>send store 123</code> will send the offline store with encryption key "123" to the server.</td>
+</tr>
+<tr>
+<td><code>printDefiningQueries</code></td>
+<td></td>
+<td>Print defining queries that have been added to the offline store.</td>
+</tr>
+<tr>
+<td><code>printRequestQueue</code></td>
+<td></td>
+<td>Print requests that are currently in the request queue.</td>
+</tr>
+<tr>
+<td><code>undo</code></td>
+<td><code>id_url</code></td>
+<td>Undo pending changes made to an entity identified by id_url. For an existing entity downloaded from the back end, the entity will be restored to its original status. For a new entity created locally, the entity will be removed.</td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup> All URLs must be properly encoded, particularly spaces and slashes. All values that contain spaces or tabs must be quoted with double quotes (<code>"</code>). All other values can be, but aren't required to be, quoted with double quotes. Quoted values may contain <code>\</code>, <code>\xhh</code> and <code>""</code> escape sequences. Except when noted, values are case insensitive.</p>
+<h2 id="getting-option-values-for-sap-mobile-services-server">Getting Option Values for SAP Mobile Services Server<a class="headerlink" href="#getting-option-values-for-sap-mobile-services-server" title="Permanent link">&para;</a></h2>
+<p>You need to provide a set of mandatory option values in order to access the server, including <code>host</code>, <code>port</code>, <code>.ini</code>, <code>service_root</code>, <code>customer_header</code> and <code>customer_cookie</code> (for the tenant node cookie). You also need to know the ID of the application to access.</p>
+<ul>
+<li><code>host</code>: Consult your system administrator to get the host name. For example, a string like <code>xxx-xxx.hanatrial.ondemand.com</code>.</li>
+<li><code>port</code>: Usually 443.</li>
+<li><code>enable_https</code>: Always <code>yes</code> for SAP Business Technology Platform.</li>
+<li><code>service_root</code>: Knowing the <strong>ID of the application</strong> to use, it is a string, such as <code>https://host/application_id</code>.</li>
+<li><code>custom_header</code>: You must include <code>X-SMP-APPID</code> as a custom header in the form of <code>custom_header=X-SMP-APPID:application_id</code>.</li>
+<li><code>custom_cookie</code>: Follow the steps below to get the tenant node cookie.<ol>
+<li>Log in to the SAP mobile services cockpit.</li>
+<li>Navigate to your application's details page, then switch to the "APIs" tab. Make a record of the URL for the "Server" API.</li>
+<li>Send a <code>GET</code> request using a REST client (such as Postman) to the URL you get in step #1 with a header <code>X-SMP-APPID</code> which value is the ID of the application.</li>
+<li>If the request is successful, the response will contain a cookie. Make a record of the cookie name and value. The cookie name and value will be used in the <code>custom_cookie</code> option in the form of <em>cookie_name:cookie_value</em>.</li>
+</ol>
+</li>
+</ul>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="create-a-new-offline-store-using-the-sap-business-technology-platform-server">Create a New Offline Store Using the SAP Business Technology Platform Server<a class="headerlink" href="#create-a-new-offline-store-using-the-sap-business-technology-platform-server" title="Permanent link">&para;</a></h3>
+<p>Assuming your application requires no authentication (the application's <code>Security Configuration</code> is <code>None</code>) and the back-end OData service requires no authentication either (the application connectivity's <code>SSO Mechanism</code> is <code>No Authentication</code>), use the command below to access the server and open the offline store (replacing the <code>xxx</code> parts with your own values):</p>
+<div class="highlight"><pre><span></span><code>ILOData host=xxx-xxx.hanatrial.ondemand.com port=443 `enable_https`=yes service_root=https://xxx-xxx.hanatrial.ondemand.com/xxx defining_query=xxx custom_header=X-SMP-APPID:xxx &quot;custom_cookie=xxx:xxx&quot;
+</code></pre></div>
+
+<p>Another common use case is that your application requires basic authentication (the application's <code>Security Configuration</code> is <code>Basic</code>). In this case you need to specify the user name and password for accessing SAP Business Technology Platform:</p>
+<div class="highlight"><pre><span></span><code>ILOData ... username=xxx password=xxx
+</code></pre></div>
+
+<p>In the command above, <code>…</code> represents other options as shown in the previous example and you also need to replace the <code>xxx</code> parts with your own values.</p>
+<p>If your back-end OData service requires <code>Basic Authentication</code>, you need to configure the user name and password in the application's destination to let SAP Business Technology Platform know how to authenticate with the back end.</p>
+<h3 id="create-a-new-entity">Create a New Entity<a class="headerlink" href="#create-a-new-entity" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>ILOData&gt; post MySampleCollection strProp=&quot;myvalue1&quot; dateProp=&quot;2015-01-01 T12:00:00&quot;
+</code></pre></div>
+
+<h3 id="query-the-error-archive">Query the Error Archive<a class="headerlink" href="#query-the-error-archive" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>ILOData&gt; get ErrorArchive
+</code></pre></div>
+
+<h3 id="batch-operations">Batch Operations<a class="headerlink" href="#batch-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Batch operation #1:</p>
+<div class="highlight"><pre><span></span><code>ILOData &gt; start batch
+-------------------------------------------------------------------------------------------------------
+Batch Operation #1 &gt; start change set
+-------------------------------------------------------------------------------------------------------
+Change Set #1 Operation #1 &gt; post Customers ID=3 GivenName=&quot;John&quot; Surname=&quot;Doe&quot;
+The operation was successfully added to the change set.
+------------------------------------------------------------------------------------------------------
+Change Set #1 Operation #2 &gt; post $1/Orders ID=3 FinancialCode=&quot;r1&quot; Region=&quot;Eastern&quot;    SalesRepresentative=299 OrderDate=&quot;2017-07-04T00:00:00.000&quot;
+The operation was successfully added to the change set.
+-------------------------------------------------------------------------------------------------------
+Change Set #1 Operation #3 &gt; add change set
+The change set was successfully added to the batch.
+</code></pre></div>
+
+</li>
+<li>
+<p>Batch operation #2:</p>
+<div class="highlight"><pre><span></span><code>Batch Operation #2 &gt; get Customers?$expand=Orders&amp;$orderby=ID
+The query was successfully added to the batch.
+</code></pre></div>
+
+</li>
+<li>
+<p>Batch operation #3:</p>
+<div class="highlight"><pre><span></span><code>Batch Operation #3 &gt; start change set
+-------------------------------------------------------------------------------------------------------
+Change Set #2 Operation #1 &gt; post Customers ID=4 GivenName=&quot;John&quot; Surname=&quot;Doe&quot;
+The operation was successfully added to the change set.
+-----------------------------------------------------------------------------------------------------
+Change Set #2 Operation #2 &gt; post $1/Orders ID=4 FinancialCode=&quot;r1&quot; Region=&quot;Canada&quot; SalesRepresentative=299 OrderDate=&quot;2017-07-04T12:00:00.000&quot;
+The operation was successfully added to the change set.
+----------------------------------------------------------------------------------------------------
+Change Set #2 Operation #3 &gt; post $2/OrderItems LineID=1 ProductID=1 Quantity=1 ShipDate=&quot;2017-07-04T13:00:00.000&quot;
+The operation was successfully added to the change set.
+--------------------------------------------------------------------    ---------------------------
+Change Set #2 Operation #4 &gt; add change set
+The change set was successfully added to the batch.
+</code></pre></div>
+
+</li>
+<li>
+<p>Batch operation #4:</p>
+<div class="highlight"><pre><span></span><code>Batch Operation #4 &gt; get Customers?$expand=Orders/OrderItems&amp;$orderby=ID
+The query was successfully added to the batch.
+</code></pre></div>
+
+</li>
+<li>
+<p>Batch operation #5:</p>
+<div class="highlight"><pre><span></span><code>Batch Operation #5 &gt; execute batch
+</code></pre></div>
+
+</li>
+</ul>
+<h3 id="deep-insert-and-complex-type">Deep Insert and Complex Type<a class="headerlink" href="#deep-insert-and-complex-type" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>This example performs a deep insert of a customer within a new order, then retrieves the new customer:</p>
+<div class="highlight"><pre><span></span><code>ILOData &gt; post Orders Customer={ID=2 GivenName=&quot;John&quot; Surname=&quot;Doe&quot;} ID=2 FinancialCode=&quot;r1&quot; Region=&quot;Eastern&quot; SalesRepresentative=299 OrderDate=&quot;2017-07-04T00:00:00.000&quot;
+
+HTTP 201: Created
+-------------------------------------------------------------------------------------------------------------------
+ILOData &gt; get Customers?$expand=Orders&amp;$orderby=ID,Orders/ID
+
+HTTP 200: OK
+</code></pre></div>
+
+</li>
+<li>
+<p>This example illustrates how to work with complex types:</p>
+<div class="highlight"><pre><span></span><code>ILOData &gt; post Customers ID=3 GivenName=&quot;John&quot; Surname=&quot;Doe&quot; Address={Street=”445 Wes Graham Way” City=”Waterloo” Country=”Canada”}
+
+HTTP 201: Created
+------------------------------------------------------------------------------------------------------------------
+
+ILOData &gt; upload
+
+Upload complete
+--------------------------------------------------------------------------------
+ILOData &gt; download
+
+Download complete
+</code></pre></div>
+
+</li>
+</ul>
+<h3 id="bind-operations">Bind Operations<a class="headerlink" href="#bind-operations" title="Permanent link">&para;</a></h3>
+<p>The following example creates a new customer and binds it to two existing orders:</p>
+<div class="highlight"><pre><span></span><code>ILOData &gt; post Customers ID=3 GivenName=&quot;John&quot; Surname=&quot;Doe&quot; Orders=&quot;Orders(3)&quot; Orders=&quot;Orders(4)&quot;
+
+HTTP 201: Created
+------------------------------------------------------------------------------------------------------------------
+
+ILOData &gt; upload
+
+Upload complete
+--------------------------------------------------------------------------------
+ILOData &gt; download
+
+Download complete
+--------------------------------------------------------------------------------
+ILOData &gt; get Customers?$expand=Orders&amp;$orderby=ID,Orders/ID
+
+
+HTTP 200: OK
+</code></pre></div>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>If you set the value of a navigation property to an object (for example, <code>Orders= {….}</code>) it is treated as a deep insert.</li>
+<li>If you set the value of a navigation property to a URL (for example, <code>Orders=Customers(101)</code>), it is treated as a bind.</li>
+</ul>
+</div>
+<h3 id="event-log-with-data-changed-flag">Event Log with Data Changed Flag<a class="headerlink" href="#event-log-with-data-changed-flag" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>From the ILOData command line open a store with the parameter:</p>
+<div class="highlight"><pre><span></span><code>`extra_stream_parms`=_data_changed_by_download_flag;
+</code></pre></div>
+
+</li>
+<li>
+<p>Retrieve the <code>EventLog</code> with the <code>get EventLog</code> command.</p>
+</li>
+<li>
+<p>If there have been any changes, or for the initial download, the log shows <code>"DataChanged": true</code>:</p>
+<p><code>json
+{
+    "_metadata": {
+        "uri": "EventLog(1L)",
+    "type": "offlineOData.Event"
+    },
+    "ID": "1",
+    "Type": "download",
+    "Time": "\/Date (1500988667440-240) \/",
+    "Details": null,
+    "DataChanged": true
+}</code></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Performing a download operation when no data has changed in the back end results in <code>"DataChanged": false</code> in the <code>EventLog</code>. <code>DataChanged</code> is <code>null</code> for other types of events, such as upload.</p>
+</div>
+                
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: January 15, 2021
+    
+  </small>
+</div>
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <footer class="footer">
+    <div class="md-grid">
+        <div class="footer__inner">
+                <div class="footer__cell">
+                    <span class="footer__cell__header">Learn</span>
+                        <ul class="footer__cell__links">
+                            <li class="footer__cell__link">
+                                <a href="https://help.sap.com/doc/221f8f84afef43d29ad37ef2af0c4adf/HP_2.0/en-US/317030086f83418a94dfe94173b46584.html?categories=SAP%20Cloud%20Platform&search=Mobile" target="_blank" title="Learning Journeys">Learning Journeys</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://developers.sap.com/tutorial-navigator.html?tag=topic:mobile" target="_blank" title="Tutorials">Tutorials</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://github.com/search?q=org:SAP-Samples+topic:mobile-services" target="_blank" title="Sample Apps">Sample Apps</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="footer__cell">
+                    <span class="footer__cell__header">Community</span>
+                        <ul class="footer__cell__links">
+                            <li class="footer__cell__link">
+                                <a href="https://developers.sap.com/topics/mobile.html" target="_blank" title="Product Overview">Product Overview</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://influence.sap.com/sap/ino/#campaign/2279" target="_blank" title="Continuous Influencing">Continuous Influencing</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://blogs.sap.com/tags/668874921104038800958643358380369/" target="_blank" title="Blogs">Blogs</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://answers.sap.com/tags/668874921104038800958643358380369" target="_blank" title="Questions & Answers">Questions & Answers</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="footer__cell">
+                    <span class="footer__cell__header">Support</span>
+                        <ul class="footer__cell__links">
+                            <li class="footer__cell__link">
+                                <a href="https://support.sap.com/en/my-support/product-support.html" target="_blank" title="Product Support">Product Support</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                    <a href="https://api.sap.com/package/MobileServices?section=Artifacts" target="_blank" title="SAP API Business Hub">SAP API Business Hub</a>
+                            </li>
+                                <li class="footer__cell__link">
+                                        <a href="https://launchpad.support.sap.com/#/mynotes?tab=Search&q=notes&sortBy=Relevance&filters=themk%25253Aeq~'MOB-CLD*'~'MOB-SDK-ADR*'~'MOB-SDK-IOS*'~'MOB-MDK*'~'MOB-MDE*'%25252BreleaseStatus%25253Aeq~'NotRestricted'%25252BsecurityPatchDay%25253Aeq~'NotRestricted'%25252BfuzzyThreshold%25253Aeq~'0.9'&flag=mynotes" target="_blank" title="SAP Notes">SAP Notes</a>
+                                    </li>
+                        </ul>
+                </div>
+                <div class="footer__cell">
+                    <span class="footer__cell__header">Legal</span>
+                        <ul class="footer__cell__links">
+                            <li class="footer__cell__link">
+                                <a href="https://help.sap.com/doc/47885d3f26274b0a94c3b1113b4e64b3/Cloud/en-US/cf_fsd.pdf" target="_blank" title="Feature Scope">Feature Scope</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://www.sap.com/about/legal/copyright.html" target="_blank" title="Copyright">Copyright</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://help.sap.com/viewer/disclaimer" target="_blank" title="Disclaimer">Disclaimer</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://help.sap.com/viewer/privacy" target="_blank" title="Privacy Statement">Privacy Statement</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://www.sap.com/corporate/en/legal/impressum.html" target="_blank" title="Impressum">Impressum</a>
+                            </li>
+                            <li class="footer__cell__link">
+                                <a href="https://www.sap.com/corporate/en/legal/terms-of-use.html" target="_blank" title="Terms of Use">Terms of Use</a>
+                            </li>
+                        </ul>
+                </div>
+        </div>
+    </div>
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+            
+            <div class="md-footer-copyright__highlight">
+                &copy; 2021 SAP SE. All rights reserved.
+            </div>
+            
+            powered by
+            <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+            and
+            <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs</a>
+        </div>
+        
+        </div>
+    </div>
+  </footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b7ed72fe.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ["tabs", "instant"],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="../../../search/main.js"></script>
+      
+    
+  </body>
+</html>

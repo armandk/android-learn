@@ -1,0 +1,162 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XmlParser - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.xml</a>&nbsp;/&nbsp;<a href="./index.html">XmlParser</a><br/>
+<br/>
+<h1>XmlParser</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlParser</span></code>
+<p>Parser for <a href="http://en.wikipedia.org/wiki/XML">XML</a>. Supports parsing into an <code><a href="../xmldocument/index.html">com.sap.cloud.mobile.odata.xml.XmlDocument</a></code> or <code><a href="../xmlelement/index.html">com.sap.cloud.mobile.odata.xml.XmlElement</a></code>. Parsing options are <em>complete</em> (<code><a href="parsedocument.html">XmlParser.parseDocument</a></code>, <code><a href="static_parseelement.html">XmlParser.parseElement</a></code>) and <em>streamed</em> (<code><a href="startdocument.html">XmlParser.startDocument</a></code>, <code><a href="startelement.html">XmlParser.startElement</a></code>).</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="options/index.html">Options</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Options</span></code>
+<p>XMP parser options</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getdeclaration.html">getDeclaration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeclaration</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The parsed XML declaration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrootelement.html">getRootElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRootElement</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Return the parsed root element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nextchild.html">nextChild</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">nextChild</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$nextChild(com.sap.cloud.mobile.odata.xml.XmlElement, kotlin.Boolean)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$nextChild(com.sap.cloud.mobile.odata.xml.XmlElement, kotlin.Boolean)/parseNested">parseNested</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlnode/index.html"><span class="identifier">XmlNode</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The next child node of <code>element</code>, or <code>null</code> if <code>element</code> has ended.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nextchildelement.html">nextChildElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">nextChildElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$nextChildElement(com.sap.cloud.mobile.odata.xml.XmlElement, kotlin.Boolean)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$nextChildElement(com.sap.cloud.mobile.odata.xml.XmlElement, kotlin.Boolean)/parseNested">parseNested</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The next child element of <code>element</code>, or <code>null</code> if <code>element</code> has ended. Any non-element child nodes (e.g. comment nodes, text nodes) will be ignored.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nextelement.html">nextElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">nextElement</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Assuming an element appears next in the stream, parse its start tag.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsedocument.html">parseDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$parseDocument(com.sap.cloud.mobile.odata.CharStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../xmldocument/index.html"><span class="identifier">XmlDocument</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$parseDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$parseDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmldocument/index.html"><span class="identifier">XmlDocument</span></a></code>
+<p>See parseDocument(CharStream, boolean, Options).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$parseDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$parseDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$parseDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/options">options</span><span class="symbol">:</span>&nbsp;<a href="options/index.html"><span class="identifier">XmlParser.Options</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../xmldocument/index.html"><span class="identifier">XmlDocument</span></a></code>
+<p>Parse a stream to a document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseelement.html">parseElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">parseElement</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Return the next element in the stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="readchildren.html">readChildren</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readChildren</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$readChildren(com.sap.cloud.mobile.odata.xml.XmlElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Read all of the children of a started element, and read the element's end tag.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeclaration.html">setDeclaration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeclaration</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$setDeclaration(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the parsed XML declaration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrootelement.html">setRootElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRootElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$setRootElement(com.sap.cloud.mobile.odata.xml.XmlElement)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the parsed root element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="startdocument.html">startDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">startDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startDocument(com.sap.cloud.mobile.odata.CharStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlParser</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">startDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlParser</span></a></code>
+<p>See startDocument(CharStream, boolean, Options).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">startDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startDocument(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/options">options</span><span class="symbol">:</span>&nbsp;<a href="options/index.html"><span class="identifier">XmlParser.Options</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlParser</span></a></code>
+<p>Start parsing a stream to a document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="startelement.html">startElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">startElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startElement(com.sap.cloud.mobile.odata.CharStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlParser</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">startElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlParser</span></a></code>
+<p>See startElement(CharStream, boolean, Options).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">startElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$startElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/options">options</span><span class="symbol">:</span>&nbsp;<a href="options/index.html"><span class="identifier">XmlParser.Options</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlParser</span></a></code>
+<p>Start parsing a stream to an element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="static_parseelement.html">static_parseElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">static_parseElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$static_parseElement(com.sap.cloud.mobile.odata.CharStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">static_parseElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$static_parseElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$static_parseElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a></code>
+<p>See static_parseElement(CharStream, boolean, Options).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">static_parseElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$static_parseElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$static_parseElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlParser$static_parseElement(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean, com.sap.cloud.mobile.odata.xml.XmlParser.Options)/options">options</span><span class="symbol">:</span>&nbsp;<a href="options/index.html"><span class="identifier">XmlParser.Options</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelement/index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Parse a stream to an element.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

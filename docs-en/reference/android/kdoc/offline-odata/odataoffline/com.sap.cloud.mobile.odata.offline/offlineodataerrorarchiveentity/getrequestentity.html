@@ -1,0 +1,17 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataErrorArchiveEntity.getRequestEntity - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataErrorArchiveEntity</a>&nbsp;/&nbsp;<a href="./getrequestentity.html">getRequestEntity</a><br/>
+<br/>
+<h1>getRequestEntity</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$getRequestEntity()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">EntityValue</span><span class="symbol">?</span></code>
+<p>Return (nullable) The navigation property which can be used to directly read and directly modify the failed request in the request queue. The actual entity type of the returned entity will be dependent on the type of request. For example, if the failed request was a PATCH request on the entity Customers(101), then the entity returned by this navigation property will have a Customer entity type. Note that this navigation property differs from AffectedEntity; AffectedEntity returns the CURRENT state of the entity in the Offline Store where as RequestEntity is an typed representation of the request in the request queue itself.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">EntityValue</span><span class="symbol">?</span><span class="symbol">:</span> (nullable) The navigation property which can be used to directly read and directly modify the failed request in the request queue. The actual entity type of the returned entity will be dependent on the type of request. For example, if the failed request was a PATCH request on the entity Customers(101), then the entity returned by this navigation property will have a Customer entity type. Note that this navigation property differs from AffectedEntity; AffectedEntity returns the CURRENT state of the entity in the Offline Store where as RequestEntity is an typed representation of the request in the request queue itself.</p>
+</BODY>
+</HTML>

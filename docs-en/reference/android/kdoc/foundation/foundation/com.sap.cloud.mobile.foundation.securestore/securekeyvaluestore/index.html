@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SecureKeyValueStore - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.securestore</a>&nbsp;/&nbsp;<a href="./index.html">SecureKeyValueStore</a><br/>
+<br/>
+<h1>SecureKeyValueStore</h1>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureKeyValueStore"></a>
+<code><span class="keyword">class </span><span class="identifier">SecureKeyValueStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.securestore.SecureKeyValueStore"></a>
+<code><span class="keyword">class </span><span class="identifier">SecureKeyValueStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code>
+<p>The SecureKeyValueStore is used to persist key-value pairs using an encrypted backing store. It uses <code>String</code> as the key type, and can store any values of the following types: <ul> <li>Boolean</li>
+ <li>Byte</li>
+ <li>Double</li>
+ <li>Float</li>
+ <li>Integer</li>
+ <li>Long</li>
+ <li>Short</li>
+ <li>String</li>
+ <li>byte[]</li>
+ <li>Any Object that implements <code>Serializable</code> interface</li>
+ </ul>
+ Creating and Opening You must instantiate the store and then open it with an encryption key. It is recommended to use <code>EncryptionUtil</code> to obtain the encryption key. If this is the first time store is being opened and <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens. <pre><code>byte[] myEncryptionKey = EncryptionUtil.getEncryptionKey("aliasForMyKeyValueStore", myPasscode);
+    SecureKeyValueStore store = new SecureKeyValueStore(appContext, "myKeyValueStoreName");
+    store.open(myEncryptionKey);
+
+    // Or pass null for the store to generate the encryption key transparently.
+    // store.open(null);
+ </code></pre> A SecureKeyValueStore has <code>void put(String key, T value)</code> to add values of the supported types, and methods to retrieve different data types in an appropriate format: Put <pre><code>class Organization implements Serializable {
+        private String name;
+        private String id;
+
+        public Organization() { super();}
+        public Organization(String name, String id) {
+            this.name = name;
+            this.id = id;
+        }
+        public String getName() { return name; }
+        public void setName(String name) { this.name = name; }
+        public String getId() { return id; }
+        public void setId(String id) { this.id = id; }
+    }
+
+    String orgId = "ORG_HR_1";
+    Organization org = new Organization("Human Resource", orgId);
+
+    try {
+        store.put(orgId, org); // Adds an Organization object to the store.
+    } catch (BackingStoreException | TypeConversionException ex) {
+        logger.error("Failed to add Organization {}", orgId, ex);
+    }
+ </code></pre> Get You must use the appropriate method to retrieve the data from the key-value store by passing a String key: <pre><code>try {
+        store.put("Integer value", 3);                  // Integer value.
+        store.put("Double value", 3.5D);                // Double value.
+        store.put("String value", "This is a String");  // String value.
+        store.put("Int16Value", (short) 17);            // Short value.
+        store.put("Int64Value", 41L);                   // Long value.
+        store.put("FloatValue", 1.3F);                  // Float value.
+
+        // Retrieves values with the appropriate get methods using the original keys.
+        Integer intValue = store.getInt("Integer value");
+        Double doubleValue = store.getDouble("Double value");
+        String stringValue = store.getString("String value");
+        Short shortValue = store.getInt16("Int16Value");
+        Long longValue = store.getInt64("Int64Value");
+        Float floatValue = store.getFloat("FloatValue");
+    } catch (BackingStoreException | TypeConversionException ex) {
+        logger.error("An error occurred during put/get operation,", ex);
+    }
+ </code></pre> Getting Keys You can use <code><a href="keys.html">#keys()</a></code> to retrieve the keys of existing entries: <pre><code>try {
+        String[] keys = store.keys();
+
+        for (String key : keys) {
+            logger.debug("Retrieved key {}", key);
+        }
+    } catch (FileClosedException | BackingStoreException ex) {
+        logger.error("Failed to retrieve all existing keys: ", ex);
+    }
+     </code></pre> Removing Entry/Entries You can remove one or all existing entries in the store: <pre><code>try {
+        // Removes one entry using the key.
+        store.remove("Int64Value");
+
+        // Removes all existing entries.
+        store.removeAll();
+    } catch (FileClosedException | BackingStoreException ex) {
+        logger.error("Failed to remove entry/entries.", ex);
+    }
+ </code></pre> Changing Encryption Key You can change the encryption of the underlying persistence store when the store is in open state. <pre><code>store.changeEncryptionKey(newEncryptionKey);
+ </code></pre> Closing Key-Value Store When you finish executing key-value store operations, <code><a href="close.html">#close()</a></code> the SecureKeyValueStore to relinquishes any resources it has acquired during its operations: <pre><code>store.close();
+ </code></pre></p>
+</BODY>
+</HTML>

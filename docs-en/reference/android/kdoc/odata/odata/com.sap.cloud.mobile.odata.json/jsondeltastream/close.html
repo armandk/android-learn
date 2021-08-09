@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonDeltaStream.close - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="index.html">JsonDeltaStream</a>&nbsp;/&nbsp;<a href="./close.html">close</a><br/>
+<br/>
+<h1>close</h1>
+<a name="com.sap.cloud.mobile.odata.json.JsonDeltaStream$close()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Overrides <a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></p>
+<p>Close this stream and release all associated resources, checking first that the end of stream has been reached. Can safely be called even if the stream was previously closed. If a delta link was encountered before the stream was closed, it will be available via the <code><a href="../../com.sap.cloud.mobile.odata/deltastream/getdeltalink.html">DeltaStream.deltaLink</a></code> property only after the stream is closed. If a next link was encountered before the stream was closed, it will be available via the <code><a href="../../com.sap.cloud.mobile.odata/deltastream/getnextlink.html">DeltaStream.nextLink</a></code> property only after the stream is closed.</p>
+ See Also: 
+<p><code><a href="../../com.sap.cloud.mobile.odata/deltastream/abort.html">DeltaStream.abort</a></code>.</p>
+ 
+</BODY>
+</HTML>

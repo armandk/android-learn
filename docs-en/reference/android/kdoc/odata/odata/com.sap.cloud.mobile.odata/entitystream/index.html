@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntityStream - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">EntityStream</a><br/>
+<br/>
+<h1>EntityStream</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityStream</span></code>
+<p>A stream of entity values.</p>
+ See Also: 
+<p><code>DataService.entityStream</code>, <code><a href="../deltastream/index.html">com.sap.cloud.mobile.odata.DeltaStream</a></code>.</p>
+ 
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="abort.html">abort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">abort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Close this stream and release all associated resources, without checking first that the end of stream has been reached.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Close this stream and release all associated resources, checking first that the end of stream has been reached. Can safely be called even if the stream was previously closed. If a delta link was encountered before the stream was closed, it will be available via the <code><a href="getdeltalink.html">EntityStream.deltaLink</a></code> property only after the stream is closed. If a next link was encountered before the stream was closed, it will be available via the <code><a href="getnextlink.html">EntityStream.nextLink</a></code> property only after the stream is closed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltalink.html">getDeltaLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The delta-link (if any) that was encountered when <code><a href="next.html">EntityStream.next</a></code> was called repeatedly until end of stream and then <code><a href="close.html">EntityStream.close</a></code> was called, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnextlink.html">getNextLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNextLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The next-link (if any) that was encountered when <code><a href="next.html">EntityStream.next</a></code> was called repeatedly until end of stream and then <code><a href="close.html">EntityStream.close</a></code> was called, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getreadlink.html">getReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getReadLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The read-link (if any) that was encountered when <code><a href="next.html">EntityStream.next</a></code> was called repeatedly until end of stream and then <code><a href="close.html">EntityStream.close</a></code> was called, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasnext.html">hasNext</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasNext</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return true If this stream has not been <code><a href="close.html">EntityStream.close</a></code> and has a next entity value. Otherwise return <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isclosed.html">isClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isClosed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return has <code><a href="close.html">EntityStream.close</a></code> been called?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="next.html">next</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">next</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return the next entity value in this stream. Only call this if a previous call to <code><a href="hasnext.html">EntityStream.hasNext</a></code> returned <code>true</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

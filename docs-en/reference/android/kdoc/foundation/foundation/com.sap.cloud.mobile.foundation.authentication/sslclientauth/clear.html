@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SslClientAuth.clear - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.authentication</a>&nbsp;/&nbsp;<a href="index.html">SslClientAuth</a>&nbsp;/&nbsp;<a href="./clear.html">clear</a><br/>
+<br/>
+<h1>clear</h1>
+<a name="com.sap.cloud.mobile.foundation.authentication.SslClientAuth$clear(kotlin.String, kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.authentication.SslClientAuth$clear(kotlin.String, kotlin.Int)/host">host</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.authentication.SslClientAuth$clear(kotlin.String, kotlin.Int)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.authentication.SslClientAuth$clear(kotlin.String, kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.authentication.SslClientAuth$clear(kotlin.String, kotlin.Int)/host">host</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.authentication.SslClientAuth$clear(kotlin.String, kotlin.Int)/port">port</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Clears the stored certificate preferences for the given host and port. This will also call clear on the underlying <code><a href="../certificateprovider/index.html">CertificateProvider</a></code>. The user may need to also call <code>okHttpClient.connectionPool().evictAll()</code> to get a new challenge.</p>
+<a name="com.sap.cloud.mobile.foundation.authentication.SslClientAuth$clear()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.authentication.SslClientAuth$clear()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Clears the stored certificate preferences. This will also call clear on the underlying <code><a href="../certificateprovider/index.html">CertificateProvider</a></code>. The user may need to also call <code>okHttpClient.connectionPool().evictAll()</code> to get a new challenge.</p>
+</BODY>
+</HTML>

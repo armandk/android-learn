@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataServiceException - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DataServiceException</a><br/>
+<br/>
+<h1>DataServiceException</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataServiceException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a <code>DataService</code> request fails due to a data service issue.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DataServiceException</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$<init>(kotlin.String, kotlin.Throwable)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$<init>(kotlin.String, kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">?</span><span class="symbol">)</span></code><code><span class="identifier">DataServiceException</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Default constructor.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getresponse.html">getResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResponse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../errorresponse/index.html"><span class="identifier">ErrorResponse</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) If the data service request returned on OData error response, then this holds the parsed error response. Otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstatus.html">getStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStatus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return if the data service request failed with an HTTP error code, then <code>status</code> holds the error code. Otherwise zero.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstatustext.html">getStatusText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStatusText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return text describing <code>status</code> code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="notimplemented.html">notImplemented</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">notImplemented</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$notImplemented(kotlin.String)/method">method</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataServiceException</span></a></code>
+<p>Return a new exception with status 501 (Not Implemented).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponse.html">setResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$setResponse(com.sap.cloud.mobile.odata.ErrorResponse)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../errorresponse/index.html"><span class="identifier">ErrorResponse</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if the data service request returned on OData error response, then this holds the parsed error response. Otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstatus.html">setStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStatus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$setStatus(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if the data service request failed with an HTTP error code, then <code>status</code> holds the error code. Otherwise zero.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withcause.html">withCause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withCause</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withCause(java.lang.RuntimeException)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataServiceException</span></a></code>
+<p>Return a new exception with the specified root cause.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withcauseandmessage.html">withCauseAndMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withCauseAndMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withCauseAndMessage(java.lang.RuntimeException, kotlin.String)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withCauseAndMessage(java.lang.RuntimeException, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataServiceException</span></a></code>
+<p>Return a new exception with the specified root cause and message text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withmessage.html">withMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withMessage(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataServiceException</span></a></code>
+<p>Return a new exception with the specified message text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withresponse.html">withResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withResponse(kotlin.Int, kotlin.String, com.sap.cloud.mobile.odata.ErrorResponse)/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withResponse(kotlin.Int, kotlin.String, com.sap.cloud.mobile.odata.ErrorResponse)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withResponse(kotlin.Int, kotlin.String, com.sap.cloud.mobile.odata.ErrorResponse)/response">response</span><span class="symbol">:</span>&nbsp;<a href="../errorresponse/index.html"><span class="identifier">ErrorResponse</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataServiceException</span></a></code>
+<p>Return a new exception with the specified error code, message text and error response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withstatus.html">withStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withStatus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withStatus(kotlin.Int)/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataServiceException</span></a></code>
+<p>See withStatus(int, String).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withStatus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withStatus(kotlin.Int, kotlin.String)/status">status</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataServiceException$withStatus(kotlin.Int, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataServiceException</span></a></code>
+<p>Return a new exception with the specified error code and message text.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../dataexception/getsafemessage.html">getSafeMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSafeMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return can the <code>message</code> property be safely delivered to untrusted clients.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../dataexception/safe.html">safe</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">safe</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Mark this exception as having a message, that can be safely delivered to untrusted clients.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../dataexception/setsafemessage.html">setSafeMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSafeMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataException$setSafeMessage(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set can the <code>message</code> property be safely delivered to untrusted clients.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

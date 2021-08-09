@@ -1,0 +1,10 @@
+/* nav groups */
+
+.md-nav__title {
+    text-transform: uppercase;
+}
+
+.md-nav__item  .md-nav__group {
+    margin-top: 0.625rem;
+    font-weight: bold;
+}

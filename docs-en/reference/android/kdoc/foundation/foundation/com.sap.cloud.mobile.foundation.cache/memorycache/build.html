@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MemoryCache.build - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="index.html">MemoryCache</a>&nbsp;/&nbsp;<a href="./build.html">build</a><br/>
+<br/>
+<h1>build</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.MemoryCache$build()"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">MemoryCache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>Completes the Memory Cache instance configuration. The cache <strong>CRUD</strong> operations are <strong>only</strong> then enabled after returning from this call. </p>
+<p>1. The cache size have the maximum entries specified via <code><a href="-init-.html">#MemoryCache(Context, int)</a></code>. </p>
+<p>2. The cache will evict all cache entries if <code><a href="clearonmemoryerror.html">#clearOnMemoryError()</a></code> has been called. </p>
+<p>3. When <strong>Cost Factor</strong> mechanism is enabled: </p>
+<pre><code>
+  a. No customized <a href="../cachecostfactor/onexceedmaxcost.html">CacheCostFactor#onExceedMaxCost(List)</a> is provided
+     (via <a href="addcostfactor.html">#addCostFactor(CacheCostFactor)</a>), a system default method will be invoked to
+     remove the most costly entry amongst the existing entries during a call to
+     <a href="put.html">#put(Object, Object, double)</a>, then proceeds with the original put operation.
+  b. Otherwise, the customized <a href="../cachecostfactor/onexceedmaxcost.html">CacheCostFactor#onExceedMaxCost(List)</a> will be invoked to
+     remove the selected entry/entries before proceeding with the put operation.
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - A concrete class of <code><a href="../cache/index.html">Cache</a></code></p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">MemoryCache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">:</span> <code>this</code> instance of Memory Cache.</p>
+<a name="com.sap.cloud.mobile.foundation.cache.MemoryCache$build()"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">MemoryCache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>Completes the Memory Cache instance configuration. The cache <strong>CRUD</strong> operations are <strong>only</strong> then enabled after returning from this call. </p>
+<p>1. The cache size have the maximum entries specified via <code><a href="-init-.html">#MemoryCache(Context, int)</a></code>. </p>
+<p>2. The cache will evict all cache entries if <code><a href="clearonmemoryerror.html">#clearOnMemoryError()</a></code> has been called. </p>
+<p>3. When <strong>Cost Factor</strong> mechanism is enabled: </p>
+<pre><code>
+  a. No customized <a href="../cachecostfactor/onexceedmaxcost.html">CacheCostFactor#onExceedMaxCost(List)</a> is provided
+     (via <a href="addcostfactor.html">#addCostFactor(CacheCostFactor)</a>), a system default method will be invoked to
+     remove the most costly entry amongst the existing entries during a call to
+     <a href="put.html">#put(Object, Object, double)</a>, then proceeds with the original put operation.
+  b. Otherwise, the customized <a href="../cachecostfactor/onexceedmaxcost.html">CacheCostFactor#onExceedMaxCost(List)</a> will be invoked to
+     remove the selected entry/entries before proceeding with the put operation.
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="&lt;T&gt;"></a>
+<code><T></code> - A concrete class of <code><a href="../cache/index.html">Cache</a></code></p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">MemoryCache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">:</span> <code>this</code> instance of Memory Cache.</p>
+</BODY>
+</HTML>

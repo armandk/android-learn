@@ -1,0 +1,12 @@
+com.sap.cloud.mobile.fiori.onboarding
+com.sap.cloud.mobile.fiori.onboarding.ext
+com.sap.cloud.mobile.onboarding
+com.sap.cloud.mobile.onboarding.activation
+com.sap.cloud.mobile.onboarding.consent
+com.sap.cloud.mobile.onboarding.eula
+com.sap.cloud.mobile.onboarding.fingerprint
+com.sap.cloud.mobile.onboarding.launchscreen
+com.sap.cloud.mobile.onboarding.passcode
+com.sap.cloud.mobile.onboarding.qrcodereader
+com.sap.cloud.mobile.onboarding.utility
+

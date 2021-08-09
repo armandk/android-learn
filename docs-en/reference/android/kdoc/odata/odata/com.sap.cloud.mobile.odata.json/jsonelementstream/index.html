@@ -1,0 +1,205 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonElementStream - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">JsonElementStream</a><br/>
+<br/>
+<h1>JsonElementStream</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonElementStream</span></code>
+<p>A stream of <a href="http://json.org">JSON</a> <code><a href="../jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code>.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="beginarray.html">beginArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">beginArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonarray/index.html"><span class="identifier">JsonArray</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A new JSON array, after consuming the '[' token. Or return <code>null</code> if the next token is not the start of an array.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="beginobject.html">beginObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">beginObject</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonobject/index.html"><span class="identifier">JsonObject</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A new JSON object, after consuming the '{' token. Or return <code>null</code> if the next token is not the start of an object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="decompress.html">decompress</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">decompress</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonElementStream</span></a></code>
+<p>Enable decompression, where the document may contain an outermost object whose first field has name "$" and whose value is a compression dictionary expressed as an array of strings. Elsewhere in the document, a field name <code>"$N"</code> (where N is an integer &gt;= 0) will be treated as a shorthand for the correponding name in the compression dictionary. Example:</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="endarray.html">endArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">endArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Expect the next token to be a ']' (end of array), and consume the token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="endobject.html">endObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">endObject</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Expect the next token to be a '}' (end of object), and consume the token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expectboolean.html">expectBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expectBoolean</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonbooleantoken/index.html"><span class="identifier">JsonBooleanToken</span></a></code>
+<p>Return the next token. Expect the next token to be a boolean value, and consume the token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expectcolon.html">expectColon</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expectColon</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Expect the next token to be a colon, and consume the token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expectcomma.html">expectComma</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expectComma</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Expect the next token to be a comma, and consume the token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expectnumber.html">expectNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expectNumber</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonnumbertoken/index.html"><span class="identifier">JsonNumberToken</span></a></code>
+<p>Return the next token. Expect the next token to be a number value, and consume the token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expectstring.html">expectString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expectString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonstringtoken/index.html"><span class="identifier">JsonStringToken</span></a></code>
+<p>Return the next token. Expect the next token to be a string value, and consume the token.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromstream.html">fromStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$fromStream(com.sap.cloud.mobile.odata.CharStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonElementStream</span></a></code>
+<p>See fromStream(CharStream, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$fromStream(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$fromStream(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/withOrderedObjects">withOrderedObjects</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonElementStream</span></a></code>
+<p>Return a new content stream taking input from <code>stream</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromstring.html">fromString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$fromString(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonElementStream</span></a></code>
+<p>See fromString(String, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$fromString(kotlin.String, kotlin.Boolean)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$fromString(kotlin.String, kotlin.Boolean)/withOrderedObjects">withOrderedObjects</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonElementStream</span></a></code>
+<p>Return a new content stream taking input from <code>text</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromtokens.html">fromTokens</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromTokens</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$fromTokens(com.sap.cloud.mobile.odata.json.JsonTokenStream)/tokens">tokens</span><span class="symbol">:</span>&nbsp;<a href="../jsontokenstream/index.html"><span class="identifier">JsonTokenStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonElementStream</span></a></code>
+<p>See fromTokens(JsonTokenStream, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromTokens</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$fromTokens(com.sap.cloud.mobile.odata.json.JsonTokenStream, kotlin.Boolean)/tokens">tokens</span><span class="symbol">:</span>&nbsp;<a href="../jsontokenstream/index.html"><span class="identifier">JsonTokenStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$fromTokens(com.sap.cloud.mobile.odata.json.JsonTokenStream, kotlin.Boolean)/withOrderedObjects">withOrderedObjects</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonElementStream</span></a></code>
+<p>Return a new content stream taking input from <code>tokens</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isendarray.html">isEndArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEndArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the next token indicates the the end of an array (']').</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isendobject.html">isEndObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEndObject</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the next token indicates the the end of an object ('}').</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lookingat.html">lookingAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lookingAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElementStream$lookingAt(kotlin.Int)/type">type</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the next token has the specfied type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="readarray.html">readArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonarray/index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return the next JSON array read from the stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="readelement.html">readElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readElement</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The next JSON value (null, boolean, number, string, array, object) read from the stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="readobject.html">readObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readObject</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonobject/index.html"><span class="identifier">JsonObject</span></a></code>
+<p>Return the next JSON object read from the stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="readstring.html">readString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the next JSON string read from the stream.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

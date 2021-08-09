@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataParameters.isEnableRequestQueueOptimization - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataParameters</a>&nbsp;/&nbsp;<a href="./isenablerequestqueueoptimization.html">isEnableRequestQueueOptimization</a><br/>
+<br/>
+<h1>isEnableRequestQueueOptimization</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataParameters$isEnableRequestQueueOptimization()"></a>
+<code><span class="keyword">fun </span><span class="identifier">isEnableRequestQueueOptimization</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Returns true if request queue optimization is enabled. </p>
+<p> Request queue optimization is an algorithm that runs prior to an upload to reduce the number of requests that get sent to the backend while still maintaining the final state of the data as if all the requests the application made were sent as is. </p>
+<p> Consider a simple example. Say the application creates a new entity and then updates that entity before uploading. With 'enableRequestQueueOptimization' set to 'false', both the create and update requests will be sent to the backend in the next upload. However, with 'enableRequestQueueOptimization' set to 'true', the create and update requests will be combined and only a create request will be sent in the next upload. </p>
+<p> Consider another simple example. Say the application creates a new entity and then deletes that entity before doing the next upload. With 'enableRequestQueueOptimization' set to 'false', both the create and delete requests will be sent to the backend. However, with 'enableRequestQueueOptimization' set to 'true', neither request will be sent. </p>
+<p> **Additional Notes:** </p>
+<p> 1. 'enableRequestQueueOptimization' is 'false' by default. </p>
+<p> 2. The request queue optimization algorithm will maintain transaction (OData change set) boundaries. That is requests within a transaction can be combined, and requests between the end and start of the next transaction that reference the the same entity can be combined, but the algorithm will not remove a request from within a transaction to combine with a request outside a transaction nor move a request from outside a transaction to combine with a request inside a transaction. In this context the transaction could have been created manually by creating a local change set or built as a result of enabling transaction builder (see 'enableTransactionBuilder'). </p>
+<p> For example, consider the following sequence of requests: </p>
+<p> </p>
+<ol> <li>Create Customer 1 with Name="John"</li>
+ <li>Batch #1: <ol> <li>Change Set #1:</li>
+ <ol> <li>Create Customer 2 with Name="Jan"</li>
+ <li>Update Customer 2 with Name="Jane"</li>
+ </ol>
+ </ol>
+ </li>
+ <li>Update Customer 1 with Name="John Doe"</li>
+ <li>Update Customer 2 with Name="Jane Do"</li>
+ <li>Update Customer 2 with Name="Jane Doe"</li>
+ </ol>
+ 
+<p> After the request queue optimization algorithm is run, the requests will be: </p>
+<p> </p>
+<ol> <li>Create Customer 1 with Name="John"</li>
+ <li>Batch #1: <ol> <li>Change Set #1:</li>
+ <ol> <li>Create Customer 2 with Name="Jane"</li>
+ </ol>
+ </ol>
+ </li>
+ <li>Update Customer 1 with Name="John Doe"</li>
+ </ol>
+ 
+<p> 3. Certain requests may need to be sent as is. For example, imagine an entity which needs to move from one explicit state to another such as NEW, IN PROCESS, SOLUTION PROVIDED, CONFIRMED. For such requests, use 'OfflineODataRequestOptions' when executing the request and set 'OfflineODataRequestOptions.unmodifiableRequest' to 'true'. Such requests will be left as is (not combined with other requests) when the request queue optimization algorithm is run. </p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if request queue optimization is enabled.</p>
+<p><strong>See Also</strong><br/>
+<a href="isenableundolocalcreation.html">#isEnableUndoLocalCreation()</a></p>
+</BODY>
+</HTML>

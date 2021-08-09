@@ -1,0 +1,218 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.odata.offline - odataoffline</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.odata.offline</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.odata.offline</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="offlineodatacustomheader/index.html">OfflineODataCustomHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OfflineODataCustomHeader</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">, </span><span class="identifier">Parcelable</span></code>
+<p>A built-in Offline OData entity type which stores information about Offline OData custom headers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodatadefiningquery/index.html">OfflineODataDefiningQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataDefiningQuery</span></code>
+<p>A defining query is an OData read request that targets the OData backend associated with the 'OfflineODataProvider' and retrieves a subset of the OData backend data. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodatadelegate/index.html">OfflineODataDelegate</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">OfflineODataDelegate</span></code>
+<p>A delegate used to get progress updates while an OfflineODataProvider is opening, downloading, file downloading, uploading, and sending the store to server; to get state change notifications; and to get information about requests that fail during an upload. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataerrorarchiveentity/index.html">OfflineODataErrorArchiveEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OfflineODataErrorArchiveEntity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">, </span><span class="identifier">Parcelable</span></code>
+<p>A built-in Offline OData entity type which stores information about a modification request which failed during an upload operation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataevent/index.html">OfflineODataEvent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OfflineODataEvent</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">, </span><span class="identifier">Parcelable</span></code>
+<p>A built-in Offline OData entity type which stores information about Offline OData events such as upload and download.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodatafailedrequest/index.html">OfflineODataFailedRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataFailedRequest</span></code>
+<p>The class represents the information of a failed request occurred at OData back end during an uploading.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodatafiledownloadprogress/index.html">OfflineODataFileDownloadProgress</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataFileDownloadProgress</span></code>
+<p>The class represents the progress information during a download of file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodatametadata/index.html">OfflineODataMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataMetadata</span></code>
+<p>The static named metadata for built-in entity sets ErrorArchive and EventLog, and their entity types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataoperationstep/index.html">OfflineODataOperationStep</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataOperationStep</span></code>
+<p>The steps of an open store operation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataparameters/index.html">OfflineODataParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataParameters</span></code>
+<p>The class represents the configuration details for an OfflineODataProvider.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataprogress/index.html">OfflineODataProgress</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataProgress</span></code>
+<p>The class represents the number of bytes sent and received during a download or upload.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataprovider/index.html">OfflineODataProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DataServiceProvider</span><span class="symbol">, </span><span class="identifier">AutoCloseable</span></code>
+<p>The class represents a DataServiceProvider for Offline OData. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataproviderdelegate/index.html">OfflineODataProviderDelegate</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">OfflineODataProviderDelegate</span></code>
+<p>A delegate used to get progress updates while an OfflineODataProvider is opening, downloading, uploading, and sending the store to server, and to get information about requests that fail during an upload.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataproviderdownloadprogress/index.html">OfflineODataProviderDownloadProgress</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">OfflineODataProviderDownloadProgress</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="offlineodataprovideroperationprogress/index.html"><span class="identifier">OfflineODataProviderOperationProgress</span></a></code>
+<p>Contains information about the progress of a download operation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataprovideroperationprogress/index.html">OfflineODataProviderOperationProgress</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">OfflineODataProviderOperationProgress</span></code>
+<p>A class that all Offline OData progress classes inherit from.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataqueryfunction/index.html">OfflineODataQueryFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataQueryFunction</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">QueryFunction</span></code>
+<p>The class provides Offline OData specific QueryFilter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodatarequest/index.html">OfflineODataRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OfflineODataRequest</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">, </span><span class="identifier">Parcelable</span></code>
+<p>A built-in Offline OData entity type which stores information about Offline OData requests to the backend service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodatarequestoptions/index.html">OfflineODataRequestOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataRequestOptions</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span></code>
+<p>The class provides Offline OData specific request options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodatasendstoreprogress/index.html">OfflineODataSendStoreProgress</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataSendStoreProgress</span></code>
+<p>This class represents the progress of sending the offline store.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodataserviceoptions/index.html">OfflineODataServiceOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataServiceOptions</span></code>
+<p>The class represents the options for the OData back end used by OfflineODataProvider.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="offlineodatastorestate/index.html">OfflineODataStoreState</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataStoreState</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="offlineodataexception/index.html">OfflineODataException</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Exception</span></code>
+<p>The class represents an exception occurred at OfflineODataProvider operation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

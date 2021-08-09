@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.thenBy - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./thenby.html">thenBy</a><br/>
+<br/>
+<h1>thenBy</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$thenBy(com.sap.cloud.mobile.odata.QueryValue)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">thenBy</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$thenBy(com.sap.cloud.mobile.odata.QueryValue)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>See thenBy(QueryValue, SortOrder).</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">:</span> Value parameter.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> (see linked method).</p>
+<a name="com.sap.cloud.mobile.odata.DataQuery$thenBy(com.sap.cloud.mobile.odata.QueryValue, com.sap.cloud.mobile.odata.SortOrder)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">thenBy</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$thenBy(com.sap.cloud.mobile.odata.QueryValue, com.sap.cloud.mobile.odata.SortOrder)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$thenBy(com.sap.cloud.mobile.odata.QueryValue, com.sap.cloud.mobile.odata.SortOrder)/order">order</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../sortorder/index.html"><span class="identifier">SortOrder</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add to <code><a href="getsortitems.html">DataQuery.sortItems</a></code> a value for result ordering. This function is an alias for <code><a href="orderby.html">DataQuery.orderBy</a></code>. By convention to improve readability when multiple ordering values are required, the first ordering value is added using <code>orderBy</code>, and subsequent ordering values are added using <code>thenBy</code>. </p>
+Example using proxy classes:<pre><code>
+      public void thenByExample() {
+          MediaService service = this.getService();
+          DataQuery query = new DataQuery().orderBy(Artist.lastName)
+              .thenBy(Artist.firstName);
+          List&lt;Artist&gt; artists = service.getArtists(query);
+          this.showArtists(artists);
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void thenByExample() {
+          DataService service = this.getService();
+          EntitySet artistsEntitySet = service.getEntitySet("Artists");
+          EntityType artistEntityType = artistsEntitySet.getEntityType();
+          Property lastNameProperty = artistEntityType.getProperty("lastName");
+          Property firstNameProperty = artistEntityType.getProperty("firstName");
+          DataQuery query = new DataQuery().from(artistsEntitySet)
+              .orderBy(lastNameProperty).thenBy(firstNameProperty);
+          EntityValueList artists = service.executeQuery(query).getEntityList();
+          this.showArtists(artists);
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">:</span> Value for ordering.</p>
+<p><a name="order"></a>
+<code>order</code> - <a href="../sortorder/index.html"><span class="identifier">SortOrder</span></a><span class="symbol">:</span> The sort order (defaults to ascending).</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

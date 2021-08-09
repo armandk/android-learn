@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.removeDefiningQuery - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./removedefiningquery.html">removeDefiningQuery</a><br/>
+<br/>
+<h1>removeDefiningQuery</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery, Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">removeDefiningQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery, Action0, Action1)/definingQuery">definingQuery</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery, Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery, Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Removes a defining query. </p>
+<p> Please reference <code><a href="adddefiningquery.html">#addDefiningQuery(OfflineODataDefiningQuery)</a></code> for the three types of defining queries. </p>
+<p> Before OfflineODataProvider is open: </p>
+<ul> <li>The defining queries of type 1, 2 can only be removed for the first time. </li>
+<li>The defining queries of type 3 can also be removed, these are not persistent, they will be lost the device is power off or application is terminated. </li>
+</ul>
+ 
+<p> After OfflineODataProvider is open: </p>
+<ul> <li>If 'allow_defining_query_removal' is not enabled, only the defining queries of type 3 can be removed, and failureHandler will be called with OfflineODataException for others. </li>
+<li>If 'allow_defining_query_removal' is enabled, all types can be removed when there is no any pending change. Removing a defining query from the provider will delete all local data of the defining query in OfflineODataProvider like entities downloaded from the backend, relationships associated with the entities and their media streams. The local data is always deleted immediately, but if non-shared delta tracking is enabled, the name of the defining query and its change logs on the server will be deleted during next downloading. </li>
+</ul>
+<h3>Parameters</h3>
+<p><a name="definingQuery"></a>
+<code>definingQuery</code> - <a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">:</span> the defining query to remove.</p>
+<p><a name="successHandler"></a>
+<code>successHandler</code> - <span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">:</span> a success callback function.</p>
+<p><a name="failureHandler"></a>
+<code>failureHandler</code> - <span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">:</span> a failure callback function.</p>
+<p><strong>See Also</strong><br/>
+<a href="adddefiningquery.html">#addDefiningQuery(OfflineODataDefiningQuery)</a><a href="./removedefiningquery.html">#removeDefiningQuery(OfflineODataDefiningQuery)</a></p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)"></a>
+<code><span class="keyword">fun </span><span class="identifier">removeDefiningQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$removeDefiningQuery(com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery)/definingQuery">definingQuery</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Removes a defining query. </p>
+<p> The defining queries of type 1 and 2 can only be removed before the OfflineODataProvider is open for the first time. </p>
+<p> The defining queries of type 3 can be removed before or after the OfflineODataProvider has been opened. </p>
+<p> Removing type 3 defining queries are not persistent when the OfflineODataProvider is not open, they will be lost the device is power off or application is terminated. </p>
+<p> Note: This method does not support 'allow_defining_query_removal', please try <code><a href="./removedefiningquery.html">#removeDefiningQuery(OfflineODataDefiningQuery, Action0, Action1)</a></code></p>
+<h3>Parameters</h3>
+<p><a name="definingQuery"></a>
+<code>definingQuery</code> - <a href="../offlineodatadefiningquery/index.html"><span class="identifier">OfflineODataDefiningQuery</span></a><span class="symbol">!</span><span class="symbol">:</span> the defining query to remove.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs removing the defining query.</p>
+<p><strong>See Also</strong><br/>
+<a href="adddefiningquery.html">#addDefiningQuery(OfflineODataDefiningQuery)</a><a href="./removedefiningquery.html">#removeDefiningQuery(OfflineODataDefiningQuery, Action0, Action1)</a></p>
+</BODY>
+</HTML>

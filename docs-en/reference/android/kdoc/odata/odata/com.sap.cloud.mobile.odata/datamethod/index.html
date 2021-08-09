@@ -1,0 +1,607 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataMethod - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DataMethod</a><br/>
+<br/>
+<h1>DataMethod</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMethod</span></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> function or action.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DataMethod</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> function or action.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getannotation.html">getAnnotation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotation</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$getAnnotation(kotlin.String)/term">term</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotation/index.html"><span class="identifier">Annotation</span></a></code>
+<p>Lookup an existing annotation by term name, or throw an exception if the annotation is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationlist.html">getAnnotationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationlist/index.html"><span class="identifier">AnnotationList</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">DataMethod.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationmap.html">getAnnotationMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">DataMethod.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotations.html">getAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return map of annotations for this model element. For annotations without qualifiers, the entry key is the annotation term name. For annotations with qualifiers, the entry key is the annotation term name, then "#", then the annotation qualifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcanberemoved.html">getCanBeRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCanBeRemoved</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return can this model element be removed by <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Set this to <code>true</code> to indicate that the application is coded to be able able to function correctly without this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentityset.html">getEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntitySet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Entity set bound to this method, or <code>null</code> if the method is not bound to an entity set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getfixedlength.html">getFixedLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFixedLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this item has fixed length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethttpmethod.html">getHttpMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHttpMethod</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) HTTP Method (e.g. "GET", "POST") for this data method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getimportedname.html">getImportedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getImportedName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return synonym for <code><a href="getresourcepath.html">DataMethod.resourcePath</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlocalname.html">getLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the local name of this method within its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> or <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code>, e.g. "MyAction".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmaxlength.html">getMaxLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMaxLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return maximum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmetrics.html">getMetrics</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMetrics</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datamethodmetrics/index.html"><span class="identifier">DataMethodMetrics</span></a></code>
+<p>Return metrics for runtime use of this data method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getminlength.html">getMinLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMinLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return minimum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return synonym for <code><a href="getqualifiedname.html">DataMethod.qualifiedName</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoverloadmap.html">getOverloadMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOverloadMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datamethodmap/index.html"><span class="identifier">DataMethodMap</span></a></code>
+<p>Return map of overloads of this function. If this map contains only one entry, the method is not overloaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getparameters.html">getParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getParameters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a></code>
+<p>Return formal parameters for this method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprecision.html">getPrecision</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrecision</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return precision for <code>decimal</code> and <code>integer</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getqualifiedname.html">getQualifiedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQualifiedName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this method qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> or <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code> name, e.g. "MySchema.MyAction" (if <code><a href="isimported.html">DataMethod.isImported</a></code> is <code>false</code>]) or "MyContainer.MyAction" (if <code><a href="isimported.html">DataMethod.isImported</a></code> is <code>true</code>]). The Entity container prefix is omitted for the "default" entity container in the outermost schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getresourcepath.html">getResourcePath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getResourcePath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this method as it should be referenced in resource paths.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getreturntype.html">getReturnType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getReturnType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return return type for this method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getscale.html">getScale</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getScale</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return scale for <code>decimal</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsignatureforparameters.html">getSignatureForParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSignatureForParameters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return parameter type signature for this method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsignatureforreturntype.html">getSignatureForReturnType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSignatureForReturnType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return parameter type signature for this method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsourceline.html">getSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceLine</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsrid.html">getSrid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSrid</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return <a href="http://www.epsg.org/Geodetic.html">EPSG</a> Spatial Reference System Identifier (SRID) for the associated value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettargetpath.html">getTargetPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTargetPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this method qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> and <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code> names, e.g. "MySchema.MyAction" (if <code><a href="isimported.html">DataMethod.isImported</a></code> is <code>false</code>]) or "MySchema.MyContainer/MyAction" (if <code><a href="isimported.html">DataMethod.isImported</a></code> is <code>true</code>]).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettypesignature.html">getTypeSignature</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTypeSignature</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return parameter/return type signature for this method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getunboundmethod.html">getUnboundMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUnboundMethod</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Qualified name of the associated unbound method. For OData V4+ ActionImport, this is the name of the corresponding Action. For OData V4+ FunctionImport, this is the name of the corresponding Function. Otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isaction.html">isAction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isAction</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this method is an action, which is permitted to change entity state.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isbound.html">isBound</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isBound</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this method bound to a value when it is applied?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iscomposable.html">isComposable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isComposable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this method composable with another method?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isextension.html">isExtension</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isExtension</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this method was added since metadata was originally loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isfunction.html">isFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isFunction</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this method is a function, which is not permitted to change entity state.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isimported.html">isImported</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isImported</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this an ActionImport/FunctionImport (as opposed to an Action/Function)?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isnullable.html">isNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNullable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this item is nullable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isoverloaded.html">isOverloaded</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isOverloaded</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this method overloaded?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isremoved.html">isRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isRemoved</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return has this model element been removed by a successful call to <code>DataService.refreshMetadata</code>? If `isRemoved == true, that implies that the old metadata (before refreshMetadata was called) did include this model element, and that the new metadata (after refreshMetadata was called) does not include this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isunicode.html">isUnicode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isUnicode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this item allows Unicode content. If <code>isUnicode</code> is <code>false</code>, then this item only allows ASCII content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setaction.html">setAction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setAction(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this method is an action, which is permitted to change entity state.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setbound.html">setBound</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBound</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setBound(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is this method bound to a value when it is applied?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcanberemoved.html">setCanBeRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCanBeRemoved</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setCanBeRemoved(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set can this model element be removed by <code>DataService.refreshMetadata</code>. Defaults to <code>false</code>. Set this to <code>true</code> to indicate that the application is coded to be able able to function correctly without this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcomposable.html">setComposable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setComposable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setComposable(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is this method composable with another method?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentityset.html">setEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntitySet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setEntitySet(com.sap.cloud.mobile.odata.EntitySet)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set entity set bound to this method, or <code>null</code> if the method is not bound to an entity set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setextension.html">setExtension</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExtension</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setExtension(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this method was added since metadata was originally loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setfunction.html">setFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setFunction</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setFunction(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this method is a function, which is not permitted to change entity state.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sethttpmethod.html">setHttpMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHttpMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setHttpMethod(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set HTTP Method (e.g. "GET", "POST") for this data method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setimported.html">setImported</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setImported</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setImported(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is this an ActionImport/FunctionImport (as opposed to an Action/Function)?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlocalname.html">setLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLocalName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setLocalName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the local name of this method within its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> or <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code>, e.g. "MyAction".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmaxlength.html">setMaxLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMaxLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setMaxLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set maximum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setminlength.html">setMinLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMinLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setMinLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set minimum length for <code>string</code> and <code>binary</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnullable.html">setNullable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNullable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setNullable(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this item is nullable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setparameters.html">setParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setParameters</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setParameters(com.sap.cloud.mobile.odata.ParameterList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set formal parameters for this method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setprecision.html">setPrecision</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPrecision</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setPrecision(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set precision for <code>decimal</code> and <code>integer</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setqualifiedname.html">setQualifiedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setQualifiedName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setQualifiedName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the name of this method qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> or <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code> name, e.g. "MySchema.MyAction" (if <code><a href="isimported.html">DataMethod.isImported</a></code> is <code>false</code>]) or "MyContainer.MyAction" (if <code><a href="isimported.html">DataMethod.isImported</a></code> is <code>true</code>]). The Entity container prefix is omitted for the "default" entity container in the outermost schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setremoved.html">setRemoved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRemoved</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setRemoved(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set has this model element been removed by a successful call to <code>DataService.refreshMetadata</code>? If `isRemoved == true, that implies that the old metadata (before refreshMetadata was called) did include this model element, and that the new metadata (after refreshMetadata was called) does not include this model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresourcepath.html">setResourcePath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResourcePath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setResourcePath(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the name of this method as it should be referenced in resource paths.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setreturntype.html">setReturnType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setReturnType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setReturnType(com.sap.cloud.mobile.odata.DataType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set return type for this method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setscale.html">setScale</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setScale</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setScale(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set scale for <code>decimal</code> values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsourceline.html">setSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceLine</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setSourceLine(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsrid.html">setSrid</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSrid</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setSrid(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <a href="http://www.epsg.org/Geodetic.html">EPSG</a> Spatial Reference System Identifier (SRID) for the associated value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settargetpath.html">setTargetPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTargetPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setTargetPath(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the name of this method qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> and <code><a href="../entitycontainer/index.html">com.sap.cloud.mobile.odata.EntityContainer</a></code> names, e.g. "MySchema.MyAction" (if <code><a href="isimported.html">DataMethod.isImported</a></code> is <code>false</code>]) or "MySchema.MyContainer/MyAction" (if <code><a href="isimported.html">DataMethod.isImported</a></code> is <code>true</code>]).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setunboundmethod.html">setUnboundMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUnboundMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setUnboundMethod(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set qualified name of the associated unbound method. For OData V4+ ActionImport, this is the name of the corresponding Action. For OData V4+ FunctionImport, this is the name of the corresponding Function. Otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setunicode.html">setUnicode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUnicode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataMethod$setUnicode(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this item allows Unicode content. If <code>isUnicode</code> is <code>false</code>, then this item only allows ASCII content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

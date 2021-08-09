@@ -1,0 +1,15 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataRequestOptions.TransactionID.UseGeneratedIDForTransactionID - odataoffline</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="../index.html">OfflineODataRequestOptions</a>&nbsp;/&nbsp;<a href="index.html">TransactionID</a>&nbsp;/&nbsp;<a href="./usegeneratedidfortransactionid.html">UseGeneratedIDForTransactionID</a><br/>
+<br/>
+<h1>UseGeneratedIDForTransactionID</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.TransactionID$UseGeneratedIDForTransactionID"></a>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">UseGeneratedIDForTransactionID</span><span class="symbol">: </span><a href="index.html"><span class="identifier">OfflineODataRequestOptions.TransactionID</span></a><span class="symbol">!</span></code>
+<p>A constant to specify to use the generated entity ID for a created entity or media entity as the transaction ID for the request. Using the generated entity ID as a transaction ID is ideal for cases where requests for a new entity need to be grouped into a transaction but there is no other pre-defined transaction ID. Using the generated entity ID as a transaction ID is also ideal for cases where a graph of related entities (for example, a parent-child hierarchy) needs to be grouped into a transaction and the entity ID of the to be created root is the ideal choice for the transaction ID. Note that this can be used in a change set and subsequent requests in the change set can reference the created entity (by EntityValue) to also be grouped in the same transaction.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/app_bar_height"
+    tools:context=".ProductDetailsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:stateListAnimator="@drawable/appbar_always_elevated"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!--Setting titleEnabled and expandedTitleTextAppearance to get rid of title animation-->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+            app:titleEnabled="false">
+            <!--Setting titleEnabled and expandedTitleTextAppearance to get rid of title animation-->
+
+            <com.sap.cloud.mobile.fiori.object.ObjectHeader
+                android:id="@+id/profileHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:elevation="40dp"
+                app:layout_anchor="@+id/appBarLayout"
+                app:preserveDetailImageSpacing="false">
+
+                <ImageView
+                    android:id="@+id/statusImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/statusImage"
+                    app:layout_header_group="STATUS"
+                    app:tint="@color/negative_text_on_dark" />
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/negative_text_on_dark"
+                    app:layout_header_group="STATUS" />
+
+            </com.sap.cloud.mobile.fiori.object.ObjectHeader>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:keyText="@string/specification_list_title" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/spec_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/spec_list_see_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                android:padding="10dp"
+                android:textColor="@color/blue_text" />
+
+            <View
+                android:id="@+id/spec_list_divider"
+                style="@style/Divider" />
+
+            <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:keyText="@string/location_list_title" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/location_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/location_list_see_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                android:padding="10dp"
+                android:textColor="@color/blue_text" />
+
+            <View
+                android:id="@+id/loc_list_divider"
+                style="@style/Divider" />
+
+            <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:keyText="@string/variant_list_title" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/variant_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/variant_list_see_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_horizontal_title_add_task"
+                android:padding="10dp"
+                android:textColor="@color/blue_text" />
+
+            <View
+                android:id="@+id/variant_list_divider"
+                style="@style/Divider" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+

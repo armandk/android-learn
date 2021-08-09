@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataParameters.isEnableTransactionBuilder - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataParameters</a>&nbsp;/&nbsp;<a href="./isenabletransactionbuilder.html">isEnableTransactionBuilder</a><br/>
+<br/>
+<h1>isEnableTransactionBuilder</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataParameters$isEnableTransactionBuilder()"></a>
+<code><span class="keyword">fun </span><span class="identifier">isEnableTransactionBuilder</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Returns true if transaction builder is enabled. </p>
+<p> Enabling transaction builder allows grouping requests into transactions (OData change sets) to be sent in the next upload that were not necessarily executed in a single change set initially. In other words, enabling this allows building large transactions for the next upload where all requests that need to go into the transactions are not known at one time. </p>
+<p> Which requests go in which transactions is controlled by specifying 'OfflineODataRequestOptions.transactionID' when performing the requests. Requests that contain the same transaction ID will be put into the same transaction (see additional notes). </p>
+<p> For example, consider the following sequence of requests: </p>
+<p> </p>
+<ol> <li>Create Customer 1 with a transaction ID "1" </li>
+<li>Create Order 1 with a transaction ID "1" </li>
+<li>Create Product 1 with NO transaction ID </li>
+<li>Create Customer 2 with a transaction ID "2" </li>
+<li>Update Customer 1 with a transaction ID "1" </li>
+<li>Update Customer 2 with a transaction ID "2" </li>
+</ol>
+ 
+<p> Just prior to executing the upload, the transaction builder algorithm will run and these requests will result in the following requests being sent to the backend (in this example assume 'enableRequestQueueOptimization' is 'false'): </p>
+<p> </p>
+<ol> <li>Batch #1 <ol> <li>Change Set #1 <ol> <li>Create Customer 1</li>
+ <li>Create Order 1</li>
+ <li>Update Customer 1</li>
+ </ol>
+ </li>
+ </ol>
+ </li>
+ <li>Create Product 1</li>
+ <li>Batch #2 <ol> <li>Change Set #1 <ol> <li>Create Customer 2</li>
+ <li>Update Customer 2</li>
+ </ol>
+ </li>
+ </ol>
+ </li>
+ </ol>
+ 
+<p> **Additional Notes:** </p>
+<p> 1. 'enableTransactionBuilder' is 'false' by default. </p>
+<p> 2. 'enableTransactionBuilder' can be used in combination with 'enableRequestQueueOptimization'. </p>
+<p> 3. To ensure referential integrity of related entities and to ensure all requests are valid OData requests, it is not always possible to group all requests with the same transaction ID into a single change set. Therefore, the transaction builder will group requests with the same transaction ID into as few change sets as possible. </p>
+<p> 4. In addition to referential integrity, 'OfflineODataRequestOptions.unmodifiableRequest' can affect the transaction builder. Only one unmodifiable request per entity will be put into a single change set. </p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if transaction builder is enabled.</p>
+<p><strong>See Also</strong><br/>
+<a href="../offlineodatarequestoptions/gettransactionid.html">OfflineODataRequestOptions#getTransactionID()</a></p>
+</BODY>
+</HTML>

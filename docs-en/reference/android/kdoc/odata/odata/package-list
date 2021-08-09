@@ -1,0 +1,11 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.sap.cloud.mobile.odata
+com.sap.cloud.mobile.odata.atom
+com.sap.cloud.mobile.odata.core
+com.sap.cloud.mobile.odata.csdl
+com.sap.cloud.mobile.odata.file
+com.sap.cloud.mobile.odata.http
+com.sap.cloud.mobile.odata.json
+com.sap.cloud.mobile.odata.xml

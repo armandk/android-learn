@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataParameters.isEnableIndividualErrorArchiveDeletion - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataParameters</a>&nbsp;/&nbsp;<a href="./isenableindividualerrorarchivedeletion.html">isEnableIndividualErrorArchiveDeletion</a><br/>
+<br/>
+<h1>isEnableIndividualErrorArchiveDeletion</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataParameters$isEnableIndividualErrorArchiveDeletion()"></a>
+<code><span class="keyword">fun </span><span class="identifier">isEnableIndividualErrorArchiveDeletion</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Specifies whether or not to enable deleting of individual entities from the ErrorArchive; the entity set which contains information about failed requests during the last upload. </p>
+<p> The value is 'false' by default. </p>
+<p> By default, when one failed request is deleted from the ErrorArchive, the whole entity set is cleared along with the associated requests in the request queue. By setting this option to 'true', the app can choose exactly which failed requests to delete. Deleting an individual failed request from the ErrorArchive will cause that request and any following requests in the request queue (sent or unsent) that depend on the failed request to be deleted as well. </p>
+<p> For example, imagine the following requests are made by the app some of which fail when they are executed on the backend: </p>
+<p> </p>
+<pre><code>// Request 1: Update customer101 which will fail in the backend
+      offlineODataProvider.updateEntity( customer101, HttpHeaders.empty, RequestOptions.none );
+      
+      // Request 2: Update customer102 which will fail in the backend
+      offlineODataProvider.updateEntity( customer102, HttpHeaders.empty, RequestOptions.none );
+      
+      // Request 3: Update customer101 again
+      offlineODataProvider.updateEntity( customer101, HttpHeaders.empty, RequestOptions.none );
+      
+      // Upload requests 1 - 3
+      offlineODataProvider.upload( successHandler, failureHandler );
+      
+      // Request 4: Update customer102 again
+      offlineODataProvider.updateEntity( customer102, HttpHeaders.empty, RequestOptions.none );
+      </code></pre> 
+<p> During the upload, the first two requests fail due to issues in the backend. The third request (the second customer101 update) will not be sent to the backend at all because a request it depends on (the first customer101 update) failed. At the end of the upload, the ErrorArchive will have three error requests, one for each failed request in the upload. </p>
+<p> With enableIndividualErrorArchiveDeletion set to 'false', deleting any entity from the ErrorArchive will result in requests 1, 2, and 3 being removed but will leave request 4 in the request queue unchanged. </p>
+<p> With enableIndividualErrorArchiveDeletion set to 'true', the app decides which failed requests to delete explicitly. If the app chooses to delete failed request 3, request 3 is the only request that will be deleted because no other requests after it in the request queue depend on it. If the app chooses to delete failed request 1, both request 1 and request 3 will be removed from the request queue because request 3 depends on request 1. If failed request 2 is deleted, both request 2 and request 4 will be deleted because even though request 4 has not yet been upload, it depends on request 2.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> 'true' if enabled deleting individual error archive entity.</p>
+<p><strong>See Also</strong><br/>
+<a href="setenableindividualerrorarchivedeletion.html">#setEnableIndividualErrorArchiveDeletion( boolean enableIndividualErrorArchiveDeletion )</a></p>
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.select - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./select.html">select</a><br/>
+<br/>
+<h1>select</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$select(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">select</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$select(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))/items">items</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add properties (to <code><a href="getselectitems.html">DataQuery.selectItems</a></code>) for selecting from the target entity. </p>
+Example using proxy classes:<pre><code>
+      public void selectExample() {
+          NorthwindService service = this.getService();
+          DataQuery query = new DataQuery()
+              .select(Customer.customerID, Customer.companyName,
+                  Customer.contactName);
+          List&lt;Customer&gt; customers = service.getCustomers(query);
+          for (Customer customer : customers) {
+              this.showCustomer(customer);
+          }
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void selectExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          EntityType customerEntityType = customersEntitySet.getEntityType();
+          Property customerIDProperty = customerEntityType.getProperty("CustomerID");
+          Property companyNameProperty = customerEntityType.getProperty("CompanyName");
+          Property contactNameProperty = customerEntityType.getProperty("ContactName");
+          DataQuery query = new DataQuery()
+              .select(customerIDProperty, companyNameProperty, contactNameProperty)
+              .from(customersEntitySet);
+          EntityValueList customers = service.executeQuery(query).getEntityList();
+          for (EntityValue customer : customers) {
+              this.showCustomer(customer);
+          }
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="items"></a>
+<code>items</code> - <a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">:</span> The items to be selected.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

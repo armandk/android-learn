@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntityValue.bindEntity - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">EntityValue</a>&nbsp;/&nbsp;<a href="./bindentity.html">bindEntity</a><br/>
+<br/>
+<h1>bindEntity</h1>
+<a name="com.sap.cloud.mobile.odata.EntityValue$bindEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bindEntity</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$bindEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$bindEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/to">to</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Bind an entity to a property of the current entity. This can be used before <code>DataService.createEntity</code> or <code>DataService.updateEntity</code> to create or update the bindings of navigation properties. </p>
+Example using proxy classes:<pre><code>
+      public void bindEntityExample() {
+          NorthwindService service = this.getService();
+          DataQuery categoryQuery = new DataQuery().top(1).expand(Category.products);
+          Category category = service.getCategory(categoryQuery);
+          DataQuery productQuery = new DataQuery().top(1);
+          Product product = service.getProduct(productQuery);
+          category.bindEntity(product, Category.products);
+          service.updateEntity(category);
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void bindEntityExample() {
+          DataService service = this.getService();
+          EntitySet categoriesEntitySet = service.getEntitySet("Categories");
+          EntitySet productsEntitySet = service.getEntitySet("Products");
+          EntityType categoryEntityType = categoriesEntitySet.getEntityType();
+          Property productsProperty = categoryEntityType.getProperty("Products");
+          DataQuery categoryQuery = new DataQuery().from(categoriesEntitySet).top(1)
+              .expand(productsProperty);
+          EntityValue category = service.executeQuery(categoryQuery)
+              .getRequiredEntity();
+          DataQuery productQuery = new DataQuery().from(productsEntitySet).top(1);
+          EntityValue product = service.executeQuery(productQuery)
+              .getRequiredEntity();
+          category.bindEntity(product, productsProperty);
+          service.updateEntity(category);
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="entity"></a>
+<code>entity</code> - <a href="index.html"><span class="identifier">EntityValue</span></a><span class="symbol">:</span> Entity to be bound.</p>
+<p><a name="to"></a>
+<code>to</code> - <a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">:</span> Property the entity will be bound to.</p>
+</BODY>
+</HTML>

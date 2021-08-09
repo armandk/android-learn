@@ -1,0 +1,4346 @@
+<api>
+<package name="com.sap.cloud.mobile.fiori.maps.edit.google"
+>
+<class name="GoogleAnnotationMarker"
+ extends="com.sap.cloud.mobile.fiori.maps.edit.AbstractAnnotationMarker"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</implements>
+<constructor name="GoogleAnnotationMarker"
+ type="com.sap.cloud.mobile.fiori.maps.edit.google.GoogleAnnotationMarker"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+<parameter name="isSelected" type="boolean">
+</parameter>
+<parameter name="pointBitmap" type="com.google.android.gms.maps.model.BitmapDescriptor">
+</parameter>
+<parameter name="selectedPointBitmap" type="com.google.android.gms.maps.model.BitmapDescriptor">
+</parameter>
+</constructor>
+<constructor name="GoogleAnnotationMarker"
+ type="com.sap.cloud.mobile.fiori.maps.edit.google.GoogleAnnotationMarker"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+<parameter name="isSelected" type="boolean">
+</parameter>
+<parameter name="pointBitmap" type="com.google.android.gms.maps.model.BitmapDescriptor">
+</parameter>
+<parameter name="selectedPointBitmap" type="com.google.android.gms.maps.model.BitmapDescriptor">
+</parameter>
+<parameter name="sequence" type="int">
+</parameter>
+</constructor>
+<method name="branch"
+ return="com.sap.cloud.mobile.fiori.maps.edit.google.GoogleAnnotationMarker"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMarker"
+ return="com.google.android.gms.maps.model.Marker"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPosition"
+ return="com.google.android.gms.maps.model.LatLng"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="setPosition"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="point" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+</method>
+<method name="setSelected"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="isSelected" type="boolean">
+</parameter>
+</method>
+<method name="toSexagesimalString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dest" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="CREATOR"
+ type="android.os.Parcelable.Creator"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<interface name="GoogleEditAction"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.edit.MapEditor.EditAction">
+</implements>
+<method name="updateGoogleMap"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="map" type="com.google.android.gms.maps.GoogleMap">
+</parameter>
+</method>
+</interface>
+<class name="GoogleMapEditor"
+ extends="com.sap.cloud.mobile.fiori.maps.edit.MapEditor"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GoogleMapEditor"
+ type="com.sap.cloud.mobile.fiori.maps.edit.google.GoogleMapEditor"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fioriMapView" type="com.sap.cloud.mobile.fiori.maps.FioriMapView">
+</parameter>
+<parameter name="viewModel" type="com.sap.cloud.mobile.fiori.maps.edit.MapEditorViewModel">
+</parameter>
+<parameter name="callback" type="com.sap.cloud.mobile.fiori.maps.edit.MapEditor.EditActionCallback">
+</parameter>
+</constructor>
+<method name="addLocation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="fioriAddress" type="com.sap.cloud.mobile.fiori.maps.search.FioriAddress">
+</parameter>
+</method>
+<method name="addPoint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="position" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+</method>
+<method name="changeEditType"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newAnnotationType" type="com.sap.cloud.mobile.fiori.maps.edit.MapEditor.AnnotationType">
+</parameter>
+</method>
+<method name="clearCurrentEdit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="createAnnotationMarker"
+ return="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="position" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+</method>
+<method name="getLineSegmentForPoint"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="points" type="java.util.List&lt;com.google.android.gms.maps.model.LatLng&gt;">
+</parameter>
+<parameter name="point" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+</method>
+<method name="getPoints"
+ return="java.util.List&lt;com.google.android.gms.maps.model.LatLng&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="hideMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="annotationMarker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+</method>
+<method name="loadAddress"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="marker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+<parameter name="addressLoadedRunnable" type="java.lang.Runnable">
+</parameter>
+</method>
+<method name="moveMarkerEdit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="startPosition" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+<parameter name="endPosition" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+<parameter name="marker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+</method>
+<method name="restoreEditorState"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="editorState" type="com.sap.cloud.mobile.fiori.maps.edit.MapEditor.EditorState">
+</parameter>
+</method>
+<method name="selectMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+</method>
+<method name="setMap"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="map" type="com.google.android.gms.maps.GoogleMap">
+</parameter>
+</method>
+<method name="showExtents"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="showSelectedMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="teardownMapFromEditing"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="toFioriPoint"
+ return="com.sap.cloud.mobile.fiori.maps.FioriPoint"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="latLng" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+</method>
+<method name="updateMap"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="updateMarkerIcon"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="annotationMarker" type="com.sap.cloud.mobile.fiori.maps.edit.AnnotationMarker">
+</parameter>
+<parameter name="selected" type="boolean">
+</parameter>
+</method>
+</class>
+<class name="GooglePolygonAnnotation"
+ extends="com.sap.cloud.mobile.fiori.maps.edit.PolygonAnnotation"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GooglePolygonAnnotation"
+ type="com.sap.cloud.mobile.fiori.maps.edit.google.GooglePolygonAnnotation"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
+<class name="GooglePolylineAnnotation"
+ extends="com.sap.cloud.mobile.fiori.maps.edit.PolylineAnnotation"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GooglePolylineAnnotation"
+ type="com.sap.cloud.mobile.fiori.maps.edit.google.GooglePolylineAnnotation"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.google"
+>
+<class name="GoogleClusterItem"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GoogleClusterItem"
+ type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fioriMarkerOptions" type="com.sap.cloud.mobile.fiori.maps.FioriMarkerOptions">
+</parameter>
+</constructor>
+<method name="getClusteringId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getFioriMarkerOptions"
+ return="com.sap.cloud.mobile.fiori.maps.FioriMarkerOptions"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getNonNullClusteringId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPosition"
+ return="com.google.android.gms.maps.model.LatLng"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSnippet"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTitle"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isSelected"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setSelected"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="selected" type="boolean">
+</parameter>
+</method>
+</class>
+<class name="GoogleFioriClusterRenderer"
+ extends="com.sap.cloud.mobile.fiori.maps.google.clustering.view.DefaultClusterRenderer"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="GoogleFioriMapView"
+ extends="com.sap.cloud.mobile.fiori.maps.FioriMapView"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GoogleFioriMapView"
+ type="com.sap.cloud.mobile.fiori.maps.google.GoogleFioriMapView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</constructor>
+<constructor name="GoogleFioriMapView"
+ type="com.sap.cloud.mobile.fiori.maps.google.GoogleFioriMapView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="attrs" type="android.util.AttributeSet">
+</parameter>
+</constructor>
+<method name="findFragmentActivity"
+ return="androidx.fragment.app.FragmentActivity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="getMap"
+ return="com.google.android.gms.maps.GoogleMap"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onCreate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onDestroy"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onLowMemory"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMapReady"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="googleMap" type="com.google.android.gms.maps.GoogleMap">
+</parameter>
+</method>
+<method name="onPause"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onResume"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onSaveInstanceState"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bundle" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="panCameraWhenNecessary"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="restoreMarkerSelection"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="setMapAttribution"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="text" type="java.lang.CharSequence">
+</parameter>
+</method>
+<method name="setOnMapCreatedListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="onMapCreatedListener" type="com.sap.cloud.mobile.fiori.maps.google.GoogleFioriMapView.OnMapCreatedListener">
+</parameter>
+</method>
+<method name="showPoint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="point" type="android.graphics.Point">
+</parameter>
+</method>
+</class>
+<interface name="GoogleFioriMapView.OnMapCreatedListener"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onMapCreated"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="GoogleMapActionProvider"
+ extends="com.sap.cloud.mobile.fiori.maps.MapActionProvider"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterClickListener">
+</implements>
+<implements name="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterItemClickListener">
+</implements>
+<implements name="com.google.android.gms.maps.GoogleMap.OnMapClickListener">
+</implements>
+<constructor name="GoogleMapActionProvider"
+ type="com.sap.cloud.mobile.fiori.maps.google.GoogleMapActionProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="googleFioriMapView" type="com.sap.cloud.mobile.fiori.maps.google.GoogleFioriMapView">
+</parameter>
+<parameter name="fragment" type="androidx.fragment.app.Fragment">
+</parameter>
+</constructor>
+<constructor name="GoogleMapActionProvider"
+ type="com.sap.cloud.mobile.fiori.maps.google.GoogleMapActionProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="googleFioriMapView" type="com.sap.cloud.mobile.fiori.maps.google.GoogleFioriMapView">
+</parameter>
+<parameter name="fragmentActivity" type="androidx.fragment.app.FragmentActivity">
+</parameter>
+</constructor>
+<method name="addCircle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="circleOptions" type="com.sap.cloud.mobile.fiori.maps.FioriCircleOptions">
+</parameter>
+</method>
+<method name="addMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="markerOptions" type="com.sap.cloud.mobile.fiori.maps.FioriMarkerOptions">
+</parameter>
+</method>
+<method name="addPolygon"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="polygonOptions" type="com.sap.cloud.mobile.fiori.maps.FioriPolygonOptions">
+</parameter>
+</method>
+<method name="addPolyline"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="polylineOptions" type="com.sap.cloud.mobile.fiori.maps.FioriPolylineOptions">
+</parameter>
+</method>
+<method name="clear"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="cluster"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="configureListeners"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="deleteCircle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="circleOptions" type="com.sap.cloud.mobile.fiori.maps.FioriCircleOptions">
+</parameter>
+</method>
+<method name="deleteMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fioriMarkerOptions" type="com.sap.cloud.mobile.fiori.maps.FioriMarkerOptions">
+</parameter>
+</method>
+<method name="deletePolygon"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="polygonOptions" type="com.sap.cloud.mobile.fiori.maps.FioriPolygonOptions">
+</parameter>
+</method>
+<method name="deletePolyline"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="polylineOptions" type="com.sap.cloud.mobile.fiori.maps.FioriPolylineOptions">
+</parameter>
+</method>
+<method name="doExtentsAction"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="doLocationAction"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getClusterRenderer"
+ return="com.sap.cloud.mobile.fiori.maps.google.GoogleFioriClusterRenderer"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMap"
+ return="com.google.android.gms.maps.GoogleMap"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hideLayer"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="layer" type="java.lang.String">
+</parameter>
+</method>
+<method name="onClusterClick"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cluster" type="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster">
+</parameter>
+</method>
+<method name="onClusterItemClick"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="googleClusterItem" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="onMapClick"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="latLng" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+</method>
+<method name="onRequestPermissionsResult"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestCode" type="int">
+</parameter>
+<parameter name="permissions" type="java.lang.String[]">
+</parameter>
+<parameter name="grantResults" type="int[]">
+</parameter>
+</method>
+<method name="removeLocation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="returnToList"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="selectMarker"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fioriMarkerOptions" type="com.sap.cloud.mobile.fiori.maps.FioriMarkerOptions">
+</parameter>
+</method>
+<method name="setClustering"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clustering" type="boolean">
+</parameter>
+</method>
+<method name="showLayer"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="layer" type="java.lang.String">
+</parameter>
+</method>
+<field name="SAP_PERMISSION_REQUEST_ACCESS_LOCATION"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="19000"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="mContextWeakReference"
+ type="java.lang.ref.WeakReference"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="GoogleMapViewModel"
+ extends="com.sap.cloud.mobile.fiori.maps.MapViewModel"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GoogleMapViewModel"
+ type="com.sap.cloud.mobile.fiori.maps.google.GoogleMapViewModel"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getCircleMap"
+ return="java.util.HashMap&lt;com.google.android.gms.maps.model.Circle, com.sap.cloud.mobile.fiori.maps.FioriCircleOptions&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCircleOptionsMap"
+ return="java.util.HashMap&lt;com.sap.cloud.mobile.fiori.maps.FioriCircleOptions, com.google.android.gms.maps.model.Circle&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLatLng"
+ return="com.google.android.gms.maps.model.LatLng"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLayerMap"
+ return="java.util.HashMap&lt;java.lang.String, java.lang.Boolean&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMarkerHiddenLayerLists"
+ return="java.util.HashMap&lt;java.lang.String, java.util.List&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMarkerOptionClusterItemMap"
+ return="java.util.HashMap&lt;com.sap.cloud.mobile.fiori.maps.FioriMarkerOptions, com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPolygonMap"
+ return="java.util.HashMap&lt;com.google.android.gms.maps.model.Polygon, com.sap.cloud.mobile.fiori.maps.FioriPolygonOptions&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPolygonOptionsMap"
+ return="java.util.HashMap&lt;com.sap.cloud.mobile.fiori.maps.FioriPolygonOptions, com.google.android.gms.maps.model.Polygon&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPolylineMap"
+ return="java.util.HashMap&lt;com.google.android.gms.maps.model.Polyline, com.sap.cloud.mobile.fiori.maps.FioriPolylineOptions&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPolylineOptionsMap"
+ return="java.util.HashMap&lt;com.sap.cloud.mobile.fiori.maps.FioriPolylineOptions, com.google.android.gms.maps.model.Polyline&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getZoom"
+ return="float"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="NoClusterAlgorithm"
+ extends="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.NonHierarchicalDistanceBasedAlgorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="NoClusterAlgorithm"
+ type="com.sap.cloud.mobile.fiori.maps.google.NoClusterAlgorithm"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
+<class name="NonHierarchicalIdBasedAlgorithm"
+ extends="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.NonHierarchicalDistanceBasedAlgorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="NonHierarchicalIdBasedAlgorithm"
+ type="com.sap.cloud.mobile.fiori.maps.google.NonHierarchicalIdBasedAlgorithm"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="groupClustersById"
+ return="java.util.Set&lt;? extends com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="results" type="java.util.Set&lt;? extends com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster&gt;">
+</parameter>
+</method>
+</class>
+<class name="OfflineTileProvider"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.google.android.gms.maps.model.TileProvider">
+</implements>
+<constructor name="OfflineTileProvider"
+ type="com.sap.cloud.mobile.fiori.maps.google.OfflineTileProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="path" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getTile"
+ return="com.google.android.gms.maps.model.Tile"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="x" type="int">
+</parameter>
+<parameter name="y" type="int">
+</parameter>
+<parameter name="zoom" type="int">
+</parameter>
+</method>
+</class>
+<class name="R"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="R"
+ type="com.sap.cloud.mobile.fiori.maps.google.R"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
+<class name="R.dimen"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="dimen"
+ type="com.sap.cloud.mobile.fiori.maps.google.R.dimen"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="offline_attribution_margin_bottom"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="offline_attribution_margin_end"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="offline_attribution_margin_start"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="R.id"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="id"
+ type="com.sap.cloud.mobile.fiori.maps.google.R.id"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="amu_text"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="googleFioriMap"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="map"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="R.layout"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="layout"
+ type="com.sap.cloud.mobile.fiori.maps.google.R.layout"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="activity_maps"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="amu_text_bubble"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="attribution"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="google_map_view"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="R.string"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="string"
+ type="com.sap.cloud.mobile.fiori.maps.google.R.string"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="google_maps_key"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="R.style"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="style"
+ type="com.sap.cloud.mobile.fiori.maps.google.R.style"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="amu_Bubble_TextAppearance_Dark"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="amu_Bubble_TextAppearance_Light"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="amu_ClusterIcon_TextAppearance"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.google.clustering"
+>
+<interface name="Cluster"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getItems"
+ return="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPosition"
+ return="com.google.android.gms.maps.model.LatLng"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSize"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="ClusterManager"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.google.android.gms.maps.GoogleMap.OnCameraIdleListener">
+</implements>
+<implements name="com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener">
+</implements>
+<implements name="com.google.android.gms.maps.GoogleMap.OnMarkerClickListener">
+</implements>
+<constructor name="ClusterManager"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="map" type="com.google.android.gms.maps.GoogleMap">
+</parameter>
+</constructor>
+<constructor name="ClusterManager"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="map" type="com.google.android.gms.maps.GoogleMap">
+</parameter>
+<parameter name="markerManager" type="com.sap.cloud.mobile.fiori.maps.google.clustering.MarkerManager">
+</parameter>
+</constructor>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="myItem" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="addItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="items" type="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;">
+</parameter>
+</method>
+<method name="clearItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="cluster"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAlgorithm"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.Algorithm"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getClusterMarkerCollection"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.MarkerManager.Collection"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMarkerCollection"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.MarkerManager.Collection"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMarkerManager"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.MarkerManager"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getRenderer"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.view.ClusterRenderer"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onCameraIdle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onInfoWindowClick"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="onMarkerClick"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="removeItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="setAlgorithm"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="algorithm" type="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.Algorithm">
+</parameter>
+</method>
+<method name="setAlgorithm"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="algorithm" type="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.ScreenBasedAlgorithm">
+</parameter>
+</method>
+<method name="setAnimation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="animate" type="boolean">
+</parameter>
+</method>
+<method name="setOnClusterClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterClickListener">
+</parameter>
+</method>
+<method name="setOnClusterInfoWindowClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterInfoWindowClickListener">
+</parameter>
+</method>
+<method name="setOnClusterItemClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterItemClickListener">
+</parameter>
+</method>
+<method name="setOnClusterItemInfoWindowClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterItemInfoWindowClickListener">
+</parameter>
+</method>
+<method name="setRenderer"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="view" type="com.sap.cloud.mobile.fiori.maps.google.clustering.view.ClusterRenderer">
+</parameter>
+</method>
+</class>
+<interface name="ClusterManager.OnClusterClickListener"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClusterClick"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cluster" type="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster">
+</parameter>
+</method>
+</interface>
+<interface name="ClusterManager.OnClusterInfoWindowClickListener"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClusterInfoWindowClick"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cluster" type="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster">
+</parameter>
+</method>
+</interface>
+<interface name="ClusterManager.OnClusterItemClickListener"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClusterItemClick"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+</interface>
+<interface name="ClusterManager.OnClusterItemInfoWindowClickListener"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClusterItemInfoWindowClick"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+</interface>
+<interface name="ClusterManager.OnClustersCreatedListener"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClustersCreated"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clusters" type="java.util.Set&lt;? extends com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster&gt;">
+</parameter>
+</method>
+</interface>
+<class name="MarkerManager"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.google.android.gms.maps.GoogleMap.InfoWindowAdapter">
+</implements>
+<implements name="com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener">
+</implements>
+<implements name="com.google.android.gms.maps.GoogleMap.OnMarkerClickListener">
+</implements>
+<implements name="com.google.android.gms.maps.GoogleMap.OnMarkerDragListener">
+</implements>
+<constructor name="MarkerManager"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.MarkerManager"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="map" type="com.google.android.gms.maps.GoogleMap">
+</parameter>
+</constructor>
+<method name="getCollection"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.MarkerManager.Collection"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="getInfoContents"
+ return="android.view.View"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="getInfoWindow"
+ return="android.view.View"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="newCollection"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.MarkerManager.Collection"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="newCollection"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.MarkerManager.Collection"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="onInfoWindowClick"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="onMarkerClick"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="onMarkerDrag"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="onMarkerDragEnd"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="onMarkerDragStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="remove"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+</class>
+<class name="MarkerManager.Collection"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Collection"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.MarkerManager.Collection"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="addAll"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="opts" type="java.util.Collection&lt;com.google.android.gms.maps.model.MarkerOptions&gt;">
+</parameter>
+</method>
+<method name="addAll"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="opts" type="java.util.Collection&lt;com.google.android.gms.maps.model.MarkerOptions&gt;">
+</parameter>
+<parameter name="defaultVisible" type="boolean">
+</parameter>
+</method>
+<method name="addMarker"
+ return="com.google.android.gms.maps.model.Marker"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="opts" type="com.google.android.gms.maps.model.MarkerOptions">
+</parameter>
+</method>
+<method name="clear"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMarkers"
+ return="java.util.Collection&lt;com.google.android.gms.maps.model.Marker&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hideAll"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="setOnInfoWindowAdapter"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="infoWindowAdapter" type="com.google.android.gms.maps.GoogleMap.InfoWindowAdapter">
+</parameter>
+</method>
+<method name="setOnInfoWindowClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="infoWindowClickListener" type="com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener">
+</parameter>
+</method>
+<method name="setOnMarkerClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="markerClickListener" type="com.google.android.gms.maps.GoogleMap.OnMarkerClickListener">
+</parameter>
+</method>
+<method name="setOnMarkerDragListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="markerDragListener" type="com.google.android.gms.maps.GoogleMap.OnMarkerDragListener">
+</parameter>
+</method>
+<method name="showAll"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.google.clustering.algo"
+>
+<interface name="Algorithm"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="addItem"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="addItems"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="items" type="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;">
+</parameter>
+</method>
+<method name="clearItems"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getClusters"
+ return="java.util.Set&lt;? extends com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="zoom" type="double">
+</parameter>
+</method>
+<method name="getItems"
+ return="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMaxDistanceBetweenClusteredItems"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="removeItem"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="setMaxDistanceBetweenClusteredItems"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="maxDistance" type="int">
+</parameter>
+</method>
+</interface>
+<class name="NonHierarchicalDistanceBasedAlgorithm"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.Algorithm">
+</implements>
+<constructor name="NonHierarchicalDistanceBasedAlgorithm"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.NonHierarchicalDistanceBasedAlgorithm"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="addItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="items" type="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;">
+</parameter>
+</method>
+<method name="clearItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getClusteringItems"
+ return="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.clustering.algo.NonHierarchicalDistanceBasedAlgorithm.QuadItem&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="quadTree" type="com.sap.cloud.mobile.fiori.maps.google.clustering.quadtree.PointQuadTree&lt;com.sap.cloud.mobile.fiori.maps.google.clustering.algo.NonHierarchicalDistanceBasedAlgorithm.QuadItem&gt;">
+</parameter>
+<parameter name="discreteZoom" type="int">
+</parameter>
+</method>
+<method name="getClusters"
+ return="java.util.Set&lt;? extends com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="zoom" type="double">
+</parameter>
+</method>
+<method name="getItems"
+ return="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMaxDistanceBetweenClusteredItems"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="removeItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="setMaxDistanceBetweenClusteredItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="maxDistance" type="int">
+</parameter>
+</method>
+</class>
+<class name="PreCachingAlgorithmDecorator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.Algorithm">
+</implements>
+<constructor name="PreCachingAlgorithmDecorator"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.PreCachingAlgorithmDecorator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="algorithm" type="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.Algorithm">
+</parameter>
+</constructor>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="addItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="items" type="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;">
+</parameter>
+</method>
+<method name="clearItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getClusters"
+ return="java.util.Set&lt;? extends com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="zoom" type="double">
+</parameter>
+</method>
+<method name="getItems"
+ return="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMaxDistanceBetweenClusteredItems"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="removeItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="setMaxDistanceBetweenClusteredItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="maxDistance" type="int">
+</parameter>
+</method>
+</class>
+<interface name="ScreenBasedAlgorithm"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.Algorithm">
+</implements>
+<implements name="com.google.android.gms.maps.GoogleMap.OnCameraChangeListener">
+</implements>
+<method name="shouldReclusterOnMapMovement"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="ScreenBasedAlgorithmAdapter"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.ScreenBasedAlgorithm">
+</implements>
+<constructor name="ScreenBasedAlgorithmAdapter"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.ScreenBasedAlgorithmAdapter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="algorithm" type="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.Algorithm">
+</parameter>
+</constructor>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="addItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="items" type="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;">
+</parameter>
+</method>
+<method name="clearItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getClusters"
+ return="java.util.Set&lt;? extends com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="zoom" type="double">
+</parameter>
+</method>
+<method name="getItems"
+ return="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMaxDistanceBetweenClusteredItems"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onCameraChange"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cameraPosition" type="com.google.android.gms.maps.model.CameraPosition">
+</parameter>
+</method>
+<method name="removeItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="setMaxDistanceBetweenClusteredItems"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="maxDistance" type="int">
+</parameter>
+</method>
+<method name="shouldReclusterOnMapMovement"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="StaticCluster"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster">
+</implements>
+<constructor name="StaticCluster"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.algo.StaticCluster"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="center" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+</constructor>
+<method name="add"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="t" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="getItems"
+ return="java.util.Collection&lt;com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPosition"
+ return="com.google.android.gms.maps.model.LatLng"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSize"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="t" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry"
+>
+<class name="Bounds"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Bounds"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Bounds"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="minX" type="double">
+</parameter>
+<parameter name="maxX" type="double">
+</parameter>
+<parameter name="minY" type="double">
+</parameter>
+<parameter name="maxY" type="double">
+</parameter>
+</constructor>
+<method name="contains"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="x" type="double">
+</parameter>
+<parameter name="y" type="double">
+</parameter>
+</method>
+<method name="contains"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="point" type="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Point">
+</parameter>
+</method>
+<method name="contains"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bounds" type="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Bounds">
+</parameter>
+</method>
+<method name="intersects"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="minX" type="double">
+</parameter>
+<parameter name="maxX" type="double">
+</parameter>
+<parameter name="minY" type="double">
+</parameter>
+<parameter name="maxY" type="double">
+</parameter>
+</method>
+<method name="intersects"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bounds" type="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Bounds">
+</parameter>
+</method>
+<field name="maxX"
+ type="double"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="maxY"
+ type="double"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="midX"
+ type="double"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="midY"
+ type="double"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="minX"
+ type="double"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="minY"
+ type="double"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="Point"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Point"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Point"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="x" type="double">
+</parameter>
+<parameter name="y" type="double">
+</parameter>
+</constructor>
+<field name="x"
+ type="double"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="y"
+ type="double"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.google.clustering.projection"
+>
+<class name="Point"
+ extends="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Point"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<constructor name="Point"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.projection.Point"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="x" type="double">
+</parameter>
+<parameter name="y" type="double">
+</parameter>
+</constructor>
+</class>
+<class name="SphericalMercatorProjection"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="SphericalMercatorProjection"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.projection.SphericalMercatorProjection"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="worldWidth" type="double">
+</parameter>
+</constructor>
+<method name="toLatLng"
+ return="com.google.android.gms.maps.model.LatLng"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="point" type="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Point">
+</parameter>
+</method>
+<method name="toPoint"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.projection.Point"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="latLng" type="com.google.android.gms.maps.model.LatLng">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.google.clustering.quadtree"
+>
+<class name="PointQuadTree"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="PointQuadTree"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.quadtree.PointQuadTree"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="minX" type="double">
+</parameter>
+<parameter name="maxX" type="double">
+</parameter>
+<parameter name="minY" type="double">
+</parameter>
+<parameter name="maxY" type="double">
+</parameter>
+</constructor>
+<constructor name="PointQuadTree"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.quadtree.PointQuadTree"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bounds" type="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Bounds">
+</parameter>
+</constructor>
+<method name="add"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="T">
+</parameter>
+</method>
+<method name="clear"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="T">
+</parameter>
+</method>
+<method name="search"
+ return="java.util.Collection&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="searchBounds" type="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Bounds">
+</parameter>
+</method>
+</class>
+<interface name="PointQuadTree.Item"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getPoint"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.geometry.Point"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.google.clustering.ui"
+>
+<class name="IconGenerator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="IconGenerator"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.ui.IconGenerator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</constructor>
+<method name="getAnchorU"
+ return="float"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAnchorV"
+ return="float"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="makeIcon"
+ return="android.graphics.Bitmap"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="text" type="java.lang.CharSequence">
+</parameter>
+</method>
+<method name="makeIcon"
+ return="android.graphics.Bitmap"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setBackground"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="background" type="android.graphics.drawable.Drawable">
+</parameter>
+</method>
+<method name="setColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setContentPadding"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="left" type="int">
+</parameter>
+<parameter name="top" type="int">
+</parameter>
+<parameter name="right" type="int">
+</parameter>
+<parameter name="bottom" type="int">
+</parameter>
+</method>
+<method name="setContentRotation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="degrees" type="int">
+</parameter>
+</method>
+<method name="setContentView"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="contentView" type="android.view.View">
+</parameter>
+</method>
+<method name="setRotation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="degrees" type="int">
+</parameter>
+</method>
+<method name="setStyle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="style" type="int">
+</parameter>
+</method>
+<method name="setTextAppearance"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="resid" type="int">
+</parameter>
+</method>
+<method name="setTextAppearance"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="resid" type="int">
+</parameter>
+</method>
+<field name="STYLE_BLUE"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="4"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="STYLE_DEFAULT"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="1"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="STYLE_GREEN"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="5"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="STYLE_ORANGE"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="7"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="STYLE_PURPLE"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="6"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="STYLE_RED"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="3"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="STYLE_WHITE"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="2"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="RotationLayout"
+ extends="android.widget.FrameLayout"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="RotationLayout"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.ui.RotationLayout"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</constructor>
+<constructor name="RotationLayout"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.ui.RotationLayout"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="attrs" type="android.util.AttributeSet">
+</parameter>
+</constructor>
+<constructor name="RotationLayout"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.ui.RotationLayout"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="attrs" type="android.util.AttributeSet">
+</parameter>
+<parameter name="defStyle" type="int">
+</parameter>
+</constructor>
+<method name="dispatchDraw"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="canvas" type="android.graphics.Canvas">
+</parameter>
+</method>
+<method name="setViewRotation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="degrees" type="int">
+</parameter>
+</method>
+</class>
+<class name="SquareTextView"
+ extends="android.widget.TextView"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="SquareTextView"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.ui.SquareTextView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</constructor>
+<constructor name="SquareTextView"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.ui.SquareTextView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="attrs" type="android.util.AttributeSet">
+</parameter>
+</constructor>
+<constructor name="SquareTextView"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.ui.SquareTextView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="attrs" type="android.util.AttributeSet">
+</parameter>
+<parameter name="defStyle" type="int">
+</parameter>
+</constructor>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.google.clustering.view"
+>
+<interface name="ClusterRenderer"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onAdd"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onClustersChanged"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clusters" type="java.util.Set&lt;? extends com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster&gt;">
+</parameter>
+</method>
+<method name="onRemove"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setAnimation"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="animate" type="boolean">
+</parameter>
+</method>
+<method name="setOnClusterClickListener"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterClickListener">
+</parameter>
+</method>
+<method name="setOnClusterInfoWindowClickListener"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterInfoWindowClickListener">
+</parameter>
+</method>
+<method name="setOnClusterItemClickListener"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterItemClickListener">
+</parameter>
+</method>
+<method name="setOnClusterItemInfoWindowClickListener"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterItemInfoWindowClickListener">
+</parameter>
+</method>
+</interface>
+<class name="DefaultClusterRenderer"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.sap.cloud.mobile.fiori.maps.google.clustering.view.ClusterRenderer">
+</implements>
+<constructor name="DefaultClusterRenderer"
+ type="com.sap.cloud.mobile.fiori.maps.google.clustering.view.DefaultClusterRenderer"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="map" type="com.google.android.gms.maps.GoogleMap">
+</parameter>
+<parameter name="clusterManager" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager">
+</parameter>
+</constructor>
+<method name="getBucket"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="cluster" type="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster">
+</parameter>
+</method>
+<method name="getCluster"
+ return="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="getClusterItem"
+ return="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="getClusterText"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="bucket" type="int">
+</parameter>
+</method>
+<method name="getColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="clusterSize" type="int">
+</parameter>
+</method>
+<method name="getMarker"
+ return="com.google.android.gms.maps.model.Marker"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clusterItem" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+</method>
+<method name="getMarker"
+ return="com.google.android.gms.maps.model.Marker"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cluster" type="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster">
+</parameter>
+</method>
+<method name="getMinClusterSize"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onAdd"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onBeforeClusterItemRendered"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="item" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+<parameter name="markerOptions" type="com.google.android.gms.maps.model.MarkerOptions">
+</parameter>
+</method>
+<method name="onBeforeClusterRendered"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="cluster" type="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster">
+</parameter>
+<parameter name="markerOptions" type="com.google.android.gms.maps.model.MarkerOptions">
+</parameter>
+</method>
+<method name="onClusterItemRendered"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="clusterItem" type="com.sap.cloud.mobile.fiori.maps.google.GoogleClusterItem">
+</parameter>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="onClusterRendered"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="cluster" type="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster">
+</parameter>
+<parameter name="marker" type="com.google.android.gms.maps.model.Marker">
+</parameter>
+</method>
+<method name="onClustersChanged"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clusters" type="java.util.Set&lt;? extends com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster&gt;">
+</parameter>
+</method>
+<method name="onRemove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setAnimation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="animate" type="boolean">
+</parameter>
+</method>
+<method name="setMinClusterSize"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="minClusterSize" type="int">
+</parameter>
+</method>
+<method name="setOnClusterClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterClickListener">
+</parameter>
+</method>
+<method name="setOnClusterInfoWindowClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterInfoWindowClickListener">
+</parameter>
+</method>
+<method name="setOnClusterItemClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterItemClickListener">
+</parameter>
+</method>
+<method name="setOnClusterItemInfoWindowClickListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.sap.cloud.mobile.fiori.maps.google.clustering.ClusterManager.OnClusterItemInfoWindowClickListener">
+</parameter>
+</method>
+<method name="shouldRenderAsCluster"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="cluster" type="com.sap.cloud.mobile.fiori.maps.google.clustering.Cluster">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.sap.cloud.mobile.fiori.maps.search.google"
+>
+<class name="GoogleFioriAddress"
+ extends="com.sap.cloud.mobile.fiori.maps.search.FioriAddress"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getLatLng"
+ return="com.google.android.gms.maps.model.LatLng"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="GoogleSearchAgent"
+ extends="com.sap.cloud.mobile.fiori.maps.search.SearchAgent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GoogleSearchAgent"
+ type="com.sap.cloud.mobile.fiori.maps.search.google.GoogleSearchAgent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="apiKey" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="lookupAddresses"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="query" type="java.lang.CharSequence">
+</parameter>
+</method>
+<method name="lookupLocation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="SAP_PERMISSION_REQUEST_ACCESS_LOCATION"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="19000"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+</api>

@@ -1,0 +1,230 @@
+<resources>
+    <string name="app_name">DSI-Android-UI</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="search_title">Search Products</string>
+    <string name="search_hint">Search Products…</string>
+    <string name="search_input_placeholder">Search product name, GTIN #</string>
+    <string name="settings_description">Settings</string>
+    <string name="text_label_tasks">Tasks</string>
+    <string name="text_label_work_cart">Work Cart</string>
+    <string name="text_label_search">Search</string>
+    <string name="text_label_notifications">Notifications</string>
+    <string name="text_label_work_settings">Settings</string>
+    <string name="title_task_fragment">Task</string>
+    <string name="title_cart_fragment">Cart</string>
+    <string name="title_search_fragment">Search</string>
+    <string name="title_settings_fragment">Settings</string>
+    <string name="title_notification_fragment">Notification</string>
+    <string name="brows_all_departments">Brows all departments</string>
+    <string name="location_list_title">LOCATIONS</string>
+    <string name="specification_list_title">SPECIFICATIONS</string>
+    <string name="variant_list_title">VARIANTS</string>
+    <string name="product_details_add_cart">Add to Cart</string>
+    <string name="product_details_add_location">Add Location</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="browse_all_departments" />
+    <string name="browse_by_departments">BROWSE ALL DEPARTMENTS</string>
+    <string name="by_product">By Product</string>
+    <string name="by_location">By Location</string>
+    <string name="by_shelf">By Shelf</string>
+    <string name="by_section">By Section</string>
+    <string name="by_bin">By Bin</string>
+    <string name="select_products">Select Products</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="primary_button">Primary Button</string>
+    <string name="secondary_button">Secondary Button</string>
+    <string name="add_products_from_cart">Add Products from cart</string>
+    <string name="all_items">ALL</string>
+    <string name="selected">SELECTED</string>
+    <string name="stock">Stock</string>
+    <string name="task_delete_message">Are you sure you wish to delete?</string>
+    <string name="submit">Submit</string>
+    <string name="delete_dialog">Confirm Delete</string>
+    <string name="task_deleted_message">Task deleted</string>
+    <string name="quantity">Quantity</string>
+
+    <string name="hello">Hello</string>
+    <string name="statusImage">StatusImage</string>
+    <string name="myCartTitle">My Cart</string>
+    <string name="browse_by_location_title">Location</string>
+    <string name="toggle_by_product">By Product</string>
+    <string name="product_by_location_Gtin">GTIN %1$s</string>
+    <string name="product_list_header">Products</string>
+    <string name="product_all_locations_title">Locations (%1$s)</string>
+    <string name="product_all_specifications_title">Specifications (%1$s)</string>
+    <string name="product_all_variants_title">Variants (%1$s)</string>
+    <string name="cart_empty_message">Your Cart is currently empty</string>
+    <string name="cart_add_products_message">Scan a product or location barcode to also get started.</string>
+
+    <string name="scan_to_fill_form">Scan a location on the floor to fill in form</string>
+    <string name="location">Location</string>
+    <string name="locations">Locations</string>
+    <string-array name="aisle">
+        <item>Aisle 01</item>
+        <item>Aisle 02</item>
+        <item>Aisle 03</item>
+        <item>Aisle 04</item>
+    </string-array>
+    <string name="task">Tasks</string>
+    <string name="total_tasks">Total Tasks</string>
+    <string name="my_tasks">My Tasks</string>
+    <string name="add_task_button">Add task button</string>
+    <string name="assign">Assign to me</string>
+    <string name="complete">Complete</string>
+    <string name="assigned_me">Assigned to me</string>
+    <string name="overdue">Overdue</string>
+    <string name="edit">Edit</string>
+    <string name="unassign">Unassign</string>
+    <string name="task_completed">Task completed</string>
+    <string name="delete">Delete</string>
+    <string name="confirm">Confirm</string>
+    <string name="task_updated">Task updated</string>
+    <string name="task_unassigned">Task unassigned</string>
+    <array name="tabValuesArray">
+        <item>Me</item>
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+        <item>Due Date</item>
+    </array>
+    <string name="product_multiple_location">This product has mutiple locations.Please select one or many locations.</string>
+    <!--    Add New Task Strings-->
+    <string name="add_task_type">TASK TYPE</string>
+    <string name="add_task_description">DESCRIPTION</string>
+    <string name="add_task_assignee">ASSIGNEE</string>
+    <string name="add_task_priority">SET PRIORITY</string>
+    <string name="add_task_due_date">DUE DATE</string>
+    <string name="add_task_due_time">DUE TIME</string>
+    <string name="add_task_products">PRODUCTS</string>
+    <string name="add_task_title">Create New Task</string>
+    <string name="error_require_message">* Required</string>
+    <string name="message_products_selected">Products Selected</string>
+    <string name="message_products_removed">Products Removed</string>
+    <string name="title_edit_task">Edit Task</string>
+    <string name="message_task_created">Task Created</string>
+    <string name="message_task_saved">Task Updated</string>
+    <string name="action_text_undo">UNDO</string>
+    <string name="save_text_button">SAVE</string>
+    <array name="add_task_type_options">
+        <item>Product Movement</item>
+        <item>Cycle Counting</item>
+        <item>General</item>
+    </array>
+    <array name="add_task_priority_options">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </array>
+    <array name="add_task_due_time_options">
+        <item>End of Day</item>
+        <item>Start of Day</item>
+    </array>
+
+    <!--    Filter task Strings -->
+    <string name="filter_task_title">Sort And Filter</string>
+    <string name="filter_task_apply">APPLY</string>
+    <string name="task_status">STATUS</string>
+    <string name="task_priority">PRIORITY</string>
+    <string name="filter_by">FILTER BY</string>
+    <string name="sort_by">SORT BY</string>
+    <string name="task_category">CATEGORY</string>
+    <string name="due_date_range_symbol">-</string>
+    <string name="clear">CLEAR</string>
+    <string name="product_restock">Product Restock</string>
+    <string name="product_out_of_stock">Product Out of Stock</string>
+    <string name="content_desc_product_image">Product Image</string>
+    <string name="toast_cart_success">Successfully added to cart</string>
+    <string name="toast_cart_error">Error while adding</string>
+    <string name="toast_cart_warning">Please select a product</string>
+    <string name="complete_text">Complete</string>
+    <string name="assign_task_to_me_text">Assign task to me</string>
+    <string name="unassigned_text">Unassigned</string>
+    <string name="done">DONE</string>
+    <string name="add">ADD</string>
+    <string name="sku_text">SKU: %s</string>
+    <string name="no_products_added_label">NO PRODUCTS ADDED</string>
+    <string name="changes_will_be_lost">Changes will not be saved</string>
+    <string name="stay">Stay</string>
+    <string name="leave">Leave</string>
+    <string name="add_to_location">Add To Location</string>
+    <string name="select_stock_msg">Please select stock greater than zero</string>
+    <array name="sort_task_category_options">
+        <item>Task Type</item>
+        <item>Status</item>
+        <item>Priority</item>
+        <item>Due Date</item>
+    </array>
+
+    <string-array name="shelf">
+        <item>Shelf 01</item>
+        <item>Shelf 02</item>
+        <item>Shelf 03</item>
+        <item>Shelf 04</item>
+    </string-array>
+
+    <string-array name="section">
+        <item>Section 01</item>
+        <item>Section 02</item>
+        <item>Section 03</item>
+        <item>Section 04</item>
+    </string-array>
+
+    <string-array name="bin">
+        <item>Bin 01</item>
+        <item>Bin 02</item>
+        <item>Bin 03</item>
+        <item>Bin 04</item>
+    </string-array>
+    <string-array name="totalOfProducts">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="min">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="max">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+</resources>

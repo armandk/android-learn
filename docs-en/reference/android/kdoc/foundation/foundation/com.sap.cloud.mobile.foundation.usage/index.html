@@ -1,0 +1,238 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.foundation.usage - foundation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">foundation</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.foundation.usage</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.foundation.usage</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="appusage/index.html">AppUsage</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AppUsage</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">AppUsage</span></code>
+<p>The mobile services server supports a specific format of usage data and event types. Its client usage implementation, AppUsage, follows the Usage Framework API (<code><a href="usage/index.html">Usage</a></code>) and provides simplified utility methods and encrypted usage store. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="appusageinfo/index.html">AppUsageInfo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AppUsageInfo</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="usageinfo/index.html"><span class="identifier">UsageInfo</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AppUsageInfo</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="usageinfo/index.html"><span class="identifier">UsageInfo</span></a></code>
+<p>A helper class that embeds usage event information and provides chained setter methods to set values with mobile services-specific keys.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="appusageuploader/index.html">AppUsageUploader</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AppUsageUploader</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">AppUsageUploader</span></code>
+<p>This class is used for uploading client usage information to mobile services. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="usage/index.html">Usage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Usage</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Usage</span></code>
+<p>This class serves as the entry point to a set of framework APIs that allow you to extend and implement your own usage reporting based on your own server, to collect, store, and upload client usage events in a flexible way. <pre><code>
+1. Initialization Usage-- Need to implement <a href="usagestore/index.html">UsageStore</a> before you can instantiate the
+   Usage:
+// Instantiates your UsageStore implementation, for example:
+    MyUsageStore store = new MyUsageStore("myStoreDatabaseName");
+    Usage usage = new Usage(store);
+
+
+2. <a href="usagerecord/index.html">UsageRecord</a>-- Represents a single unit of usage information reported by a
+   UsageReporter, which contains:
+   a. <strong>Date</strong>-- The date when the UsageRecord is reported and persisted.
+   b. <strong><a href="usageinfo/index.html">UsageInfo</a> Object</strong>-- Contains server specific event details as name-value pairs
+      saved in a HashMap&lt;String, String&gt;.
+   c. <strong>User-defined event type</strong> implemented as an Enum instance.
+
+   <strong>Extending UsageRecord</strong>:
+public class MyUsageRecord extends UsageRecord&lt;MyUsageRecord.MyEvent&gt; {
+            // Constructor-- Constructs a usage record with one of my event type and a date.
+            MyUsageRecord(MyEvent event, Date date, UsageInfo info) {
+                super(event, date, info);
+                logger.debug("Instantiated Usage Record: Event[{}], Date: {}", event, date);
+            }
+        }
+
+        // User-defined event types.
+        enum MyEvent {
+            EVENT1, EVENT2, EVENT3, EVENT4, EVENT5
+        }
+
+
+3. <a href="usagereporter/index.html">UsageReporter</a>
+   A <strong>target</strong> is a logical group of collected events and information, collected for a specific
+   purpose, and sent to a given analytics server.
+   All events are reported using a reporter assigned with a target ID. The reporter’s only task is
+   to generate UsageRecord which is stored in an implementation of
+   UsageStore.
+
+   <strong>Reporting Usage Events</strong>:
+// 1. Instantiates a reporter by specifying the target ID and the store.
+        UsageReporter reporter = new UsageReporter(myTargetID, usage.getStore());
+
+        // 2. Registers and enables the reporter.
+        usage.registerReporter(reporter);
+
+        // 3. Creates a usage record with user-defined event type.
+
+        //    a. Initiates a UsageInfo with a HashMap, then fills it with implementation
+        //       specific name-value pairs.
+        UsageInfo info = new UsageInfo(new HashMap&lt;String, String&gt;());
+        info.setValue("Screen", "Property Screen")
+            .setValue("DeviceId", "1235")
+            .setValue("InfoCategory", "UI");
+
+        //    b. Instantiates a usage record with an event type, date, and UsageInfo object.
+        MyUsageRecord record = new MyUsageRecord(MyUsageRecord.MyEvent.EVENT1, new Date(), info);
+
+        // 4. Reports usage, the record will be persisted in the usage store.
+        reporter.reports(record);
+
+
+4. <a href="usagesnapshot/index.html">UsageSnapshot</a>
+   A snapshot object is created via UsageStore.getSnapshot(androidContext, targetID)
+   and is used by the Usage Uploader when uploading usage data to the remote server.
+
+   It contains a collection of UsageRecords reported by a UsageReporter,
+   grouped under a Target ID, and persisted in a UsageStore.
+
+   The records collected in a snapshot is using the creation date of the snapshot as the cut-off
+   date, that is, all UsageRecords reported before the cut-off date will be included in the
+   snapshot.
+
+5. <a href="usagestore/index.html">UsageStore</a>--
+   a. An interface that manages the storing, retrieval, and deletion of UsageRecords.
+   b. Used by the Usage Uploader to take a snapshot of records associated with a target ID.
+
+   <strong>Generating a Snapshot</strong>:
+// This is usually done when uploading usage records.
+        UsageSnapshot snapshot = usage.getStore().getSnapshot(androidContext, myTargetID);
+
+
+6. Usage Uploader-- Based on your server's protocol and data format, the implementation should
+   follow the steps below:
+   a. Takes a Usage Snapshot.
+   b. Transforms each Usage Record in the snapshot to the data format required by the server.
+   c. Uploads the data to a given server.
+   d. Removes Usage Records in the snapshot from the Usage Store upon success upload.
+
+   For example,
+// In the uploader's upload implementation:
+
+        // Uses try-with statement, which will invoke snapshot.close() at the end.
+        try (
+            // 1. Takes a snapshot from the instance of your UsageStore implementation.
+            MyUsageSnapshotImpl snapshot = usage.getStore().getSnapshot(androidContext, myTargetID);
+        ) {
+            // 2. Iterates through the usage records in the snapshot.
+            while (snapshot.hasNext()) {
+                MyUsageRecord record = snapshot.next();
+                ...
+                // 3. Converts the record to the format required by your server.
+                ...
+            }
+
+            // 4. Uploads to the server.
+            ...
+            // 5. If the upload is successful, removes the records in the snapshot.
+            snapshot.removeRecords();
+        } catch (SomeException ex) {
+            // Error handling.
+            ...
+        }
+
+  </code></pre></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="usagebroker/index.html">UsageBroker</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UsageBroker</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UsageBroker</span></code>
+<p>Collect, store and upload client usage events in a flexible way and send it to an analytics server.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="usageinfo/index.html">UsageInfo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UsageInfo</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UsageInfo</span></code>
+<p>This class embeds name/value pair properties in a <code>HashMap</code> and is part of a <code><a href="usagerecord/index.html">UsageRecord</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="usagerecord/index.html">UsageRecord</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UsageRecord</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Enum</span><span class="symbol">&lt;</span><a href="usagerecord/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UsageRecord</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Enum</span><span class="symbol">&lt;</span><a href="usagerecord/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A Usage Record represents a single unit of usage information reported by a <code><a href="usagereporter/index.html">UsageReporter</a></code>, it contains a Date, <code><a href="usageinfo/index.html">UsageInfo</a></code>, and a user defined event implemented as an <code><a href="#">Enum</a></code> instance.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="usagereporter/index.html">UsageReporter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UsageReporter</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UsageReporter</span></code>
+<p>Each Usage Reporter is assigned a <strong>Target ID</strong>, and reports usage by persisting the <code><a href="usagerecord/index.html">UsageRecord</a></code>s into the <code><a href="usagestore/index.html">UsageStore</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="usageservice/index.html">UsageService</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UsageService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the facade to initialize the usage feature.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="usagesnapshot/index.html">UsageSnapshot</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">UsageSnapshot</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code><br/>
+<code><span class="keyword">interface </span><span class="identifier">UsageSnapshot</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code>
+<p>This is the interface that defines the behavior of a usage snapshot object. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="usagestore/index.html">UsageStore</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">UsageStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Closeable</span></code><br/>
+<code><span class="keyword">interface </span><span class="identifier">UsageStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Closeable</span></code>
+<p>Provides interface for the store object to persist the <code><a href="usagerecord/index.html">UsageRecord</a></code> reported by all <code><a href="usagereporter/index.html">UsageReporter</a></code>s.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

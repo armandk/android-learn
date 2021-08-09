@@ -1,0 +1,4926 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Javadoc API documentation for SAP Fiori Library for Android." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
+<title>
+
+  AutoSpanGridLayoutManager - SAP Fiori Library for Android
+
+
+| SAP Fiori Library for Android
+
+</title>
+<link href="../../../../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../../../", "../../../../../../../assets/");
+</script>
+<script src="../../../../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">SAP Fiori Library for Android</span>
+    
+    </div>
+    <div id="headerRight">
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../../../../../../packages.html"  >Package Index</a> | 
+                <a href="../../../../../../classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/package-summary.html">com.sap.cloud.mobile.fiori</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/attachment/package-summary.html">com.sap.cloud.mobile.fiori.attachment</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/attachment/actions/package-summary.html">com.sap.cloud.mobile.fiori.attachment.actions</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/banner/package-summary.html">com.sap.cloud.mobile.fiori.banner</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/bindingadapters/package-summary.html">com.sap.cloud.mobile.fiori.bindingadapters</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/camera/package-summary.html">com.sap.cloud.mobile.fiori.camera</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/common/package-summary.html">com.sap.cloud.mobile.fiori.common</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/contact/package-summary.html">com.sap.cloud.mobile.fiori.contact</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/footer/package-summary.html">com.sap.cloud.mobile.fiori.footer</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/formcell/package-summary.html">com.sap.cloud.mobile.fiori.formcell</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/hierarchy/package-summary.html">com.sap.cloud.mobile.fiori.hierarchy</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/indicator/package-summary.html">com.sap.cloud.mobile.fiori.indicator</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/kpi/package-summary.html">com.sap.cloud.mobile.fiori.kpi</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/listControls/package-summary.html">com.sap.cloud.mobile.fiori.listControls</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/maps/package-summary.html">com.sap.cloud.mobile.fiori.maps</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/maps/edit/package-summary.html">com.sap.cloud.mobile.fiori.maps.edit</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/maps/search/package-summary.html">com.sap.cloud.mobile.fiori.maps.search</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/misc/package-summary.html">com.sap.cloud.mobile.fiori.misc</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/misc/interactive/package-summary.html">com.sap.cloud.mobile.fiori.misc.interactive</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/object/package-summary.html">com.sap.cloud.mobile.fiori.object</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/ocr/package-summary.html">com.sap.cloud.mobile.fiori.ocr</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/qrcode/package-summary.html">com.sap.cloud.mobile.fiori.qrcode</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/search/package-summary.html">com.sap.cloud.mobile.fiori.search</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/search/qrcodereader/package-summary.html">com.sap.cloud.mobile.fiori.search.qrcodereader</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/timeline/package-summary.html">com.sap.cloud.mobile.fiori.timeline</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../com/sap/cloud/mobile/fiori/timeline/views/package-summary.html">com.sap.cloud.mobile.fiori.timeline.views</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/FioriItemClickListener.html">FioriItemClickListener</a></li>
+      </ul>
+    </li>
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="selected api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.html">AutoSpanGridLayoutManager</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.Builder.html">AutoSpanGridLayoutManager.Builder</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.GridLayoutSpanCalculator.html">AutoSpanGridLayoutManager.GridLayoutSpanCalculator</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/BroadcastValueReceiver.html">BroadcastValueReceiver</a>&lt;T&gt;</li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/CustomFadingEdgeRecyclerView.html">CustomFadingEdgeRecyclerView</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/DeviceShakeDetector.html">DeviceShakeDetector</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/FioriItemTouchListener.html">FioriItemTouchListener</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/FioriOrientationListener.html">FioriOrientationListener</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/StartChildSnapHelper.html">StartChildSnapHelper</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/StaticLayoutTextView.html">StaticLayoutTextView</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/Tag.html">Tag</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/Utility.html">Utility</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/WrapViewPager.html">WrapViewPager</a></li>
+      </ul>
+    </li>
+              
+              
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../../../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../../../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+   
+  
+  
+  
+
+  
+   
+  
+  
+   
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+
+Summary:
+
+  <a href="#nestedclasses">Nested Classes</a>
+  
+
+
+
+
+
+
+  &#124; <a href="#inhconstants">Inherited Constants</a>
+  
+
+
+
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    
+    class
+<h1>AutoSpanGridLayoutManager</h1>
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    extends GridLayoutManager<br/>
+  
+  
+  
+
+  
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+         	
+        <td colspan="5" class="jd-inheritance-class-cell"><a href="http://developer.android.com/reference/java/lang/Object.html">java.lang.Object</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="4" class="jd-inheritance-class-cell">androidx.recyclerview.widget.RecyclerView.LayoutManager</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="3" class="jd-inheritance-class-cell">androidx.recyclerview.widget.LinearLayoutManager</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="2" class="jd-inheritance-class-cell">androidx.recyclerview.widget.GridLayoutManager</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="1" class="jd-inheritance-class-cell">com.sap.cloud.mobile.fiori.common.AutoSpanGridLayoutManager</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+
+
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<table id="nestedclasses" class="jd-sumtable"><tr><th colspan="12">Nested Classes</th></tr>
+
+
+  
+    <tr class="alt-color api apilevel-" >
+      <td class="jd-typecol">
+        
+         
+         
+        
+        class</td>
+      <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.Builder.html">AutoSpanGridLayoutManager.Builder</a></td>
+      <td class="jd-descrcol" width="100%">&nbsp;</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+      <td class="jd-typecol">
+        
+         
+         
+        
+        class</td>
+      <td class="jd-linkcol"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.GridLayoutSpanCalculator.html">AutoSpanGridLayoutManager.GridLayoutSpanCalculator</a></td>
+      <td class="jd-descrcol" width="100%">&nbsp;</td>
+    </tr>
+    
+    
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="inhconstants" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Constants</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-androidx.recyclerview.widget.GridLayoutManager" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-androidx.recyclerview.widget.GridLayoutManager-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From class
+androidx.recyclerview.widget.GridLayoutManager
+<div id="inherited-constants-androidx.recyclerview.widget.GridLayoutManager">
+  <div id="inherited-constants-androidx.recyclerview.widget.GridLayoutManager-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-androidx.recyclerview.widget.GridLayoutManager-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">DEFAULT_SPAN_COUNT</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-androidx.recyclerview.widget.LinearLayoutManager" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-androidx.recyclerview.widget.LinearLayoutManager-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From class
+androidx.recyclerview.widget.LinearLayoutManager
+<div id="inherited-constants-androidx.recyclerview.widget.LinearLayoutManager">
+  <div id="inherited-constants-androidx.recyclerview.widget.LinearLayoutManager-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-androidx.recyclerview.widget.LinearLayoutManager-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">HORIZONTAL</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">INVALID_OFFSET</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">VERTICAL</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/java/lang/Double.html">Double</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.html#getChildWidth()">getChildWidth</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.html#getSpanCount()">getSpanCount</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.html#onAttachedToWindow(androidx.recyclerview.widget.RecyclerView)">onAttachedToWindow</a></span>(RecyclerView view)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.html#onDetachedFromWindow(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.Recycler)">onDetachedFromWindow</a></span>(RecyclerView view, RecyclerView.Recycler recycler)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.html#onLayoutChildren(androidx.recyclerview.widget.RecyclerView.Recycler, androidx.recyclerview.widget.RecyclerView.State)">onLayoutChildren</a></span>(RecyclerView.Recycler recycler, RecyclerView.State state)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.html#onMeasure(androidx.recyclerview.widget.RecyclerView.Recycler, androidx.recyclerview.widget.RecyclerView.State, int, int)">onMeasure</a></span>(RecyclerView.Recycler recycler, RecyclerView.State state, int widthSpec, int heightSpec)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/sap/cloud/mobile/fiori/common/AutoSpanGridLayoutManager.html#setRemoveRecycleOnMeasurementChange(boolean)">setRemoveRecycleOnMeasurementChange</a></span>(boolean removeRecycleOnMeasurementChange)
+        
+        <div class="jd-descrdiv">Set if the views should be removed and recycled when measurement changes
+</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-androidx.recyclerview.widget.GridLayoutManager" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-androidx.recyclerview.widget.GridLayoutManager-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  androidx.recyclerview.widget.GridLayoutManager
+
+<div id="inherited-methods-androidx.recyclerview.widget.GridLayoutManager">
+  <div id="inherited-methods-androidx.recyclerview.widget.GridLayoutManager-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-androidx.recyclerview.widget.GridLayoutManager-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">checkLayoutParams</span>(RecyclerView.LayoutParams arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeHorizontalScrollOffset</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeHorizontalScrollRange</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeVerticalScrollOffset</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeVerticalScrollRange</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            RecyclerView.LayoutParams
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">generateDefaultLayoutParams</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            RecyclerView.LayoutParams
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">generateLayoutParams</span>(<a href="http://developer.android.com/reference/android/content/Context.html">Context</a> arg0, <a href="http://developer.android.com/reference/android/util/AttributeSet.html">AttributeSet</a> arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            RecyclerView.LayoutParams
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">generateLayoutParams</span>(<a href="http://developer.android.com/reference/android/view/ViewGroup.LayoutParams.html">ViewGroup.LayoutParams</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getColumnCountForAccessibility</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getRowCountForAccessibility</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getSpanCount</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            GridLayoutManager.SpanSizeLookup
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getSpanSizeLookup</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isUsingSpansToEstimateScrollbarDimensions</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/view/View.html">View</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onFocusSearchFailed</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1, RecyclerView.Recycler arg2, RecyclerView.State arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onInitializeAccessibilityNodeInfoForItem</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg2, AccessibilityNodeInfoCompat arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsAdded</span>(RecyclerView arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsChanged</span>(RecyclerView arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsMoved</span>(RecyclerView arg0, int arg1, int arg2, int arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsRemoved</span>(RecyclerView arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsUpdated</span>(RecyclerView arg0, int arg1, int arg2, <a href="http://developer.android.com/reference/java/lang/Object.html">Object</a> arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onLayoutChildren</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onLayoutCompleted</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">scrollHorizontallyBy</span>(int arg0, RecyclerView.Recycler arg1, RecyclerView.State arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">scrollVerticallyBy</span>(int arg0, RecyclerView.Recycler arg1, RecyclerView.State arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setMeasuredDimension</span>(<a href="http://developer.android.com/reference/android/graphics/Rect.html">Rect</a> arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setSpanCount</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setSpanSizeLookup</span>(GridLayoutManager.SpanSizeLookup arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setStackFromEnd</span>(boolean arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setUsingSpansToEstimateScrollbarDimensions</span>(boolean arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">supportsPredictiveItemAnimations</span>()
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-androidx.recyclerview.widget.LinearLayoutManager" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-androidx.recyclerview.widget.LinearLayoutManager-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  androidx.recyclerview.widget.LinearLayoutManager
+
+<div id="inherited-methods-androidx.recyclerview.widget.LinearLayoutManager">
+  <div id="inherited-methods-androidx.recyclerview.widget.LinearLayoutManager-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-androidx.recyclerview.widget.LinearLayoutManager-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">assertNotInLayoutOrScroll</span>(<a href="http://developer.android.com/reference/java/lang/String.html">String</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">calculateExtraLayoutSpace</span>(RecyclerView.State arg0, int[] arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">canScrollHorizontally</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">canScrollVertically</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">collectAdjacentPrefetchPositions</span>(int arg0, int arg1, RecyclerView.State arg2, RecyclerView.LayoutManager.LayoutPrefetchRegistry arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">collectInitialPrefetchPositions</span>(int arg0, RecyclerView.LayoutManager.LayoutPrefetchRegistry arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeHorizontalScrollExtent</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeHorizontalScrollOffset</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeHorizontalScrollRange</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/graphics/PointF.html">PointF</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeScrollVectorForPosition</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeVerticalScrollExtent</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeVerticalScrollOffset</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeVerticalScrollRange</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">findFirstCompletelyVisibleItemPosition</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">findFirstVisibleItemPosition</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">findLastCompletelyVisibleItemPosition</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">findLastVisibleItemPosition</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/view/View.html">View</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">findViewByPosition</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            RecyclerView.LayoutParams
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">generateDefaultLayoutParams</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getExtraLayoutSpace</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getInitialPrefetchItemCount</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getOrientation</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getRecycleChildrenOnDetach</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getReverseLayout</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getStackFromEnd</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isAutoMeasureEnabled</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isLayoutRTL</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isSmoothScrollbarEnabled</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onDetachedFromWindow</span>(RecyclerView arg0, RecyclerView.Recycler arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/view/View.html">View</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onFocusSearchFailed</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1, RecyclerView.Recycler arg2, RecyclerView.State arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onInitializeAccessibilityEvent</span>(<a href="http://developer.android.com/reference/android/view/accessibility/AccessibilityEvent.html">AccessibilityEvent</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onLayoutChildren</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onLayoutCompleted</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onRestoreInstanceState</span>(<a href="http://developer.android.com/reference/android/os/Parcelable.html">Parcelable</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/os/Parcelable.html">Parcelable</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onSaveInstanceState</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">prepareForDrop</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg1, int arg2, int arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">scrollHorizontallyBy</span>(int arg0, RecyclerView.Recycler arg1, RecyclerView.State arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">scrollToPosition</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">scrollToPositionWithOffset</span>(int arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">scrollVerticallyBy</span>(int arg0, RecyclerView.Recycler arg1, RecyclerView.State arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setInitialPrefetchItemCount</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setOrientation</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setRecycleChildrenOnDetach</span>(boolean arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setReverseLayout</span>(boolean arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setSmoothScrollbarEnabled</span>(boolean arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setStackFromEnd</span>(boolean arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">smoothScrollToPosition</span>(RecyclerView arg0, RecyclerView.State arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">supportsPredictiveItemAnimations</span>()
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-androidx.recyclerview.widget.RecyclerView.LayoutManager" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-androidx.recyclerview.widget.RecyclerView.LayoutManager-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  androidx.recyclerview.widget.RecyclerView.LayoutManager
+
+<div id="inherited-methods-androidx.recyclerview.widget.RecyclerView.LayoutManager">
+  <div id="inherited-methods-androidx.recyclerview.widget.RecyclerView.LayoutManager-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-androidx.recyclerview.widget.RecyclerView.LayoutManager-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">addDisappearingView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">addDisappearingView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">addView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">addView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">assertInLayoutOrScroll</span>(<a href="http://developer.android.com/reference/java/lang/String.html">String</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">assertNotInLayoutOrScroll</span>(<a href="http://developer.android.com/reference/java/lang/String.html">String</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">attachView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">attachView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1, RecyclerView.LayoutParams arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">attachView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">calculateItemDecorationsForChild</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, <a href="http://developer.android.com/reference/android/graphics/Rect.html">Rect</a> arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">canScrollHorizontally</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">canScrollVertically</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">checkLayoutParams</span>(RecyclerView.LayoutParams arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">chooseSize</span>(int arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">collectAdjacentPrefetchPositions</span>(int arg0, int arg1, RecyclerView.State arg2, RecyclerView.LayoutManager.LayoutPrefetchRegistry arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">collectInitialPrefetchPositions</span>(int arg0, RecyclerView.LayoutManager.LayoutPrefetchRegistry arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeHorizontalScrollExtent</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeHorizontalScrollOffset</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeHorizontalScrollRange</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeVerticalScrollExtent</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeVerticalScrollOffset</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeVerticalScrollRange</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">detachAndScrapAttachedViews</span>(RecyclerView.Recycler arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">detachAndScrapView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, RecyclerView.Recycler arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">detachAndScrapViewAt</span>(int arg0, RecyclerView.Recycler arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">detachView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">detachViewAt</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">endAnimation</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/view/View.html">View</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">findContainingItemView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/view/View.html">View</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">findViewByPosition</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            RecyclerView.LayoutParams
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">generateDefaultLayoutParams</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            RecyclerView.LayoutParams
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">generateLayoutParams</span>(<a href="http://developer.android.com/reference/android/content/Context.html">Context</a> arg0, <a href="http://developer.android.com/reference/android/util/AttributeSet.html">AttributeSet</a> arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            RecyclerView.LayoutParams
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">generateLayoutParams</span>(<a href="http://developer.android.com/reference/android/view/ViewGroup.LayoutParams.html">ViewGroup.LayoutParams</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getBaseline</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getBottomDecorationHeight</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/view/View.html">View</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getChildAt</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getChildCount</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getChildMeasureSpec</span>(int arg0, int arg1, int arg2, int arg3, boolean arg4)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getChildMeasureSpec</span>(int arg0, int arg1, int arg2, boolean arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getClipToPadding</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getColumnCountForAccessibility</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getDecoratedBottom</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getDecoratedBoundsWithMargins</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, <a href="http://developer.android.com/reference/android/graphics/Rect.html">Rect</a> arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getDecoratedLeft</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getDecoratedMeasuredHeight</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getDecoratedMeasuredWidth</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getDecoratedRight</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getDecoratedTop</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/view/View.html">View</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getFocusedChild</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getHeight</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getHeightMode</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getItemCount</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getItemViewType</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getLayoutDirection</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getLeftDecorationWidth</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getMinimumHeight</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getMinimumWidth</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getPaddingBottom</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getPaddingEnd</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getPaddingLeft</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getPaddingRight</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getPaddingStart</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getPaddingTop</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getPosition</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            RecyclerView.LayoutManager.Properties
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getProperties</span>(<a href="http://developer.android.com/reference/android/content/Context.html">Context</a> arg0, <a href="http://developer.android.com/reference/android/util/AttributeSet.html">AttributeSet</a> arg1, int arg2, int arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getRightDecorationWidth</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getRowCountForAccessibility</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getSelectionModeForAccessibility</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getTopDecorationHeight</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getTransformedBoundingBox</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, boolean arg1, <a href="http://developer.android.com/reference/android/graphics/Rect.html">Rect</a> arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getWidth</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getWidthMode</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hasFocus</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">ignoreView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isAttachedToWindow</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isAutoMeasureEnabled</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isFocused</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isItemPrefetchEnabled</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isLayoutHierarchical</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isMeasurementCacheEnabled</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isSmoothScrolling</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">isViewPartiallyVisible</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, boolean arg1, boolean arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">layoutDecorated</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1, int arg2, int arg3, int arg4)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">layoutDecoratedWithMargins</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1, int arg2, int arg3, int arg4)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">measureChild</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">measureChildWithMargins</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">moveView</span>(int arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">offsetChildrenHorizontal</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">offsetChildrenVertical</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onAdapterChanged</span>(Adapter arg0, Adapter arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onAddFocusables</span>(RecyclerView arg0, <a href="http://developer.android.com/reference/java/util/ArrayList.html">ArrayList</a>&lt;<a href="http://developer.android.com/reference/android/view/View.html">View</a>&gt; arg1, int arg2, int arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onAttachedToWindow</span>(RecyclerView arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onDetachedFromWindow</span>(RecyclerView arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onDetachedFromWindow</span>(RecyclerView arg0, RecyclerView.Recycler arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/view/View.html">View</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onFocusSearchFailed</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1, RecyclerView.Recycler arg2, RecyclerView.State arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onInitializeAccessibilityEvent</span>(<a href="http://developer.android.com/reference/android/view/accessibility/AccessibilityEvent.html">AccessibilityEvent</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onInitializeAccessibilityEvent</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1, <a href="http://developer.android.com/reference/android/view/accessibility/AccessibilityEvent.html">AccessibilityEvent</a> arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onInitializeAccessibilityNodeInfo</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1, AccessibilityNodeInfoCompat arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onInitializeAccessibilityNodeInfoForItem</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg2, AccessibilityNodeInfoCompat arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/view/View.html">View</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onInterceptFocusSearch</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsAdded</span>(RecyclerView arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsChanged</span>(RecyclerView arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsMoved</span>(RecyclerView arg0, int arg1, int arg2, int arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsRemoved</span>(RecyclerView arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsUpdated</span>(RecyclerView arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onItemsUpdated</span>(RecyclerView arg0, int arg1, int arg2, <a href="http://developer.android.com/reference/java/lang/Object.html">Object</a> arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onLayoutChildren</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onLayoutCompleted</span>(RecyclerView.State arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onMeasure</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1, int arg2, int arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onRequestChildFocus</span>(RecyclerView arg0, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg1, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onRequestChildFocus</span>(RecyclerView arg0, RecyclerView.State arg1, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg2, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onRestoreInstanceState</span>(<a href="http://developer.android.com/reference/android/os/Parcelable.html">Parcelable</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/os/Parcelable.html">Parcelable</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onSaveInstanceState</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onScrollStateChanged</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">performAccessibilityAction</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1, int arg2, <a href="http://developer.android.com/reference/android/os/Bundle.html">Bundle</a> arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">performAccessibilityActionForItem</span>(RecyclerView.Recycler arg0, RecyclerView.State arg1, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg2, int arg3, <a href="http://developer.android.com/reference/android/os/Bundle.html">Bundle</a> arg4)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">postOnAnimation</span>(<a href="http://developer.android.com/reference/java/lang/Runnable.html">Runnable</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">removeAllViews</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">removeAndRecycleAllViews</span>(RecyclerView.Recycler arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">removeAndRecycleView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, RecyclerView.Recycler arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">removeAndRecycleViewAt</span>(int arg0, RecyclerView.Recycler arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">removeCallbacks</span>(<a href="http://developer.android.com/reference/java/lang/Runnable.html">Runnable</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">removeDetachedView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">removeView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">removeViewAt</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">requestChildRectangleOnScreen</span>(RecyclerView arg0, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg1, <a href="http://developer.android.com/reference/android/graphics/Rect.html">Rect</a> arg2, boolean arg3, boolean arg4)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">requestChildRectangleOnScreen</span>(RecyclerView arg0, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg1, <a href="http://developer.android.com/reference/android/graphics/Rect.html">Rect</a> arg2, boolean arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">requestLayout</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">requestSimpleAnimationsInNextLayout</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">scrollHorizontallyBy</span>(int arg0, RecyclerView.Recycler arg1, RecyclerView.State arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">scrollToPosition</span>(int arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">scrollVerticallyBy</span>(int arg0, RecyclerView.Recycler arg1, RecyclerView.State arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setAutoMeasureEnabled</span>(boolean arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setItemPrefetchEnabled</span>(boolean arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setMeasuredDimension</span>(int arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setMeasuredDimension</span>(<a href="http://developer.android.com/reference/android/graphics/Rect.html">Rect</a> arg0, int arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">setMeasurementCacheEnabled</span>(boolean arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">smoothScrollToPosition</span>(RecyclerView arg0, RecyclerView.State arg1, int arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">startSmoothScroll</span>(RecyclerView.SmoothScroller arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">stopIgnoringView</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">supportsPredictiveItemAnimations</span>()
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="http://developer.android.com/reference/java/lang/Object.html">java.lang.Object</a>
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/java/lang/Object.html">Object</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">clone</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">equals</span>(<a href="http://developer.android.com/reference/java/lang/Object.html">Object</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">finalize</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            <a href="http://developer.android.com/reference/java/lang/Class.html">Class</a>&lt;?&gt;
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getClass</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hashCode</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notify</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notifyAll</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/java/lang/String.html">String</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">toString</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0, int arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>()
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-androidx.recyclerview.widget.ItemTouchHelper.ViewDropHandler" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-androidx.recyclerview.widget.ItemTouchHelper.ViewDropHandler-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  androidx.recyclerview.widget.ItemTouchHelper.ViewDropHandler
+
+<div id="inherited-methods-androidx.recyclerview.widget.ItemTouchHelper.ViewDropHandler">
+  <div id="inherited-methods-androidx.recyclerview.widget.ItemTouchHelper.ViewDropHandler-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-androidx.recyclerview.widget.ItemTouchHelper.ViewDropHandler-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">prepareForDrop</span>(<a href="http://developer.android.com/reference/android/view/View.html">View</a> arg0, <a href="http://developer.android.com/reference/android/view/View.html">View</a> arg1, int arg2, int arg3)
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-androidx.recyclerview.widget.RecyclerView.SmoothScroller.ScrollVectorProvider" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-androidx.recyclerview.widget.RecyclerView.SmoothScroller.ScrollVectorProvider-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  androidx.recyclerview.widget.RecyclerView.SmoothScroller.ScrollVectorProvider
+
+<div id="inherited-methods-androidx.recyclerview.widget.RecyclerView.SmoothScroller.ScrollVectorProvider">
+  <div id="inherited-methods-androidx.recyclerview.widget.RecyclerView.SmoothScroller.ScrollVectorProvider-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-androidx.recyclerview.widget.RecyclerView.SmoothScroller.ScrollVectorProvider-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            <a href="http://developer.android.com/reference/android/graphics/PointF.html">PointF</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">computeScrollVectorForPosition</span>(int arg0)
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<a id="getChildWidth()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://developer.android.com/reference/java/lang/Double.html">Double</a>
+      </span>
+      <span class="sympad">getChildWidth</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getSpanCount()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        int
+      </span>
+      <span class="sympad">getSpanCount</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="onAttachedToWindow(androidx.recyclerview.widget.RecyclerView)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">onAttachedToWindow</span>
+      <span class="normal">(RecyclerView view)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="onDetachedFromWindow(androidx.recyclerview.widget.RecyclerView, androidx.recyclerview.widget.RecyclerView.Recycler)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">onDetachedFromWindow</span>
+      <span class="normal">(RecyclerView view, RecyclerView.Recycler recycler)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="onLayoutChildren(androidx.recyclerview.widget.RecyclerView.Recycler, androidx.recyclerview.widget.RecyclerView.State)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">onLayoutChildren</span>
+      <span class="normal">(RecyclerView.Recycler recycler, RecyclerView.State state)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="onMeasure(androidx.recyclerview.widget.RecyclerView.Recycler, androidx.recyclerview.widget.RecyclerView.State, int, int)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">onMeasure</span>
+      <span class="normal">(RecyclerView.Recycler recycler, RecyclerView.State state, int widthSpec, int heightSpec)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="setRemoveRecycleOnMeasurementChange(boolean)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setRemoveRecycleOnMeasurementChange</span>
+      <span class="normal">(boolean removeRecycleOnMeasurementChange)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set if the views should be removed and recycled when measurement changes
+</p></div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<a id="navbar_top"></a>
+
+<div id="footer">
+Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize doclava-developer-docs.js */
+</script>
+
+</body>
+</html>

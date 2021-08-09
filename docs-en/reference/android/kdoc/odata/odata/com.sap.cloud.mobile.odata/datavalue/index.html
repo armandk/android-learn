@@ -1,0 +1,413 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataValue - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DataValue</a><br/>
+<br/>
+<h1>DataValue</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataValue</span></code>
+<p>Abstract base class for wrapper classes that wrap basic data values as objects, as well as calendar values, geography values, geometry values, <code><a href="../complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code>, <code><a href="../entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code> and <code><a href="../listbase/index.html">com.sap.cloud.mobile.odata.ListBase</a></code>.</p>
+ See Also: 
+<p><code><a href="../stringvalue/index.html">com.sap.cloud.mobile.odata.StringValue</a></code>, <code><a href="../binaryvalue/index.html">com.sap.cloud.mobile.odata.BinaryValue</a></code>, <code><a href="../booleanvalue/index.html">com.sap.cloud.mobile.odata.BooleanValue</a></code>, <code><a href="../charvalue/index.html">com.sap.cloud.mobile.odata.CharValue</a></code>, <code><a href="../bytevalue/index.html">com.sap.cloud.mobile.odata.ByteValue</a></code>, <code><a href="../shortvalue/index.html">com.sap.cloud.mobile.odata.ShortValue</a></code>, <code><a href="../intvalue/index.html">com.sap.cloud.mobile.odata.IntValue</a></code>, <code><a href="../longvalue/index.html">com.sap.cloud.mobile.odata.LongValue</a></code>, <code><a href="../integervalue/index.html">com.sap.cloud.mobile.odata.IntegerValue</a></code>, <code><a href="../decimalvalue/index.html">com.sap.cloud.mobile.odata.DecimalValue</a></code>, <code><a href="../floatvalue/index.html">com.sap.cloud.mobile.odata.FloatValue</a></code>, <code><a href="../doublevalue/index.html">com.sap.cloud.mobile.odata.DoubleValue</a></code>, <code><a href="../unsignedbyte/index.html">com.sap.cloud.mobile.odata.UnsignedByte</a></code>, <code><a href="../unsignedshort/index.html">com.sap.cloud.mobile.odata.UnsignedShort</a></code>, <code><a href="../enumvalue/index.html">com.sap.cloud.mobile.odata.EnumValue</a></code>, <code><a href="../guidvalue/index.html">com.sap.cloud.mobile.odata.GuidValue</a></code>, <code><a href="../localdate/index.html">com.sap.cloud.mobile.odata.LocalDate</a></code>, <code><a href="../localtime/index.html">com.sap.cloud.mobile.odata.LocalTime</a></code>, <code><a href="../localdatetime/index.html">com.sap.cloud.mobile.odata.LocalDateTime</a></code>, <code><a href="../globaldatetime/index.html">com.sap.cloud.mobile.odata.GlobalDateTime</a></code>, <code><a href="../daytimeduration/index.html">com.sap.cloud.mobile.odata.DayTimeDuration</a></code>, <code><a href="../yearmonthduration/index.html">com.sap.cloud.mobile.odata.YearMonthDuration</a></code>, <code><a href="../geographyvalue/index.html">com.sap.cloud.mobile.odata.GeographyValue</a></code>, <code><a href="../geometryvalue/index.html">com.sap.cloud.mobile.odata.GeometryValue</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DataValue</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Abstract base class for wrapper classes that wrap basic data values as objects, as well as calendar values, geography values, geometry values, <code><a href="../complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code>, <code><a href="../entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code> and <code><a href="../listbase/index.html">com.sap.cloud.mobile.odata.ListBase</a></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="undefined.html">undefined</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">undefined</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataValue</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clonemutable.html">cloneMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">cloneMutable</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$cloneMutable(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A clone of <code>value</code> if it is mutable, or <code>value</code> if it is immutable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equals.html">equals</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataValue$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this object is equal to <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type of the wrapped value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettypecode.html">getTypeCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTypeCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data type code of the wrapped value, equivalent to <code>dataType.code</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hashcode.html">hashCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Hash this data value to a number.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="getdatatype.html">DataValue.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../binaryvalue/index.html">BinaryValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BinaryValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../binaryvalue/getvalue.html">BinaryValue.value</a></code> of type <code>binary</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../booleanvalue/index.html">BooleanValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BooleanValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../booleanvalue/getvalue.html">BooleanValue.value</a></code> of type <code>boolean</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../bytevalue/index.html">ByteValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ByteValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../bytevalue/getvalue.html">ByteValue.value</a></code> of type <code>byte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../charvalue/index.html">CharValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CharValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../charvalue/getvalue.html">CharValue.value</a></code> of type <code>char</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../daytimeduration/index.html">DayTimeDuration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DayTimeDuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#dayTimeDuration">dayTimeDuration</a> type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../decimalvalue/index.html">DecimalValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DecimalValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../decimalvalue/getvalue.html">DecimalValue.value</a></code> of type <code>decimal</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../deltastream/index.html">DeltaStream</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DeltaStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>A stream of delta items, each of which is either an <code><a href="../entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code> or a <code><a href="../changedlink/index.html">com.sap.cloud.mobile.odata.ChangedLink</a></code>. While processing a stream, a delta link may be encountered, but it will not be immediately available to the caller. The <code><a href="../deltastream/getdeltalink.html">DeltaStream.deltaLink</a></code> can be obtained only after the stream is closed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../doublevalue/index.html">DoubleValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DoubleValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../doublevalue/getvalue.html">DoubleValue.value</a></code> of type <code>double</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../enumvalue/index.html">EnumValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> enum value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../floatvalue/index.html">FloatValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FloatValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../floatvalue/getvalue.html">FloatValue.value</a></code> of type <code>float</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geospatialvalue/index.html">GeospatialValue</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">GeospatialValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Abstract base class for geospatial (geography/geometry) data values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../globaldatetime/index.html">GlobalDateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GlobalDateTime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#dateTime">dateTime</a> type with zone offset.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../guidvalue/index.html">GuidValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GuidValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> GUID value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../integervalue/index.html">IntegerValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntegerValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../integervalue/getvalue.html">IntegerValue.value</a></code> of type <code>integer</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../intvalue/index.html">IntValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../intvalue/getvalue.html">IntValue.value</a></code> of type <code>int</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../listbase/index.html">ListBase</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ListBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Base class for strongly-typed lists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../localdate/index.html">LocalDate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDate</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#date">date</a> type without zone offset.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../localdatetime/index.html">LocalDateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDateTime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#dateTime">dateTime</a> type without zone offset.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../localtime/index.html">LocalTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalTime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#time">time</a> type without zone offset.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../longvalue/index.html">LongValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LongValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../longvalue/getvalue.html">LongValue.value</a></code> of type <code>long</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryalias/index.html">QueryAlias</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryAlias</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>An alias reference for a data value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryfilter/index.html">QueryFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFilter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates the boolean value of an <a href="http://odata.org">OData</a> logical operator. Used to wrap the results of logical <code><a href="../queryoperator/index.html">com.sap.cloud.mobile.odata.QueryOperator</a></code> in a type-safe manner.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryfunctioncall/index.html">QueryFunctionCall</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFunctionCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates the application of an <a href="http://odata.org">OData</a> query function to a list of arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryoperatorcall/index.html">QueryOperatorCall</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryOperatorCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates the application of an <a href="http://odata.org">OData</a> query operator to a list of arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../querytype/index.html">QueryType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>A data type reference for use in a query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/index.html">QueryValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Base class for paths and properties as well as wrapped constant values and query function/operation calls. Intended to allow convenient cascaded application of query functions/operators in fluent query construction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../shortvalue/index.html">ShortValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ShortValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../shortvalue/getvalue.html">ShortValue.value</a></code> of type <code>short</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../streambase/index.html">StreamBase</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">StreamBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Abstract base class for streams.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../streamlink/index.html">StreamLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StreamLink</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents a link to the value of a media entity resource or a stream-typed property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../stringvalue/index.html">StringValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StringValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../stringvalue/getvalue.html">StringValue.value</a></code> of type <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/index.html">StructureBase</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">StructureBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>The canonical path of this value relative to the service root URL. Common base class for <code><a href="../complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code> and <code><a href="../entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../unsignedbyte/index.html">UnsignedByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnsignedByte</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../unsignedbyte/getvalue.html">UnsignedByte.value</a></code> of type <code>unsignedByte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../unsignedshort/index.html">UnsignedShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnsignedShort</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="../unsignedshort/getvalue.html">UnsignedShort.value</a></code> of type <code>unsignedShort</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../yearmonthduration/index.html">YearMonthDuration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">YearMonthDuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#yearMonthDuration">yearMonthDuration</a> type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

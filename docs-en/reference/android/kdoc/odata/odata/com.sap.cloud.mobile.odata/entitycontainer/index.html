@@ -1,0 +1,195 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntityContainer - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">EntityContainer</a><br/>
+<br/>
+<h1>EntityContainer</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityContainer</span></code>
+<p>Represents an <a href="http://odata.org">OData</a> entity container.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">EntityContainer</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents an <a href="http://odata.org">OData</a> entity container.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getannotation.html">getAnnotation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotation</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityContainer$getAnnotation(kotlin.String)/term">term</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotation/index.html"><span class="identifier">Annotation</span></a></code>
+<p>Lookup an existing annotation by term name, or throw an exception if the annotation is not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationlist.html">getAnnotationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationlist/index.html"><span class="identifier">AnnotationList</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">EntityContainer.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotationmap.html">getAnnotationMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotationMap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return obsolete. Use <code><a href="getannotations.html">EntityContainer.annotations</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getannotations.html">getAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return map of annotations for this model element. For annotations without qualifiers, the entry key is the annotation term name. For annotations with qualifiers, the entry key is the annotation term name, then "#", then the annotation qualifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getbasecontainer.html">getBaseContainer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBaseContainer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityContainer</span></a></code>
+<p>Return the base container if this container extends another.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatamethods.html">getDataMethods</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataMethods</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datamethodmap/index.html"><span class="identifier">DataMethodMap</span></a></code>
+<p>Return the data methods defined by this container.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitysets.html">getEntitySets</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntitySets</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitysetmap/index.html"><span class="identifier">EntitySetMap</span></a></code>
+<p>Return the entity sets defined by this container.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlocalname.html">getLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the local name of this container within its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code>, e.g. "MyContainer".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return synonym for <code><a href="getlocalname.html">EntityContainer.localName</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getqualifiedname.html">getQualifiedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQualifiedName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of this set qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> name, e.g. "MySchema.MyContainer".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsingletons.html">getSingletons</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSingletons</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitysetmap/index.html"><span class="identifier">EntitySetMap</span></a></code>
+<p>Return the singletons defined by this container.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsourceline.html">getSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceLine</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isdefault.html">isDefault</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isDefault</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this the default container within its defining schema?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setbasecontainer.html">setBaseContainer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBaseContainer</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityContainer$setBaseContainer(com.sap.cloud.mobile.odata.EntityContainer)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityContainer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the base container if this container extends another.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdefault.html">setDefault</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDefault</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityContainer$setDefault(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is this the default container within its defining schema?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlocalname.html">setLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLocalName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityContainer$setLocalName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the local name of this container within its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code>, e.g. "MyContainer".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setqualifiedname.html">setQualifiedName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setQualifiedName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityContainer$setQualifiedName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the name of this set qualified by its owning <code><a href="../dataschema/index.html">com.sap.cloud.mobile.odata.DataSchema</a></code> name, e.g. "MySchema.MyContainer".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsourceline.html">setSourceLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceLine</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityContainer$setSourceLine(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source line number for this schema element within its defining schema.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

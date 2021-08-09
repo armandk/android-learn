@@ -1,0 +1,267 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsdlOption - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.csdl</a>&nbsp;/&nbsp;<a href="./index.html">CsdlOption</a><br/>
+<br/>
+<h1>CsdlOption</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CsdlOption</span></code>
+<p>Bitmask flags for <code><a href="../csdlparser/getcsdloptions.html">CsdlParser.csdlOptions</a></code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CsdlOption</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Bitmask flags for <code><a href="../csdlparser/getcsdloptions.html">CsdlParser.csdlOptions</a></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="allow_case_conflicts.html">ALLOW_CASE_CONFLICTS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ALLOW_CASE_CONFLICTS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to allow model elements with names differing only in case.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="default_variable_scale.html">DEFAULT_VARIABLE_SCALE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DEFAULT_VARIABLE_SCALE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to default unspecified scale to "variable" rather than "0".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="default_variable_srid.html">DEFAULT_VARIABLE_SRID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DEFAULT_VARIABLE_SRID</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to default unspecified scale to "variable" rather than "0".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="disable_facet_warnings.html">DISABLE_FACET_WARNINGS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DISABLE_FACET_WARNINGS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to disallow warnings about questionable values for type facets, such as unspecified scale.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="disable_logging_of_errors.html">DISABLE_LOGGING_OF_ERRORS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DISABLE_LOGGING_OF_ERRORS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Disable logging of parsing errors. Parsing errors will still be thrown as exceptions even if disabled for logging.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="disable_logging_of_warnings.html">DISABLE_LOGGING_OF_WARNINGS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DISABLE_LOGGING_OF_WARNINGS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Disable logging of parsing warnings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="disable_name_validation.html">DISABLE_NAME_VALIDATION</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DISABLE_NAME_VALIDATION</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to skip validation of element names.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="exclude_server_only_elements.html">EXCLUDE_SERVER_ONLY_ELEMENTS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">EXCLUDE_SERVER_ONLY_ELEMENTS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Skip server-only elements in the csdl xml to be parsed and added to CsdlDocument. An element is server-only if it contains an Annotation child element with Term="com.sap.cloud.server.odata.sql.v1.ServerOnly".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fail_if_provider_incompatible.html">FAIL_IF_PROVIDER_INCOMPATIBLE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">FAIL_IF_PROVIDER_INCOMPATIBLE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Enable errors for incompatibility with DataServiceProvider implementation (e.g. SQLDatabaseProvider). Parsing of metadata will fail if such errors are detected.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore_all_annotations.html">IGNORE_ALL_ANNOTATIONS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IGNORE_ALL_ANNOTATIONS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>A combination of <code>IGNORE_EDM_ANNOTATIONS</code> and <code>IGNORE_XML_ANNOTATIONS</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore_all_references.html">IGNORE_ALL_REFERENCES</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IGNORE_ALL_REFERENCES</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>A combination of <code>IGNORE_EXTERNAL_REFERENCES</code>, <code>IGNORE_INTERNAL_REFERENCES</code>, and <code>IGNORE_STANDARD_REFERENCES</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore_edm_annotations.html">IGNORE_EDM_ANNOTATIONS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IGNORE_EDM_ANNOTATIONS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to ignore EDM annotations (OData V4+ annotations).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore_external_references.html">IGNORE_EXTERNAL_REFERENCES</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IGNORE_EXTERNAL_REFERENCES</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to ignore Edmx Reference elements which have a non-standard Uri (e.g. not starting with "http://docs.oasis-open.org/odata/") and which do not share the <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same origin</a> as the referencing document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore_internal_references.html">IGNORE_INTERNAL_REFERENCES</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IGNORE_INTERNAL_REFERENCES</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to ignore Edmx Reference elements which have a non-standard Uri (e.g. not starting with "http://docs.oasis-open.org/odata/") and which share the <a href="https://en.wikipedia.org/wiki/Same-origin_policy">same origin</a> as the referencing document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore_standard_references.html">IGNORE_STANDARD_REFERENCES</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IGNORE_STANDARD_REFERENCES</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to ignore Edmx Reference elements which have a standard Uri (e.g. starting with "http://docs.oasis-open.org/odata/").</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore_undefined_terms.html">IGNORE_UNDEFINED_TERMS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IGNORE_UNDEFINED_TERMS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to ignore annotations using undefined terms.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore_xml_annotations.html">IGNORE_XML_ANNOTATIONS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IGNORE_XML_ANNOTATIONS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to ignore XML annotations (custom XML attributes).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="log_with_unqualified_file_names.html">LOG_WITH_UNQUALIFIED_FILE_NAMES</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">LOG_WITH_UNQUALIFIED_FILE_NAMES</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Use unqualified file names (without directory path) in logged error/warning messages.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="process_mixed_versions.html">PROCESS_MIXED_VERSIONS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">PROCESS_MIXED_VERSIONS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to process elements from multiple OData versions. Without this option, only elements belonging to the outermost schema's OData version will be processed. Other elements will be ignored.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resolve_undefined_terms.html">RESOLVE_UNDEFINED_TERMS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RESOLVE_UNDEFINED_TERMS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to resolve annotations using undefined terms.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="retain_original_text.html">RETAIN_ORIGINAL_TEXT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RETAIN_ORIGINAL_TEXT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to retain the original CSDL (XML) text in <code><a href="../csdldocument/getoriginaltext.html">CsdlDocument.originalText</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="retain_resolved_text.html">RETAIN_RESOLVED_TEXT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RETAIN_RESOLVED_TEXT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to retain the resolved CSDL (XML) text in <code><a href="../csdldocument/getresolvedtext.html">CsdlDocument.resolvedText</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="strict_facet_warnings.html">STRICT_FACET_WARNINGS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STRICT_FACET_WARNINGS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to enable the strictest possible warnings about questionable values for type facets, such as unspecified nullability.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trace_parsing_of_elements.html">TRACE_PARSING_OF_ELEMENTS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TRACE_PARSING_OF_ELEMENTS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to trace elements encountered during parsing.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="warn_about_undefined_terms.html">WARN_ABOUT_UNDEFINED_TERMS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">WARN_ABOUT_UNDEFINED_TERMS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Set this option to force the parser to ignore annotations using undefined terms, but log a warning message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="warn_if_provider_incompatible.html">WARN_IF_PROVIDER_INCOMPATIBLE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">WARN_IF_PROVIDER_INCOMPATIBLE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Enable warnings for incompatibility with DataServiceProvider implementation (e.g. SQLDatabaseProvider). Parsing of metadata will succeed if such warnings are detected.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

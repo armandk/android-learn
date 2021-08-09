@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AmountTransform - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">AmountTransform</a><br/>
+<br/>
+<h1>AmountTransform</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AmountTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Abstract base class for top and bottom transformation items.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getamount.html">getAmount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAmount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Return the numeric value to be applied in the transformation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the name of the transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Return the value by which the transformation will compare the instances in the entity set.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../transformvalue/chain.html">chain</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">chain</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TransformValue$chain(com.sap.cloud.mobile.odata.TransformValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Adds a new transformation item to be executed after the current one. It will be separated by a '/' in the query url.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../transformvalue/getitems.html">getItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItems</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a></code>
+<p>Return child transform items to be executed after the current transform value is executed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../transformvalue/setitems.html">setItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setItems</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TransformValue$setItems(com.sap.cloud.mobile.odata.TransformValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set child transform items to be executed after the current transform value is executed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../bottomtransform/index.html">BottomTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BottomTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AmountTransform</span></a></code>
+<p>Represents the Bottom* transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../toptransform/index.html">TopTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TopTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AmountTransform</span></a></code>
+<p>Represents the Top* transformation items.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

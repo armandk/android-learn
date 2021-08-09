@@ -1,0 +1,245 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HttpAddress - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.http</a>&nbsp;/&nbsp;<a href="./index.html">HttpAddress</a><br/>
+<br/>
+<h1>HttpAddress</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpAddress</span></code>
+<p>Encapsulates a parsed HTTP URL.</p>
+ See Also: 
+<p><a href="http://tools.ietf.org/html/rfc3986#section-3">RFC 3986</a>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">HttpAddress</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates a parsed HTTP URL.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getabsolute.html">getAbsolute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAbsolute</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return true for absolute URL, <code>false</code> for relative URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getauthority.html">getAuthority</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAuthority</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Authority component, e.g. host ("myhost") or host and port ("myhost:8080").</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getfragment.html">getFragment</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFragment</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Optional fragment component, e.g. "#myfragment".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethost.html">getHost</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHost</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return host subcomponent of <code><a href="getauthority.html">HttpAddress.authority</a></code>, e.g. "myhost".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpath.html">getPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Optional path component, e.g. "/mypath".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getport.html">getPort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return port subcomponent of <code><a href="getauthority.html">HttpAddress.authority</a></code>, e.g. 8080.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getquery.html">getQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQuery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Optional query component, e.g. "?myquery".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getscheme.html">getScheme</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getScheme</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return scheme component, e.g. "http" or "https".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isabsolute.html">isAbsolute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isAbsolute</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$isAbsolute(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>address</code> is absolute.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isrelative.html">isRelative</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isRelative</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$isRelative(kotlin.String)/address">address</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>address</code> is relative.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$parse(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpAddress</span></a></code>
+<p>See parse(String, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$parse(kotlin.String, kotlin.Boolean)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$parse(kotlin.String, kotlin.Boolean)/absolute">absolute</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpAddress</span></a></code>
+<p>Parse a URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pathandquery.html">pathAndQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pathAndQuery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the path and query portions of the address, e.g. "/mypath?myquery".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="relativeto.html">relativeTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">relativeTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$relativeTo(com.sap.cloud.mobile.odata.http.HttpAddress)/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpAddress</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpAddress</span></a></code>
+<p>If this address is absolute, then return it. If this address is relative, then apply it to <code>other</code> and rerturn the resulting address.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="schemeandauthority.html">schemeAndAuthority</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">schemeAndAuthority</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the scheme and authority portions of the address, e.g. "http://myhost:8080".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setabsolute.html">setAbsolute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAbsolute</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$setAbsolute(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set true for absolute URL, <code>false</code> for relative URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setauthority.html">setAuthority</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAuthority</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$setAuthority(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set authority component, e.g. host ("myhost") or host and port ("myhost:8080").</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setfragment.html">setFragment</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setFragment</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$setFragment(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optional fragment component, e.g. "#myfragment".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sethost.html">setHost</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHost</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$setHost(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set host subcomponent of <code><a href="getauthority.html">HttpAddress.authority</a></code>, e.g. "myhost".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpath.html">setPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$setPath(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optional path component, e.g. "/mypath".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setport.html">setPort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPort</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$setPort(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set port subcomponent of <code><a href="getauthority.html">HttpAddress.authority</a></code>, e.g. 8080.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setquery.html">setQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$setQuery(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optional query component, e.g. "?myquery".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setscheme.html">setScheme</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setScheme</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.HttpAddress$setScheme(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set scheme component, e.g. "http" or "https".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the URL in string form, e.g. "http://myhost:8080/path?query#fragment".</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,189 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataEvent - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataEvent</a><br/>
+<br/>
+<h1>OfflineODataEvent</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OfflineODataEvent</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">, </span><span class="identifier">Parcelable</span></code>
+<p>A built-in Offline OData entity type which stores information about Offline OData events such as upload and download.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OfflineODataEvent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.core.SparseIndexMap)/withDefaults">withDefaults</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.core.SparseIndexMap)/withIndexMap">withIndexMap</span><span class="symbol">:</span>&nbsp;<span class="identifier">SparseIndexMap</span><span class="symbol">?</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="details.html">details</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">details</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="eventtype.html">eventType</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">eventType</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">id</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="time.html">time</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">time</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">OfflineODataEvent</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="describecontents.html">describeContents</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">describeContents</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Internal implementation. Ignore it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdetails.html">getDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Detailed information for the event. For example, the subset of the defining queries that were used for a download.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geteventtype.html">getEventType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEventType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The event type, such as download or upload.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getid.html">getId</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code>
+<p>Return (nullable) Event identifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getold.html">getOld</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOld</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">OfflineODataEvent</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="gettime.html">getTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">GlobalDateTime</span><span class="symbol">?</span></code>
+<p>Return (nullable) The date and time of the event.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isproxy.html">isProxy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isProxy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="key.html">key</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">key</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$key(kotlin.Long)/id">id</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">EntityKey</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="list.html">list</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">list</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$list(com.sap.cloud.mobile.odata.EntityValueList)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValueList</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">OfflineODataEvent</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="setdetails.html">setDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDetails</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$setDetails(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set detailed information for the event. For example, the subset of the defining queries that were used for a download.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="seteventtype.html">setEventType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEventType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$setEventType(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the event type, such as download or upload.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setid.html">setId</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setId</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$setId(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set event identifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settime.html">setTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$setTime(com.sap.cloud.mobile.odata.GlobalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">GlobalDateTime</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the date and time of the event.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writetoparcel.html">writeToParcel</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeToParcel</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$writeToParcel(android.os.Parcel, kotlin.Int)/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">Parcel</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataEvent$writeToParcel(android.os.Parcel, kotlin.Int)/flags">flags</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Internal implementation. Ignore it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

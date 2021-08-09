@@ -1,0 +1,10 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+com.sap.cloud.mobile.flowv2.core
+com.sap.cloud.mobile.flowv2.ext
+com.sap.cloud.mobile.flowv2.model
+com.sap.cloud.mobile.flowv2.securestore
+com.sap.cloud.mobile.flowv2.steps
+com.sap.cloud.mobile.flowv2.util
+

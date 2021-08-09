@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SharedDeviceService.<init> - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings</a>&nbsp;/&nbsp;<a href="index.html">SharedDeviceService</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.foundation.settings.SharedDeviceService$&lt;init&gt;(kotlin.String, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)))"></a>
+<code><span class="identifier">SharedDeviceService</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.SharedDeviceService$<init>(kotlin.String, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)))/applicationKeyParameter">applicationKeyParameter</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.SharedDeviceService$<init>(kotlin.String, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.String)))/encryptionKeyReadyListener">encryptionKeyReadyListener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Represents the service to retrieve shared device settings, encryption key for offline database
+initialization, etc.</p>
+<p>This service is for offline mobile application in multiple user mode, one device will be shared
+to different users.</p>
+<p>When initializing offline database, an encryption key can be provided to enhance the security. To
+maximum the security, <a href="#">applicationKeyParameter</a> is strongly recommended to be provided in the client
+code before initializing this service with <a href="../../com.sap.cloud.mobile.foundation.mobileservices/sdkinitializer/index.html">SDKInitializer</a>. Please note that once the application
+is deployed, <a href="#">applicationKeyParameter</a> should not be changed, otherwise, the existing user will not
+be able to open the offline database.</p>
+<p>The service has an internal algorithm to generate the encryption, to leverage this, <a href="encryptionkeyreadylistener.html">encryptionKeyReadyListener</a>
+should be also be provided, the generated encryption will be notified via this listener. Client code
+can also call the APIs in this service to retrieve encryption from server side, then generate key
+with customized algorithm.</p>
+</BODY>
+</HTML>

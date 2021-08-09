@@ -1,0 +1,671 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransformValue - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">TransformValue</a><br/>
+<br/>
+<h1>TransformValue</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TransformValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> transformation item defined in OData Data Aggregation. A TransformValue indicates an expression that is used in the $apply system query option.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TransformValue</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> transformation item defined in OData Data Aggregation. A TransformValue indicates an expression that is used in the $apply system query option.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="chain.html">chain</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">chain</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TransformValue$chain(com.sap.cloud.mobile.odata.TransformValue)/item">item</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TransformValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Adds a new transformation item to be executed after the current one. It will be separated by a '/' in the query url.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getitems.html">getItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItems</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a></code>
+<p>Return child transform items to be executed after the current transform value is executed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setitems.html">setItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setItems</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.TransformValue$setItems(com.sap.cloud.mobile.odata.TransformValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set child transform items to be executed after the current transform value is executed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../queryvalue/add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$add(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$add(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$add(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$add(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$add(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$add(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$add(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryOperator.add(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/all.html">all</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">all</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$all(com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/lambda">lambda</span><span class="symbol">:</span>&nbsp;<a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$all(com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/match">match</span><span class="symbol">:</span>&nbsp;<a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.all(this, lambda, match)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/any.html">any</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">any</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$any(com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/lambda">lambda</span><span class="symbol">:</span>&nbsp;<a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$any(com.sap.cloud.mobile.odata.DataPath, com.sap.cloud.mobile.odata.QueryFilter)/match">match</span><span class="symbol">:</span>&nbsp;<a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.any(this, lambda, match)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/astype.html">asType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">asType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$asType(com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.asType(type, this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/average.html">average</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">average</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$average(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a></code>
+<p>Return aggregate transformation item with this query value and 'average' aggregate method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/ceiling.html">ceiling</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">ceiling</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.ceiling(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/concat.html">concat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">concat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$concat(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">concat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$concat(com.sap.cloud.mobile.odata.DataValue)/text">text</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.concat(this, text)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/contains.html">contains</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$contains(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$contains(com.sap.cloud.mobile.odata.DataValue)/text">text</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryFunction.contains(this, text)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/countdistinct.html">countDistinct</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">countDistinct</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$countDistinct(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a></code>
+<p>Return aggregate transformation item with this query value and 'countdistinct' aggregate method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/date.html">date</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">date</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.date(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/day.html">day</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">day</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.day(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/divide.html">divide</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$divide(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$divide(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$divide(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$divide(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$divide(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$divide(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">divide</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$divide(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryOperator.add(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/endswith.html">endsWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">endsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$endsWith(kotlin.String)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">endsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$endsWith(com.sap.cloud.mobile.odata.DataValue)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryFunction.endsWith(this, text)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$equal(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$equal(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$equal(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$equal(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$equal(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$equal(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$equal(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$equal(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$equal(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.equal(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/floor.html">floor</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">floor</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.floor(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/fractionalseconds.html">fractionalSeconds</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fractionalSeconds</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.fractionalSeconds(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/geodistance.html">geoDistance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">geoDistance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$geoDistance(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.getDistance(this, value)</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/geointersectse.html">geoIntersectse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">geoIntersectse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$geoIntersectse(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryFunction.getIntersects(this, value)</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/geolength.html">geoLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">geoLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.geoLength(this)</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type of the property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/greaterequal.html">greaterEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterEqual(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterEqual(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterEqual(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterEqual(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterEqual(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterEqual(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterEqual(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterEqual(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterEqual(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.greaterEqual(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/greaterthan.html">greaterThan</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterThan(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterThan(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterThan(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterThan(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterThan(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterThan(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterThan(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterThan(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">greaterThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$greaterThan(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.greaterThan(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/has.html">has</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">has</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$has(kotlin.Int)/flag">flag</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.has(this, flag)</code>. The current object must be a path or property with enum type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/hour.html">hour</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hour</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.hour(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/indexof.html">indexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$indexOf(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$indexOf(com.sap.cloud.mobile.odata.DataValue)/text">text</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.indexOf(this, text)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/isnull.html">isNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.equal(this, null)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/istype.html">isType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$isType(com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryFunction.isType(type, this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/length.html">length</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">length</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.length(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/lessequal.html">lessEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessEqual(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessEqual(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessEqual(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessEqual(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessEqual(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessEqual(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessEqual(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessEqual(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessEqual(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.lessEqual(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/lessthan.html">lessThan</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessThan(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessThan(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessThan(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessThan(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessThan(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessThan(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessThan(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessThan(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lessThan</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$lessThan(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.lessThan(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/maximum.html">maximum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">maximum</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$maximum(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a></code>
+<p>Return aggregate transformation item with this query value and 'maximum' aggregate method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/minimum.html">minimum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">minimum</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$minimum(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a></code>
+<p>Return aggregate transformation item with this query value and 'minimum' aggregate method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/minute.html">minute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">minute</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.minute(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/modulo.html">modulo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">modulo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$modulo(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">modulo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$modulo(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">modulo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$modulo(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">modulo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$modulo(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">modulo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$modulo(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">modulo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$modulo(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">modulo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$modulo(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryOperator.add(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/month.html">month</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">month</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.month(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/multiply.html">multiply</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$multiply(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$multiply(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$multiply(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$multiply(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$multiply(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$multiply(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">multiply</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$multiply(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryOperator.add(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/negate.html">negate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">negate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryOperator.negate(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/notequal.html">notEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$notEqual(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$notEqual(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$notEqual(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$notEqual(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$notEqual(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$notEqual(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$notEqual(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$notEqual(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$notEqual(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.notEqual(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/notnull.html">notNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryOperator.notEqual(this, null)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/round.html">round</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">round</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.round(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/second.html">second</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">second</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.second(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/startswith.html">startsWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">startsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$startsWith(kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">startsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$startsWith(com.sap.cloud.mobile.odata.DataValue)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return <code>QueryFunction.startsWith(this, text)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/substring.html">substring</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">substring</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$substring(kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">substring</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$substring(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$substring(kotlin.Int, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">substring</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$substring(com.sap.cloud.mobile.odata.DataValue)/start">start</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>See substring(DataValue, DataValue).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">substring</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$substring(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/start">start</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$substring(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/length">length</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.substring(this, start, length)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/subtract.html">subtract</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$subtract(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$subtract(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$subtract(java.math.BigInteger)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigInteger</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$subtract(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$subtract(kotlin.Float)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$subtract(kotlin.Double)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">subtract</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$subtract(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryOperator.add(this, value)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/sum.html">sum</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sum</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$sum(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a></code>
+<p>Return aggregate transformation item with this query value and 'sum' aggregate method.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/time.html">time</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">time</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.time(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/tolower.html">toLower</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toLower</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.toLower(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="../queryvalue/getdatatype.html">QueryValue.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/totaloffsetminutes.html">totalOffsetMinutes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">totalOffsetMinutes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.totalOffsetMinutes(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/toupper.html">toUpper</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toUpper</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.toUpper(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/trim.html">trim</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">trim</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.trim(this)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/unwrap.html">unwrap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">unwrap</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Return the path, property, constant value or query function/operator call which is wrapped by this object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/wrap.html">wrap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">wrap</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryValue$wrap(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>value</code> wrapped so as to allow cascading query function/operator calls.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryvalue/year.html">year</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">year</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return <code>QueryFunction.year(this)</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../aggregatevalue/index.html">AggregateValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> aggregate transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../amounttransform/index.html">AmountTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AmountTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Abstract base class for top and bottom transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../expandtransform/index.html">ExpandTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExpandTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Represents an expand transform item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../filtertransform/index.html">FilterTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FilterTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Represents a filter transform item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../grouptransform/index.html">GroupTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GroupTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Represents a group transform item.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

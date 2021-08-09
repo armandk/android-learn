@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BasicAuthDialogAuthenticator - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.authentication</a>&nbsp;/&nbsp;<a href="./index.html">BasicAuthDialogAuthenticator</a><br/>
+<br/>
+<h1>BasicAuthDialogAuthenticator</h1>
+<a name="com.sap.cloud.mobile.foundation.authentication.BasicAuthDialogAuthenticator"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BasicAuthDialogAuthenticator</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Authenticator</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.authentication.BasicAuthDialogAuthenticator"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BasicAuthDialogAuthenticator</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Authenticator</span></code>
+<p>This class is an implementation of <code><a href="#">Authenticator</a></code> (see https://square.github.io/okhttp/3.x/okhttp/okhttp3/Authenticator.html) that gets credentials from the user via a dialog. A <code><a href="../basicauthcredentialstore/index.html">BasicAuthCredentialStore</a></code> is used to reuse credentials. The default <code><a href="../basicauthcredentialstore/index.html">BasicAuthCredentialStore</a></code> does not persist credentials across app restarts. <pre><code>OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
+  clientBuilder.authenticator(new BasicAuthDialogAuthenticator(basicAuthInMemoryStore));
+  OkHttpClient okHttpClient = clientBuilder.build();
+  
+  </code></pre></p>
+</BODY>
+</HTML>

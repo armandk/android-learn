@@ -1,0 +1,238 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GeometryPolygon - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">GeometryPolygon</a><br/>
+<br/>
+<h1>GeometryPolygon</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryPolygon</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>A sequence of geometry multi-points which represents a polygon.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">GeometryPolygon</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Constructor</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../geometryvalue/default_srid.html">DEFAULT_SRID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DEFAULT_SRID</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Default Spatial Reference System Identifier for Geometry Values (0).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="castoptional.html">castOptional</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castOptional</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryPolygon$castOptional(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeometryPolygon</span></a><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="castrequired.html">castRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castRequired</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryPolygon$castRequired(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeometryPolygon</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatwkt.html">formatWKT</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">formatWKT</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See formatWKT(boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">formatWKT</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryPolygon$formatWKT(kotlin.Boolean)/sridRequired">sridRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return this value formatted in OData WKT (well-known text) format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcoordinates.html">getCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCoordinates</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../polygoncoordinates/index.html"><span class="identifier">PolygonCoordinates</span></a></code>
+<p>Return the coordinates of this value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type of the wrapped value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryPolygon$parse(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeometryPolygon</span></a></code>
+<p>Return a value parsed from text in <a href="http://geojson.org">GeoJSON</a> format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsewkt.html">parseWKT</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseWKT</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryPolygon$parseWKT(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeometryPolygon</span></a></code>
+<p>See parseWKT(String, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseWKT</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryPolygon$parseWKT(kotlin.String, kotlin.Boolean)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryPolygon$parseWKT(kotlin.String, kotlin.Boolean)/sridRequired">sridRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeometryPolygon</span></a></code>
+<p>Return a value parsed from OData WKT (well-known-text) format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcoordinates.html">setCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCoordinates</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryPolygon$setCoordinates(com.sap.cloud.mobile.odata.PolygonCoordinates)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../polygoncoordinates/index.html"><span class="identifier">PolygonCoordinates</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the coordinates of this value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../geometryvalue/getsrscode.html">getSrsCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSrsCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return spatial Reference System Code, e.g. <a href="http://www.epsg.org/Geodetic.html">EPSG</a> SRID. Defaults to 0.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/getsrsname.html">getSrsName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSrsName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Spatial Reference System Name (optional).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/parseany.html">parseAny</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseAny</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$parseAny(kotlin.String, com.sap.cloud.mobile.odata.DataType)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$parseAny(kotlin.String, com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>Parse a geometry value from <a href="http://geojson.org">GeoJSON</a> format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/parseanywkt.html">parseAnyWKT</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseAnyWKT</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$parseAnyWKT(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>See parseAnyWKT(String, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseAnyWKT</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$parseAnyWKT(kotlin.String, kotlin.Boolean)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$parseAnyWKT(kotlin.String, kotlin.Boolean)/sridRequired">sridRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>Return a value parsed from OData WKT (well-known text) format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/setsrscode.html">setSrsCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSrsCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$setSrsCode(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set spatial Reference System Code, e.g. <a href="http://www.epsg.org/Geodetic.html">EPSG</a> SRID. Defaults to 0.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/setsrsname.html">setSrsName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSrsName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$setSrsName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set spatial Reference System Name (optional).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="../datavalue/getdatatype.html">GeometryValue.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/withlatitudelongitude.html">withLatitudeLongitude</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withLatitudeLongitude</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withLatitudeLongitude(kotlin.Double, kotlin.Double)/latitude">latitude</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withLatitudeLongitude(kotlin.Double, kotlin.Double)/longitude">longitude</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../geometrypoint/index.html"><span class="identifier">GeometryPoint</span></a></code>
+<p>Return 2D geometry point.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/withxy.html">withXY</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withXY</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXY(kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXY(kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../geometrypoint/index.html"><span class="identifier">GeometryPoint</span></a></code>
+<p>Return 2D geometry point.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/withxym.html">withXYM</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withXYM</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYM(kotlin.Double, kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYM(kotlin.Double, kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYM(kotlin.Double, kotlin.Double, kotlin.Double)/m">m</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../geometrypoint/index.html"><span class="identifier">GeometryPoint</span></a></code>
+<p>Return 2D geometry point with measure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/withxyz.html">withXYZ</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withXYZ</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYZ(kotlin.Double, kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYZ(kotlin.Double, kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYZ(kotlin.Double, kotlin.Double, kotlin.Double)/z">z</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../geometrypoint/index.html"><span class="identifier">GeometryPoint</span></a></code>
+<p>Return 3D geometry point.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geometryvalue/withxyzm.html">withXYZM</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withXYZM</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYZM(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/x">x</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYZM(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/y">y</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYZM(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/z">z</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeometryValue$withXYZM(kotlin.Double, kotlin.Double, kotlin.Double, kotlin.Double)/m">m</span><span class="symbol">:</span>&nbsp;<span class="identifier">Double</span><span class="symbol">)</span><span class="symbol">: </span><a href="../geometrypoint/index.html"><span class="identifier">GeometryPoint</span></a></code>
+<p>Return 3D geometry point with measure.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

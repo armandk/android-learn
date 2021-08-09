@@ -1,0 +1,632 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataContext - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DataContext</a><br/>
+<br/>
+<h1>DataContext</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataContext</span></code>
+<p>For internal use only.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="compactitem/index.html">CompactItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CompactItem</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="compactitemlist/index.html">CompactItemList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CompactItemList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="compactitem/index.html"><span class="identifier">DataContext.CompactItem</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DataContext</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$<init>(com.sap.cloud.mobile.odata.csdl.CsdlDocument)/csdl">csdl</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">)</span></code>
+<p>Construct a new data context.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="changes_only.html">CHANGES_ONLY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">CHANGES_ONLY</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that only changed properties should be included.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="full_metadata.html">FULL_METADATA</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">FULL_METADATA</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that full metadata is required.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ieee_754_compatible.html">IEEE_754_COMPATIBLE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IEEE_754_COMPATIBLE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting or parsing a value, this flag is used to indicate that decimal/long values will be formatted as JSON strings rather than JSON numbers. This avoids overflow or loss of precision for clients that parse all JSON numbers as IEEE double precision values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="in_query_string.html">IN_QUERY_STRING</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IN_QUERY_STRING</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate formatting of the query string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="in_request_path.html">IN_REQUEST_PATH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IN_REQUEST_PATH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate formatting of the request path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is_delta_response.html">IS_DELTA_RESPONSE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IS_DELTA_RESPONSE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate formatting of a delta response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is_offline_download.html">IS_OFFLINE_DOWNLOAD</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IS_OFFLINE_DOWNLOAD</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Used for optimization of offline download response parsing.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="is_request_payload.html">IS_REQUEST_PAYLOAD</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IS_REQUEST_PAYLOAD</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, specifies that the content is for request payload (as opposed to response payload).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iso_8601_compatible.html">ISO_8601_COMPATIBLE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ISO_8601_COMPATIBLE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting or parsing a date/time value, this flag is used to indicate that values will be formatted in ISO 8601 compatible format. This may override the usual encoding for the OData version (e.g. overriding OData 2.0 Verbose JSON 'tick' format).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="key_and_changes.html">KEY_AND_CHANGES</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_AND_CHANGES</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that key and changed properties should be included.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="key_only.html">KEY_ONLY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_ONLY</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that only key properties should be included.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="receive_from_client.html">RECEIVE_FROM_CLIENT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RECEIVE_FROM_CLIENT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When parsing a value, this flag is used to indicate that the value is to be received from client by server.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="requires_id.html">REQUIRES_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">REQUIRES_ID</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that entity id is required.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="requires_type.html">REQUIRES_TYPE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">REQUIRES_TYPE</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that type metadata is required.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sap_compact_json.html">SAP_COMPACT_JSON</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">SAP_COMPACT_JSON</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Used for optimization of JSON response formatting, enabling clients to parse responses more efficiently.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sap_entity_state_annotations.html">SAP_ENTITY_STATE_ANNOTATIONS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">SAP_ENTITY_STATE_ANNOTATIONS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that "@sap.*" annotations are included to distinguish entity states.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sap_old_entity_values.html">SAP_OLD_ENTITY_VALUES</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">SAP_OLD_ENTITY_VALUES</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that old entity state should be included for modified entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="send_to_client.html">SEND_TO_CLIENT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">SEND_TO_CLIENT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that the value is to be sent from server to client.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="supports_alias.html">SUPPORTS_ALIAS</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">SUPPORTS_ALIAS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate that a parameter alias may be used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="value_to_string.html">VALUE_TO_STRING</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">VALUE_TO_STRING</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting a value, this flag is used to indicate conversion to string format for display, not for OData interchange.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="zoneless_date_time.html">ZONELESS_DATE_TIME</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ZONELESS_DATE_TIME</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>When formatting or parsing a date/time value, this flag is used to indicate that values will be formatted in ISO 8601 compatible format without zone offset. This may override the usual encoding for the OData version (applying even to DataType.GLOBAL_DATE_TIME).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="findactualcomplex.html">findActualComplex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">findActualComplex</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$findActualComplex(com.sap.cloud.mobile.odata.ComplexType, kotlin.String)/formalType">formalType</span><span class="symbol">:</span>&nbsp;<a href="../complextype/index.html"><span class="identifier">ComplexType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$findActualComplex(com.sap.cloud.mobile.odata.ComplexType, kotlin.String)/typeName">typeName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complextype/index.html"><span class="identifier">ComplexType</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The actual complex type, which may be a subtype of the formal complex type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="findactualentity.html">findActualEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">findActualEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$findActualEntity(com.sap.cloud.mobile.odata.EntityType, kotlin.String)/formalType">formalType</span><span class="symbol">:</span>&nbsp;<a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$findActualEntity(com.sap.cloud.mobile.odata.EntityType, kotlin.String)/typeName">typeName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The actual entity type, which may be a subtype of the formal entity type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="forconversiontostring.html">forConversionToString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">forConversionToString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataContext</span></a></code>
+<p>Return a data context which can be used to convert structured (complex/entity) values to strings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getaliasvalues.html">getAliasValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAliasValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavaluemap/index.html"><span class="identifier">DataValueMap</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Alias values needed for query formatting with special characters.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getavoidinpaths.html">getAvoidInPaths</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAvoidInPaths</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Characters that should be avoided in request paths.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getbindoptions.html">getBindOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBindOptions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return bind options: a bit mask of flags for binding, formatting and parsing.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcompactitems.html">getCompactItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCompactItems</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="compactitemlist/index.html"><span class="identifier">DataContext.CompactItemList</span></a></code>
+<p>Return for internal use (with Compact JSON).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcomplextype.html">getComplexType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComplexType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$getComplexType(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../complextype/index.html"><span class="identifier">ComplexType</span></a></code>
+<p>Return the complex type with the specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcsdldocument.html">getCsdlDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getCsdlDocument</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a></code>
+<p>Return CSDL document (OData service metadata).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatamethod.html">getDataMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$getDataMethod(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a></code>
+<p>Return the data method with the specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdataquery.html">getDataQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataQuery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Data query for evaluation of select items, or <code>null</code> if all properties should be selected.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getderivedtype.html">getDerivedType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDerivedType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Derived type for expected query results, or <code>null</code> if no derived type is expected.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentityset.html">getEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntitySet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$getEntitySet(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityset/index.html"><span class="identifier">EntitySet</span></a></code>
+<p>Return the entity set with the specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitytype.html">getEntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$getEntityType(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitytype/index.html"><span class="identifier">EntityType</span></a></code>
+<p>Return the entity type with the specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoptionaldatamethod.html">getOptionalDataMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptionalDataMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$getOptionalDataMethod(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The data method with the specified name, or <code>null</code> if no such data method exists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoptionalentityset.html">getOptionalEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptionalEntitySet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$getOptionalEntitySet(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The entity set with the specified name, or <code>null</code> if no such entity set exists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getserviceroot.html">getServiceRoot</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getServiceRoot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the service root URL for the OData service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getversioncode.html">getVersionCode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getVersionCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data version.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasmetadata.html">hasMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this context has metadata.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasstructuretype.html">hasStructureType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasStructureType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$hasStructureType(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the metadata of this context has a structure (complex/entity) type with the specified <code>name</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="inferentityset.html">inferEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">inferEntitySet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$inferEntitySet(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>If this context has no <em>expected entity set</em>, then infer it from the context URL (and push it).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="inrequest.html">inRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">inRequest</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataContext</span></a></code>
+<p>Change the <code><a href="getbindoptions.html">DataContext.bindOptions</a></code> for this context to include IS_REQUEST_PAYLOAD.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="inresponse.html">inResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">inResponse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataContext</span></a></code>
+<p>Change the <code><a href="getbindoptions.html">DataContext.bindOptions</a></code> for this context to exclude IS_REQUEST_PAYLOAD.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="makerelative.html">makeRelative</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">makeRelative</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$makeRelative(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The <code>url</code> parameter, converted from an absolute URL to a relative URL (if possible), otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mayberelative.html">maybeRelative</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">maybeRelative</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$maybeRelative(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The <code>url</code> parameter, converted from an absolute URL to a relative URL (if possible), otherwise <code>url</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="popexpected.html">popExpected</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">popExpected</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Pop the top <em>expected entity set</em> from the context stack.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="preparetoformat.html">prepareToFormat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">prepareToFormat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$prepareToFormat(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="preparetopatch.html">prepareToPatch</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">prepareToPatch</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$prepareToPatch(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$prepareToPatch(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/old">old</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pushexpected.html">pushExpected</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pushExpected</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$pushExpected(com.sap.cloud.mobile.odata.EntitySet)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See pushExpected(EntitySet, StructureType).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">pushExpected</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$pushExpected(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$pushExpected(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType)/derivedType">derivedType</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Push an expected entity set onto the context stack.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resolveanytype.html">resolveAnyType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">resolveAnyType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$resolveAnyType(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The data type with the specified name, or <code>null</code> if no such type exists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setaliasvalues.html">setAliasValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAliasValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$setAliasValues(com.sap.cloud.mobile.odata.DataValueMap)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavaluemap/index.html"><span class="identifier">DataValueMap</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set alias values needed for query formatting with special characters.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setavoidinpaths.html">setAvoidInPaths</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAvoidInPaths</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$setAvoidInPaths(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set characters that should be avoided in request paths.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setbindoptions.html">setBindOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBindOptions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$setBindOptions(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set bind options: a bit mask of flags for binding, formatting and parsing.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcompactitems.html">setCompactItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCompactItems</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$setCompactItems(com.sap.cloud.mobile.odata.DataContext.CompactItemList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="compactitemlist/index.html"><span class="identifier">DataContext.CompactItemList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set for internal use (with Compact JSON).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcsdldocument.html">setCsdlDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setCsdlDocument</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$setCsdlDocument(com.sap.cloud.mobile.odata.csdl.CsdlDocument)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set CSDL document (OData service metadata).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdataquery.html">setDataQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDataQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$setDataQuery(com.sap.cloud.mobile.odata.DataQuery)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set data query for evaluation of select items, or <code>null</code> if all properties should be selected.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setderivedtype.html">setDerivedType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDerivedType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$setDerivedType(com.sap.cloud.mobile.odata.StructureType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set derived type for expected query results, or <code>null</code> if no derived type is expected.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setversioncode.html">setVersionCode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setVersionCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$setVersionCode(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set data version.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="topexpected.html">topExpected</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">topExpected</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../expecteditem/index.html"><span class="identifier">ExpectedItem</span></a></code>
+<p>Return the top <em>expected item</em> from the context stack, or an item with <code><a href="../entityset/undefined.html">EntitySet.undefined</a></code> if the stack is empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withexpected.html">withExpected</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withExpected</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$withExpected(com.sap.cloud.mobile.odata.EntitySet)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataContext</span></a></code>
+<p>See withExpected(EntitySet, StructureType).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withExpected</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$withExpected(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$withExpected(com.sap.cloud.mobile.odata.EntitySet, com.sap.cloud.mobile.odata.StructureType)/derivedType">derivedType</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataContext</span></a></code>
+<p>Push an expected entity set onto the context stack.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withoptions.html">withOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withOptions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$withOptions(kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataContext</span></a></code>
+<p>Change the <code><a href="getbindoptions.html">DataContext.bindOptions</a></code> for this context.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withversion.html">withVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withVersion</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataContext$withVersion(kotlin.Int)/version">version</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataContext</span></a></code>
+<p>Change the <code><a href="getversioncode.html">DataContext.versionCode</a></code> for this context.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

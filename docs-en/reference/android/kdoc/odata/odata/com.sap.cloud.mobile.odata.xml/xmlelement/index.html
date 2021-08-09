@@ -1,0 +1,465 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XmlElement - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.xml</a>&nbsp;/&nbsp;<a href="./index.html">XmlElement</a><br/>
+<br/>
+<h1>XmlElement</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlElement</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../xmlnode/index.html"><span class="identifier">XmlNode</span></a></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> element node.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">XmlElement</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> element node.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../xmlnode/type_comment.html">TYPE_COMMENT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_COMMENT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Node type constant for comment nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmlnode/type_element.html">TYPE_ELEMENT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_ELEMENT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Node type constant for element nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmlnode/type_processing_instruction.html">TYPE_PROCESSING_INSTRUCTION</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_PROCESSING_INSTRUCTION</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Node type constant for processing instruction nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../xmlnode/type_text.html">TYPE_TEXT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_TEXT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Node type constant for text nodes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="addattribute.html">addAttribute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAttribute</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$addAttribute(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$addAttribute(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Add an attribute to this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addattributewithqname.html">addAttributeWithQName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAttributeWithQName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$addAttributeWithQName(com.sap.cloud.mobile.odata.xml.XmlName, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="../xmlname/index.html"><span class="identifier">XmlName</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$addAttributeWithQName(com.sap.cloud.mobile.odata.xml.XmlName, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Add an attribute to this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addchild.html">addChild</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addChild</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$addChild(com.sap.cloud.mobile.odata.xml.XmlNode)/child">child</span><span class="symbol">:</span>&nbsp;<a href="../xmlnode/index.html"><span class="identifier">XmlNode</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Add a child node to this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addcomment.html">addComment</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addComment</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$addComment(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Add a comment node to this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addelement.html">addElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$addElement(com.sap.cloud.mobile.odata.xml.XmlElement)/child">child</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">XmlElement</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Add an element node to this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addelements.html">addElements</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addElements</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$addElements(com.sap.cloud.mobile.odata.xml.XmlElementList)/elements">elements</span><span class="symbol">:</span>&nbsp;<a href="../xmlelementlist/index.html"><span class="identifier">XmlElementList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Add a list of elements to this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addtext.html">addText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$addText(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Add a text node to this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="appendto.html">appendTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">appendTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$appendTo(com.sap.cloud.mobile.odata.core.CharBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/charbuffer/index.html"><span class="identifier">CharBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See appendTo(CharBuffer, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">appendTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$appendTo(com.sap.cloud.mobile.odata.core.CharBuffer, kotlin.Int)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/charbuffer/index.html"><span class="identifier">CharBuffer</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$appendTo(com.sap.cloud.mobile.odata.core.CharBuffer, kotlin.Int)/indent">indent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Append the textual representation of this element to a buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="elementsnamed.html">elementsNamed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">elementsNamed</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$elementsNamed(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelementlist/index.html"><span class="identifier">XmlElementList</span></a></code>
+<p>Lookup all child elements with a specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getattribute.html">getAttribute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAttribute</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$getAttribute(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Lookup the value for the attribute with a specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getattributes.html">getAttributes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAttributes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlattributelist/index.html"><span class="identifier">XmlAttributeList</span></a></code>
+<p>Return list of attributes for this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getchildnodes.html">getChildNodes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getChildNodes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlnodelist/index.html"><span class="identifier">XmlNodeList</span></a></code>
+<p>Return list of child nodes for this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcomments.html">getComments</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getComments</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlcommentlist/index.html"><span class="identifier">XmlCommentList</span></a></code>
+<p>Return a list of the comment nodes in this element. Note: the list is recalculated every time this property is accessed. For best performance, callers are advised to save the resulting value if it will be used multiple times.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getelement.html">getElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$getElement(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a><span class="symbol">?</span></code>
+<p>Lookup first child element with a specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getelements.html">getElements</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getElements</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../xmlelementlist/index.html"><span class="identifier">XmlElementList</span></a></code>
+<p>Return a list of the element nodes in this element. Note: the list is recalculated every time this property is accessed. For best performance, callers are advised to save the resulting value if it will be used multiple times.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlinenumber.html">getLineNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLineNumber</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return line number (starting at 1) if this element was parsed from a file. Otherwise zero.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlocalname.html">getLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLocalName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return local element name, without namespace prefix, e.g. "MyElement".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return element name, possibly qualified by namespace prefix, e.g. "MyElement" or "myns:MyElement".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnamespaceuri.html">getNamespaceURI</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNamespaceURI</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Namespace URI, if known. Will not be valid unless <code><a href="resolvenamespaces.html">XmlElement.resolveNamespaces</a></code> has been called for the element hierarchy containing this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getprefix.html">getPrefix</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPrefix</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Optional namespace prefix, e.g. "myns" or <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequiredattribute.html">getRequiredAttribute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredAttribute</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$getRequiredAttribute(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Lookup the value for the attribute with a specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequiredelement.html">getRequiredElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$getRequiredElement(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Lookup first child element with a specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsourcefile.html">getSourceFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceFile</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Source file name (if available). Otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettext.html">getText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a combination of all the text nodes in this element. Note: the text is recalculated every time this property is accessed. For best performance, callers are advised to save the resulting value if it will be used multiple times.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return XmlNode.TYPE_ELEMENT.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasprefix.html">hasPrefix</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasPrefix</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is <code><a href="getprefix.html">XmlElement.prefix</a></code> non-null?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$parse(kotlin.String)/xml">xml</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Parse a string to an element. Equivalent to <code>parseMixed(xml, false)</code></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parsemixed.html">parseMixed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseMixed</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$parseMixed(kotlin.String)/xml">xml</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>See parseMixed(String, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseMixed</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$parseMixed(kotlin.String, kotlin.Boolean)/xml">xml</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$parseMixed(kotlin.String, kotlin.Boolean)/mixed">mixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Parse a string to an element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removeattribute.html">removeAttribute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeAttribute</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$removeAttribute(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove the value for the attribute with a specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="resolvenamespaces.html">resolveNamespaces</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">resolveNamespaces</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Traverse the element hierachy starting at this element, ensuring that every node has the <code><a href="getnamespaceuri.html">XmlElement.namespaceURI</a></code> set according to the "xmlns" attributes and namespace prefixes encountered in the nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setattribute.html">setAttribute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAttribute</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setAttribute(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setAttribute(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Set an attribute of this element (replace attribute value if the attribute is already defined, otherwise add the attribute).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setattributes.html">setAttributes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAttributes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setAttributes(com.sap.cloud.mobile.odata.xml.XmlAttributeList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../xmlattributelist/index.html"><span class="identifier">XmlAttributeList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set list of attributes for this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setattributewithqname.html">setAttributeWithQName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAttributeWithQName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setAttributeWithQName(com.sap.cloud.mobile.odata.xml.XmlName, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="../xmlname/index.html"><span class="identifier">XmlName</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setAttributeWithQName(com.sap.cloud.mobile.odata.xml.XmlName, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Set an attribute of this element (replace attribute value if the attribute is already defined, otherwise add the attribute).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setchildnodes.html">setChildNodes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setChildNodes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setChildNodes(com.sap.cloud.mobile.odata.xml.XmlNodeList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../xmlnodelist/index.html"><span class="identifier">XmlNodeList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set list of child nodes for this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlinenumber.html">setLineNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLineNumber</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setLineNumber(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set line number (starting at 1) if this element was parsed from a file. Otherwise zero.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlocalname.html">setLocalName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLocalName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setLocalName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set local element name, without namespace prefix, e.g. "MyElement".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setname.html">setName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set element name, possibly qualified by namespace prefix, e.g. "MyElement" or "myns:MyElement".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnamespaceuri.html">setNamespaceURI</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNamespaceURI</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setNamespaceURI(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set namespace URI, if known. Will not be valid unless <code><a href="resolvenamespaces.html">XmlElement.resolveNamespaces</a></code> has been called for the element hierarchy containing this element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setprefix.html">setPrefix</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPrefix</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setPrefix(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optional namespace prefix, e.g. "myns" or <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsourcefile.html">setSourceFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceFile</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$setSourceFile(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source file name (if available). Otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the element, without an XML declaration.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withname.html">withName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$withName(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Convenience function for constructing an element node with specified name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withqname.html">withQName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withQName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlElement$withQName(com.sap.cloud.mobile.odata.xml.XmlName)/name">name</span><span class="symbol">:</span>&nbsp;<a href="../xmlname/index.html"><span class="identifier">XmlName</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">XmlElement</span></a></code>
+<p>Convenience function for constructing an element node with specified name.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

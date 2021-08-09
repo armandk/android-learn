@@ -1,0 +1,199 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataException - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DataException</a><br/>
+<br/>
+<h1>DataException</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/exceptionbase/index.html"><span class="identifier">ExceptionBase</span></a></code>
+<p>Abstract base class for data exceptions.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DataException</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataException$<init>(kotlin.String, kotlin.Throwable)/message">message</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataException$<init>(kotlin.String, kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<span class="identifier">Throwable</span><span class="symbol">?</span><span class="symbol">)</span></code><code><span class="identifier">DataException</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Default constructor.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.core/exceptionbase/cause.html">cause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">cause</span><span class="symbol">: </span><span class="identifier">RuntimeException</span><span class="symbol">?</span></code>
+<p>Return (nullable) Root cause of this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.core/exceptionbase/message.html">message</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">message</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Message text for this exception.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getsafemessage.html">getSafeMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSafeMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return can the <code>message</code> property be safely delivered to untrusted clients.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="safe.html">safe</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">safe</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>Mark this exception as having a message, that can be safely delivered to untrusted clients.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsafemessage.html">setSafeMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSafeMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataException$setSafeMessage(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set can the <code>message</code> property be safely delivered to untrusted clients.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.core/exceptionbase/setcause.html">setCause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCause</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ExceptionBase$setCause(java.lang.RuntimeException)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set root cause of this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.core/exceptionbase/setmessage.html">setMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ExceptionBase$setMessage(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set message text for this exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata.core/exceptionbase/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../dataformatexception/index.html">DataFormatException</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataFormatException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when data does not match the expected format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datanetworkexception/index.html">DataNetworkException</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataNetworkException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a request fails due to a data network issue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../dataqueryexception/index.html">DataQueryException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataQueryException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a query cannot be parsed or evaluated.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../dataschemaexception/index.html">DataSchemaException</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataSchemaException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a problem is detected with a data schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../dataserviceexception/index.html">DataServiceException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataServiceException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a <code>DataService</code> request fails due to a data service issue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datastorageexception/index.html">DataStorageException</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataStorageException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a <code>DataService</code> request fails due to a data storage issue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../datastreamexception/index.html">DataStreamException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataStreamException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../queryresultexception/index.html">QueryResultException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryResultException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a query result cannot be converted to the expected type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../requestcancelledexception/index.html">RequestCancelledException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RequestCancelledException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when an asynchronous request is cancelled.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

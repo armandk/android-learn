@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ReadWriteMutex.<init> - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="index.html">ReadWriteMutex</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.odata.core.ReadWriteMutex$&lt;init&gt;()"></a>
+<code><span class="identifier">ReadWriteMutex</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Allows the implementation of concurrent access for read-only operations, while write operations require exclusive access.</p>
+ See Also: 
+<p><a href="https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock">Readers-writer lock</a>.</p>
+  Note: this implementation is not reentrant. If a thread tries to acquire a lock on this mutex while already holding a lock, the thread will hang.
+</BODY>
+</HTML>

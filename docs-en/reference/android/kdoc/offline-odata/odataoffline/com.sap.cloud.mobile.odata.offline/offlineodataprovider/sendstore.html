@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.sendStore - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./sendstore.html">sendStore</a><br/>
+<br/>
+<h1>sendStore</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">sendStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sends the Offline OData store to sever. </p>
+<p> Example Usage: </p>
+<pre><code>// Send unecrypted store asynchronously
+      offlineODataProvider.sendStore(() -&gt; logger.info("Send store completed successfully."),
+                                     (error) -&gt; logger.error("Exception encountered in offlineOData send store:" + error.getMessage()));
+     
+      
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="successHandler"></a>
+<code>successHandler</code> - <span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">:</span> a success callback function.</p>
+<p><a name="failureHandler"></a>
+<code>failureHandler</code> - <span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">:</span> a failure callback function.</p>
+<p><a name="note"></a>
+<code>note</code> - a note which is not exceeding 480 characters long.</p>
+<p><strong>See Also</strong><br/>
+<a href="../offlineodatadelegate/index.html">OfflineODataDelegate</a>com.sap.cloud.mobile.odata.core.Action0com.sap.cloud.mobile.odata.core.Action1</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(kotlin.String, Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">sendStore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(kotlin.String, Action0, Action1)/note">note</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(kotlin.String, Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$sendStore(kotlin.String, Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+</BODY>
+</HTML>

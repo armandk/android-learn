@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataServiceOptions.setSupportsBind - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataServiceOptions</a>&nbsp;/&nbsp;<a href="./setsupportsbind.html">setSupportsBind</a><br/>
+<br/>
+<h1>setSupportsBind</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataServiceOptions$setSupportsBind(kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><span class="identifier">setSupportsBind</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataServiceOptions$setSupportsBind(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines true if service supports bind operation. </p>
+<p> Whether or not the service supports bind operations. If the service does not support bind operations the following will occur if a bind operation is used: </p>
+<p> 1) If the bind operation is included in a dependent entity for a relationship that specifies a referential constraint, the bind operation will be replaced by setting the dependent properties directly. </p>
+<p> 2) If the bind operation is included in a principal entity for a relationship that specifies a referential constraint, the request will be rejected with an error. </p>
+<p> 3) If the bind operation is included in an entity for a relationship that does not specify a referential constraint, the relationship will be created locally but the bind will be omitted from the request that is sent to the OData back end. </p>
+<p> By default, the value is true, the service supports bind operation. </p>
+<p> Note: After opening OfflineODataProvider, changing value of SupportBind won't take effect; to close and open again, OfflineODataProvider will use new value.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> true if service supports bind operation.</p>
+</BODY>
+</HTML>

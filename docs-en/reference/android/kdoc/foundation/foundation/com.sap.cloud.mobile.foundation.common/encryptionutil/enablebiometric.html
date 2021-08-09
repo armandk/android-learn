@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EncryptionUtil.enableBiometric - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">EncryptionUtil</a>&nbsp;/&nbsp;<a href="./enablebiometric.html">enableBiometric</a><br/>
+<br/>
+<h1>enableBiometric</h1>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$enableBiometric(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">enableBiometric</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$enableBiometric(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$enableBiometric(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/passcode">passcode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$enableBiometric(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/cipher">cipher</span><span class="symbol">:</span>&nbsp;<span class="identifier">Cipher</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>When in NO_PASSCODE or PASSCODE_ONLY state, re-encrypted the encryption key with the passcode and biometric authentication.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="passcode"></a>
+<code>passcode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the existing passcode when in PASSCODE_ONLY state or a new passcode when in NO_PASSCODE state</p>
+<p><a name="cipher"></a>
+<code>cipher</code> - <span class="identifier">Cipher</span><span class="symbol">:</span> the cipher returned from <code><a href="getcipher.html">#getCipher(String)</a></code></p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is PASSCODE_BIOMETRIC already.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the passcode is incorrect when the current state is PASSCODE_ONLY or if encryption/decryption error occurs.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$enableBiometric(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">enableBiometric</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$enableBiometric(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$enableBiometric(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/passcode">passcode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$enableBiometric(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/cipher">cipher</span><span class="symbol">:</span>&nbsp;<span class="identifier">Cipher</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>When in NO_PASSCODE or PASSCODE_ONLY state, re-encrypted the encryption key with the passcode and biometric authentication.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="passcode"></a>
+<code>passcode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the existing passcode when in PASSCODE_ONLY state or a new passcode when in NO_PASSCODE state</p>
+<p><a name="cipher"></a>
+<code>cipher</code> - <span class="identifier">Cipher</span><span class="symbol">:</span> the cipher returned from <code><a href="getcipher.html">#getCipher(String)</a></code></p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is PASSCODE_BIOMETRIC already.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the passcode is incorrect when the current state is PASSCODE_ONLY or if encryption/decryption error occurs.</p>
+</BODY>
+</HTML>

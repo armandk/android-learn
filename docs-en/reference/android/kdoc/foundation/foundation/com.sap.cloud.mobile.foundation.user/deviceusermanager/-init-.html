@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DeviceUserManager.<init> - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.user</a>&nbsp;/&nbsp;<a href="index.html">DeviceUserManager</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.foundation.user.DeviceUserManager$&lt;init&gt;(android.content.Context)"></a>
+<code><span class="identifier">DeviceUserManager</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.DeviceUserManager$<init>(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span></code>
+<p>Represents the device user manager to manage the user information saved on the device.</p>
+<p>Most of the operations in this service will automatically open the store before the operation
+and close the store afterwards.</p>
+<p>For <a href="getonboardedusers.html">getOnBoardedUsers</a>, it will not close after the operation since it might be used in the paginated
+list and will be called multiple times.</p>
+<p>To save system resources, closing the store after being used is recommended, and the right time to
+close the store might be, for example, after onboarding or restore flow.</p>
+</BODY>
+</HTML>

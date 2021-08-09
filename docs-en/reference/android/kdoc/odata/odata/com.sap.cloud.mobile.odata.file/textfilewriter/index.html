@@ -1,0 +1,275 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TextFileWriter - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.file</a>&nbsp;/&nbsp;<a href="./index.html">TextFileWriter</a><br/>
+<br/>
+<h1>TextFileWriter</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TextFileWriter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code>
+<p>Class for buffered writing of text files (UTF-8 format).</p>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="append.html">append</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">append</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.file.TextFileWriter$append(kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TextFileWriter</span></a></code>
+<p>Open a text file for append access. Creates the file if it doesn't already exist.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Close the file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="flush.html">flush</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">flush</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Flush buffered contents to the file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="open.html">open</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">open</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.file.TextFileWriter$open(kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TextFileWriter</span></a></code>
+<p>Open a text file for write access. Recreates the file if already exists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withbuffersize.html">withBufferSize</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withBufferSize</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.file.TextFileWriter$withBufferSize(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">TextFileWriter</span></a></code>
+<p>Alter the buffer size. Should be called after <code><a href="append.html">TextFileWriter.append</a></code> / <code><a href="open.html">TextFileWriter.open</a></code>, but before writing content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writechar.html">writeChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeChar</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.file.TextFileWriter$writeChar(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write text content to the file. Text is converted to UTF-8 format for writing.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writefile.html">writeFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">writeFile</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.file.TextFileWriter$writeFile(kotlin.String, kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.file.TextFileWriter$writeFile(kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write a <code>file</code> to contain <code>text</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writelines.html">writeLines</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">writeLines</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.file.TextFileWriter$writeLines(kotlin.String, com.sap.cloud.mobile.odata.StringList)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.file.TextFileWriter$writeLines(kotlin.String, com.sap.cloud.mobile.odata.StringList)/lines">lines</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/stringlist/index.html"><span class="identifier">StringList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write the entire contents of <code>file</code> as a list of newline-terminated lines.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writestring.html">writeString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.file.TextFileWriter$writeString(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write text content to the file. Text is converted to UTF-8 format for writing.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/copyto.html">copyTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$copyTo(com.sap.cloud.mobile.odata.CharStream)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See copyTo(CharStream, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$copyTo(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$copyTo(com.sap.cloud.mobile.odata.CharStream, kotlin.Boolean)/closeTarget">closeTarget</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy all remaining text until the end of this stream into a target stream, then close this stream. Also propagate the <code><a href="../../com.sap.cloud.mobile.odata/streambase/getentitytag.html">CharStream.entityTag</a></code> and <code><a href="../../com.sap.cloud.mobile.odata/streambase/getmediatype.html">CharStream.mediaType</a></code> of this stream into the target stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/copytofile.html">copyToFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyToFile</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$copyToFile(kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy all remaining text until the end of this stream into a file, then close this stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/filewriter.html">fileWriter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fileWriter</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$fileWriter(kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code>
+<p>Return a stream that will write the contents of a text file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/fromfile.html">fromFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromFile</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$fromFile(kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code>
+<p>Return a stream that will read the contents of a text file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/frominput.html">fromInput</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromInput</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$fromInput(java.io.InputStream)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/fromstring.html">fromString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$fromString(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$fromString(kotlin.String, kotlin.Int)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$fromString(kotlin.String, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code>
+<p>See fromString(String, int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$fromString(kotlin.String, kotlin.Int, kotlin.Int)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$fromString(kotlin.String, kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$fromString(kotlin.String, kotlin.Int, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code>
+<p>Return a new stream for reading from a string value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/getcanundo.html">getCanUndo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCanUndo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does this stream support <code><a href="../../com.sap.cloud.mobile.odata/charstream/undoread.html">CharStream.undoRead</a></code>?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type with a <code><a href="../../com.sap.cloud.mobile.odata/datatype/getcode.html">DataType.code</a></code> of DataType.CHAR_STREAM.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/readandclose.html">readAndClose</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readAndClose</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Read all remaining text until the end of this stream, then close this stream. <em>Caution</em>: this function loads all stream content into memory at once. Consider reading a chunk-at-a-time in a loop, using <code><a href="../../com.sap.cloud.mobile.odata/charstream/readstring.html">CharStream.readString</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/readchar.html">readChar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readChar</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Read a single character (UTF-16 code unit) from this stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/readline.html">readLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readLine</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Read a line of text content from the stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/readstring.html">readString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>See readString(int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$readString(kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Read up to <code>length</code> characters from this stream (may read less, even if the end of stream is not reached).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/tobuffer.html">toBuffer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toBuffer</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$toBuffer(com.sap.cloud.mobile.odata.core.CharBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/charbuffer/index.html"><span class="identifier">CharBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code>
+<p>Return a new byte stream which writes to a provided buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="../../com.sap.cloud.mobile.odata/charstream/getdatatype.html">CharStream.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/undoread.html">undoRead</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">undoRead</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$undoRead(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Undo read of one character.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/withundo.html">withUndo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withUndo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code>
+<p>Return a wrapper (if needed) of this stream supporting <code><a href="../../com.sap.cloud.mobile.odata/charstream/undoread.html">CharStream.undoRead</a></code>, or this stream if it already supports undoRead.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/charstream/writeline.html">writeLine</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeLine</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.CharStream$writeLine(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write line content to the stream, followed by a newline character.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

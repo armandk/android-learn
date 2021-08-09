@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AppLifecycleCallbackHandler - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.authentication</a>&nbsp;/&nbsp;<a href="./index.html">AppLifecycleCallbackHandler</a><br/>
+<br/>
+<h1>AppLifecycleCallbackHandler</h1>
+<a name="com.sap.cloud.mobile.foundation.authentication.AppLifecycleCallbackHandler"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AppLifecycleCallbackHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ActivityLifecycleCallbacks</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.authentication.AppLifecycleCallbackHandler"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AppLifecycleCallbackHandler</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ActivityLifecycleCallbacks</span></code>
+<p>This class keeps track of the application's current activity. <strong>It is important to register this callback, otherwise the authentication interceptors will not be able to handle challenges properly!</strong> The recommended way to register this callback is by overriding android.app.Application and calling registerActivityLifecycleCallbacks from onCreate. <pre><code>
+ 
+  public class SampleApplication extends Application {
+  @Override
+  public void onCreate() {
+  super.onCreate();
+  registerActivityLifecycleCallbacks(AppLifecycleCallbackHandler.getInstance());
+  }
+  }
+  </code></pre></p>
+</BODY>
+</HTML>

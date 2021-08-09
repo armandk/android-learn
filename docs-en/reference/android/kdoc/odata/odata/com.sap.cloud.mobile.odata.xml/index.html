@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.odata.xml - odata</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">odata</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.odata.xml</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.odata.xml</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="xmlattribute/index.html">XmlAttribute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlAttribute</span></code>
+<p>Represents an XML attribute.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlattributelist/index.html">XmlAttributeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlAttributeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="xmlattribute/index.html"><span class="identifier">XmlAttribute</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="xmlattribute/index.html">com.sap.cloud.mobile.odata.xml.XmlAttribute</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlcomment/index.html">XmlComment</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlComment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="xmlnode/index.html"><span class="identifier">XmlNode</span></a></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> comment node.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlcommentlist/index.html">XmlCommentList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlCommentList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="xmlcomment/index.html"><span class="identifier">XmlComment</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="xmlcomment/index.html">com.sap.cloud.mobile.odata.xml.XmlComment</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlcompression/index.html">XmlCompression</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlCompression</span></code>
+<p>Compress an XML document by substituting element and attribute names with _N (where N &gt;= 0), and substituting attribute values with $N. Such compression introduces a compression dictionary at the start of the document containing the substitution names and values. A compressed document can often be parsed more efficiently than the original document (e.g. 3 times faster). Two XML processing instructions are added to the document to indicate the compression dictionary, e.g.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmldocument/index.html">XmlDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlDocument</span></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlduration/index.html">XmlDuration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlDuration</span></code>
+<p>Represents an <a href="http://www.w3.org/TR/xmlschema11-2/#duration">XML Schema duration</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlelement/index.html">XmlElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlElement</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="xmlnode/index.html"><span class="identifier">XmlNode</span></a></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> element node.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlelementlist/index.html">XmlElementList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlElementList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="xmlelement/index.html"><span class="identifier">XmlElement</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="xmlelement/index.html">com.sap.cloud.mobile.odata.xml.XmlElement</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlelementmap/index.html">XmlElementMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlElementMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>A map from key type <code>string</code> to value type <code><a href="xmlelement/index.html">com.sap.cloud.mobile.odata.xml.XmlElement</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlname/index.html">XmlName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlName</span></code>
+<p>An XML name, with optional namespace prefix, e.g. "myns:MyElement". @throws (none)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlnamelist/index.html">XmlNameList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlNameList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="xmlname/index.html"><span class="identifier">XmlName</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="xmlname/index.html">com.sap.cloud.mobile.odata.xml.XmlName</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlnode/index.html">XmlNode</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">XmlNode</span></code>
+<p>Abstract base class for <a href="http://en.wikipedia.org/wiki/XML">XML</a> nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlnodelist/index.html">XmlNodeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlNodeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="xmlnode/index.html"><span class="identifier">XmlNode</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="xmlnode/index.html">com.sap.cloud.mobile.odata.xml.XmlNode</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlparser/index.html">XmlParser</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlParser</span></code>
+<p>Parser for <a href="http://en.wikipedia.org/wiki/XML">XML</a>. Supports parsing into an <code><a href="xmldocument/index.html">com.sap.cloud.mobile.odata.xml.XmlDocument</a></code> or <code><a href="xmlelement/index.html">com.sap.cloud.mobile.odata.xml.XmlElement</a></code>. Parsing options are <em>complete</em> (<code><a href="xmlparser/parsedocument.html">XmlParser.parseDocument</a></code>, <code><a href="xmlparser/static_parseelement.html">XmlParser.parseElement</a></code>) and <em>streamed</em> (<code><a href="xmlparser/startdocument.html">XmlParser.startDocument</a></code>, <code><a href="xmlparser/startelement.html">XmlParser.startElement</a></code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlpretty/index.html">XmlPretty</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">XmlPretty</span></code>
+<p>Utility functions for indented pretty-printing of XML documents and elements.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlprettytext/index.html">XmlPrettyText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlPrettyText</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="xmltext/index.html"><span class="identifier">XmlText</span></a></code>
+<p>Functions for pretty-printing XML text node content.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlprocessinginstruction/index.html">XmlProcessingInstruction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlProcessingInstruction</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="xmlnode/index.html"><span class="identifier">XmlNode</span></a></code>
+<p>Represents an XML processing instruction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmlprocessinginstructionlist/index.html">XmlProcessingInstructionList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlProcessingInstructionList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="xmlprocessinginstruction/index.html"><span class="identifier">XmlProcessingInstruction</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="xmlprocessinginstruction/index.html">com.sap.cloud.mobile.odata.xml.XmlProcessingInstruction</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="xmltext/index.html">XmlText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlText</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="xmlnode/index.html"><span class="identifier">XmlNode</span></a></code>
+<p>Represents an <a href="http://en.wikipedia.org/wiki/XML">XML</a> text node.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="xmlexception/index.html">XmlException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/dataformatexception/index.html"><span class="identifier">DataFormatException</span></a></code>
+<p>Exception thrown when an error occurs during the parsing of an XML document.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

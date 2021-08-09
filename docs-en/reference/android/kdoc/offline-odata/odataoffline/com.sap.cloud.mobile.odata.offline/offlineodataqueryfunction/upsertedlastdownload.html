@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataQueryFunction.upsertedLastDownload - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataQueryFunction</a>&nbsp;/&nbsp;<a href="./upsertedlastdownload.html">upsertedLastDownload</a><br/>
+<br/>
+<h1>upsertedLastDownload</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataQueryFunction$upsertedLastDownload()"></a>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upsertedLastDownload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">QueryFilter</span><span class="symbol">!</span></code>
+<p>The function creates a QueryFilter to check if an entity was upserted (inserted or updated) in the last download. </p>
+<p> Note that locally created or modified entities will return true for this function AFTER they have been uploaded and then subsequently downloaded. For example, if the app creates a new entity, performs an upload followed by a download and then includes sap.upsertedlastdownload in a query, the entity that app created will show up in the result. The reason for this is after a create or modification request is uploaded and then the affected entity is downloaded, the local version of the entity is replaced with the server version which may contain additional changes (for example, providing values for key properties).</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">QueryFilter</span><span class="symbol">!</span><span class="symbol">:</span> an application of the Offline OData "sap.upsertedlastdownload" function.</p>
+</BODY>
+</HTML>

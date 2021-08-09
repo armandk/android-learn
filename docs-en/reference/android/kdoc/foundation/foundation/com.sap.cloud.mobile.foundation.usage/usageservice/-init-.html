@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UsageService.<init> - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.usage</a>&nbsp;/&nbsp;<a href="index.html">UsageService</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageService$&lt;init&gt;(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)"></a>
+<code><span class="identifier">UsageService</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/autoSession">autoSession</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/autoUpload">autoUpload</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/recordCount">recordCount</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;1000<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/uploadAfterDays">uploadAfterDays</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.usage.UsageService$<init>(kotlin.Boolean, kotlin.Boolean, kotlin.Int, kotlin.Int, java.util.UUID)/storeName">storeName</span><span class="symbol">:</span>&nbsp;<span class="identifier">UUID</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Represents the facade to initialize the usage feature.</p>
+<p>To use this usage service, the basic step will be:</p>
+<p>When using <code>autoSession</code>, the system will start a usage session when the application is brought to front,
+and end the session when on background, so the usage information of this session could be uploaded to server
+for analysis. If <code>autoSession</code> is false, then the client code can call <code>recordSessionStart</code> of this
+to start the usage session, then <code>recordSessionEnd</code> to end the session, then do the usage upload.</p>
+<p>Client code can also call other helper methods of this class to log different usage information.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/sdkinitializer/index.html">com.sap.cloud.mobile.foundation.mobileservices.SDKInitializer</a></p>
+</p>
+</BODY>
+</HTML>

@@ -1,0 +1,17 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ServiceOptions.getLoadIfUpdateStatus - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">ServiceOptions</a>&nbsp;/&nbsp;<a href="./getloadifupdatestatus.html">getLoadIfUpdateStatus</a><br/>
+<br/>
+<h1>getLoadIfUpdateStatus</h1>
+<a name="com.sap.cloud.mobile.odata.ServiceOptions$getLoadIfUpdateStatus()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLoadIfUpdateStatus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return defaults to <code>204</code> (HTTP No Content), forcing an implicit <code>loadEntity</code> call to be issued before <code>updateEntity</code> returns, if the update response status from the server is &gt;= <code>204</code>. If this property has a value of <code>200</code> (HTTP OK) then an implicit <code>loadEntity</code> call will always be issued before <code>updateEntity</code> returns, to retrieve the post-update entity state. If this property has a value of <code>0</code> then an implicit <code>loadEntity</code> call will never be issued.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Int</span><span class="symbol">:</span> Defaults to <code>204</code> (HTTP No Content), forcing an implicit <code>loadEntity</code> call to be issued before <code>updateEntity</code> returns, if the update response status from the server is &gt;= <code>204</code>.</p>
+</BODY>
+</HTML>

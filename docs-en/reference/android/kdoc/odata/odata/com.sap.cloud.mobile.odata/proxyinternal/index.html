@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProxyInternal - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ProxyInternal</a><br/>
+<br/>
+<h1>ProxyInternal</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ProxyInternal</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ProxyInternal</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="checkversion.html">checkVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">checkVersion</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$checkVersion(com.sap.cloud.mobile.odata.csdl.CsdlDocument)/metadata">metadata</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Check that proxy classes were generated using same framework version.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="norefreshmetadata.html">noRefreshMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">noRefreshMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Variant of <code><a href="../dataservice/refreshmetadata.html">DataService.refreshMetadata</a></code> for use by proxy classes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="refreshmetadata.html">refreshMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">refreshMetadata</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadata(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int)/service">service</span><span class="symbol">:</span>&nbsp;<a href="../dataservice/index.html"><span class="identifier">DataService</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadata(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int)/fetcher">fetcher</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdlfetcher/index.html"><span class="identifier">CsdlFetcher</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadata(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Variant of <code><a href="../dataservice/refreshmetadata.html">DataService.refreshMetadata</a></code> for use by proxy classes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="refreshmetadatawithlock.html">refreshMetadataWithLock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">refreshMetadataWithLock</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadataWithLock(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int, com.sap.cloud.mobile.odata.core.Action0)/service">service</span><span class="symbol">:</span>&nbsp;<a href="../dataservice/index.html"><span class="identifier">DataService</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadataWithLock(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int, com.sap.cloud.mobile.odata.core.Action0)/fetcher">fetcher</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdlfetcher/index.html"><span class="identifier">CsdlFetcher</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadataWithLock(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int, com.sap.cloud.mobile.odata.core.Action0)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadataWithLock(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int, com.sap.cloud.mobile.odata.core.Action0)/mergeAction">mergeAction</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Variant of <code><a href="../dataservice/refreshmetadata.html">DataService.refreshMetadata</a></code> for use by proxy classes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="switchmetadata.html">switchMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">switchMetadata</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$switchMetadata(com.sap.cloud.mobile.odata.DataServiceProvider, com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.core.Action0)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../dataserviceprovider/index.html"><span class="identifier">DataServiceProvider</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$switchMetadata(com.sap.cloud.mobile.odata.DataServiceProvider, com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.core.Action0)/oldMetadata">oldMetadata</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$switchMetadata(com.sap.cloud.mobile.odata.DataServiceProvider, com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.core.Action0)/newMetadata">newMetadata</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$switchMetadata(com.sap.cloud.mobile.odata.DataServiceProvider, com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.core.Action0)/mergeAction">mergeAction</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

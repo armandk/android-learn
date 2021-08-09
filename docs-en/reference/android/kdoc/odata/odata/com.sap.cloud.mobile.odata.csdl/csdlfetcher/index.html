@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsdlFetcher - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.csdl</a>&nbsp;/&nbsp;<a href="./index.html">CsdlFetcher</a><br/>
+<br/>
+<h1>CsdlFetcher</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CsdlFetcher</span></code>
+<p>Callback which can locate and fetch the text of an Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>) document.</p>
+ See Also: 
+<p><code><a href="../csdlparser/getcsdlfetcher.html">CsdlParser.csdlFetcher</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CsdlFetcher</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Callback which can locate and fetch the text of an Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>) document.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="accept.html">accept</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">accept</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlFetcher$accept(kotlin.String, kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlFetcher$accept(kotlin.String, kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this fetcher accepts a location (or associated namespace), meaning that a <code><a href="fetch.html">CsdlFetcher.fetch</a></code> call would be expected to succeed. This function returns <code>false</code> by default for OData standard vocabulary namespaces (Org.OData.*), otherwise this function returns <code>true</code>. Override this function in subclasses to return <code>true</code> only for those well-known location/namespace values that the fetcher expects that it can resolve to a service metadata document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fetch.html">fetch</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">fetch</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlFetcher$fetch(kotlin.String, kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlFetcher$fetch(kotlin.String, kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the XML content of a service metadata document at the specified URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ignore.html">ignore</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">ignore</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlFetcher$ignore(kotlin.String, kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlFetcher$ignore(kotlin.String, kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this fetcher wants to force the <code><a href="../csdlparser/index.html">com.sap.cloud.mobile.odata.csdl.CsdlParser</a></code> to ignore a reference. This function returns <code>false</code> by default. Override this function in subclasses to return <code>true</code> only for those well-known location/namespace values that the fetcher wants to suppress fetching for.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingVertical="16dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="16dp">
+
+    <CheckBox
+        android:id="@+id/product_by_location_checkbox"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="8dp"
+        android:buttonTint="@color/button_color"
+        android:checked="false" />
+
+    <ImageView
+        android:id="@+id/product_by_location_row_image"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_desc_product_image"
+        android:scaleType="fitXY"
+        android:src="@drawable/object_placeholder" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/product_by_location_row_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:breakStrategy="simple"
+            android:textColor="@color/sap_ui_base_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="Mr. Beats" />
+
+        <TextView
+            android:id="@+id/product_by_location_row_sku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/sap_ui_base_text"
+            android:textSize="14sp"
+            tools:text="GTIN 123456789" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/product_row_stock_selection_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:expandedHintEnabled="false">
+
+        <AutoCompleteTextView
+            android:id="@+id/selected_stock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:hint="@string/stock"
+            android:maxLines="1"
+            android:minWidth="110dp"
+            tools:text="1000" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/product_row_stock_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="24dp"
+        android:textAlignment="textEnd"
+        android:textColor="@color/sap_ui_base_text"
+        android:textSize="16sp"
+        tools:text="999" />
+
+    <ImageView
+        android:id="@+id/product_row_right_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_chevron_right_24"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

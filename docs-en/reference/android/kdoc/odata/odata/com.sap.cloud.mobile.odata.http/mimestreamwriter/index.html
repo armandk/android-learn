@@ -1,0 +1,267 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MimeStreamWriter - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.http</a>&nbsp;/&nbsp;<a href="./index.html">MimeStreamWriter</a><br/>
+<br/>
+<h1>MimeStreamWriter</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MimeStreamWriter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Stream for writing MIME multipart/mixed messages.</p>
+ See Also: 
+<p><a href="https://tools.ietf.org/html/rfc2046">RFC 2046</a>.</p>
+ 
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Close this stream. Automatically calls <code><a href="../../com.sap.cloud.mobile.odata/streambase/flush.html">StreamBase.flush</a></code> before closing. This function can be safely called if the stream is already closed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nestedstream.html">nestedStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">nestedStream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MimeStreamWriter</span></a></code>
+<p>Return a new MIME stream writer for a nested multipart/mixed message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="newmultipart.html">newMultipart</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">newMultipart</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimeStreamWriter$newMultipart(kotlin.String, com.sap.cloud.mobile.odata.ByteStream)/boundary">boundary</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimeStreamWriter$newMultipart(kotlin.String, com.sap.cloud.mobile.odata.ByteStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">MimeStreamWriter</span></a></code>
+<p>Return a new MIME stream writer for an outer multipart/mixed message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writebinary.html">writeBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimeStreamWriter$writeBinary(kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write to this stream the portion of <code>data</code> from the specified <code>offset</code> with the specified <code>length</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writebyte.html">writeByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeByte</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimeStreamWriter$writeByte(kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write a single byte to this stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writepart.html">writePart</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writePart</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimeStreamWriter$writePart(com.sap.cloud.mobile.odata.http.MimePart)/part">part</span><span class="symbol">:</span>&nbsp;<a href="../mimepart/index.html"><span class="identifier">MimePart</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Write a MIME part to the stream, excluding part content which the caller should write with <code><a href="writebyte.html">MimeStreamWriter.writeByte</a></code> and/or <code><a href="writebinary.html">MimeStreamWriter.writeBinary</a></code> calls.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/astext.html">asText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">asText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a></code>
+<p>Assuming this stream is a UTF-8 byte stream, map it to a character stream (of UTF-16 code units).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/copyto.html">copyTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$copyTo(com.sap.cloud.mobile.odata.ByteStream)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See copyTo(ByteStream, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$copyTo(com.sap.cloud.mobile.odata.ByteStream, kotlin.Boolean)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$copyTo(com.sap.cloud.mobile.odata.ByteStream, kotlin.Boolean)/closeTarget">closeTarget</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy all remaining data until the end of this stream into a target stream, then close this stream. Also propagate the <code><a href="../../com.sap.cloud.mobile.odata/streambase/getentitytag.html">ByteStream.entityTag</a></code> and <code><a href="../../com.sap.cloud.mobile.odata/streambase/getmediatype.html">ByteStream.mediaType</a></code> of this stream into the target stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/copytofile.html">copyToFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyToFile</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$copyToFile(kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy all remaining data until the end of the stream into a file, then close this stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/filewriter.html">fileWriter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fileWriter</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fileWriter(kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Return a stream that will write the contents of a data file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/frombinary.html">fromBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromBinary(kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromBinary(kotlin.ByteArray, kotlin.Int)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromBinary(kotlin.ByteArray, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>See fromBinary(byte[], int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromBinary(kotlin.ByteArray, kotlin.Int, kotlin.Int)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromBinary(kotlin.ByteArray, kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromBinary(kotlin.ByteArray, kotlin.Int, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Return a new stream for reading from a binary value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/fromfile.html">fromFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromFile</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromFile(kotlin.String)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Return a stream that will read the contents of a data file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/frominput.html">fromInput</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromInput</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromInput(java.io.InputStream)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/fromstream.html">fromStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromStream(com.sap.cloud.mobile.odata.StreamBase)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/streambase/index.html"><span class="identifier">StreamBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Return <code>stream</code> (if <code>stream</code> is a ByteStream) or <code>ByteStream.fromText(stream)</code> (if <code>stream</code> is a CharStream).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/fromtext.html">fromText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$fromText(com.sap.cloud.mobile.odata.CharStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Return a new UTF-8 byte stream which reads from an underlying UTF-16 character stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/getcanundo.html">getCanUndo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCanUndo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does this stream support <code><a href="../../com.sap.cloud.mobile.odata/bytestream/undoread.html">ByteStream.undoRead</a></code>?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type with a <code><a href="../../com.sap.cloud.mobile.odata/datatype/getcode.html">DataType.code</a></code> of DataType.BYTE_STREAM.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/readandclose.html">readAndClose</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readAndClose</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Read all remaining data until the end of the stream, then close this stream. <em>Caution</em>: this function loads all stream content into memory at once. Consider reading a chunk-at-a-time in a loop, using <code><a href="../../com.sap.cloud.mobile.odata/bytestream/readbinary.html">ByteStream.readBinary</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/readbinary.html">readBinary</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readBinary</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code>
+<p>See readBinary(int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readBinary</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$readBinary(kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span><span class="symbol">?</span></code>
+<p>Read up to <code>length</code> bytes from this stream (may read less, even if the end of stream is not reached).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/readbyte.html">readByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readByte</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Read a single byte from this stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/tobuffer.html">toBuffer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toBuffer</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$toBuffer(com.sap.cloud.mobile.odata.core.ByteBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/bytebuffer/index.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Return a new byte stream which writes to a provided buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/toinput.html">toInput</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toInput</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$toInput(com.sap.cloud.mobile.odata.ByteStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">InputStream</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="../../com.sap.cloud.mobile.odata/bytestream/getdatatype.html">ByteStream.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/undoread.html">undoRead</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">undoRead</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ByteStream$undoRead(kotlin.Byte)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Byte</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Undo read of one byte.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/bytestream/withundo.html">withUndo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withUndo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/bytestream/index.html"><span class="identifier">ByteStream</span></a></code>
+<p>Return a wrapper (if needed) of this stream supporting <code><a href="../../com.sap.cloud.mobile.odata/bytestream/undoread.html">ByteStream.undoRead</a></code>, or this stream if it already supports undoRead.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

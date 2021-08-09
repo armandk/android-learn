@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.executeMethod - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./executemethod.html">executeMethod</a><br/>
+<br/>
+<h1>executeMethod</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)"></a>
+<code><span class="keyword">fun </span><span class="identifier">executeMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)/method">method</span><span class="symbol">:</span>&nbsp;<span class="identifier">DataMethod</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<span class="identifier">ParameterList</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">DataValue</span><span class="symbol">!</span></code>
+<p>Execute FunctionImport </p>
+<p> Offline OData supports POST, PUT, PATCH/MERGE, and DELETE function import requests. It does not support GET function import requests because GET requests are executed locally and there is no way to predict or simulate what the GET response will be when executed on the backend. Similarly, Function Import modification requests (POST, PUT, PATCH, DELETE) made locally have no impact on the local data, again, because the effect cannot be predicted in the way that the effect for standard CRUD operations can. </p>
+<p> Code Example: </p>
+<pre><code>method = dataService.getDataMethod("POST_T1_01");
+     method.setHttpMethod(POST);
+     ParameterList parameters = new ParameterList();
+     Parameter par = new Parameter();
+     par.setName("a");
+     IntValue intValue = IntValue.of(77);
+     par.setValue(intValue);
+     par.setType(intValue.getDataType());
+     parameters.add(par);
+     this.getDataService().executeMethod(method, parameters);
+     
+     Service.upload(this);
+     Service.download(this);
+     
+     DataQuery queryT1 = new DataQuery();
+     queryT1.setRequestPath("T1");
+     queryT1.setQueryString("?$filter=pk eq " + 77);
+     Service.queryAndPrint(testnum(2), queryT1, Printer.QueryResultType.EntityList);
+     
+     
+      </code></pre> Please reference com.sap.cloud.mobile.odata.DataServiceProvider#executeMethod(DataMethod, ParameterList, HttpHeaders, RequestOptions)
+<h3>Parameters</h3>
+<p><a name="method"></a>
+<code>method</code> - <span class="identifier">DataMethod</span><span class="symbol">!</span><span class="symbol">:</span> DataMethod instance includes Function Import name and HttpMethod.</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <span class="identifier">ParameterList</span><span class="symbol">!</span><span class="symbol">:</span> contains parameter list to call Function Import.</p>
+<p><a name="headers"></a>
+<code>headers</code> - <span class="identifier">HttpHeaders</span><span class="symbol">!</span><span class="symbol">:</span> HttpHeaders.</p>
+<p><a name="options"></a>
+<code>options</code> - <span class="identifier">RequestOptions</span><span class="symbol">!</span><span class="symbol">:</span> RequestOptions</p>
+<h3>Exceptions</h3>
+<p><a name="com.sap.cloud.mobile.odata.DataServiceException"></a>
+<code>com.sap.cloud.mobile.odata.DataServiceException</code> - runtime exception when an error occurs.</p>
+<p><strong>See Also</strong><br/>
+com.sap.cloud.mobile.odata.DataServiceException</p>
+</BODY>
+</HTML>

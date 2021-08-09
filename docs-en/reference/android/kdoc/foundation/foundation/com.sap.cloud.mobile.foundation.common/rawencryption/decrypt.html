@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RawEncryption.decrypt - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">RawEncryption</a>&nbsp;/&nbsp;<a href="./decrypt.html">decrypt</a><br/>
+<br/>
+<h1>decrypt</h1>
+<a name="com.sap.cloud.mobile.foundation.common.RawEncryption$decrypt(kotlin.ByteArray, kotlin.ByteArray)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decrypt(kotlin.ByteArray, kotlin.ByteArray)/encryptedData">encryptedData</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decrypt(kotlin.ByteArray, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Decrypts the contents of the given byte array with the given encryption key.</p>
+<h3>Parameters</h3>
+<p><a name="encryptedData"></a>
+<code>encryptedData</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The encrypted bytes.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The key used to decrypt the bytes. This must be the same key that was used to encrypt the bytes, or else an exception will be thrown. When the application no longer needs the encryption key it should clear the array with a call like: Arrays.fill(encryptionKey, (byte) 0x0);</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - Indicates something when wrong with decryption.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The decrypted bytes.</p>
+<a name="com.sap.cloud.mobile.foundation.common.RawEncryption$decrypt(kotlin.ByteArray, kotlin.ByteArray)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decrypt(kotlin.ByteArray, kotlin.ByteArray)/encryptedData">encryptedData</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.RawEncryption$decrypt(kotlin.ByteArray, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Decrypts the contents of the given byte array with the given encryption key.</p>
+<h3>Parameters</h3>
+<p><a name="encryptedData"></a>
+<code>encryptedData</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The encrypted bytes.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The key used to decrypt the bytes. This must be the same key that was used to encrypt the bytes, or else an exception will be thrown. When the application no longer needs the encryption key it should clear the array with a call like: Arrays.fill(encryptionKey, (byte) 0x0);</p>
+<h3>Exceptions</h3>
+<p><a name="IOException"></a>
+<code>IOException</code> - Indicates something when wrong with decryption.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The decrypted bytes.</p>
+</BODY>
+</HTML>

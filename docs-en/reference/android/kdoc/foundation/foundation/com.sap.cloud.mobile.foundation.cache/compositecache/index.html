@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompositeCache - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="./index.html">CompositeCache</a><br/>
+<br/>
+<h1>CompositeCache</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.CompositeCache"></a>
+<code><span class="keyword">class </span><span class="identifier">CompositeCache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">CacheBuilder</span><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.cache.CompositeCache"></a>
+<code><span class="keyword">class </span><span class="identifier">CompositeCache</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../cachebase/index.html"><span class="identifier">CacheBase</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">CacheBuilder</span><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>CompositeCache is a multi-level cache container that implements the <strong>Cache</strong> interface. The lowest level is usually configured with a persistent store. <ol> <li>The cache at each level is appended to a chain, from highest level to lowest level. Order matters, and the user should add the backing store last.</li>
+ <li>All levels of caches share the same <em>Key</em> and <em>Value</em> types.</li>
+ <li>The sizes of cache levels should be from the smallest to the largest.</li>
+ <li><strong>Write Policy</strong>-- uses <em>Write-through Policy</em>, that is, a <strong>put</strong> operation will add the entry to all levels of cache.</li>
+ <li> <strong>Read-miss</strong> Policy: <ul> <li>Only when a cache entry is not found at one level, the next lower level will be queried.</li>
+ <li>The item found at a lower level will be propagated to all the cache levels above.</li>
+ </ul>
+ </li>
+ <li> When a cache entry is cleared from a cache to free up space based on the Replacement Policy implemented, the removed value will not be added to the lower level caches. </li>
+ </ol>
+ Creating and Configuring CompositeCache <ul> <li>Calls the constructor-- <code><a href="-init-.html">#CompositeCache(Context)</a></code>.</li>
+ <li>Adds levels of caches-- <code><a href="add.html">#add(Cache)</a></code></li>
+ <li>Completes the configuration of the composite cache-- <code><a href="build.html">#build()</a></code>. Now the composite cache instance is ready for other operations. </li>
+ </ul>
+ Example <pre><code>MemoryCache&lt;String, ValueType&gt; cache1 = new MemoryCache&lt;&gt;(androidContext, 16);
+
+    // cache2 is a persistent cache that implements the Cache interface.
+    CompositeCache&lt;String, ValueType&gt; compositeCache = new CompositeCache&lt;String,
+        ValueType&gt;(androidContext)
+        .add(cache1)   // The first level cache-- MemoryCache.
+        .add(cache2)   // The second level cache-- a backing store.
+        .build();
+
+ </code></pre></p>
+</BODY>
+</HTML>

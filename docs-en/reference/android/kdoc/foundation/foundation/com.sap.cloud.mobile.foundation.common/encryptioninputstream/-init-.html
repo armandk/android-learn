@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EncryptionInputStream.<init> - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">EncryptionInputStream</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionInputStream$&lt;init&gt;(java.io.InputStream, kotlin.Boolean, kotlin.ByteArray)"></a>
+<code><span class="identifier">EncryptionInputStream</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionInputStream$<init>(java.io.InputStream, kotlin.Boolean, kotlin.ByteArray)/in">in</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionInputStream$<init>(java.io.InputStream, kotlin.Boolean, kotlin.ByteArray)/encrypt">encrypt</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionInputStream$<init>(java.io.InputStream, kotlin.Boolean, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span></code>
+<h3>Parameters</h3>
+<p><a name="in"></a>
+<code>in</code> - <span class="identifier">InputStream</span><span class="symbol">:</span> The InputStream that will be encrypted/decrypted.</p>
+<p><a name="encrypt"></a>
+<code>encrypt</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> True means the InputStream will be encrypted. False means the InputStream will be decrypted.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The key which is used for encryption/decryption. It is recommended to use EncryptionUtil to generate the encryption key, but this is not required. The encryption key must be 16, 24, or 32 bytes. When the application no longer needs the encryption key it should clear the array with a call like: Arrays.fill(encryptionKey, (byte) 0x0);</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionInputStream$&lt;init&gt;(java.io.InputStream, kotlin.Boolean, kotlin.ByteArray)"></a>
+<code><span class="identifier">EncryptionInputStream</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionInputStream$<init>(java.io.InputStream, kotlin.Boolean, kotlin.ByteArray)/in">in</span><span class="symbol">:</span>&nbsp;<span class="identifier">InputStream</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionInputStream$<init>(java.io.InputStream, kotlin.Boolean, kotlin.ByteArray)/encrypt">encrypt</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionInputStream$<init>(java.io.InputStream, kotlin.Boolean, kotlin.ByteArray)/encryptionKey">encryptionKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span></code>
+<h3>Parameters</h3>
+<p><a name="in"></a>
+<code>in</code> - <span class="identifier">InputStream</span><span class="symbol">:</span> The InputStream that will be encrypted/decrypted.</p>
+<p><a name="encrypt"></a>
+<code>encrypt</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> True means the InputStream will be encrypted. False means the InputStream will be decrypted.</p>
+<p><a name="encryptionKey"></a>
+<code>encryptionKey</code> - <span class="identifier">ByteArray</span><span class="symbol">:</span> The key which is used for encryption/decryption. It is recommended to use EncryptionUtil to generate the encryption key, but this is not required. The encryption key must be 16, 24, or 32 bytes. When the application no longer needs the encryption key it should clear the array with a call like: Arrays.fill(encryptionKey, (byte) 0x0);</p>
+</BODY>
+</HTML>

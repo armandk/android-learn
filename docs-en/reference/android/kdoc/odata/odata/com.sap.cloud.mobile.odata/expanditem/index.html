@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ExpandItem - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ExpandItem</a><br/>
+<br/>
+<h1>ExpandItem</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExpandItem</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> expand item. An expand item indicates a property (or expression) that is used in the $expand system query option.</p>
+ See Also: 
+<p><code><a href="../dataquery/getexpanditems.html">DataQuery.expandItems</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ExpandItem</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> expand item. An expand item indicates a property (or expression) that is used in the $expand system query option.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getpath.html">getPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datapath/index.html"><span class="identifier">DataPath</span></a></code>
+<p>Return a path to be expanded in the query results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getquery.html">getQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQuery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A query to configure the expansion (including nested expands).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequiredquery.html">getRequiredQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredQuery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Return <code><a href="getquery.html">ExpandItem.query</a></code> is it is non-null, otherwise a new <code><a href="../dataquery/index.html">com.sap.cloud.mobile.odata.DataQuery</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ishidden.html">isHidden</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isHidden</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return was this expand item added for internal use (e.g. needed for server-side query processing, but not requested by client).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="of.html">of</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">of</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ExpandItem$of(com.sap.cloud.mobile.odata.PropertyPath)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ExpandItem</span></a></code>
+<p>Return a new expand item for the specified property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sethidden.html">setHidden</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHidden</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ExpandItem$setHidden(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set was this expand item added for internal use (e.g. needed for server-side query processing, but not requested by client).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpath.html">setPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ExpandItem$setPath(com.sap.cloud.mobile.odata.DataPath)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a path to be expanded in the query results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setquery.html">setQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ExpandItem$setQuery(com.sap.cloud.mobile.odata.DataQuery)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a query to configure the expansion (including nested expands).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toproperty.html">toProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">?</span></code>
+<p>If this expand item references a simple property path, then return the property. Otherwise return <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="torequiredproperty.html">toRequiredProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toRequiredProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a></code>
+<p>If this expand item references a simple property path, then return the property. Otherwise throw an exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string representation of this expand item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withquery.html">withQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ExpandItem$withQuery(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ExpandItem</span></a></code>
+<p>Set the query of this expand item.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

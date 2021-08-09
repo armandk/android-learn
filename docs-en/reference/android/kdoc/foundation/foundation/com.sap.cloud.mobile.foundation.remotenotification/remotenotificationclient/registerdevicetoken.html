@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RemoteNotificationClient.registerDeviceToken - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.remotenotification</a>&nbsp;/&nbsp;<a href="index.html">RemoteNotificationClient</a>&nbsp;/&nbsp;<a href="./registerdevicetoken.html">registerDeviceToken</a><br/>
+<br/>
+<h1>registerDeviceToken</h1>
+<a name="com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient$registerDeviceToken(kotlin.String, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">registerDeviceToken</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient$registerDeviceToken(kotlin.String, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient.CallbackListener)/token">token</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient$registerDeviceToken(kotlin.String, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient.CallbackListener)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../remotenotificationparameters/index.html"><span class="identifier">RemoteNotificationParameters</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient$registerDeviceToken(kotlin.String, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient.CallbackListener)/callbackListener">callbackListener</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">RemoteNotificationClient.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Register the device token to the SAP mobile cloud. This token is the one the application receives from the push provider for example FireBase(FCM).</p>
+<h3>Parameters</h3>
+<p><a name="token"></a>
+<code>token</code> - <span class="identifier">String</span><span class="symbol">:</span> the push token received from the FCM server</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <a href="../remotenotificationparameters/index.html"><span class="identifier">RemoteNotificationParameters</span></a><span class="symbol">?</span><span class="symbol">:</span> This argument contains all the pus configuration related parameters like pushCapability and pushCategory information.</p>
+<p><a name="callbackListener"></a>
+<code>callbackListener</code> - <a href="callbacklistener/index.html"><span class="identifier">RemoteNotificationClient.CallbackListener</span></a><span class="symbol">:</span> handle to <code><a href="callbacklistener/index.html">CallbackListener</a></code> to handle successful response or error <pre><code><strong>Example Usage:</strong>
+                              
+     
+                              remoteNotificationClient.registerDeviceToken(token,parameter,
+                              new RemoteNotificationClient.CallbackListener() {
+                                 @Override
+                                    public void onSuccess() {
+                                    //Here goes the code for processing successful response...
+                                    }
+     
+                                     @Override
+                                    public void onError(Throwable result) {
+                                        //Handle error here...
+                                    }
+     
+                              });
+     
+                              
+                              </code></pre></p>
+<a name="com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient$registerDeviceToken(kotlin.String, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient.CallbackListener)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">registerDeviceToken</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient$registerDeviceToken(kotlin.String, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient.CallbackListener)/token">token</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient$registerDeviceToken(kotlin.String, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient.CallbackListener)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../remotenotificationparameters/index.html"><span class="identifier">RemoteNotificationParameters</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient$registerDeviceToken(kotlin.String, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters, com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient.CallbackListener)/callbackListener">callbackListener</span><span class="symbol">:</span>&nbsp;<a href="callbacklistener/index.html"><span class="identifier">RemoteNotificationClient.CallbackListener</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Register the device token to the SAP mobile cloud. This token is the one the application receives from the push provider for example FireBase(FCM).</p>
+<h3>Parameters</h3>
+<p><a name="token"></a>
+<code>token</code> - <span class="identifier">String</span><span class="symbol">:</span> the push token received from the FCM server</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <a href="../remotenotificationparameters/index.html"><span class="identifier">RemoteNotificationParameters</span></a><span class="symbol">?</span><span class="symbol">:</span> This argument contains all the pus configuration related parameters like pushCapability and pushCategory information.</p>
+<p><a name="callbackListener"></a>
+<code>callbackListener</code> - <a href="callbacklistener/index.html"><span class="identifier">RemoteNotificationClient.CallbackListener</span></a><span class="symbol">:</span> handle to <code><a href="callbacklistener/index.html">CallbackListener</a></code> to handle successful response or error <pre><code><strong>Example Usage:</strong>
+                              
+     
+                              remoteNotificationClient.registerDeviceToken(token,parameter,
+                              new RemoteNotificationClient.CallbackListener() {
+                                 @Override
+                                    public void onSuccess() {
+                                    //Here goes the code for processing successful response...
+                                    }
+     
+                                     @Override
+                                    public void onError(Throwable result) {
+                                        //Handle error here...
+                                    }
+     
+                              });
+     
+                              
+                              </code></pre></p>
+</BODY>
+</HTML>

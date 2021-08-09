@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChangeSet.<init> - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">ChangeSet</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.odata.ChangeSet$&lt;init&gt;()"></a>
+<code><span class="identifier">ChangeSet</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> change set. A change set is used to group a set of entity or link changes into a single unit of work, like an atomic database transaction.</p>
+ See Also: 
+<p><code><a href="../dataservice/index.html">com.sap.cloud.mobile.odata.DataService</a></code>, <code><a href="../requestbatch/index.html">com.sap.cloud.mobile.odata.RequestBatch</a></code>.</p>
+  Example using proxy classes:<pre><code>
+  public void applyChangesExample() {
+      NorthwindService service = this.getService();
+      List&lt;Supplier&gt; suppliers = service.getSuppliers(new DataQuery().top(2));
+      List&lt;Product&gt; products = service.getProducts(new DataQuery().top(3));
+      Product product1 = products.get(0).copy();
+      Product product2 = products.get(1).copy();
+      Product product3 = products.get(2).copy();
+      product1.setProductName("Blueberry Muffins");
+      product2.setProductName("Strawberry Yoghurt");
+      product3.setProductName("Raspberry Pie");
+      ChangeSet entityCreates = new ChangeSet();
+      entityCreates.createEntity(product1);
+      entityCreates.createEntity(product2);
+      entityCreates.createEntity(product3);
+      service.applyChanges(entityCreates);
+      ChangeSet entityChanges = new ChangeSet();
+      product2.setProductName("Blackberry Yoghurt");
+      entityChanges.updateEntity(product2);
+      entityChanges.deleteEntity(product3);
+      service.applyChanges(entityChanges);
+      ChangeSet linkChanges = new ChangeSet();
+      Supplier supplier1 = suppliers.get(0);
+      Supplier supplier2 = suppliers.get(1);
+      linkChanges.createLink(product1, Product.supplier, supplier1);
+      linkChanges.updateLink(product1, Product.supplier, supplier2);
+      linkChanges.deleteLink(product1, Product.supplier);
+      service.applyChanges(linkChanges);
+  }
+  </code></pre> Example using dynamic API:<pre><code>
+  public void applyChangesExample() {
+      DataService service = this.getService();
+      EntitySet suppliersEntitySet = service.getEntitySet("Suppliers");
+      EntitySet productsEntitySet = service.getEntitySet("Products");
+      EntityType productEntityType = productsEntitySet.getEntityType();
+      Property productNameProperty = productEntityType.getProperty("ProductName");
+      Property supplierProperty = productEntityType.getProperty("Supplier");
+      EntityValueList suppliers = service.executeQuery(new DataQuery()
+          .from(suppliersEntitySet).top(2))
+          .getEntityList();
+      EntityValueList products = service.executeQuery(new DataQuery()
+          .from(productsEntitySet).top(3))
+          .getEntityList();
+      EntityValue product1 = products.get(0).copyEntity();
+      EntityValue product2 = products.get(1).copyEntity();
+      EntityValue product3 = products.get(1).copyEntity();
+      productNameProperty.setString(product1, "Blueberry Yoghurt");
+      productNameProperty.setString(product2, "Strawberry Yoghurt");
+      productNameProperty.setString(product3, "Raspberry Pie");
+      ChangeSet entityCreates = new ChangeSet();
+      entityCreates.createEntity(product1);
+      entityCreates.createEntity(product2);
+      entityCreates.createEntity(product3);
+      service.applyChanges(entityCreates);
+      ChangeSet entityChanges = new ChangeSet();
+      productNameProperty.setString(product2, "Blackberry Yoghurt");
+      entityChanges.updateEntity(product2);
+      entityChanges.deleteEntity(product3);
+      service.applyChanges(entityChanges);
+      ChangeSet linkChanges = new ChangeSet();
+      EntityValue supplier1 = suppliers.get(0);
+      EntityValue supplier2 = suppliers.get(1);
+      linkChanges.createLink(product1, supplierProperty, supplier1);
+      linkChanges.updateLink(product1, supplierProperty, supplier2);
+      linkChanges.deleteLink(product1, supplierProperty);
+      service.applyChanges(linkChanges);
+  }
+  </code></pre>
+</BODY>
+</HTML>

@@ -1,0 +1,212 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GeographyValue - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">GeographyValue</a><br/>
+<br/>
+<h1>GeographyValue</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">GeographyValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../geospatialvalue/index.html"><span class="identifier">GeospatialValue</span></a></code>
+<p>Abstract base class for geography data values.</p>
+ See Also: 
+<p><code><a href="../geographypoint/index.html">com.sap.cloud.mobile.odata.GeographyPoint</a></code>, <code><a href="../geographymultipoint/index.html">com.sap.cloud.mobile.odata.GeographyMultiPoint</a></code>, <code><a href="../geographylinestring/index.html">com.sap.cloud.mobile.odata.GeographyLineString</a></code>, <code><a href="../geographymultilinestring/index.html">com.sap.cloud.mobile.odata.GeographyMultiLineString</a></code>, <code><a href="../geographypolygon/index.html">com.sap.cloud.mobile.odata.GeographyPolygon</a></code>, <code><a href="../geographymultipolygon/index.html">com.sap.cloud.mobile.odata.GeographyMultiPolygon</a></code>, <code><a href="../geographycollection/index.html">com.sap.cloud.mobile.odata.GeographyCollection</a></code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">GeographyValue</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Abstract base class for geography data values.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="default_srid.html">DEFAULT_SRID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DEFAULT_SRID</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Default Spatial Reference System Identifier for Geography Values (4326).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="castoptional.html">castOptional</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castOptional</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$castOptional(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeographyValue</span></a><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="castrequired.html">castRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castRequired</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$castRequired(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="formatwkt.html">formatWKT</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">formatWKT</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>See formatWKT(boolean).</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">formatWKT</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$formatWKT(kotlin.Boolean)/sridRequired">sridRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return this value formatted in OData WKT (well-known text) format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsrscode.html">getSrsCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSrsCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return spatial Reference System Code, e.g. <a href="http://www.epsg.org/Geodetic.html">EPSG</a> SRID. Defaults to 4326.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsrsname.html">getSrsName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSrsName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Spatial Reference System Name (optional).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseany.html">parseAny</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseAny</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$parseAny(kotlin.String, com.sap.cloud.mobile.odata.DataType)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$parseAny(kotlin.String, com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>Parse a geography value from <a href="http://geojson.org">GeoJSON</a> format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseanywkt.html">parseAnyWKT</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseAnyWKT</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$parseAnyWKT(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>See parseAnyWKT(String, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseAnyWKT</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$parseAnyWKT(kotlin.String, kotlin.Boolean)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$parseAnyWKT(kotlin.String, kotlin.Boolean)/sridRequired">sridRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>Return a value parsed from OData WKT (well-known text) format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsrscode.html">setSrsCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSrsCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$setSrsCode(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set spatial Reference System Code, e.g. <a href="http://www.epsg.org/Geodetic.html">EPSG</a> SRID. Defaults to 4326.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsrsname.html">setSrsName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSrsName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.GeographyValue$setSrsName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set spatial Reference System Name (optional).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="../datavalue/getdatatype.html">GeographyValue.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../geographycollection/index.html">GeographyCollection</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyCollection</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A collection of geography values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geographylinestring/index.html">GeographyLineString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyLineString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography points which represents a joined string of lines.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geographymultilinestring/index.html">GeographyMultiLineString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyMultiLineString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography line strings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geographymultipoint/index.html">GeographyMultiPoint</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyMultiPoint</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography points.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geographymultipolygon/index.html">GeographyMultiPolygon</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyMultiPolygon</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography polygons.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geographypoint/index.html">GeographyPoint</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyPoint</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A geography point.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../geographypolygon/index.html">GeographyPolygon</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyPolygon</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography multi-points which represents a polygon. The first multi-point coordinate is the exterior ring, any others are interior rings.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.<init> - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$&lt;init&gt;()"></a>
+<code><span class="identifier">DataQuery</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> query request. A query can be defined by setting query properties, or by calling query functions which provide a <a href="http://en.wikipedia.org/wiki/Fluent_interface">fluent interface</a>. Execution of a query may result in some query properties being changed (e.g. the addition of <code><a href="getexpanditems.html">DataQuery.expandItems</a></code> or <code><a href="getselectitems.html">DataQuery.selectItems</a></code> that are required for correct execution). Thus for thread safety, a query should be used only by a single thread at a time. Preferably a new query should be created before each query execution.</p>
+ See Also: 
+<p><code>DataService.executeQuery</code>.</p>
+  Example using proxy classes:<pre><code>
+  public void dataQueryExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .select(Customer.customerID, Customer.companyName, Customer.contactName)
+          .filter(Customer.address.toLower().contains("king"))
+          .orderBy(Customer.companyName);
+      List&lt;Customer&gt; customers = service.getCustomers(query);
+      this.showCustomers(customers);
+  }
+  </code></pre> Example using dynamic API:<pre><code>
+  public void dataQueryExample() {
+      DataService service = this.getService();
+      EntitySet customersEntitySet = service.getEntitySet("Customers");
+      EntityType customerEntityType = customersEntitySet.getEntityType();
+      Property customerIDProperty = customerEntityType.getProperty("CustomerID");
+      Property companyNameProperty = customerEntityType.getProperty("CompanyName");
+      Property contactNameProperty = customerEntityType.getProperty("ContactName");
+      Property addressProperty = customerEntityType.getProperty("Address");
+      DataQuery query = new DataQuery()
+          .select(customerIDProperty, companyNameProperty, contactNameProperty)
+          .from(customersEntitySet).filter(addressProperty.toLower().contains("king"))
+          .orderBy(companyNameProperty);
+      EntityValueList customers = service.executeQuery(query).getEntityList();
+      this.showCustomers(customers);
+  }
+  </code></pre>
+</BODY>
+</HTML>

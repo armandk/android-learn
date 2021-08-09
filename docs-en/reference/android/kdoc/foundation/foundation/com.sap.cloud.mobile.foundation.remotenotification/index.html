@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.foundation.remotenotification - foundation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">foundation</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.foundation.remotenotification</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.foundation.remotenotification</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="pushcallbacklistener/index.html">PushCallbackListener</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">PushCallbackListener</span></code><br/>
+<code><span class="keyword">interface </span><span class="identifier">PushCallbackListener</span></code>
+<p>callBack to receive the message sent from push</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pushnotificationactionreceiver/index.html">PushNotificationActionReceiver</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PushNotificationActionReceiver</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BroadcastReceiver</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PushNotificationActionReceiver</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BroadcastReceiver</span></code>
+<p>Receiver to handle cancel notification</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pushremotemessage/index.html">PushRemoteMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PushRemoteMessage</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Parcelable</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PushRemoteMessage</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Parcelable</span></code>
+<p>notification model</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pushservice/index.html">PushService</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PushService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PushService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Push service which can register/remove push token and change the notification status</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="remotenotificationclient/index.html">RemoteNotificationClient</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RemoteNotificationClient</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RemoteNotificationClient</span></code>
+<p>Provides an API interface for managing notification-related parameters with mobile services. The notification token is obtained using the FireBase (FCM) API or any push notification channel API. The ability to obtain the push token is not included as part of this interface.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="remotenotificationconfig/index.html">RemoteNotificationConfig</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RemoteNotificationConfig</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RemoteNotificationConfig</span></code>
+<p>This class contains all the constant values that we use for handling remote notifications</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="remotenotificationparameters/index.html">RemoteNotificationParameters</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RemoteNotificationParameters</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RemoteNotificationParameters</span></code>
+<p>RemoteNotificationParameters class provides an API for managing the Notification configuration parameters. Obtaining token is not part of this interface.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sapfirebasemessagingservice/index.html">SAPFirebaseMessagingService</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SAPFirebaseMessagingService</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">FirebaseMessagingService</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SAPFirebaseMessagingService</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">FirebaseMessagingService</span></code>
+<p>This service is responsible for handling the FCM remote notifications.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

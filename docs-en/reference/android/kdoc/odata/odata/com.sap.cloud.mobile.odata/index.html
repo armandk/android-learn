@@ -1,0 +1,2305 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.odata - odata</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">odata</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.odata</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.odata</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="aggregateexpression/index.html">AggregateExpression</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateExpression</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> aggregate expression item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="aggregateexpressionlist/index.html">AggregateExpressionList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateExpressionList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="aggregateexpression/index.html"><span class="identifier">AggregateExpression</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="aggregateexpression/index.html">com.sap.cloud.mobile.odata.AggregateExpression</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="aggregatefrom/index.html">AggregateFrom</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateFrom</span></code>
+<p>Represents the 'from' clause in an aggregate transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="aggregatefromlist/index.html">AggregateFromList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateFromList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="aggregatefrom/index.html"><span class="identifier">AggregateFrom</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of "aggregate from" transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="aggregatemethod/index.html">AggregateMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateMethod</span></code>
+<p>Represents the method of the aggregate transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="aggregatevalue/index.html">AggregateValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> aggregate transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="aggregatevaluelist/index.html">AggregateValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of aggregate transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="amounttransform/index.html">AmountTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AmountTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Abstract base class for top and bottom transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="annotation/index.html">Annotation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Annotation</span></code>
+<p>Represents an <a href="http://odata.org">OData</a> annotation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="annotationequality/index.html">AnnotationEquality</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnnotationEquality</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata.core/equality/index.html"><span class="identifier">Equality</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="annotationlist/index.html">AnnotationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnnotationList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="annotation/index.html"><span class="identifier">Annotation</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="annotationmap/index.html">AnnotationMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnnotationMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="annotationterm/index.html">AnnotationTerm</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnnotationTerm</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> term definition.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="annotationtermlist/index.html">AnnotationTermList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnnotationTermList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="annotationterm/index.html"><span class="identifier">AnnotationTerm</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="annotationtermmap/index.html">AnnotationTermMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnnotationTermMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="anylist/index.html">AnyList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnyList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="anymap/index.html">AnyMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AnyMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="arrayfunction/index.html">ArrayFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ArrayFunction</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="arrayproperty/index.html">ArrayProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ArrayProperty</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="basictype/index.html">BasicType</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BasicType</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="binarylist/index.html">BinaryList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BinaryList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">ByteArray</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="binaryvalue/index.html">BinaryValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BinaryValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="binaryvalue/getvalue.html">BinaryValue.value</a></code> of type <code>binary</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bindingpath.html">BindingPath</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">BindingPath</span></code>
+<p>Marker interface for types that can be used as a binding parameter for a bound action/function invocation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="booleanlist/index.html">BooleanList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BooleanList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Boolean</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="booleanvalue/index.html">BooleanValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BooleanValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="booleanvalue/getvalue.html">BooleanValue.value</a></code> of type <code>boolean</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bottomtransform/index.html">BottomTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BottomTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="amounttransform/index.html"><span class="identifier">AmountTransform</span></a></code>
+<p>Represents the Bottom* transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="buildconfig/index.html">BuildConfig</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BuildConfig</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">BuildConfig</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="bytelist/index.html">ByteList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ByteList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Byte</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bytestream/index.html">ByteStream</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ByteStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="streambase/index.html"><span class="identifier">StreamBase</span></a></code>
+<p>Abstract base class for <code>byte</code> streams.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bytevalue/index.html">ByteValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ByteValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="bytevalue/getvalue.html">ByteValue.value</a></code> of type <code>byte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="cancellationlistener/index.html">CancellationListener</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CancellationListener</span></code>
+<p>Listener for notification of request cancellation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="canceltoken/index.html">CancelToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CancelToken</span></code>
+<p>A token for requesting the cancellation of asynchronous requests.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="changedlink/index.html">ChangedLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChangedLink</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="changedlinklist/index.html">ChangedLinkList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChangedLinkList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="changedlink/index.html"><span class="identifier">ChangedLink</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="changeset/index.html">ChangeSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChangeSet</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> change set. A change set is used to group a set of entity or link changes into a single unit of work, like an atomic database transaction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="charlist/index.html">CharList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CharList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Char</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="charstream/index.html">CharStream</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CharStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="streambase/index.html"><span class="identifier">StreamBase</span></a></code>
+<p>Abstract base class for <code>char</code> streams, using UTF-16 code units.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="charvalue/index.html">CharValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CharValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="charvalue/getvalue.html">CharValue.value</a></code> of type <code>char</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="complextype/index.html">ComplexType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="structuretype/index.html"><span class="identifier">StructureType</span></a></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> complex type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="complextypelist/index.html">ComplexTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="complextype/index.html"><span class="identifier">ComplexType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="complextypemap/index.html">ComplexTypeMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexTypeMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="complexvalue/index.html">ComplexValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="structurebase/index.html"><span class="identifier">StructureBase</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> complex value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="complexvaluelist/index.html">ComplexValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="complexvaluelistwithnulls/index.html">ComplexValueListWithNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexValueListWithNulls</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="complexvalue/index.html"><span class="identifier">ComplexValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="complexvaluemap/index.html">ComplexValueMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ComplexValueMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="convertdatavalue/index.html">ConvertDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ConvertDataValue</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custompath/index.html">CustomPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CustomPath</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custompathlist/index.html">CustomPathList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CustomPathList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="custompath/index.html"><span class="identifier">CustomPath</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datacomparer/index.html">DataComparer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataComparer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata.core/comparer/index.html"><span class="identifier">Comparer</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datacontext/index.html">DataContext</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataContext</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataequality/index.html">DataEquality</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataEquality</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata.core/equality/index.html"><span class="identifier">Equality</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataformat/index.html">DataFormat</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataFormat</span></code>
+<p>Format constants for use with data protocols.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datainternal/index.html">DataInternal</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataInternal</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datamethod/index.html">DataMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMethod</span></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> function or action.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datamethodcall/index.html">DataMethodCall</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMethodCall</span></code>
+<p>Encapsulates the application of an <a href="http://odata.org">OData</a> method (function or action) to a list of parameters. This is used to represent calls to functions and actionn defined within an entity model, as opposed to <code><a href="queryfunction/index.html">com.sap.cloud.mobile.odata.QueryFunction</a></code> which is used to represent calls to builtin functions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datamethodlist/index.html">DataMethodList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMethodList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datamethodmap/index.html">DataMethodMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMethodMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datamethodmetrics/index.html">DataMethodMetrics</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMethodMetrics</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datametric/index.html">DataMetric</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMetric</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datametriclist/index.html">DataMetricList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMetricList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="datametric/index.html"><span class="identifier">DataMetric</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datametricmap/index.html">DataMetricMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataMetricMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datapath/index.html">DataPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataPath</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="propertypath/index.html"><span class="identifier">PropertyPath</span></a></code>
+<p>Used together with <code><a href="dataquery/index.html">com.sap.cloud.mobile.odata.DataQuery</a></code> to represent a select, expand or sort item which is a single-part or multi-part path expression. For example, a path whose OData URL representation is "Address/City" might be used to access the "City" property in a complex-typed "Address" property. Also used to represent paths in OData CSDL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataquery/index.html">DataQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataQuery</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> query request. A query can be defined by setting query properties, or by calling query functions which provide a <a href="http://en.wikipedia.org/wiki/Fluent_interface">fluent interface</a>. Execution of a query may result in some query properties being changed (e.g. the addition of <code><a href="dataquery/getexpanditems.html">DataQuery.expandItems</a></code> or <code><a href="dataquery/getselectitems.html">DataQuery.selectItems</a></code> that are required for correct execution). Thus for thread safety, a query should be used only by a single thread at a time. Preferably a new query should be created before each query execution.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataschema/index.html">DataSchema</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataSchema</span></code>
+<p>Represents an <a href="http://odata.org">OData</a> data schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataschemalist/index.html">DataSchemaList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataSchemaList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="dataschema/index.html"><span class="identifier">DataSchema</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataschemamap/index.html">DataSchemaMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataSchemaMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataservice/index.html">DataService</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataService</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> data service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataserviceprovider/index.html">DataServiceProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">DataServiceProvider</span></code>
+<p>A provider interface for data services. Where applicable, client applications should use the <code><a href="dataservice/index.html">com.sap.cloud.mobile.odata.DataService</a></code> wrapper to invoke provider functions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datatype/index.html">DataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataType</span></code>
+<p>Represents a data type defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a> or <a href="http://odata.org">OData</a>. String, binary, boolean, numeric and calendar types use XML Schema nomenclature. Geography, geometry, complex and entity types use OData nomenclature.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datatypelist/index.html">DataTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datatypemap/index.html">DataTypeMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataTypeMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datavalue/index.html">DataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataValue</span></code>
+<p>Abstract base class for wrapper classes that wrap basic data values as objects, as well as calendar values, geography values, geometry values, <code><a href="complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code>, <code><a href="entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code> and <code><a href="listbase/index.html">com.sap.cloud.mobile.odata.ListBase</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datavaluelist/index.html">DataValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="datavalue/index.html">com.sap.cloud.mobile.odata.DataValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datavaluelistwithnulls/index.html">DataValueListWithNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataValueListWithNulls</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datavaluemap/index.html">DataValueMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataValueMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>A map from key type <code>string</code> to value type <code><a href="datavalue/index.html">com.sap.cloud.mobile.odata.DataValue</a></code>?.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataversion/index.html">DataVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataVersion</span></code>
+<p>Constant codes to represent <a href="http://odata.org">OData</a> versions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dayofweek/index.html">DayOfWeek</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DayOfWeek</span></code>
+<p>Constants to represent days of the week (Monday = 1 to Sunday = 7, using ISO 8601 conventions).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="daytimeduration/index.html">DayTimeDuration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DayTimeDuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#dayTimeDuration">dayTimeDuration</a> type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="daytimedurationlist/index.html">DayTimeDurationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DayTimeDurationList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="daytimeduration/index.html"><span class="identifier">DayTimeDuration</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="decimallist/index.html">DecimalList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DecimalList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">BigDecimal</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="decimalvalue/index.html">DecimalValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DecimalValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="decimalvalue/getvalue.html">DecimalValue.value</a></code> of type <code>decimal</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deltastream/index.html">DeltaStream</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DeltaStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>A stream of delta items, each of which is either an <code><a href="entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code> or a <code><a href="changedlink/index.html">com.sap.cloud.mobile.odata.ChangedLink</a></code>. While processing a stream, a delta link may be encountered, but it will not be immediately available to the caller. The <code><a href="deltastream/getdeltalink.html">DeltaStream.deltaLink</a></code> can be obtained only after the stream is closed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="doublelist/index.html">DoubleList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DoubleList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Double</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="doublevalue/index.html">DoubleValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DoubleValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="doublevalue/getvalue.html">DoubleValue.value</a></code> of type <code>double</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitycontainer/index.html">EntityContainer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityContainer</span></code>
+<p>Represents an <a href="http://odata.org">OData</a> entity container.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitycontainerlist/index.html">EntityContainerList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityContainerList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="entitycontainer/index.html"><span class="identifier">EntityContainer</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitycontainermap/index.html">EntityContainerMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityContainerMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitykey/index.html">EntityKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityKey</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> entity key.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entityset/index.html">EntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntitySet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="bindingpath.html"><span class="identifier">BindingPath</span></a></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> entity set. Also used for OData <code><a href="entityset/issingleton.html">EntitySet.isSingleton</a></code> entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitysetlist/index.html">EntitySetList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntitySetList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitysetmap/index.html">EntitySetMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntitySetMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitysetmetrics/index.html">EntitySetMetrics</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntitySetMetrics</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitystream/index.html">EntityStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityStream</span></code>
+<p>A stream of entity values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitytype/index.html">EntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="structuretype/index.html"><span class="identifier">StructureType</span></a></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> entity type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitytypelist/index.html">EntityTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entitytypemap/index.html">EntityTypeMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityTypeMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entityvalue/index.html">EntityValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><a href="bindingpath.html"><span class="identifier">BindingPath</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> entity value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entityvaluelist/index.html">EntityValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entityvaluelistwithnulls/index.html">EntityValueListWithNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityValueListWithNulls</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entityvaluemap/index.html">EntityValueMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityValueMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enumtype/index.html">EnumType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> enum type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enumtypelist/index.html">EnumTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="enumtype/index.html"><span class="identifier">EnumType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enumtypemap/index.html">EnumTypeMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumTypeMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enumvalue/index.html">EnumValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> enum value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enumvaluelist/index.html">EnumValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="enumvalue/index.html"><span class="identifier">EnumValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="enumvaluemap/index.html">EnumValueMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EnumValueMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="errorresponse/index.html">ErrorResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ErrorResponse</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> error response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="errorresponselist/index.html">ErrorResponseList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ErrorResponseList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="errorresponse/index.html"><span class="identifier">ErrorResponse</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expanditem/index.html">ExpandItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExpandItem</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> expand item. An expand item indicates a property (or expression) that is used in the $expand system query option.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expanditemlist/index.html">ExpandItemList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExpandItemList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="expanditem/index.html"><span class="identifier">ExpandItem</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expandtransform/index.html">ExpandTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExpandTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Represents an expand transform item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expecteditem/index.html">ExpectedItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExpectedItem</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filtertransform/index.html">FilterTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FilterTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Represents a filter transform item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="floatlist/index.html">FloatList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FloatList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Float</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="floatvalue/index.html">FloatValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FloatValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="floatvalue/getvalue.html">FloatValue.value</a></code> of type <code>float</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromjson/index.html">FromJSON</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FromJSON</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataquery/index.html"><span class="identifier">DataQuery</span></a></code>
+<p>A data query subclass for queries that obtain a response from caller-supplied JSON text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geographycollection/index.html">GeographyCollection</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyCollection</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geographyvalue/index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A collection of geography values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geographylinestring/index.html">GeographyLineString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyLineString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geographyvalue/index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography points which represents a joined string of lines.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geographymultilinestring/index.html">GeographyMultiLineString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyMultiLineString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geographyvalue/index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography line strings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geographymultipoint/index.html">GeographyMultiPoint</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyMultiPoint</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geographyvalue/index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography points.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geographymultipolygon/index.html">GeographyMultiPolygon</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyMultiPolygon</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geographyvalue/index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography polygons.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geographypoint/index.html">GeographyPoint</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyPoint</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geographyvalue/index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A geography point.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geographypolygon/index.html">GeographyPolygon</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyPolygon</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geographyvalue/index.html"><span class="identifier">GeographyValue</span></a></code>
+<p>A sequence of geography multi-points which represents a polygon. The first multi-point coordinate is the exterior ring, any others are interior rings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geographyvalue/index.html">GeographyValue</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">GeographyValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geospatialvalue/index.html"><span class="identifier">GeospatialValue</span></a></code>
+<p>Abstract base class for geography data values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geographyvaluelist/index.html">GeographyValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeographyValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="geographyvalue/index.html"><span class="identifier">GeographyValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="geographyvalue/index.html">com.sap.cloud.mobile.odata.GeographyValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geometrycollection/index.html">GeometryCollection</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryCollection</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>A collection of geometry values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geometrylinestring/index.html">GeometryLineString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryLineString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>A sequence of geometry points which represents a joined string of lines.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geometrymultilinestring/index.html">GeometryMultiLineString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryMultiLineString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>A sequence of geometry line strings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geometrymultipoint/index.html">GeometryMultiPoint</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryMultiPoint</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>A sequence of geometry points.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geometrymultipolygon/index.html">GeometryMultiPolygon</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryMultiPolygon</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>A sequence of geometry polygons.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geometrypoint/index.html">GeometryPoint</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryPoint</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>A geometry point.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geometrypolygon/index.html">GeometryPolygon</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryPolygon</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geometryvalue/index.html"><span class="identifier">GeometryValue</span></a></code>
+<p>A sequence of geometry multi-points which represents a polygon.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geometryvalue/index.html">GeometryValue</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">GeometryValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="geospatialvalue/index.html"><span class="identifier">GeospatialValue</span></a></code>
+<p>Abstract base class for geometry data values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geometryvaluelist/index.html">GeometryValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GeometryValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="geometryvalue/index.html"><span class="identifier">GeometryValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="geometryvalue/index.html">com.sap.cloud.mobile.odata.GeometryValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geospatialvalue/index.html">GeospatialValue</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">GeospatialValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Abstract base class for geospatial (geography/geometry) data values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="globaldatetime/index.html">GlobalDateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GlobalDateTime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#dateTime">dateTime</a> type with zone offset.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="globaldatetimelist/index.html">GlobalDateTimeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GlobalDateTimeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="grouptransform/index.html">GroupTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GroupTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="transformvalue/index.html"><span class="identifier">TransformValue</span></a></code>
+<p>Represents a group transform item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="guidvalue/index.html">GuidValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GuidValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> GUID value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="guidvaluelist/index.html">GuidValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GuidValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="httpdatetime/index.html">HttpDateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpDateTime</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="integerlist/index.html">IntegerList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntegerList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">BigInteger</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="integervalue/index.html">IntegerValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntegerValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="integervalue/getvalue.html">IntegerValue.value</a></code> of type <code>integer</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="intlist/index.html">IntList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="intset/index.html">IntSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="setbase/index.html"><span class="identifier">SetBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="intvalue/index.html">IntValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IntValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="intvalue/getvalue.html">IntValue.value</a></code> of type <code>int</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jsonentityprovider/index.html">JsonEntityProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonEntityProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataserviceprovider/index.html"><span class="identifier">DataServiceProvider</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="linestringcoordinates/index.html">LineStringCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LineStringCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="pointcoordinates/index.html"><span class="identifier">PointCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="pointcoordinates/index.html">com.sap.cloud.mobile.odata.PointCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="listbase/index.html">ListBase</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ListBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Base class for strongly-typed lists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="localdate/index.html">LocalDate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDate</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#date">date</a> type without zone offset.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="localdatelist/index.html">LocalDateList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDateList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="localdate/index.html"><span class="identifier">LocalDate</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="localdatetime/index.html">LocalDateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDateTime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#dateTime">dateTime</a> type without zone offset.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="localdatetimelist/index.html">LocalDateTimeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalDateTimeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="localdatetime/index.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="localtime/index.html">LocalTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalTime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#time">time</a> type without zone offset.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="localtimelist/index.html">LocalTimeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LocalTimeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="localtime/index.html"><span class="identifier">LocalTime</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="longlist/index.html">LongList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LongList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Long</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="longset/index.html">LongSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LongSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="setbase/index.html"><span class="identifier">SetBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="longvalue/index.html">LongValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">LongValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="longvalue/getvalue.html">LongValue.value</a></code> of type <code>long</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mapbase/index.html">MapBase</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">MapBase</span></code>
+<p>Base class for strongly-typed maps.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="metadatalock/index.html">MetadataLock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MetadataLock</span></code>
+<p>A lock for ensuring thread-safe access to mutable service metadata.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="metadataonlyprovider/index.html">MetadataOnlyProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MetadataOnlyProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataserviceprovider/index.html"><span class="identifier">DataServiceProvider</span></a></code>
+<p>A data service provider that only provdes service metadata.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="monthofyear/index.html">MonthOfYear</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">MonthOfYear</span></code>
+<p>Constants to represent months of the year.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="multilinestringcoordinates/index.html">MultiLineStringCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MultiLineStringCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="linestringcoordinates/index.html"><span class="identifier">LineStringCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="linestringcoordinates/index.html">com.sap.cloud.mobile.odata.LineStringCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="multipointcoordinates/index.html">MultiPointCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MultiPointCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="pointcoordinates/index.html"><span class="identifier">PointCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="pointcoordinates/index.html">com.sap.cloud.mobile.odata.PointCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="multipolygoncoordinates/index.html">MultiPolygonCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MultiPolygonCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="polygoncoordinates/index.html"><span class="identifier">PolygonCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="polygoncoordinates/index.html">com.sap.cloud.mobile.odata.PolygonCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="navigationproperty/index.html">NavigationProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NavigationProperty</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="property/index.html"><span class="identifier">Property</span></a></code>
+<p>Represents an OData navigation property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="networkoptions/index.html">NetworkOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NetworkOptions</span></code>
+<p>Options for interaction with a data network.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="objectlist/index.html">ObjectList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ObjectList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="objectmap/index.html">ObjectMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ObjectMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="onlinedataservice/index.html">OnlineDataService</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OnlineDataService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataservice/index.html"><span class="identifier">DataService</span></a></code>
+<p>A specialization of <code><a href="dataservice/index.html">com.sap.cloud.mobile.odata.DataService</a></code> where the <code><a href="dataservice/getprovider.html">OnlineDataService.provider</a></code> is an <code><a href="onlineodataprovider/index.html">com.sap.cloud.mobile.odata.OnlineODataProvider</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="onlineodataprovider/index.html">OnlineODataProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OnlineODataProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataserviceprovider/index.html"><span class="identifier">DataServiceProvider</span></a></code>
+<p>A data service provider for online OData.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parameter/index.html">Parameter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Parameter</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> parameter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parameterlist/index.html">ParameterList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ParameterList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="parameter/index.html"><span class="identifier">Parameter</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="parameter/index.html">com.sap.cloud.mobile.odata.Parameter</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pathannotations/index.html">PathAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PathAnnotations</span></code>
+<p>Annotations that are associated with a CSDL target path that is a child of a CSDL model element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pathannotationslist/index.html">PathAnnotationsList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PathAnnotationsList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="pathannotations/index.html"><span class="identifier">PathAnnotations</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pathannotationsmap/index.html">PathAnnotationsMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PathAnnotationsMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pathresolver/index.html">PathResolver</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PathResolver</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pointcoordinates/index.html">PointCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PointCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Double</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>Represents an N-dimensional point. Note that some coordinate reference systems will support only <code><a href="pointcoordinates/getx.html">PointCoordinates.x</a></code> and <code><a href="pointcoordinates/gety.html">PointCoordinates.y</a></code> dimensions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="polygoncoordinates/index.html">PolygonCoordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PolygonCoordinates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="linestringcoordinates/index.html"><span class="identifier">LineStringCoordinates</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="linestringcoordinates/index.html">com.sap.cloud.mobile.odata.LineStringCoordinates</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="property/index.html">Property</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Property</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="propertypath/index.html"><span class="identifier">PropertyPath</span></a></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> structural or navigation property. Used for properties of complex and entity types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="propertylist/index.html">PropertyList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PropertyList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="property/index.html"><span class="identifier">Property</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="property/index.html">com.sap.cloud.mobile.odata.Property</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="propertymap/index.html">PropertyMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PropertyMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="propertypath/index.html">PropertyPath</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PropertyPath</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Abstract base class for <code><a href="property/index.html">com.sap.cloud.mobile.odata.Property</a></code> and <code><a href="datapath/index.html">com.sap.cloud.mobile.odata.DataPath</a></code>. Values of type <code>PropertyPath</code> are typically used in query construction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="propertypathlist/index.html">PropertyPathList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PropertyPathList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="propertypath/index.html">com.sap.cloud.mobile.odata.PropertyPath</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="providerinternal/index.html">ProviderInternal</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ProviderInternal</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="proxyinternal/index.html">ProxyInternal</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ProxyInternal</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryalias/index.html">QueryAlias</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryAlias</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>An alias reference for a data value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryfilter/index.html">QueryFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFilter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates the boolean value of an <a href="http://odata.org">OData</a> logical operator. Used to wrap the results of logical <code><a href="queryoperator/index.html">com.sap.cloud.mobile.odata.QueryOperator</a></code> in a type-safe manner.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryformatter/index.html">QueryFormatter</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">QueryFormatter</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryfunction/index.html">QueryFunction</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFunction</span></code>
+<p>Represents a <a href="http://odata.org">OData</a> query function. Query functions are typically used within <code><a href="dataquery/filter.html">DataQuery.filter</a></code>. <code><a href="queryfunctioncall/index.html">com.sap.cloud.mobile.odata.QueryFunctionCall</a></code> can be constructed using static calls on <code><a href="queryfunction/index.html">com.sap.cloud.mobile.odata.QueryFunction</a></code> or, more conveniently, by chained calls on <code><a href="queryvalue/index.html">com.sap.cloud.mobile.odata.QueryValue</a></code>. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryfunctioncall/index.html">QueryFunctionCall</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFunctionCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates the application of an <a href="http://odata.org">OData</a> query function to a list of arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryfunctioncode/index.html">QueryFunctionCode</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">QueryFunctionCode</span></code>
+<p>Constants for <code><a href="queryfunction/getcode.html">QueryFunction.code</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryfunctionlist/index.html">QueryFunctionList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFunctionList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="queryfunction/index.html"><span class="identifier">QueryFunction</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryfunctionmap/index.html">QueryFunctionMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFunctionMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryinternal/index.html">QueryInternal</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">QueryInternal</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryoperator/index.html">QueryOperator</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryOperator</span></code>
+<p>Represents a <a href="http://odata.org">OData</a> query operator. Query operators are typically used within <code><a href="dataquery/filter.html">DataQuery.filter</a></code>. <code><a href="queryoperatorcall/index.html">com.sap.cloud.mobile.odata.QueryOperatorCall</a></code> can be constructed using static calls on <code><a href="queryoperator/index.html">com.sap.cloud.mobile.odata.QueryOperator</a></code> or, more conveniently, by chained calls on <code><a href="queryvalue/index.html">com.sap.cloud.mobile.odata.QueryValue</a></code>. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryoperatorcall/index.html">QueryOperatorCall</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryOperatorCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Encapsulates the application of an <a href="http://odata.org">OData</a> query operator to a list of arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryoperatorcode/index.html">QueryOperatorCode</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">QueryOperatorCode</span></code>
+<p>Constants for <code><a href="queryoperator/getcode.html">QueryOperator.code</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryoperatorlist/index.html">QueryOperatorList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryOperatorList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="queryoperator/index.html"><span class="identifier">QueryOperator</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryoperatormap/index.html">QueryOperatorMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryOperatorMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryparser/index.html">QueryParser</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryParser</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryresult/index.html">QueryResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryResult</span></code>
+<p>Holds a data query and its result value. Allows conversion of the result to optional/required/list values for basic, complex and entity types.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="querytype/index.html">QueryType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>A data type reference for use in a query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryvalue/index.html">QueryValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Base class for paths and properties as well as wrapped constant values and query function/operation calls. Intended to allow convenient cascaded application of query functions/operators in fluent query construction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="requestbatch/index.html">RequestBatch</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RequestBatch</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> batch request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="requestoptions/index.html">RequestOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RequestOptions</span></code>
+<p>Options for processing of data requests. If request options are used for <code><a href="requestoptions/repeatable.html">RequestOptions.repeatable</a></code> requests, a new request options object should be used for each distinct request (or the <code><a href="requestoptions/repeatable.html">RequestOptions.repeatable</a></code> property should be reset before object re-use). The repeated execution of a failed request should re-use the original request options object without <code><a href="requestoptions/repeatable.html">RequestOptions.repeatable</a></code> being reset beforehand.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="selectitem/index.html">SelectItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SelectItem</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> select item. A select item indicates a property (or expression) that is used in the $select system query option.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="selectitemlist/index.html">SelectItemList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SelectItemList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="selectitem/index.html"><span class="identifier">SelectItem</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="serviceoptions/index.html">ServiceOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ServiceOptions</span></code>
+<p>Options for interaction with a data service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setbase/index.html">SetBase</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">SetBase</span></code>
+<p>Base class for strongly-typed sets.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shortlist/index.html">ShortList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ShortList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Short</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="shortvalue/index.html">ShortValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ShortValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="shortvalue/getvalue.html">ShortValue.value</a></code> of type <code>short</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="simpletype/index.html">SimpleType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SimpleType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Represents a type definition for an underlying basic type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="simpletypelist/index.html">SimpleTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SimpleTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="simpletype/index.html"><span class="identifier">SimpleType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="simpletypemap/index.html">SimpleTypeMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SimpleTypeMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="single/index.html">Single</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">Single</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="sortitem/index.html">SortItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SortItem</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> sort item. A sort item indicates a property (or expression) that is used in the $orderby system query option.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortitemlist/index.html">SortItemList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SortItemList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="sortitem/index.html"><span class="identifier">SortItem</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortorder/index.html">SortOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SortOrder</span></code>
+<p>Sort order for data queries.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="streambase/index.html">StreamBase</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">StreamBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Abstract base class for streams.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="streamlink/index.html">StreamLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StreamLink</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents a link to the value of a media entity resource or a stream-typed property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="streamproperty/index.html">StreamProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StreamProperty</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="property/index.html"><span class="identifier">Property</span></a></code>
+<p>Encapsulates the metadata of an <a href="http://odata.org">OData</a> stream property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stringlist/index.html">StringList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StringList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stringmap/index.html">StringMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StringMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>A map from key type <code>string</code> to value type <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stringset/index.html">StringSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StringSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="setbase/index.html"><span class="identifier">SetBase</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stringvalue/index.html">StringValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StringValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="stringvalue/getvalue.html">StringValue.value</a></code> of type <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="structuralproperty/index.html">StructuralProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StructuralProperty</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="property/index.html"><span class="identifier">Property</span></a></code>
+<p>Represents an OData structural property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="structurebase/index.html">StructureBase</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">StructureBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>The canonical path of this value relative to the service root URL. Common base class for <code><a href="complexvalue/index.html">com.sap.cloud.mobile.odata.ComplexValue</a></code> and <code><a href="entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="structuretype/index.html">StructureType</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">StructureType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Common base class for <code><a href="complextype/index.html">com.sap.cloud.mobile.odata.ComplexType</a></code> and <code><a href="entitytype/index.html">com.sap.cloud.mobile.odata.EntityType</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="structuretypelist/index.html">StructureTypeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StructureTypeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="structuretype/index.html">com.sap.cloud.mobile.odata.StructureType</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="structuretypemap/index.html">StructureTypeMap</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StructureTypeMap</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="mapbase/index.html"><span class="identifier">MapBase</span></a></code>
+<p>A map from key type <code>string</code> to value type <code><a href="structuretype/index.html">com.sap.cloud.mobile.odata.StructureType</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="systemkey/index.html">SystemKey</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">SystemKey</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tojson/index.html">ToJSON</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ToJSON</span></code>
+<p>A utility class for formatting OData values as JSON strings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toptransform/index.html">TopTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TopTransform</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="amounttransform/index.html"><span class="identifier">AmountTransform</span></a></code>
+<p>Represents the Top* transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transformvalue/index.html">TransformValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TransformValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> transformation item defined in OData Data Aggregation. A TransformValue indicates an expression that is used in the $apply system query option.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transformvaluelist/index.html">TransformValueList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TransformValueList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="transformvalue/index.html"><span class="identifier">TransformValue</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of transformation items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="typefacets/index.html">TypeFacets</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TypeFacets</span></code>
+<p>Encapsulates the metadata of custom <a href="http://odata.org">OData</a> type facets.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unsignedbyte/index.html">UnsignedByte</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnsignedByte</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="unsignedbyte/getvalue.html">UnsignedByte.value</a></code> of type <code>unsignedByte</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unsignedbytelist/index.html">UnsignedByteList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnsignedByteList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unsignedshort/index.html">UnsignedShort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnsignedShort</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>DataValue subclass that wraps a <code><a href="unsignedshort/getvalue.html">UnsignedShort.value</a></code> of type <code>unsignedShort</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unsignedshortlist/index.html">UnsignedShortList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">UnsignedShortList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="updatemode/index.html">UpdateMode</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UpdateMode</span></code>
+<p>Update mode for entity updates.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="yearmonthduration/index.html">YearMonthDuration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">YearMonthDuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Represents the XML Schema <a href="http://www.w3.org/TR/xmlschema11-2/#yearMonthDuration">yearMonthDuration</a> type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="yearmonthdurationlist/index.html">YearMonthDurationList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">YearMonthDurationList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="yearmonthduration/index.html"><span class="identifier">YearMonthDuration</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="dataexception/index.html">DataException</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata.core/exceptionbase/index.html"><span class="identifier">ExceptionBase</span></a></code>
+<p>Abstract base class for data exceptions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataformatexception/index.html">DataFormatException</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataFormatException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when data does not match the expected format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datanetworkexception/index.html">DataNetworkException</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataNetworkException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a request fails due to a data network issue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataqueryexception/index.html">DataQueryException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataQueryException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a query cannot be parsed or evaluated.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataschemaexception/index.html">DataSchemaException</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataSchemaException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a problem is detected with a data schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dataserviceexception/index.html">DataServiceException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataServiceException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a <code>DataService</code> request fails due to a data service issue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datastorageexception/index.html">DataStorageException</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataStorageException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a <code>DataService</code> request fails due to a data storage issue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="datastreamexception/index.html">DataStreamException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataStreamException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="queryresultexception/index.html">QueryResultException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryResultException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when a query result cannot be converted to the expected type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="requestcancelledexception/index.html">RequestCancelledException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">RequestCancelledException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="dataexception/index.html"><span class="identifier">DataException</span></a></code>
+<p>Exception thrown when an asynchronous request is cancelled.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

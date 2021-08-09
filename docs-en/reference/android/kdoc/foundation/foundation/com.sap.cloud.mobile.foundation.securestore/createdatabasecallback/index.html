@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CreateDatabaseCallback - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.securestore</a>&nbsp;/&nbsp;<a href="./index.html">CreateDatabaseCallback</a><br/>
+<br/>
+<h1>CreateDatabaseCallback</h1>
+<a name="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback"></a>
+<code><span class="keyword">interface </span><span class="identifier">CreateDatabaseCallback</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.securestore.CreateDatabaseCallback"></a>
+<code><span class="keyword">interface </span><span class="identifier">CreateDatabaseCallback</span></code>
+<p>This interface is used to provide callback methods to create or update database objects when instantiating Secure Database Store via <code><a href="../securedatabasestore/-init-.html">SecureDatabaseStore#SecureDatabaseStore(Context, String, int, CreateDatabaseCallback)</a></code>. <pre><code>
+1. Initial database creation-- use database version 1, and create database objects in
+   onCreate method.
+
+   For example,
+
+static final int DATABASE_VERSION = 1;
+    ...
+    SecureDatabaseStore store = new SecureDatabaseStore(androidContext, storeName,
+        DATABASE_VERSION,
+        new CreateDatabaseCallback(){
+            public void onCreate(SecureDatabaseStore store){
+                // Executes the create table SQL statement when the database is created the first
+                // time.
+                store.executeUpdate(&lt;create table SQL statement(s)&gt;);
+                ...
+            }
+
+            public void onUpdate(SecureDatabaseStore store, int oldVersion, int newVersion) {
+                // No need to to anything if newVersion == oldVersion.
+                // For example, when DATABASE_VERSION == 1, this method will not be called.
+                    ...
+            }
+        });
+
+
+2. When database table(s) changed-- use a higher database version for each such change, and
+   implements onUpdate to alter the table(s) or migrate existing table data to
+   the new table.
+
+   For example, when a SecureDatabaseStore has evolved to version 3,
+
+static final int DATABASE_VERSION = 3;
+    ...
+    SecureDatabaseStore store = new SecureDatabaseStore(androidContext, storeName,
+        DATABASE_VERSION,
+        new CreateDatabaseCallback(){
+            public void onCreate(SecureDatabaseStore store){
+                // Executes the create table SQL statement when the database is created the first
+                // time.
+                store.executeUpdate(&lt;create table SQL statement(s) for the version 3 table(s)&gt;);
+                ...
+            }
+
+            public void onUpdate(SecureDatabaseStore store, int oldVersion, int newVersion) {
+                // Modify the existing table or migrate the original table data based on the
+                // differences across each version.
+                if (oldVersion &lt; 2) {
+                    ...
+                }
+
+                if (oldVersion &lt; 3) {
+                    ...
+                }
+                ...
+                // Now the app will iterate over the update statements and run any that are needed.
+                // No matter what previous version was and regardless of what more recent version
+                // they upgrade to, the app will run the proper statements to take the app from the
+                // older schema to the properly upgraded one.
+            }
+        });
+
+</code></pre></p>
+<p><strong>See Also</strong><br/>
+<a href="../securedatabasestore/index.html">SecureDatabaseStore</a></p>
+</BODY>
+</HTML>

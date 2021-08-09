@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataErrorArchiveEntity.setRequestEntity - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataErrorArchiveEntity</a>&nbsp;/&nbsp;<a href="./setrequestentity.html">setRequestEntity</a><br/>
+<br/>
+<h1>setRequestEntity</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setRequestEntity(com.sap.cloud.mobile.odata.EntityValue)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setRequestEntity(com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the navigation property which can be used to directly read and directly modify the failed request in the request queue. The actual entity type of the returned entity will be dependent on the type of request. For example, if the failed request was a PATCH request on the entity Customers(101), then the entity returned by this navigation property will have a Customer entity type. Note that this navigation property differs from AffectedEntity; AffectedEntity returns the CURRENT state of the entity in the Offline Store where as RequestEntity is an typed representation of the request in the request queue itself.</p>
+<h3>Parameters</h3>
+<p><a name="value"></a>
+<code>value</code> - <span class="identifier">EntityValue</span><span class="symbol">?</span><span class="symbol">:</span> The navigation property which can be used to directly read and directly modify the failed request in the request queue. The actual entity type of the returned entity will be dependent on the type of request. For example, if the failed request was a PATCH request on the entity Customers(101), then the entity returned by this navigation property will have a Customer entity type. Note that this navigation property differs from AffectedEntity; AffectedEntity returns the CURRENT state of the entity in the Offline Store where as RequestEntity is an typed representation of the request in the request queue itself.</p>
+</BODY>
+</HTML>

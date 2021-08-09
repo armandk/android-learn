@@ -1,0 +1,222 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonDeltaStream - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">JsonDeltaStream</a><br/>
+<br/>
+<h1>JsonDeltaStream</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonDeltaStream</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/deltastream/index.html"><span class="identifier">DeltaStream</span></a></code>
+<p>A delta stream for decoding OData delta streams with JSON format.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="abort.html">abort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">abort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Close this stream and release all associated resources, without checking first that the end of stream has been reached.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Close this stream and release all associated resources, checking first that the end of stream has been reached. Can safely be called even if the stream was previously closed. If a delta link was encountered before the stream was closed, it will be available via the <code><a href="../../com.sap.cloud.mobile.odata/deltastream/getdeltalink.html">DeltaStream.deltaLink</a></code> property only after the stream is closed. If a next link was encountered before the stream was closed, it will be available via the <code><a href="../../com.sap.cloud.mobile.odata/deltastream/getnextlink.html">DeltaStream.nextLink</a></code> property only after the stream is closed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromstream.html">fromStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonDeltaStream$fromStream(com.sap.cloud.mobile.odata.CharStream, com.sap.cloud.mobile.odata.DataContext)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/charstream/index.html"><span class="identifier">CharStream</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonDeltaStream$fromStream(com.sap.cloud.mobile.odata.CharStream, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonDeltaStream</span></a></code>
+<p>Convert a character stream containing OData delta JSON encoding into a stream of delta items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="next.html">next</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">next</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>If this stream has not been <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> and has a next delta item, then advance to the next delta item and return <code>true</code>. Otherwise return <code>false</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/getcurrent.html">getCurrent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCurrent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) the current delta item (an <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code> or <code><a href="../../com.sap.cloud.mobile.odata/changedlink/index.html">com.sap.cloud.mobile.odata.ChangedLink</a></code>), or <code>null</code> if there is no current delta item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type with a <code><a href="../../com.sap.cloud.mobile.odata/datatype/getcode.html">DataType.code</a></code> of DataType.DELTA_STREAM.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/getdeltaitem.html">getDeltaItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaItem</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) The current delta item (an <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code> or <code><a href="../../com.sap.cloud.mobile.odata/changedlink/index.html">com.sap.cloud.mobile.odata.ChangedLink</a></code>), or <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/getdeltalink.html">getDeltaLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The delta-link (if any) that was encountered when <code><a href="../../com.sap.cloud.mobile.odata/deltastream/next.html">DeltaStream.next</a></code> was called repeatedly until it returned <code>false</code> and then <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> was called, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/getentity.html">getEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return the current entity value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/getlink.html">getLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/changedlink/index.html"><span class="identifier">ChangedLink</span></a></code>
+<p>Return the current changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/getnextlink.html">getNextLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNextLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The next-link (if any) that was encountered when <code><a href="../../com.sap.cloud.mobile.odata/deltastream/next.html">DeltaStream.next</a></code> was called repeatedly until it returned <code>false</code> and then <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> was called, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/getreadlink.html">getReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getReadLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The read-link (if any) that was encountered when <code><a href="../../com.sap.cloud.mobile.odata/deltastream/next.html">DeltaStream.next</a></code> was called repeatedly until it returned <code>false</code> and then <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> was called, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/hascurrent.html">hasCurrent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasCurrent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the if the stream has a current delta item (the most recent call to <code><a href="../../com.sap.cloud.mobile.odata/deltastream/next.html">DeltaStream.next</a></code> returned <code>true</code> and <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> has not been called)).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/hasentity.html">hasEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Check if the stream has a current delta item which is an entity value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/haslink.html">hasLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Check if the stream has a current delta item which is a changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/isclosed.html">isClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isClosed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return has <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> been called?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/setclosed.html">setClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setClosed</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DeltaStream$setClosed(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set has <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> been called?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/setdeltaitem.html">setDeltaItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaItem</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DeltaStream$setDeltaItem(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the current delta item (an <code><a href="../../com.sap.cloud.mobile.odata/entityvalue/index.html">com.sap.cloud.mobile.odata.EntityValue</a></code> or <code><a href="../../com.sap.cloud.mobile.odata/changedlink/index.html">com.sap.cloud.mobile.odata.ChangedLink</a></code>), or <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/setdeltalink.html">setDeltaLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DeltaStream$setDeltaLink(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the delta-link (if any) that was encountered when <code><a href="../../com.sap.cloud.mobile.odata/deltastream/next.html">DeltaStream.next</a></code> was called repeatedly until it returned <code>false</code> and then <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> was called, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/setnextlink.html">setNextLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNextLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DeltaStream$setNextLink(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the next-link (if any) that was encountered when <code><a href="../../com.sap.cloud.mobile.odata/deltastream/next.html">DeltaStream.next</a></code> was called repeatedly until it returned <code>false</code> and then <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> was called, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/setreadlink.html">setReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setReadLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DeltaStream$setReadLink(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the read-link (if any) that was encountered when <code><a href="../../com.sap.cloud.mobile.odata/deltastream/next.html">DeltaStream.next</a></code> was called repeatedly until it returned <code>false</code> and then <code><a href="../../com.sap.cloud.mobile.odata/deltastream/close.html">DeltaStream.close</a></code> was called, otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.odata/deltastream/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="../../com.sap.cloud.mobile.odata/deltastream/getdatatype.html">DeltaStream.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

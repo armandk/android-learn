@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OAuth2BrowserProcessor - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.authentication</a>&nbsp;/&nbsp;<a href="./index.html">OAuth2BrowserProcessor</a><br/>
+<br/>
+<h1>OAuth2BrowserProcessor</h1>
+<a name="com.sap.cloud.mobile.foundation.authentication.OAuth2BrowserProcessor"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OAuth2BrowserProcessor</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../oauth2processor/index.html"><span class="identifier">OAuth2Processor</span></a></code><br/>
+<a name="com.sap.cloud.mobile.foundation.authentication.OAuth2BrowserProcessor"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OAuth2BrowserProcessor</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../oauth2processor/index.html"><span class="identifier">OAuth2Processor</span></a></code>
+<p>Handles authentication with OAuth2. The default browser will be used if it matches the browser whitelist. A custom tab will be used instead of a standalone browser, if the default browser supports it. If there is no default browser, a browser matching the whitelist that supports custom tabs will be chosen if one exists (with preference given to Chrome if multiple browsers meet that criteria). Otherwise, any browser matching the whitelist will be chosen. If there are no browsers installed that are allowed by the whitelist then authentication will fail. This class is meant to be used with <code><a href="../oauth2interceptor/index.html">OAuth2Interceptor</a></code>. <pre><code>OkHttpClient okHttpClient = new OkHttpClient.Builder()
+      .addInterceptor(
+          new OAuth2Interceptor(
+              new OAuth2BrowserProcessor(oauthConfiguration),
+              tokenStore))
+      .cookieJar(new WebkitCookieJar())
+      .build();
+  
+  </code></pre></p>
+</BODY>
+</HTML>

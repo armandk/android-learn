@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataDefiningQuery - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataDefiningQuery</a><br/>
+<br/>
+<h1>OfflineODataDefiningQuery</h1>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataDefiningQuery</span></code>
+<p>A defining query is an OData read request that targets the OData backend associated with the 'OfflineODataProvider' and retrieves a subset of the OData backend data. </p>
+<p> Multiple defining queries can be defined for each OData backend. </p>
+<p> Defining queries are a subset of data from the OData backend that is sent to the client either during the initial open of the 'OfflineODataProvider' or during a download.</p>
+<p><strong>See Also</strong><br/>
+<a href="../offlineodataprovider/adddefiningquery.html">OfflineODataProvider#addDefiningQuery(OfflineODataDefiningQuery)</a><a href="../offlineodataprovider/download.html">OfflineODataProvider#download(List, Action0, Action1)</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OfflineODataDefiningQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery$<init>(kotlin.String, DataQuery, kotlin.Boolean)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery$<init>(kotlin.String, DataQuery, kotlin.Boolean)/query">query</span><span class="symbol">:</span>&nbsp;<span class="identifier">DataQuery</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery$<init>(kotlin.String, DataQuery, kotlin.Boolean)/automaticallyRetrievesStreams">automaticallyRetrievesStreams</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">OfflineODataDefiningQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery$<init>(kotlin.String, kotlin.String, kotlin.Boolean)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery$<init>(kotlin.String, kotlin.String, kotlin.Boolean)/query">query</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataDefiningQuery$<init>(kotlin.String, kotlin.String, kotlin.Boolean)/automaticallyRetrievesStreams">automaticallyRetrievesStreams</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span></code>
+<p>Constructs an OfflineODataDefiningQuery</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getisremoving.html">getIsRemoving</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIsRemoving</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Returns whether or not the defining query is being removed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns name of the defining query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getquery.html">getQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getQuery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">!</span></code>
+<p>Returns the URL string of the defining query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isautomaticallyretrievesstreams.html">isAutomaticallyRetrievesStreams</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isAutomaticallyRetrievesStreams</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Returns whether or not to automatically retrieve stream.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setisremoving.html">setIsRemoving</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setIsRemoving</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set current defining query is currently being removed. This method is only for internal usage.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AggregateExpression - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">AggregateExpression</a><br/>
+<br/>
+<h1>AggregateExpression</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AggregateExpression</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> aggregate expression item.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AggregateExpression</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> aggregate expression item.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="count.html">count</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">count</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$count(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AggregateExpression</span></a></code>
+<p>Creates a $count aggregate expression item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="create.html">create</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$create(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$create(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../aggregatemethod/index.html"><span class="identifier">AggregateMethod</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$create(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AggregateExpression</span></a></code>
+<p>Creates an aggregate expression item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="createwithnavigationpath.html">createWithNavigationPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">createWithNavigationPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$createWithNavigationPath(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String, com.sap.cloud.mobile.odata.PropertyPath)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$createWithNavigationPath(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String, com.sap.cloud.mobile.odata.PropertyPath)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../aggregatemethod/index.html"><span class="identifier">AggregateMethod</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$createWithNavigationPath(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String, com.sap.cloud.mobile.odata.PropertyPath)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$createWithNavigationPath(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.AggregateMethod, kotlin.String, com.sap.cloud.mobile.odata.PropertyPath)/navigationPath">navigationPath</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AggregateExpression</span></a></code>
+<p>Creates an aggregate expression item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="from.html">from</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">from</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$from(com.sap.cloud.mobile.odata.PropertyPath, com.sap.cloud.mobile.odata.AggregateMethod)/propertyPath">propertyPath</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.AggregateExpression$from(com.sap.cloud.mobile.odata.PropertyPath, com.sap.cloud.mobile.odata.AggregateMethod)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../aggregatemethod/index.html"><span class="identifier">AggregateMethod</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AggregateExpression</span></a></code>
+<p>Adds a 'from' clause to the aggregate expression.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getaggregatefromlist.html">getAggregateFromList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAggregateFromList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../aggregatefromlist/index.html"><span class="identifier">AggregateFromList</span></a></code>
+<p>Return the items in the "from" clause of the aggregate item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getalias.html">getAlias</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAlias</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The alias of the aggregate transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmethod.html">getMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMethod</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../aggregatemethod/index.html"><span class="identifier">AggregateMethod</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The method of the aggregate transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnavigationpath.html">getNavigationPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNavigationPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The navigation path to be applied for the aggregate expression. All the paths will be evaluated relative to this path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The value of the aggregate transformation item.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iscount.html">isCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return true if the aggregate transformation item represents a $count item.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

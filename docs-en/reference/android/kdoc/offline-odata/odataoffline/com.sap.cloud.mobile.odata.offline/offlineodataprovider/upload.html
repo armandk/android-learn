@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.upload - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./upload.html">upload</a><br/>
+<br/>
+<h1>upload</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Uploads local data to update the OData back end. </p>
+<p> Example Usage: </p>
+<pre><code>// Upload data asynchronously
+      offlineODataProvider.upload(() -&gt; logger.info("Upload completed successfully."),
+                                  (error) -&gt; logger.error("Exception encountered in OfflineOData upload: ", error));
+     
+      
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="successHandler"></a>
+<code>successHandler</code> - <span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">:</span> a success callback function.</p>
+<p><a name="failureHandler"></a>
+<code>failureHandler</code> - <span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">:</span> a failure callback function.</p>
+<p><strong>See Also</strong><br/>
+<a href="cancelupload.html">#cancelUpload()</a><a href="download.html">#download(Action0, Action1)</a><a href="download.html">#download(List, Action0, Action1)</a><a href="haspendingupload.html">#hasPendingUpload()</a><a href="../offlineodatadelegate/index.html">OfflineODataDelegate</a>com.sap.cloud.mobile.odata.core.Action0com.sap.cloud.mobile.odata.core.Action1</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(kotlin.Array((com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory)), Action0, Action1)"></a>
+<code><span class="keyword">fun </span><span class="identifier">upload</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(kotlin.Array((com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory)), Action0, Action1)/categories">categories</span><span class="symbol">:</span>&nbsp;<span class="identifier">Array</span><span class="symbol">&lt;</span><a href="../offlineodatarequestoptions/uploadcategory/index.html"><span class="identifier">OfflineODataRequestOptions.UploadCategory</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(kotlin.Array((com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory)), Action0, Action1)/successHandler">successHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action0</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$upload(kotlin.Array((com.sap.cloud.mobile.odata.offline.OfflineODataRequestOptions.UploadCategory)), Action0, Action1)/failureHandler">failureHandler</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action1</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Partial upload allows Offline OData applications to upload a subset of the requests in the request queue. Requests from multiple upload categories can be uploaded together by performing a partial upload, which is accomplished by calling the upload function with a list of upload categories to upload. All requests that the selected requests depend on are included in the upload, even if those requests are not in the specified upload categories. </p>
+<p> Example Usage: </p>
+<pre><code>// Upload data asynchronously
+      // Upload with a pre-defined upload category of type string literal
+      UploadCategory[] sampleUploadCategory1 = { new UploadCategory( "uploadCategory1" );
+      offlineODataProvider.upload( sampleUploadCategory1,
+                                  () -&gt; logger.info("Upload completed successfully."),
+                                  (error) -&gt; logger.error("Exception encountered in OfflineOData upload: ", error));
+     
+      // Upload customer1 with its entity ID as an upload category of type string literal, even if it wasn't originally set as an upload category
+      UploadCategory[] sampleUploadCategory2 = { new UploadCategory( customer1.getEditLink() ) };
+      offlineODataProvider.upload( sampleUploadCategory2,
+                                  () -&gt; logger.info("Upload completed successfully."),
+                                  (error) -&gt; logger.error("Exception encountered in OfflineOData upload: ", error));
+     
+      // Upload customer2 with its entity value as an upload category of type entity value
+      UploadCategory[] sampleUploadCategory3 = { new UploadCategory( customer2 ) };
+      offlineODataProvider.upload( sampleUploadCategory3,
+                                  () -&gt; logger.info("Upload completed successfully."),
+                                  (error) -&gt; logger.error("Exception encountered in OfflineOData upload: ", error));
+     
+      }
+      &lt;/pre&gt;
+       categories Upload categories. The supported upload category types are: StringLiteral, EntityValue. GeneratedID is an unsupported upload category type.
+       successHandler A success callback function.
+       failureHandler A failure callback function.
+     
+       OfflineODataRequestOptions.UploadCategoryType
+       #cancelUpload()
+       #download(Action0, Action1)
+       #download(List, Action0, Action1)
+       #hasPendingUpload()
+       OfflineODataDelegate
+       com.sap.cloud.mobile.odata.core.Action0
+       com.sap.cloud.mobile.odata.core.Action1</code></pre>
+</BODY>
+</HTML>

@@ -1,0 +1,169 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ChangedLink - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ChangedLink</a><br/>
+<br/>
+<h1>ChangedLink</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChangedLink</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> changed link.</p>
+ See Also: 
+<p><code>ChangeSet.createLink</code>, <code>ChangeSet.updateLink</code>, <code>ChangeSet.deleteLink</code>.</p>
+ 
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ChangedLink</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> changed link.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getdeltatime.html">getDeltaTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Can be used to hold the "last modified time" for a changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsource.html">getSource</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSource</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return source entity which contains the changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsourceproperty.html">getSourceProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSourceProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a></code>
+<p>Return source navigation property for the changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettarget.html">getTarget</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTarget</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return target entity referred to by the changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iscreated.html">isCreated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isCreated</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this a created link? Created links are applicable to one-to-one and one-to-many navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isdeleted.html">isDeleted</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isDeleted</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this an deleted link? Deleted links are applicable to one-to-one and one-to-many navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isupdated.html">isUpdated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isUpdated</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this an updated link? Updated links are only applicable to one-to-one navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcreated.html">setCreated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCreated</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangedLink$setCreated(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is this a created link? Created links are applicable to one-to-one and one-to-many navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeleted.html">setDeleted</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeleted</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangedLink$setDeleted(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is this an deleted link? Deleted links are applicable to one-to-one and one-to-many navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeltatime.html">setDeltaTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangedLink$setDeltaTime(com.sap.cloud.mobile.odata.GlobalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set can be used to hold the "last modified time" for a changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsource.html">setSource</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSource</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangedLink$setSource(com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source entity which contains the changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsourceproperty.html">setSourceProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSourceProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangedLink$setSourceProperty(com.sap.cloud.mobile.odata.Property)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set source navigation property for the changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settarget.html">setTarget</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTarget</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangedLink$setTarget(com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set target entity referred to by the changed link.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setupdated.html">setUpdated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUpdated</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ChangedLink$setUpdated(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is this an updated link? Updated links are only applicable to one-to-one navigation properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

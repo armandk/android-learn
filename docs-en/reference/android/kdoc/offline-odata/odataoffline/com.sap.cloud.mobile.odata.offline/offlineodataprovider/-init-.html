@@ -1,0 +1,224 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.<init> - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$&lt;init&gt;(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)"></a>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/sslClientAuth">sslClientAuth</span><span class="symbol">:</span>&nbsp;<span class="identifier">SslClientAuth</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/delegate">delegate</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadelegate/index.html"><span class="identifier">OfflineODataDelegate</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<strong>Deprecated:</strong> OfflineODataDelegate will be replaced by OfflineODataProviderDelegate.
+<p>Constructs an OfflineODataProvider instance. </p>
+<p> OfflineODataProvider depends on Android Context from AndroidSystem. </p>
+<p> Example Usage: </p>
+<p> The sample shows how to use OfflineODataProvider constructor and open method. </p>
+<p> And it turns an asynchronous open call to be synchronous and makes CRUD operations after a successful open. </p>
+<pre><code>// Retrieve the OkHttpClient initialized in Foundation module
+      OkHttpClient okHttpClient = ClientProvider.get();
+     
+      // Initialize application context for use by OfflineODataProvider
+      AndroidSystem.setContext(applicationContext);
+     
+      // Specify parameters for OfflineODataProvider construction
+      OfflineODataParameters parameters = new OfflineODataParameters();
+      parameters.setStoreEncryptionKey("secret-key");
+     
+      // Create a new instance of offlineODataProvider use try-with-resources statement, to ensure OfflineODataProvider instance
+      // to be closed after usage.
+      try (OfflineODataProvider offlineODataProvider = new OfflineODataProvider(new URL(SERVICE_URL), parameters, okHttpClient)) {
+          // Construct a DataService instance
+          DataService dataService = new DataService(offlineODataProvider);
+     
+          // Add defining queries
+          offlineODataProvider.addDefiningQuery(new OfflineODataDefiningQuery("Customers", "Customers", false));
+          offlineODataProvider.addDefiningQuery(new OfflineODataDefiningQuery("Orders", "Orders", false));
+          offlineODataProvider.addDefiningQuery(new OfflineODataDefiningQuery("OrderItems", "OrderItems", false));
+     
+          final CountDownLatch completed = new CountDownLatch( 1 );
+          final AtomicReference&lt;Exception&gt; ex = new AtomicReference&lt;&gt;();
+     
+          // Open the provider
+          offlineODataProvider.open(() -&gt; completed.countDown(),
+                                    (error) -&gt; { logger.error("Exception encountered in OfflineOData open: ", error);
+                                                 ex.set(error);
+                                                 completed.countDown(); }} );
+          completed.await();
+          if ( ex.get() != null ) {
+              // Handle the open error.
+          } else {
+              // Continue operating on offlineODataProvider after open.
+              // Once the provider is opened, various operations can be performed, such as executing CRUD actions, uploading
+              // and downloading updates from backend service.
+     
+     
+          }
+      
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="serviceRoot"></a>
+<code>serviceRoot</code> - <span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">:</span> the service root of the OData back end. This value depends on the "Rewrite Mode" configuration of the application on SAP Mobile Service. If "Rewrite Mode" is set to "Rewrite URL" then the path of the service root is the Application Connection Name. If "Rewrite Mode" is set to "Rewrite URL on the Back End" then the path or the service root should be the same as the path of the back end URL specified on the SAP Mobile Services. 
+<p> For example, if the SAP Mobile Services being used is at https://sapcpms/, the application is configured with an Application Connection Name of "myconn" on an OData back end with service root "http://myhost:80/odata/endpoint", then the serviceRoot should be "https://sapcpms/myconn/" for "Rewrite URL" and "https://sapcpms/odata/endpoint" for "Rewrite URL on Back End".</p>
+</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">:</span> the configuration parameters for the OfflineODataProvider.</p>
+<p><a name="okHttpClient"></a>
+<code>okHttpClient</code> - <span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">:</span> the HTTP client is used by OfflineODataProvider to handle network authentication.</p>
+<p><a name="sslClientAuth"></a>
+<code>sslClientAuth</code> - <span class="identifier">SslClientAuth</span><span class="symbol">!</span><span class="symbol">:</span> an optional parameter, it provides client authenticate certificate to OfflineODataProvider.</p>
+<p><a name="delegate"></a>
+<code>delegate</code> - <a href="../offlineodatadelegate/index.html"><span class="identifier">OfflineODataDelegate</span></a><span class="symbol">!</span><span class="symbol">:</span> an optional parameter, the methods of the delegate are called at various stages during execution of open, download and upload.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs initializing the OfflineODataProvider.</p>
+<p><strong>See Also</strong><br/>
+<a href="open.html">#open(Action0, Action1)</a><a href="adddefiningquery.html">#addDefiningQuery(OfflineODataDefiningQuery)</a><a href="../offlineodataparameters/index.html">OfflineODataParameters</a><a href="../offlineodatadelegate/index.html">OfflineODataDelegate</a>com.sap.cloud.mobile.foundation.authentication.SslClientAuthcom.sap.cloud.mobile.odata.DataServicecom.sap.cloud.mobile.odata.core.AndroidSystem</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$&lt;init&gt;(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)"></a>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/sslClientAuth">sslClientAuth</span><span class="symbol">:</span>&nbsp;<span class="identifier">SslClientAuth</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/delegate">delegate</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataproviderdelegate/index.html"><span class="identifier">OfflineODataProviderDelegate</span></a><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Constructs an OfflineODataProvider instance. </p>
+<p> OfflineODataProvider depends on Android Context from AndroidSystem. </p>
+<p> Example Usage: </p>
+<p> The sample shows how to use OfflineODataProvider constructor and open method. </p>
+<p> And it turns an asynchronous open call to be synchronous and makes CRUD operations after a successful open. </p>
+<pre><code>// Retrieve the OkHttpClient initialized in Foundation module
+      OkHttpClient okHttpClient = ClientProvider.get();
+     
+      // Initialize application context for use by OfflineODataProvider
+      AndroidSystem.setContext(applicationContext);
+     
+      // Specify parameters for OfflineODataProvider construction
+      OfflineODataParameters parameters = new OfflineODataParameters();
+      parameters.setStoreEncryptionKey("secret-key");
+     
+      // Create a new instance of offlineODataProvider use try-with-resources statement, to ensure OfflineODataProvider instance
+      // to be closed after usage.
+      try (OfflineODataProvider offlineODataProvider = new OfflineODataProvider(new URL(SERVICE_URL), parameters, okHttpClient)) {
+          // Construct a DataService instance
+          DataService dataService = new DataService(offlineODataProvider);
+     
+          // Add defining queries
+          offlineODataProvider.addDefiningQuery(new OfflineODataDefiningQuery("Customers", "Customers", false));
+          offlineODataProvider.addDefiningQuery(new OfflineODataDefiningQuery("Orders", "Orders", false));
+          offlineODataProvider.addDefiningQuery(new OfflineODataDefiningQuery("OrderItems", "OrderItems", false));
+     
+          final CountDownLatch completed = new CountDownLatch( 1 );
+          final AtomicReference&lt;Exception&gt; ex = new AtomicReference&lt;&gt;();
+     
+          // Open the provider
+          offlineODataProvider.open(() -&gt; completed.countDown(),
+                                    (error) -&gt; { logger.error("Exception encountered in OfflineOData open: ", error);
+                                                 ex.set(error);
+                                                 completed.countDown(); }} );
+          completed.await();
+          if ( ex.get() != null ) {
+              // Handle the open error.
+          } else {
+              // Continue operating on offlineODataProvider after open.
+              // Once the provider is opened, various operations can be performed, such as executing CRUD actions, uploading
+              // and downloading updates from backend service.
+     
+     
+          }
+      
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="serviceRoot"></a>
+<code>serviceRoot</code> - <span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">:</span> the service root of the OData back end. This value depends on the "Rewrite Mode" configuration of the application on SAP Mobile Service. If "Rewrite Mode" is set to "Rewrite URL" then the path of the service root is the Application Connection Name. If "Rewrite Mode" is set to "Rewrite URL on the Back End" then the path or the service root should be the same as the path of the back end URL specified on the SAP Mobile Services. 
+<p> For example, if the SAP Mobile Services being used is at https://sapcpms/, the application is configured with an Application Connection Name of "myconn" on an OData back end with service root "http://myhost:80/odata/endpoint", then the serviceRoot should be "https://sapcpms/myconn/" for "Rewrite URL" and "https://sapcpms/odata/endpoint" for "Rewrite URL on Back End".</p>
+</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">:</span> the configuration parameters for the OfflineODataProvider.</p>
+<p><a name="okHttpClient"></a>
+<code>okHttpClient</code> - <span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">:</span> the HTTP client is used by OfflineODataProvider to handle network authentication.</p>
+<p><a name="sslClientAuth"></a>
+<code>sslClientAuth</code> - <span class="identifier">SslClientAuth</span><span class="symbol">!</span><span class="symbol">:</span> an optional parameter, it provides client authenticate certificate to OfflineODataProvider.</p>
+<p><a name="delegate"></a>
+<code>delegate</code> - <a href="../offlineodataproviderdelegate/index.html"><span class="identifier">OfflineODataProviderDelegate</span></a><span class="symbol">!</span><span class="symbol">:</span> an optional parameter, the methods of the delegate are called at various stages during execution of open, download and upload.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs initializing the OfflineODataProvider.</p>
+<p><strong>See Also</strong><br/>
+<a href="open.html">#open(Action0, Action1)</a><a href="adddefiningquery.html">#addDefiningQuery(OfflineODataDefiningQuery)</a><a href="../offlineodataparameters/index.html">OfflineODataParameters</a><a href="../offlineodatadelegate/index.html">OfflineODataDelegate</a>com.sap.cloud.mobile.foundation.authentication.SslClientAuthcom.sap.cloud.mobile.odata.DataServicecom.sap.cloud.mobile.odata.core.AndroidSystem</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$&lt;init&gt;(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient)"></a>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Constructs an OfflineODataProvider instance. </p>
+<p> OfflineODataProvider depends on Android Context from AndroidSystem.</p>
+<h3>Parameters</h3>
+<p><a name="serviceRoot"></a>
+<code>serviceRoot</code> - <span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">:</span> the service root of the OData back end. This value depends on the "Rewrite Mode" configuration of the application on SAP Mobile Service. If "Rewrite Mode" is set to "Rewrite URL" then the path of the service root is the Application Connection Name. If "Rewrite Mode" is set to "Rewrite URL on the Back End" then the path or the service root should be the same as the path of the back end URL specified on the SAP Mobile Services. 
+<p> For example, if the SAP Mobile Services being used is at https://sapcpms/, the application is configured with an Application Connection Name of "myconn" on an OData back end with service root "http://myhost:80/odata/endpoint", then the serviceRoot should be "https://sapcpms/myconn/" for "Rewrite URL" and "https://sapcpms/odata/endpoint" for "Rewrite URL on Back End".</p>
+</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">:</span> the configuration parameters for the OfflineODataProvider.</p>
+<p><a name="okHttpClient"></a>
+<code>okHttpClient</code> - <span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">:</span> the HTTP client is used by OfflineODataProvider to handle network authentication.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs initializing the OfflineODataProvider.</p>
+<p><strong>See Also</strong><br/>
+<a href="./-init-.html">#OfflineODataProvider(URL, OfflineODataParameters, OkHttpClient, SslClientAuth, OfflineODataDelegate)</a>com.sap.cloud.mobile.odata.core.AndroidSystem</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$&lt;init&gt;(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)"></a>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataDelegate)/delegate">delegate</span><span class="symbol">:</span>&nbsp;<a href="../offlineodatadelegate/index.html"><span class="identifier">OfflineODataDelegate</span></a><span class="symbol">!</span><span class="symbol">)</span></code><br/>
+<strong>Deprecated:</strong> OfflineODataDelegate will be replaced by OfflineODataProviderDelegate.
+<p>Constructs an OfflineODataProvider instance. </p>
+<p> OfflineODataProvider depends on Android Context from AndroidSystem.</p>
+<h3>Parameters</h3>
+<p><a name="serviceRoot"></a>
+<code>serviceRoot</code> - <span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">:</span> the service root of the OData back end. This value depends on the "Rewrite Mode" configuration of the application on SAP Mobile Service. If "Rewrite Mode" is set to "Rewrite URL" then the path of the service root is the Application Connection Name. If "Rewrite Mode" is set to "Rewrite URL on the Back End" then the path or the service root should be the same as the path of the back end URL specified on the SAP Mobile Services. 
+<p> For example, if the SAP Mobile Services being used is at https://sapcpms/, the application is configured with an Application Connection Name of "myconn" on an OData back end with service root "http://myhost:80/odata/endpoint", then the serviceRoot should be "https://sapcpms/myconn/" for "Rewrite URL" and "https://sapcpms/odata/endpoint" for "Rewrite URL on Back End".</p>
+</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">:</span> the configuration parameters for the OfflineODataProvider.</p>
+<p><a name="okHttpClient"></a>
+<code>okHttpClient</code> - <span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">:</span> the HTTP client is used by OfflineODataProvider to handle network authentication.</p>
+<p><a name="delegate"></a>
+<code>delegate</code> - <a href="../offlineodatadelegate/index.html"><span class="identifier">OfflineODataDelegate</span></a><span class="symbol">!</span><span class="symbol">:</span> an optional parameter, the methods of the delegate are called at various stages during execution of open, download and upload.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs initializing the OfflineODataProvider.</p>
+<p><strong>See Also</strong><br/>
+<a href="./-init-.html">#OfflineODataProvider(URL, OfflineODataParameters, OkHttpClient, SslClientAuth, OfflineODataDelegate)</a>com.sap.cloud.mobile.odata.core.AndroidSystem</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$&lt;init&gt;(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)"></a>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, com.sap.cloud.mobile.odata.offline.OfflineODataProviderDelegate)/delegate">delegate</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataproviderdelegate/index.html"><span class="identifier">OfflineODataProviderDelegate</span></a><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Constructs an OfflineODataProvider instance. </p>
+<p> OfflineODataProvider depends on Android Context from AndroidSystem.</p>
+<h3>Parameters</h3>
+<p><a name="serviceRoot"></a>
+<code>serviceRoot</code> - <span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">:</span> the service root of the OData back end. This value depends on the "Rewrite Mode" configuration of the application on SAP Mobile Service. If "Rewrite Mode" is set to "Rewrite URL" then the path of the service root is the Application Connection Name. If "Rewrite Mode" is set to "Rewrite URL on the Back End" then the path or the service root should be the same as the path of the back end URL specified on the SAP Mobile Services. 
+<p> For example, if the SAP Mobile Services being used is at https://sapcpms/, the application is configured with an Application Connection Name of "myconn" on an OData back end with service root "http://myhost:80/odata/endpoint", then the serviceRoot should be "https://sapcpms/myconn/" for "Rewrite URL" and "https://sapcpms/odata/endpoint" for "Rewrite URL on Back End".</p>
+</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">:</span> the configuration parameters for the OfflineODataProvider.</p>
+<p><a name="okHttpClient"></a>
+<code>okHttpClient</code> - <span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">:</span> the HTTP client is used by OfflineODataProvider to handle network authentication.</p>
+<p><a name="delegate"></a>
+<code>delegate</code> - <a href="../offlineodataproviderdelegate/index.html"><span class="identifier">OfflineODataProviderDelegate</span></a><span class="symbol">!</span><span class="symbol">:</span> an optional parameter, the methods of the delegate are called at various stages during execution of open, download and upload.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs initializing the OfflineODataProvider.</p>
+<p><strong>See Also</strong><br/>
+<a href="./-init-.html">#OfflineODataProvider(URL, OfflineODataParameters, OkHttpClient, SslClientAuth, OfflineODataDelegate)</a>com.sap.cloud.mobile.odata.core.AndroidSystem</p>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$&lt;init&gt;(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth)"></a>
+<code><span class="identifier">OfflineODataProvider</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth)/serviceRoot">serviceRoot</span><span class="symbol">:</span>&nbsp;<span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth)/okHttpClient">okHttpClient</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$<init>(java.net.URL, com.sap.cloud.mobile.odata.offline.OfflineODataParameters, OkHttpClient, SslClientAuth)/sslClientAuth">sslClientAuth</span><span class="symbol">:</span>&nbsp;<span class="identifier">SslClientAuth</span><span class="symbol">!</span><span class="symbol">)</span></code>
+<p>Constructs an OfflineODataProvider instance. </p>
+<p> OfflineODataProvider depends on Android Context from AndroidSystem.</p>
+<h3>Parameters</h3>
+<p><a name="serviceRoot"></a>
+<code>serviceRoot</code> - <span class="identifier">URL</span><span class="symbol">!</span><span class="symbol">:</span> the service root of the OData back end. This value depends on the "Rewrite Mode" configuration of the application on SAP Mobile Service. If "Rewrite Mode" is set to "Rewrite URL" then the path of the service root is the Application Connection Name. If "Rewrite Mode" is set to "Rewrite URL on the Back End" then the path or the service root should be the same as the path of the back end URL specified on the SAP Mobile Services. 
+<p> For example, if the SAP Mobile Services being used is at https://sapcpms/, the application is configured with an Application Connection Name of "myconn" on an OData back end with service root "http://myhost:80/odata/endpoint", then the serviceRoot should be "https://sapcpms/myconn/" for "Rewrite URL" and "https://sapcpms/odata/endpoint" for "Rewrite URL on Back End".</p>
+</p>
+<p><a name="parameters"></a>
+<code>parameters</code> - <a href="../offlineodataparameters/index.html"><span class="identifier">OfflineODataParameters</span></a><span class="symbol">!</span><span class="symbol">:</span> the configuration parameters for the OfflineODataProvider.</p>
+<p><a name="okHttpClient"></a>
+<code>okHttpClient</code> - <span class="identifier">OkHttpClient</span><span class="symbol">!</span><span class="symbol">:</span> the HTTP client is used by OfflineODataProvider to handle network authentication.</p>
+<p><a name="sslClientAuth"></a>
+<code>sslClientAuth</code> - <span class="identifier">SslClientAuth</span><span class="symbol">!</span><span class="symbol">:</span> an optional parameter, it provides client authenticate certificate to OfflineODataProvider.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs initializing the OfflineODataProvider.</p>
+<p><strong>See Also</strong><br/>
+<a href="./-init-.html">#OfflineODataProvider(URL, OfflineODataParameters, OkHttpClient, SslClientAuth, OfflineODataDelegate)</a>com.sap.cloud.mobile.odata.core.AndroidSystem</p>
+</BODY>
+</HTML>

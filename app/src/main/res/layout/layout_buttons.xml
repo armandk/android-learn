@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableRow1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/secondary_button"
+        style="@style/SecondaryButton"
+        tools:text="Secondary Button" />
+    <View
+        android:layout_width="8dp"
+        android:layout_height="1dp"
+        android:layout_weight="0" />
+
+    <Button
+        android:id="@+id/primary_button"
+        style="@style/PrimaryButton"
+        tools:text="Primary Button" />
+</LinearLayout>

@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CompositeCache.add - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="index.html">CompositeCache</a>&nbsp;/&nbsp;<a href="./add.html">add</a><br/>
+<br/>
+<h1>add</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.CompositeCache$add(com.sap.cloud.mobile.foundation.cache.CompositeCache.add.T)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../cache/index.html"><span class="identifier">Cache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">add</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.CompositeCache$add(com.sap.cloud.mobile.foundation.cache.CompositeCache.add.T)/cache">cache</span><span class="symbol">:</span>&nbsp;<a href="add.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">CompositeCache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>Adds a concrete cache instance as one level of cache in the composite cache. Depending on the level of caches desired, this method needs be called in the order of cache levels until <code><a href="build.html">#build()</a></code> is called.</p>
+<h3>Parameters</h3>
+<p><a name="cache"></a>
+<code>cache</code> - <a href="add.html#T"><span class="identifier">T</span></a><span class="symbol">:</span> an instance of <code>non-null </code> concrete <code><a href="../cache/index.html">Cache</a></code> class</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - if <code><a href="build.html">CompositeCache#build()</a></code> has been called already</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">CompositeCache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">:</span> <code>This</code> composite cache instance, which can be used to call this method again or complete the composite cache initialization via <code><a href="build.html">#build()</a></code>.</p>
+<a name="com.sap.cloud.mobile.foundation.cache.CompositeCache$add(com.sap.cloud.mobile.foundation.cache.CompositeCache.add.T)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../cache/index.html"><span class="identifier">Cache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">&gt;</span> <span class="identifier">add</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.cache.CompositeCache$add(com.sap.cloud.mobile.foundation.cache.CompositeCache.add.T)/cache">cache</span><span class="symbol">:</span>&nbsp;<a href="add.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">CompositeCache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code>
+<p>Adds a concrete cache instance as one level of cache in the composite cache. Depending on the level of caches desired, this method needs be called in the order of cache levels until <code><a href="build.html">#build()</a></code> is called.</p>
+<h3>Parameters</h3>
+<p><a name="cache"></a>
+<code>cache</code> - <a href="add.html#T"><span class="identifier">T</span></a><span class="symbol">:</span> an instance of <code>non-null </code> concrete <code><a href="../cache/index.html">Cache</a></code> class</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - if <code><a href="build.html">CompositeCache#build()</a></code> has been called already</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">CompositeCache</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span><span class="symbol">:</span> <code>This</code> composite cache instance, which can be used to call this method again or complete the composite cache initialization via <code><a href="build.html">#build()</a></code>.</p>
+</BODY>
+</HTML>

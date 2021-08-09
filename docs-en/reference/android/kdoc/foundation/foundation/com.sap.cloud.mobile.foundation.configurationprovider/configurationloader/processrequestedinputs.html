@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ConfigurationLoader.processRequestedInputs - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.configurationprovider</a>&nbsp;/&nbsp;<a href="index.html">ConfigurationLoader</a>&nbsp;/&nbsp;<a href="./processrequestedinputs.html">processRequestedInputs</a><br/>
+<br/>
+<h1>processRequestedInputs</h1>
+<a name="com.sap.cloud.mobile.foundation.configurationprovider.ConfigurationLoader$processRequestedInputs(com.sap.cloud.mobile.foundation.configurationprovider.UserInputs)"></a>
+<code><span class="keyword">fun </span><span class="identifier">processRequestedInputs</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.configurationprovider.ConfigurationLoader$processRequestedInputs(com.sap.cloud.mobile.foundation.configurationprovider.UserInputs)/requestedInputs">requestedInputs</span><span class="symbol">:</span>&nbsp;<a href="../userinputs/index.html"><span class="identifier">UserInputs</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Provides user inputs to the load configuration thread so that it can continue processing. This method must be called in response to the <code><a href="../configurationloadercallback/oninputrequired.html">onInputRequired</a></code> and <code><a href="../configurationloadercallback/onerror.html">onError</a></code> callback method invocations. If this is not called after either of these methods are invoked, the <code><a href="loadconfiguration.html">loadConfiguration</a></code> method will not complete and the load configuration thread will run indefinitely.</p>
+<h3>Parameters</h3>
+<p><a name="requestedInputs"></a>
+<code>requestedInputs</code> - <a href="../userinputs/index.html"><span class="identifier">UserInputs</span></a><span class="symbol">:</span> A <code><a href="../userinputs/index.html">UserInputs</a></code> object.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if the load configuration thread is running and the inputs were successfully handed to it, false otherwise. Will return false if loadConfiguration() was not called prior to this or has already completed or if the message could not be queued.</p>
+<a name="com.sap.cloud.mobile.foundation.configurationprovider.ConfigurationLoader$processRequestedInputs(com.sap.cloud.mobile.foundation.configurationprovider.UserInputs)"></a>
+<code><span class="keyword">fun </span><span class="identifier">processRequestedInputs</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.configurationprovider.ConfigurationLoader$processRequestedInputs(com.sap.cloud.mobile.foundation.configurationprovider.UserInputs)/requestedInputs">requestedInputs</span><span class="symbol">:</span>&nbsp;<a href="../userinputs/index.html"><span class="identifier">UserInputs</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Provides user inputs to the load configuration thread so that it can continue processing. This method must be called in response to the <code><a href="../configurationloadercallback/oninputrequired.html">onInputRequired</a></code> and <code><a href="../configurationloadercallback/onerror.html">onError</a></code> callback method invocations. If this is not called after either of these methods are invoked, the <code><a href="loadconfiguration.html">loadConfiguration</a></code> method will not complete and the load configuration thread will run indefinitely.</p>
+<h3>Parameters</h3>
+<p><a name="requestedInputs"></a>
+<code>requestedInputs</code> - <a href="../userinputs/index.html"><span class="identifier">UserInputs</span></a><span class="symbol">:</span> A <code><a href="../userinputs/index.html">UserInputs</a></code> object.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> true if the load configuration thread is running and the inputs were successfully handed to it, false otherwise. Will return false if loadConfiguration() was not called prior to this or has already completed or if the message could not be queued.</p>
+</BODY>
+</HTML>

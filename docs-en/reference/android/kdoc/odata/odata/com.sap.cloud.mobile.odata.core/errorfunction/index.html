@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ErrorFunction - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">ErrorFunction</a><br/>
+<br/>
+<h1>ErrorFunction</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ErrorFunction</span></code>
+<p>Basic functions for type <code>exception</code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ErrorFunction</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Basic functions for type <code>exception</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$equal(java.lang.RuntimeException, java.lang.RuntimeException)/left">left</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$equal(java.lang.RuntimeException, java.lang.RuntimeException)/right">right</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>left == right</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$getValue(java.lang.RuntimeException)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">RuntimeException</span></code>
+<p>Return non-<code>null</code> value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasvalue.html">hasValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hasValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$hasValue(java.lang.RuntimeException, java.lang.RuntimeException)/left">left</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$hasValue(java.lang.RuntimeException, java.lang.RuntimeException)/right">right</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>left == right</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isnull.html">isNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$isNull(java.lang.RuntimeException)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is <code>null</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="notequal.html">notEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$notEqual(java.lang.RuntimeException, java.lang.RuntimeException)/left">left</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$notEqual(java.lang.RuntimeException, java.lang.RuntimeException)/right">right</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>left != right</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="notnull.html">notNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">notNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$notNull(java.lang.RuntimeException)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is not <code>null</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nullvalue.html">nullValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">nullValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">RuntimeException</span><span class="symbol">?</span></code>
+<p>Return (nullable) The <code>null</code> <code>exception</code> value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$toString(java.lang.RuntimeException)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return <code>value</code> converted to a <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withvalue.html">withValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.ErrorFunction$withValue(java.lang.RuntimeException)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">RuntimeException</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">RuntimeException</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code>, converted to a nullable <code>exception</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

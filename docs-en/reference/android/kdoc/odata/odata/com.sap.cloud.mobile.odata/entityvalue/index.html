@@ -1,0 +1,1060 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntityValue - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">EntityValue</a><br/>
+<br/>
+<h1>EntityValue</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EntityValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><a href="../bindingpath.html"><span class="identifier">BindingPath</span></a></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> entity value.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">EntityValue</span><span class="symbol">(</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">EntityValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$<init>(kotlin.Boolean)/withDefaults">withDefaults</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">EntityValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.EntityType)/withDefaults">withDefaults</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.EntityType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>See EntityValue(boolean, EntityType, SparseIndexMap).</p>
+<code><span class="identifier">EntityValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.core.SparseIndexMap)/withDefaults">withDefaults</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.core.SparseIndexMap)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.core.SparseIndexMap)/withIndexMap">withIndexMap</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/sparseindexmap/index.html"><span class="identifier">SparseIndexMap</span></a><span class="symbol">?</span><span class="symbol">)</span></code>
+<p>Construct a new entity value. This constructor is intended for use by custom entity value subclasses. Use <code><a href="oftype.html">EntityValue.ofType</a></code> for regular construction.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="bindentity.html">bindEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bindEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$bindEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$bindEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Bind an entity to a property of the current entity. This can be used before <code>DataService.createEntity</code> or <code>DataService.updateEntity</code> to create or update the bindings of navigation properties. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="castoptional.html">castOptional</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castOptional</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$castOptional(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="castrequired.html">castRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">castRequired</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$castRequired(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityValue</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="comparekeys.html">compareKeys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">compareKeys</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$compareKeys(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$compareKeys(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Compare two entities for sorting by primary key.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copyentity.html">copyEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Return a copy of this entity value (only structural properties are copied).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copykey.html">copyKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$copyKey(com.sap.cloud.mobile.odata.EntityValue)/from">from</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copyproperties.html">copyProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyProperties</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$copyProperties(com.sap.cloud.mobile.odata.EntityValue)/from">from</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy structural/dynamic property values from source entity into this entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$equal(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$equal(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if two entity values have equal structural properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="equalkeys.html">equalKeys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equalKeys</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$equalKeys(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$equalKeys(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.EntityValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if two entity values have equal key properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcanonicalurl.html">getCanonicalURL</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCanonicalURL</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the canonical URL for this entity, relative to the service root URL. Uses OData V4 URL conventions.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatatype.html">getDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code>
+<p>Return data type with a <code><a href="../datatype/getcode.html">DataType.code</a></code> of DataType.ENTITY_VALUE.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltatime.html">getDeltaTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Can be used to hold the "last modified time" for a changed entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geteditlink.html">getEditLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEditLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The edit link for this value, preferably relative to the service root URL. If an entity does not have an explicit edit link, then writers should use the <code><a href="../structurebase/getvaluepath.html">EntityValue.valuePath</a></code>, or if that is not set, then a canonical URL (refer to the OData specification).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentityid.html">getEntityID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) OData entity id (IRI) for this entity, preferably relative to the service root URL. If an entity does not have an explicit entity id, then callers should use the canonical URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitykey.html">getEntityKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitykey/index.html"><span class="identifier">EntityKey</span></a></code>
+<p>Return the entity key for this value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentityset.html">getEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntitySet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityset/index.html"><span class="identifier">EntitySet</span></a></code>
+<p>Return the entity set for this value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitytag.html">getEntityTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityTag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Server-generated entity tag for this entity. If non-null, it is used for conflict detection during <code>DataService.updateEntity</code> and <code>DataService.deleteEntity</code> calls.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitytype.html">getEntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitytype/index.html"><span class="identifier">EntityType</span></a></code>
+<p>Return the entity type metadata for this value (<code><a href="getdatatype.html">EntityValue.dataType</a></code> cast to <code>EntityType</code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinerrorstate.html">getInErrorState</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInErrorState</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this entity is in error state, for example due to the failed backend execution of an uploaded offline create/update/delete operation. If true, then one of <code><a href="iscreated.html">EntityValue.isCreated</a></code>, <code><a href="isupdated.html">EntityValue.isUpdated</a></code> or <code><a href="isdeleted.html">EntityValue.isDeleted</a></code> should also be true to indicate the kind of failed operation. In some cases (e.g. system unable to distinguish create from update due to "upsert" behaviour) then <code><a href="iscreated.html">EntityValue.isCreated</a></code>, <code><a href="isupdated.html">EntityValue.isUpdated</a></code> and <code><a href="isdeleted.html">EntityValue.isDeleted</a></code> might all be <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinternaldata.html">getInternalData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInternalData</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmediastream.html">getMediaStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMediaStream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../streamlink/index.html"><span class="identifier">StreamLink</span></a></code>
+<p>Return stream link for media entities. Should not be used with non-media entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmustbemodified.html">getMustBeModified</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMustBeModified</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the entity must be modified by an update request, even if it is apparently unchanged. This ensures that <code>DataService.updateEntity</code> will force an update in the backend database/system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmustbereloaded.html">getMustBeReloaded</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMustBeReloaded</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the entity state must be reloaded (via <code>loadEntity</code>) after a create/update request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getnolocalcascade.html">getNoLocalCascade</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNoLocalCascade</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if operations on this entity should not be locally cascaded to children.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getoldentity.html">getOldEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOldEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Contains the original values for all structural properties of this entity value. Used by <code>DataService.updateEntity</code> to determine the changed properties for PATCH requests.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getparententity.html">getParentEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getParentEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Parent entity when this entity is to be created as a related child.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getparentproperty.html">getParentProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getParentProperty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Parent property when this entity is to be created as a related child.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getreadlink.html">getReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getReadLink</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The read link for this value, preferably relative to the service root URL. If an entity does not have an explicit read link, then readers should use the <code><a href="../structurebase/getvaluepath.html">EntityValue.valuePath</a></code>, or if that is not set, then a canonical URL (refer to the OData specification).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsystemflags.html">getSystemFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSystemFlags</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsystemkey.html">getSystemKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSystemKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span></code>
+<p>Return a system-generated numeric key for this entity. Not guaranteed to be unique. For internal use. Should not be changed by application code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettypecode.html">getTypeCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTypeCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return data type code of the wrapped value, equivalent to <code>dataType.code</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getwasnotmodified.html">getWasNotModified</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getWasNotModified</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the entity was not modified by an update request, because none of its properties were changed by the application before the attempt to update.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="haschangedbindings.html">hasChangedBindings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasChangedBindings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this entity has binding-related changes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="haskey.html">hasKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this entity has a value for all key properties.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="haslocalrelatives.html">hasLocalRelatives</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasLocalRelatives</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>true</code> if the entity is related to entities which are local (entities that have local requests executed that have either not been sent or have been sent but not yet downloaded).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="haspendingchanges.html">hasPendingChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasPendingChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if there are unsent requests in the request queue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasrelativeswithpendingchanges.html">hasRelativesWithPendingChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasRelativesWithPendingChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>true</code> if the entity is related to entities that have unsent requests in the request queue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="inset.html">inSet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">inSet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$inSet(com.sap.cloud.mobile.odata.EntitySet)/set">set</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Change the entity set for this entity. Having a non-null entity set is optional if only one entity set in the <code>DataService</code> uses the entity type, but is required (before <code>DataService.createEntity</code> is called) if multiple entity sets use the same entity type. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isbinding.html">isBinding</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isBinding</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this object is an entity binding. The <code>isReference</code> property should also be <code>true</code> for bindings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="iscreated.html">isCreated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isCreated</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this entity has just been created in the local database or backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isdeleted.html">isDeleted</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isDeleted</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this entity has just been deleted from the local database or backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islocal.html">isLocal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isLocal</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if a change (create, update or delete) has been submitted to the local database, but not yet synchronized to the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isnew.html">isNew</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNew</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this entity has been newly instantiated, but not yet created, updated or deleted in the local database or backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isneworchanged.html">isNewOrChanged</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isNewOrChanged</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$isNewOrChanged(com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if the value of property <code>property</code> is new or changed, relative to <code><a href="getoldentity.html">EntityValue.oldEntity</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isreference.html">isReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isReference</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this object is an entity reference. If <code>true</code>, the <code><a href="geteditlink.html">EntityValue.editLink</a></code> and/or <code><a href="getreadlink.html">EntityValue.readLink</a></code> will be non-null, or the key properties will be available. Non-key properties will not be available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isresolved.html">isResolved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isResolved</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return 'true' if the entity was already resolved by CsdlDocument's resolveEntity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isresolving.html">isResolving</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isResolving</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return 'true' if the entity is being resolved by CsdlDocument's resolveEntity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isupdated.html">isUpdated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isUpdated</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this entity has just been updated in the local database or backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isupsert.html">isUpsert</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isUpsert</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return 'true' if the entity is being upserted</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="oftype.html">ofType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ofType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$ofType(com.sap.cloud.mobile.odata.EntityType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityValue</span></a></code>
+<p>See ofType(EntityType, SparseIndexMap).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ofType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$ofType(com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.core.SparseIndexMap)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$ofType(com.sap.cloud.mobile.odata.EntityType, com.sap.cloud.mobile.odata.core.SparseIndexMap)/sparse">sparse</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/sparseindexmap/index.html"><span class="identifier">SparseIndexMap</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Construct a new entity value of the specified type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setbinding.html">setBinding</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBinding</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setBinding(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this object is an entity binding. The <code>isReference</code> property should also be <code>true</code> for bindings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setchangedbindings.html">setChangedBindings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setChangedBindings</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setChangedBindings(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this entity has binding-related changes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcreated.html">setCreated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCreated</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setCreated(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this entity has just been created in the local database or backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeleted.html">setDeleted</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeleted</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setDeleted(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this entity has just been deleted from the local database or backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeltatime.html">setDeltaTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setDeltaTime(com.sap.cloud.mobile.odata.GlobalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set can be used to hold the "last modified time" for a changed entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="seteditlink.html">setEditLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEditLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setEditLink(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the edit link for this value, preferably relative to the service root URL. If an entity does not have an explicit edit link, then writers should use the <code><a href="../structurebase/getvaluepath.html">EntityValue.valuePath</a></code>, or if that is not set, then a canonical URL (refer to the OData specification).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentityid.html">setEntityID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntityID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setEntityID(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set OData entity id (IRI) for this entity, preferably relative to the service root URL. If an entity does not have an explicit entity id, then callers should use the canonical URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentityset.html">setEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntitySet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setEntitySet(com.sap.cloud.mobile.odata.EntitySet)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the entity set for this value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentitytag.html">setEntityTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntityTag</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setEntityTag(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set server-generated entity tag for this entity. If non-null, it is used for conflict detection during <code>DataService.updateEntity</code> and <code>DataService.deleteEntity</code> calls.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinerrorstate.html">setInErrorState</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInErrorState</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setInErrorState(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this entity is in error state, for example due to the failed backend execution of an uploaded offline create/update/delete operation. If true, then one of <code><a href="iscreated.html">EntityValue.isCreated</a></code>, <code><a href="isupdated.html">EntityValue.isUpdated</a></code> or <code><a href="isdeleted.html">EntityValue.isDeleted</a></code> should also be true to indicate the kind of failed operation. In some cases (e.g. system unable to distinguish create from update due to "upsert" behaviour) then <code><a href="iscreated.html">EntityValue.isCreated</a></code>, <code><a href="isupdated.html">EntityValue.isUpdated</a></code> and <code><a href="isdeleted.html">EntityValue.isDeleted</a></code> might all be <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinternaldata.html">setInternalData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInternalData</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setInternalData(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlocal.html">setLocal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLocal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setLocal(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if a change (create, update or delete) has been submitted to the local database, but not yet synchronized to the backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlocalrelatives.html">setLocalRelatives</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLocalRelatives</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setLocalRelatives(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if the entity is related to entities which are local (entities that have local requests executed that have either not been sent or have been sent but not yet downloaded).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmediastream.html">setMediaStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMediaStream</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setMediaStream(com.sap.cloud.mobile.odata.StreamLink)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../streamlink/index.html"><span class="identifier">StreamLink</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set stream link for media entities. Should not be used with non-media entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmustbemodified.html">setMustBeModified</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMustBeModified</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setMustBeModified(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if the entity must be modified by an update request, even if it is apparently unchanged. This ensures that <code>DataService.updateEntity</code> will force an update in the backend database/system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmustbereloaded.html">setMustBeReloaded</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMustBeReloaded</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setMustBeReloaded(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if the entity state must be reloaded (via <code>loadEntity</code>) after a create/update request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnew.html">setNew</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNew</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setNew(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this entity has been newly instantiated, but not yet created, updated or deleted in the local database or backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setnolocalcascade.html">setNoLocalCascade</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setNoLocalCascade</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setNoLocalCascade(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if operations on this entity should not be locally cascaded to children.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setoldentity.html">setOldEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOldEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setOldEntity(com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set contains the original values for all structural properties of this entity value. Used by <code>DataService.updateEntity</code> to determine the changed properties for PATCH requests.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setparententity.html">setParentEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setParentEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setParentEntity(com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set parent entity when this entity is to be created as a related child.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setparentproperty.html">setParentProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setParentProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setParentProperty(com.sap.cloud.mobile.odata.Property)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set parent property when this entity is to be created as a related child.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpendingchanges.html">setPendingChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPendingChanges</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setPendingChanges(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if there are unsent requests in the request queue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setreadlink.html">setReadLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setReadLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setReadLink(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the read link for this value, preferably relative to the service root URL. If an entity does not have an explicit read link, then readers should use the <code><a href="../structurebase/getvaluepath.html">EntityValue.valuePath</a></code>, or if that is not set, then a canonical URL (refer to the OData specification).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setreference.html">setReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setReference(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this object is an entity reference. If <code>true</code>, the <code><a href="geteditlink.html">EntityValue.editLink</a></code> and/or <code><a href="getreadlink.html">EntityValue.readLink</a></code> will be non-null, or the key properties will be available. Non-key properties will not be available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrelativeswithpendingchanges.html">setRelativesWithPendingChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRelativesWithPendingChanges</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setRelativesWithPendingChanges(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if the entity is related to entities that have unsent requests in the request queue.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresolved.html">setResolved</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResolved</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setResolved(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set 'true' if the entity was already resolved by CsdlDocument's resolveEntity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresolving.html">setResolving</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResolving</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setResolving(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set 'true' if the entity is being resolved by CsdlDocument's resolveEntity</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsystemflags.html">setSystemFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSystemFlags</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setSystemFlags(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsystemkey.html">setSystemKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSystemKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setSystemKey(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a system-generated numeric key for this entity. Not guaranteed to be unique. For internal use. Should not be changed by application code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setupdated.html">setUpdated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUpdated</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setUpdated(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this entity has just been updated in the local database or backend system.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setupsert.html">setUpsert</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUpsert</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setUpsert(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set 'true' if the entity is being upserted</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setwasnotmodified.html">setWasNotModified</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setWasNotModified</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$setWasNotModified(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if the entity was not modified by an update request, because none of its properties were changed by the application before the attempt to update.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="takesnapshot.html">takeSnapshot</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">takeSnapshot</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See takeSnapshot(boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">takeSnapshot</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$takeSnapshot(kotlin.Boolean)/canDefer">canDefer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remember a snapshot of the values of structural/dynamic properties of this entity in <code><a href="getoldentity.html">EntityValue.oldEntity</a></code>. Snapshots are used to detect which properties have changed when an update is to be issued.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert this data value to a string. If the <code><a href="getdatatype.html">EntityValue.dataType</a></code> is defined by <a href="http://www.w3.org/TR/xmlschema11-2/">XML Schema Part 2: Datatypes</a>, then the corresponding lexical format is used. <a href="http://json.org">JSON</a> format is used for structured values (arrays and objects).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unbindentity.html">unbindEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">unbindEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$unbindEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$unbindEntity(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.Property)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Unbind an entity from a property of the current entity. This can be used before <code>DataService.createEntity</code> or <code>DataService.updateEntity</code> to create or update the bindings of navigation properties. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withkey.html">withKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$withKey(com.sap.cloud.mobile.odata.EntityKey)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../entitykey/index.html"><span class="identifier">EntityKey</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EntityValue</span></a></code>
+<p>Change the primary key for this entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withlock.html">withLock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withLock</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.EntityValue$withLock(com.sap.cloud.mobile.odata.core.Action0)/work">work</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Perform some <code>work</code> within an instance-level exclusive lock.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../structurebase/getannotations.html">getAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAnnotations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a></code>
+<p>Return instance annotations for this structure. Initialized to immutable <code><a href="../annotationmap/empty.html">AnnotationMap.empty</a></code>. Must be replaced with a mutable map if needed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/getdatavalue.html">getDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$getDataValue(com.sap.cloud.mobile.odata.PropertyPath)/path">path</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Get the value of a specified property path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/getdynamic.html">getDynamic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDynamic</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$getDynamic(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The value of a dynamic property, or <code>null</code> if no such property exists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/getdynamicproperties.html">getDynamicProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDynamicProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavaluemap/index.html"><span class="identifier">DataValueMap</span></a></code>
+<p>Return holds <em>dynamic</em> property values, for which metadata is not known in advance.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/getnextlink.html">getNextLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getNextLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$getNextLink(com.sap.cloud.mobile.odata.PropertyPath)/path">path</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Get the next-link of a specified collection-typed property path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/getoptionalvalue.html">getOptionalValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptionalValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$getOptionalValue(com.sap.cloud.mobile.odata.PropertyPath)/path">path</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>Get the optional value of a specified property path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/getrequiredvalue.html">getRequiredValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$getRequiredValue(com.sap.cloud.mobile.odata.PropertyPath)/path">path</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a></code>
+<p>Get the required value of a specified property path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/getstreamlink.html">getStreamLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStreamLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$getStreamLink(com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../streamlink/index.html"><span class="identifier">StreamLink</span></a></code>
+<p>Get the stream link for a specified stream property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/getstructuretype.html">getStructureType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStructureType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../structuretype/index.html"><span class="identifier">StructureType</span></a></code>
+<p>Return the complex/entity type metadata for this value (<code><a href="../datavalue/getdatatype.html">StructureBase.dataType</a></code> cast to <code>StructureType</code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/getvaluepath.html">getValuePath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValuePath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The canonical path of this value relative to the service root URL. Used internally in URL construction. Should not be set explicitly.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/hasdatatype.html">hasDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasDataType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$hasDataType(com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this structure has the specified data <code>type</code> (or a subtype).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/hasdatavalue.html">hasDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasDataValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$hasDataValue(com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this structure contains an explicitly set value for the specified property (including <code>null</code>, if <code><a href="../property/isnullable.html">Property.isNullable</a></code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/hasdynamicproperties.html">hasDynamicProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasDynamicProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return true if the structure has dynamic properties set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/hasnextlink.html">hasNextLink</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasNextLink</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$hasNextLink(com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this structure contains a next-link for the specified collection-typed property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/isproxy.html">isProxy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isProxy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this structure an instance of a generated proxy class?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/setannotations.html">setAnnotations</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAnnotations</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setAnnotations(com.sap.cloud.mobile.odata.AnnotationMap)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../annotationmap/index.html"><span class="identifier">AnnotationMap</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set instance annotations for this structure. Initialized to immutable <code><a href="../annotationmap/empty.html">AnnotationMap.empty</a></code>. Must be replaced with a mutable map if needed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/setdatavalue.html">setDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDataValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDataValue(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.DataValue)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDataValue(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of a specified property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/setdefaultvalues.html">setDefaultValues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setDefaultValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">setDefaultValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean)/nestedComplex">nestedComplex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">setDefaultValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean)/nestedComplex">nestedComplex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean)/nestedEntity">nestedEntity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">setDefaultValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/nestedComplex">nestedComplex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/nestedEntity">nestedEntity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/defaultOptional">defaultOptional</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">setDefaultValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/nestedComplex">nestedComplex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/nestedEntity">nestedEntity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/defaultOptional">defaultOptional</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/defaultRequired">defaultRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See setDefaultValues(boolean, boolean, boolean, boolean, boolean).</p>
+<code><span class="keyword">fun </span><span class="identifier">setDefaultValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/nestedComplex">nestedComplex</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/nestedEntity">nestedEntity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/defaultOptional">defaultOptional</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/defaultRequired">defaultRequired</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDefaultValues(kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)/skipConstraints">skipConstraints</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Recursively apply default values to any unset properties of this structure. If a property has a model-defined default value, it will always be applied (since that default value is part of a server's contract with the client, it must always be valid to apply it). If the property doesn't have a model-defined default value, then <code>null</code> will be used for nullable properties, and false/empty/zero values will be applied otherwise as appropriate. Dates will default to 2000-01-01.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/setdynamic.html">setDynamic</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDynamic</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDynamic(kotlin.String, com.sap.cloud.mobile.odata.DataValue)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDynamic(kotlin.String, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add or change the value of a dynamic property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/setdynamicproperties.html">setDynamicProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDynamicProperties</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setDynamicProperties(com.sap.cloud.mobile.odata.DataValueMap)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavaluemap/index.html"><span class="identifier">DataValueMap</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set holds <em>dynamic</em> property values, for which metadata is not known in advance.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/setoptionalvalue.html">setOptionalValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setOptionalValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setOptionalValue(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.DataValue)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setOptionalValue(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the optional value of a specified property. If a <code>null</code> value is provided and the property does not permit <code>null</code> values (<code><a href="../property/isnullable.html">Property.isNullable</a></code> is <code>false</code>), then this is equivalent to calling <code>unsetDataValue</code>, otherwise it is equivalent to calling <code>setDataValue</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/setrequiredvalue.html">setRequiredValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequiredValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setRequiredValue(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.DataValue)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setRequiredValue(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the required value of a specified property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/setunsafevalue.html">setUnsafeValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUnsafeValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setUnsafeValue(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.DataValue)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setUnsafeValue(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of a specified property (like <code><a href="../structurebase/setdatavalue.html">StructureBase.setDataValue</a></code>), but bypassing the usual validation checks. This may be useful in performance critical code, but note that it will be assumed that:</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/setvaluepath.html">setValuePath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setValuePath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$setValuePath(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the canonical path of this value relative to the service root URL. Used internally in URL construction. Should not be set explicitly.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../structurebase/unsetdatavalue.html">unsetDataValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">unsetDataValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.StructureBase$unsetDataValue(com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Unset the value of a specified property, so that <code><a href="../structurebase/hasdatavalue.html">StructureBase.hasDataValue</a></code><code>(property)</code> will return <code>false</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

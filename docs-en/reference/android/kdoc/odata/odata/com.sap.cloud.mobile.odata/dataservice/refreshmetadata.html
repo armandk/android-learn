@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataService.refreshMetadata - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataService</a>&nbsp;/&nbsp;<a href="./refreshmetadata.html">refreshMetadata</a><br/>
+<br/>
+<h1>refreshMetadata</h1>
+<a name="com.sap.cloud.mobile.odata.DataService$refreshMetadata()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">refreshMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reload latest metadata from the backend server. If the metadata was previously loaded (or was obtained from generated proxy classes), then a compatibility check is performed. If the latest metadata is not compatible with the previous metadata, <code><a href="../../com.sap.cloud.mobile.odata.csdl/csdlexception/index.html">com.sap.cloud.mobile.odata.csdl.CsdlException</a></code> will be thrown. If the latest metadata is compatible with the previous metadata, the latest metadata will be applied. It is generally recommended to use this function during application startup to check if the server's metadata has been updated since the client application was constructed. If an application wishes to use the data service for actions or updates, while refreshing the metadata in another thread, the code using the data service for actions or updates should perform those operations while holding a read lock on the <code><a href="getmetadatalock.html">DataService.metadataLock</a></code>. Execution of functions or queries will automatically obtain a read lock on <code><a href="getmetadatalock.html">DataService.metadataLock</a></code>.</p>
+ 
+<p>Compatible metadata changes include:</p>
+ <ul> <li>Adding structural/navigation properties to complex/entity types.</li>
+ <li>Adding new types (enumeration, simple, complex, entity).</li>
+ <li>Adding new entity sets or singletons.</li>
+ <li>Adding new actions or functions.</li>
+ <li>Adding an action parameter that is nullable to the end of the parameter list.</li>
+ </ul>
+ 
+<p>Other additions, changes, and removals are considered incompatible by default, including:</p>
+ <ul> <li>Adding members to an enumeration type.</li>
+ <li>Changing the base type for any type.</li>
+ <li>Changing the value of an enumeration member.</li>
+ <li>Changing the type (or nullability) of any structural/navigation property.</li>
+ <li>Changing the type (or nullability) of any action/function parameter or result.</li>
+ <li>Removing the definition of a model element.</li>
+ <li>Removing members from an enumeration type.</li>
+ <li>Removing structural/navigation properties from a complex/entity type.</li>
+ </ul>
+ 
+<p>Addition of enumeration members can be pre-approved by a caller using the dynamic API before calling <code>refreshMetadata</code> (see <code><a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/hasopenenumerations.html">CsdlDocument.hasOpenEnumerations</a></code>). If an application uses generated proxy classes, then generating them with the "-open:enumerations" option will automate the necessary pre-approval. The <code>hasOpenEnumerations</code> flag should only be explicitly set when using the dynamic API. Explicitly setting the <code>hasOpenEnumerations</code> flag when using generated proxy classes (generated without the "-open:enumerations" option) could result in runtime exceptions.</p>
+ 
+<p>Changes to model elements can be pre-approved by a caller using the dynamic API before calling <code>refreshMetadata</code> (see <code><a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/getcanchangeanything.html">CsdlDocument.canChangeAnything</a></code>). Applications using generated proxy classes should not pre-approve such changes, as they are likely to result in application instability. For example, if a property's data type is changed, it could result in runtime exceptions since proxy class properties have a pre-determined type that is embedded into the application's compiled code.</p>
+ 
+<p>Removal of model elements can be pre-approved by the caller before calling <code>refreshMetadata</code> (see <code><a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/getcanremoveanything.html">CsdlDocument.canRemoveAnything</a></code>), or preferably by setting the <code>canBeRemoved</code> flag on model elements that the application is prepared for the removal of. Application developers should take care not to pre-approve the removal of model elements unless the application is coded to check at runtime for the possible removal of those elements. The allowance for removals is intended to support "newer" versions of client applications communicating with "older" service implementations but in the general case may require the application to have some embedded knowledge of the changes that were made to the service metadata between the older and newer service implementations. If a newer client application makes unconditional use of a model element that did not exist in an older service implementation, then the non-existence of that model element after calling <code>refreshMetadata</code> could result in runtime exceptions.</p>
+ 
+<p>If refreshMetadata succeeds, then any added model elements will have <code>isExtension == true</code>, and any removed model elements will have <code>isRemoved == true</code>. Changed model elements will not be distinguishable.</p>
+ See Also: 
+<p><code><a href="../property/isextension.html">Property.isExtension</a></code>, <code><a href="../structuretype/getextensionproperties.html">StructureType.extensionProperties</a></code>, <code><a href="../structuretype/isextension.html">StructureType.isExtension</a></code>, <code><a href="../simpletype/isextension.html">SimpleType.isExtension</a></code>, <code><a href="../enumtype/isextension.html">EnumType.isExtension</a></code>, <code><a href="../datamethod/isextension.html">DataMethod.isExtension</a></code>, <code><a href="../entityset/isextension.html">EntitySet.isExtension</a></code>.</p>
+ 
+</BODY>
+</HTML>

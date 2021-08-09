@@ -1,0 +1,439 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataErrorArchiveEntity - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataErrorArchiveEntity</a><br/>
+<br/>
+<h1>OfflineODataErrorArchiveEntity</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OfflineODataErrorArchiveEntity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">, </span><span class="identifier">Parcelable</span></code>
+<p>A built-in Offline OData entity type which stores information about a modification request which failed during an upload operation.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OfflineODataErrorArchiveEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.core.SparseIndexMap)/withDefaults">withDefaults</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.core.SparseIndexMap)/withIndexMap">withIndexMap</span><span class="symbol">:</span>&nbsp;<span class="identifier">SparseIndexMap</span><span class="symbol">?</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="affectedentity.html">affectedEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">affectedEntity</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="code.html">code</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">code</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="customheaders.html">customHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">customHeaders</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="customtag.html">customTag</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">customTag</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="dependentrequests.html">dependentRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">dependentRequests</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="domain.html">domain</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">domain</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="httpstatuscode.html">httpStatusCode</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">httpStatusCode</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="innererror.html">innerError</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">innerError</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="message.html">message</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">message</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="requestbody.html">requestBody</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">requestBody</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="requestentity.html">requestEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">requestEntity</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="requestid.html">requestID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">requestID</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="requestmethod.html">requestMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">requestMethod</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="requesturl.html">requestURL</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">requestURL</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">OfflineODataErrorArchiveEntity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="describecontents.html">describeContents</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">describeContents</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Internal implementation. Ignore it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getaffectedentity.html">getAffectedEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAffectedEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">EntityValue</span><span class="symbol">?</span></code>
+<p>Return (nullable) The navigation property which allows navigating from the failed request to the primary entity. For example, if the failed request was a PATCH request on the entity Customers(101), this navigation property can be used to read the current state of Customers(101) in the Offline store.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcode.html">getCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The error code returned in the OData error response from the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcustomheaders.html">getCustomHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCustomHeaders</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatacustomheader/index.html"><span class="identifier">OfflineODataCustomHeader</span></a><span class="symbol">&gt;</span></code>
+<p>Return the navigation property which can be used to list the custom headers attached to this failed request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcustomtag.html">getCustomTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCustomTag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) A customized string that was used to tag the request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdependentrequests.html">getDependentRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDependentRequests</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatarequest/index.html"><span class="identifier">OfflineODataRequest</span></a><span class="symbol">&gt;</span></code>
+<p>Return the navigation property which can be used to list requests that depend on this failed request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdomain.html">getDomain</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDomain</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Internal domain info.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethttpstatuscode.html">getHttpStatusCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHttpStatusCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) The HTTP status code returned from the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinnererror.html">getInnerError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInnerError</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The inner error returned in the OData error response from the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmessage.html">getMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMessage</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The error message returned in the OData error response from the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getold.html">getOld</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOld</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">OfflineODataErrorArchiveEntity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestbody.html">getRequestBody</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestBody</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The JSON body sent to the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestentity.html">getRequestEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">EntityValue</span><span class="symbol">?</span></code>
+<p>Return (nullable) The navigation property which can be used to directly read and directly modify the failed request in the request queue. The actual entity type of the returned entity will be dependent on the type of request. For example, if the failed request was a PATCH request on the entity Customers(101), then the entity returned by this navigation property will have a Customer entity type. Note that this navigation property differs from AffectedEntity; AffectedEntity returns the CURRENT state of the entity in the Offline Store where as RequestEntity is an typed representation of the request in the request queue itself.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestid.html">getRequestID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Long</span><span class="symbol">?</span></code>
+<p>Return (nullable) The request identifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestmethod.html">getRequestMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestMethod</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The HTTP method used for the request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequesturl.html">getRequestURL</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestURL</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The request URL used when executing the request against the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isproxy.html">isProxy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isProxy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="key.html">key</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">key</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$key(kotlin.Long)/requestID">requestID</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">EntityKey</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="list.html">list</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">list</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$list(com.sap.cloud.mobile.odata.EntityValueList)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValueList</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">OfflineODataErrorArchiveEntity</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="setaffectedentity.html">setAffectedEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAffectedEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setAffectedEntity(com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the navigation property which allows navigating from the failed request to the primary entity. For example, if the failed request was a PATCH request on the entity Customers(101), this navigation property can be used to read the current state of Customers(101) in the Offline store.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcode.html">setCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setCode(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the error code returned in the OData error response from the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcustomheaders.html">setCustomHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCustomHeaders</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setCustomHeaders(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatacustomheader/index.html"><span class="identifier">OfflineODataCustomHeader</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the navigation property which can be used to list the custom headers attached to this failed request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcustomtag.html">setCustomTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCustomTag</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setCustomTag(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a customized string that was used to tag the request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdependentrequests.html">setDependentRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDependentRequests</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setDependentRequests(kotlin.collections.MutableList((com.sap.cloud.mobile.odata.offline.OfflineODataRequest)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../offlineodatarequest/index.html"><span class="identifier">OfflineODataRequest</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the navigation property which can be used to list requests that depend on this failed request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdomain.html">setDomain</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDomain</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setDomain(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set internal domain info.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sethttpstatuscode.html">setHttpStatusCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHttpStatusCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setHttpStatusCode(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the HTTP status code returned from the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinnererror.html">setInnerError</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInnerError</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setInnerError(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the inner error returned in the OData error response from the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmessage.html">setMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMessage</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setMessage(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the error message returned in the OData error response from the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestbody.html">setRequestBody</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestBody</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setRequestBody(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the JSON body sent to the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestentity.html">setRequestEntity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestEntity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setRequestEntity(com.sap.cloud.mobile.odata.EntityValue)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the navigation property which can be used to directly read and directly modify the failed request in the request queue. The actual entity type of the returned entity will be dependent on the type of request. For example, if the failed request was a PATCH request on the entity Customers(101), then the entity returned by this navigation property will have a Customer entity type. Note that this navigation property differs from AffectedEntity; AffectedEntity returns the CURRENT state of the entity in the Offline Store where as RequestEntity is an typed representation of the request in the request queue itself.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestid.html">setRequestID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setRequestID(kotlin.Long)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Long</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the request identifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestmethod.html">setRequestMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setRequestMethod(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the HTTP method used for the request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequesturl.html">setRequestURL</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestURL</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$setRequestURL(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the request URL used when executing the request against the OData backend.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writetoparcel.html">writeToParcel</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeToParcel</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$writeToParcel(android.os.Parcel, kotlin.Int)/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">Parcel</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataErrorArchiveEntity$writeToParcel(android.os.Parcel, kotlin.Int)/flags">flags</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Internal implementation. Ignore it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

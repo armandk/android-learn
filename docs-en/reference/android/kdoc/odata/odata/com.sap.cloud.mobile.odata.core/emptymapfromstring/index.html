@@ -1,0 +1,232 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EmptyMapFromString - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">EmptyMapFromString</a><br/>
+<br/>
+<h1>EmptyMapFromString</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">EmptyMapFromString</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../mapfromstring/index.html"><span class="identifier">MapFromString</span></a></code>
+<p>An immutable empty map.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">EmptyMapFromString</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Construct a new map with <code><a href="../mapfromstring/size.html">EmptyMapFromString.size</a></code> of zero and specified initial <code>capacity</code>. A map can expand in size beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the map's maximum size.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="singleton.html">singleton</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">singleton</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">EmptyMapFromString</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Throws: 
+<p><code><a href="../immutableexception/index.html">com.sap.cloud.mobile.odata.core.ImmutableException</a></code>.</p>
+ </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="deletewithstring.html">deleteWithString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">deleteWithString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.EmptyMapFromString$deleteWithString(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ismutable.html">isMutable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isMutable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this map is mutable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setwithstring.html">setWithString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setWithString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.EmptyMapFromString$setWithString(kotlin.String, kotlin.Any)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.EmptyMapFromString$setWithString(kotlin.String, kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../mapfromstring/copykeysto.html">copyKeysTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyKeysTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$copyKeysTo(com.sap.cloud.mobile.odata.core.UntypedList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../untypedlist/index.html"><span class="identifier">UntypedList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy the keys in this map to the <code>list</code> argument.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/copyvaluesto.html">copyValuesTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyValuesTo</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$copyValuesTo(com.sap.cloud.mobile.odata.core.UntypedList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../untypedlist/index.html"><span class="identifier">UntypedList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy the values in this map to the <code>list</code> argument.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/delete.html">delete</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$delete(kotlin.Any)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Delete the entry with the specified <code>key</code> (if found).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$get(kotlin.Any)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>Return (nullable) The entry with the specified <code>key</code> (if found), otherwise <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/getrequired.html">getRequired</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequired</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$getRequired(kotlin.Any)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span></code>
+<p>Return the entry with the specified <code>key</code> (if found).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/getrequiredwithstring.html">getRequiredWithString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiredWithString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$getRequiredWithString(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/getwithstring.html">getWithString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getWithString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$getWithString(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/has.html">has</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">has</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$has(kotlin.Any)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this map has an entry with the specified <code>key</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/haswithstring.html">hasWithString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasWithString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$hasWithString(kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this map contains no entries.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/iteratorfromstring.html">iteratorFromString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">iteratorFromString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../mapiteratorfromstring/index.html"><span class="identifier">MapIteratorFromString</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/keys.html">keys</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">keys</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../untypedlist/index.html"><span class="identifier">UntypedList</span></a></code>
+<p>Return a list of the entry keys in this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$set(kotlin.Any, kotlin.Any)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.MapFromString$set(kotlin.Any, kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add or replace an entry with the specified <code>key</code> and <code>value</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/size.html">size</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">size</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of entries in this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string representation of this map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../mapfromstring/values.html">values</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">values</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../untypedlist/index.html"><span class="identifier">UntypedList</span></a></code>
+<p>Return a list of the entry values in this map.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

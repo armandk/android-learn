@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>FeatureRestrictionPolicy - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings.policies</a>&nbsp;/&nbsp;<a href="./index.html">FeatureRestrictionPolicy</a><br/>
+<br/>
+<h1>FeatureRestrictionPolicy</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">FeatureRestrictionPolicy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../predefinedpolicy/index.html"><span class="identifier">PredefinedPolicy</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">FeatureRestrictionPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.FeatureRestrictionPolicy$<init>(kotlin.Boolean, kotlin.collections.MutableList((com.sap.cloud.mobile.foundation.settings.policies.RestrictedFeature)), kotlin.collections.MutableList((com.sap.cloud.mobile.foundation.settings.policies.RestrictedFeature)))/featureVectorPolicyAllEnabled">featureVectorPolicyAllEnabled</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.FeatureRestrictionPolicy$<init>(kotlin.Boolean, kotlin.collections.MutableList((com.sap.cloud.mobile.foundation.settings.policies.RestrictedFeature)), kotlin.collections.MutableList((com.sap.cloud.mobile.foundation.settings.policies.RestrictedFeature)))/restrictedFeatures">restrictedFeatures</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../restrictedfeature/index.html"><span class="identifier">RestrictedFeature</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;mutableListOf()<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.FeatureRestrictionPolicy$<init>(kotlin.Boolean, kotlin.collections.MutableList((com.sap.cloud.mobile.foundation.settings.policies.RestrictedFeature)), kotlin.collections.MutableList((com.sap.cloud.mobile.foundation.settings.policies.RestrictedFeature)))/allowedPolicies">allowedPolicies</span><span class="symbol">:</span>&nbsp;<span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../restrictedfeature/index.html"><span class="identifier">RestrictedFeature</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;mutableListOf()<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="allowedpolicies.html">allowedPolicies</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">allowedPolicies</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../restrictedfeature/index.html"><span class="identifier">RestrictedFeature</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="featurevectorpolicyallenabled.html">featureVectorPolicyAllEnabled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">featureVectorPolicyAllEnabled</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="restrictedfeatures.html">restrictedFeatures</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">restrictedFeatures</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../restrictedfeature/index.html"><span class="identifier">RestrictedFeature</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="addrestrictedfeature.html">addRestrictedFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addRestrictedFeature</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.FeatureRestrictionPolicy$addRestrictedFeature(com.sap.cloud.mobile.foundation.settings.policies.RestrictedFeature)/feature">feature</span><span class="symbol">:</span>&nbsp;<a href="../restrictedfeature/index.html"><span class="identifier">RestrictedFeature</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="clearrestrictedfeatures.html">clearRestrictedFeatures</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearRestrictedFeatures</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tostringwithdefaultvalues.html">toStringWithDefaultValues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toStringWithDefaultValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../predefinedpolicy/getkeypath.html">getKeyPath</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getKeyPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="allowed_policies.html">ALLOWED_POLICIES</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">ALLOWED_POLICIES</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="feature_all_enabled.html">FEATURE_ALL_ENABLED</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">FEATURE_ALL_ENABLED</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="restricted_features.html">RESTRICTED_FEATURES</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">RESTRICTED_FEATURES</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="createfromjsonstring.html">createFromJsonString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createFromJsonString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.FeatureRestrictionPolicy.Companion$createFromJsonString(kotlin.String)/jsonString">jsonString</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">FeatureRestrictionPolicy</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

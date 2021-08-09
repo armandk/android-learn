@@ -1,0 +1,221 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CharBuffer - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">CharBuffer</a><br/>
+<br/>
+<h1>CharBuffer</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CharBuffer</span></code>
+<p>High performance char buffer.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CharBuffer</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>See CharBuffer(int).</p>
+<code><span class="identifier">CharBuffer</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new buffer with a <code><a href="getlength.html">CharBuffer.length</a></code> of zero and specified initial <code>capacity</code>. A buffer can expand in length beyond its initial capacity, but best performance will be obtained if the initial capacity is close to the buffer's maximum length.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$add(kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add a character value to the end of this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="append.html">append</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">append</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$append(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Append a string value to the end of this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code><a href="getlength.html">CharBuffer.length</a></code> to zero.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$get(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Char</span></code>
+<p>Return the character of this buffer at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlength.html">getLength</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return length of the buffer (the number of characters that will appear in <code>this.toString()</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrange.html">getRange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$getRange(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$getRange(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a range of characters from this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="internalarray.html">internalArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">internalArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">CharArray</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="join2.html">join2</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">join2</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join2(kotlin.String, kotlin.String)/text1">text1</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join2(kotlin.String, kotlin.String)/text2">text2</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the concatenation of 2 string values, using <code>append</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="join3.html">join3</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">join3</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join3(kotlin.String, kotlin.String, kotlin.String)/text1">text1</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join3(kotlin.String, kotlin.String, kotlin.String)/text2">text2</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join3(kotlin.String, kotlin.String, kotlin.String)/text3">text3</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the concatenation of 3 string values, using <code>append</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="join4.html">join4</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">join4</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join4(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text1">text1</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join4(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text2">text2</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join4(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text3">text3</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join4(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text4">text4</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the concatenation of 4 string values, using <code>append</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="join5.html">join5</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">join5</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join5(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text1">text1</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join5(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text2">text2</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join5(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text3">text3</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join5(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text4">text4</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join5(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text5">text5</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the concatenation of 5 string values, using <code>append</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="join6.html">join6</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">join6</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join6(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text1">text1</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join6(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text2">text2</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join6(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text3">text3</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join6(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text4">text4</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join6(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text5">text5</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join6(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text6">text6</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the concatenation of 6 string values, using <code>append</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="join7.html">join7</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">join7</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join7(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text1">text1</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join7(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text2">text2</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join7(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text3">text3</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join7(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text4">text4</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join7(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text5">text5</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join7(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text6">text6</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join7(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text7">text7</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the concatenation of 7 string values, using <code>append</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="join8.html">join8</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">join8</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join8(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text1">text1</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join8(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text2">text2</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join8(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text3">text3</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join8(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text4">text4</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join8(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text5">text5</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join8(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text6">text6</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join8(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text7">text7</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join8(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text8">text8</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the concatenation of 8 string values, using <code>append</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="join9.html">join9</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">join9</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join9(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text1">text1</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join9(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text2">text2</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join9(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text3">text3</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join9(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text4">text4</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join9(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text5">text5</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join9(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text6">text6</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join9(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text7">text7</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join9(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text8">text8</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$join9(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/text9">text9</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the concatenation of 9 string values, using <code>append</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reverse.html">reverse</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">reverse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reverse the characters of this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$set(kotlin.Int, kotlin.Char)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$set(kotlin.Int, kotlin.Char)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Char</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the character of this buffer at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlength.html">setLength</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$setLength(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set length of the buffer (the number of characters that will appear in <code>this.toString()</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrange.html">setRange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$setRange(kotlin.Int, kotlin.String)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$setRange(kotlin.Int, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Copy a range of characters from a string value into this buffer, starting at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a string value with the <code><a href="getlength.html">CharBuffer.length</a></code> characters of this buffer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="witharray.html">withArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$withArray(kotlin.CharArray)/chars">chars</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CharBuffer</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$withArray(kotlin.CharArray, kotlin.Int)/chars">chars</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.CharBuffer$withArray(kotlin.CharArray, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CharBuffer</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

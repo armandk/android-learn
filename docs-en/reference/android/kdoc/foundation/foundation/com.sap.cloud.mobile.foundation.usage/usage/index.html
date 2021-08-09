@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Usage - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.usage</a>&nbsp;/&nbsp;<a href="./index.html">Usage</a><br/>
+<br/>
+<h1>Usage</h1>
+<a name="com.sap.cloud.mobile.foundation.usage.Usage"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Usage</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.usage.Usage"></a>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Usage</span></code>
+<p>This class serves as the entry point to a set of framework APIs that allow you to extend and implement your own usage reporting based on your own server, to collect, store, and upload client usage events in a flexible way. <pre><code>
+1. Initialization Usage-- Need to implement <a href="../usagestore/index.html">UsageStore</a> before you can instantiate the
+   Usage:
+// Instantiates your UsageStore implementation, for example:
+    MyUsageStore store = new MyUsageStore("myStoreDatabaseName");
+    Usage usage = new Usage(store);
+
+
+2. <a href="../usagerecord/index.html">UsageRecord</a>-- Represents a single unit of usage information reported by a
+   UsageReporter, which contains:
+   a. <strong>Date</strong>-- The date when the UsageRecord is reported and persisted.
+   b. <strong><a href="../usageinfo/index.html">UsageInfo</a> Object</strong>-- Contains server specific event details as name-value pairs
+      saved in a HashMap&lt;String, String&gt;.
+   c. <strong>User-defined event type</strong> implemented as an Enum instance.
+
+   <strong>Extending UsageRecord</strong>:
+public class MyUsageRecord extends UsageRecord&lt;MyUsageRecord.MyEvent&gt; {
+            // Constructor-- Constructs a usage record with one of my event type and a date.
+            MyUsageRecord(MyEvent event, Date date, UsageInfo info) {
+                super(event, date, info);
+                logger.debug("Instantiated Usage Record: Event[{}], Date: {}", event, date);
+            }
+        }
+
+        // User-defined event types.
+        enum MyEvent {
+            EVENT1, EVENT2, EVENT3, EVENT4, EVENT5
+        }
+
+
+3. <a href="../usagereporter/index.html">UsageReporter</a>
+   A <strong>target</strong> is a logical group of collected events and information, collected for a specific
+   purpose, and sent to a given analytics server.
+   All events are reported using a reporter assigned with a target ID. The reporter’s only task is
+   to generate UsageRecord which is stored in an implementation of
+   UsageStore.
+
+   <strong>Reporting Usage Events</strong>:
+// 1. Instantiates a reporter by specifying the target ID and the store.
+        UsageReporter reporter = new UsageReporter(myTargetID, usage.getStore());
+
+        // 2. Registers and enables the reporter.
+        usage.registerReporter(reporter);
+
+        // 3. Creates a usage record with user-defined event type.
+
+        //    a. Initiates a UsageInfo with a HashMap, then fills it with implementation
+        //       specific name-value pairs.
+        UsageInfo info = new UsageInfo(new HashMap&lt;String, String&gt;());
+        info.setValue("Screen", "Property Screen")
+            .setValue("DeviceId", "1235")
+            .setValue("InfoCategory", "UI");
+
+        //    b. Instantiates a usage record with an event type, date, and UsageInfo object.
+        MyUsageRecord record = new MyUsageRecord(MyUsageRecord.MyEvent.EVENT1, new Date(), info);
+
+        // 4. Reports usage, the record will be persisted in the usage store.
+        reporter.reports(record);
+
+
+4. <a href="../usagesnapshot/index.html">UsageSnapshot</a>
+   A snapshot object is created via UsageStore.getSnapshot(androidContext, targetID)
+   and is used by the Usage Uploader when uploading usage data to the remote server.
+
+   It contains a collection of UsageRecords reported by a UsageReporter,
+   grouped under a Target ID, and persisted in a UsageStore.
+
+   The records collected in a snapshot is using the creation date of the snapshot as the cut-off
+   date, that is, all UsageRecords reported before the cut-off date will be included in the
+   snapshot.
+
+5. <a href="../usagestore/index.html">UsageStore</a>--
+   a. An interface that manages the storing, retrieval, and deletion of UsageRecords.
+   b. Used by the Usage Uploader to take a snapshot of records associated with a target ID.
+
+   <strong>Generating a Snapshot</strong>:
+// This is usually done when uploading usage records.
+        UsageSnapshot snapshot = usage.getStore().getSnapshot(androidContext, myTargetID);
+
+
+6. Usage Uploader-- Based on your server's protocol and data format, the implementation should
+   follow the steps below:
+   a. Takes a Usage Snapshot.
+   b. Transforms each Usage Record in the snapshot to the data format required by the server.
+   c. Uploads the data to a given server.
+   d. Removes Usage Records in the snapshot from the Usage Store upon success upload.
+
+   For example,
+// In the uploader's upload implementation:
+
+        // Uses try-with statement, which will invoke snapshot.close() at the end.
+        try (
+            // 1. Takes a snapshot from the instance of your UsageStore implementation.
+            MyUsageSnapshotImpl snapshot = usage.getStore().getSnapshot(androidContext, myTargetID);
+        ) {
+            // 2. Iterates through the usage records in the snapshot.
+            while (snapshot.hasNext()) {
+                MyUsageRecord record = snapshot.next();
+                ...
+                // 3. Converts the record to the format required by your server.
+                ...
+            }
+
+            // 4. Uploads to the server.
+            ...
+            // 5. If the upload is successful, removes the records in the snapshot.
+            snapshot.removeRecords();
+        } catch (SomeException ex) {
+            // Error handling.
+            ...
+        }
+
+  </code></pre></p>
+</BODY>
+</HTML>

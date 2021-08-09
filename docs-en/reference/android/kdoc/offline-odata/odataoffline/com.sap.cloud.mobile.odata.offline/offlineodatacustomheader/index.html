@@ -1,0 +1,164 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataCustomHeader - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataCustomHeader</a><br/>
+<br/>
+<h1>OfflineODataCustomHeader</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OfflineODataCustomHeader</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">, </span><span class="identifier">Parcelable</span></code>
+<p>A built-in Offline OData entity type which stores information about Offline OData custom headers.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OfflineODataCustomHeader</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.core.SparseIndexMap)/withDefaults">withDefaults</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader$<init>(kotlin.Boolean, com.sap.cloud.mobile.odata.core.SparseIndexMap)/withIndexMap">withIndexMap</span><span class="symbol">:</span>&nbsp;<span class="identifier">SparseIndexMap</span><span class="symbol">?</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="headerid.html">headerID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">headerID</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">name</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">value</span><span class="symbol">: </span><span class="identifier">Property</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">OfflineODataCustomHeader</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="describecontents.html">describeContents</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">describeContents</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Internal implementation. Ignore it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getheaderid.html">getHeaderID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHeaderID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) The custom header identifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The name of the custom header.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getold.html">getOld</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOld</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">OfflineODataCustomHeader</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The value of the custom header.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isproxy.html">isProxy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isProxy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="key.html">key</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">key</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader$key(kotlin.Int)/headerID">headerID</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">EntityKey</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="list.html">list</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">list</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader$list(com.sap.cloud.mobile.odata.EntityValueList)/from">from</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValueList</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">OfflineODataCustomHeader</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="setheaderid.html">setHeaderID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHeaderID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader$setHeaderID(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the custom header identifier.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setname.html">setName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader$setName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the name of the custom header.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setvalue.html">setValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader$setValue(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the value of the custom header.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writetoparcel.html">writeToParcel</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeToParcel</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader$writeToParcel(android.os.Parcel, kotlin.Int)/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">Parcel</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataCustomHeader$writeToParcel(android.os.Parcel, kotlin.Int)/flags">flags</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Internal implementation. Ignore it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

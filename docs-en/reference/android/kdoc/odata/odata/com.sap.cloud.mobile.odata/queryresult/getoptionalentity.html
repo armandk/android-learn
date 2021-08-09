@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryResult.getOptionalEntity - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">QueryResult</a>&nbsp;/&nbsp;<a href="./getoptionalentity.html">getOptionalEntity</a><br/>
+<br/>
+<h1>getOptionalEntity</h1>
+<a name="com.sap.cloud.mobile.odata.QueryResult$getOptionalEntity()"></a>
+<code><span class="identifier">@Nullable</span> <span class="identifier">@Nullable</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getOptionalEntity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@Nullable</span> <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The optional entity value of this result.</p>
+ Throws: 
+<p><code><a href="../queryresultexception/index.html">com.sap.cloud.mobile.odata.QueryResultException</a></code> if the result does not have the expected type.</p>
+  Example using proxy classes:<pre><code>
+      public void optionalEntityExample() {
+          NorthwindService service = this.getService();
+          DataQuery query = new DataQuery()
+              .select(Customer.customerID, Customer.companyName, Customer.contactName)
+              .orderBy(Customer.companyName).top(1);
+          Customer customer = com.sap.cloud.mobile.odata.Single.optional(service.getCustomers(query));
+          if (customer != null) {
+              this.showCustomer(customer);
+          }
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void optionalEntityExample() {
+          DataService service = this.getService();
+          EntitySet customersEntitySet = service.getEntitySet("Customers");
+          EntityType customerEntityType = customersEntitySet.getEntityType();
+          Property customerIDProperty = customerEntityType.getProperty("CustomerID");
+          Property companyNameProperty = customerEntityType.getProperty("CompanyName");
+          Property contactNameProperty = customerEntityType.getProperty("ContactName");
+          DataQuery query = new DataQuery()
+              .select(customerIDProperty, companyNameProperty, contactNameProperty)
+              .from(customersEntitySet).orderBy(companyNameProperty).top(1);
+          EntityValue customer = service.executeQuery(query).getOptionalEntity();
+          if (customer != null) {
+              this.showCustomer(customer);
+          }
+      }
+      </code></pre>
+<p><strong>Return</strong><br/>
+<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">?</span><span class="symbol">:</span> (nullable) The optional entity value of this result.</p>
+</BODY>
+</HTML>

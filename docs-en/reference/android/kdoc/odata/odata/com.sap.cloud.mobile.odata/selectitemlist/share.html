@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SelectItemList.share - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">SelectItemList</a>&nbsp;/&nbsp;<a href="./share.html">share</a><br/>
+<br/>
+<h1>share</h1>
+<a name="com.sap.cloud.mobile.odata.SelectItemList$share(com.sap.cloud.mobile.odata.ListBase)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">share</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.SelectItemList$share(com.sap.cloud.mobile.odata.ListBase)/list">list</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">SelectItemList</span></a></code>
+<p>Return a new <code><a href="index.html">com.sap.cloud.mobile.odata.SelectItemList</a></code> that shares the <code><a href="../listbase/getuntypedlist.html">ListBase.untypedList</a></code> as the <code>list</code> parameter. To ensure type safety, items in <code>list</code> that do not have the item type <code><a href="../selectitem/index.html">com.sap.cloud.mobile.odata.SelectItem</a></code> will be removed.</p>
+<h3>Parameters</h3>
+<p><a name="list"></a>
+<code>list</code> - <a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">:</span> List whose items will be shared by the resulting list.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">SelectItemList</span></a><span class="symbol">:</span> A new list of item type <code><a href="../selectitem/index.html">com.sap.cloud.mobile.odata.SelectItem</a></code>, sharing the same items as <code>list</code>.</p>
+</BODY>
+</HTML>

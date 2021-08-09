@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UsageSnapshot - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.usage</a>&nbsp;/&nbsp;<a href="./index.html">UsageSnapshot</a><br/>
+<br/>
+<h1>UsageSnapshot</h1>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageSnapshot"></a>
+<code><span class="keyword">interface </span><span class="identifier">UsageSnapshot</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.usage.UsageSnapshot"></a>
+<code><span class="keyword">interface </span><span class="identifier">UsageSnapshot</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code>
+<p>This is the interface that defines the behavior of a usage snapshot object. </p>
+<p>A snapshot object is created and used by the Usage Uploader when uploading usage data to the remote server. It contains a collection of <code><a href="../usagerecord/index.html">UsageRecord</a></code>s reported by a <code><a href="../usagereporter/index.html">UsageReporter</a></code>, grouped under a Target ID, and persisted in <code><a href="../usagestore/index.html">UsageStore</a></code>. </p>
+<p>The records collected in a snapshot is using the creation date of the snapshot as the cut-off date, that is, all Usage Records persisted up to the cut-off date will be included in the snapshot. </p>
+<pre><code><strong>Usage</strong>:
+In the Usage Uploader,
+1. Instantiates a concrete implementation of this interface. The implementation is responsible for
+   retrieving usage records from usage store.
+2. Iterates through the usage records in the snapshot via <a href="next.html">#next()</a> and converts the usage
+   records to the data format required by the server.
+3. After the uploader completed the upload successfully, cleans up the persisted usage records in
+   this snapshot from the usage store via <a href="removerecords.html">#removeRecords()</a>;
+4. Cleans up other implementation specific resources/states associated with the snapshot
+   via <a href="#">#close()</a>.
+
+<strong>Example</strong>:
+// In the upload method.
+    ....
+    try ( // Try-with statement will invoke snapshot.close() transparently at the end.
+        MyUsageSnapshotImpl snapshot = new MyUsageSnapshotImpl(targetID)
+    ) {
+        UsageRecord record;
+        while ((record = snapshot.next()) != null) {
+            ...
+            // Converts the record to the format required by the server.
+            ...
+        }
+
+        // Upload to the server.
+        ...
+
+        // Upload successfully, now remove those records from the usage store.
+        snapshot.removeRecords();
+    } catch (SomeException ex) {
+        ...
+    }
+
+</code></pre>
+</BODY>
+</HTML>

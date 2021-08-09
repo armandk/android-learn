@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Logging - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.logging</a>&nbsp;/&nbsp;<a href="./index.html">Logging</a><br/>
+<br/>
+<h1>Logging</h1>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging"></a>
+<code><span class="keyword">class </span><span class="identifier">Logging</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging"></a>
+<code><span class="keyword">class </span><span class="identifier">Logging</span></code>
+<p>The SAP BTP SDK for Android uses Simple Logging Facade for Java (SLF4J) for its logging API. For further information about SLF4J, see <a href="https://www.slf4j.org/"></a>. </p>
+<p>Using SLF4J in your code is straight forward. You get a named logger from the LoggerFactory and then log at the level you need to. For example: </p>
+<pre><code>
+  org.slf4j.Logger log = LoggerFactory.getLogger("com.my.package");
+  log.info("info");
+  log.warn("warn");
+  log.debug("debug");
+  log.error("error");
+  log.trace("trace");
+ 
+  log.info("info {}", "info");
+  log.warn("warn {}", "warn");
+  log.debug("debug {}", "debug");
+  log.error("error {}", "error");
+  log.trace("trace {}", "trace");
+  </code></pre> We recommend setting log level to ERROR for shipping code. Log level can be set by calling: <pre><code>Logging.getRootLogger().setLevel(Level.ERROR);</code></pre> 
+<p>You can also set the log level when calling </p>
+<pre><code>Logging.initialize</code></pre> 
+<p>SLF4J does not do the actual logging. You need a logging implementation to do that. The SAP BTP SDK for Android uses `logback-android`. For further information, see: <a href="http://tony19.github.io/logback-android/"></a>. </p>
+Uploading Logs Logs can be uploaded to mobile services for later review. To upload the log, call <pre><code>Logging.uploadLog</code></pre>. To be notified when the upload is complete, implement <pre><code>Logging.UploadListener</code></pre>, and add that to the listener list by calling <pre><code>Logging.addLogUploadListener</code></pre>. 
+<p>Any messages logged at trace level will be uploaded as path messages.</p>
+</BODY>
+</HTML>

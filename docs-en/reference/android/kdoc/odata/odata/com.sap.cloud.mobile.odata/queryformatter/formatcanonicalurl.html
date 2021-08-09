@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryFormatter.formatCanonicalURL - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">QueryFormatter</a>&nbsp;/&nbsp;<a href="./formatcanonicalurl.html">formatCanonicalURL</a><br/>
+<br/>
+<h1>formatCanonicalURL</h1>
+<a name="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatCanonicalURL</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <span class="identifier">String</span></code>
+<p>See formatCanonicalURL(EntityValue, DataContext, boolean).</p>
+<h3>Parameters</h3>
+<p><a name="entity"></a>
+<code>entity</code> - <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">:</span> Entity parameter.</p>
+<p><a name="context"></a>
+<code>context</code> - <a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">:</span> Context parameter.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">:</span> (see linked method).</p>
+<a name="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">formatCanonicalURL</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFormatter$formatCanonicalURL(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.DataContext, kotlin.Boolean)/absolute">absolute</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <span class="identifier">String</span></code>
+<p>Return the canonical URL of an entity (relative by default, absolute if specified).</p>
+ See Also: 
+<p><a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part2-url-conventions/odata-v4.0-os-part2-url-conventions.html#_Toc372793775">Canonical URL</a> (OData V4).</p>
+ 
+<h3>Parameters</h3>
+<p><a name="entity"></a>
+<code>entity</code> - <a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">:</span> Entity value.</p>
+<p><a name="context"></a>
+<code>context</code> - <a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">:</span> Data context.</p>
+<p><a name="absolute"></a>
+<code>absolute</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> Is absolute URL required? (defaults to `false`, resulting in relative URL).</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">:</span> The canonical URL of an entity (relative by default, absolute if specified).</p>
+</BODY>
+</HTML>

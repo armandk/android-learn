@@ -1,0 +1,213 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MimePart - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.http</a>&nbsp;/&nbsp;<a href="./index.html">MimePart</a><br/>
+<br/>
+<h1>MimePart</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MimePart</span></code>
+<p>Encapsulates a MIME part.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MimePart</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates a MIME part.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcontent.html">getContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getContent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../mimestreamreader/index.html"><span class="identifier">MimeStreamReader</span></a></code>
+<p>Return MIME part content, or request/response content if <code>isRequest</code> or <code>isResponse</code> is <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcontentid.html">getContentID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getContentID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Body part Content-ID for body part in OData change set request/response, otherwise null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getheaders.html">getHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHeaders</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../httpheaders/index.html"><span class="identifier">HttpHeaders</span></a></code>
+<p>Return MIME part headers, or request/response headers if <code>isRequest</code> or <code>isResponse</code> is <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethttpmethod.html">getHttpMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHttpMethod</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return if <code><a href="isrequest.html">MimePart.isRequest</a></code> is <code>true</code>, then the HTTP method (e.g. "GET"), otherwise empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequesturi.html">getRequestURI</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestURI</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return if <code><a href="isrequest.html">MimePart.isRequest</a></code> is <code>true</code>, then the request URI (e.g. "/resource"), otherwise empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstatuscode.html">getStatusCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStatusCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return if <code><a href="isresponse.html">MimePart.isResponse</a></code> is <code>true</code>, then the status code, otherwise zero.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstatustext.html">getStatusText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStatusText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return if <code><a href="isresponse.html">MimePart.isResponse</a></code> is <code>true</code>, then the status text, otherwise empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ismultipart.html">isMultipart</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isMultipart</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this part contains a multipart message (part's Content-Type is "multipart/mixed; boundary=SomeBoundaryText").</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isrequest.html">isRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isRequest</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this part contains an HTTP request (part's Content-Type is "application/http", and is followed by an HTTP request line).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isresponse.html">isResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isResponse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return tr<code>ue if this part contains an HTTP response (part's Content-Type is "application/http", and is followed by an HTTP status line). @return tr</code>ue if this part contains an HTTP response (part's Content-Type is "application/http", and is followed by an HTTP status line).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcontent.html">setContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setContent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setContent(com.sap.cloud.mobile.odata.http.MimeStreamReader)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../mimestreamreader/index.html"><span class="identifier">MimeStreamReader</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set MIME part content, or request/response content if <code>isRequest</code> or <code>isResponse</code> is <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcontentid.html">setContentID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setContentID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setContentID(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set body part Content-ID for body part in OData change set request/response, otherwise null.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setheaders.html">setHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHeaders</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setHeaders(com.sap.cloud.mobile.odata.http.HttpHeaders)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set MIME part headers, or request/response headers if <code>isRequest</code> or <code>isResponse</code> is <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sethttpmethod.html">setHttpMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHttpMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setHttpMethod(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code><a href="isrequest.html">MimePart.isRequest</a></code> is <code>true</code>, then the HTTP method (e.g. "GET"), otherwise empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmultipart.html">setMultipart</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMultipart</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setMultipart(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this part contains a multipart message (part's Content-Type is "multipart/mixed; boundary=SomeBoundaryText").</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequest.html">setRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequest</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setRequest(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if this part contains an HTTP request (part's Content-Type is "application/http", and is followed by an HTTP request line).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequesturi.html">setRequestURI</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestURI</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setRequestURI(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code><a href="isrequest.html">MimePart.isRequest</a></code> is <code>true</code>, then the request URI (e.g. "/resource"), otherwise empty.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setresponse.html">setResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setResponse(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set tr<code>ue if this part contains an HTTP response (part's Content-Type is "application/http", and is followed by an HTTP status line). @param value tr</code>ue if this part contains an HTTP response (part's Content-Type is "application/http", and is followed by an HTTP status line).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstatuscode.html">setStatusCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStatusCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setStatusCode(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code><a href="isresponse.html">MimePart.isResponse</a></code> is <code>true</code>, then the status code, otherwise zero.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstatustext.html">setStatusText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStatusText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.http.MimePart$setStatusText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code><a href="isresponse.html">MimePart.isResponse</a></code> is <code>true</code>, then the status text, otherwise empty.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

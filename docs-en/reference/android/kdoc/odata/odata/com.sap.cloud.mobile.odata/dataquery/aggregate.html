@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.aggregate - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./aggregate.html">aggregate</a><br/>
+<br/>
+<h1>aggregate</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$aggregate(kotlin.Array((com.sap.cloud.mobile.odata.AggregateValue)))"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">aggregate</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$aggregate(kotlin.Array((com.sap.cloud.mobile.odata.AggregateValue)))/items">items</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Adds aggregate transformation items (to <code><a href="gettransformvalues.html">DataQuery.transformValues</a></code>) for transforming the result of a query sent to an entity set. This method is only for adding aggregate transformation items (in contrast to 'transform' method) for readibility purposes. </p>
+Example for aggregations:<pre><code>
+      public void aggregationExample() {
+          DataService service = this.getService();
+          EntitySet employeeEntitySet = service.getEntitySet("Employees");
+          EntityType employeeEntityType = employeeEntitySet.getEntityType();
+          Property ordersProperty = employeeEntityType.getProperty("Orders");
+          Property orderDetails = ordersProperty.getEntityType()
+              .getProperty("Order_Details");
+          Property ordersQuantity = orderDetails.getEntityType()
+              .getProperty("Quantity");
+          DataQuery query = new DataQuery();
+          AggregateValue aggregateTransform = ordersProperty.path(ordersQuantity)
+              .sum("SumQuantity");
+          query.aggregate(aggregateTransform);
+          this.testApplyQueryResult(query, "SumQuantity");
+          DataQuery queryCount = new DataQuery();
+          AggregateValue countAggregate = AggregateValue.count("AllEmployees");
+          queryCount.aggregate(countAggregate);
+          this.testApplyQueryResult(queryCount, null);
+      }
+      </code></pre> Example for aggregations:<pre><code>
+      public void aggregationExample() {
+          DataQuery query = new DataQuery();
+          AggregateValue aggregateTransform = Employee.orders.path(Order.orderDetails)
+              .path(OrderDetail.quantity).sum("SumQuantity");
+          query.aggregate(aggregateTransform);
+          this.testApplyQueryResult(query, "SumQuantity");
+          DataQuery queryCount = new DataQuery();
+          AggregateValue countAggregate = AggregateValue.count("AllEmployees");
+          queryCount.aggregate(countAggregate);
+          this.testApplyQueryResult(queryCount, null);
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="items"></a>
+<code>items</code> - <a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a><span class="symbol">:</span> The items to be added.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

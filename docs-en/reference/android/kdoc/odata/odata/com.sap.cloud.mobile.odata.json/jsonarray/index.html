@@ -1,0 +1,423 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JsonArray - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.json</a>&nbsp;/&nbsp;<a href="./index.html">JsonArray</a><br/>
+<br/>
+<h1>JsonArray</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JsonArray</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a></code>
+<p>A strongly-typed list of item type <code><a href="../jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code>?, inheriting from <code><a href="../jsonelement/index.html">com.sap.cloud.mobile.odata.json.JsonElement</a></code> rather than the usual <code><a href="../../com.sap.cloud.mobile.odata/listbase/index.html">com.sap.cloud.mobile.odata.ListBase</a></code>. Uses the property and function naming conventions of the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">JavaScript Array object</a>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">JsonArray</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>See JsonArray(int).</p>
+<code><span class="identifier">JsonArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$<init>(kotlin.Int)/capacity">capacity</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span></code>
+<p>Construct a new list with <code><a href="length.html">JsonArray.length</a></code> of zero and specified initial <code>capacity</code>. A list can expand in length beyond its initial capacity, but best performance will be obtained if the initial capacity is close to (and not less than) the list's maximum length.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="empty.html">empty</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">empty</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonArray</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../jsonelement/type_array.html">TYPE_ARRAY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_ARRAY</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON array values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/type_boolean.html">TYPE_BOOLEAN</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_BOOLEAN</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON boolean values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/type_number.html">TYPE_NUMBER</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_NUMBER</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON number values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/type_object.html">TYPE_OBJECT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_OBJECT</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON object values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/type_string.html">TYPE_STRING</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TYPE_STRING</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Type code for JSON string values.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add.html">add</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">add</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$add(com.sap.cloud.mobile.odata.json.JsonElement)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add <code>item</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addall.html">addAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$addAll(com.sap.cloud.mobile.odata.json.JsonArray)/list">list</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">JsonArray</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add all the items of <code>list</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="addthis.html">addThis</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addThis</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$addThis(com.sap.cloud.mobile.odata.json.JsonElement)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Add <code>item</code> to the end of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove all items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return a <a href="https://en.wikipedia.org/wiki/Object_copying#Shallow_copy">shallow copy</a> of this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="first.html">first</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">first</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The first item in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromelement.html">fromElement</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromElement</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$fromElement(com.sap.cloud.mobile.odata.json.JsonElement)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return the 'value' cast as a <code><a href="./index.html">com.sap.cloud.mobile.odata.json.JsonArray</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$get(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The item in this list at the specified <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getarray.html">getArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$getArray(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return an item of this array cast as a <code><a href="./index.html">com.sap.cloud.mobile.odata.json.JsonArray</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getobject.html">getObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getObject</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$getObject(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonobject/index.html"><span class="identifier">JsonObject</span></a></code>
+<p>Return an item of this array cast as a <code><a href="../jsonobject/index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstring.html">getString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$getString(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return an item of this array cast as a <code>string</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettype.html">getType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return type of JSON element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getuntypedlist.html">getUntypedList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUntypedList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/untypedlist/index.html"><span class="identifier">UntypedList</span></a></code>
+<p>Return the underlying untyped list of objects. Use with care, avoiding the addition of objects with an incorrect item type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="includes.html">includes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">includes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$includes(com.sap.cloud.mobile.odata.json.JsonElement)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list contains <code>item</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="indexof.html">indexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$indexOf(com.sap.cloud.mobile.odata.json.JsonElement)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See indexOf(JsonElement, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$indexOf(com.sap.cloud.mobile.odata.json.JsonElement, kotlin.Int)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$indexOf(com.sap.cloud.mobile.odata.json.JsonElement, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return first index in this list of <code>item</code>, or <code>-1</code> if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insertall.html">insertAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">insertAll</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$insertAll(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonArray)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$insertAll(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonArray)/list">list</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">JsonArray</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Insert all items of <code>list</code> into this list, before the item (if any) at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="insertat.html">insertAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">insertAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$insertAt(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonElement)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$insertAt(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonElement)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Insert <code>item</code> into this list, before the item (if any) at <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isempty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this list contains no items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="last.html">last</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">last</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The last item in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lastindexof.html">lastIndexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$lastIndexOf(kotlin.Any)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>See lastIndexOf(Object, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">lastIndexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$lastIndexOf(kotlin.Any, kotlin.Int)/item">item</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$lastIndexOf(kotlin.Any, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return last index in this list of <code>item</code>, or -1 if not found.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="length.html">length</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">length</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return the number of items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removeat.html">removeAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeAt</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$removeAt(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove an item from the specified index in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="removerange.html">removeRange</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeRange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$removeRange(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$removeRange(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Remove a range of items from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="reverse.html">reverse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reverse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Reverse the order of the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set.html">set</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">set</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$set(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonElement)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$set(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonElement)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the item in this list at the specified <code>index</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="single.html">single</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">single</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A single item from this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slice.html">slice</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$slice(kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonArray</span></a></code>
+<p>See slice(int, int).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">slice</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$slice(kotlin.Int, kotlin.Int)/start">start</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonArray$slice(kotlin.Int, kotlin.Int)/end">end</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return a slice of this list from index <code>start</code> (inclusive) to index <code>end</code> (exclusive).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sort.html">sort</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sort the items in this list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return the array in <a href="http://json.org">JSON</a> format.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../jsonelement/applyversion.html">applyVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">applyVersion</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$applyVersion(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonElement)/version">version</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$applyVersion(kotlin.Int, com.sap.cloud.mobile.odata.json.JsonElement)/toElement">toElement</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Apply <code>version</code> (recursively) to all <code><a href="../jsonobject/index.html">com.sap.cloud.mobile.odata.json.JsonObject</a></code> instances within <code>toElement</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/format.html">format</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">format</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$format(com.sap.cloud.mobile.odata.json.JsonElement)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return JSON element (including <code>null</code>) converted to a string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$parse(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) String converted to parsed JSON element (including <code>null</code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/parsearray.html">parseArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$parseArray(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">JsonArray</span></a></code>
+<p>Return string converted to parsed JSON array.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/parseobject.html">parseObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseObject</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$parseObject(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonobject/index.html"><span class="identifier">JsonObject</span></a></code>
+<p>Return string converted to parsed JSON object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../jsonelement/parsewithorderedobjects.html">parseWithOrderedObjects</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">parseWithOrderedObjects</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.json.JsonElement$parseWithOrderedObjects(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../jsonelement/index.html"><span class="identifier">JsonElement</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) String converted to parsed JSON element (including <code>null</code>). The order of any nested object entries will be preserved.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryResult.check - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">QueryResult</a>&nbsp;/&nbsp;<a href="./check.html">check</a><br/>
+<br/>
+<h1>check</h1>
+<a name="com.sap.cloud.mobile.odata.QueryResult$check()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">check</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See check(int).</p>
+<a name="com.sap.cloud.mobile.odata.QueryResult$check(kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">check</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryResult$check(kotlin.Int)/fixOptions">fixOptions</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Check if the <code><a href="getresult.html">QueryResult.result</a></code> is valid with respect to the <code><a href="getquery.html">QueryResult.query</a></code>. A result will be considered invalid if it is missing properties that were expected according to the use of <code><a href="../dataquery/select.html">DataQuery.select</a></code> or <code><a href="../dataquery/expand.html">DataQuery.expand</a></code> in the <code><a href="getquery.html">QueryResult.query</a></code>.</p>
+ Throws: 
+<p><code><a href="../queryresultexception/index.html">com.sap.cloud.mobile.odata.QueryResultException</a></code> if the result is definitely not valid.</p>
+ 
+<h3>Parameters</h3>
+<p><a name="fixOptions"></a>
+<code>fixOptions</code> - <span class="identifier">Int</span><span class="symbol">:</span> Flags for fixing invalid OData payload</p>
+</BODY>
+</HTML>

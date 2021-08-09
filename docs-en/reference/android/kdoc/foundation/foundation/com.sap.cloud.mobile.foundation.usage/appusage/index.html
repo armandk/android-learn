@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AppUsage - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.usage</a>&nbsp;/&nbsp;<a href="./index.html">AppUsage</a><br/>
+<br/>
+<h1>AppUsage</h1>
+<a name="com.sap.cloud.mobile.foundation.usage.AppUsage"></a>
+<code><span class="keyword">class </span><span class="identifier">AppUsage</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.usage.AppUsage"></a>
+<code><span class="keyword">class </span><span class="identifier">AppUsage</span></code>
+<p>The mobile services server supports a specific format of usage data and event types. Its client usage implementation, AppUsage, follows the Usage Framework API (<code><a href="../usage/index.html">Usage</a></code>) and provides simplified utility methods and encrypted usage store. </p>
+<p>1. <strong>Initializing AppUsage</strong>-- A one-time initialization is required via <code><a href="initialize.html">#initialize(Context, String, SettingsParameters, byte[])</a></code>. It is recommended to use <code>EncryptionUtil</code> to obtain the encryption key. If this is the first time <code>AppUsage</code> is being initialized and <code>null</code> is provided as the encryption key, an encryption key will be generated transparently and will be used for subsequent <code>initialize</code> calls. </p>
+<pre><code>// Application Id and version will be used during upload to form the mobile services URL.
+
+    byte[] encryptionKey = EncryptionUtil.getEncryptionKey("aliasForAppUsage", myPasscode);
+    AppUsage.initialize(appContext, "myUsageStore", settingsParameter, encryptionKey);
+ </code></pre> 
+<p>2. <strong>Reporting</strong>-- All usage reported will be persisted to a encrypted backing store. The reporting needs to begin with a <code><a href="sessionstart.html">#sessionStart()</a></code>, followed by one or more <code>event()</code> or pairs of <code>eventStart()</code> and <code>eventEnd()</code> methods, then end with a <code><a href="sessionend.html">#sessionEnd()</a></code> method. </p>
+<p>Repeat these method call sequences if you want to have multiple report sessions. </p>
+<p>If the <code>sessionStart()</code> or <code>sessionEnd()</code> method is missing, all events reported will be skipped. </p>
+<p>Use one of the <code>event()</code> methods if you know the duration. Otherwise, use a pair of <code>eventStart()</code> and <code>eventEnd()</code> methods, and the duration will be calculated for you. </p>
+<p>The system default target ID will be used when a target ID is not specified for the reporting methods. </p>
+<pre><code>// 1. Marks the beginning of a Session.
+    AppUsage.sessionStart();
+
+    // 2. Adds one or more events.
+    AppUsage.event(
+        "eventType1",          // Event type, optional.
+        "testEvent1Key",       // Event key. When not specified, 'other' will be used.
+        4L,                    // Duration.
+        new AppUsageInfo()      // Event details using AppUsageInfo.
+            .screen("firstScreen")  // Chained method from AppUsageInfo.
+            .value("randomValue")); // Chained method from AppUsageInfo.
+
+    AppUsage.event(
+        null,                  // Null event type.
+        "testEvent2Key",
+        4L,
+        new AppUsageInfo()
+            .screen("second screen")
+            .category("value2"));
+
+    // Or use eventStart and eventEnd pairs, the duration will be calculated for you.
+    AppUsage.eventStart(
+        "eventType2",
+        "key1",
+        new AppUsageInfo()
+            .screen("third screen")
+            .value("value2"));
+    AppUsage.eventEnd(
+        "eventType2",
+        "key1",
+        new AppUsageInfo()
+        .measurement("measurement"));
+
+    AppUsage.eventStart( // The default event key 'other' is used when no key is specified.
+        "eventType3",
+        "key3",
+        new AppUsageInfo()
+            .screen("home")
+            .others("otherValue"));
+    AppUsage.eventEnd(
+        "eventType3",
+        "key3",
+        new AppUsageInfo()
+            .screen("home")
+            .others("otherValue"));
+
+    // Marks the end of a session. Can have more than one sessions using pairs of sessionStart()
+    // and sessionEnd().
+    AppUsage.sessionEnd();
+</code></pre> 
+<p>3. <strong>Uploading</strong>-- Before using <code><a href="../appusageuploader/index.html">AppUsageUploader</a></code>, you need to enable the server to upload application-specific usage statistics and reports from mobile devices. </p>
+<p>See <a href="https://help.hana.ondemand.com/hana_cloud_platform_mobile_services/
+  frameset.htm?065046f829c54f06b379d6f68137feaf.html">Defining Usage Report Policy</a>. </p>
+<p><code>AppUsageUploader</code> runs in an <code>AsyncTask</code>, it retrieves the snapshot from the usage store, converts the usage records to the format required by mobile services, then uploads them to the server. </p>
+<pre><code>// Establishes a connection to mobile services using okHttpClient.
+
+    ....
+
+    // Uploads to the server.
+    AppUsageUploader.upload(okHttpClient, targetID);
+</code></pre> 
+<p>4. <strong>Viewing Usage Reports on Server</strong>-- After successful client data upload, you can find your reports on the server. </p>
+<p>See <a href="https://help.hana.ondemand.com/hana_cloud_platform_mobile_services/
+       frameset.htm?78fa9c358a4e4130bd5312d32f502009.html">Viewing Client Usage Reports</a>.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,315 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.foundation.securestore - foundation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">foundation</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.foundation.securestore</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.foundation.securestore</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="createdatabasecallback/index.html">CreateDatabaseCallback</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">CreateDatabaseCallback</span></code><br/>
+<code><span class="keyword">interface </span><span class="identifier">CreateDatabaseCallback</span></code>
+<p>This interface is used to provide callback methods to create or update database objects when instantiating Secure Database Store via <code><a href="securedatabasestore/-init-.html">SecureDatabaseStore#SecureDatabaseStore(Context, String, int, CreateDatabaseCallback)</a></code>. <pre><code>
+1. Initial database creation-- use database version 1, and create database objects in
+   onCreate method.
+
+   For example,
+
+static final int DATABASE_VERSION = 1;
+    ...
+    SecureDatabaseStore store = new SecureDatabaseStore(androidContext, storeName,
+        DATABASE_VERSION,
+        new CreateDatabaseCallback(){
+            public void onCreate(SecureDatabaseStore store){
+                // Executes the create table SQL statement when the database is created the first
+                // time.
+                store.executeUpdate(&lt;create table SQL statement(s)&gt;);
+                ...
+            }
+
+            public void onUpdate(SecureDatabaseStore store, int oldVersion, int newVersion) {
+                // No need to to anything if newVersion == oldVersion.
+                // For example, when DATABASE_VERSION == 1, this method will not be called.
+                    ...
+            }
+        });
+
+
+2. When database table(s) changed-- use a higher database version for each such change, and
+   implements onUpdate to alter the table(s) or migrate existing table data to
+   the new table.
+
+   For example, when a SecureDatabaseStore has evolved to version 3,
+
+static final int DATABASE_VERSION = 3;
+    ...
+    SecureDatabaseStore store = new SecureDatabaseStore(androidContext, storeName,
+        DATABASE_VERSION,
+        new CreateDatabaseCallback(){
+            public void onCreate(SecureDatabaseStore store){
+                // Executes the create table SQL statement when the database is created the first
+                // time.
+                store.executeUpdate(&lt;create table SQL statement(s) for the version 3 table(s)&gt;);
+                ...
+            }
+
+            public void onUpdate(SecureDatabaseStore store, int oldVersion, int newVersion) {
+                // Modify the existing table or migrate the original table data based on the
+                // differences across each version.
+                if (oldVersion &lt; 2) {
+                    ...
+                }
+
+                if (oldVersion &lt; 3) {
+                    ...
+                }
+                ...
+                // Now the app will iterate over the update statements and run any that are needed.
+                // No matter what previous version was and regardless of what more recent version
+                // they upgrade to, the app will run the proper statements to take the app from the
+                // older schema to the properly upgraded one.
+            }
+        });
+
+</code></pre></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="securedatabaseresultset/index.html">SecureDatabaseResultSet</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SecureDatabaseResultSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Closeable</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">SecureDatabaseResultSet</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Closeable</span></code>
+<p>Executing a SQL query returns a <code>SecureDatabaseResultSet</code> object. You typically use a <code>while()</code> loop to iterate over the results of the query when you expect the result to contain multiple rows until <code><a href="securedatabaseresultset/next.html">#next()</a></code> returns <code>false</code>: <pre><code>// Queries the database and iterates through the rows in the result set.
+    final String queryAllUsers = "SELECT * FROM users";
+    try (SecureDatabaseResultSet rs = store.executeQuery(queryAllUsers)) {
+        while (rs.next()) {
+            // Has a valid row, retrieves the column values with appropriate getter method.
+            int age = rs.getInt("age");
+            String name = rs.getString("name");
+            String email = rs.getString("email");
+            logger.debug("Retrieved user: age = {}, name = {}, email = {}", age, name, email);
+        }
+    } catch (BackingStoreException ex) {
+        logger.error("Failed to execute query.", ex);
+    }
+ </code></pre> </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="securedatabasestore/index.html">SecureDatabaseStore</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SecureDatabaseStore</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">SecureDatabaseStore</span></code>
+<p>Secure Database Store provides transparent 256-bit AES encryption of data stored in a <a href="https://www.sqlite.org/docs.html">SQLite</a> database. Creating To instantiate a SecureDatabaseStore, you need to specify the Android application context, database file name, database version, and provide an instance of <code><a href="createdatabasecallback/index.html">CreateDatabaseCallback</a></code>, where the database table is created or updated. <pre><code>static final int DATABASE_VERSION = 1; // Increment this number when the table schema changes.
+     final String databaseName = "myDatabase";
+     final String schema =
+        "CREATE TABLE IF NOT EXISTS users "
+        + "(name TEXT, age INTEGER, email TEXT NOT NULL UNIQUE PRIMARY KEY)";
+
+     SecureDatabaseStore store = new SecureDatabaseStore(
+        context,
+        databaseName,
+        DATABASE_VERSION,
+        new CreateDatabaseCallback() {
+            public void onCreate(SecureDatabaseStore store) {
+                store.executeUpdate(schema); // Executes the CREATE TABLE statement
+            }
+
+            public void onUpgrade(SecureDatabaseStore store, int oldVersion, int newVersion) {
+                // Modify the existing table or migrate the original table data based on the
+                // differences across each version.
+                if (oldVersion &lt; 2) {
+                    ...
+                }
+                if (oldVersion &lt; 3) {
+                    ...
+                }
+                // Now the app will iterate over the update statements and run any that are needed.
+                // No matter what previous version was and regardless of what more recent version
+                // they upgrade to, the app will run the proper statements to take the app from the
+                // older schema to the properly upgraded one.
+            }
+        });
+  </code></pre> Opening You open the store with an encryption key before you can interact with it. It is recommended to use <code>EncryptionUtil</code> to obtain the encryption key. If this is the first time store is being opened and <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="securekeyvaluestore/index.html">SecureKeyValueStore</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SecureKeyValueStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">SecureKeyValueStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AutoCloseable</span></code>
+<p>The SecureKeyValueStore is used to persist key-value pairs using an encrypted backing store. It uses <code>String</code> as the key type, and can store any values of the following types: <ul> <li>Boolean</li>
+ <li>Byte</li>
+ <li>Double</li>
+ <li>Float</li>
+ <li>Integer</li>
+ <li>Long</li>
+ <li>Short</li>
+ <li>String</li>
+ <li>byte[]</li>
+ <li>Any Object that implements <code>Serializable</code> interface</li>
+ </ul>
+ Creating and Opening You must instantiate the store and then open it with an encryption key. It is recommended to use <code>EncryptionUtil</code> to obtain the encryption key. If this is the first time store is being opened and <code>null</code> is provided, an encryption key will be generated transparently and will be used for subsequent opens. <pre><code>byte[] myEncryptionKey = EncryptionUtil.getEncryptionKey("aliasForMyKeyValueStore", myPasscode);
+    SecureKeyValueStore store = new SecureKeyValueStore(appContext, "myKeyValueStoreName");
+    store.open(myEncryptionKey);
+
+    // Or pass null for the store to generate the encryption key transparently.
+    // store.open(null);
+ </code></pre> A SecureKeyValueStore has <code>void put(String key, T value)</code> to add values of the supported types, and methods to retrieve different data types in an appropriate format: Put <pre><code>class Organization implements Serializable {
+        private String name;
+        private String id;
+
+        public Organization() { super();}
+        public Organization(String name, String id) {
+            this.name = name;
+            this.id = id;
+        }
+        public String getName() { return name; }
+        public void setName(String name) { this.name = name; }
+        public String getId() { return id; }
+        public void setId(String id) { this.id = id; }
+    }
+
+    String orgId = "ORG_HR_1";
+    Organization org = new Organization("Human Resource", orgId);
+
+    try {
+        store.put(orgId, org); // Adds an Organization object to the store.
+    } catch (BackingStoreException | TypeConversionException ex) {
+        logger.error("Failed to add Organization {}", orgId, ex);
+    }
+ </code></pre> Get You must use the appropriate method to retrieve the data from the key-value store by passing a String key: <pre><code>try {
+        store.put("Integer value", 3);                  // Integer value.
+        store.put("Double value", 3.5D);                // Double value.
+        store.put("String value", "This is a String");  // String value.
+        store.put("Int16Value", (short) 17);            // Short value.
+        store.put("Int64Value", 41L);                   // Long value.
+        store.put("FloatValue", 1.3F);                  // Float value.
+
+        // Retrieves values with the appropriate get methods using the original keys.
+        Integer intValue = store.getInt("Integer value");
+        Double doubleValue = store.getDouble("Double value");
+        String stringValue = store.getString("String value");
+        Short shortValue = store.getInt16("Int16Value");
+        Long longValue = store.getInt64("Int64Value");
+        Float floatValue = store.getFloat("FloatValue");
+    } catch (BackingStoreException | TypeConversionException ex) {
+        logger.error("An error occurred during put/get operation,", ex);
+    }
+ </code></pre> Getting Keys You can use <code><a href="securekeyvaluestore/keys.html">#keys()</a></code> to retrieve the keys of existing entries: <pre><code>try {
+        String[] keys = store.keys();
+
+        for (String key : keys) {
+            logger.debug("Retrieved key {}", key);
+        }
+    } catch (FileClosedException | BackingStoreException ex) {
+        logger.error("Failed to retrieve all existing keys: ", ex);
+    }
+     </code></pre> Removing Entry/Entries You can remove one or all existing entries in the store: <pre><code>try {
+        // Removes one entry using the key.
+        store.remove("Int64Value");
+
+        // Removes all existing entries.
+        store.removeAll();
+    } catch (FileClosedException | BackingStoreException ex) {
+        logger.error("Failed to remove entry/entries.", ex);
+    }
+ </code></pre> Changing Encryption Key You can change the encryption of the underlying persistence store when the store is in open state. <pre><code>store.changeEncryptionKey(newEncryptionKey);
+ </code></pre> Closing Key-Value Store When you finish executing key-value store operations, <code><a href="securekeyvaluestore/close.html">#close()</a></code> the SecureKeyValueStore to relinquishes any resources it has acquired during its operations: <pre><code>store.close();
+ </code></pre></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="securepreferencedatastore/index.html">SecurePreferenceDataStore</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SecurePreferenceDataStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">PreferenceDataStore</span></code><br/>
+<code><span class="keyword">class </span><span class="identifier">SecurePreferenceDataStore</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">PreferenceDataStore</span></code>
+<p>A <code>PreferenceDataStore</code> implementation encrypts contents using 256-bit AES encryption, and is provided to the <code>Preference</code> framework via <code><a href="#">androidx.preference.Preference#setPreferenceDataStore(PreferenceDataStore)</a></code>. </p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="backingstoreexception/index.html">BackingStoreException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BackingStoreException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BackingStoreException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code>
+<p>Signals that an error occurred during <code><a href="securedatabaseresultset/index.html">SecureDatabaseResultSet</a></code> or <code><a href="securedatabasestore/index.html">SecureDatabaseStore</a></code> operations.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fileclosedexception/index.html">FileClosedException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FileClosedException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FileClosedException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code>
+<p>Signals that an operation is attempted when the associated <code><a href="securedatabaseresultset/index.html">SecureDatabaseResultSet</a></code>, <code><a href="securedatabasestore/index.html">SecureDatabaseStore</a></code>, or <code><a href="securekeyvaluestore/index.html">SecureKeyValueStore</a></code> has been closed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filemissingexception/index.html">FileMissingException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FileMissingException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FileMissingException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code>
+<p>Signals that underlying persistence store file does not exist.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="openfailureexception/index.html">OpenFailureException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OpenFailureException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Exception</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">OpenFailureException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Exception</span></code>
+<p>Signals that an error occurred when opening the Secure Database.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transactionfailureexception/index.html">TransactionFailureException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TransactionFailureException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TransactionFailureException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code>
+<p>Signals that an error occurred during database transaction related operations.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="typeconversionexception/index.html">TypeConversionException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TypeConversionException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TypeConversionException</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">SecureStoreException</span></code>
+<p>Signals that an error occurred when converting data types during operations of <code><a href="securekeyvaluestore/index.html">SecureKeyValueStore</a></code>, <code><a href="securedatabasestore/index.html">SecureDatabaseStore</a></code>, or <code><a href="securedatabaseresultset/index.html">SecureDatabaseResultSet</a></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

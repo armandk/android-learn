@@ -1,0 +1,150 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EncryptionUtil.getEncryptionKey - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">EncryptionUtil</a>&nbsp;/&nbsp;<a href="./getencryptionkey.html">getEncryptionKey</a><br/>
+<br/>
+<h1>getEncryptionKey</h1>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getEncryptionKey</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Generates an encryption key for the new alias, or returns the existing encryption key when in NO_PASSCODE state. </p>
+<p><strong>Note</strong>: </p>
+<p>An encryption key in NO_PASSCODE state cannot be backed up/restored, the associated shared preference file (&lt;your encryption key alias&gt;_<strong>_sharedPreference##.xml</strong>) and Secure Store database must be excluded from the application's &lt;full-backup-content&gt; element in the res/xml file specified by the &lt;application&gt; attribute <strong>android:fullBackupContent</strong> in AndroidManifest.xml.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is PASSCODE_ONLY or PASSCODE_BIOMETRIC. App needs to call <code><a href="disablepasscode.html">#disablePasscode(String, Cipher)</a></code> or <code><a href="disablepasscode.html">#disablePasscode(String, char[])</a></code> to go back to NO_PASSCODE state.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If encryption/decryption error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The encryption key.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getEncryptionKey</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray)/passcode">passcode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Returns the encryption key when in PASSCODE_ONLY or PASSCODE_BIOMETRIC state for an existing alias. </p>
+<p>For a new alias, this method will create an encryption key in PASSCODE_ONLY state.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="passcode"></a>
+<code>passcode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the authentication passcode</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is NO_PASSCODE. <code><a href="enablepasscode.html">#enablePasscode(String, char[])</a></code> needs to be called before calling this method.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If passcode is incorrect or encryption/decryption error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The encryption key.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getEncryptionKey</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/passcode">passcode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/cipher">cipher</span><span class="symbol">:</span>&nbsp;<span class="identifier">Cipher</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>This method typically is used to generate a new encryption key for a new alias and enters PASSCODE_BIOMETRIC state. </p>
+<p>When getting an existing key, calling getEncryptionKey with either a passcode (<code><a href="./getencryptionkey.html">#getEncryptionKey(String, char[])</a></code>) or a cipher (<code><a href="./getencryptionkey.html"> (String, Cipher)</a></code>) will suffice. </p>
+<p><strong>Note</strong>: </p>
+<p>An encryption key in PASSCODE_BIOMETRIC state cannot be backed up/restored, the associated shared preference file (&lt;your encryption key alias&gt;_<strong>_sharedPreference##.xml</strong>) and Secure Store database must be excluded from the application's &lt;full-backup-content&gt; element in the res/xml file specified by the &lt;application&gt; attribute <strong>android:fullBackupContent</strong> in AndroidManifest.xml.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="passcode"></a>
+<code>passcode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the authentication passcode</p>
+<p><a name="cipher"></a>
+<code>cipher</code> - <span class="identifier">Cipher</span><span class="symbol">:</span> the cipher returned from <code><a href="getcipher.html">#getCipher(String)</a></code></p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current state is PASSCODE_ONLY. Before calling this method, <code><a href="enablebiometric.html">#enableBiometric(String, char[], Cipher)</a></code> needs to be called if the current state is NO_PASSCODE, or <code><a href="enablebiometric.html">#enableBiometric(String, char[], Cipher)</a></code> needs to be called if the current state is in NO_PASSCODE state.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If passcode and/or the cipher is incorrect, or encryption/decryption error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The encryption key.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, javax.crypto.Cipher)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getEncryptionKey</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, javax.crypto.Cipher)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, javax.crypto.Cipher)/cipher">cipher</span><span class="symbol">:</span>&nbsp;<span class="identifier">Cipher</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Returns the existing encryption key when in PASSCODE_BIOMETRIC state. </p>
+<p>For a new alias, the app must call <code><a href="enablebiometric.html">#enableBiometric(String, char[], Cipher)</a></code> first to move to PASSCODE_BIOMETRIC state before calling this method. </p>
+<p><strong>Note</strong>: </p>
+<p>An encryption key in PASSCODE_BIOMETRIC state cannot be backed up/restored, the associated shared preference file (&lt;your encryption key alias&gt;_<strong>_sharedPreference##.xml</strong>) and Secure Store database must be excluded from the application's &lt;full-backup-content&gt; element in the res/xml file specified by the &lt;application&gt; attribute <strong>android:fullBackupContent</strong> in AndroidManifest.xml.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="cipher"></a>
+<code>cipher</code> - <span class="identifier">Cipher</span><span class="symbol">:</span> the cipher returned from <code><a href="getcipher.html">#getCipher(String)</a></code></p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is not PASSCODE_BIOMETRIC.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the cipher is incorrect, or encryption/decryption error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The encryption key.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getEncryptionKey</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Generates an encryption key for the new alias, or returns the existing encryption key when in NO_PASSCODE state. </p>
+<p><strong>Note</strong>: </p>
+<p>An encryption key in NO_PASSCODE state cannot be backed up/restored, the associated shared preference file (&lt;your encryption key alias&gt;_<strong>_sharedPreference##.xml</strong>) and Secure Store database must be excluded from the application's &lt;full-backup-content&gt; element in the res/xml file specified by the &lt;application&gt; attribute <strong>android:fullBackupContent</strong> in AndroidManifest.xml.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is PASSCODE_ONLY or PASSCODE_BIOMETRIC. App needs to call <code><a href="disablepasscode.html">#disablePasscode(String, Cipher)</a></code> or <code><a href="disablepasscode.html">#disablePasscode(String, char[])</a></code> to go back to NO_PASSCODE state.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If encryption/decryption error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The encryption key.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getEncryptionKey</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray)/passcode">passcode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Returns the encryption key when in PASSCODE_ONLY or PASSCODE_BIOMETRIC state for an existing alias. </p>
+<p>For a new alias, this method will create an encryption key in PASSCODE_ONLY state.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="passcode"></a>
+<code>passcode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the authentication passcode</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is NO_PASSCODE. <code><a href="enablepasscode.html">#enablePasscode(String, char[])</a></code> needs to be called before calling this method.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If passcode is incorrect or encryption/decryption error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The encryption key.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getEncryptionKey</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/passcode">passcode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, kotlin.CharArray, javax.crypto.Cipher)/cipher">cipher</span><span class="symbol">:</span>&nbsp;<span class="identifier">Cipher</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>This method typically is used to generate a new encryption key for a new alias and enters PASSCODE_BIOMETRIC state. </p>
+<p>When getting an existing key, calling getEncryptionKey with either a passcode (<code><a href="./getencryptionkey.html">#getEncryptionKey(String, char[])</a></code>) or a cipher (<code><a href="./getencryptionkey.html"> (String, Cipher)</a></code>) will suffice. </p>
+<p><strong>Note</strong>: </p>
+<p>An encryption key in PASSCODE_BIOMETRIC state cannot be backed up/restored, the associated shared preference file (&lt;your encryption key alias&gt;_<strong>_sharedPreference##.xml</strong>) and Secure Store database must be excluded from the application's &lt;full-backup-content&gt; element in the res/xml file specified by the &lt;application&gt; attribute <strong>android:fullBackupContent</strong> in AndroidManifest.xml.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="passcode"></a>
+<code>passcode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the authentication passcode</p>
+<p><a name="cipher"></a>
+<code>cipher</code> - <span class="identifier">Cipher</span><span class="symbol">:</span> the cipher returned from <code><a href="getcipher.html">#getCipher(String)</a></code></p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current state is PASSCODE_ONLY. Before calling this method, <code><a href="enablebiometric.html">#enableBiometric(String, char[], Cipher)</a></code> needs to be called if the current state is NO_PASSCODE, or <code><a href="enablebiometric.html">#enableBiometric(String, char[], Cipher)</a></code> needs to be called if the current state is in NO_PASSCODE state.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If passcode and/or the cipher is incorrect, or encryption/decryption error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The encryption key.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, javax.crypto.Cipher)"></a>
+<code><span class="identifier">@NonNull</span> <span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getEncryptionKey</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, javax.crypto.Cipher)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$getEncryptionKey(kotlin.String, javax.crypto.Cipher)/cipher">cipher</span><span class="symbol">:</span>&nbsp;<span class="identifier">Cipher</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Returns the existing encryption key when in PASSCODE_BIOMETRIC state. </p>
+<p>For a new alias, the app must call <code><a href="enablebiometric.html">#enableBiometric(String, char[], Cipher)</a></code> first to move to PASSCODE_BIOMETRIC state before calling this method. </p>
+<p><strong>Note</strong>: </p>
+<p>An encryption key in PASSCODE_BIOMETRIC state cannot be backed up/restored, the associated shared preference file (&lt;your encryption key alias&gt;_<strong>_sharedPreference##.xml</strong>) and Secure Store database must be excluded from the application's &lt;full-backup-content&gt; element in the res/xml file specified by the &lt;application&gt; attribute <strong>android:fullBackupContent</strong> in AndroidManifest.xml.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="cipher"></a>
+<code>cipher</code> - <span class="identifier">Cipher</span><span class="symbol">:</span> the cipher returned from <code><a href="getcipher.html">#getCipher(String)</a></code></p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is not PASSCODE_BIOMETRIC.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the cipher is incorrect, or encryption/decryption error occurs.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">ByteArray</span><span class="symbol">:</span> The encryption key.</p>
+</BODY>
+</HTML>

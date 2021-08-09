@@ -1,0 +1,262 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsdlParser - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.csdl</a>&nbsp;/&nbsp;<a href="./index.html">CsdlParser</a><br/>
+<br/>
+<h1>CsdlParser</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlParser</span></code>
+<p>Parser for Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata documents (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>). A new parser should be created for each <code><a href="parse.html">CsdlParser.parse</a></code> call. A parser should not be shared by multiple threads.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CsdlParser</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Parser for Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata documents (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>). A new parser should be created for each <code><a href="parse.html">CsdlParser.parse</a></code> call. A parser should not be shared by multiple threads.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getcsdlfetcher.html">getCsdlFetcher</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCsdlFetcher</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../csdlfetcher/index.html"><span class="identifier">CsdlFetcher</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A callback which will be used to resolve any CSDL Reference that is encountered during parsing, in order to fetch the referenced metadata. Must be set before <code><a href="parse.html">CsdlParser.parse</a></code> is called, or else any CSDL Reference that is encountered during parsing will result in a <code><a href="../csdlexception/index.html">com.sap.cloud.mobile.odata.csdl.CsdlException</a></code> being thrown.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcsdloptions.html">getCsdlOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCsdlOptions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return a bitmask of CSDL parser options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getexcludeserveronly.html">getExcludeServerOnly</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getExcludeServerOnly</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return skip server-only elements in the csdl xml to be parsed and added to CsdlDocument. An element is server-only if it contains the  child element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getincludeelements.html">getIncludeElements</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getIncludeElements</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.xml/xmlelementlist/index.html"><span class="identifier">XmlElementList</span></a></code>
+<p>Return extra CSDL child elements for main schema (e.g. external annotations).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getincludereferences.html">getIncludeReferences</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getIncludeReferences</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.xml/xmlelementlist/index.html"><span class="identifier">XmlElementList</span></a></code>
+<p>Return supplementary edmx:Reference elements. Defaults to an empty list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getincludeschemas.html">getIncludeSchemas</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getIncludeSchemas</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata/dataschemalist/index.html"><span class="identifier">DataSchemaList</span></a></code>
+<p>Return pre-parsed schemas. Defaults to an empty list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlogerrors.html">getLogErrors</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLogErrors</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should parser errors be logged before they are thrown?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlogwarnings.html">getLogWarnings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLogWarnings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should parser warnings be logged?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getservicename.html">getServiceName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getServiceName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Data service name. If data metrics are required, this property should be set before <code><a href="parse.html">CsdlParser.parse</a></code> is called, so that all <code><a href="../../com.sap.cloud.mobile.odata/datamethod/index.html">com.sap.cloud.mobile.odata.DataMethod</a></code> and <code><a href="../../com.sap.cloud.mobile.odata/entityset/index.html">com.sap.cloud.mobile.odata.EntitySet</a></code> in the parsed document will have appropriately named metrics.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettracerequests.html">getTraceRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTraceRequests</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should parsing requests be traced?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="includenamespace.html">includeNamespace</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">includeNamespace</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$includeNamespace(kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See includeNamespace(String, String).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">includeNamespace</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$includeNamespace(kotlin.String, kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$includeNamespace(kotlin.String, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add to <code><a href="getincludereferences.html">CsdlParser.includeReferences</a></code> a supplementary CSDL edmx:Reference (with embedded edmx:Include). Call this function before <code><a href="parse.html">CsdlParser.parse</a></code> if the document to be parsed is missing expected edmx:Reference elements for well-known schemas. This function generates an edmx:Reference with a fabricated "Uri" (with value "include/<code>ns</code>.xml"). It can be used together with a <code><a href="getcsdlfetcher.html">CsdlParser.csdlFetcher</a></code> which resolves documents either by fabricated location (include/<code>ns</code>.xml) or by namespace (<code>ns</code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="includereference.html">includeReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">includeReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$includeReference(kotlin.String, kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$includeReference(kotlin.String, kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See includeReference(String, String, String).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">includeReference</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$includeReference(kotlin.String, kotlin.String, kotlin.String)/uri">uri</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$includeReference(kotlin.String, kotlin.String, kotlin.String)/ns">ns</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$includeReference(kotlin.String, kotlin.String, kotlin.String)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Add to <code><a href="getincludereferences.html">CsdlParser.includeReferences</a></code> a supplementary CSDL edmx:Reference (with embedded edmx:Include). Call this function before <code><a href="parse.html">CsdlParser.parse</a></code> if the document to be parsed is missing expected edmx:Reference elements for well-known schemas. This function generates an edmx:Reference with a caller-specified "Uri". It can be used together with a <code><a href="getcsdlfetcher.html">CsdlParser.csdlFetcher</a></code> which resolves documents either by caller-specified location (<code>uri</code>) or by namespace (<code>ns</code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="includeschema.html">includeSchema</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">includeSchema</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$includeSchema(com.sap.cloud.mobile.odata.DataSchema)/schema">schema</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/dataschema/index.html"><span class="identifier">DataSchema</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Include the definitions of a pre-parsed schema into the document to be parsed. Call this function before <code><a href="parse.html">CsdlParser.parse</a></code> if the document to be parsed has an edmx:Reference element for a well-known schema, and the pre-parsed schema should be used rather than loading the referenced schema over the network.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parse.html">parse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$parse(kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$parse(kotlin.String, kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../csdldocument/index.html"><span class="identifier">CsdlDocument</span></a></code>
+<p>Parse the text of an Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>) document. Supports OData versions 1.0 to 4.0.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parseinproxy.html">parseInProxy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">parseInProxy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$parseInProxy(kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$parseInProxy(kotlin.String, kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="../csdldocument/index.html"><span class="identifier">CsdlDocument</span></a></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcsdlfetcher.html">setCsdlFetcher</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCsdlFetcher</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setCsdlFetcher(com.sap.cloud.mobile.odata.csdl.CsdlFetcher)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../csdlfetcher/index.html"><span class="identifier">CsdlFetcher</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a callback which will be used to resolve any CSDL Reference that is encountered during parsing, in order to fetch the referenced metadata. Must be set before <code><a href="parse.html">CsdlParser.parse</a></code> is called, or else any CSDL Reference that is encountered during parsing will result in a <code><a href="../csdlexception/index.html">com.sap.cloud.mobile.odata.csdl.CsdlException</a></code> being thrown.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcsdloptions.html">setCsdlOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCsdlOptions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setCsdlOptions(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a bitmask of CSDL parser options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setexcludeserveronly.html">setExcludeServerOnly</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExcludeServerOnly</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setExcludeServerOnly(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set skip server-only elements in the csdl xml to be parsed and added to CsdlDocument. An element is server-only if it contains the  child element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setincludeelements.html">setIncludeElements</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setIncludeElements</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setIncludeElements(com.sap.cloud.mobile.odata.xml.XmlElementList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelementlist/index.html"><span class="identifier">XmlElementList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set extra CSDL child elements for main schema (e.g. external annotations).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setincludereferences.html">setIncludeReferences</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setIncludeReferences</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setIncludeReferences(com.sap.cloud.mobile.odata.xml.XmlElementList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelementlist/index.html"><span class="identifier">XmlElementList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set supplementary edmx:Reference elements. Defaults to an empty list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setincludeschemas.html">setIncludeSchemas</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setIncludeSchemas</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setIncludeSchemas(com.sap.cloud.mobile.odata.DataSchemaList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata/dataschemalist/index.html"><span class="identifier">DataSchemaList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set pre-parsed schemas. Defaults to an empty list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlogerrors.html">setLogErrors</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLogErrors</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setLogErrors(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should parser errors be logged before they are thrown?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlogwarnings.html">setLogWarnings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLogWarnings</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setLogWarnings(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should parser warnings be logged?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setservicename.html">setServiceName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setServiceName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setServiceName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set data service name. If data metrics are required, this property should be set before <code><a href="parse.html">CsdlParser.parse</a></code> is called, so that all <code><a href="../../com.sap.cloud.mobile.odata/datamethod/index.html">com.sap.cloud.mobile.odata.DataMethod</a></code> and <code><a href="../../com.sap.cloud.mobile.odata/entityset/index.html">com.sap.cloud.mobile.odata.EntitySet</a></code> in the parsed document will have appropriately named metrics.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settracerequests.html">setTraceRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTraceRequests</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlParser$setTraceRequests(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should parsing requests be traced?</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

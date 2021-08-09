@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Logging.UploadType - foundation</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../../index.html">com.sap.cloud.mobile.foundation.logging</a>&nbsp;/&nbsp;<a href="../index.html">Logging</a>&nbsp;/&nbsp;<a href="./index.html">UploadType</a><br/>
+<br/>
+<h1>UploadType</h1>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging.UploadType"></a>
+<code><span class="keyword">class </span><span class="identifier">UploadType</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.logging.Logging.UploadType"></a>
+<code><span class="keyword">class </span><span class="identifier">UploadType</span></code>
+<p>Upload types, where: </p>
+<pre><code>DEFAULT</code></pre> means, upload the current contents of the log. If there is an old log that did not get uploaded from a previous upload attempt, the old log is deleted and not uploaded. <pre><code>LAST</code></pre> means, if there is an old log that did get uploaded from a previous upload attempt, upload the old log but do not upload the current contents of the log. <pre><code>MERGE</code></pre> means, upload the current contents of the log, and if there is an old log that did not get uploaded from a previous upload attempt, also upload the old log. You should use some caution with this choice. If repeated attempts to upload the log with this upload type fail, the application could run out of storage space.
+</BODY>
+</HTML>

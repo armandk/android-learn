@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ServiceOptions.getAvoidInPaths - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">ServiceOptions</a>&nbsp;/&nbsp;<a href="./getavoidinpaths.html">getAvoidInPaths</a><br/>
+<br/>
+<h1>getAvoidInPaths</h1>
+<a name="com.sap.cloud.mobile.odata.ServiceOptions$getAvoidInPaths()"></a>
+<code><span class="identifier">@Nullable</span> <span class="identifier">@Nullable</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAvoidInPaths</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@Nullable</span> <span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Characters that must be avoided in the path component of URLs (e.g. in OData key predicates or function parameters), even when percent-encoded. This mey be the case with certain client or server environments which limit the characters permitted in paths (usually due to security concerns). When this option is set, other options (e.g. <code><a href="getsupportsalias.html">ServiceOptions.supportsAlias</a></code>, <code><a href="getsupportsbatch.html">ServiceOptions.supportsBatch</a></code>) may be required to enable such characters to be passed in another way.</p>
+ See Also: 
+<p><a href="https://tools.ietf.org/html/rfc3986#section-7.3">https://tools.ietf.org/html/rfc3986#section-7.3</a>.</p>
+ 
+<p><strong>Return</strong><br/>
+<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">:</span> (nullable) Characters that must be avoided in the path component of URLs (e.g. in OData key predicates or function parameters), even when percent-encoded.</p>
+</BODY>
+</HTML>

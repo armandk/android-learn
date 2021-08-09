@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataService.applyChanges - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataService</a>&nbsp;/&nbsp;<a href="./applychanges.html">applyChanges</a><br/>
+<br/>
+<h1>applyChanges</h1>
+<a name="com.sap.cloud.mobile.odata.DataService$applyChanges(com.sap.cloud.mobile.odata.ChangeSet)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">applyChanges</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$applyChanges(com.sap.cloud.mobile.odata.ChangeSet)/changes">changes</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See applyChanges(ChangeSet, HttpHeaders, RequestOptions).</p>
+<h3>Parameters</h3>
+<p><a name="changes"></a>
+<code>changes</code> - <a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a><span class="symbol">:</span> Changes parameter.</p>
+<a name="com.sap.cloud.mobile.odata.DataService$applyChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">applyChanges</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$applyChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders)/changes">changes</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$applyChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See applyChanges(ChangeSet, HttpHeaders, RequestOptions).</p>
+<h3>Parameters</h3>
+<p><a name="changes"></a>
+<code>changes</code> - <a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a><span class="symbol">:</span> Changes parameter.</p>
+<p><a name="headers"></a>
+<code>headers</code> - <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">:</span> Headers parameter.</p>
+<a name="com.sap.cloud.mobile.odata.DataService$applyChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">applyChanges</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$applyChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/changes">changes</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$applyChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/headers">headers</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataService$applyChanges(com.sap.cloud.mobile.odata.ChangeSet, com.sap.cloud.mobile.odata.http.HttpHeaders, com.sap.cloud.mobile.odata.RequestOptions)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Apply the changes from a change set to the target system.</p>
+ See Also: 
+<p><code><a href="processbatch.html">DataService.processBatch</a></code>.</p>
+  Example using proxy classes:<pre><code>
+      public void applyChangesExample() {
+          NorthwindService service = this.getService();
+          List&lt;Supplier&gt; suppliers = service.getSuppliers(new DataQuery().top(2));
+          List&lt;Product&gt; products = service.getProducts(new DataQuery().top(3));
+          Product product1 = products.get(0).copy();
+          Product product2 = products.get(1).copy();
+          Product product3 = products.get(2).copy();
+          product1.setProductName("Blueberry Muffins");
+          product2.setProductName("Strawberry Yoghurt");
+          product3.setProductName("Raspberry Pie");
+          ChangeSet entityCreates = new ChangeSet();
+          entityCreates.createEntity(product1);
+          entityCreates.createEntity(product2);
+          entityCreates.createEntity(product3);
+          service.applyChanges(entityCreates);
+          ChangeSet entityChanges = new ChangeSet();
+          product2.setProductName("Blackberry Yoghurt");
+          entityChanges.updateEntity(product2);
+          entityChanges.deleteEntity(product3);
+          service.applyChanges(entityChanges);
+          ChangeSet linkChanges = new ChangeSet();
+          Supplier supplier1 = suppliers.get(0);
+          Supplier supplier2 = suppliers.get(1);
+          linkChanges.createLink(product1, Product.supplier, supplier1);
+          linkChanges.updateLink(product1, Product.supplier, supplier2);
+          linkChanges.deleteLink(product1, Product.supplier);
+          service.applyChanges(linkChanges);
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void applyChangesExample() {
+          DataService service = this.getService();
+          EntitySet suppliersEntitySet = service.getEntitySet("Suppliers");
+          EntitySet productsEntitySet = service.getEntitySet("Products");
+          EntityType productEntityType = productsEntitySet.getEntityType();
+          Property productNameProperty = productEntityType.getProperty("ProductName");
+          Property supplierProperty = productEntityType.getProperty("Supplier");
+          EntityValueList suppliers = service.executeQuery(new DataQuery()
+              .from(suppliersEntitySet).top(2))
+              .getEntityList();
+          EntityValueList products = service.executeQuery(new DataQuery()
+              .from(productsEntitySet).top(3))
+              .getEntityList();
+          EntityValue product1 = products.get(0).copyEntity();
+          EntityValue product2 = products.get(1).copyEntity();
+          EntityValue product3 = products.get(1).copyEntity();
+          productNameProperty.setString(product1, "Blueberry Yoghurt");
+          productNameProperty.setString(product2, "Strawberry Yoghurt");
+          productNameProperty.setString(product3, "Raspberry Pie");
+          ChangeSet entityCreates = new ChangeSet();
+          entityCreates.createEntity(product1);
+          entityCreates.createEntity(product2);
+          entityCreates.createEntity(product3);
+          service.applyChanges(entityCreates);
+          ChangeSet entityChanges = new ChangeSet();
+          productNameProperty.setString(product2, "Blackberry Yoghurt");
+          entityChanges.updateEntity(product2);
+          entityChanges.deleteEntity(product3);
+          service.applyChanges(entityChanges);
+          ChangeSet linkChanges = new ChangeSet();
+          EntityValue supplier1 = suppliers.get(0);
+          EntityValue supplier2 = suppliers.get(1);
+          linkChanges.createLink(product1, supplierProperty, supplier1);
+          linkChanges.updateLink(product1, supplierProperty, supplier2);
+          linkChanges.deleteLink(product1, supplierProperty);
+          service.applyChanges(linkChanges);
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="changes"></a>
+<code>changes</code> - <a href="../changeset/index.html"><span class="identifier">ChangeSet</span></a><span class="symbol">:</span> The change set.</p>
+<p><a name="headers"></a>
+<code>headers</code> - <a href="../../com.sap.cloud.mobile.odata.http/httpheaders/index.html"><span class="identifier">HttpHeaders</span></a><span class="symbol">:</span> Optional request-specific headers.</p>
+<p><a name="options"></a>
+<code>options</code> - <a href="../requestoptions/index.html"><span class="identifier">RequestOptions</span></a><span class="symbol">:</span> Optional request-specific options.</p>
+</BODY>
+</HTML>

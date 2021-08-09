@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EncryptionUtil.changeIterationCount - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">EncryptionUtil</a>&nbsp;/&nbsp;<a href="./changeiterationcount.html">changeIterationCount</a><br/>
+<br/>
+<h1>changeIterationCount</h1>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changeIterationCount(kotlin.String, kotlin.CharArray, kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">changeIterationCount</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changeIterationCount(kotlin.String, kotlin.CharArray, kotlin.Int)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changeIterationCount(kotlin.String, kotlin.CharArray, kotlin.Int)/passcode">passcode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changeIterationCount(kotlin.String, kotlin.CharArray, kotlin.Int)/iterationCount">iterationCount</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>An encryption key that requires passcode (in <code><a href="../encryptionstate/index.html">EncryptionState#PASSCODE_ONLY</a></code> or <code><a href="../encryptionstate/index.html">EncryptionState#PASSCODE_BIOMETRIC</a></code> state) uses <code>PBKDF2</code> to generate a <code>Secret Key</code> from the passcode and then generating a secondary key randomly. This secondary encryption key is then encrypted using the PBKDF2 secret key and securely persisted, this secondary encryption key is returned to the caller of <code>getEncryptionKey</code> methods. </p>
+<p>By default, the iteration count used by the <code>PBKDF2 Secret Key</code> mechanism is 1000. Call this method to increase the iteration count for an existing encryption key associated with a passcode. The improvement in security is gained by slowing performance. The higher the iteration count the longer it takes to compute the key from the passcode. An offline attacker trying to guess the passcode has to do that computation for each passcode they guess. </p>
+<p>Once this method is called, the subsequent calls to <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[])</a></code> or <code><a href="changepasscode.html">#changePasscode(String, char[], char[])</a></code> will use the same iteration count.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="passcode"></a>
+<code>passcode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the authentication passcode</p>
+<p><a name="iterationCount"></a>
+<code>iterationCount</code> - <span class="identifier">Int</span><span class="symbol">:</span> at least {@value EncryptionHelper#MIN_ITERATION_COUNT} (the default).</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If the iteration count is not within the valid range.</p>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - The current encryption key is not in <code>PASSCODE_ONLY</code> or <code>PASSCODE_BIOMETRIC</code> state.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the passcode is incorrect or encryption/decryption error occurs.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changeIterationCount(kotlin.String, kotlin.CharArray, kotlin.Int)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">changeIterationCount</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changeIterationCount(kotlin.String, kotlin.CharArray, kotlin.Int)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changeIterationCount(kotlin.String, kotlin.CharArray, kotlin.Int)/passcode">passcode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changeIterationCount(kotlin.String, kotlin.CharArray, kotlin.Int)/iterationCount">iterationCount</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>An encryption key that requires passcode (in <code><a href="../encryptionstate/index.html">EncryptionState#PASSCODE_ONLY</a></code> or <code><a href="../encryptionstate/index.html">EncryptionState#PASSCODE_BIOMETRIC</a></code> state) uses <code>PBKDF2</code> to generate a <code>Secret Key</code> from the passcode and then generating a secondary key randomly. This secondary encryption key is then encrypted using the PBKDF2 secret key and securely persisted, this secondary encryption key is returned to the caller of <code>getEncryptionKey</code> methods. </p>
+<p>By default, the iteration count used by the <code>PBKDF2 Secret Key</code> mechanism is 1000. Call this method to increase the iteration count for an existing encryption key associated with a passcode. The improvement in security is gained by slowing performance. The higher the iteration count the longer it takes to compute the key from the passcode. An offline attacker trying to guess the passcode has to do that computation for each passcode they guess. </p>
+<p>Once this method is called, the subsequent calls to <code><a href="getencryptionkey.html">#getEncryptionKey(String, char[])</a></code> or <code><a href="changepasscode.html">#changePasscode(String, char[], char[])</a></code> will use the same iteration count.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="passcode"></a>
+<code>passcode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the authentication passcode</p>
+<p><a name="iterationCount"></a>
+<code>iterationCount</code> - <span class="identifier">Int</span><span class="symbol">:</span> at least {@value EncryptionHelper#MIN_ITERATION_COUNT} (the default).</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - If the iteration count is not within the valid range.</p>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - The current encryption key is not in <code>PASSCODE_ONLY</code> or <code>PASSCODE_BIOMETRIC</code> state.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the passcode is incorrect or encryption/decryption error occurs.</p>
+</BODY>
+</HTML>

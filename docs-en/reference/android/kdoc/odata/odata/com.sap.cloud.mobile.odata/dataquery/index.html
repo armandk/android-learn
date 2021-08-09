@@ -1,0 +1,1110 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DataQuery</a><br/>
+<br/>
+<h1>DataQuery</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataQuery</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> query request. A query can be defined by setting query properties, or by calling query functions which provide a <a href="http://en.wikipedia.org/wiki/Fluent_interface">fluent interface</a>. Execution of a query may result in some query properties being changed (e.g. the addition of <code><a href="getexpanditems.html">DataQuery.expandItems</a></code> or <code><a href="getselectitems.html">DataQuery.selectItems</a></code> that are required for correct execution). Thus for thread safety, a query should be used only by a single thread at a time. Preferably a new query should be created before each query execution.</p>
+ See Also: 
+<p><code>DataService.executeQuery</code>.</p>
+  Example using proxy classes:<pre><code>
+  public void dataQueryExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .select(Customer.customerID, Customer.companyName, Customer.contactName)
+          .filter(Customer.address.toLower().contains("king"))
+          .orderBy(Customer.companyName);
+      List&lt;Customer&gt; customers = service.getCustomers(query);
+      this.showCustomers(customers);
+  }
+  </code></pre> Example using dynamic API:<pre><code>
+  public void dataQueryExample() {
+      DataService service = this.getService();
+      EntitySet customersEntitySet = service.getEntitySet("Customers");
+      EntityType customerEntityType = customersEntitySet.getEntityType();
+      Property customerIDProperty = customerEntityType.getProperty("CustomerID");
+      Property companyNameProperty = customerEntityType.getProperty("CompanyName");
+      Property contactNameProperty = customerEntityType.getProperty("ContactName");
+      Property addressProperty = customerEntityType.getProperty("Address");
+      DataQuery query = new DataQuery()
+          .select(customerIDProperty, companyNameProperty, contactNameProperty)
+          .from(customersEntitySet).filter(addressProperty.toLower().contains("king"))
+          .orderBy(companyNameProperty);
+      EntityValueList customers = service.executeQuery(query).getEntityList();
+      this.showCustomers(customers);
+  }
+  </code></pre>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DataQuery</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Encapsulates an <a href="http://odata.org">OData</a> query request. A query can be defined by setting query properties, or by calling query functions which provide a <a href="http://en.wikipedia.org/wiki/Fluent_interface">fluent interface</a>. Execution of a query may result in some query properties being changed (e.g. the addition of <code><a href="getexpanditems.html">DataQuery.expandItems</a></code> or <code><a href="getselectitems.html">DataQuery.selectItems</a></code> that are required for correct execution). Thus for thread safety, a query should be used only by a single thread at a time. Preferably a new query should be created before each query execution.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="aggregate.html">aggregate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">aggregate</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$aggregate(kotlin.Array((com.sap.cloud.mobile.odata.AggregateValue)))/items">items</span><span class="symbol">:</span>&nbsp;<a href="../aggregatevalue/index.html"><span class="identifier">AggregateValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Adds aggregate transformation items (to <code><a href="gettransformvalues.html">DataQuery.transformValues</a></code>) for transforming the result of a query sent to an entity set. This method is only for adding aggregate transformation items (in contrast to 'transform' method) for readibility purposes. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="bind.html">bind</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">bind</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$bind(com.sap.cloud.mobile.odata.BindingPath)/resource">resource</span><span class="symbol">:</span>&nbsp;<a href="../bindingpath.html"><span class="identifier">BindingPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Bind a resource as the binding parameter of a bound action/function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="check.html">check</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">check</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Check if this query is properly configured from the client's perspective. Note: This does not guarantee that the server will be able to execute it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="count.html">count</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">count</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getcountonly.html">DataQuery.countOnly</a></code> to <code>true</code> to request only the number of matching query results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom.html">custom</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">custom</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$custom(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$custom(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add a custom option to <code><a href="getcustomoptions.html">DataQuery.customOptions</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expand.html">expand</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expand</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$expand(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))/items">items</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add properties (to <code><a href="getexpanditems.html">DataQuery.expandItems</a></code>) for expanding from the target entity. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expandedproperties.html">expandedProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expandedProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringset/index.html"><span class="identifier">StringSet</span></a></code>
+<p>Return the names of all properties expanded by this query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expandsproperty.html">expandsProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expandsProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$expandsProperty(com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this query expands <code>property</code> from the target entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="expandwithquery.html">expandWithQuery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">expandWithQuery</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$expandWithQuery(com.sap.cloud.mobile.odata.PropertyPath, com.sap.cloud.mobile.odata.DataQuery)/item">item</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$expandWithQuery(com.sap.cloud.mobile.odata.PropertyPath, com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataQuery</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add a property with a nested query to <code><a href="getexpanditems.html">DataQuery.expandItems</a></code>. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filter.html">filter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">filter</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$filter(com.sap.cloud.mobile.odata.QueryFilter)/test">test</span><span class="symbol">:</span>&nbsp;<a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Modify <code><a href="getqueryfilter.html">DataQuery.queryFilter</a></code> to be and'ed with <code>test</code> (or set to <code>test</code> if <code><a href="getqueryfilter.html">DataQuery.queryFilter</a></code> was <code>null</code>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="from.html">from</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">from</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$from(com.sap.cloud.mobile.odata.EntitySet)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set the <code><a href="getentityset.html">DataQuery.entitySet</a></code> property to identify this query's target entity set. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fromdefault.html">fromDefault</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fromDefault</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$fromDefault(com.sap.cloud.mobile.odata.EntitySet)/entitySet">entitySet</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set the <code><a href="getentityset.html">DataQuery.entitySet</a></code> property to identify this query's target entity set, but only if the <code><a href="getentityset.html">DataQuery.entitySet</a></code> property wasn't previously set. This function is intended for use by generated proxy classes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getaliasvalues.html">getAliasValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAliasValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavaluemap/index.html"><span class="identifier">DataValueMap</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Parameter alias values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getallselected.html">getAllSelected</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAllSelected</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if all properties are selected (using "*").</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcountinline.html">getCountInline</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCountInline</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if <code>true</code>, the service should return the total number of available results as an inline count in the result list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcountonly.html">getCountOnly</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCountOnly</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if <code>true</code>, the service should return only the number of available results matching the query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcustomoptions.html">getCustomOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCustomOptions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringmap/index.html"><span class="identifier">StringMap</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Custom query options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdataformat.html">getDataFormat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataFormat</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) The data format for this query's result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltaresponse.html">getDeltaResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaResponse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if <code>true</code>, the client should use delta parsing of the response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltatime.html">getDeltaTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The delta time (<code><a href="getdeltatoken.html">DataQuery.deltaToken</a></code> as UTC date/time).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeltatoken.html">getDeltaToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeltaToken</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The delta token for use in change tracking.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getderivedtype.html">getDerivedType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDerivedType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Derived type for limiting query results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdistinctitems.html">getDistinctItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDistinctItems</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return whether to select only <em>distinct</em> items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitykey.html">getEntityKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitykey/index.html"><span class="identifier">EntityKey</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The entity key for this query. If specified, then <code><a href="getentityset.html">DataQuery.entitySet</a></code> should also be specified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentityset.html">getEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntitySet</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The entity set expected for the result of this query. To execute a query, either this must be non-<code>null</code>, or <code><a href="getmethodcall.html">DataQuery.methodCall</a></code> must be non-<code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getentitytype.html">getEntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getEntityType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The entity type expected for the result of this query. Can be used for inference of <code><a href="getentityset.html">DataQuery.entitySet</a></code>, if only one entity set in the data model uses this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getexpanditems.html">getExpandItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getExpandItems</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../expanditemlist/index.html"><span class="identifier">ExpandItemList</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The properties to expand from target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getexpectsingle.html">getExpectSingle</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getExpectSingle</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return set to <code>true</code> if a single result is expected. This may be required if <code>url</code> has been explicitly set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getgrouptransform.html">getGroupTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getGroupTransform</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../grouptransform/index.html"><span class="identifier">GroupTransform</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A group transformation item set through groupBy method</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getinternaldata.html">getInternalData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInternalData</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Any</span><span class="symbol">?</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getkeyselected.html">getKeySelected</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getKeySelected</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if all key properties should be selected.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmethodcall.html">getMethodCall</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMethodCall</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datamethodcall/index.html"><span class="identifier">DataMethodCall</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The method call for this query. To execute a query, either this must be non-<code>null</code>, or <code><a href="getentityset.html">DataQuery.entitySet</a></code> must be non-<code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpagesize.html">getPageSize</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPageSize</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) The maximum number of results per page. Note that this is just a hint to the service. The service is permitted to ignore the client-requested page size. Use <code><a href="getskipcount.html">DataQuery.skipCount</a></code> and <code><a href="gettopcount.html">DataQuery.topCount</a></code> for predictable paging.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpropertypath.html">getPropertyPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPropertyPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Property path for accessing individual properties of an entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getqueryfilter.html">getQueryFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQueryFilter</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The filter criteria for the target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getquerystring.html">getQueryString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getQueryString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The query string for this query. Intended for use by servers. Clients should use API calls (e.g. <code><a href="select.html">DataQuery.select</a></code>, <code><a href="expand.html">DataQuery.expand</a></code>, <code><a href="filter.html">DataQuery.filter</a></code>, <code><a href="orderby.html">DataQuery.orderBy</a></code>) to create query strings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequestpath.html">getRequestPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequestPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The request path for this query. Intended for use by servers. Clients should use API calls (e.g. <code><a href="from.html">DataQuery.from</a></code>) to create request paths.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsearchtext.html">getSearchText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSearchText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The search text to locate in the target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getselectitems.html">getSelectItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSelectItems</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../selectitemlist/index.html"><span class="identifier">SelectItemList</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The properties to select from target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getskipcount.html">getSkipCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSkipCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) The number of initial results to skip.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getskiptoken.html">getSkipToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSkipToken</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The skip token for use in server-driven paging.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsortitems.html">getSortItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSortItems</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../sortitemlist/index.html"><span class="identifier">SortItemList</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The sort criteria for the target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsparsearray.html">getSparseArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSparseArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if <code>true</code>, the query result entities will use <a href="https://en.wikipedia.org/wiki/Sparse_matrix">sparse array</a> storage of properties, to conserve memory. This is only applicable to queries whose result entities will not be updated.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstreamresponse.html">getStreamResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStreamResponse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if <code>true</code>, the client should use streamed parsing of the response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsystemflags.html">getSystemFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSystemFlags</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettopcount.html">getTopCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTopCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span><span class="symbol">?</span></code>
+<p>Return (nullable) The number of initial results to return.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettrackchanges.html">getTrackChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTrackChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does the client want the server to track changes?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettransformvalues.html">getTransformValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTransformValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) The OData transformation items as described in OData Data Aggregation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geturl.html">getUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) The relative URL for this query; a combination of <code><a href="getrequestpath.html">DataQuery.requestPath</a></code> and <code><a href="getquerystring.html">DataQuery.queryString</a></code> if either is non-<code>null</code>, or <code>null</code> if the URL is intended to be derived from other properties. Note: It is not recommended for clients to explicitly set the URL, except by using a URL from <code><a href="../entityvaluelist/getdeltalink.html">EntityValueList.deltaLink</a></code> or <code><a href="../entityvaluelist/getnextlink.html">EntityValueList.nextLink</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="groupby.html">groupBy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">groupBy</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$groupBy(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))/items">items</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Adds a group transformation item to the DataQuery with the property paths given in the parameter list. Note: If this method is called then all the transformation and aggregation items added to the query will be applied to the group transformation in the query. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="inlinecount.html">inlineCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">inlineCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getcountinline.html">DataQuery.countInline</a></code> to <code>true</code> to request an inline count in the server's response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="invoke.html">invoke</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invoke</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$invoke(com.sap.cloud.mobile.odata.DataMethod)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>See invoke(DataMethod, ParameterList).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">invoke</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$invoke(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../datamethod/index.html"><span class="identifier">DataMethod</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$invoke(com.sap.cloud.mobile.odata.DataMethod, com.sap.cloud.mobile.odata.ParameterList)/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="../parameterlist/index.html"><span class="identifier">ParameterList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getmethodcall.html">DataQuery.methodCall</a></code> to associate this query with an action/function invocation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="load.html">load</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$load(com.sap.cloud.mobile.odata.EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>See load(EntityValue, PropertyPath).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$load(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.PropertyPath)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="../entityvalue/index.html"><span class="identifier">EntityValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$load(com.sap.cloud.mobile.odata.EntityValue, com.sap.cloud.mobile.odata.PropertyPath)/path">path</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getentityset.html">DataQuery.entitySet</a></code> and <code><a href="getentitykey.html">DataQuery.entityKey</a></code> to configure this query to load an existing entity. Equivalent to calling <code>from(entity.entitySet).withKey(entity.entityKey)</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="newifnull.html">newIfNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">newIfNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$newIfNull(com.sap.cloud.mobile.odata.DataQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataQuery</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Construct a new DataQuery if the <code>query</code> parameter is <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="orderby.html">orderBy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">orderBy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$orderBy(com.sap.cloud.mobile.odata.QueryValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>See orderBy(QueryValue, SortOrder).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">orderBy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$orderBy(com.sap.cloud.mobile.odata.QueryValue, com.sap.cloud.mobile.odata.SortOrder)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$orderBy(com.sap.cloud.mobile.odata.QueryValue, com.sap.cloud.mobile.odata.SortOrder)/order">order</span><span class="symbol">:</span>&nbsp;<a href="../sortorder/index.html"><span class="identifier">SortOrder</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add to <code><a href="getsortitems.html">DataQuery.sortItems</a></code> a value for result ordering. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="page.html">page</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">page</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$page(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getpagesize.html">DataQuery.pageSize</a></code> to specify the page-size for server-driven paging of results. Note: the server is not required to respect this setting. But if this setting is used, the client should expect to have to follow next-links. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="path.html">path</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">path</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$path(com.sap.cloud.mobile.odata.DataPath)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getpropertypath.html">DataQuery.propertyPath</a></code> to identify this query's target path.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="property.html">property</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">property</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$property(com.sap.cloud.mobile.odata.Property)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getpropertypath.html">DataQuery.propertyPath</a></code> to identify this query's target property.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="search.html">search</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">search</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$search(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getsearchtext.html">DataQuery.searchText</a></code> for free-text searching. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="select.html">select</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">select</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$select(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))/items">items</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add properties (to <code><a href="getselectitems.html">DataQuery.selectItems</a></code>) for selecting from the target entity. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="selectall.html">selectAll</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">selectAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getallselected.html">DataQuery.allSelected</a></code> to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="selectdistinct.html">selectDistinct</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">selectDistinct</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$selectDistinct(kotlin.Array((com.sap.cloud.mobile.odata.PropertyPath)))/items">items</span><span class="symbol">:</span>&nbsp;<a href="../propertypath/index.html"><span class="identifier">PropertyPath</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add properties (to <code><a href="getselectitems.html">DataQuery.selectItems</a></code>) for selecting from the target entity and set <code><a href="getdistinctitems.html">DataQuery.distinctItems</a></code> to <code>true</code>. Note that this isn't a standard OData query option, so servers might ignore it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="selectkey.html">selectKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">selectKey</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getkeyselected.html">DataQuery.keySelected</a></code> to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="selectsproperty.html">selectsProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">selectsProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$selectsProperty(com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this query selects <code>property</code> from the target entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setaliasvalues.html">setAliasValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAliasValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setAliasValues(com.sap.cloud.mobile.odata.DataValueMap)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavaluemap/index.html"><span class="identifier">DataValueMap</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set parameter alias values.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setallselected.html">setAllSelected</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAllSelected</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setAllSelected(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if all properties are selected (using "*").</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcountinline.html">setCountInline</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCountInline</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setCountInline(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code>true</code>, the service should return the total number of available results as an inline count in the result list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcountonly.html">setCountOnly</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCountOnly</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setCountOnly(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code>true</code>, the service should return only the number of available results matching the query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcustomoptions.html">setCustomOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCustomOptions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setCustomOptions(com.sap.cloud.mobile.odata.StringMap)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../stringmap/index.html"><span class="identifier">StringMap</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set custom query options.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdataformat.html">setDataFormat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDataFormat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setDataFormat(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the data format for this query's result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeltaresponse.html">setDeltaResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setDeltaResponse(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code>true</code>, the client should use delta parsing of the response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeltatime.html">setDeltaTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaTime</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setDeltaTime(com.sap.cloud.mobile.odata.GlobalDateTime)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../globaldatetime/index.html"><span class="identifier">GlobalDateTime</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the delta time (<code><a href="getdeltatoken.html">DataQuery.deltaToken</a></code> as UTC date/time).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeltatoken.html">setDeltaToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeltaToken</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setDeltaToken(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the delta token for use in change tracking.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setderivedtype.html">setDerivedType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDerivedType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setDerivedType(com.sap.cloud.mobile.odata.StructureType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set derived type for limiting query results.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdistinctitems.html">setDistinctItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDistinctItems</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setDistinctItems(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set whether to select only <em>distinct</em> items.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentitykey.html">setEntityKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntityKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setEntityKey(com.sap.cloud.mobile.odata.EntityKey)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entitykey/index.html"><span class="identifier">EntityKey</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the entity key for this query. If specified, then <code><a href="getentityset.html">DataQuery.entitySet</a></code> should also be specified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentityset.html">setEntitySet</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntitySet</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setEntitySet(com.sap.cloud.mobile.odata.EntitySet)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entityset/index.html"><span class="identifier">EntitySet</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the entity set expected for the result of this query. To execute a query, either this must be non-<code>null</code>, or <code><a href="getmethodcall.html">DataQuery.methodCall</a></code> must be non-<code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setentitytype.html">setEntityType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setEntityType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setEntityType(com.sap.cloud.mobile.odata.EntityType)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../entitytype/index.html"><span class="identifier">EntityType</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the entity type expected for the result of this query. Can be used for inference of <code><a href="getentityset.html">DataQuery.entitySet</a></code>, if only one entity set in the data model uses this type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setexpanditems.html">setExpandItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExpandItems</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setExpandItems(com.sap.cloud.mobile.odata.ExpandItemList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../expanditemlist/index.html"><span class="identifier">ExpandItemList</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the properties to expand from target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setexpectsingle.html">setExpectSingle</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setExpectSingle</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setExpectSingle(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set set to <code>true</code> if a single result is expected. This may be required if <code>url</code> has been explicitly set.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setgrouptransform.html">setGroupTransform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setGroupTransform</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setGroupTransform(com.sap.cloud.mobile.odata.GroupTransform)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../grouptransform/index.html"><span class="identifier">GroupTransform</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a group transformation item set through groupBy method</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setinternaldata.html">setInternalData</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setInternalData</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setInternalData(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setkeyselected.html">setKeySelected</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setKeySelected</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setKeySelected(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set <code>true</code> if all key properties should be selected.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmethodcall.html">setMethodCall</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMethodCall</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setMethodCall(com.sap.cloud.mobile.odata.DataMethodCall)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datamethodcall/index.html"><span class="identifier">DataMethodCall</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the method call for this query. To execute a query, either this must be non-<code>null</code>, or <code><a href="getentityset.html">DataQuery.entitySet</a></code> must be non-<code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpagesize.html">setPageSize</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPageSize</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setPageSize(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the maximum number of results per page. Note that this is just a hint to the service. The service is permitted to ignore the client-requested page size. Use <code><a href="getskipcount.html">DataQuery.skipCount</a></code> and <code><a href="gettopcount.html">DataQuery.topCount</a></code> for predictable paging.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpropertypath.html">setPropertyPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPropertyPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setPropertyPath(com.sap.cloud.mobile.odata.DataPath)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datapath/index.html"><span class="identifier">DataPath</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set property path for accessing individual properties of an entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setqueryfilter.html">setQueryFilter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setQueryFilter</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setQueryFilter(com.sap.cloud.mobile.odata.QueryFilter)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the filter criteria for the target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setquerystring.html">setQueryString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setQueryString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setQueryString(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the query string for this query. Intended for use by servers. Clients should use API calls (e.g. <code><a href="select.html">DataQuery.select</a></code>, <code><a href="expand.html">DataQuery.expand</a></code>, <code><a href="filter.html">DataQuery.filter</a></code>, <code><a href="orderby.html">DataQuery.orderBy</a></code>) to create query strings.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequestpath.html">setRequestPath</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequestPath</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setRequestPath(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the request path for this query. Intended for use by servers. Clients should use API calls (e.g. <code><a href="from.html">DataQuery.from</a></code>) to create request paths.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsearchtext.html">setSearchText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSearchText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setSearchText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the search text to locate in the target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setselectitems.html">setSelectItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSelectItems</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setSelectItems(com.sap.cloud.mobile.odata.SelectItemList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../selectitemlist/index.html"><span class="identifier">SelectItemList</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the properties to select from target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setskipcount.html">setSkipCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSkipCount</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setSkipCount(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the number of initial results to skip.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setskiptoken.html">setSkipToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSkipToken</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setSkipToken(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the skip token for use in server-driven paging.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsortitems.html">setSortItems</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSortItems</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setSortItems(com.sap.cloud.mobile.odata.SortItemList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../sortitemlist/index.html"><span class="identifier">SortItemList</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the sort criteria for the target entities.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsparsearray.html">setSparseArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSparseArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setSparseArray(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code>true</code>, the query result entities will use <a href="https://en.wikipedia.org/wiki/Sparse_matrix">sparse array</a> storage of properties, to conserve memory. This is only applicable to queries whose result entities will not be updated.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstreamresponse.html">setStreamResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStreamResponse</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setStreamResponse(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if <code>true</code>, the client should use streamed parsing of the response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsystemflags.html">setSystemFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSystemFlags</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setSystemFlags(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settopcount.html">setTopCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTopCount</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setTopCount(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the number of initial results to return.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settrackchanges.html">setTrackChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTrackChanges</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setTrackChanges(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the client want the server to track changes?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settransformvalues.html">setTransformValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTransformValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setTransformValues(com.sap.cloud.mobile.odata.TransformValueList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../transformvaluelist/index.html"><span class="identifier">TransformValueList</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the OData transformation items as described in OData Data Aggregation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="seturl.html">setUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUrl</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$setUrl(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set the relative URL for this query; a combination of <code><a href="getrequestpath.html">DataQuery.requestPath</a></code> and <code><a href="getquerystring.html">DataQuery.queryString</a></code> if either is non-<code>null</code>, or <code>null</code> if the URL is intended to be derived from other properties. Note: It is not recommended for clients to explicitly set the URL, except by using a URL from <code><a href="../entityvaluelist/getdeltalink.html">EntityValueList.deltaLink</a></code> or <code><a href="../entityvaluelist/getnextlink.html">EntityValueList.nextLink</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="skip.html">skip</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">skip</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$skip(kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getskipcount.html">DataQuery.skipCount</a></code> to specify the number of initial results to return. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sortedbyproperties.html">sortedByProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sortedByProperties</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringset/index.html"><span class="identifier">StringSet</span></a></code>
+<p>Return the names of all properties used for sorting by this query.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sparse.html">sparse</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">sparse</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getsparsearray.html">DataQuery.sparseArray</a></code> to <code>true</code>, so that query result entities will use <a href="https://en.wikipedia.org/wiki/Sparse_matrix">sparse array</a> storage of properties, to conserve memory. This is only applicable to queries whose result entities will not be updated.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stream.html">stream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">stream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getstreamresponse.html">DataQuery.streamResponse</a></code> to <code>true</code> to request streamed response processing.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="thenby.html">thenBy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">thenBy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$thenBy(com.sap.cloud.mobile.odata.QueryValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>See thenBy(QueryValue, SortOrder).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">thenBy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$thenBy(com.sap.cloud.mobile.odata.QueryValue, com.sap.cloud.mobile.odata.SortOrder)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$thenBy(com.sap.cloud.mobile.odata.QueryValue, com.sap.cloud.mobile.odata.SortOrder)/order">order</span><span class="symbol">:</span>&nbsp;<a href="../sortorder/index.html"><span class="identifier">SortOrder</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Add to <code><a href="getsortitems.html">DataQuery.sortItems</a></code> a value for result ordering. This function is an alias for <code><a href="orderby.html">DataQuery.orderBy</a></code>. By convention to improve readability when multiple ordering values are required, the first ordering value is added using <code>orderBy</code>, and subsequent ordering values are added using <code>thenBy</code>. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="top.html">top</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">top</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$top(kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="gettopcount.html">DataQuery.topCount</a></code> to specify the maximum number of results to return. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="transform.html">transform</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">transform</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$transform(kotlin.Array((com.sap.cloud.mobile.odata.TransformValue)))/items">items</span><span class="symbol">:</span>&nbsp;<a href="../transformvalue/index.html"><span class="identifier">TransformValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Adds transformation items (to <code><a href="gettransformvalues.html">DataQuery.transformValues</a></code>) for transforming the result of a query sent to an entity set. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="where.html">where</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">where</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$where(com.sap.cloud.mobile.odata.QueryFilter)/test">test</span><span class="symbol">:</span>&nbsp;<a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>This function is an alias for <code><a href="filter.html">DataQuery.filter</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withchangetracking.html">withChangeTracking</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withChangeTracking</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>See withChangeTracking(String).</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withChangeTracking</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$withChangeTracking(kotlin.String)/deltaLink">deltaLink</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="geturl.html">DataQuery.url</a></code> from <code>deltaLink</code> and set <code><a href="gettrackchanges.html">DataQuery.trackChanges</a></code> to <code>true</code>. Also set <code><a href="getdeltaresponse.html">DataQuery.deltaResponse</a></code> to <code>true</code> if <code>deltaLink</code> is non-null, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withkey.html">withKey</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withKey</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$withKey(com.sap.cloud.mobile.odata.EntityKey)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../entitykey/index.html"><span class="identifier">EntityKey</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getentitykey.html">DataQuery.entityKey</a></code> to locate an entity by its primary key. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withtype.html">withType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$withType(com.sap.cloud.mobile.odata.StructureType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getderivedtype.html">DataQuery.derivedType</a></code> to limit results to a derived complex/entity type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withurl.html">withURL</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">withURL</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$withURL(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="geturl.html">DataQuery.url</a></code>. Note: It is not recommended for clients to explicitly set the URL, except by using a URL from <code><a href="../entityvaluelist/getdeltalink.html">EntityValueList.deltaLink</a></code> or <code><a href="../entityvaluelist/getnextlink.html">EntityValueList.nextLink</a></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../fromjson/index.html">FromJSON</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FromJSON</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DataQuery</span></a></code>
+<p>A data query subclass for queries that obtain a response from caller-supplied JSON text.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

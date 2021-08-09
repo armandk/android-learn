@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataQuery.search - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">DataQuery</a>&nbsp;/&nbsp;<a href="./search.html">search</a><br/>
+<br/>
+<h1>search</h1>
+<a name="com.sap.cloud.mobile.odata.DataQuery$search(kotlin.String)"></a>
+<code><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">search</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.DataQuery$search(kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">@NotNull</span> <a href="index.html"><span class="identifier">DataQuery</span></a></code>
+<p>Set <code><a href="getsearchtext.html">DataQuery.searchText</a></code> for free-text searching. </p>
+Example using proxy classes:<pre><code>
+      public void searchExample() {
+          NorthwindService service = this.getService();
+          DataQuery query = new DataQuery().search("Juice");
+          List&lt;Product&gt; products = service.getProducts(query);
+          this.showProducts(products);
+      }
+      </code></pre> Example using dynamic API:<pre><code>
+      public void searchExample() {
+          DataService service = this.getService();
+          EntitySet productsEntitySet = service.getEntitySet("Products");
+          DataQuery query = new DataQuery().from(productsEntitySet).search("Juice");
+          EntityValueList products = service.executeQuery(query).getEntityList();
+          this.showProducts(products);
+      }
+      </code></pre>
+<h3>Parameters</h3>
+<p><a name="text"></a>
+<code>text</code> - <span class="identifier">String</span><span class="symbol">:</span> The search expression.</p>
+<p><strong>Return</strong><br/>
+<a href="index.html"><span class="identifier">DataQuery</span></a><span class="symbol">:</span> This query.</p>
+</BODY>
+</HTML>

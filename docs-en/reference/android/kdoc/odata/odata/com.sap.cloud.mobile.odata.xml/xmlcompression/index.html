@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>XmlCompression - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.xml</a>&nbsp;/&nbsp;<a href="./index.html">XmlCompression</a><br/>
+<br/>
+<h1>XmlCompression</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">XmlCompression</span></code>
+<p>Compress an XML document by substituting element and attribute names with _N (where N &gt;= 0), and substituting attribute values with $N. Such compression introduces a compression dictionary at the start of the document containing the substitution names and values. A compressed document can often be parsed more efficiently than the original document (e.g. 3 times faster). Two XML processing instructions are added to the document to indicate the compression dictionary, e.g.</p>
+  where base is 10 to 36 (if base is omitted, it defaults to 36). 
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="options/index.html">Options</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Options</span></code>
+<p>XML compress options.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">XmlCompression</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Compress an XML document by substituting element and attribute names with _N (where N &gt;= 0), and substituting attribute values with $N. Such compression introduces a compression dictionary at the start of the document containing the substitution names and values. A compressed document can often be parsed more efficiently than the original document (e.g. 3 times faster). Two XML processing instructions are added to the document to indicate the compression dictionary, e.g.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="compress.html">compress</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">compress</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlCompression$compress(com.sap.cloud.mobile.odata.xml.XmlDocument)/document">document</span><span class="symbol">:</span>&nbsp;<a href="../xmldocument/index.html"><span class="identifier">XmlDocument</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See compress(XmlDocument, Options).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">compress</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlCompression$compress(com.sap.cloud.mobile.odata.xml.XmlDocument, com.sap.cloud.mobile.odata.xml.XmlCompression.Options)/document">document</span><span class="symbol">:</span>&nbsp;<a href="../xmldocument/index.html"><span class="identifier">XmlDocument</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.xml.XmlCompression$compress(com.sap.cloud.mobile.odata.xml.XmlDocument, com.sap.cloud.mobile.odata.xml.XmlCompression.Options)/options">options</span><span class="symbol">:</span>&nbsp;<a href="options/index.html"><span class="identifier">XmlCompression.Options</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Compress an XML document in-place.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

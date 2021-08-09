@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CacheCostFactor - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.cache</a>&nbsp;/&nbsp;<a href="./index.html">CacheCostFactor</a><br/>
+<br/>
+<h1>CacheCostFactor</h1>
+<a name="com.sap.cloud.mobile.foundation.cache.CacheCostFactor"></a>
+<code><span class="keyword">interface </span><span class="identifier">CacheCostFactor</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code><br/>
+<a name="com.sap.cloud.mobile.foundation.cache.CacheCostFactor"></a>
+<code><span class="keyword">interface </span><span class="identifier">CacheCostFactor</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>In parallel to the <strong>Cache Replacement Policy</strong>, the optional <strong>Cost Factor</strong> feature described here provides the <strong>eviction mechanism</strong> for a <code>Cache</code> implementation to remove one or more existing cache entries so that a new item can be added (via <code><a href="../cache/put.html">Cache#put(Object, Object, double)</a></code>) when the aggregated cost exceeds the maximum total cost: </p>
+<ol> <li>During cache initialization, the cache implementation should have method(s) to let the user specify the <em>maximum total cost</em>, and a <code>CacheCostFactor</code> instance that implements <code><a href="onexceedmaxcost.html">#onExceedMaxCost(List)</a></code>.</li>
+ <li>When the <code><a href="../cache/put.html">Cache#put(Object, Object, double)</a></code> is called:</li>
+ <ul> <li>The cache implementation first calculates the <em>aggregated cost</em> by adding the current entry's cost to the costs of all existing entries (via <code><a href="../cache/getcostofentries.html">Cache#getCostOfEntries()</a></code>).</li>
+ <li>If the <em>aggregated cost</em> is greater than the <em>maximum total cost</em>, user' <code><a href="onexceedmaxcost.html">CacheCostFactor#onExceedMaxCost(List)</a></code> method is invoked with a list of existing cache entry keys sorted in cost ascending order.</li>
+ <li><code><a href="onexceedmaxcost.html">#onExceedMaxCost(List)</a></code> returns a list of key(s) to remove.</li>
+ <li>The cache implementation removes the cache entries user selected and proceeds with the <code><a href="../cache/put.html">Cache#put(Object, Object, double)</a></code>. </li>
+</ul>
+ </ol>
+ 
+<p>Note that the <strong>Cost Factor</strong> can also be used as a mechanism to <strong>pin down</strong> a certain entry that is deemed important regardless of the <strong>Cache Replacement Policy</strong>.</p>
+</BODY>
+</HTML>

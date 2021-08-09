@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CsdlCompatibilityChecker - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.csdl</a>&nbsp;/&nbsp;<a href="./index.html">CsdlCompatibilityChecker</a><br/>
+<br/>
+<h1>CsdlCompatibilityChecker</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlCompatibilityChecker</span></code>
+<p>OData CSDL compatibility checker.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CsdlCompatibilityChecker</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlCompatibilityChecker$<init>(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.csdl.CsdlDocument)/oldMetadata">oldMetadata</span><span class="symbol">:</span>&nbsp;<a href="../csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.csdl.CsdlCompatibilityChecker$<init>(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.csdl.CsdlDocument)/newMetadata">newMetadata</span><span class="symbol">:</span>&nbsp;<a href="../csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">)</span></code>
+<p>Construct a CSDL compatibility checker.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="check.html">check</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">check</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Check if <code><a href="#">CsdlCompatibilityChecker.newMetadata</a></code> is backwards-compatible with <code><a href="#">CsdlCompatibilityChecker.oldMetadata</a></code>. Adding structural/navigation properties, types and entity sets is backwards compatible.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

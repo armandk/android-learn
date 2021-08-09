@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataQueryFunction - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="./index.html">OfflineODataQueryFunction</a><br/>
+<br/>
+<h1>OfflineODataQueryFunction</h1>
+<code><span class="keyword">class </span><span class="identifier">OfflineODataQueryFunction</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">QueryFunction</span></code>
+<p>The class provides Offline OData specific QueryFilter.</p>
+<p><strong>See Also</strong><br/>
+com.sap.cloud.mobile.odata.QueryFilter</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="entityexists.html">entityExists</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">entityExists</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataQueryFunction$entityExists(DataPath)/property">property</span><span class="symbol">:</span>&nbsp;<span class="identifier">DataPath</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">QueryFilter</span><span class="symbol">!</span></code>
+<p>The function creates a QueryFilter to check if a related entity exists.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="haspendingchanges.html">hasPendingChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hasPendingChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">QueryFilter</span><span class="symbol">!</span></code>
+<p>The function creates a QueryFilter to check if an entity has any pending change requests in the request queue. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="inerrorstate.html">inErrorState</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">inErrorState</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">QueryFilter</span><span class="symbol">!</span></code>
+<p>The function creates a QueryFilter to check if an entity is in error state.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="islocal.html">isLocal</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isLocal</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">QueryFilter</span><span class="symbol">!</span></code>
+<p>The function creates a QueryFilter to check if an entity is local. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="upsertedlastdownload.html">upsertedLastDownload</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">upsertedLastDownload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">QueryFilter</span><span class="symbol">!</span></code>
+<p>The function creates a QueryFilter to check if an entity was upserted (inserted or updated) in the last download. </p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

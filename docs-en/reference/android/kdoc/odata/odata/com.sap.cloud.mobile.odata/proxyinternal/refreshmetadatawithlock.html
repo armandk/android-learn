@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProxyInternal.refreshMetadataWithLock - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">ProxyInternal</a>&nbsp;/&nbsp;<a href="./refreshmetadatawithlock.html">refreshMetadataWithLock</a><br/>
+<br/>
+<h1>refreshMetadataWithLock</h1>
+<a name="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadataWithLock(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int, com.sap.cloud.mobile.odata.core.Action0)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">refreshMetadataWithLock</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadataWithLock(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int, com.sap.cloud.mobile.odata.core.Action0)/service">service</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../dataservice/index.html"><span class="identifier">DataService</span></a><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadataWithLock(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int, com.sap.cloud.mobile.odata.core.Action0)/fetcher">fetcher</span><span class="symbol">:</span>&nbsp;<span class="identifier">@Nullable</span> <a href="../../com.sap.cloud.mobile.odata.csdl/csdlfetcher/index.html"><span class="identifier">CsdlFetcher</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@Nullable</span> <span class="identifier">@Nullable</span> <span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadataWithLock(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int, com.sap.cloud.mobile.odata.core.Action0)/options">options</span><span class="symbol">:</span>&nbsp;<span class="identifier">@Nullable</span> <span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier">@NotNull</span> <span class="identifier" id="com.sap.cloud.mobile.odata.ProxyInternal$refreshMetadataWithLock(com.sap.cloud.mobile.odata.DataService, com.sap.cloud.mobile.odata.csdl.CsdlFetcher, kotlin.Int, com.sap.cloud.mobile.odata.core.Action0)/mergeAction">mergeAction</span><span class="symbol">:</span>&nbsp;<span class="identifier">@NotNull</span> <a href="../../com.sap.cloud.mobile.odata.core/action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Variant of <code><a href="../dataservice/refreshmetadata.html">DataService.refreshMetadata</a></code> for use by proxy classes.</p>
+ See Also: 
+<p><code><a href="../metadatalock/writelock.html">MetadataLock.writeLock</a></code>.</p>
+ 
+<h3>Parameters</h3>
+<p><a name="service"></a>
+<code>service</code> - <a href="../dataservice/index.html"><span class="identifier">DataService</span></a><span class="symbol">:</span> Data service.</p>
+<p><a name="fetcher"></a>
+<code>fetcher</code> - <a href="../../com.sap.cloud.mobile.odata.csdl/csdlfetcher/index.html"><span class="identifier">CsdlFetcher</span></a><span class="symbol">?</span><span class="symbol">:</span> (nullable) CSDL fetcher.</p>
+<p><a name="options"></a>
+<code>options</code> - <span class="identifier">Int</span><span class="symbol">?</span><span class="symbol">:</span> (nullable) CSDL options.</p>
+<p><a name="mergeAction"></a>
+<code>mergeAction</code> - <a href="../../com.sap.cloud.mobile.odata.core/action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">:</span> Merge action (other processing of the changed metadata which must be done while the metadata lock is held).</p>
+</BODY>
+</HTML>

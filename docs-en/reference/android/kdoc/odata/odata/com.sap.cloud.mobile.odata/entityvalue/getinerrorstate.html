@@ -1,0 +1,17 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntityValue.getInErrorState - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">EntityValue</a>&nbsp;/&nbsp;<a href="./getinerrorstate.html">getInErrorState</a><br/>
+<br/>
+<h1>getInErrorState</h1>
+<a name="com.sap.cloud.mobile.odata.EntityValue$getInErrorState()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getInErrorState</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if this entity is in error state, for example due to the failed backend execution of an uploaded offline create/update/delete operation. If true, then one of <code><a href="iscreated.html">EntityValue.isCreated</a></code>, <code><a href="isupdated.html">EntityValue.isUpdated</a></code> or <code><a href="isdeleted.html">EntityValue.isDeleted</a></code> should also be true to indicate the kind of failed operation. In some cases (e.g. system unable to distinguish create from update due to "upsert" behaviour) then <code><a href="iscreated.html">EntityValue.isCreated</a></code>, <code><a href="isupdated.html">EntityValue.isUpdated</a></code> and <code><a href="isdeleted.html">EntityValue.isDeleted</a></code> might all be <code>false</code>.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Boolean</span><span class="symbol">:</span> <code>true</code> if this entity is in error state, for example due to the failed backend execution of an uploaded offline create/update/delete operation.</p>
+</BODY>
+</HTML>

@@ -1,0 +1,505 @@
+<api>
+<package name="com.sap.cloud.mobile.onboarding.qrcodereader"
+>
+<class name="QRCodeConfirmSettings"
+ extends="com.sap.cloud.mobile.onboarding.utility.Settings"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="QRCodeConfirmSettings"
+ type="com.sap.cloud.mobile.onboarding.qrcodereader.QRCodeConfirmSettings"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<constructor name="QRCodeConfirmSettings"
+ type="com.sap.cloud.mobile.onboarding.qrcodereader.QRCodeConfirmSettings"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+</constructor>
+<method name="getQrCodeConfirmActionHandler"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQrCodeConfirmContinueTitle"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQrCodeConfirmDestinationPath"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQrCodeConfirmDetail"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQrCodeConfirmHeadline"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setQrCodeConfirmActionHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="qrCodeConfirmActionHandler" type="java.lang.String">
+</parameter>
+</method>
+<method name="setQrCodeConfirmContinueTitle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="qrCodeConfirmContinueTitle" type="java.lang.String">
+</parameter>
+</method>
+<method name="setQrCodeConfirmDestinationPath"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="qrCodeConfirmDestinationPath" type="java.lang.String">
+</parameter>
+</method>
+<method name="setQrCodeConfirmDetail"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="qrCodeConfirmDetail" type="java.lang.String">
+</parameter>
+</method>
+<method name="setQrCodeConfirmHeadline"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="qrCodeConfirmHeadline" type="java.lang.String">
+</parameter>
+</method>
+<field name="KEY_QR_CONFIRM_ACTION_HANDLER"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;QRCodeConfirmActionHandler&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="KEY_QR_CONFIRM_CONTINUE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;QRCodeConfirmScreenContinueButtonTitle&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="KEY_QR_CONFIRM_DESTINATION_PATH"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;QRCodeConfirmScreenDestinationPath&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="KEY_QR_CONFIRM_DETAIL"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;QRCodeConfirmScreenDetail&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="KEY_QR_CONFIRM_HEADLINE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;QRCodeConfirmScreenHeadline&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="QRCodeReaderSettings"
+ extends="com.sap.cloud.mobile.onboarding.qrcodereader.QRCodeConfirmSettings"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="QRCodeReaderSettings"
+ type="com.sap.cloud.mobile.onboarding.qrcodereader.QRCodeReaderSettings"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<constructor name="QRCodeReaderSettings"
+ type="com.sap.cloud.mobile.onboarding.qrcodereader.QRCodeReaderSettings"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+</constructor>
+<method name="getBarcodeDetectorBuilderTimeout"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getBarcodeFormat"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInvalidQRMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInvalidQRTitle"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOkButtonString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQrCodeConfirmActivity"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQrCodeReaderActionHandler"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isAutoFocus"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isSkipConfirmScreen"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setAutoFocus"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="autoFocus" type="boolean">
+</parameter>
+</method>
+<method name="setBarcodeDetectorBuilderTimeout"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="valueInSec" type="int">
+</parameter>
+</method>
+<method name="setBarcodeFormat"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="barcodeFormat" type="int">
+</parameter>
+</method>
+<method name="setInvalidQRMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="invalidQRMessage" type="java.lang.String">
+</parameter>
+</method>
+<method name="setInvalidQRTitle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="invalidQRTitle" type="java.lang.String">
+</parameter>
+</method>
+<method name="setOkButtonString"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="invalidQROk" type="java.lang.String">
+</parameter>
+</method>
+<method name="setQrCodeConfirmActivity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="qrCodeConfirmActivity" type="java.lang.String">
+</parameter>
+</method>
+<method name="setQrCodeReaderActionHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="qrCodeReaderActionHandler" type="java.lang.String">
+</parameter>
+</method>
+<method name="setSkipConfirmScreen"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="skipConfirmScreen" type="boolean">
+</parameter>
+</method>
+<field name="KEY_QR_READER_ACTION_HANDLER"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;QRCodeReaderActionHandler&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="R"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="R"
+ type="com.sap.cloud.mobile.onboarding.qrcodereader.R"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
+<class name="R.string"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="string"
+ type="com.sap.cloud.mobile.onboarding.qrcodereader.R.string"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="lib_name"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+</api>

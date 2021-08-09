@@ -1,0 +1,17 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ServiceOptions.getLoadIfCreateStatus - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="index.html">ServiceOptions</a>&nbsp;/&nbsp;<a href="./getloadifcreatestatus.html">getLoadIfCreateStatus</a><br/>
+<br/>
+<h1>getLoadIfCreateStatus</h1>
+<a name="com.sap.cloud.mobile.odata.ServiceOptions$getLoadIfCreateStatus()"></a>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLoadIfCreateStatus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return defaults to <code>204</code> (HTTP No Content), forcing an implicit <code>loadEntity</code> call to be issued before <code>createEntity</code> returns, if the create response status from the server is &gt;= <code>204</code>. If this property has a value of <code>200</code> (HTTP OK) then an implicit <code>loadEntity</code> call will always be issued before <code>createEntity</code> returns, to retrieve the post-create entity state. If this property has a value of <code>0</code> then an implicit <code>loadEntity</code> call will never be issued.</p>
+<p><strong>Return</strong><br/>
+<span class="identifier">Int</span><span class="symbol">:</span> Defaults to <code>204</code> (HTTP No Content), forcing an implicit <code>loadEntity</code> call to be issued before <code>createEntity</code> returns, if the create response status from the server is &gt;= <code>204</code>.</p>
+</BODY>
+</HTML>

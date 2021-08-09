@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MetadataLock - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">MetadataLock</a><br/>
+<br/>
+<h1>MetadataLock</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">MetadataLock</span></code>
+<p>A lock for ensuring thread-safe access to mutable service metadata.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">MetadataLock</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>A lock for ensuring thread-safe access to mutable service metadata.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getmutex.html">getMutex</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMutex</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/readwritemutex/index.html"><span class="identifier">ReadWriteMutex</span></a></code>
+<p>Return read and write mutex</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="readlock.html">readLock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readLock</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.MetadataLock$readLock(com.sap.cloud.mobile.odata.core.Action0)/action">action</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Lock metadata to perform action that doesn't change metadata. Note: This is a non-reentrant lock. If a thread tries to acquire a lock while already holding a lock, the thread will hang.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="writelock.html">writeLock</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">writeLock</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.MetadataLock$writeLock(com.sap.cloud.mobile.odata.core.Action0)/action">action</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/action0/index.html"><span class="identifier">Action0</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Lock metadata to perform action that changes metadata.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

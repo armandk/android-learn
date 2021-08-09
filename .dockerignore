@@ -1,0 +1,4 @@
+.ci/
+.git/
+node_modules/
+build/

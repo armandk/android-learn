@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.sap.cloud.mobile.odata.csdl - odata</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">odata</a>&nbsp;/&nbsp;<a href="./index.html">com.sap.cloud.mobile.odata.csdl</a><br/>
+<br/>
+<h2>Package com.sap.cloud.mobile.odata.csdl</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="csdlcompatibilitychecker/index.html">CsdlCompatibilityChecker</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlCompatibilityChecker</span></code>
+<p>OData CSDL compatibility checker.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csdldocument/index.html">CsdlDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlDocument</span></code>
+<p>Encapsulates the definitions from a parsed Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>) document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csdlfetcher/index.html">CsdlFetcher</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CsdlFetcher</span></code>
+<p>Callback which can locate and fetch the text of an Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>) document.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csdlidentifier/index.html">CsdlIdentifier</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CsdlIdentifier</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csdloption/index.html">CsdlOption</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">CsdlOption</span></code>
+<p>Bitmask flags for <code><a href="csdlparser/getcsdloptions.html">CsdlParser.csdlOptions</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csdlparser/index.html">CsdlParser</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlParser</span></code>
+<p>Parser for Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata documents (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>). A new parser should be created for each <code><a href="csdlparser/parse.html">CsdlParser.parse</a></code> call. A parser should not be shared by multiple threads.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csdlreference/index.html">CsdlReference</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlReference</span></code>
+<p>Encapsulates an Open Data Protocol (<a href="http://odata.org/">OData</a>) metadata reference.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="csdlreferencelist/index.html">CsdlReferenceList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlReferenceList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier">MutableIterable</span><span class="symbol">&lt;</span><a href="csdlreference/index.html"><span class="identifier">CsdlReference</span></a><span class="symbol">!</span><span class="symbol">&gt;</span></code>
+<p>A list of item type <code><a href="csdlreference/index.html">com.sap.cloud.mobile.odata.csdl.CsdlReference</a></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="csdlexception/index.html">CsdlException</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CsdlException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../com.sap.cloud.mobile.odata/dataschemaexception/index.html"><span class="identifier">DataSchemaException</span></a></code>
+<p>Exception thrown when an error occurs during the parsing of an Open Data Protocol (<a href="http://odata.org/">OData</a>) service metadata (<a href="http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html">CSDL</a>) document.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

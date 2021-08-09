@@ -1,0 +1,771 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ServiceOptions - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">ServiceOptions</a><br/>
+<br/>
+<h1>ServiceOptions</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ServiceOptions</span></code>
+<p>Options for interaction with a data service.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ServiceOptions</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Options for interaction with a data service.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getavoidinpaths.html">getAvoidInPaths</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAvoidInPaths</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Characters that must be avoided in the path component of URLs (e.g. in OData key predicates or function parameters), even when percent-encoded. This mey be the case with certain client or server environments which limit the characters permitted in paths (usually due to security concerns). When this option is set, other options (e.g. <code><a href="getsupportsalias.html">ServiceOptions.supportsAlias</a></code>, <code><a href="getsupportsbatch.html">ServiceOptions.supportsBatch</a></code>) may be required to enable such characters to be passed in another way.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getbatchdownloads.html">getBatchDownloads</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBatchDownloads</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if the backend supports download for offline operation, should it be done with batch requests? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getbatchuploads.html">getBatchUploads</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getBatchUploads</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if the backend supports upload for offline operation, should it be done with batch requests? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcachemetadata.html">getCacheMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCacheMetadata</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should loaded service metadata be cached in a local file? If <code><a href="getmetadatafile.html">ServiceOptions.metadataFile</a></code> is non-null, then the cache file name will be <code><a href="getmetadatafile.html">ServiceOptions.metadataFile</a></code> with ".cache" appended. If <code><a href="getmetadatafile.html">ServiceOptions.metadataFile</a></code> is <code>null</code>, then the cache file name will be the service name with ".csdl.cache" appended.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcheckqueries.html">getCheckQueries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCheckQueries</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return check data queries before sending them to the server. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcheckresults.html">getCheckResults</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCheckResults</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return check query results after receiving them from the server. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcheckversion.html">getCheckVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCheckVersion</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return check version header in OData responses. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getclientinstanceid.html">getClientInstanceID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getClientInstanceID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Globally unique client identifier for the client, used to provide a default value for the "Client-Instance-ID" HTTP header.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcreatereturnscontent.html">getCreateReturnsContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCreateReturnsContent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return do createEntity calls return resulting entity state in response payload? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcsdlfetcher.html">getCsdlFetcher</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCsdlFetcher</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.csdl/csdlfetcher/index.html"><span class="identifier">CsdlFetcher</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) CSDL fetcher which can resolve CSDL references when loading metadata. This overrides a data service's default mechanism to load metadata over HTTP.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcsdloptions.html">getCsdlOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCsdlOptions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return CSDL options for parsing.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdatabaseonly.html">getDatabaseOnly</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDatabaseOnly</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return is this service only to be used with a local database? By default, a service can be used both online (remote service) and offline (local database).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdataformat.html">getDataFormat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataFormat</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return format to be used for data interchange (ATOM or JSON). Defaults to JSON.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdataversion.html">getDataVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDataVersion</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return version to be used for data interchange. If non-zero, this overrides any version specified in the service metadata.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getdeletewithentitytag.html">getDeleteWithEntityTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDeleteWithEntityTag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if the backend system returns an ETag header when querying for an entity (or an "etag" annotation when querying for multiple entities), should deletes of the entity send the ETag value with an If-Match header? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getfixmissingemptylists.html">getFixMissingEmptyLists</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFixMissingEmptyLists</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if set to true and the server returns no value for a collection-typed property of an entity then parser will return an empty collection and validation will not fail. Note: this property is only considered if checkResults is set to true and the property to be queried is selected or expanded in the query. False by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getfixmissingnullvalues.html">getFixMissingNullValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFixMissingNullValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if set to true and the server returns no value for a non collection-typed property of an entity then parser will return a null value and validation will not fail. Note: this property is only considered if checkResults is set to true and the property to be queried is selected or expanded in the query. False by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getincludeelements.html">getIncludeElements</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getIncludeElements</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.xml/xmlelementlist/index.html"><span class="identifier">XmlElementList</span></a></code>
+<p>Return extra child elements for parsing main CSDL schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getincludeschemas.html">getIncludeSchemas</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getIncludeSchemas</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../dataschemalist/index.html"><span class="identifier">DataSchemaList</span></a></code>
+<p>Return pre-parsed CSDL schemas, which may be referenced by the service metadata.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getloadifcreatestatus.html">getLoadIfCreateStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLoadIfCreateStatus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return defaults to <code>204</code> (HTTP No Content), forcing an implicit <code>loadEntity</code> call to be issued before <code>createEntity</code> returns, if the create response status from the server is &gt;= <code>204</code>. If this property has a value of <code>200</code> (HTTP OK) then an implicit <code>loadEntity</code> call will always be issued before <code>createEntity</code> returns, to retrieve the post-create entity state. If this property has a value of <code>0</code> then an implicit <code>loadEntity</code> call will never be issued.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getloadifupdatestatus.html">getLoadIfUpdateStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLoadIfUpdateStatus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return defaults to <code>204</code> (HTTP No Content), forcing an implicit <code>loadEntity</code> call to be issued before <code>updateEntity</code> returns, if the update response status from the server is &gt;= <code>204</code>. If this property has a value of <code>200</code> (HTTP OK) then an implicit <code>loadEntity</code> call will always be issued before <code>updateEntity</code> returns, to retrieve the post-update entity state. If this property has a value of <code>0</code> then an implicit <code>loadEntity</code> call will never be issued.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlogerrors.html">getLogErrors</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLogErrors</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should data service error messages be logged? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getlogwarnings.html">getLogWarnings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLogWarnings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should data service warning messages be logged? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmetadatafile.html">getMetadataFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMetadataFile</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Name of local file containing OData CSDL service metadata for the data service. If this is <code>null</code>, then metadata will be fetched from the remote service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmetadatatext.html">getMetadataText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMetadataText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Text of the service metadata, provider by the caller so it does not need to be loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmetadataurl.html">getMetadataURL</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMetadataURL</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Alternate location of OData CSDL service metadata. Can be an absolute URL, or a relative URL (relative to the service root URL). Use this if the preferred service metadata document appears at a URL other than that formed by appending "$metadata" to the service root URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpingaccept.html">getPingAccept</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPingAccept</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return response type accepted by <code><a href="../dataservice/pingserver.html">DataService.pingServer</a></code>. Defaults to "application/json,application/xml,application/atomsvc+xml".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpingmethod.html">getPingMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPingMethod</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return HTTP method used by <code><a href="../dataservice/pingserver.html">DataService.pingServer</a></code>. Defaults to "HEAD".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getpingresource.html">getPingResource</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPingResource</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return resource path used by <code><a href="../dataservice/pingserver.html">DataService.pingServer</a></code>. Defaults to "/" (the service document).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrepeatabilityclientid.html">getRepeatabilityClientID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRepeatabilityClientID</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) Optional client ID for repeatable requests.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequirestoken.html">getRequiresToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiresToken</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>Return (nullable) Does the service require a security token for change requests? Defaults to "X-CSRF-Token". A token is obtained, implicitly if needed, by a call to <code><a href="../dataservice/pingserver.html">DataService.pingServer</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getrequirestype.html">getRequiresType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getRequiresType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does the service always require type metadata in client-sent complex/entity values. False by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsupportsalias.html">getSupportsAlias</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSupportsAlias</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does the service support parameter aliases? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsupportsbatch.html">getSupportsBatch</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSupportsBatch</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does the service support OData batch requests? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsupportsbind.html">getSupportsBind</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSupportsBind</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does the service support bind operations. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsupportsdelta.html">getSupportsDelta</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSupportsDelta</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does the service support server-side change tracking (e.g. with delta links)? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsupportsnext.html">getSupportsNext</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSupportsNext</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does the service support the following of next-links using the $skiptoken system query option. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsupportspatch.html">getSupportsPatch</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSupportsPatch</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does the service support OData PATCH requests (or MERGE for OData versions &lt; 3.0). True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getsupportsunbind.html">getSupportsUnbind</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSupportsUnbind</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return does the service support unbind operations (unbind navigation property from an existing entity in delete)? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getupdatereturnscontent.html">getUpdateReturnsContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUpdateReturnsContent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return do updateEntity calls return resulting entity state in response payload? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getupdatewithentitytag.html">getUpdateWithEntityTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getUpdateWithEntityTag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return if the backend system returns an ETag header when querying for an entity (or an "etag" annotation when querying for multiple entities), should updates of the entity send the ETag value with an If-Match header? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setavoidinpaths.html">setAvoidInPaths</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAvoidInPaths</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setAvoidInPaths(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set characters that must be avoided in the path component of URLs (e.g. in OData key predicates or function parameters), even when percent-encoded. This mey be the case with certain client or server environments which limit the characters permitted in paths (usually due to security concerns). When this option is set, other options (e.g. <code><a href="getsupportsalias.html">ServiceOptions.supportsAlias</a></code>, <code><a href="getsupportsbatch.html">ServiceOptions.supportsBatch</a></code>) may be required to enable such characters to be passed in another way.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setbatchdownloads.html">setBatchDownloads</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBatchDownloads</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setBatchDownloads(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if the backend supports download for offline operation, should it be done with batch requests? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setbatchuploads.html">setBatchUploads</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setBatchUploads</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setBatchUploads(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if the backend supports upload for offline operation, should it be done with batch requests? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcachemetadata.html">setCacheMetadata</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCacheMetadata</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setCacheMetadata(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should loaded service metadata be cached in a local file? If <code><a href="getmetadatafile.html">ServiceOptions.metadataFile</a></code> is non-null, then the cache file name will be <code><a href="getmetadatafile.html">ServiceOptions.metadataFile</a></code> with ".cache" appended. If <code><a href="getmetadatafile.html">ServiceOptions.metadataFile</a></code> is <code>null</code>, then the cache file name will be the service name with ".csdl.cache" appended.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcheckqueries.html">setCheckQueries</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCheckQueries</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setCheckQueries(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set check data queries before sending them to the server. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcheckresults.html">setCheckResults</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCheckResults</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setCheckResults(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set check query results after receiving them from the server. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcheckversion.html">setCheckVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCheckVersion</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setCheckVersion(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set check version header in OData responses. Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setclientinstanceid.html">setClientInstanceID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setClientInstanceID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setClientInstanceID(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set globally unique client identifier for the client, used to provide a default value for the "Client-Instance-ID" HTTP header.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcreatereturnscontent.html">setCreateReturnsContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCreateReturnsContent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setCreateReturnsContent(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set do createEntity calls return resulting entity state in response payload? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcsdlfetcher.html">setCsdlFetcher</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCsdlFetcher</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setCsdlFetcher(com.sap.cloud.mobile.odata.csdl.CsdlFetcher)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdlfetcher/index.html"><span class="identifier">CsdlFetcher</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set CSDL fetcher which can resolve CSDL references when loading metadata. This overrides a data service's default mechanism to load metadata over HTTP.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcsdloptions.html">setCsdlOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCsdlOptions</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setCsdlOptions(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set CSDL options for parsing.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdatabaseonly.html">setDatabaseOnly</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDatabaseOnly</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setDatabaseOnly(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set is this service only to be used with a local database? By default, a service can be used both online (remote service) and offline (local database).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdataformat.html">setDataFormat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDataFormat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setDataFormat(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set format to be used for data interchange (ATOM or JSON). Defaults to JSON.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdataversion.html">setDataVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDataVersion</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setDataVersion(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set version to be used for data interchange. If non-zero, this overrides any version specified in the service metadata.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setdeletewithentitytag.html">setDeleteWithEntityTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setDeleteWithEntityTag</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setDeleteWithEntityTag(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if the backend system returns an ETag header when querying for an entity (or an "etag" annotation when querying for multiple entities), should deletes of the entity send the ETag value with an If-Match header? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setfixmissingemptylists.html">setFixMissingEmptyLists</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setFixMissingEmptyLists</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setFixMissingEmptyLists(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if set to true and the server returns no value for a collection-typed property of an entity then parser will return an empty collection and validation will not fail. Note: this property is only considered if checkResults is set to true and the property to be queried is selected or expanded in the query. False by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setfixmissingnullvalues.html">setFixMissingNullValues</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setFixMissingNullValues</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setFixMissingNullValues(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if set to true and the server returns no value for a non collection-typed property of an entity then parser will return a null value and validation will not fail. Note: this property is only considered if checkResults is set to true and the property to be queried is selected or expanded in the query. False by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setincludeelements.html">setIncludeElements</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setIncludeElements</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setIncludeElements(com.sap.cloud.mobile.odata.xml.XmlElementList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.xml/xmlelementlist/index.html"><span class="identifier">XmlElementList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set extra child elements for parsing main CSDL schema.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setincludeschemas.html">setIncludeSchemas</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setIncludeSchemas</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setIncludeSchemas(com.sap.cloud.mobile.odata.DataSchemaList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../dataschemalist/index.html"><span class="identifier">DataSchemaList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set pre-parsed CSDL schemas, which may be referenced by the service metadata.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setloadifcreatestatus.html">setLoadIfCreateStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLoadIfCreateStatus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setLoadIfCreateStatus(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set defaults to <code>204</code> (HTTP No Content), forcing an implicit <code>loadEntity</code> call to be issued before <code>createEntity</code> returns, if the create response status from the server is &gt;= <code>204</code>. If this property has a value of <code>200</code> (HTTP OK) then an implicit <code>loadEntity</code> call will always be issued before <code>createEntity</code> returns, to retrieve the post-create entity state. If this property has a value of <code>0</code> then an implicit <code>loadEntity</code> call will never be issued.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setloadifupdatestatus.html">setLoadIfUpdateStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLoadIfUpdateStatus</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setLoadIfUpdateStatus(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set defaults to <code>204</code> (HTTP No Content), forcing an implicit <code>loadEntity</code> call to be issued before <code>updateEntity</code> returns, if the update response status from the server is &gt;= <code>204</code>. If this property has a value of <code>200</code> (HTTP OK) then an implicit <code>loadEntity</code> call will always be issued before <code>updateEntity</code> returns, to retrieve the post-update entity state. If this property has a value of <code>0</code> then an implicit <code>loadEntity</code> call will never be issued.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlogerrors.html">setLogErrors</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLogErrors</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setLogErrors(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should data service error messages be logged? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setlogwarnings.html">setLogWarnings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setLogWarnings</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setLogWarnings(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should data service warning messages be logged? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmetadatafile.html">setMetadataFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMetadataFile</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setMetadataFile(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set name of local file containing OData CSDL service metadata for the data service. If this is <code>null</code>, then metadata will be fetched from the remote service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmetadatatext.html">setMetadataText</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMetadataText</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setMetadataText(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set text of the service metadata, provider by the caller so it does not need to be loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmetadataurl.html">setMetadataURL</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMetadataURL</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setMetadataURL(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set alternate location of OData CSDL service metadata. Can be an absolute URL, or a relative URL (relative to the service root URL). Use this if the preferred service metadata document appears at a URL other than that formed by appending "$metadata" to the service root URL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpingaccept.html">setPingAccept</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPingAccept</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setPingAccept(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set response type accepted by <code><a href="../dataservice/pingserver.html">DataService.pingServer</a></code>. Defaults to "application/json,application/xml,application/atomsvc+xml".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpingmethod.html">setPingMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPingMethod</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setPingMethod(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set HTTP method used by <code><a href="../dataservice/pingserver.html">DataService.pingServer</a></code>. Defaults to "HEAD".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setpingresource.html">setPingResource</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPingResource</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setPingResource(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set resource path used by <code><a href="../dataservice/pingserver.html">DataService.pingServer</a></code>. Defaults to "/" (the service document).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrepeatabilityclientid.html">setRepeatabilityClientID</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRepeatabilityClientID</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setRepeatabilityClientID(com.sap.cloud.mobile.odata.GuidValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../guidvalue/index.html"><span class="identifier">GuidValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set optional client ID for repeatable requests.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequirestoken.html">setRequiresToken</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequiresToken</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setRequiresToken(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the service require a security token for change requests? Defaults to "X-CSRF-Token". A token is obtained, implicitly if needed, by a call to <code><a href="../dataservice/pingserver.html">DataService.pingServer</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrequirestype.html">setRequiresType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setRequiresType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setRequiresType(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the service always require type metadata in client-sent complex/entity values. False by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsupportsalias.html">setSupportsAlias</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSupportsAlias</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setSupportsAlias(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the service support parameter aliases? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsupportsbatch.html">setSupportsBatch</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSupportsBatch</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setSupportsBatch(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the service support OData batch requests? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsupportsbind.html">setSupportsBind</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSupportsBind</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setSupportsBind(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the service support bind operations. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsupportsdelta.html">setSupportsDelta</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSupportsDelta</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setSupportsDelta(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the service support server-side change tracking (e.g. with delta links)? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsupportsnext.html">setSupportsNext</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSupportsNext</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setSupportsNext(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the service support the following of next-links using the $skiptoken system query option. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsupportspatch.html">setSupportsPatch</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSupportsPatch</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setSupportsPatch(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the service support OData PATCH requests (or MERGE for OData versions &lt; 3.0). True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setsupportsunbind.html">setSupportsUnbind</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSupportsUnbind</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setSupportsUnbind(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set does the service support unbind operations (unbind navigation property from an existing entity in delete)? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setupdatereturnscontent.html">setUpdateReturnsContent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUpdateReturnsContent</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setUpdateReturnsContent(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set do updateEntity calls return resulting entity state in response payload? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setupdatewithentitytag.html">setUpdateWithEntityTag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setUpdateWithEntityTag</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.ServiceOptions$setUpdateWithEntityTag(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set if the backend system returns an ETag header when querying for an entity (or an "etag" annotation when querying for multiple entities), should updates of the entity send the ETag value with an If-Match header? Defaults to <code>true</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

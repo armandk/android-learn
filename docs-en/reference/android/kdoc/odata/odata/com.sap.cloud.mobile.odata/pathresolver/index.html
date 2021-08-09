@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PathResolver - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">PathResolver</a><br/>
+<br/>
+<h1>PathResolver</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PathResolver</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">PathResolver</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="resolvechildpaths.html">resolveChildPaths</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">resolveChildPaths</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolveChildPaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.DataContext, kotlin.String)/metadata">metadata</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolveChildPaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.DataContext, kotlin.String)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolveChildPaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.DataContext, kotlin.String)/dataContext">dataContext</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolveChildPaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.StructureBase, com.sap.cloud.mobile.odata.DataContext, kotlin.String)/parentPath">parentPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="resolvepaths.html">resolvePaths</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">resolvePaths</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolvePaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.DataContext, com.sap.cloud.mobile.odata.DataValue)/metadata">metadata</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolvePaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.DataContext, com.sap.cloud.mobile.odata.DataValue)/dataContext">dataContext</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolvePaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.DataContext, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>See resolvePaths(CsdlDocument, DataContext, DataValue, String).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">resolvePaths</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolvePaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.DataContext, com.sap.cloud.mobile.odata.DataValue, kotlin.String)/metadata">metadata</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.csdl/csdldocument/index.html"><span class="identifier">CsdlDocument</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolvePaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.DataContext, com.sap.cloud.mobile.odata.DataValue, kotlin.String)/dataContext">dataContext</span><span class="symbol">:</span>&nbsp;<a href="../datacontext/index.html"><span class="identifier">DataContext</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolvePaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.DataContext, com.sap.cloud.mobile.odata.DataValue, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.PathResolver$resolvePaths(com.sap.cloud.mobile.odata.csdl.CsdlDocument, com.sap.cloud.mobile.odata.DataContext, com.sap.cloud.mobile.odata.DataValue, kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

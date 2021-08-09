@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.browse_by_location.BrowseByNestedLocation">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:stateListAnimator="@drawable/appbar_always_elevated"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <Toolbar
+                android:id="@+id/browse_by_location_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:navigationIcon="@drawable/ic_arrow_back_24dp"
+                android:popupTheme="@style/AppTheme.PopupOverlay"
+                android:titleTextColor="@color/white"
+                app:layout_collapseMode="pin"
+                tools:title="@string/browse_by_location_title" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/browse_by_location_breadcrumb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+        tools:itemCount="12"
+        tools:visibility="visible" />
+
+    <RadioGroup
+        android:id="@+id/browse_by_location_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/view_location_list_button"
+            style="@style/ButtonToggle"
+            tools:text="@string/by_shelf" />
+
+        <RadioButton
+            android:id="@+id/view_product_list_button"
+            style="@style/ButtonToggle"
+            android:text="@string/toggle_by_product" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/browse_by_location_divider"
+        style="@style/Divider"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/browse_by_location_list_header"
+        layout="@layout/product_list_header_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/browse_by_location_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>

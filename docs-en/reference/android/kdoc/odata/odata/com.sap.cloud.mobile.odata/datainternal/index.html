@@ -1,0 +1,219 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DataInternal - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">DataInternal</a><br/>
+<br/>
+<h1>DataInternal</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataInternal</span></code>
+<p>For internal use only.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DataInternal</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>For internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="complex_list_type.html">COMPLEX_LIST_TYPE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COMPLEX_LIST_TYPE</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="data_list_type.html">DATA_LIST_TYPE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">DATA_LIST_TYPE</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="entity_list_type.html">ENTITY_LIST_TYPE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ENTITY_LIST_TYPE</span><span class="symbol">: </span><a href="../datatype/index.html"><span class="identifier">DataType</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="media_property_etag_id.html">MEDIA_PROPERTY_ETAG_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MEDIA_PROPERTY_ETAG_ID</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="media_property_id.html">MEDIA_PROPERTY_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MEDIA_PROPERTY_ID</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="media_property_type_id.html">MEDIA_PROPERTY_TYPE_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MEDIA_PROPERTY_TYPE_ID</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="stream_property_max_etag_id.html">STREAM_PROPERTY_MAX_ETAG_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STREAM_PROPERTY_MAX_ETAG_ID</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="stream_property_max_type_id.html">STREAM_PROPERTY_MAX_TYPE_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STREAM_PROPERTY_MAX_TYPE_ID</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="stream_property_min_etag_id.html">STREAM_PROPERTY_MIN_ETAG_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STREAM_PROPERTY_MIN_ETAG_ID</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="stream_property_min_type_id.html">STREAM_PROPERTY_MIN_TYPE_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">STREAM_PROPERTY_MIN_TYPE_ID</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="xsversion.html">xsVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">xsVersion</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="candefersnapshot.html">canDeferSnapshot</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">canDeferSnapshot</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$canDeferSnapshot(com.sap.cloud.mobile.odata.SelectItemList)/selectItems">selectItems</span><span class="symbol">:</span>&nbsp;<a href="../selectitemlist/index.html"><span class="identifier">SelectItemList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="checketag.html">checkETag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">checkETag</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$checkETag(kotlin.String)/tag">tag</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="defaultfordatatype.html">defaultForDataType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">defaultForDataType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$defaultForDataType(com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="defaultforproperty.html">defaultForProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">defaultForProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$defaultForProperty(com.sap.cloud.mobile.odata.Property)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code>
+<p>See defaultForProperty(Property, boolean).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">defaultForProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$defaultForProperty(com.sap.cloud.mobile.odata.Property, kotlin.Boolean)/property">property</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$defaultForProperty(com.sap.cloud.mobile.odata.Property, kotlin.Boolean)/required">required</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="fixinferred.html">fixInferred</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fixInferred</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$fixInferred(com.sap.cloud.mobile.odata.StructureBase)/structure">structure</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="generateetag.html">generateETag</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">generateETag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return a "weak" <a href="https://en.wikipedia.org/wiki/HTTP_ETag">HTTP ETag</a> (entity tag).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstructuralpropertyids.html">getStructuralPropertyIDs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getStructuralPropertyIDs</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$getStructuralPropertyIDs(com.sap.cloud.mobile.odata.StructureType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/intarray/index.html"><span class="identifier">IntArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="odatatypename.html">odataTypeName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">odataTypeName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$odataTypeName(com.sap.cloud.mobile.odata.DataType, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$odataTypeName(com.sap.cloud.mobile.odata.DataType, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/dataVersion">dataVersion</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$odataTypeName(com.sap.cloud.mobile.odata.DataType, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/edmPrefix">edmPrefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$odataTypeName(com.sap.cloud.mobile.odata.DataType, kotlin.Int, kotlin.Boolean, kotlin.Boolean)/hashPrefix">hashPrefix</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="queryresult.html">queryResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">queryResult</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$queryResult(com.sap.cloud.mobile.odata.DataQuery, kotlin.Any)/query">query</span><span class="symbol">:</span>&nbsp;<a href="../dataquery/index.html"><span class="identifier">DataQuery</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$queryResult(com.sap.cloud.mobile.odata.DataQuery, kotlin.Any)/result">result</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryresult/index.html"><span class="identifier">QueryResult</span></a></code>
+<p>Return <code>result</code> converted to <code><a href="../queryresult/index.html">com.sap.cloud.mobile.odata.QueryResult</a></code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setoldproperty.html">setOldProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">setOldProperty</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$setOldProperty(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.Property)/inProperty">inProperty</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$setOldProperty(com.sap.cloud.mobile.odata.Property, com.sap.cloud.mobile.odata.Property)/toProperty">toProperty</span><span class="symbol">:</span>&nbsp;<a href="../property/index.html"><span class="identifier">Property</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="setstructuralpropertyids.html">setStructuralPropertyIDs</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">setStructuralPropertyIDs</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$setStructuralPropertyIDs(com.sap.cloud.mobile.odata.StructureType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../structuretype/index.html"><span class="identifier">StructureType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="structuredatalist.html">structureDataList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">structureDataList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$structureDataList(com.sap.cloud.mobile.odata.StructureBase)/structure">structure</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../datavaluelist/index.html"><span class="identifier">DataValueList</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="structurehasarray.html">structureHasArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">structureHasArray</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$structureHasArray(com.sap.cloud.mobile.odata.StructureBase)/structure">structure</span><span class="symbol">:</span>&nbsp;<a href="../structurebase/index.html"><span class="identifier">StructureBase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.core/booleanarray/index.html"><span class="identifier">BooleanArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="useuntypedlist.html">useUntypedList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">useUntypedList</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$useUntypedList(com.sap.cloud.mobile.odata.ListBase, com.sap.cloud.mobile.odata.core.UntypedList)/list">list</span><span class="symbol">:</span>&nbsp;<a href="../listbase/index.html"><span class="identifier">ListBase</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.DataInternal$useUntypedList(com.sap.cloud.mobile.odata.ListBase, com.sap.cloud.mobile.odata.core.UntypedList)/untyped">untyped</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.core/untypedlist/index.html"><span class="identifier">UntypedList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

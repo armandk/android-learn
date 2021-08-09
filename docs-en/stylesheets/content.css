@@ -1,0 +1,14 @@
+:root {
+    --fiori-icon-color: #0854a0;
+}
+
+img.ui-image {
+    max-width: 400px;
+    max-height: 750px;
+    display: block;
+    margin: 0 auto;
+}
+
+span.twemoji {
+    color: var(--fiori-icon-color);
+}

@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EncryptionUtil.changePasscode - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.common</a>&nbsp;/&nbsp;<a href="index.html">EncryptionUtil</a>&nbsp;/&nbsp;<a href="./changepasscode.html">changePasscode</a><br/>
+<br/>
+<h1>changePasscode</h1>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changePasscode(kotlin.String, kotlin.CharArray, kotlin.CharArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">changePasscode</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changePasscode(kotlin.String, kotlin.CharArray, kotlin.CharArray)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changePasscode(kotlin.String, kotlin.CharArray, kotlin.CharArray)/oldPasscode">oldPasscode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changePasscode(kotlin.String, kotlin.CharArray, kotlin.CharArray)/newPasscode">newPasscode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Changes the passcode so that the user's key is re-encrypted with the new passcode when in PASSCODE_ONLY or PASSCODE_BIOMETRIC state.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="oldPasscode"></a>
+<code>oldPasscode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the old passcode</p>
+<p><a name="newPasscode"></a>
+<code>newPasscode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the new passcode</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is not PASSCODE_ONLY or PASSCODE_BIOMETRIC.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the old passcode is incorrect or encryption/decryption error occurs.</p>
+<a name="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changePasscode(kotlin.String, kotlin.CharArray, kotlin.CharArray)"></a>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">changePasscode</span><span class="symbol">(</span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changePasscode(kotlin.String, kotlin.CharArray, kotlin.CharArray)/alias">alias</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changePasscode(kotlin.String, kotlin.CharArray, kotlin.CharArray)/oldPasscode">oldPasscode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier">@NonNull</span> <span class="identifier" id="com.sap.cloud.mobile.foundation.common.EncryptionUtil$changePasscode(kotlin.String, kotlin.CharArray, kotlin.CharArray)/newPasscode">newPasscode</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Changes the passcode so that the user's key is re-encrypted with the new passcode when in PASSCODE_ONLY or PASSCODE_BIOMETRIC state.</p>
+<h3>Parameters</h3>
+<p><a name="alias"></a>
+<code>alias</code> - <span class="identifier">String</span><span class="symbol">:</span> the alias of the encryption key</p>
+<p><a name="oldPasscode"></a>
+<code>oldPasscode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the old passcode</p>
+<p><a name="newPasscode"></a>
+<code>newPasscode</code> - <span class="identifier">CharArray</span><span class="symbol">:</span> the new passcode</p>
+<h3>Exceptions</h3>
+<p><a name="IllegalStateException"></a>
+<code>IllegalStateException</code> - If the current encryption state is not PASSCODE_ONLY or PASSCODE_BIOMETRIC.</p>
+<p><a name="EncryptionError"></a>
+<code>EncryptionError</code> - If the old passcode is incorrect or encryption/decryption error occurs.</p>
+</BODY>
+</HTML>

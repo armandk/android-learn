@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CustomSettingsService - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings</a>&nbsp;/&nbsp;<a href="./index.html">CustomSettingsService</a><br/>
+<br/>
+<h1>CustomSettingsService</h1>
+<code><span class="keyword">class </span><span class="identifier">CustomSettingsService</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">R</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html"><span class="identifier">CustomSettingsEntity</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/index.html"><span class="identifier">MobileService</span></a></code>
+<p>Represents the service to deal with custom setting exchanges, loading/storing/updating/deleting
+custom settings. All operations will need an instance of <a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html">CustomSettingsEntity</a>.</p>
+<p>For all the operations, 'keyPath' will be needed for each <a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html">CustomSettingsEntity</a>, which is the
+'configurationName' of each <a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html">CustomSettingsEntity</a>.</p>
+<p>For 'load' and 'auto load' operations, besides 'keyPath', a 'parser' is also needed to convert a JSON
+string to typed custom settings. The parser will be passed in the parameter of <a href="#">parse</a>.</p>
+<p>If 'auto' retrieve custom setting feature is not needed, <a href="#">keyPath</a>, <a href="#">parse</a> and <a href="#">autoCustomSettingsLoadListener</a>
+can be omitted.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html">CustomSettingsEntity</a></p>
+</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CustomSettingsService</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$<init>(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.R)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.R)))/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/settingstarget/index.html"><span class="identifier">SettingsTarget</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SettingsTarget.USER<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$<init>(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.R)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.R)))/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$<init>(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.R)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.R)))/parse">parse</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">(</span><span class="identifier">String</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$<init>(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.R)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.R)))/autoCustomSettingsLoadListener">autoCustomSettingsLoadListener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Represents the service to deal with custom setting exchanges, loading/storing/updating/deleting
+custom settings. All operations will need an instance of <a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html">CustomSettingsEntity</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/apikey.html">apiKey</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">apiKey</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code>
+<p>The api key that can connect to mobile server</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">application</span><span class="symbol">: </span><span class="identifier">Application</span></code>
+<p>The application instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="deletecustompolicy.html">deleteCustomPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deleteCustomPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$deleteCustomPolicy(kotlin.String, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.Nothing)))/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$deleteCustomPolicy(kotlin.String, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.Nothing)))/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/settingstarget/index.html"><span class="identifier">SettingsTarget</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SettingsTarget.DEVICE<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$deleteCustomPolicy(kotlin.String, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.Nothing)))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><span class="identifier">Nothing</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Deletes a custom setting entity on mobile server, the result will notified to <a href="deletecustompolicy.html#com.sap.cloud.mobile.foundation.settings.CustomSettingsService$deleteCustomPolicy(kotlin.String, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((kotlin.Nothing)))/listener">listener</a> on
+the main thread.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">deleteCustomPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$deleteCustomPolicy(kotlin.String, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget)/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$deleteCustomPolicy(kotlin.String, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/settingstarget/index.html"><span class="identifier">SettingsTarget</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SettingsTarget.DEVICE<span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><span class="identifier">Nothing</span><span class="symbol">&gt;</span></code>
+<p>Deletes a custom setting entity on mobile server.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="init.html">init</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$init(android.app.Application, kotlin.String)/application">application</span><span class="symbol">:</span>&nbsp;<span class="identifier">Application</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$init(android.app.Application, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Initializes the mobile service</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="loadcustomsettings.html">loadCustomSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html"><span class="identifier">CustomSettingsEntity</span></a><span class="symbol">&gt;</span> <span class="identifier">loadCustomSettings</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/settingstarget/index.html"><span class="identifier">SettingsTarget</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SettingsTarget.DEVICE<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/parser">parser</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">String</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="loadcustomsettings.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><a href="loadcustomsettings.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Loads custom setting identified by <a href="loadcustomsettings.html#com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/keyPath">keyPath</a>. <a href="loadcustomsettings.html#com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/parser">parser</a> is to convert the JSON string returned
+from server to typed custom setting entity. The result is notified to <a href="loadcustomsettings.html#com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)), com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/listener">listener</a></p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html"><span class="identifier">CustomSettingsEntity</span></a><span class="symbol">&gt;</span> <span class="identifier">loadCustomSettings</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/settingstarget/index.html"><span class="identifier">SettingsTarget</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SettingsTarget.DEVICE<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/keyPath">keyPath</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/parse">parse</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">String</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="loadcustomsettings.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><a href="loadcustomsettings.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Loads custom setting entity identified by <a href="loadcustomsettings.html#com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/keyPath">keyPath</a> within a coroutine. <a href="loadcustomsettings.html#com.sap.cloud.mobile.foundation.settings.CustomSettingsService$loadCustomSettings(com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, kotlin.String, kotlin.Function1((kotlin.String, com.sap.cloud.mobile.foundation.settings.CustomSettingsService.loadCustomSettings.T)))/parse">parse</a> is to convert
+JSON string returned from server to typed custom setting entity.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="onstatechange.html">onStateChange</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onStateChange</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$onStateChange(com.sap.cloud.mobile.foundation.mobileservices.ApplicationState)/state">state</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/applicationstate/index.html"><span class="identifier">ApplicationState</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Notified when application state changes. This function will be called on Main thread.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="storecustompolicy.html">storeCustomPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html"><span class="identifier">CustomSettingsEntity</span></a><span class="symbol">&gt;</span> <span class="identifier">storeCustomPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$storeCustomPolicy(com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T)))/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="storecustompolicy.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$storeCustomPolicy(com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T)))/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/settingstarget/index.html"><span class="identifier">SettingsTarget</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SettingsTarget.DEVICE<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$storeCustomPolicy(com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T)))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><a href="storecustompolicy.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Creates or updates the given <a href="storecustompolicy.html#com.sap.cloud.mobile.foundation.settings.CustomSettingsService$storeCustomPolicy(com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T)))/entity">entity</a> to mobile server, the <a href="storecustompolicy.html#com.sap.cloud.mobile.foundation.settings.CustomSettingsService$storeCustomPolicy(com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T)))/listener">listener</a> will be notified
+with the result on the main thread.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/customsettingsentity/index.html"><span class="identifier">CustomSettingsEntity</span></a><span class="symbol">&gt;</span> <span class="identifier">storeCustomPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$storeCustomPolicy(com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget)/entity">entity</span><span class="symbol">:</span>&nbsp;<a href="storecustompolicy.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.CustomSettingsService$storeCustomPolicy(com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/settingstarget/index.html"><span class="identifier">SettingsTarget</span></a>&nbsp;<span class="symbol">=</span>&nbsp;SettingsTarget.DEVICE<span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><a href="storecustompolicy.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Creates or updates the given <a href="storecustompolicy.html#com.sap.cloud.mobile.foundation.settings.CustomSettingsService$storeCustomPolicy(com.sap.cloud.mobile.foundation.settings.CustomSettingsService.storeCustomPolicy.T, com.sap.cloud.mobile.foundation.settings.policies.SettingsTarget)/entity">entity</a> to mobile server.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/enablenetworkpolicy.html">enableNetworkPolicy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">enableNetworkPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$enableNetworkPolicy(com.sap.cloud.mobile.foundation.settings.policies.NetworkPolicy)/policy">policy</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.settings.policies/networkpolicy/index.html"><span class="identifier">NetworkPolicy</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Enable and set network policy for mobile service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/getnetworktype.html">getNetworkType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getNetworkType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$getNetworkType(kotlin.String)/componentName">componentName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">NetworkType</span></code>
+<p>Help mobile services using worker convert NetworkPolicy<a href="#">effectiveNetworkPolicy</a> to NetworkType</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/init.html">init</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><s><span class="identifier">init</span></s><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$init(android.app.Application, com.sap.cloud.mobile.foundation.common.SettingsParameters)/application">application</span><span class="symbol">:</span>&nbsp;<span class="identifier">Application</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$init(android.app.Application, com.sap.cloud.mobile.foundation.common.SettingsParameters)/settingsParameters">settingsParameters</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html"><span class="identifier">SettingsParameters</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/isapplicationinitialized.html">isApplicationInitialized</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isApplicationInitialized</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Check whether application instance is initialized.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html">observeWorker</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">observeWorker</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/request">request</span><span class="symbol">:</span>&nbsp;<span class="identifier">WorkRequest</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/servicelistener/index.html"><span class="identifier">ServiceListener</span></a><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/tag">tag</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/getServiceResult">getServiceResult</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">WorkInfo</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html"><span class="identifier">ServiceResult</span></a><span class="symbol">&lt;</span><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Observers a worker request from the main thread, and report the result to the given <a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/listener">listener</a>.
+<a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/observeworker.html#com.sap.cloud.mobile.foundation.mobileservices.MobileService$observeWorker(android.content.Context, androidx.work.WorkRequest, com.sap.cloud.mobile.foundation.mobileservices.ServiceListener((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)), kotlin.String, kotlin.Function1((androidx.work.WorkInfo, com.sap.cloud.mobile.foundation.mobileservices.ServiceResult((com.sap.cloud.mobile.foundation.mobileservices.MobileService.observeWorker.T)))))/getServiceResult">getServiceResult</a> takes the observed <a href="#">WorkInfo</a> as input to return the <a href="../../com.sap.cloud.mobile.foundation.mobileservices/serviceresult/index.html">ServiceResult</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/onevent.html">onEvent</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><s><span class="identifier">onEvent</span></s><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.mobileservices.MobileService$onEvent(com.sap.cloud.mobile.foundation.common.SDKApplicationState.SDKEventType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.foundation.common/sdkapplicationstate/sdkeventtype/index.html"><span class="identifier">SDKApplicationState.SDKEventType</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/prerequisiteready.html">prerequisiteReady</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">prerequisiteReady</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Most service can only be used when <a href="../../com.sap.cloud.mobile.foundation.common/settingsparameters/index.html">SettingsParameters</a> and 'httpClient' are ready</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.sap.cloud.mobile.foundation.mobileservices/mobileservice/reset.html">reset</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">reset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Resets the mobile service to the state that just initialized.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

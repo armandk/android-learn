@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tasks"
+        android:enabled="true"
+        android:icon="@drawable/outline_done_outline_24"
+        android:title="@string/text_label_tasks"/>
+    <item
+        android:id="@+id/work_cart"
+        android:enabled="true"
+        android:icon="@drawable/outline_shopping_cart_24"
+        android:title="@string/text_label_work_cart"/>
+    <item
+        android:id="@+id/search"
+        android:enabled="true"
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/text_label_search"/>
+    <item
+        android:id="@+id/notification"
+        android:enabled="true"
+        android:icon="@drawable/outline_notifications_24"
+        android:title="@string/text_label_notifications"/>
+    <item
+        android:id="@+id/setting"
+        android:enabled="true"
+        android:icon="@drawable/outline_settings_24"
+        android:title="@string/text_label_work_settings"/>
+</menu>

@@ -1,0 +1,454 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>QueryFunction - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">QueryFunction</a><br/>
+<br/>
+<h1>QueryFunction</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">QueryFunction</span></code>
+<p>Represents a <a href="http://odata.org">OData</a> query function. Query functions are typically used within <code><a href="../dataquery/filter.html">DataQuery.filter</a></code>. <code><a href="../queryfunctioncall/index.html">com.sap.cloud.mobile.odata.QueryFunctionCall</a></code> can be constructed using static calls on <code><a href="./index.html">com.sap.cloud.mobile.odata.QueryFunction</a></code> or, more conveniently, by chained calls on <code><a href="../queryvalue/index.html">com.sap.cloud.mobile.odata.QueryValue</a></code>. </p>
+Example using proxy classes (with QueryFunction static calls):<pre><code>
+  public void queryFunctionExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .filter(QueryFunction.contains(QueryFunction.toLower(Customer.address),
+              StringValue.of("king")));
+      List&lt;Customer&gt; customers = service.getCustomers(query);
+      this.showCustomers(customers);
+  }
+  </code></pre> Example using proxy classes (with QueryValue chained calls):<pre><code>
+  public void queryValueFunctionExample() {
+      NorthwindService service = this.getService();
+      DataQuery query = new DataQuery()
+          .filter(Customer.address.toLower().contains("king"));
+      List&lt;Customer&gt; customers = service.getCustomers(query);
+      this.showCustomers(customers);
+  }
+  </code></pre>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">QueryFunction</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Represents a <a href="http://odata.org">OData</a> query function. Query functions are typically used within <code><a href="../dataquery/filter.html">DataQuery.filter</a></code>. <code><a href="../queryfunctioncall/index.html">com.sap.cloud.mobile.odata.QueryFunctionCall</a></code> can be constructed using static calls on <code><a href="./index.html">com.sap.cloud.mobile.odata.QueryFunction</a></code> or, more conveniently, by chained calls on <code><a href="../queryvalue/index.html">com.sap.cloud.mobile.odata.QueryValue</a></code>. </p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="functionmap.html">functionMap</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">functionMap</span><span class="symbol">: </span><a href="../queryfunctionmap/index.html"><span class="identifier">QueryFunctionMap</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="astype.html">asType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">asType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$asType(com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>See asType(DataType, DataValue).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">asType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$asType(com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataValue)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$asType(com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'cast' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ceiling.html">ceiling</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">ceiling</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$ceiling(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'ceiling' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="concat.html">concat</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">concat</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$concat(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/left">left</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$concat(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/right">right</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'concat' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="contains.html">contains</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$contains(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$contains(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/searchValue">searchValue</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'contains' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="custom.html">custom</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">custom</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$custom(kotlin.String, com.sap.cloud.mobile.odata.DataValueList)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$custom(kotlin.String, com.sap.cloud.mobile.odata.DataValueList)/arguments">arguments</span><span class="symbol">:</span>&nbsp;<a href="../datavaluelist/index.html"><span class="identifier">DataValueList</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of a custom function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="date.html">date</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">date</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$date(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'date' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="day.html">day</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">day</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$day(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'day' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="endswith.html">endsWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">endsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$endsWith(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$endsWith(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'endswith' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="floor.html">floor</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">floor</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$floor(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'floor' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="forcode.html">forCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">forCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$forCode(kotlin.Int)/code">code</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">QueryFunction</span></a></code>
+<p>Lookup a query function by code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="forname.html">forName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">forName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$forName(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">QueryFunction</span></a></code>
+<p>Lookup a query function by name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fractionalseconds.html">fractionalSeconds</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fractionalSeconds</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$fractionalSeconds(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'fractionalseconds' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geodistance.html">geoDistance</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">geoDistance</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$geoDistance(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$geoDistance(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'geo.distance' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geointersects.html">geoIntersects</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">geoIntersects</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$geoIntersects(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/point">point</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$geoIntersects(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/polygon">polygon</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'geo.intersects' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="geolength.html">geoLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">geoLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$geoLength(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'geo.length' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcode.html">getCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return function code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getmaxarity.html">getMaxArity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMaxArity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return maximum arity (number of arguments).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getminarity.html">getMinArity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMinArity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Return minimum arity (number of arguments).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getname.html">getName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getName</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return function name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hour.html">hour</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hour</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$hour(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'hour' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="indexof.html">indexOf</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">indexOf</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$indexOf(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$indexOf(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/searchValue">searchValue</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'indexof' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="istype.html">isType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$isType(com.sap.cloud.mobile.odata.DataType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>See isType(DataType, DataValue).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isType</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$isType(com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataValue)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../datatype/index.html"><span class="identifier">DataType</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$isType(com.sap.cloud.mobile.odata.DataType, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'isof' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="maxdatetime.html">maxDateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">maxDateTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'maxdatetime' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="mindatetime.html">minDateTime</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">minDateTime</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'mindatetime' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="minute.html">minute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">minute</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$minute(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'minute' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="month.html">month</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">month</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$month(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'month' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="now.html">now</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">now</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'now' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="round.html">round</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">round</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$round(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'round' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="second.html">second</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">second</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$second(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'second' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcode.html">setCode</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCode</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$setCode(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set function code.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setmaxarity.html">setMaxArity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMaxArity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$setMaxArity(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set maximum arity (number of arguments).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setminarity.html">setMinArity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setMinArity</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$setMinArity(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set minimum arity (number of arguments).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setname.html">setName</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setName</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$setName(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set function name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="startswith.html">startsWith</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">startsWith</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$startsWith(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$startsWith(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryfilter/index.html"><span class="identifier">QueryFilter</span></a></code>
+<p>Return a deferred call of the OData 'startswith' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stringlength.html">stringLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">stringLength</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$stringLength(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'length' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="substring.html">substring</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">substring</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$substring(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$substring(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/start">start</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>See substring(DataValue, DataValue, DataValue).</p>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">substring</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$substring(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$substring(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/start">start</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$substring(com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue, com.sap.cloud.mobile.odata.DataValue)/length">length</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'substring' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="time.html">time</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">time</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$time(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'time' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tolower.html">toLower</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toLower</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$toLower(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'tolower' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="totaloffsetminutes.html">totalOffsetMinutes</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">totalOffsetMinutes</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$totalOffsetMinutes(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'totaloffsetminutes' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="toupper.html">toUpper</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toUpper</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$toUpper(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'toUpper' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="trim.html">trim</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">trim</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$trim(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'trim' canonical function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="year.html">year</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">year</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.QueryFunction$year(com.sap.cloud.mobile.odata.DataValue)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../datavalue/index.html"><span class="identifier">DataValue</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../queryvalue/index.html"><span class="identifier">QueryValue</span></a></code>
+<p>Return a deferred call of the OData 'year' canonical function.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

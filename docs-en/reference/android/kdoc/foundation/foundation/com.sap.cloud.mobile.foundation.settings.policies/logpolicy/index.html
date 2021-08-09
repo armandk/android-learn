@@ -1,0 +1,150 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LogPolicy - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.settings.policies</a>&nbsp;/&nbsp;<a href="./index.html">LogPolicy</a><br/>
+<br/>
+<h1>LogPolicy</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">LogPolicy</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../predefinedpolicy/index.html"><span class="identifier">PredefinedPolicy</span></a></code>
+<p>The log settings model</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">LogPolicy</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.LogPolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int)/enabled">enabled</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.LogPolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int)/maxFileSize">maxFileSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.LogPolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int)/logLevel">logLevel</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;"NONE"<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.LogPolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int)/entryExpiry">entryExpiry</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;7<span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.LogPolicy$<init>(kotlin.Boolean, kotlin.Int, kotlin.String, kotlin.Int, kotlin.Int)/maxFileNumber">maxFileNumber</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span></code>
+<p>The log settings model</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="enabled.html">enabled</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">enabled</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>log setting is enabled or not</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="entryexpiry.html">entryExpiry</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">entryExpiry</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>How long the log information will be deleted</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="loglevel.html">logLevel</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">logLevel</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The log level</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="maxfilenumber.html">maxFileNumber</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">maxFileNumber</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Max file count for logs</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="maxfilesize.html">maxFileSize</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">maxFileSize</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>Max file size</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tostringwithdefaultvalues.html">toStringWithDefaultValues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toStringWithDefaultValues</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../predefinedpolicy/getkeypath.html">getKeyPath</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getKeyPath</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="createfromjsonstring.html">createFromJsonString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createFromJsonString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.LogPolicy.Companion$createFromJsonString(kotlin.String)/jsonString">jsonString</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">LogPolicy</span></a></code>
+<p>Create log settings model from a json string</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getloglevel.html">getLogLevel</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getLogLevel</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.LogPolicy.Companion$getLogLevel(com.sap.cloud.mobile.foundation.settings.policies.LogPolicy)/log">log</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LogPolicy</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Level</span></code>
+<p>Gets the corresponding log <a href="#">Level</a> from the level string</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getloglevelstring.html">getLogLevelString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getLogLevelString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.LogPolicy.Companion$getLogLevelString(ch.qos.logback.classic.Level)/level">level</span><span class="symbol">:</span>&nbsp;<span class="identifier">Level</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Maps the log <a href="#">Level</a> to the required log level string</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setrootloglevel.html">setRootLogLevel</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setRootLogLevel</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.settings.policies.LogPolicy.Companion$setRootLogLevel(com.sap.cloud.mobile.foundation.settings.policies.LogPolicy)/log">log</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">LogPolicy</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Sets the root log level</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

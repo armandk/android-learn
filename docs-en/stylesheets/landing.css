@@ -1,0 +1,476 @@
+:root {
+    --sap-color-gold: #EFAB00;
+}
+
+/* Hero content */
+
+.lp-hero {
+    background-color: #F8F8F8;
+    margin-top: -1.5rem;
+}
+
+.lp-hero__inner {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.lp-message {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lp-message-header {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.lp-highlight {
+    color: var(--sap-color-gold);
+}
+
+.cpms-video-frame {
+    text-align: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+/* [tablet landscape -] */
+@media only screen and (max-width: 76.25em) {
+    .lp-hero__inner {
+        flex-wrap: wrap-reverse;
+    }
+    .lp-message {
+        margin-top: 1rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        text-align: center;
+    }
+    .cpms-video-frame {
+        flex-shrink: 1;
+    }
+}
+
+@media only screen and (min-width: 45em) {
+    .cpms-video-wrapper {
+        /*
+            padding-t 87 - 28
+            padding-b 94 - 30
+            padding-l/r 195 - 51
+            background: 2310x1261
+            video: 608x402
+        */
+        background-image: url("../images/product-demo-laptop-frame.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        max-width: 918px;
+        height: auto;
+        padding: 0 calc(7% + 8px);
+        padding-top: 32px;
+        padding-bottom: 25px;
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    .cpms-video-wrapper {
+        padding: 0 calc(3% + 40px);
+        padding-top: 32px;
+        padding-bottom: 25px;
+    }
+}
+
+@media only screen and (min-width: 76.25em) {
+    .cpms-video-wrapper {
+        padding: 0 calc(0.25% + 70px);
+        padding-top: 32px;
+        padding-bottom: 25px;
+    }
+}
+
+.cpms-video {
+    display: block;
+    margin: 0 auto;
+}
+
+.lp-content {
+    width: 100vw;
+}
+
+/* Tech and featues */
+
+/*
+From there files:
+
+// Device-specific breakpoints
+$break-devices: (
+  mobile: (
+    portrait:  px2em(220px)  px2em(479px),  // 13.75em-29.9375em
+    landscape: px2em(480px)  px2em(719px)   // 30em-44.9375em
+  ),
+  tablet: (
+    portrait:  px2em(720px)  px2em(959px),  // 45em-59.9375em
+    landscape: px2em(960px)  px2em(1219px)  // 60em-76.1875em
+  ),
+  screen: (
+    small:     px2em(1220px) px2em(1599px), // 76.25em-99.9375em
+    medium:    px2em(1600px) px2em(1999px), // 100em-124.9375em
+    large:     px2em(2000px) px2em(2399px), // 125em-149.9375em
+    vlarge:    px2em(2400px) px2em(3599px), // 150em-224.9375em
+    xlarge:    px2em(3600px)                // 225em+
+  )
+);
+*/
+
+@font-face {
+    font-family: "SAP-Icons";
+    src: url("../images/SAP-icons.ttf"), url("../images/SAP-icons.woff2");
+}
+
+/* Landing Page flex tables */
+.lp-table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lp-table > .lp-cell {
+    margin-bottom: 1.6rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+/* Tech overview */
+
+.lp-tech {
+    padding-top: 1.6rem;
+}
+
+/* [tablet landscape -] */
+@media only screen and (max-width: 76.25em) {
+    .lp-tech {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+}
+
+.lp-cell-tech {
+    min-width: 10rem;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.lp-product-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2rem;
+    border-radius: 100%;
+    border: 0.05rem solid #EFAB00;
+    transition: opacity 0.25s;
+}
+
+.lp-product-icon:focus, .lp-product-icon:hover {
+    opacity: 0.7;
+}
+
+.lp-product-icon__inner {
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-family: "SAP-Icons";
+    font-size: 2rem;
+    color: #EFAB00;
+    line-height: 1.1;
+}
+
+.lp-product-details {
+    white-space: nowrap;
+    line-height: 2;
+}
+
+.lp-product-details-header {
+    font-size: 1rem;
+}
+
+a.lp-product-details-header {
+    display: block;
+    transition: opacity 0.25s;
+}
+
+a.lp-product-details-header:hover, a.lp-product-details-header:focus {
+    opacity: 0.7;
+}
+
+ul.lp-product-details-links {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+ul.lp-product-details-links li {
+    list-style: none;
+    margin: 0;
+}
+
+ul.lp-product-details-links li a {
+    color: #707070;
+    transition: opacity 0.25s;
+}
+
+ul.lp-product-details-links li a:hover, ul.lp-product-details-links li a:focus, ul.lp-feature-list li a:hover, ul.lp-product-details-links li a:focus {
+    color: #707070;
+    opacity: 0.7;
+}
+
+/* [tablet portrait -] change tech cell layout from top-to-bottom to left-to-right */
+@media only screen and (max-width: 59.9375em) {
+    .lp-cell-tech {
+        display: flex;
+        flex-direction: row;
+        min-width: 16rem;
+    }
+
+    .lp-product-details {
+        text-align: left;
+        margin-left: 1.6rem;
+    }
+}
+
+.lp-product-icon-android {
+    background-image: url("../images/android-bot.svg");
+}
+
+.lp-product-icon-ios {
+    background-image: url("../images/ios.svg");
+}
+
+.lp-product-icon-mdk::before {
+    content: "\e244";
+}
+
+.lp-product-icon-cards::before {
+    content: "\e176";
+}
+
+.lp-product-icon-cpms::before {
+    content: "\e092";
+}
+
+.lp-product-icon-ev::before {
+    content: "\e080";
+}
+
+.lp-product-icon-mtb::before {
+    content: "\e20b";
+}
+
+
+/* Feature overview */
+
+.lp-features {
+    background-color: #F8F8F8;
+    padding: 1.6rem 0.8rem 0 0.8rem;
+}
+
+.lp-feature-header {
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+ul.lp-feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 0;
+}
+
+ul.lp-feature-list li a {
+    transition: opacity 0.25s;
+}
+
+ul.lp-feature-list li {
+    list-style: none;
+    margin: 0 4rem 2rem 0;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul.lp-feature-list li:before {
+    font-family: SAP-Icons;
+    display: inline-block;
+    width: 1.2rem;
+    margin-right: 0.4rem;
+    font-size: 1.2rem;
+    color: #E35500;
+}
+
+.lp-cell-feature {
+    min-width: 18rem;
+}
+
+.lp-cell-feature__inner {
+    padding: 0 0 1rem 0;
+}
+
+.lp-cell-feature__header {
+    height: 9rem;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.lp-feature-list li a, .lp-product-details a {
+    color: #000000;
+    transition: opacity 0.25s;
+}
+
+.lp-feature-list li a:hover, .lp-feature-list li a:focus, .lp-product-details a:hover, .lp-product-details a:focus {
+    color: #000000;
+    opacity: 0.7;
+}
+
+/* [tablet landscape -] Remove feature column min-width */
+@media only screen and (max-width: 76.25em) {
+    .lp-cell-feature {
+        min-width: 0;
+    }
+
+    .lp-cell-feature__inner {
+        padding: 0.6rem 0 1rem 0;
+    }
+}
+
+/* [screen medium +] Slightly increase feature column width */
+@media only screen and (min-width: 100em) {
+    .lp-cell-feature {
+        min-width: 20rem;
+    }
+}
+
+.lp-cell-feature__header--build {
+    background: url("../images/lp-header-build.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.lp-cell-feature__header--run {
+    background: url("../images/lp-header-run.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.lp-cell-feature__header--scale {
+    background: url("../images/lp-header-scale.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.feature-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.feature-wrapper-inner {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    margin-left: 1.2rem;
+}
+
+.feature-wrapper-platform {
+    display: flex;
+    flex-direction: row;
+    margin-top: .4rem;
+}
+
+div.icon-platform, img.icon-platform{
+    opacity: 33%;
+    height: 1rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-right: 0.8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-platform-ios {
+    width: 1.4rem;
+}
+
+.icon-feature {
+    margin: auto 0;
+    width: 2.8rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    background: #EFAB00ee;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.25s;
+}
+
+.icon-feature:hover, .icon-feature:focus {
+    opacity: 0.7;
+}
+
+.lp-nav-primary {
+    display: none;
+}
+
+@media only screen and (max-width: 76.1875em) {
+    .md-nav__item .md-nav__group {
+        font-weight: bold;
+        padding: 0.6rem 0.8rem;
+        margin-top: 0;
+    }
+    .lp-nav-primary {
+        display: block;
+    }
+}
+
+a.overview-tech-link {
+    color: #3f51b5 !important; /* Need to forcefully override mkdocs theme font color */
+    text-transform: uppercase;
+}
+
+a.overview-tech-link:hover, a.overview-tech-link:active {
+    color: #536dfe;
+}
+
+/* Left-aligned icon */
+
+@media only screen and (min-width: 76.25em) {
+    .md-header-nav__button.md-logo {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+/* Left-aligned tabs */
+
+@media only screen and (min-width: 76.25em) {
+    .md-tabs__list {
+        margin: 0;
+    }
+
+    .md-tabs__item {
+        padding-left: 0;
+    }
+}
+
+.icon {
+    font-family: "SAP-Icons"
+}

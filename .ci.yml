@@ -1,0 +1,54 @@
+version: 2
+
+cache:
+  - .gradle
+
+flow:
+  - name: build
+    runtime: androidsdk/android-30:latest
+    phases:
+      - pullRequest
+    timeout: 30m
+    command:
+      - apt-get update; apt-get --assume-yes install sudo
+      - sudo apt-get --assume-yes install rsync
+      - chmod +x ./install-sap-fiori-lib && ./install-sap-fiori-lib
+      # - chmod +x ./runInstrumentedUnitTests.sh
+      - ./gradlew bundle
+      # - ./runInstrumentedUnitTests.sh
+
+  - name: analyze
+    runtime: androidsdk/android-30:latest
+    command:
+      - apt-get update; apt-get --assume-yes install sudo
+      - sudo apt-get --assume-yes install rsync
+      - chmod +x ./install-sap-fiori-lib && ./install-sap-fiori-lib
+      - ./gradlew lint
+
+  - name: build-staging
+    phases:
+      - mergedToDevelop
+    runtime: androidsdk/android-30:latest
+    command:
+      - apt-get update; apt-get --assume-yes install sudo
+      - sudo apt-get --assume-yes install rsync
+      - chmod +x ./install-sap-fiori-lib && ./install-sap-fiori-lib
+      - ./gradlew assembleStaging
+
+  - name: build-production
+    phases:
+      - pushTag
+    runtime: androidsdk/android-30:latest
+    command:
+      - apt-get update; apt-get --assume-yes install sudo
+      - sudo apt-get --assume-yes install rsync
+      - chmod +x ./install-sap-fiori-lib && ./install-sap-fiori-lib
+      - ./gradlew assembleProduction
+
+  - name: test
+    runtime: androidsdk/android-30:latest
+    command:
+      - apt-get update; apt-get --assume-yes install sudo
+      - sudo apt-get --assume-yes install rsync
+      - chmod +x ./install-sap-fiori-lib && ./install-sap-fiori-lib
+      - ./gradlew test

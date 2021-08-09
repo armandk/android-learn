@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataParameters.setForceUploadOnUserSwitch - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataParameters</a>&nbsp;/&nbsp;<a href="./setforceuploadonuserswitch.html">setForceUploadOnUserSwitch</a><br/>
+<br/>
+<h1>setForceUploadOnUserSwitch</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataParameters$setForceUploadOnUserSwitch(kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><span class="identifier">setForceUploadOnUserSwitch</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataParameters$setForceUploadOnUserSwitch(kotlin.Boolean)/forceUploadOnUserSwitch">forceUploadOnUserSwitch</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Specifies whether or not to force uploading previous user's pending change when a second user is opening local store that was used by the previous user. This is generally useful when multiple users share devices and the previous user forgot to upload his\her work at the end of the shift. There is a SAP Mobile Services flag named 'Allow Upload of Pending Changes from Previous User' to specify whether server allows uploading pending changes of another user. The upload function will be called automatically inside the open function when the second user opens the local store. After the pending changes from the previous user are uploaded to SAP Mobile Services, SAP Mobile Services will send them to the OData back end in the previous user's context. If all changes are successfully executed by the back end, the pending state will be cleared in the local store. If some changes fail at the back end, open will be terminated. The application should use `OfflineProvider.getPreviousUser()` to notify the previous user and ask them to take over the device and fix the issue. This typically requires the previous user's manual involvement. Or, the application can choose to open the store without `forceUploadOnUserSwitch` and rollback the changes from the previous user. This should be done with care and is generally not recommended, because the previous user's `un-uploaded` work will be lost. Instead of rollback, the application can also upload the previous user's work in the current user context. Careful consideration should be used before implementing this process, because it means the back end will receive the previous user's request in the current user's context, which may be a security concern. By default, forceUploadOnUserSwitch is 'false'.</p>
+<h3>Parameters</h3>
+<p><a name="forceUploadOnUserSwitch"></a>
+<code>forceUploadOnUserSwitch</code> - <span class="identifier">Boolean</span><span class="symbol">:</span> </p>
+<p><strong>See Also</strong><br/>
+<a href="isforceuploadonuserswitch.html">#isForceUploadOnUserSwitch()</a>#setCurrentUser()<a href="../offlineodataprovider/open.html">OfflineODataProvider#open(Action0, Action1)</a></p>
+</BODY>
+</HTML>

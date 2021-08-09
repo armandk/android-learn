@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NullableDecimal - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.core</a>&nbsp;/&nbsp;<a href="./index.html">NullableDecimal</a><br/>
+<br/>
+<h1>NullableDecimal</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">NullableDecimal</span></code>
+<p>Functions for the implementation of nullable <code>decimal</code>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">NullableDecimal</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Functions for the implementation of nullable <code>decimal</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="equal.html">equal</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">equal</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$equal(java.math.BigDecimal, java.math.BigDecimal)/left">left</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$equal(java.math.BigDecimal, java.math.BigDecimal)/right">right</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>left == right</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getvalue.html">getValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$getValue(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span></code>
+<p>Return non-<code>null</code> value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="hasvalue.html">hasValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">hasValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$hasValue(java.math.BigDecimal, java.math.BigDecimal)/left">left</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$hasValue(java.math.BigDecimal, java.math.BigDecimal)/right">right</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>left == right</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="isnull.html">isNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">isNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$isNull(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is <code>null</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="notequal.html">notEqual</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">notEqual</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$notEqual(java.math.BigDecimal, java.math.BigDecimal)/left">left</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$notEqual(java.math.BigDecimal, java.math.BigDecimal)/right">right</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>left != right</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="notnull.html">notNull</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">notNull</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$notNull(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return <code>true</code> if <code>value</code> is not <code>null</code>, otherwise <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="nullvalue.html">nullValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">nullValue</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span><span class="symbol">?</span></code>
+<p>Return (nullable) The <code>null</code> <code>decimal</code> value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="tostring.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$toString(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return "null" if <code>value</code> is <code>null</code>, otherwise <code>value.toString()</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="withvalue.html">withValue</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">withValue</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.core.NullableDecimal$withValue(java.math.BigDecimal)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">BigDecimal</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">BigDecimal</span><span class="symbol">?</span></code>
+<p>Return (nullable) <code>value</code>, converted to a nullable <code>decimal</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NetworkOptions - odata</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odata</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata</a>&nbsp;/&nbsp;<a href="./index.html">NetworkOptions</a><br/>
+<br/>
+<h1>NetworkOptions</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NetworkOptions</span></code>
+<p>Options for interaction with a data network.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">NetworkOptions</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Options for interaction with a data network.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="getallowtunneling.html">getAllowTunneling</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAllowTunneling</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should HTTP verb tunneling be allowed in preference to OData batch requests? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcompressrequests.html">getCompressRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCompressRequests</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should requests be compressed (if this is supported by the client and by the server)? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getcompressresponses.html">getCompressResponses</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCompressResponses</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should responses be compressed (if this is supported by the client and by the server)? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gethttphandler.html">getHttpHandler</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getHttpHandler</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.sap.cloud.mobile.odata.http/httphandler/index.html"><span class="identifier">HttpHandler</span></a><span class="symbol">?</span></code>
+<p>Return (nullable) A handler for all HTTP requests made by the data service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstreamdownloads.html">getStreamDownloads</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStreamDownloads</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should downloads be streamed? Set this to <code>false</code> to force the use of non-streamed downloads. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="getstreamuploads.html">getStreamUploads</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getStreamUploads</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Return should uploads be streamed? Set this to <code>false</code> to force the use of non-streamed uploads. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettunneledmethods.html">getTunneledMethods</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTunneledMethods</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../stringlist/index.html"><span class="identifier">StringList</span></a></code>
+<p>Return which HTTP methods must be tunneled in HTTP POST due to proxy/firewall issues?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="gettunnelingheader.html">getTunnelingHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTunnelingHeader</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Return which HTTP header can be used for tunneling, if it is required? Defaults to "X-HTTP-Method".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setallowtunneling.html">setAllowTunneling</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setAllowTunneling</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NetworkOptions$setAllowTunneling(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should HTTP verb tunneling be allowed in preference to OData batch requests? Defaults to <code>false</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcompressrequests.html">setCompressRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCompressRequests</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NetworkOptions$setCompressRequests(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should requests be compressed (if this is supported by the client and by the server)? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setcompressresponses.html">setCompressResponses</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setCompressResponses</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NetworkOptions$setCompressResponses(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should responses be compressed (if this is supported by the client and by the server)? True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sethttphandler.html">setHttpHandler</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setHttpHandler</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NetworkOptions$setHttpHandler(com.sap.cloud.mobile.odata.http.HttpHandler)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../../com.sap.cloud.mobile.odata.http/httphandler/index.html"><span class="identifier">HttpHandler</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set a handler for all HTTP requests made by the data service.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstreamdownloads.html">setStreamDownloads</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStreamDownloads</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NetworkOptions$setStreamDownloads(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should downloads be streamed? Set this to <code>false</code> to force the use of non-streamed downloads. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setstreamuploads.html">setStreamUploads</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setStreamUploads</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NetworkOptions$setStreamUploads(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set should uploads be streamed? Set this to <code>false</code> to force the use of non-streamed uploads. True by default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settunneledmethods.html">setTunneledMethods</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTunneledMethods</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NetworkOptions$setTunneledMethods(com.sap.cloud.mobile.odata.StringList)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../stringlist/index.html"><span class="identifier">StringList</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set which HTTP methods must be tunneled in HTTP POST due to proxy/firewall issues?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="settunnelingheader.html">setTunnelingHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setTunnelingHeader</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.NetworkOptions$setTunnelingHeader(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Set which HTTP header can be used for tunneling, if it is required? Defaults to "X-HTTP-Method".</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

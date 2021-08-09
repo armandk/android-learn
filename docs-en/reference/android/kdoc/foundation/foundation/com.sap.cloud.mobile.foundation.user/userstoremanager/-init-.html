@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UserStoreManager.<init> - foundation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">foundation</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.foundation.user</a>&nbsp;/&nbsp;<a href="index.html">UserStoreManager</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.sap.cloud.mobile.foundation.user.UserStoreManager$&lt;init&gt;(android.content.Context)"></a>
+<code><span class="identifier">UserStoreManager</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.foundation.user.UserStoreManager$<init>(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span class="symbol">)</span></code>
+<p>Represents the local secure store which stores user related information and will be protected by
+user's passcode.</p>
+<p>When using this manager, the most common use case would be:
+1, initStore(user, forceReset) to pass the user context, if 'forceReset' is true, the existing store will be deleted
+and create a new one, this is usually for the 'forget passcode' case;
+2, After initializing the user context, open the secure store with 'openStore' functions, either with/without passcode,
+or with the cipher if fingerprint is enabled on the secure store;
+3, After opening, in most cases, the store should keep open until, for example, quit the app, or the app is put into
+background then re-open it will need the passcode;
+4, Internally, 'initStore' with forceReset as true will call 'resetStore'. Be careful when calling 'resetStore' in client
+code.
+5, 'getData' and 'saveData' are used for retrieving data from or saving data into the secure store. For supported data types,
+please see <a href="../../com.sap.cloud.mobile.foundation.securestore/securekeyvaluestore/index.html">SecureKeyValueStore</a></p>
+</BODY>
+</HTML>

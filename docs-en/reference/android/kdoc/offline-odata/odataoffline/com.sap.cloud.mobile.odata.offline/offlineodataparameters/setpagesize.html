@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataParameters.setPageSize - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataParameters</a>&nbsp;/&nbsp;<a href="./setpagesize.html">setPageSize</a><br/>
+<br/>
+<h1>setPageSize</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataParameters$setPageSize(kotlin.Int)"></a>
+<code><span class="keyword">fun </span><span class="identifier">setPageSize</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataParameters$setPageSize(kotlin.Int)/pageSize">pageSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Defines the maximum number of entities that can be returned in a single local read request; i.e. the maximum page size to use for OfflineODataProvider driven paging. </p>
+<p> Reading an entity set will return at most this many entities in its response pay load. If the response is a partial set of entities then a "next link" to the next page of the response will be provided. </p>
+<p> This is an optional property, if omitted, it will be no OfflineODataProvider driven paging. </p>
+<p> The value must be positive integer.</p>
+<h3>Parameters</h3>
+<p><a name="pageSize"></a>
+<code>pageSize</code> - <span class="identifier">Int</span><span class="symbol">!</span><span class="symbol">:</span> the page size.</p>
+</BODY>
+</HTML>

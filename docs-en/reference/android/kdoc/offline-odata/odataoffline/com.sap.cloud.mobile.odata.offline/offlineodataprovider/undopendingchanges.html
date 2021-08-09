@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OfflineODataProvider.undoPendingChanges - odataoffline</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">odataoffline</a>&nbsp;/&nbsp;<a href="../index.html">com.sap.cloud.mobile.odata.offline</a>&nbsp;/&nbsp;<a href="index.html">OfflineODataProvider</a>&nbsp;/&nbsp;<a href="./undopendingchanges.html">undoPendingChanges</a><br/>
+<br/>
+<h1>undoPendingChanges</h1>
+<a name="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$undoPendingChanges(EntityValue)"></a>
+<code><span class="keyword">fun </span><span class="identifier">undoPendingChanges</span><span class="symbol">(</span><span class="identifier" id="com.sap.cloud.mobile.odata.offline.OfflineODataProvider$undoPendingChanges(EntityValue)/entity">entity</span><span class="symbol">:</span>&nbsp;<span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Undo pending local changes for a given entity. While you can make changes to existing entities and new entities locally, you can also undo the changes without uploading them. An existing entity will be restored to the original status as if no any changes had been made. A new entity will be removed as if the entity had never been created. </p>
+<p> For example, say you have an existing entity customer101. You can either: </p>
+<p> </p>
+<ul> <li>Patch customer101 several times. Undoing the changes will restore all property values. </li>
+<li>Associate customer101 to some purchase orders. Undoing the changes will remove the relationships. </li>
+<li>Delete customer101. Undoing this change will bring customer101 back.</li>
+ </ul>
+ 
+<p> As another example, say you have created a new entity customer102 locally. No matter what subsequent operations you apply to it, undoing the changes will remove customer102 as if this entity had never been created. </p>
+<p> There are some more complex cases that Offline OData provides flexible support. For example, say you created a new entity order102 that deep inserted a new related entity customer102 in one request. There can be different sequences of performing undo: </p>
+<p> </p>
+<ul> <li>Undo changes for customer102 first. In this case, customer102 will be removed, and order102 will remain (since you are not undoing changes for order102) but is not related to any customer (since customer102 has been removed). The original request for creating order102 and customer102 will be adjusted accordingly to produce the correct result. 
+<p> You can continue to undo changes for order102, which will remove it. </p>
+</li>
+<li>Undo changes for order102 first. In this case, order102 will be removed, and customer102 will remain (since you are not undoing changes for customer102) but is not related to any order (since order102 has been removed). The original request for creating order102 and customer102 will be adjusted accordingly to produce the correct result. 
+<p> You can continue to undo changes for customer102, which will remove it. </p>
+</li>
+</ul>
+ 
+<p> Undoing pending changes and <code><a href="../offlineodataparameters/isenableundolocalcreation.html">enableUndoLocalCreation</a></code> are somewhat related but there are some key differences: </p>
+<p> </p>
+<ul> <li>Undoing local creation is an optimization for the back end to not send a POST request if a new entity created locally is deleted before it is uploaded. Undoing pending changes is not intended to be an optimization but rather allows correcting mistakes or changing your mind about what you did. </li>
+<li>Undoing local creation only applies to new entities created locally. Undoing pending changes also applies to existing entities that have been downloaded from back end. </li>
+<li>For a new entity created locally, you can remove it by undoing pending changes for it without performing a deletion. However, you need to perform a deletion on the entity if you want to apply undoing local creation in order to remove it. </li>
+<li>Undoing local creation takes effect (removing affected requests from request queue) when you perform an upload. Undoing pending changes takes effect (removing affected requests from request queue) when you call the method. </li>
+<li>The undoing local creation algorithm respects cascading deletes while undo pending changes does not. </li>
+<li>Because undoing local creation is an optimization, it will not remove requests for deleted entities which would cause entities that were downloaded from the server to be deleted. Undoing pending changes on the other hand disregards whether the requests have a side affect on a server entity or not; it simply removes all references to the specified entity in the request queue. </li>
+</ul>
+<h3>Parameters</h3>
+<p><a name="entity"></a>
+<code>entity</code> - <span class="identifier">EntityValue</span><span class="symbol">!</span><span class="symbol">:</span> the entity to undo pending changes.</p>
+<h3>Exceptions</h3>
+<p><a name="OfflineODataException"></a>
+<code>OfflineODataException</code> - if an error occurs when undoing changes.</p>
+<p><strong>See Also</strong><br/>
+<a href="../offlineodataparameters/index.html">OfflineODataParameters</a></p>
+</BODY>
+</HTML>
